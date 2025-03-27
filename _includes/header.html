@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg shadow">
+  <div class="container">
+    <!-- Logo on the Left -->
+    <a class="navbar-brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo of ecalcify" width="50px">EasyCalculator</a>
+
+    <!-- Mobile Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">  <!-- Align items to the right -->
+        <li class="nav-item">
+          <a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ '/about/' | relative_url }}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ '/contact/' | relative_url }}">Contact</a>
+        </li>
+        
+       
+      </ul>
+    </div>
+
+  </div>
+</nav>
