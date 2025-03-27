@@ -1,11 +1,8 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
-title: Free Online Calculators for Math, Science & Finance
-description: "EasyCalculator.org is an open-source platform with free online calculators for math, science, and finance. Fast, accurate results—no registration needed!"
-image: "/assets/images/logo.png"
+# title: Free Online Calculators for Math, Science & Finance
+description: "EasyCalculator.org is an open-source platform with free online calculators for math, science, and finance. Fast, accurate results—no registration needed! "
+# image: "/assets/images/logo.png"
 ---
 <div class="container">
 <main class="d-flex flex-column justify-content-center align-items-center vh-100 text-center">
