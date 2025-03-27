@@ -1,0 +1,22 @@
+{
+    "name": "easycalculator",
+    "short_name": "Website",
+    "description": "EasyCalculator.org is an open-source platform with free online calculators for math, science, and finance. Fast, accurate results—no registration needed!",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#007bff",
+    "icons": [
+      {
+        "src": "/assets/images/favicon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/images/favicon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
