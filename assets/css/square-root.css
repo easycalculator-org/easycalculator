@@ -1,0 +1,37 @@
+.sqrt-symbol {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    font-weight: bold;
+}
+.input-wrapper {
+    position: relative;
+}
+.result-box, .example-box, .description-box {
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #e9f5ff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+ .math {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+.example-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #0d6efd;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+.section-title {
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}

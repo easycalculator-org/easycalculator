@@ -1,0 +1,9 @@
+#map { height: 500px; width: 100%; }
+.clock-container { display: flex; justify-content: center; align-items: center; flex-direction: column; }
+.digital-clock { font-size: 1.5rem; font-weight: bold; margin-top: 10px; }
+.analog-clock { width: 120px; height: 120px; border: 5px solid black; border-radius: 50%; position: relative; }
+.hand { position: absolute; background: black; transform-origin: bottom; bottom: 50%; left: 50%; transform: translateX(-50%); }
+.hour-hand { width: 6px; height: 30px; }
+.minute-hand { width: 4px; height: 40px; }
+.second-hand { width: 2px; height: 45px; background: red; }
+.center-dot { width: 10px; height: 10px; background: black; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
