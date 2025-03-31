@@ -7,9 +7,9 @@ description: "EasyCalculator is your go-to online calculator platform, offering 
 
 <div class="container">
 <h1>About US - EasyCalculator</h1>
-<p>Welcome to <strong>EasyCalculator</strong>, a free online calculator designed to make complex calculations easy and accessible for everyone.</p>
+<p>Welcome to <strong>EasyCalculator</strong>, a free online calculator designed to make complex calculations easy and simple for everyone.</p>
 <h3>Why We Built This</h3>
-<p>We believe that everyone should have access to accurate, easy-to-use, and reliable calculation tools without cost barriers. By making our calculator open-source, we invite developers, educators, and enthusiasts to contribute, improve, and expand its capabilities.</p>
+<p>We believe that everyone should have access to accurate and  easy-to-use calculation tools without financial limitations. By making our calculator open-source, we are invite developers, educators, and enthusiasts to contribute, improve, and expand its capabilities.</p>
 <h3>Open-Source & Community-Driven</h3>
 <p>Our project is <strong>fully open-source</strong>, and we encourage contributions! If you're a developer, you can check out our <a href="https://github.com/easycalculator-org/easycalculator" class="text-primary">GitHub repository</a>, suggest improvements, or add new features.</p>
 <div class="row mt-4">
@@ -17,7 +17,7 @@ description: "EasyCalculator is your go-to online calculator platform, offering 
                 <h3>How You Can Help</h3>
             </div>
             <div class="col-md-4 text-center">
-                <h5>🚀 Developers</h5>
+                <h5>🚀 Developers and content writer</h5>
                 <p>Contribute to the source code, fix bugs, or suggest new features.</p>
             </div>
             <div class="col-md-4 text-center">
@@ -31,8 +31,8 @@ description: "EasyCalculator is your go-to online calculator platform, offering 
         </div>
 <div class="row mt-5 text-center">
             <div class="col-lg-12">
-                <h3>Join Us in Improving the Community</h3>
-                <p>At <strong>[Your Project Name]</strong>, we’re committed to <strong>open knowledge and digital accessibility</strong>. With your support, we can continue developing <strong>better tools for learning, work, and everyday calculations</strong>.</p>
+                <h3>Help Us to improve Our Community</h3>
+                <p>At <strong>EasyCalculator</strong>, we believe in sharing knowledge and making digital resources available to everyone. With your help, we can keep creating improved tools for studying, working, and daily math tasks.</p>
                 <a href="https://github.com/easycalculator-org/easycalculator" class="btn btn-primary mt-3">Contribute on GitHub</a>
             </div>
         </div>
