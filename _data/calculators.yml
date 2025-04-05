@@ -1,0 +1,64 @@
+- name: "Age Calculator"
+  link: "/age-calculator"
+  icon: "fa-child"
+  color: "#B197FC"
+
+- name: "Speed Converter"
+  link: "/kmp-to-mph"
+  icon: "fa-gauge"
+  color: "#B197FC"
+
+- name: "Length"
+  link: "/length-converter"
+  icon: "fa-ruler"
+  color: "#74C0FC"
+
+
+
+- name: "Loan Calculator"
+  link: "/home-loan-calculator"
+  icon: "fa-landmark"
+  color: "green"
+
+- name: "dBm to Watts"
+  link: "/dbm-to-watt"
+  icon: "fa-tower-broadcast"
+  color: ""
+
+- name: "Temperature"
+  link: "/celsius-to-fahrenheit"
+  icon: "fa-temperature-three-quarters"
+  color: ""
+
+
+- name: "Strong Password Generator"
+  link: "/strong-password-generator"
+  icon: "fa-lock"
+  color: "#e60f19"
+
+  
+- name: "Investment Calculator"
+  link: "/investment-calculator"
+  icon: "fa-money-bill-trend-up"
+  color: "#74C0FC"
+
+- name: "World Clock"
+  link: "/world-clock"
+  icon: "fa-earth-americas"
+  color: "#74C0FC"
+
+- name: "World Clock Map"
+  link: "/world-clock-map"
+  icon: "fa-earth-europe"
+  color: "#B197FC"
+
+
+
+
+
+
+
+
+
+ 
+  

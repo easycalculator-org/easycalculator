@@ -1,0 +1,35 @@
+---
+layout: default
+title: Miles to Feet Converter – Quick Miles to Feet Conversion
+permalink: /length-converter/miles-to-feet
+description: "Easily convert miles to feet with our fast and accurate online converter. Great for travel distances, running, and navigation."
+---
+
+
+<div class="container p-4">
+    <div class="card shadow-lg p-4 col-12 col-sm-8 col-md-6">
+        <h2 class="text-center mb-4">Miles to Feet Converter</h2>
+        <div class="mb-3">
+            <input type="number" id="inputValue" class="form-control shadow" placeholder="Enter value in miles">
+        </div>
+        <button class="btn btn-primary btn-shadow w-100" onclick="convert()">Convert</button>
+        <div class="mt-3">
+            <h4>Result: <span id="result">-</span></h4>
+        </div>
+    </div>
+</div>
+
+<script>
+    function convert() {
+        let inputValue = document.getElementById("inputValue").value;
+        let resultElement = document.getElementById("result");
+
+        if (inputValue === "" || isNaN(inputValue)) {
+            resultElement.innerText = "Please enter a valid number";
+            return;
+        }
+
+        let result = inputValue * 5280; // Convert miles to feet
+        resultElement.innerText = result.toFixed(2) + " feet";
+    }
+</script>

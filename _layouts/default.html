@@ -11,15 +11,10 @@
 <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.png' | relative_url }}">
 <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
-
 <!-- Apple Touch Icon -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
-
 <!-- Web App Manifest -->
 <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
-
-
-
 {% seo %}
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7KTQYJSE02"></script>
 <script>
@@ -31,7 +26,7 @@
 </head>
 <body>
   {% include header.html %}
-  <main>
+  <main class="container my-2">
     {{ content }}
   </main>
   {% include footer.html %}
