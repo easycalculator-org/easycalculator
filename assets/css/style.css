@@ -48,19 +48,14 @@ a:hover {
     .chart01{
         width: 400px;
         height: 400px;
-        align-items: center;
-       
+        align-items: center; 
     }
-
 
     *{
         box-sizing: border-box; 
         -webkit-box-sizing: border-box; 
         -moz-box-sizing: border-box; 
-    }
-    
-   
-        
+    } 
 
 #timer {
     font-size: 6em;

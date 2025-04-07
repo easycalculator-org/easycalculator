@@ -1,6 +1,3 @@
-body{
-    font-family: Arial;
-}
 .calc_close{
     background: url('../images/Sprite.png') no-repeat -204px -13px;
     width: 16px;
@@ -32,17 +29,7 @@ body{
     position: absolute;
     right: 79px;
     text-align: center;
-    top: 7px;   
-/*	border:1px solid;
-    border-radius:5px;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    -ms-border-radius:5px;
-    box-shadow:0 2px 2px #000000;
-    -webkit-box-shadow:0 2px 2px #000000;
-    -moz-box-shadow:0 2px 2px #000000;
-    -ms-box-shadow:0 2px 2px #000000;*/
-    
+    top: 7px;       
 }
 #keyPad_Help:hover{
    background: url('../images/Sprite.png')  no-repeat -82px -8px;
@@ -83,7 +70,6 @@ body{
     right: 42px;
     text-align: center;
     top: 25px;
-   
 
 }
 .calc_max{
@@ -271,12 +257,7 @@ padding:10px;
     FONT-SIZE: 20px;	
 }
     
-/* ZERO a: DOUBLE WIDTH  
-#keyPad #keyPad_btn0{  
-    width: 95px;  
-}*/
-
-/* BACKSPACE/CLEAR INPUT KEYS*/
+/* BACKSPACE/CLEAR KEYS*/
 
 #keyPad #keyPad_btnClr,
 #keyPad #keyPad_btnInverseSign,
@@ -294,7 +275,7 @@ background: none repeat scroll 0 0 #e74c3c;
     border-color: #c0392b;
     width:76px!important;
 }	
-/* SPECIAL FORMATTING FOR SUPER-SCRIPT KEYS */
+/* SUPER-SCRIPT KEYS */
 #keyPad #keyPad_btnSquare,
 #keyPad #keyPad_btnCube,
 #keyPad #keyPad_btnExp,
