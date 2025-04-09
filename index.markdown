@@ -83,7 +83,7 @@ description: "EasyCalculator.org is an open-source platform with free online cal
   </div>
         
  <div class="col-md-3 g-4 p-3  ">
-            <a class="text-decoration-none" href="/stop-watch">
+            <a class="text-decoration-none" href="/stopwatch">
                 <div class="calculator-box text-center">
                     <i class="fa-solid fa-stopwatch fa-2xl py-4" style="color: #B197FC;"></i>
                     <h5>StopWatch</h5>
