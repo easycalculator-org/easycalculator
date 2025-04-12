@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Privacy Policy – Your Data Security with us
-permalink: /privacy-policy/
+permalink: /privacy-policy
 description: "At EasyCalculator, we prioritize your privacy. Read our Privacy Policy to learn how we handle, protect, and use your data while providing 500+ free online calculators. Your security matters!"
 ---
 

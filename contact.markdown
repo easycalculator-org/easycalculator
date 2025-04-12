@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Contact Us – Get in Touch with EasyCalculator
-permalink: /contact/
+permalink: /contact
 description: "Have questions or feedback? Contact EasyCalculator for support, suggestions, or inquiries. We're here to help you with our 500+ online calculators. Reach out today!"
 ---
 

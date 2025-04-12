@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Terms and Conditions – EasyCalculator User Agreement
-permalink: /term-and-condition/
+permalink: /term-and-condition
 description: "Read the Terms and Conditions of EasyCalculator to understand the rules, policies, and guidelines for using our 500+ free online calculators. Stay informed and use our services responsibly!."
 ---
 
