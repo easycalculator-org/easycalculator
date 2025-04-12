@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About Us | Your Ultimate Online Calculator Hub
-permalink: /about/
+permalink: /about
 description: "EasyCalculator is your go-to online calculator platform, offering 500+ powerful calculators for finance, health, math, fitness, and more. Simplify your calculations with accuracy and ease—all in one place!"
 ---
 
