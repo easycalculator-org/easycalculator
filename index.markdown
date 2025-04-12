@@ -1,6 +1,6 @@
 ---
 layout: default
-# title: Free Online Calculators for Math, Science & Finance
+title: Free Online Calculators for Math, Science & Finance
 description: "EasyCalculator.org is an open-source platform with free online calculators for math, science, and finance. Fast, accurate results—no registration needed! "
 # image: "/assets/images/logo.png"
 ---

@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Free Online Calculators for Math, Science & Finance"
+title: 
 email: care@easycalculator.org
 description: >- # this means to ignore newlines until "baseurl:"
   EasyCalculator.org is an open-source platform with free online calculators for math, science, and finance. Fast, accurate results—no registration needed!.
