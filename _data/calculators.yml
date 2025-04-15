@@ -1,64 +1,39 @@
 - name: "Age Calculator"
   link: "/age-calculator"
-  icon: "fa-child"
-  color: "#B197FC"
+  icon: "/assets/icons/age-calculator.svg"
 
 - name: "Speed Converter"
   link: "/kmp-to-mph"
-  icon: "fa-gauge"
-  color: "#B197FC"
-
+  icon: "/assets/icons/speed-converter.svg"
+  
 - name: "Length"
   link: "/length-converter"
-  icon: "fa-ruler"
-  color: "#74C0FC"
-
-
+  icon: "/assets/icons/length.svg"
 
 - name: "Loan Calculator"
   link: "/home-loan-calculator"
-  icon: "fa-landmark"
-  color: "green"
+  icon: "/assets/icons/loan-calculator.svg"
 
 - name: "dBm to Watts"
   link: "/dbm-to-watt"
-  icon: "fa-tower-broadcast"
-  color: ""
+  icon: "/assets/icons/dbm-to-watts.svg"
 
 - name: "Temperature"
   link: "/celsius-to-fahrenheit"
-  icon: "fa-temperature-three-quarters"
-  color: ""
-
+  icon: "/assets/icons/temperature.svg"
 
 - name: "Strong Password Generator"
   link: "/strong-password-generator"
-  icon: "fa-lock"
-  color: "#e60f19"
+  icon: "/assets/icons/strong-passowrd.svg"
 
-  
 - name: "Investment Calculator"
   link: "/investment-calculator"
-  icon: "fa-money-bill-trend-up"
-  color: "#74C0FC"
+  icon: "/assets/icons/investment-calculator.svg"
 
 - name: "World Clock"
   link: "/world-clock"
-  icon: "fa-earth-americas"
-  color: "#74C0FC"
+  icon: "/assets/icons/world-clock.svg"
 
 - name: "World Clock Map"
   link: "/world-clock-map"
-  icon: "fa-earth-europe"
-  color: "#B197FC"
-
-
-
-
-
-
-
-
-
- 
-  
+  icon: "/assets/icons/world-clock-map.svg"

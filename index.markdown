@@ -62,10 +62,11 @@ description: "EasyCalculator.org is an open-source platform with free online cal
         <div class="col-md-3 g-4 p-3  ">
             <a class="text-decoration-none" href="{{ calculator.link }}">
                 <div class="calculator-box text-center">
-                    <i class="fa-solid {{ calculator.icon }} fa-2xl py-4" style="color: {{ calculator.color }};"></i>
+                    <!-- <i class="fa-solid {{ calculator.icon }} fa-2xl py-4" style="color: {{ calculator.color }};"></i> -->
+                    <img src="{{ calculator.icon }}" alt="{{ calculator.name }} icon" width="24" height="24" style="vertical-align: middle;">
                     <h5>{{ calculator.name }}</h5>
                 </div>
-            </a>
+ </a>
         </div>
         {% endfor %}
 </div>
@@ -76,7 +77,7 @@ description: "EasyCalculator.org is an open-source platform with free online cal
 <div class="col-md-3 g-4 p-3  ">
 <a class="text-decoration-none" href="/countdown">
                 <div class="calculator-box text-center">
-                    <i class="fa-solid fa-stopwatch-20 fa-2xl py-4" style="color: #B197FC;"></i>
+                    <img src="/assets/icons/countdown.svg" alt="Countdown" width="24" height="24">
                     <h5>Countdown</h5>
                 </div>
             </a>
@@ -85,7 +86,7 @@ description: "EasyCalculator.org is an open-source platform with free online cal
  <div class="col-md-3 g-4 p-3  ">
             <a class="text-decoration-none" href="/stopwatch">
                 <div class="calculator-box text-center">
-                    <i class="fa-solid fa-stopwatch fa-2xl py-4" style="color: #B197FC;"></i>
+                    <img src="/assets/icons/stopwatch-solid.svg" alt="Countdown" width="24" height="24">
                     <h5>StopWatch</h5>
                 </div>
             </a>
@@ -94,7 +95,7 @@ description: "EasyCalculator.org is an open-source platform with free online cal
  <div class="col-md-3 g-4 p-3  ">
             <a class="text-decoration-none" href="/current-time">
                 <div class="calculator-box text-center">
-                    <i class="fa-solid fa-clock fa-2xl py-4" style="color: #74C0FC;"></i>
+                    <img src="/assets/icons/current-time.svg" alt="Countdown" width="24" height="24">
                     <h5>Current Timer zone</h5>
                 </div>
             </a>
@@ -102,7 +103,7 @@ description: "EasyCalculator.org is an open-source platform with free online cal
  <div class="col-md-3 g-4 p-3  ">
             <a class="text-decoration-none" href="#">
                 <div class="calculator-box text-center">
-                    <i class="fa-solid fa-bell fa-2xl py-4" style="color: green;"></i>
+                    <img src="/assets/icons/alarm.svg" alt="Countdown" width="24" height="24">
                     <h5>Alarm</h5>
                 </div>
             </a>
@@ -116,7 +117,7 @@ description: "EasyCalculator.org is an open-source platform with free online cal
 <div class="col-md-3 g-4 p-3  ">
 <a class="text-decoration-none" href="/number-to-word-converter">
                 <div class="calculator-box text-center">
-                    <i class="fa-solid fa-arrow-up-a-z fa-2xl py-4" style="color: #B197FC;"></i>
+                    <img src="/assets/icons/num-to-word.svg" alt="Countdown" width="24" height="24">
                     <h5>Num to Word</h5>
                 </div>
             </a>
@@ -125,7 +126,7 @@ description: "EasyCalculator.org is an open-source platform with free online cal
  <div class="col-md-3 g-4 p-3  ">
             <a class="text-decoration-none" href="#">
                 <div class="calculator-box text-center">
-                    <i class="fa-solid fa-weight-scale fa-2xl py-4" style="color: #B197FC;"></i>
+                    <img src="/assets/icons/weight-scale-solid.svg" alt="Countdown" width="24" height="24">
                     <h5>Weight Converter</h5>
                 </div>
             </a>
@@ -134,7 +135,7 @@ description: "EasyCalculator.org is an open-source platform with free online cal
  <div class="col-md-3 g-4 p-3  ">
             <a class="text-decoration-none" href="#">
                 <div class="calculator-box text-center">
-                    <i class="fa-solid fa-gauge fa-2xl py-4" style="color: #74C0FC;"></i>
+                   <img src="/assets/icons/speed-converter.svg" alt="Countdown" width="24" height="24">
                     <h5>Speed Converter</h5>
                 </div>
             </a>
@@ -142,7 +143,7 @@ description: "EasyCalculator.org is an open-source platform with free online cal
  <div class="col-md-3 g-4 p-3  ">
             <a class="text-decoration-none" href="#">
                 <div class="calculator-box text-center">
-                    <i class="fa-solid fa-ruler-combined fa-2xl py-4" style="color: green;"></i>
+                    <img src="/assets/icons/area-converter.svg" alt="Countdown" width="24" height="24">
                     <h5>Area Converter</h5>
                 </div>
             </a>
@@ -159,7 +160,7 @@ description: "EasyCalculator.org is an open-source platform with free online cal
 <div class="col-md-3 g-4 p-3  ">
 <a class="text-decoration-none" href="#">
                 <div class="calculator-box text-center">
-                    <i class="fa-solid fa-circle-plus fa-2xl py-4" style="color: #B197FC;"></i>
+                   <img src="/assets/icons/algebra.svg" alt="Countdown" width="24" height="24">
                     <h5>Algebra Calculator</h5>
                 </div>
             </a>
@@ -168,7 +169,7 @@ description: "EasyCalculator.org is an open-source platform with free online cal
  <div class="col-md-3 g-4 p-3  ">
             <a class="text-decoration-none" href="/lcm-calculator">
                 <div class="calculator-box text-center">
-                    <i class="fa-solid fa-circle-xmark fa-2xl py-4" style="color: #B197FC;"></i>
+                   <img src="/assets/icons/circle-plus-solid.svg" alt="Countdown" width="24" height="24">
                     <h5>LCM | HCF Calculator</h5>
                 </div>
             </a>
@@ -177,7 +178,7 @@ description: "EasyCalculator.org is an open-source platform with free online cal
  <div class="col-md-3 g-4 p-3  ">
             <a class="text-decoration-none" href="/percentage-calculator">
                 <div class="calculator-box text-center">
-                    <i class="fa-solid fa-percent fa-2xl py-4" style="color: #63E6BE;"></i>
+                   <img src="/assets/icons/percent.svg" alt="Countdown" width="24" height="24">
                     <h5>Percentage Calculator</h5>
                 </div>
             </a>
@@ -186,7 +187,7 @@ description: "EasyCalculator.org is an open-source platform with free online cal
  <div class="col-md-3 g-4 p-3  ">
             <a class="text-decoration-none" href="#">
                 <div class="calculator-box text-center">
-                    <i class="fa-solid fa-plus-minus fa-2xl py-4" style="color: green;"></i>
+                 <img src="/assets/icons/interest-rate.svg" alt="Countdown" width="24" height="24">
                     <h5>Interest Calculator</h5>
                 </div>
             </a>
