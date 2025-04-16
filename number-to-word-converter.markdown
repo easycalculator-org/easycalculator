@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Numbers to Words Converter | Num to Word 
-permalink: /number-to-word-converter/
+permalink: /number-to-word-converter
 description: "Convert numbers into words effortlessly with our Numbers to Words Converter. Simple, fast, and accurate, it's the perfect tool for all your conversion needs."
 ---
 

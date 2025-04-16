@@ -1,7 +1,7 @@
 ---
 layout: default
 title: MPH to KMPH Speed Converter | Convert Miles Per Hour to Kilometers Per Hour
-permalink: /mph-to-kmph/
+permalink: /mph-to-kmph
 description: "Easily convert miles per hour (mph) to kilometers per hour (km/h) with our simple speed converter. Includes a conversion formula, examples, and a quick reference chart."
 ---
 
@@ -78,7 +78,7 @@ description: "Easily convert miles per hour (mph) to kilometers per hour (km/h) 
 </ul>
 
 <hr>
-<a href="/kmp-to-mph/" class="btn btn-success w-30">Convert Mph to KM/H</a>
+<a href="/kmp-to-mph" class="btn btn-success w-30">Convert Mph to KM/H</a>
 
 
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: World Clock Map |  Time zone map
-permalink: /world-clock-map/
+permalink: /world-clock-map
 description: "World Clock Map with Time Zones – Click anywhere on the map to see local time zone, date, city and country. Features digital & analog clocks for real-time tracking!"
 ---
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">

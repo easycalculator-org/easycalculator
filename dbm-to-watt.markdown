@@ -1,7 +1,7 @@
 ---
 layout: default
 title: dBm to Watts Calculator and Table
-permalink: /dbm-to-watt/
+permalink: /dbm-to-watt
 description: "Convert dBm to Watts easily with our calculator. Explore dBm to Watts formula, tables, and charts at easycalculator for quick and accurate results."
 ---
 

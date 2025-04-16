@@ -7,7 +7,7 @@ description: "EasyCalculator.org is an open-source platform with free online cal
 <link rel="stylesheet" href="{{ '/assets/css/calculator.css' | relative_url }}">
 <!-- Calculator start -->
 <div class="calculator">
-  <input type="text" id="screen" maxlength="20">
+<input type="text" id="screen" maxlength="20">
 <div class="calc-buttons">
 <div class="functions-one">
         <button class="button triggers">C</button>
@@ -56,143 +56,67 @@ description: "EasyCalculator.org is an open-source platform with free online cal
 <!-- Article -->
 <div class="container py-5">
     <h1 class="text-center mb-4">Choose Your Calculator</h1>
-    <div class="row g-4 p-3 " >
-        {% assign calculators = site.data.calculators %}
-        {% for calculator in calculators %}
-        <div class="col-md-3 g-4 p-3  ">
-            <a class="text-decoration-none" href="{{ calculator.link }}">
-                <div class="calculator-box text-center">
-                    <!-- <i class="fa-solid {{ calculator.icon }} fa-2xl py-4" style="color: {{ calculator.color }};"></i> -->
-                    <img src="{{ calculator.icon }}" alt="{{ calculator.name }} icon" width="24" height="24" style="vertical-align: middle;">
-                    <h5>{{ calculator.name }}</h5>
-                </div>
- </a>
-        </div>
-        {% endfor %}
-</div>
 <hr>
-<h2>Timer</h2>
- <div class="row g-4 p-3 ">
+<div class="row g-4 p-3 "><div class="col-md-3 g-4 p-3 "><a class="text-decoration-none" href="/age-calculator"><div class="calculator-box text-center"><img src="/assets/icons/age-calculator.svg" alt="Age Calculator" width="28" height="24"><h5>Age Calculator</h5></div></a></div>
 
-<div class="col-md-3 g-4 p-3  ">
-<a class="text-decoration-none" href="/countdown">
-                <div class="calculator-box text-center">
-                    <img src="/assets/icons/countdown.svg" alt="Countdown" width="24" height="24">
-                    <h5>Countdown</h5>
-                </div>
-            </a>
-  </div>
+<!-- calc -->
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/kmp-to-mph"><div class="calculator-box text-center"><img src="/assets/icons/speed-converter.svg" alt="Age Calculator" width="28" height="24"><h5>Speed Converter</h5> </div></a></div>
+<!-- calc -->
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/length-converter"><div class="calculator-box text-center"><img src="/assets/icons/loan-calculator.svg" alt="Length Converter" width="28" height="24"><h5>Length</h5></div></a></div>
+<!-- calc -->
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/dbm-to-watt"> <div class="calculator-box text-center"><img src="/assets/icons/dbm-to-watts.svg" alt="dBm to Watts Calculator" width="28" height="24"><h5>dBm to Watts</h5></div></a></div>
+<!-- calc -->
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/celsius-to-fahrenheit"><div class="calculator-box text-center"><img src="/assets/icons/temperature.svg" alt="Temperature Calculator" width="28" height="24"><h5>Temperature</h5></div></a></div>
+
+<!-- calc -->
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/strong-password-generator"><div class="calculator-box text-center"><img src="/assets/icons/strong-passowrd.svg" alt="Strong Password Generator" width="28" height="24"><h5>Strong Password Generator</h5></div></a></div>
+<!-- calc -->
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/investment-calculator"><div class="calculator-box text-center"><img src="/assets/icons/investment-calculator.svg" alt="Investment Calculator" width="28" height="24"><h5>Investment Calculator</h5></div></a></div>
+
+
+<!-- calc -->
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/world-clock"><div class="calculator-box text-center"><img src="/assets/icons/world-clock.svg" alt="World Clock" width="28" height="24"><h5>World Clock</h5></div></a> </div>
+
+<!-- calc -->
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/world-clock-map"><div class="calculator-box text-center"><img src="/assets/icons/world-clock-map.svg" alt="World Clock Map" width="28" height="24"><h5>World Clock Map</h5></div></a></div>
+
+</div>
+
+
+<h2>Timer</h2>
+<div class="row g-4 p-3 ">
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/countdown"><div class="calculator-box text-center"><img src="/assets/icons/countdown.svg" alt="Countdown" width="24" height="24"><h5>Countdown</h5></div></a></div>
         
- <div class="col-md-3 g-4 p-3  ">
-            <a class="text-decoration-none" href="/stopwatch">
-                <div class="calculator-box text-center">
-                    <img src="/assets/icons/stopwatch-solid.svg" alt="Countdown" width="24" height="24">
-                    <h5>StopWatch</h5>
-                </div>
-            </a>
-  </div>
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/stopwatch"><div class="calculator-box text-center"><img src="/assets/icons/stopwatch-solid.svg" alt="Countdown" width="24" height="24"><h5>StopWatch</h5></div></a></div>
         
- <div class="col-md-3 g-4 p-3  ">
-            <a class="text-decoration-none" href="/current-time">
-                <div class="calculator-box text-center">
-                    <img src="/assets/icons/current-time.svg" alt="Countdown" width="24" height="24">
-                    <h5>Current Timer zone</h5>
-                </div>
-            </a>
-        </div>
- <div class="col-md-3 g-4 p-3  ">
-            <a class="text-decoration-none" href="#">
-                <div class="calculator-box text-center">
-                    <img src="/assets/icons/alarm.svg" alt="Countdown" width="24" height="24">
-                    <h5>Alarm</h5>
-                </div>
-            </a>
-        </div>
- </div>
+ <div class="col-md-3 g-4 p-3  "> <a class="text-decoration-none" href="/current-time"><div class="calculator-box text-center"> <img src="/assets/icons/current-time.svg" alt="Countdown" width="24" height="24"><h5>Current Timer zone</h5></div> </a></div>
+ 
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="#"> <div class="calculator-box text-center"><img src="/assets/icons/alarm.svg" alt="Countdown" width="24" height="24"><h5>Alarm</h5></div> </a> </div> </div>
  <!-- conversion-tool -->
 <hr>
 <h2>Conversion Tool</h2>
- <div class="row g-4 p-3 ">
+<div class="row g-4 p-3 ">
 
-<div class="col-md-3 g-4 p-3  ">
-<a class="text-decoration-none" href="/number-to-word-converter">
-                <div class="calculator-box text-center">
-                    <img src="/assets/icons/num-to-word.svg" alt="Countdown" width="24" height="24">
-                    <h5>Num to Word</h5>
-                </div>
-            </a>
-  </div>
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/number-to-word-converter"><div class="calculator-box text-center"><img src="/assets/icons/num-to-word.svg" alt="Countdown" width="24" height="24"><h5>Num to Word</h5></div></a> </div>
         
- <div class="col-md-3 g-4 p-3  ">
-            <a class="text-decoration-none" href="#">
-                <div class="calculator-box text-center">
-                    <img src="/assets/icons/weight-scale-solid.svg" alt="Countdown" width="24" height="24">
-                    <h5>Weight Converter</h5>
-                </div>
-            </a>
-  </div>
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><img src="/assets/icons/weight-scale-solid.svg" alt="Countdown" width="24" height="24"><h5>Weight Converter</h5></div> </a></div>
 
- <div class="col-md-3 g-4 p-3  ">
-            <a class="text-decoration-none" href="#">
-                <div class="calculator-box text-center">
-                   <img src="/assets/icons/speed-converter.svg" alt="Countdown" width="24" height="24">
-                    <h5>Speed Converter</h5>
-                </div>
-            </a>
-        </div>
- <div class="col-md-3 g-4 p-3  ">
-            <a class="text-decoration-none" href="#">
-                <div class="calculator-box text-center">
-                    <img src="/assets/icons/area-converter.svg" alt="Countdown" width="24" height="24">
-                    <h5>Area Converter</h5>
-                </div>
-            </a>
-        </div>
- </div>
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><img src="/assets/icons/speed-converter.svg" alt="Countdown" width="24" height="24"><h5>Speed Converter</h5></div></a></div>
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><img src="/assets/icons/area-converter.svg" alt="Countdown" width="24" height="24"><h5>Area Converter</h5></div></a></div></div>
 
-  
-<!-- conversion-tool end-->
+ <!-- conversion-tool end-->
 <!-- Math Calculator -->
 <hr>
 <h2>Math Calculator</h2>
- <div class="row g-4 p-3 ">
+<div class="row g-4 p-3 ">
 
-<div class="col-md-3 g-4 p-3  ">
-<a class="text-decoration-none" href="#">
-                <div class="calculator-box text-center">
-                   <img src="/assets/icons/algebra.svg" alt="Countdown" width="24" height="24">
-                    <h5>Algebra Calculator</h5>
-                </div>
-            </a>
-  </div>
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="#"> <div class="calculator-box text-center"><img src="/assets/icons/algebra.svg" alt="Countdown" width="24" height="24"><h5>Algebra Calculator</h5></div></a></div>
         
- <div class="col-md-3 g-4 p-3  ">
-            <a class="text-decoration-none" href="/lcm-calculator">
-                <div class="calculator-box text-center">
-                   <img src="/assets/icons/circle-plus-solid.svg" alt="Countdown" width="24" height="24">
-                    <h5>LCM | HCF Calculator</h5>
-                </div>
-            </a>
-  </div>
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/lcm-calculator"><div class="calculator-box text-center"><img src="/assets/icons/circle-plus-solid.svg" alt="Countdown" width="24" height="24"><h5>LCM | HCF Calculator</h5></div></a></div>
         
- <div class="col-md-3 g-4 p-3  ">
-            <a class="text-decoration-none" href="/percentage-calculator">
-                <div class="calculator-box text-center">
-                   <img src="/assets/icons/percent.svg" alt="Countdown" width="24" height="24">
-                    <h5>Percentage Calculator</h5>
-                </div>
-            </a>
-        </div>
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/percentage-calculator"><div class="calculator-box text-center"><img src="/assets/icons/percent.svg" alt="Countdown" width="24" height="24"> <h5>Percentage Calculator</h5></div></a></div>
 
- <div class="col-md-3 g-4 p-3  ">
-            <a class="text-decoration-none" href="#">
-                <div class="calculator-box text-center">
-                 <img src="/assets/icons/interest-rate.svg" alt="Countdown" width="24" height="24">
-                    <h5>Interest Calculator</h5>
-                </div>
-            </a>
-        </div>
- </div>
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><img src="/assets/icons/interest-rate.svg" alt="Countdown" width="24" height="24"><h5>Interest Calculator</h5></div></a></div></div>
 
 
 

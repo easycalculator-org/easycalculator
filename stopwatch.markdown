@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Online Stopwatch | Digital Stopwatch - Easy to Use
-permalink: /stopwatch/
+permalink: /stopwatch
 description: "Use our online stopwatch, Accurate and user-friendly. Track lap times with export in CSV, Digital stopwatch, and enjoy optional split intervals for your timing needs."
 ---
 <!-- Sidebar -->

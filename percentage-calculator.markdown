@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Percentage Calculator | Percentage Formula
-permalink: /percentage-calculator/
+permalink: /percentage-calculator
 description: "Use our free online percentage calculator to simplify your math! Learn the step-by-step process for quick and easy percentage formula and calculations."
 ---
 

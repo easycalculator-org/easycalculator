@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Free Countdown Timer – Digital Countdown Clock to Track Time Accurately
-permalink: /countdown/
+permalink: /countdown
 description: "Use our free countdown timer and digital countdown clock to track time accurately for any task. Perfect for work, study, cooking, and events. Set your timer for any duration, like a 2-minute timer, 1-minute timer."
 ---
 

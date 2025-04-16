@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home Loan Calculator | Home Loan EMI
-permalink: /home-loan-calculator/
+permalink: /home-loan-calculator
 description: "Use our simple Home Loan EMI Calculator to determine your monthly payments. Get the clarity you need to finance your dream home effortlessly."
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Help
-permalink: /help/
+permalink: /help
 ---
 ## Get in Touch
 
