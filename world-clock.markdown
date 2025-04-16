@@ -6,12 +6,17 @@ description: "Easily track time across multiple cities with our customizable wor
 ---
 
 <div class="container mt-4">
-<h1 class="mb-4">World Clock</h1>
-<div class="digital-clock" id="digital-clock"></div>
- <div class="clock-container" id="clock-container"></div>
+<div class="d-flex justify-content-between align-items-center mb-4"><h1 class="mb-0">World Clock</h1><button class="btn btn-light" onclick="goFullscreen()">Fullscreen</button></div>
+<div class="digital-clock bg-white" id="digital-clock"></div> 
+ <div class="clock-container bg-white d-flex justify-content-center align-items-center" id="clock-container"></div>
 <h2 class="mt-4">Add Custom City</h2>
  <div class="input-group mb-3">
  <select id="city-select" class="form-select">
+ <option value="New York,-4,https://flagcdn.com/us.svg">New York</option>
+ <option value="London,0,https://flagcdn.com/gb.svg">London</option>
+ <option value="Tokyo,9,https://flagcdn.com/jp.svg">Tokyo</option>
+ <option value="Sydney,11,https://flagcdn.com/au.svg">Sydney</option>
+ <option value="Dubai,4,https://flagcdn.com/ae.svg">Dubai</option>
 <option value="Accra,0,https://flagcdn.com/gh.svg">Accra</option>
 <option value="Addis Ababa,3,https://flagcdn.com/et.svg">Addis Ababa</option>
 <option value="Algiers,1,https://flagcdn.com/dz.svg">Algiers</option>

@@ -2,8 +2,7 @@ const cities = [
     { name: "New York", offset: -4, flag: "https://flagcdn.com/us.svg" },
     { name: "London", offset: 0, flag: "https://flagcdn.com/gb.svg" },
     { name: "Tokyo", offset: 9, flag: "https://flagcdn.com/jp.svg" },
-    { name: "Sydney", offset: 11, flag: "https://flagcdn.com/au.svg" },
-    { name: "Dubai", offset: 4, flag: "https://flagcdn.com/ae.svg" }
+    { name: "Sydney", offset: 11, flag: "https://flagcdn.com/au.svg" }
 ];
 
 function updateDigitalClock() {
@@ -88,3 +87,28 @@ function addManualCity() {
 }
 
 cities.forEach(createClock);
+
+
+// function goFullscreen() {
+//     const elem = document.documentElement; // or any specific element
+
+//     if (elem.requestFullscreen) {
+//       elem.requestFullscreen();
+//     } else if (elem.webkitRequestFullscreen) { // Safari
+//       elem.webkitRequestFullscreen();
+//     } else if (elem.msRequestFullscreen) { // IE11
+//       elem.msRequestFullscreen();
+//     }
+//   }
+
+function goFullscreen() {
+    const elem = document.getElementById("clock-container");
+
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen(); // Safari
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen(); // IE11
+    }
+  }
