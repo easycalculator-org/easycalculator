@@ -24,8 +24,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   EasyCalculator.org is an open-source platform with free online calculators for math, science, and finance. Fast, accurate results—no registration needed!.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://easycalculator.org" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+#twitter_username: jekyllrb
+#github_username:  jekyll
 
 # Build settings
 theme: minima
@@ -33,6 +33,12 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+
+
+
+# Add the IndexNow integration
+indexnow:
+  api_key: "/d69eb464903242de9049154268ab5ef1.txt"  # Path to the key file you created
 
 # Exclude from processing.
 # The following items will not be processed, by default.
