@@ -85,7 +85,7 @@ These time for calculation examples are help people plan events, meet deadlines,
 <p>In short, age helps us make sense of life and the world around us! 😊</p>
 <h3>Date of Birth Calculator</h3><p>A Date of Birth Calculator helps you find out someone's exact age by entering their birth date. Use our tool that check and calculate days from your date of birth</p>
 <h3>Find my age today</h3><p>To find out your age today, just enter your date of birth in the <strong>Start date </strong> field and click on calculate to find your age today. Our tool will show you your age in total years and days. <br> As an example, a person born in 2003 will turn 21 years old in 2024. You can refer to the image below to determine your age, the month, and the number of weeks since your birth date.</p>
-<img class="img-fluid" alt="Age Calculator, how to find my age and date of birth calculation" src="/assets/images/age-calculator.jpg" fetchpriority="high" loading="auto" style="object-fit: contain;">
+<img class="img-fluid" alt="Age Calculator, how to find my age and date of birth calculation" src="/assets/images/age-calculator.webp" fetchpriority="high" loading="auto" style="object-fit: contain;">
 
 </div>
 
