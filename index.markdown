@@ -57,28 +57,31 @@ description: "EasyCalculator.org is an open-source platform with free online cal
 <div class="container py-5">
     <h1 class="text-center mb-4">Choose Your Calculator</h1>
 <hr>
+<!-- Age Calculator-->
 <div class="row g-4 p-3 "><div class="col-md-3 g-4 p-3 "><a class="text-decoration-none" href="/age-calculator"><div class="calculator-box text-center"><img src="/assets/icons/age-calculator.svg" alt="Age Calculator" width="28" height="24"><h5>Age Calculator</h5></div></a></div>
 
-<!-- calc -->
+<!-- speed -->
 <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/kmp-to-mph"><div class="calculator-box text-center"><img src="/assets/icons/speed-converter.svg" alt="Age Calculator" width="28" height="24"><h5>Speed Converter</h5> </div></a></div>
-<!-- calc -->
+<!-- length -->
 <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/length-converter"><div class="calculator-box text-center"><img src="/assets/icons/loan-calculator.svg" alt="Length Converter" width="28" height="24"><h5>Length</h5></div></a></div>
-<!-- calc -->
+<!-- telecom -->
 <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/dbm-to-watt"> <div class="calculator-box text-center"><img src="/assets/icons/dbm-to-watts.svg" alt="dBm to Watts Calculator" width="28" height="24"><h5>dBm to Watts</h5></div></a></div>
-<!-- calc -->
+<!-- temperature-->
 <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/celsius-to-fahrenheit"><div class="calculator-box text-center"><img src="/assets/icons/temperature.svg" alt="Temperature Calculator" width="28" height="24"><h5>Temperature</h5></div></a></div>
 
-<!-- calc -->
+<!-- strong password-->
 <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/strong-password-generator"><div class="calculator-box text-center"><img src="/assets/icons/strong-passowrd.svg" alt="Strong Password Generator" width="28" height="24"><h5>Strong Password Generator</h5></div></a></div>
-<!-- calc -->
+<!-- Investment -->
 <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/investment-calculator"><div class="calculator-box text-center"><img src="/assets/icons/investment-calculator.svg" alt="Investment Calculator" width="28" height="24"><h5>Investment Calculator</h5></div></a></div>
 
 
-<!-- calc -->
+<!-- world clock -->
 <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/world-clock"><div class="calculator-box text-center"><img src="/assets/icons/world-clock.svg" alt="World Clock" width="28" height="24"><h5>World Clock</h5></div></a> </div>
 
-<!-- calc -->
+<!-- world clock map -->
 <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/world-clock-map"><div class="calculator-box text-center"><img src="/assets/icons/world-clock-map.svg" alt="World Clock Map" width="28" height="24"><h5>World Clock Map</h5></div></a></div>
+<!-- Currency Converter-->
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/curreny"><div class="calculator-box text-center"><img src="/assets/icons/currency.svg" alt="currency converter" width="28" height="24"><h5>Currency Converter</h5></div></a></div>
 
 </div>
 
