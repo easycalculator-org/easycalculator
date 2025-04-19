@@ -7,7 +7,8 @@ layout: none
   {% if page.url != "/404.html" %}
   <url>
     <loc>{{ site.url }}{{ page.url | replace:'index.html','' }}</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-04-19</lastmod> 
+    <changefreq>weekly</changefreq> 
     <priority>0.9</priority>
   </url>
   {% endif %}
