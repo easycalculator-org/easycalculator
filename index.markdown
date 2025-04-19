@@ -81,7 +81,7 @@ description: "EasyCalculator.org is an open-source platform with free online cal
 <!-- world clock map -->
 <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/world-clock-map"><div class="calculator-box text-center"><img src="/assets/icons/world-clock-map.svg" alt="World Clock Map" width="28" height="24"><h5>World Clock Map</h5></div></a></div>
 <!-- Currency Converter-->
-<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/curreny"><div class="calculator-box text-center"><img src="/assets/icons/currency.svg" alt="currency converter" width="28" height="24"><h5>Currency Converter</h5></div></a></div>
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/currency"><div class="calculator-box text-center"><img src="/assets/icons/currency.svg" alt="currency converter" width="28" height="24"><h5>Currency Converter</h5></div></a></div>
 
 </div>
 
