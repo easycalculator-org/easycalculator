@@ -88,13 +88,13 @@ description: "EasyCalculator.org is an open-source platform with free online cal
 
 <h2>Timer</h2>
 <div class="row g-4 p-3 ">
-<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/countdown"><div class="calculator-box text-center"><img src="/assets/icons/countdown.svg" alt="Countdown" width="24" height="24"><h5>Countdown</h5></div></a></div>
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/countdown"><div class="calculator-box text-center"><img src="/assets/icons/countdown.svg" alt="Countdown" width="26" height="26"><h5>Countdown</h5></div></a></div>
         
- <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/stopwatch"><div class="calculator-box text-center"><img src="/assets/icons/stopwatch-solid.svg" alt="Countdown" width="24" height="24"><h5>StopWatch</h5></div></a></div>
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/stopwatch"><div class="calculator-box text-center"><img src="/assets/icons/stopwatch-solid.svg" alt="Countdown" width="26" height="26"><h5>StopWatch</h5></div></a></div>
         
- <div class="col-md-3 g-4 p-3  "> <a class="text-decoration-none" href="/current-time"><div class="calculator-box text-center"> <img src="/assets/icons/current-time.svg" alt="Countdown" width="24" height="24"><h5>Current Timer zone</h5></div> </a></div>
+ <div class="col-md-3 g-4 p-3  "> <a class="text-decoration-none" href="/current-time"><div class="calculator-box text-center"> <img src="/assets/icons/current-time.svg" alt="Countdown" width="26" height="26"><h5>Current Timer zone</h5></div> </a></div>
  
- <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="#"> <div class="calculator-box text-center"><img src="/assets/icons/alarm.svg" alt="Countdown" width="24" height="24"><h5>Alarm</h5></div> </a> </div> </div>
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/epoch"> <div class="calculator-box text-center"><img src="/assets/icons/epoch.svg" alt="Epoch Time" width="26" height="26"><h5>Epoch Time</h5></div> </a> </div> </div>
  <!-- conversion-tool -->
 <hr>
 <h2>Conversion Tool</h2>
