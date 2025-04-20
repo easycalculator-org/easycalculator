@@ -1,8 +1,8 @@
 ---
 layout: default
-title: About Us | Your Ultimate Online Calculator Hub
+title: About Easy Calculator – Your Everyday Calculation Companion
 permalink: /about
-description: "EasyCalculator is your go-to online calculator platform, offering 500+ powerful calculators for finance, health, math, fitness, and more. Simplify your calculations with accuracy and ease—all in one place!"
+description: "Easy Calculator offers simple, accurate tools for everyday math, finance, and conversion needs—free, fast, and easy to use for everyone."
 ---
 
 <div class="container">
