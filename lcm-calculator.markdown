@@ -29,8 +29,8 @@ description: "Use our free LCM calculator to quickly find the least common multi
             </form>
         </div>
 
-        <!-- Output Section -->
-        <div class="col-md-6">
+  <!-- Output Section -->
+ <div class="col-md-6">
             <h4>LCM Result</h4>
             <div class="alert alert-info" id="lcmResult" role="alert">
                 Enter numbers and click "Calculate LCM" to see the result here.
