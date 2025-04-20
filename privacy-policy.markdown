@@ -179,7 +179,7 @@ description: "At EasyCalculator, we prioritize your privacy. Read our Privacy Po
 <ul>
 
 <li>
-<p>By visiting this page on our website: <a href="https://easycalculator.org/contact-us" rel="external nofollow noopener" target="_blank">https://easycalculator.org/contact-us</a></p>
+<p>By visiting this page on our website: <a href="https://easycalculator.org/contact" rel="external nofollow noopener" target="_blank">https://easycalculator.org/contact</a></p>
 
 </li>
 </ul>
