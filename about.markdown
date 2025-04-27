@@ -7,7 +7,7 @@ description: "Easy Calculator offers simple, accurate tools for everyday math, f
 
 <div class="container">
 <h1>About US - EasyCalculator</h1>
-<p class="last-updated">  Last updated on: {{ page.last_modified_at | date: "%B %-d, %Y" }}</p>
+<p class="last-updated">  Last updated on: {{ site.time | date: "%d-%m-%Y" }}</p>
 <p>Welcome to <strong>EasyCalculator</strong>, a free online calculator designed to make complex calculations easy and simple for everyone.</p>
 <h3>Why We Built This</h3>
 <p>We believe that everyone should have access to accurate and  easy-to-use calculation tools without financial limitations. By making our calculator open-source, we are invite developers, educators, and enthusiasts to contribute, improve, and expand its capabilities.</p>

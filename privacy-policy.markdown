@@ -7,7 +7,7 @@ description: "At EasyCalculator, your privacy matters. Learn how we protect and 
 
 
 <h1>Privacy Policy | EasyCalculator</h1>
-<p class="last-updated">  Last updated on: {{ page.last_modified_at | date: "%B %-d, %Y" }}</p>
+<p class="last-updated pt-4">  Last updated on: {{ site.time | date: "%d-%m-%Y" }}</p>
 <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
 <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
 <h2>Interpretation and Definitions</h2>

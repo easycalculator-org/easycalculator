@@ -32,7 +32,7 @@ description: "Use our free Age Calculator to find your age from your birth date 
 </div>
     
 <!-- Article -->
-<p class="last-updated pt-4">  Last updated on: {{ page.last_modified_at | date: "%B %-d, %Y" }}</p>
+<p class="last-updated pt-4">  Last updated on: {{ site.time | date: "%d-%m-%Y" }}</p>
 <h2><strong>What is the Age Calculator</strong></h2>
 <p>An age calculator is a tool that helps you find out how old someone or something is. You just need to enter the date of birth (or when something started) and the current date or future date. It will calculate the number of years, months, weeks, days and Hour also.</p>
 

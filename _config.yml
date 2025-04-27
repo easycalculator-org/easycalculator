@@ -33,7 +33,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-last-modified-at
+ # - jekyll-last-modified-at ( gthub not support this plugin)
 
 
 
