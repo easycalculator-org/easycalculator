@@ -8,7 +8,7 @@ description: "Read the Terms and Conditions of EasyCalculator to understand the 
 <!-- Article Part -->
 <div class="container py-5">
 <h1>Terms and Conditions | EasyCalculator</h1>
-<p>Last Updated: March 28, 2025</p>
+<p class="last-updated">  Last updated on: {{ page.last_modified_at | date: "%B %-d, %Y" }}</p>
 <p>Please read these terms and conditions carefully before using EasyCalculator.</p>
 <h2>Interpretation and Definitions</h2>
 <h3>Interpretation</h3>
