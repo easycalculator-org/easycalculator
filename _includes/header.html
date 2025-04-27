@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg shadow">
   <div class="container">
-    <!-- Logo on the Left -->
+    <!-- Logo -->
     <a class="navbar-brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="Logo of easycalculator" width="200px"></a>
 
     <!-- Mobile Toggle Button -->
@@ -10,17 +10,12 @@
 
     <!-- Navbar Links -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">  <!-- Align items to the right -->
-        <li class="nav-item">
-          <a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ '/about' | relative_url }}">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ '/contact' | relative_url }}">Contact</a>
-        </li>
-        
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="{{ '/age-calculator' | relative_url }}">Age Calculator</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ '/currency' | relative_url }}">Currency Converter</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ '/countdown' | relative_url }}">Countdown</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ '/world-clock' | relative_url }}">World Clock</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ '/epoch' | relative_url }}">Epoch Time</a></li>
        
       </ul>
     </div>
