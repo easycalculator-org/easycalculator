@@ -124,7 +124,17 @@ description: "Use EasyCalculator.org’s free online calculators to solve financ
 
  <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="22" viewBox="0 0 384 512"><path fill="#B197FC" d="M224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112L48 144c-17.7 0-32 14.3-32 32s14.3 32 32 32l112 0 0 112c0 17.7 14.3 32 32 32s32-14.3 32-32l0-112 112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-112 0 0-112zM0 480c0 17.7 14.3 32 32 32l320 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 448c-17.7 0-32 14.3-32 32z"/></svg><h5>Interest Calculator</h5></div></a></div></div>
 
-
+<h3>Others Calculator</h3>
+<div class="row text-center g-3">
+<div class="col-2 "><a href="/date-to-date-calculator" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Date to Date Calculator</a></div>
+<!-- <div class="col-2"><a href="#" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">About</a></div>
+<div class="col-2"><a href="#" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Home</a></div>
+<div class="col-2"><a href="#" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">About</a></div>
+<div class="col-2"><a href="#" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Home</a></div>
+<div class="col-2"><a href="#" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">About</a></div>
+<div class="col-2"><a href="#" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Home</a></div>
+<div class="col-2"><a href="#" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">About</a></div> -->
+  </div>
 
 <!-- Math Calculator Closed -->
 <h1>Free Online Calculators & Conversion Tools</h1>
