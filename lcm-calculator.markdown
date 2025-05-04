@@ -75,11 +75,13 @@ description: "Use our free LCM calculator to quickly find the least common multi
  
 <div class="video-container py-4" itemscope itemtype="http://schema.org/VideoObject">
 <p>This video explains how to calculate LCM using our free LCM calculator. Watch the steps and try it yourself using the tool below.</p>
-  <meta itemprop="name" content="Least Common Multiple (LCM) | Mathematics Grade 4 | Periwinkle">
-  <meta itemprop="description" content="Learn how to find the Least Common Multiple (LCM) in this fun and easy-to-understand video by Periwinkle! Designed for Grade 4 students, this lesson breaks down the concept of LCM using clear examples and engaging visuals to help kids grasp the fundamentals of multiplication and number relationships.">
-  <meta itemprop="uploadDate" content=" Nov 26, 2017">
- <iframe  width="100%" height="450" src="https://www.youtube.com/embed/CIkDcENjzBA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<meta itemprop="name" content="Least Common Multiple (LCM) | Mathematics Grade 4 | Periwinkle">
+<meta itemprop="description" content="Learn how to find the Least Common Multiple (LCM) in this fun and easy-to-understand video by Periwinkle! Designed for Grade 4 students, this lesson breaks down the concept of LCM using clear examples and engaging visuals to help kids grasp the fundamentals of multiplication and number relationships.">
+<meta itemprop="uploadDate" content="2017-11-26">
+<meta itemprop="thumbnailUrl" content="https://img.youtube.com/vi/CIkDcENjzBA/hqdefault.jpg">
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/CIkDcENjzBA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
+
 
 </div>
 <script src="{{ '/assets/js/lcm-calc.js' | relative_url }}"></script>
