@@ -5,16 +5,16 @@ permalink: /age-calculator
 description: "Use our free Age Calculator to find your age from your birth date or see the age difference in days. It's quick and easy to find your age today!"
 ---
 <div class="container mt-5">
+
 <h1 class="text-center">Age Calculator</h1>
+
   <form id="ageForm" class="mt-4 ">
     <div class="row mb-4 gap-4">
       <div class="col-md-5 py-4 shadow bg-body-tertiary rounded text-center">
-        <label for="startDate" class="form-label"><strong>Start Date</strong></label>
-        <input type="date" id="startDate" class="form-control" required>
+        <label for="startDate" class="form-label"><strong>Start Date</strong></label><input type="date" id="startDate" class="form-control" required>
        </div>
          <div class="col-md-5 py-4 shadow rounded text-center ">
-         <label for="endDate" class="form-label"><strong>End Date</strong></label>
-         <input type="date" id="endDate" class="form-control" value="" required>
+         <label for="endDate" class="form-label"><strong>End Date</strong></label><input type="date" id="endDate" class="form-control" value="" required>
          </div>
          </div>
         <button type="button" id="calculateBtn" class="btn btn-danger">Calculate Age</button>
@@ -28,12 +28,15 @@ description: "Use our free Age Calculator to find your age from your birth date 
            <li class="list-group-item" id="result4"></li>
            <li class="list-group-item" id="result5"></li>
            <li class="list-group-item" id="result6"></li>
-   </ul>
-</div>
+         </ul>
+        </div>
+
     
 <!-- Article -->
-<p class="last-updated pt-4">  Last updated on: {{ site.time | date: "%d-%m-%Y" }}</p>
-<h2><strong>What is the Age Calculator</strong></h2>
+<h2 class="pt-5">Age Calculator – Calculate Your Exact Age Instantly</h2>
+<p>  Last updated on: {{ site.time | date: "%d-%m-%Y" }}</p>
+<p>Looking for an accurate way to calculate your age? Our <strong>Age Calculator</strong> is a simple yet powerful tool that helps you determine your exact age in <strong>years, months, weeks, days, hours, minutes, and even seconds</strong>&mdash;based on your date of birth.</p>
+<h3><strong>What is the Age Calculator</strong></h3>
 <p>An age calculator is a tool that helps you find out how old someone or something is. You just need to enter the date of birth (or when something started) and the current date or future date. It will calculate the number of years, months, weeks, days and Hour also.</p>
 
 <h3>Chronological age calculator</h3>
@@ -64,7 +67,14 @@ These time for calculation examples are help people plan events, meet deadlines,
 <li><p><strong>Family Roles</strong>: Age helps define roles in a family&mdash;whether you&rsquo;re a child, parent, or grandparent.</p></li>
 </ul>
 <p>In short, age helps us make sense of life and the world around us! 😊</p>
-<h3>Date of Birth Calculator</h3><p>A Date of Birth Calculator helps you find out someone's exact age by entering their birth date. Use our tool that check and calculate days from your date of birth</p>
+<h3>🗓️ Date of Birth (DOB) Calculator</h3>
+<p>A <strong >Date of Birth Calculator</strong> lets you quickly find out how old someone is by simply entering their <strong>birth date</strong>. It shows:</p>
+<ul>
+<li><p>Age in years, months, and days</p></li>
+<li><p>Day of the week you were born</p></li>
+<li><p>Countdown to your next birthday</p></li>
+</ul>
+
 <h3>Find my age today</h3><p>To find out your age today, just enter your date of birth in the <strong>Start date </strong> field and click on calculate to find your age today. Our tool will show you your age in total years and days. <br> As an example, a person born in 2003 will turn 21 years old in 2024. You can refer to the image below to determine your age, the month, and the number of weeks since your birth date.</p>
 <img class="img-fluid" alt="Age Calculator, how to find my age and date of birth calculation" src="/assets/images/age-calculator.webp" fetchpriority="high" loading="auto" style="object-fit: contain;">
 
