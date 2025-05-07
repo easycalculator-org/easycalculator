@@ -103,7 +103,7 @@ These time for calculation examples are help people plan events, meet deadlines,
 <img class="img-fluid" alt="Age Calculator, how to find my age and date of birth calculation" src="/assets/images/age-calculator.webp" fetchpriority="high" loading="auto" style="object-fit: contain;">
 
 
-  {% include about.html %}
+
 </div>
 
 <script src="{{ '/assets/js/age-calculator.js' | relative_url }}"></script>
