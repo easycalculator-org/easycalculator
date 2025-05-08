@@ -39,8 +39,14 @@ h2, h3 {
 <p>Navigating the globe requires precision, and one of the most accurate and widely-used systems for mapping and geolocation is the <strong>UTM coordinate system</strong>. A <strong>UTM zone map</strong> divides the Earth into a series of zones that make it easier to represent geographic locations with exactitude. Whether you're a cartographer, surveyor, geographer, or simply an enthusiast, understanding <strong>UTM zones</strong> can be incredibly valuable.</p>
 
 <h3>What is the UTM Coordinate System?</h3>
-    <p>The <strong>Universal Transverse Mercator (UTM)</strong> coordinate system is a global map projection that uses a 2D Cartesian coordinate system to give locations on the surface of the Earth. Unlike latitude and longitude, which use spherical coordinates, UTM breaks the world into 60 vertical zones, each 6 degrees of longitude wide.</p>
+    <p>The <strong>Universal Transverse Mercator (UTM)</strong> coordinate system is a global map projection that uses a 2D Cartesian coordinate system to give locations on the surface of the Earth. Unlike latitude and longitude, which use spherical coordinates, UTM breaks the world into 60 vertical zones, each 6 degrees of longitude in width The zones are numbered 1-60, beginning at 180-degrees longitude and increasing to the east. this A single grid zone measures aprox 660km wide. </p>
     <p>Each <strong>UTM zone</strong> is projected separately, minimizing distortion and allowing for high accuracy. The UTM system is based on the <strong>WGS 1984 datum</strong>, making it a cornerstone for GPS-based mapping.</p>
+
+
+
+
+
+
 
    <h3>UTM Zone Map Overview</h3>
     <p>A <strong>UTM zone map</strong> visually displays how Earth is divided into these 60 zones, ranging from Zone 1 at 180&deg;W to Zone 60 at 180&deg;E. Each zone spans from 80&deg;S to 84&deg;N latitude. Zones are further subdivided horizontally into bands, labeled from “C” to “X” (excluding "I" and "O"), forming what’s known as the <strong>UTM grid map</strong>.</p>
@@ -74,6 +80,38 @@ h2, h3 {
   <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Utm-zones.jpg" alt="UTM Zone Map - Universal Transverse Mercator Zones"   class="img-fluid rounded shadow-sm" >
   <p class="mt-2 text-muted small">A global UTM Zone Map showing division into 60 zones from Zone 1 to Zone 60 (Source: Wikipedia)</p>
 </div>
+
+
+<!-- Download UTM Grid Map Files Section -->
+<h3 class="text-center mb-4">Download UTM Grid Map Files</h3>
+  
+  <div class="row g-4 justify-content-center">
+    <div class="col-md-3">
+      <div class="card text-center shadow-sm p-3">
+        <h5 class="card-title mb-3">Shapefile (.shp)</h5><a href="/download/UTM-grid/mapinfo.zip" class="btn btn-primary w-100" download><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg> Download Mapinfo</a>
+      </div>
+    </div>
+
+ <div class="col-md-3">
+      <div class="card text-center shadow-sm p-3">
+        <h5 class="card-title mb-3">GeoJSON (.geojson)</h5><a href="/download/UTM-grid/World_UTM_Grid.geojson" class="btn btn-primary w-100" download><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg> Download Geojson</a>
+      </div>
+    </div>
+
+  <div class="col-md-3">
+      <div class="card text-center shadow-sm p-3">
+        <h5 class="card-title mb-3">MapInfo (.tab)</h5><a href="/download/UTM-grid/shapfile.zip" class="btn btn-primary w-100" download><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg>Download Shapefile</a>
+      </div>
+    </div>
+
+  <div class="col-md-3">
+      <div class="card text-center shadow-sm p-3">
+        <h5 class="card-title mb-3">KML (.kml)</h5><a href="/download/UTM-grid/World-UTM-Grid.kml" class="btn btn-primary w-100" download><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg> Download KML</a>
+      </div>
+    </div>
+
+  </div>
+
 
    <div class="highlight mt-4">
       <p><strong>Source:</strong> Wikipedia, EPSG.io, Leaflet.js, OpenStreetMap, U.S. Geological Survey</p>
