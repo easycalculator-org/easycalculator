@@ -102,7 +102,7 @@ These time for calculation examples are help people plan events, meet deadlines,
 <h3>Find my age today</h3><p>To find out your age today, just enter your date of birth in the <strong>Start date </strong> field and click on calculate to find your age today. Our tool will show you your age in total years and days. <br> As an example, a person born in 2003 will turn 21 years old in 2024. You can refer to the image below to determine your age, the month, and the number of weeks since your birth date.</p>
 <img class="img-fluid" alt="Age Calculator, how to find my age and date of birth calculation" src="/assets/images/age-calculator.webp" fetchpriority="high" loading="auto" style="object-fit: contain;">
 
-<h5>FAQ:</h5>
+<h5 class="pt-4">FAQ:</h5>
 <h4>7. Why is age important?</h4>
 <p>Age is important because it helps in personal growth tracking, healthcare decisions, educational placements, legal rights, cultural traditions, historical understanding, and more.</p>
 <h4 >9. How do I find my exact age today?</h4>
