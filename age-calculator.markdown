@@ -103,15 +103,15 @@ These time for calculation examples are help people plan events, meet deadlines,
 <img class="img-fluid" alt="Age Calculator, how to find my age and date of birth calculation" src="/assets/images/age-calculator.webp" fetchpriority="high" loading="auto" style="object-fit: contain;">
 
 <h5 class="pt-4">FAQ:</h5>
-<h4>7. Why is age important?</h4>
+<h4>1. Why is age important?</h4>
 <p>Age is important because it helps in personal growth tracking, healthcare decisions, educational placements, legal rights, cultural traditions, historical understanding, and more.</p>
-<h4 >9. How do I find my exact age today?</h4>
+<h4 >2. How do I find my exact age today?</h4>
 <p>Enter your date of birth in the Age Calculator and click "Calculate." The tool will display your exact age in years, months, days, and even hours if needed.</p>
-<h4>Is my data secure when using the Age Calculator?</h4>
+<h4>3. Is my data secure when using the Age Calculator?</h4>
 <p>Yes, the Age Calculator does not store or share your data. It simply performs calculations based on the input you provide.</p>
-<h4>Can I calculate age including time of birth?</h4>
+<h4>4. Can I calculate age including time of birth?</h4>
 <p>Yes, if you provide the exact time of birth, the Age Calculator can give you a more precise age calculation down to the hour, minute, and second.</p>
-<h4>Can I use the Age Calculator for future dates?</h4>
+<h4>5. Can I use the Age Calculator for future dates?</h4>
 <p>Yes, you can use the Age Calculator to calculate your age on a future date, which is useful for planning events or milestones.</p>
 
 </div>
