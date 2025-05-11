@@ -183,6 +183,12 @@ description: "Convert dBm to Watts easily with our calculator. Explore dBm to Wa
   </table>
 </div>
 
+<div class="highlight mt-4"><p><strong>Source:</strong> Wikipedia, 3GPP, ETSI and IEEE</p>
+</div>
+
+
+
+
 </div>
 
 <script src="{{ '/assets/js/dbm-watt.js' | relative_url }}"></script>
