@@ -31,7 +31,7 @@ description: "Convert dBm to Watts easily with our calculator. Explore dBm to Wa
 <div id="result" class="result-box w-100"></div>
 </div>
   </div>
-<p class="pt-5">Last updated: Dec 6, 2024</p>
+<p>  Last updated on: {{ site.time | date: "%d-%m-%Y" }}</p>
   <h3>What is dBm to Watts conversion calculator?</h3>
   <p>dBm to Watts conversion calculator converts the power value in dBm to Watss dBm value. Watt (W) is a SI unit for measuring the power, and dBm stands for decibel-milliwatts, which is a decibel unit for measuring the power.</p>
   <h4>How to calculate power (in dBm) for the given watts?</h4>

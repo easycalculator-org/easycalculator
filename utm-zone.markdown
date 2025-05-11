@@ -30,7 +30,7 @@ h2, h3 {
   </style>
 
 <div class="container-fluid">
- <h1 class="text-center my-3">UTM Grid Map Viewer</h1>
+ <h1 class="text-center my-3">UTM Zone Map Viewer</h1>
   <div id="map"></div>
 <br>
 
