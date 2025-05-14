@@ -27,12 +27,23 @@ url: "https://easycalculator.org" # the base hostname & protocol for your site, 
 #twitter_username: jekyllrb
 #github_username:  jekyll
 
+defaults:
+  - scope:
+    path: ""
+    values:
+    image: "/assets/images/android-chrome-512x512.png"
+
+
+
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-gzip 
+  - jekyll-minifier 
+ # - jekyll-robots.txt ( not require alredy used in root directory as custom)
  # - jekyll-last-modified-at ( gthub not support this plugin)
 
 
@@ -50,10 +61,35 @@ indexnow:
 include:
   - ".htaccess"
 
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6 # Table of Contents depth
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "highlight" # Custom class for syntax highlighting (better styling control)
+    line_numbers: true # Optional: Shows line numbers for code blocks
+    start_line: 1 # Starting line number for line numbering
+  parse_block_html: true # Allow HTML in Markdown (useful for SEO)
+  math_engine: mathjax # Enable MathJax for math rendering (optional)
+
+
+
+
+
+
+
+
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
 # exclude:
+  - "README.md"
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
