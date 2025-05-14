@@ -62,27 +62,7 @@ include:
   - ".htaccess"
 
 
-markdown: kramdown
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6 # Table of Contents depth
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: "highlight" # Custom class for syntax highlighting (better styling control)
-    line_numbers: true # Optional: Shows line numbers for code blocks
-    start_line: 1 # Starting line number for line numbering
-  parse_block_html: true # Allow HTML in Markdown (useful for SEO)
-  math_engine: mathjax # Enable MathJax for math rendering (optional)
-
-
-
-
-
-
+# markdown: kramdown ( github not support this plugin)
 
 
 # Excluded items can be processed by explicitly listing the directories or
