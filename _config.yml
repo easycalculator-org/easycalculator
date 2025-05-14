@@ -41,10 +41,10 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-gzip 
-  - jekyll-minifier 
+ # - jekyll-gzip  ( github not support this plugin)
+ # - jekyll-minifier ( github not support this plugin)
  # - jekyll-robots.txt ( not require alredy used in root directory as custom)
- # - jekyll-last-modified-at ( gthub not support this plugin)
+ # - jekyll-last-modified-at ( github not support this plugin)
 
 
 
