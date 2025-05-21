@@ -131,12 +131,12 @@ description: "Use EasyCalculator.org’s free online calculators to solve financ
 <div class="row text-center g-3">
 <div class="col-md-3 g-4"><a href="/date-to-date-calculator" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Date to Date Calculator</a></div>
 <div class="col-md-3 g-4"><a href="/utm-zone-map" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">UTM Zone Map</a></div>
-<div class="col-md-3 g-4"><a href="/character-count" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Character COunt</a></div>
+<div class="col-md-3 g-4"><a href="/character-count" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Character Count</a></div>
 <div class="col-md-3 g-4"><a href="/military-grid-reference-system-converter" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">MGRS Converter</a></div>
  <div class="col-md-3 g-4"><a href="/current-elevation" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Current Elevation</a></div>
  <div class="col-md-3 g-4"><a href="/latitude-longitude-converter" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Lat/long Converter</a></div>
-<!--<div class="col-2"><a href="#" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Home</a></div>
-<div class="col-2"><a href="#" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">About</a></div> -->
+<div class="col-2"><a href="latitude-longitude-to-address" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Lat/long to Address</a></div>
+<!--<div class="col-2"><a href="#" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">About</a></div> -->
   </div>
 
 <!-- Math Calculator Closed -->
