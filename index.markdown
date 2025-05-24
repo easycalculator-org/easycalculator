@@ -127,15 +127,31 @@ description: "Use EasyCalculator.org’s free online calculators to solve financ
 
  <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="22" viewBox="0 0 384 512"><path fill="#B197FC" d="M224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112L48 144c-17.7 0-32 14.3-32 32s14.3 32 32 32l112 0 0 112c0 17.7 14.3 32 32 32s32-14.3 32-32l0-112 112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-112 0 0-112zM0 480c0 17.7 14.3 32 32 32l320 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 448c-17.7 0-32 14.3-32 32z"/></svg><h5>Interest Calculator</h5></div></a></div></div>
 
+<hr>
+<h2>Geolocation Tool</h2>
+<div class="row g-4 p-3 ">
+
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/what-is-my-ip"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512"><path d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z"/></svg><h5>My IP Address</h5></div></a> </div>
+        
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/utm-zone-map"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="24" viewBox="0 0 384 512"><path fill="#63E6BE" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg><h5>UTM Zone Map</h5></div> </a></div>
+
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/military-grid-reference-system-converter"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512"><path fill="#B197FC" d="M128 136c0-22.1-17.9-40-40-40L40 96C17.9 96 0 113.9 0 136l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48zm0 192c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48zm32-192l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM288 328c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48zm32-192l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM448 328c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48z"/></svg><h5>MGRS Converter</h5></div></a></div>
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/current-elevation"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="40" viewBox="0 0 640 512"><path fill="#5f69ec" d="M560 160A80 80 0 1 0 560 0a80 80 0 1 0 0 160zM55.9 512l325.2 0 75 0 122.8 0c33.8 0 61.1-27.4 61.1-61.1c0-11.2-3.1-22.2-8.9-31.8l-132-216.3C495 196.1 487.8 192 480 192s-15 4.1-19.1 10.7l-48.2 79L286.8 81c-6.6-10.6-18.3-17-30.8-17s-24.1 6.4-30.8 17L8.6 426.4C3 435.3 0 445.6 0 456.1C0 487 25 512 55.9 512z"/></svg><h5>Current Elevation</h5></div></a></div>
+ <div class="col-md-3 g-1 p-3  "><a class="text-decoration-none" href="/latitude-longitude-converter"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512"><path fill="#f976aa" d="M256 0c17.7 0 32 14.3 32 32l0 34.7C368.4 80.1 431.9 143.6 445.3 224l34.7 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-34.7 0C431.9 368.4 368.4 431.9 288 445.3l0 34.7c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-34.7C143.6 431.9 80.1 368.4 66.7 288L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l34.7 0C80.1 143.6 143.6 80.1 224 66.7L224 32c0-17.7 14.3-32 32-32zM128 256a128 128 0 1 0 256 0 128 128 0 1 0 -256 0zm128-80a80 80 0 1 1 0 160 80 80 0 1 1 0-160z"/></svg><h5>Lat/long Converter</h5></div></a> </div>
+  <div class="col-md-3 g-1 p-3  "><a class="text-decoration-none" href="/latitude-longitude-to-address"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="36" viewBox="0 0 576 512"><path fill="#38e5b1" d="M302.8 312C334.9 271.9 408 174.6 408 120C408 53.7 354.3 0 288 0S168 53.7 168 120c0 54.6 73.1 151.9 105.2 192c7.7 9.6 22 9.6 29.6 0zM416 503l144.9-58c9.1-3.6 15.1-12.5 15.1-22.3L576 152c0-17-17.1-28.6-32.9-22.3l-116 46.4c-.5 1.2-1 2.5-1.5 3.7c-2.9 6.8-6.1 13.7-9.6 20.6L416 503zM15.1 187.3C6 191 0 199.8 0 209.6L0 480.4c0 17 17.1 28.6 32.9 22.3L160 451.8l0-251.4c-3.5-6.9-6.7-13.8-9.6-20.6c-5.6-13.2-10.4-27.4-12.8-41.5l-122.6 49zM384 255c-20.5 31.3-42.3 59.6-56.2 77c-20.5 25.6-59.1 25.6-79.6 0c-13.9-17.4-35.7-45.7-56.2-77l0 194.4 192 54.9L384 255z"/></svg><h5>Lat/long to Address</h5></div></a> </div>
+ </div>
+ 
+
+ <!-- conversion-tool end-->
+
+
+
+
 <h3>Others Calculator</h3>
 <div class="row text-center g-3">
 <div class="col-md-3 g-4"><a href="/date-to-date-calculator" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Date to Date Calculator</a></div>
-<div class="col-md-3 g-4"><a href="/utm-zone-map" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">UTM Zone Map</a></div>
 <div class="col-md-3 g-4"><a href="/character-count" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Character Count</a></div>
-<div class="col-md-3 g-4"><a href="/military-grid-reference-system-converter" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">MGRS Converter</a></div>
- <div class="col-md-3 g-4"><a href="/current-elevation" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Current Elevation</a></div>
- <div class="col-md-3 g-4"><a href="/latitude-longitude-converter" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Lat/long Converter</a></div>
-<div class="col-2"><a href="latitude-longitude-to-address" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Lat/long to Address</a></div>
+
 <!--<div class="col-2"><a href="#" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">About</a></div> -->
   </div>
 
