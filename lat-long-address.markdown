@@ -122,16 +122,16 @@ image: "/assets/images/lat-long-to-address.webp"
 <section class="container my-5" id="faq">
     <h2 class="h4 mb-4 text-primary">🌍 Frequently Asked Questions</h2>
     
- <div class="accordion" itemscope itemtype="https://schema.org/FAQPage">
+    <div class="accordion">
         <!-- FAQ 1 -->
-        <div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <h3 class="accordion-header" itemprop="name">
+        <div class="accordion-item">
+            <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
                     What is Latitude & Longitude to Address Converter?
                 </button>
             </h3>
-            <div id="faq1" class="accordion-collapse collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <div class="accordion-body" itemprop="text">
+            <div id="faq1" class="accordion-collapse collapse">
+                <div class="accordion-body">
                     <p>Latitude & Longitude to Address Converter (reverse geocoding) is the process of transforming geographic coordinates into a human-readable street address. For example:</p>
                     <pre class="bg-light p-2 rounded">40.7128° N, 74.0060° W → New York City Hall, New York, NY 10007</pre>
                     <p>This conversion is essential for location-based services, logistics, and mapping applications.</p>
@@ -139,15 +139,15 @@ image: "/assets/images/lat-long-to-address.webp"
             </div>
         </div>
 
-  <!-- FAQ 2 -->
- <div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <h3 class="accordion-header" itemprop="name">
+        <!-- FAQ 2 -->
+        <div class="accordion-item">
+            <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
                     How many coordinates can I convert at once?
                 </button>
             </h3>
-            <div id="faq2" class="accordion-collapse collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <div class="accordion-body" itemprop="text">
+            <div id="faq2" class="accordion-collapse collapse">
+                <div class="accordion-body">
                     <p>Our tool supports batch processing of up to:</p>
                     <ul>
                         <li>100 coordinates per conversion</li>
@@ -158,15 +158,16 @@ image: "/assets/images/lat-long-to-address.webp"
                 </div>
             </div>
         </div>
- <!-- FAQ 3 -->
-  <div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <h3 class="accordion-header" itemprop="name">
+
+        <!-- FAQ 3 -->
+        <div class="accordion-item">
+            <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
                     How to get address from latitude and longitude in Excel/CSV?
                 </button>
             </h3>
-            <div id="faq3" class="accordion-collapse collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <div class="accordion-body" itemprop="text">
+            <div id="faq3" class="accordion-collapse collapse">
+                <div class="accordion-body">
                     <p>3-step process for Excel/CSV users:</p>
                     <ol>
                         <li>Prepare your CSV with columns: <code>Latitude,Longitude</code></li>
@@ -179,17 +180,17 @@ image: "/assets/images/lat-long-to-address.webp"
         </div>
     </div>
 
-    <!-- Structured Data -->
+    <!-- Structured Data (Corrected) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [{
             "@type": "Question",
-            "name": "What is Latitude & Longitude to Address Conversion?",
+            "name": "What is Latitude & Longitude to Address Converter?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Latitude & Longitude to Address conversion (reverse geocoding) transforms geographic coordinates into human-readable street addresses. This process is essential for location-based services, logistics, and mapping applications, converting values like 40.7128° N, 74.0060° W to physical addresses like New York City Hall, New York, NY 10007."
+                "text": "Latitude & Longitude to Address Converter (reverse geocoding) transforms geographic coordinates into human-readable street addresses. This process is essential for location-based services, logistics, and mapping applications, converting values like 40.7128° N, 74.0060° W to physical addresses like New York City Hall, New York, NY 10007."
             }
         },{
             "@type": "Question",
@@ -203,7 +204,7 @@ image: "/assets/images/lat-long-to-address.webp"
             "name": "How to get address from latitude and longitude in Excel/CSV?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "For Excel/CSV users: 1) Prepare CSV with Latitude and Longitude columns 2) Upload file or paste coordinates 3) Download results with additional Address, City, Country, and Postcode columns. The output CSV works with Excel, Google Sheets, and major spreadsheet applications."
+                "text": "For Excel/CSV users: 1) Prepare CSV with Latitude and Longitude columns 2) Upload file or paste coordinates 3) Download results with additional Address, City, Region/State, and Country columns. The output CSV works with Excel, Google Sheets, and major spreadsheet applications."
             }
         }]
     }
