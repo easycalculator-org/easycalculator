@@ -2,10 +2,11 @@
 layout: default
 title: Latitude and Longitude to Address Converter – Reverse Geocoding Tool
 permalink: /latitude-longitude-to-address
-description: "Convert GPS coordinates to a full address instantly with our free reverse geocoding tool. Fast, accurate, and easy to use."
+description: "Convert latitude and longitude to full addresses instantly. Free reverse geocoding tool with map view and CSV download. Fast, accurate, and easy."
+image: "/assets/images/lat-long-to-address.webp"
 ---
 <style>
-        #map { height: 400px; width: 100%; margin-top: 15px; }
+        #map { height: 300px; width: 100%; margin-top: 15px; }
         #progressContainer { display: none; }
         textarea { width: 100%; height: 200px; resize: none; font-family: monospace; }
  </style>
@@ -83,19 +84,15 @@ description: "Convert GPS coordinates to a full address instantly with our free 
         </div>
 
  <!-- How to Use -->
-  <div class="bg-white rounded-3 p-4 shadow mb-4">
-            <h2 class="h5 text-primary mb-3">🛠️ How to Use</h2>
-            <ol class="text-muted">
-                <li class="mb-3"><strong>Paste Your Lat-Long Pairs</strong><br>
-                Example input:<br>
-                <code class="d-block bg-light p-2 mt-1 rounded-2">37.7749,-122.4194<br>48.8566,2.3522<br>51.5074,-0.1278</code></li>
-                <li class="mb-3"><strong>Click the "Process" Button</strong><br>
-                Our tool will process each pair and convert it into a full address.</li>
-                <li class="mb-3"><strong>View Results on Map</strong><br>
-                Click the map icon to see the exact location of any result.</li>
-                <li><strong>Download CSV</strong><br>
-                Export all results to a CSV file with one click.</li>
-            </ol>
+<div class="bg-white rounded-3 p-4 shadow mb-4">
+ <h2 class="h5 text-primary mb-3">🛠️ How to Use</h2>
+    <img src="/assets/images/lat-long-to-address.webp" alt="Latitude and Longitude to Address Converter - Reverse Geocoding Tool Interface with Map and CSV Export" width="100%" loading="lazy" />
+     <ol class="text-muted">
+         <li class="mb-3"><strong>Paste Your Lat-Long Pairs</strong><br> Example input:<br><code class="d-block bg-light p-2 mt-1 rounded-2">37.7749,-122.4194<br>48.8566,2.3522<br>51.5074,-0.1278</code></li>
+         <li class="mb-3"><strong>Click the "Process" Button</strong><br> Our tool will process each pair and convert it into a full address.</li>
+         <li class="mb-3"><strong>View Results on Map</strong><br> Click the map icon to see the exact location of any result.</li>
+         <li><strong>Download CSV</strong><br>Export all results to a CSV file with one click.</li>
+      </ol>
         </div>
 
   <!-- Use Cases -->
