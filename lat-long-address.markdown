@@ -9,29 +9,119 @@ description: "Convert GPS coordinates to a full address instantly with our free 
         #progressContainer { display: none; }
         textarea { width: 100%; height: 200px; resize: none; font-family: monospace; }
  </style>
-
 <div class="container mt-5">
   <div class="card p-4 shadow-lg">
-        <h2 class="mb-4 text-center">🌐 Reverse Geocoding Tool</h2>
+    <h2 class="mb-4 text-center">🌐 Reverse Geocoding Tool</h2>
+    <div class="row">
+        <!-- Left Column -->
+      <div class="col-md-6">
         <div class="mb-3">
-            <label for="latlong" class="form-label">📍 Paste Latitude, Longitude (Up to 100):</label>
-            <textarea class="form-control" id="latlong" placeholder="Paste Latitude, Longitude pairs (e.g., 28.6139, 77.2090) each on a new line"></textarea>
+          <label for="latlong" class="form-label">📍 Paste Latitude, Longitude (Up to 100):</label>
+          <textarea class="form-control" id="latlong" placeholder="Paste Latitude, Longitude pairs (e.g., 28.6139, 77.2090) each on a new line"></textarea>
         </div>
         <div class="d-flex justify-content-between">
-            <button class="btn btn-primary" id="processBtn">🚀 Process</button>
-            <button class="btn btn-success" id="downloadBtn" style="display:none;">⬇️ Download Results</button>
+          <button class="btn btn-primary" id="processBtn">🚀 Process</button>
+          <button class="btn btn-success" id="downloadBtn" style="display:none;">⬇️ Download Results</button>
         </div>
+        <div class="mt-3" id="progressContainer">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 0%" id="progressBar">0%</div>
+          </div>
+        </div>
+      </div>
+      <!-- Right Column -->
+      <div class="col-md-6">
+        <div id="map" class="mt-3"></div>
+        <div id="addressResult" class="mt-3"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
- <div class="mt-3" id="progressContainer">
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 0%" id="progressBar">0%</div>
+
+
+
+<!-- Article Part -->
+<hr>
+<h1 class="p-3">Convert Latitude & Longitude to Address</h1>
+<p>Looking for a simple and efficient way to convert latitude and longitude coordinates into actual physical addresses? Our Reverse Geocoding Tool is designed to help you convert up to 100 coordinates at once into human-readable addresses with just a click. Whether you're a developer, marketer, researcher, or simply curious, this tool makes reverse geocoding fast, accurate, and convenient.</p>
+
+
+
+ <!-- Main Content -->
+ <div class="bg-white rounded-3 p-4 shadow mb-4">
+  <h3 class="h4 text-primary mb-2">🧭 What Is Reverse Geocoding?</h3>
+            <p>Reverse geocoding is the process of converting geographic coordinates (latitude and longitude) into a physical address. For example, converting:</p> 
+            <pre class="bg-light p-3 rounded-2 mb-3"><code>40.730610, -73.935242</code></pre>
+            <p>into:</p>
+            <pre class="bg-light p-3 rounded-2 mb-4"><code>1600 Broadway, New York, NY 10019, USA</code></pre>
+            <h2 class="h5 text-secondary mb-3">This process is useful for:</h2>
+            <div class="row text-muted">
+                <div class="col-md-6 mb-2">• Mapping user locations</div>
+                <div class="col-md-6 mb-2">• Location-based marketing</div>
+                <div class="col-md-6 mb-2">• Analyzing GPS data</div>
+                <div class="col-md-6 mb-2">• Geo-tagging photos</div>
+                <div class="col-md-6 mb-2">• Delivery logistics and more</div>
             </div>
         </div>
 
- <div id="map" class="mt-3"></div>
-        <div id="addressResult" class="mt-3"></div>
-    </div>
-</div>
+ <!-- Features -->
+ <div class="bg-white rounded-3 p-4 shadow mb-4">
+            <h2 class="h5 text-primary mb-3">🚀 Key Features of Our Tool</h2>
+            <div class="text-muted">
+                <div class="mb-3">✅ Batch Conversion (Up to 100 Coordinates)<br>
+                <small>Just paste your list of latitude-longitude pairs (one per line), and we'll do the rest. No signup required.</small></div>
+                <div class="mb-3">✅ One-Click Processing<br>
+                <small>Click the "Process" button and get results instantly.</small></div>
+                <div class="mb-3">✅ Interactive Map Preview<br>
+                <small>Verify the exact location on the map for any coordinate you convert.</small></div>
+                <div class="mb-3">✅ CSV File Download<br>
+                <small>Download your results in a structured CSV file for easy use in Excel, Google Sheets, or your own application.</small></div>
+                <div>✅ Clean, Ad-Free Interface<br>
+                <small>We value your time and keep the interface clutter-free for the best user experience.</small></div>
+            </div>
+        </div>
+
+ <!-- How to Use -->
+  <div class="bg-white rounded-3 p-4 shadow mb-4">
+            <h2 class="h5 text-primary mb-3">🛠️ How to Use</h2>
+            <ol class="text-muted">
+                <li class="mb-3"><strong>Paste Your Lat-Long Pairs</strong><br>
+                Example input:<br>
+                <code class="d-block bg-light p-2 mt-1 rounded-2">37.7749,-122.4194<br>48.8566,2.3522<br>51.5074,-0.1278</code></li>
+                <li class="mb-3"><strong>Click the "Process" Button</strong><br>
+                Our tool will process each pair and convert it into a full address.</li>
+                <li class="mb-3"><strong>View Results on Map</strong><br>
+                Click the map icon to see the exact location of any result.</li>
+                <li><strong>Download CSV</strong><br>
+                Export all results to a CSV file with one click.</li>
+            </ol>
+        </div>
+
+  <!-- Use Cases -->
+ <div class="bg-white rounded-3 p-4 shadow mb-4">
+            <h2 class="h5 text-primary mb-3">📌 Use Cases</h2>
+            <div class="row text-muted">
+                <div class="col-md-6">
+                    <div class="mb-2">• GPS coordinate analysis for field research</div>
+                    <div class="mb-2">• Delivery route validation</div>
+                    <div class="mb-2">• Geotagged data for marketing</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-2">• Mobile app backend development</div>
+                    <div class="mb-2">• Location enrichment for datasets</div>
+                </div>
+            </div>
+        </div>
+
+ <!-- Privacy -->
+ <div class="alert alert-light border rounded-3">
+            <h2 class="h5 text-primary mb-2">🔒 Privacy First</h2>
+            <p class="text-muted small mb-0">We do not store your coordinates or results. Everything runs on secure servers and your data is wiped after your session ends.</p>
+        </div>
+
+
+
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
