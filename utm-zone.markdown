@@ -42,12 +42,6 @@ h2, h3 {
     <p>The <strong>Universal Transverse Mercator (UTM)</strong> coordinate system is a global map projection that uses a 2D Cartesian coordinate system to give locations on the surface of the Earth. Unlike latitude and longitude, which use spherical coordinates, UTM breaks the world into 60 vertical zones, each 6 degrees of longitude in width The zones are numbered 1-60, beginning at 180-degrees longitude and increasing to the east. this A single grid zone measures aprox 660km wide. </p>
     <p>Each <strong>UTM zone</strong> is projected separately, minimizing distortion and allowing for high accuracy. The UTM system is based on the <strong>WGS 1984 datum</strong>, making it a cornerstone for GPS-based mapping.</p>
 
-
-
-
-
-
-
    <h3>UTM Zone Map Overview</h3>
     <p>A <strong>UTM zone map</strong> visually displays how Earth is divided into these 60 zones, ranging from Zone 1 at 180&deg;W to Zone 60 at 180&deg;E. Each zone spans from 80&deg;S to 84&deg;N latitude. Zones are further subdivided horizontally into bands, labeled from “C” to “X” (excluding "I" and "O"), forming what’s known as the <strong>UTM grid map</strong>.</p>
     <p>These divisions are essential for:</p>
@@ -82,8 +76,26 @@ h2, h3 {
 </div>
 
 
+<h3 class="p-3">How UTM Zones Work in the USA </h3>
+<p>The United States spans multiple UTM zones, ranging from Zone 10 on the West Coast to Zone 19 in the East. These zones help accurately map geographic locations using the Universal Transverse Mercator (UTM) coordinate system. Below is a quick overview of the major UTM zone in the USA:<br>
+<ul>
+<li>UTM Zone 10 &ndash; Covers the western regions of California, Oregon, and Washington.</li>
+<li>UTM Zone 11 &ndash; Includes Nevada, Utah, and parts of Arizona and Idaho.</li>
+<li>UTM Zone 12 &ndash; Spans Colorado, Wyoming, and parts of New Mexico and Montana.</li>
+<li>UTM Zone 13 &ndash; Covers most of Texas, parts of Oklahoma, Kansas, and Nebraska.</li>
+<li>UTM Zone 14 &ndash; Includes regions of Minnesota, Iowa, Missouri, and Arkansas.</li>
+<li>UTM Zone 15 &ndash; Encompasses areas of the Great Lakes, including Wisconsin, Illinois, and Indiana.</li>
+<li>UTM Zone 16 &ndash; Covers Michigan, Ohio, and parts of the southeastern U.S.</li>
+<li>UTM Zone 17 &ndash; Includes states like Georgia, South Carolina, and parts of Florida.</li>
+<li>UTM Zone 18 &ndash; Covers North Carolina, Virginia, Maryland, and parts of Pennsylvania.</li>
+<li>UTM Zone 19 &ndash; Includes parts of New York, New England, and coastal northeastern states.</li>
+</ul>
+</p>
+
+<img src="/assets/images/utm-zone-usa-utm10-to-19.png" alt="USA UTM Zone Map showing UTM Zones 10 to 19" title="USA UTM Zone Map (UTM 10 to 19)" class="img-fluid rounded shadow-sm d-block mx-auto" style="height: 80%; width: auto;">
+
 <!-- Download UTM Grid Map Files Section -->
-<h3 class="text-center mb-4">Download UTM Grid Map Files</h3>
+<h3 class="text-center mb-4 pt-4">Download UTM Grid Map Files</h3>
   
   <div class="row g-4 justify-content-center">
     <div class="col-md-3">
