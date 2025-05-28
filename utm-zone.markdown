@@ -33,7 +33,7 @@ h2, h3 {
  <h1 class="text-center my-3">UTM Zone Map Viewer</h1>
   <div id="map"></div>
 <br>
-
+<p>  Last updated on: {{ site.time | date: "%d-%m-%Y" }} and Estimated reading time: 4 minutes</p>
 <div class="section">
 <h2 class="pt-2">UTM Zone Map – Understanding the UTM Coordinate System</h2>
 <p>Navigating the globe requires precision, and one of the most accurate and widely-used systems for mapping and geolocation is the <strong>UTM coordinate system</strong>. A <strong>UTM zone map</strong> divides the Earth into a series of zones that make it easier to represent geographic locations with exactitude. Whether you're a cartographer, surveyor, geographer, or simply an enthusiast, understanding <strong>UTM zones</strong> can be incredibly valuable.</p>

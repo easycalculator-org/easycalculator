@@ -3,13 +3,6 @@
 <!-- logo -->
 <a class="navbar-brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="Logo of easycalculator" width="200px"></a>
 
-<!-- Search Form (Icon inside input) -->
-<form class="d-flex ms-3 me-auto w-20 bg-light" role="search"  method="GET" style="max-width: 300px;">
-  <div class="position-relative w-100">
-    <input type="search" class="form-control ps-5 bg-light" placeholder="Search calculator" aria-label="Search" name="q">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray"  class="position-absolute top-50 start-0 translate-middle-y ms-3" viewBox="0 0 16 16"> <path  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" /> </svg>
-  </div>
-</form>
 
 
 <!-- mobile -->
@@ -17,6 +10,12 @@
 
   <div class="collapse navbar-collapse" id="navbarNav">
   <ul class="navbar-nav ms-auto">
+     <li class="nav-item"><form class="d-flex ms-3 me-auto w-20 bg-light" role="search"  method="GET" style="max-width: 300px;">
+  <div class="position-relative w-100">
+    <input type="search" class="form-control ps-5 bg-light" placeholder="Search calculator" aria-label="Search" name="q">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray"  class="position-absolute top-50 start-0 translate-middle-y ms-3" viewBox="0 0 16 16"> <path  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" /> </svg>
+  </div>
+</form></li>
    <li class="nav-item"><a class="nav-link" href="{{ '/age-calculator' | relative_url }}">Age Calculator</a></li>
    <li class="nav-item"><a class="nav-link" href="{{ '/currency' | relative_url }}">Currency Converter</a></li>
    <li class="nav-item"><a class="nav-link" href="{{ '/countdown' | relative_url }}">Countdown</a></li>
