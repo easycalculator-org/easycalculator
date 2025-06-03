@@ -188,10 +188,10 @@ description: "Use EasyCalculator.org’s free online calculators to solve financ
 <h3>Source Transparency</h3>
 <p>At EasyCalculator.org, we believe in transparency. Where possible, we refer to:</p>
 <ul>
-<li><p><a class="" href="https://en.wikipedia.org" target="_new" rel="noopener" >Wikipedia</a> for foundational mathematical and scientific concepts</p></li>
-<li><p><a class="" href="https://www.nist.gov" target="_new" rel="noopener">NIST.gov</a> for unit standards and measurement conversions</p></li>
-<li><p><a class="" href="https://www.irs.gov" target="_new" rel="noopener" >IRS.gov</a> for U.S. tax-related calculators</p></li>
-<li ><p ><a class="" href="https://www.usgs.gov/" target="_new" rel="noopener" >usgs.gov</a> U.S. Geological Survey</p></li>
+<li><a class="" href="https://en.wikipedia.org" target="_new" rel="noopener" >Wikipedia</a> for foundational mathematical and scientific concepts</li>
+<li><a class="" href="https://www.nist.gov" target="_new" rel="noopener">NIST.gov</a> for unit standards and measurement conversions</li>
+<li><a class="" href="https://www.irs.gov" target="_new" rel="noopener" >IRS.gov</a> for U.S. tax-related calculators</li>
+<li><a class="" href="https://www.usgs.gov/" target="_new" rel="noopener" >usgs.gov</a> U.S. Geological Survey</li>
 </ul>
 
 </div>
