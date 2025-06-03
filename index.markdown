@@ -185,6 +185,14 @@ description: "Use EasyCalculator.org’s free online calculators to solve financ
 </ul>
 
 <h3>Why Online Calculators Matter</h3><p>In today's digital world, online calculators save time, reduce human error, and make complex tasks simple. Whether you're a student, professional, traveler, or business owner, our tools help you make informed decisions quickly.</p>
+<h3>Source Transparency</h3>
+<p>At EasyCalculator.org, we believe in transparency. Where possible, we refer to:</p>
+<ul>
+<li><p><a class="" href="https://en.wikipedia.org" target="_new" rel="noopener" >Wikipedia</a> for foundational mathematical and scientific concepts</p></li>
+<li><p><a class="" href="https://www.nist.gov" target="_new" rel="noopener">NIST.gov</a> for unit standards and measurement conversions</p></li>
+<li><p><a class="" href="https://www.irs.gov" target="_new" rel="noopener" >IRS.gov</a> for U.S. tax-related calculators</p></li>
+<li ><p ><a class="" href="https://www.usgs.gov/" target="_new" rel="noopener" >usgs.gov</a> U.S. Geological Survey</p></li>
+</ul>
 
 </div>
 <script src="{{ '/assets/js/scientific-calculator.js' | relative_url }}"></script>
