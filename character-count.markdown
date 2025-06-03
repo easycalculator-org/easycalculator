@@ -5,7 +5,7 @@ permalink: /character-count
 description: "Quickly count characters, words, and spaces with our Advanced Character Count Tool. Easy to use, accurate, and perfect for writers, and marketers. Try it now!"
 #image: "/assets/images/age-calc-open-graph.png"
 ---
-
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 <div class="container mt-3">
   <div class="d-flex justify-content-between align-items-center mb-4 " id="darkModeToggle"><h1 class="h2 mb-0"> Character Count Tool</h1>
   </div>
@@ -15,7 +15,7 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
  <label for="textInput" class="form-label visually-hidden">Text Input</label><textarea id="textInput" class="form-control" rows="8" placeholder="Paste or type your text here.."  aria-label="Text input for analysis"></textarea>
   </div>
             
-<div class="row g-3 mt-2">
+<div class="row g-3 mt-1">
  <div class="col-md-6">
    <div class="stat-card card text-info-emphasis bg-secondary-subtle border border-secondary-subtle rounded-3 p-3">
      <h3 class="h5"> Basic Stats</h3>
@@ -30,7 +30,7 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
       </div>
                 
  <div class="col-md-6">
-<div class="stat-card card text-info-emphasis bg-secondary-subtle border border-secondary-subtle rounded-3 p-3">
+<div class="stat-card card text-info-emphasis bg-secondary-subtle border border-secondary-subtle rounded-3 p-2">
  <h3 class="h5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/></svg> Readability</h3>
            <ul class="list-unstyled">
              <li><strong>Reading Time:</strong> <span id="readingTime">0</span> mins</li>
@@ -49,5 +49,230 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
             </div>
         </div>
     </div>
+<!-- Article -->
+
+<!-- Overview Section -->
+<section id="overview" class="mb-5 p-4">
+<h2 class="h3 fw-bold mb-3 border-bottom pb-2">What is the Character Count Tool?</h2>
+<p class="lead">Need to stay within a word or character limit? Our Advanced Character Count Tool is your go-to solution. Whether you're crafting a tweet, writing a meta description, preparing an SMS, or drafting academic content, this tool helps you monitor character and word counts in real time.</p>
+    <div class="alert alert-info mt-4"> <i class="bi bi-info-circle me-2"></i>Our tool is completely free, requires no sign-up, and works seamlessly on both desktop and mobile devices.</div>
+ </section>
+<!-- Features Section -->
+<section id="features" class="mb-5">
+                    <h2 class="h3 fw-bold mb-4 border-bottom pb-2">Key Features</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="bg-primary text-white rounded-circle p-2 me-3">
+                                            <i class="bi bi-lightning fs-4"></i>
+                                        </div>
+                                        <h3 class="h5 mb-0">Real-Time Count</h3>
+                                    </div>
+                                    <p class="card-text">Instantly shows the number of characters, words, sentences, and paragraphs as you type or paste text.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="bg-success text-white rounded-circle p-2 me-3">
+                                            <i class="bi bi-sliders fs-4"></i>
+                                        </div>
+                                        <h3 class="h5 mb-0">Customizable Options</h3>
+                                    </div>
+                                    <p class="card-text">Include or exclude spaces, punctuation, and special characters based on your specific counting requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="bg-info text-white rounded-circle p-2 me-3">
+                                            <i class="bi bi-layout-text-sidebar fs-4"></i>
+                                        </div>
+                                        <h3 class="h5 mb-0">Clean Interface</h3>
+                                    </div>
+                                    <p class="card-text">Paste or type your text directly into the tool—no sign-up required. The minimalist design keeps you focused.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="bg-warning text-dark rounded-circle p-2 me-3">
+                                            <i class="bi bi-phone fs-4"></i>
+                                        </div>
+                                        <h3 class="h5 mb-0">Mobile Friendly</h3>
+                                    </div>
+                                    <p class="card-text">Works seamlessly on desktop and mobile devices. Count characters anywhere, anytime.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+<!-- Why Use Section -->
+<section id="benefits" class="mb-5">
+                    <h2 class="h3 fw-bold mb-4 border-bottom pb-2">Why Use Our Character Count Tool?</h2>
+                    <p class="lead">Writers, marketers, students, and developers use this tool to ensure their content fits platform-specific limits—be it Twitter (280 characters), Google meta descriptions (~160 characters), or SMS (160 characters).</p>
+                    <h3 class="h4 mt-5 mb-3 fw-bold">Who Benefits from Our Tool?</h3>
+                    <p>Our tool is designed for everyone who works with text. Here's how different professionals benefit:</p>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-pencil-square text-primary fs-3"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h4 class="h5 fw-bold">Content Creators</h4>
+                                    <p>Perfect social posts, emails, or ad copy. Ensure your message fits platform requirements while maintaining impact.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-mortarboard text-success fs-3"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h4 class="h5 fw-bold">Students & Academics</h4>
+                                    <p>Adhere to essay guidelines or publication rules. Perfect for abstracts, thesis titles, and citations with strict character limits.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-briefcase text-info fs-3"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h4 class="h5 fw-bold">Professionals</h4>
+                                    <p>Draft precise resumes, presentations, or legal documents. Ensure your professional communications are concise and effective.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-code-slash text-warning fs-3"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h4 class="h5 fw-bold">Developers</h4>
+                                    <p>Validate input lengths for APIs or forms. Test string lengths during development to prevent overflow errors.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-primary mt-4">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0">Platform Character Limits</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Twitter
+                                    <span class="badge bg-primary rounded-pill">280 characters</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Google Meta Description
+                                    <span class="badge bg-success rounded-pill">~160 characters</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    SMS
+                                    <span class="badge bg-info rounded-pill">160 characters</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    LinkedIn Summary
+                                    <span class="badge bg-warning rounded-pill">2,600 characters</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+<!-- How to Use Section -->
+<section id="usage" class="mb-5">
+                    <h2 class="h3 fw-bold mb-4 border-bottom pb-2">How to Use Our Character Count Tool</h2>
+                    <p class="lead">Using our Character Count Tool is incredibly simple. Follow these three easy steps:</p>
+                    <div class="row mt-4 g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="bg-primary text-white rounded-circle p-3 mb-3 mx-auto" style="width: 70px; height: 70px; line-height: 40px; font-size: 24px;">1</div>
+                                    <h3 class="h5 fw-bold">Visit Our Tool</h3>
+                                    <p>Navigate to our Character Count Tool page. It loads instantly with no sign-up required.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="bg-success text-white rounded-circle p-3 mb-3 mx-auto" style="width: 70px; height: 70px; line-height: 40px; font-size: 24px;">2</div>
+                                    <h3 class="h5 fw-bold">Paste Your Text</h3>
+                                    <p>Copy your content and paste it into the input box. You can also type directly in the editor.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="bg-info text-white rounded-circle p-3 mb-3 mx-auto" style="width: 70px; height: 70px; line-height: 40px; font-size: 24px;">3</div>
+                                    <h3 class="h5 fw-bold">View Metrics</h3>
+                                    <p>Instantly view all text metrics. Adjust your text until you hit your target character count!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-success mt-5">
+                        <h3 class="h4 fw-bold">Pro Tip:</h3>
+                        <p class="mb-0">Bookmark our tool for quick access whenever you need to check character counts. It's completely free and requires no login!</p>
+                    </div>
+                </section>
+<!-- FAQ Section -->
+<section class="mb-5">
+                    <h2 class="h3 fw-bold mb-4 border-bottom pb-2">Frequently Asked Questions</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Why is character counting important?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Character counting is essential for meeting platform requirements (like Twitter's 280-character limit), optimizing SEO meta descriptions, ensuring SMS messages don't get split, and adhering to academic guidelines. Precise character counts help maintain professionalism and effectiveness in communication.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Does the tool count spaces as characters?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, by default our tool counts spaces as characters since most platforms include them in their character limits. However, we provide an option to exclude spaces if you need to meet requirements that don't count spaces.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Is this tool completely free?
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely! Our Advanced Character Count Tool is 100% free to use with no hidden fees or premium tiers. You don't even need to create an account. We believe in providing valuable tools without barriers.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
 
 <script src="{{ '/assets/js/character-count.js' | relative_url }}"></script>
