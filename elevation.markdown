@@ -44,8 +44,143 @@ description: "Quickly find your current elevation and explore an accurate elevat
             </div>
         </div>
 
+<!-- Article  -->
+<h2>Elevation</h2><p>The elevation of a geographic location is its height above or below a fixed reference point, most commonly refer  the Earth's sea level. The term elevation is mainly used when referring to points on the Earth's surface. </p>
+
+<h3>My Current Elevation</h3><p>Ever wondered how high above sea level you are right now? Whether you’re hiking, planning a flight, or just curious, knowing your current elevation unlocks fascinating insights about your environment. This guide explains how to find your elevation instantly and harness elevation maps for outdoor adventures, science, and more—with trusted sources and practical tips.</p>
+
+<h3>Maps and GIS</h3>
+<p>GIS or geographic information system is a computer system that allows for visualizing, manipulating, capturing, and storage of data with associated attributes. GIS offers better understanding of patterns and relationships of the landscape at different scales. Tools inside the GIS allow for manipulation of data for spatial analysis or cartography.</p>
+<p><br />A topographical map is the main type of map used to depict elevation, often through contour lines. In a Geographic Information System (GIS), digital elevation models (DEM) are commonly used to represent the surface (topography) of a place, through a raster (grid) dataset of elevations. Digital terrain models are another way to represent terrain in GIS.</p>
+<p>USGS (United States Geologic Survey) is developing a 3D Elevation Program (3DEP) to keep up with growing needs for high quality topographic data. 3DEP is a collection of enhanced elevation data in the form of high quality LiDAR data over the conterminous United States, Hawaii, and the U.S. territories. There are three bare earth DEM layers in 3DEP which are nationally seamless at the resolution of 1/3, 1, and 2 arcseconds.</p>
+
+<div class="accordion" id="elevationFaq">
+<div class="accordion-item">
+      <h2 class="accordion-header" id="heading1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+          What is elevation?
+        </button>
+      </h2>
+      <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#elevationFaq">
+        <div class="accordion-body">
+          Elevation refers to the height of a point or location above a specific reference point, commonly above sea level. It is usually expressed in meters or feet.
+        </div>
+      </div>
+    </div>
+<div class="accordion-item">
+      <h2 class="accordion-header" id="heading2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+          How is elevation measured?
+        </button>
+      </h2>
+      <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#elevationFaq">
+        <div class="accordion-body">
+          Elevation is typically measured using instruments such as altimeters, GPS devices, or topographic maps. These tools can provide accurate readings of a location's height.
+        </div>
+      </div>
+    </div>
+<div class="accordion-item">
+      <h2 class="accordion-header" id="heading3">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+          Why is elevation important?
+        </button>
+      </h2>
+      <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#elevationFaq">
+        <div class="accordion-body">
+          Elevation is crucial for various reasons, including weather patterns, climate, agriculture, and construction. It affects temperature, air pressure, and even the types of vegetation that can thrive in an area.
+        </div>
+      </div>
+    </div>
+ <div class="accordion-item">
+      <h2 class="accordion-header" id="heading4">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+          What is the difference between elevation and altitude?
+        </button>
+      </h2>
+      <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#elevationFaq">
+        <div class="accordion-body">
+          Elevation refers to the height of a point above sea level, while altitude generally refers to the height of an object or point in the air, often used in aviation contexts.
+        </div>
+      </div>
+    </div>
+<div class="accordion-item">
+      <h2 class="accordion-header" id="heading5">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+          How does elevation affect climate?
+        </button>
+      </h2>
+      <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#elevationFaq">
+        <div class="accordion-body">
+          As elevation increases, the temperature typically decreases. Higher elevations often experience cooler temperatures and different weather patterns compared to lower areas.
+        </div>
+      </div>
+    </div>
+<div class="accordion-item">
+      <h2 class="accordion-header" id="heading6">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+          Can elevation impact physical health?
+        </button>
+      </h2>
+      <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#elevationFaq">
+        <div class="accordion-body">
+          Yes, elevation can affect physical health. For example, higher elevations can lead to altitude sickness due to lower oxygen levels. It is important for individuals to acclimatize when traveling to high altitudes.
+        </div>
+      </div>
+    </div>
+ <div class="accordion-item">
+      <h2 class="accordion-header" id="heading7">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+          What is the highest elevation point on Earth?
+        </button>
+      </h2>
+      <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#elevationFaq">
+        <div class="accordion-body">
+          The highest elevation point on Earth is the summit of Mount Everest, which stands at approximately 29,032 feet (8,848 meters) above sea level.
+        </div>
+      </div>
+    </div>
+<div class="accordion-item">
+      <h2 class="accordion-header" id="heading8">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+          How does elevation influence biodiversity?
+        </button>
+      </h2>
+      <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#elevationFaq">
+        <div class="accordion-body">
+          Elevation can significantly impact biodiversity. Different elevations provide varying climates and habitats, leading to diverse ecosystems and species adaptations.
+        </div>
+      </div>
+    </div>
+ <div class="accordion-item">
+      <h2 class="accordion-header" id="heading9">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+          What is a topographic map?
+        </button>
+      </h2>
+      <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#elevationFaq">
+        <div class="accordion-body">
+          A topographic map is a detailed representation of the Earth's surface that uses contour lines to show elevation changes. These maps are useful for hikers, planners, and geographers.
+        </div>
+      </div>
+    </div>
+ <div class="accordion-item">
+      <h2 class="accordion-header" id="heading10">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+          How can I find the elevation of my location?
+        </button>
+      </h2>
+      <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#elevationFaq">
+        <div class="accordion-body">
+          You can find the elevation of your location using online mapping services, GPS devices, or topographic maps. Many smartphone apps also provide elevation data based on your geographical coordinates.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
  <!-- Scripts -->
- 
  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
  <script src="{{ '/assets/js/elevation.js' | relative_url }}"></script>  
