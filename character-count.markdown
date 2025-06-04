@@ -10,7 +10,7 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
   <div class="d-flex justify-content-between align-items-center mb-4 " id="darkModeToggle"><h1 class="h2 mb-0"> Character Count Tool</h1>
   </div>
         
- <div class="card shadow-sm p-4">
+ <div class="card shadow p-4">
    <div class="mb-3">
  <label for="textInput" class="form-label visually-hidden">Text Input</label><textarea id="textInput" class="form-control" rows="8" placeholder="Paste or type your text here.."  aria-label="Text input for analysis"></textarea>
   </div>
@@ -54,15 +54,16 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
 <!-- Overview Section -->
 <section id="overview" class="mb-5 p-4">
 <h2 class="h3 fw-bold mb-3 border-bottom pb-2">What is the Character Count Tool?</h2>
-<p class="lead">Need to stay within a word or character limit? Our Advanced Character Count Tool is your go-to solution. Whether you're crafting a tweet, writing a meta description, preparing an SMS, or drafting academic content, this tool helps you monitor character and word counts in real time.</p>
+<p class="lead">A Character Count Tool is a web application that counts the number of characters in a given text. It is used to find out the length of text, often according to character limits set by the SMS sender operator, social media platforms, Meta Title, Meta description or writing assignment. our tool helps you monitor character and word counts in real time.</p>
     <div class="alert alert-info mt-4"> <i class="bi bi-info-circle me-2"></i>Our tool is completely free, requires no sign-up, and works seamlessly on both desktop and mobile devices.</div>
  </section>
+
 <!-- Features Section -->
 <section id="features" class="mb-5">
                     <h2 class="h3 fw-bold mb-4 border-bottom pb-2">Key Features</h2>
                     <div class="row g-4">
                         <div class="col-md-6">
-                            <div class="card h-100 border-0 shadow-sm">
+                            <div class="card h-100 border-0 shadow">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="bg-primary text-white rounded-circle p-2 me-3">
@@ -75,7 +76,7 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="card h-100 border-0 shadow-sm">
+                            <div class="card h-100 border-0 shadow">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="bg-success text-white rounded-circle p-2 me-3">
@@ -88,7 +89,7 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="card h-100 border-0 shadow-sm">
+                            <div class="card h-100 border-0 shadow">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="bg-info text-white rounded-circle p-2 me-3">
@@ -101,7 +102,7 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="card h-100 border-0 shadow-sm">
+                            <div class="card h-100 border-0 shadow">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="bg-warning text-dark rounded-circle p-2 me-3">
@@ -199,7 +200,7 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
                     <p class="lead">Using our Character Count Tool is incredibly simple. Follow these three easy steps:</p>
                     <div class="row mt-4 g-4">
                         <div class="col-md-4">
-                            <div class="card h-100 border-0 shadow-sm">
+                            <div class="card h-100 border-0 shadow">
                                 <div class="card-body text-center p-4">
                                     <div class="bg-primary text-white rounded-circle p-3 mb-3 mx-auto" style="width: 70px; height: 70px; line-height: 40px; font-size: 24px;">1</div>
                                     <h3 class="h5 fw-bold">Visit Our Tool</h3>
@@ -208,7 +209,7 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="card h-100 border-0 shadow-sm">
+                            <div class="card h-100 border-0 shadow">
                                 <div class="card-body text-center p-4">
                                     <div class="bg-success text-white rounded-circle p-3 mb-3 mx-auto" style="width: 70px; height: 70px; line-height: 40px; font-size: 24px;">2</div>
                                     <h3 class="h5 fw-bold">Paste Your Text</h3>
@@ -217,7 +218,7 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="card h-100 border-0 shadow-sm">
+                            <div class="card h-100 border-0 shadow">
                                 <div class="card-body text-center p-4">
                                     <div class="bg-info text-white rounded-circle p-3 mb-3 mx-auto" style="width: 70px; height: 70px; line-height: 40px; font-size: 24px;">3</div>
                                     <h3 class="h5 fw-bold">View Metrics</h3>
