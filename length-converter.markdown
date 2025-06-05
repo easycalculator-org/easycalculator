@@ -4,12 +4,7 @@ title: Length Converter | Easily Convert Between Different Units of Measurement
 permalink: /length-converter
 description: "Easily convert measurements with our Length Converter. Switch between units instantly and get accurate results in just a few clicks!"
 ---
-<style>
- .conversion-box:hover {
-            background-color:rgb(152, 196, 243) !important; /* Bootstrap primary color */
-            color: white !important;
-  }
-</style>
+
 <div class="container p-4">
     <div class="card shadow-lg p-4 col-12 col-sm-8 col-md-6">
         <h2 class="text-center mb-4">Length Converter</h2>
@@ -81,7 +76,7 @@ description: "Easily convert measurements with our Length Converter. Switch betw
                 document.write(`
                     <div class="col-md-4 col-lg-2">
                         <a href="/length-converter/${url}" class="text-dark text-decoration-none">
-                            <div class="p-3 bg-light text-center rounded shadow transition conversion-box">
+                            <div class="d-block p-3 text-center rounded shadow-sm bg-light text-dark text-decoration-none">
                                 ${conversion}
                             </div>
                         </a>

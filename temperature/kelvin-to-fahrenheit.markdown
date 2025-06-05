@@ -25,7 +25,6 @@ description: "Convert Kelvin to Fahrenheit easily with our simple calculator! Ge
         }
         
         .formula-box {
-            background-color: white;
             border-left: 5px solid var(--accent-color);
             padding: 1.5rem;
             margin: 1.5rem 0;
@@ -36,7 +35,6 @@ description: "Convert Kelvin to Fahrenheit easily with our simple calculator! Ge
         .math-formula {
             font-family: "Times New Roman", Times, serif;
             font-size: 1.2rem;
-            background-color: #f8f9fa;
             padding: 0.5rem 1rem;
             border-radius: 4px;
             display: inline-block;
@@ -45,7 +43,6 @@ description: "Convert Kelvin to Fahrenheit easily with our simple calculator! Ge
         }
         
         .example-box {
-            background-color: #f0f8ff;
             border-radius: 8px;
             padding: 1.5rem;
             margin: 1rem 0;
@@ -53,7 +50,6 @@ description: "Convert Kelvin to Fahrenheit easily with our simple calculator! Ge
         }
         
         .conversion-chart {
-            background-color: white;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -94,7 +90,6 @@ description: "Convert Kelvin to Fahrenheit easily with our simple calculator! Ge
         }
         
         .highlight01 {
-            background-color: #fffde7;
             padding: 0.2rem 0.4rem;
             border-radius: 3px;
             font-weight: bold;

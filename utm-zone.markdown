@@ -9,14 +9,12 @@ description: "Explore detailed UTM zone maps with grid overlays and UTM coordina
   <style>
     #map { height: 60vh; }
     .section {
-      background: #ffffff;
       padding: 2rem;
       margin-bottom: 3rem;
       border-radius: 0.75rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
     .highlight {
-      background-color: #e8f4ff;
       padding: 0.5rem;
       border-left: 4px solid #007bff;
     }

@@ -29,9 +29,10 @@ url: "https://easycalculator.org" # the base hostname & protocol for your site, 
 
 defaults:
   - scope:
-    path: ""
+      path: ""
+      type: "posts"
     values:
-    image: "/assets/images/android-chrome-512x512.png"
+      image: "/assets/images/android-chrome-512x512.png"
 
 
 
