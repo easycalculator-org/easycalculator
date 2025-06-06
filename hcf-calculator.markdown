@@ -4,7 +4,8 @@ title: HCF Calculator - Find Highest Common Factor Instantly
 permalink: /hcf-calculator
 description: "Use our free HCF Calculator to quickly find the Highest Common Factor (HCF) of two or more numbers. Fast, accurate, and easy to use—perfect for students."
 ---
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
  <div class="container py-5">
     <div class="card mx-auto p-4 shadow-sm" style="max-width: 600px;">
       <h2 class="text-center mb-3 text-primary">
@@ -23,48 +24,33 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
     </div>
 
 
-<!-- Main Content -->
-<main class="container mb-5">
-        <div class="row g-5">
-            <!-- Article Content -->
-            <div class="col-lg-12">
-                <!-- What is HCF -->
-                <section class="mb-5">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="bg-primary text-white rounded-circle p-3 me-3">
-                            <i class="fas fa-question-circle fa-2x"></i>
-                        </div>
-                        <h2 class="mb-0">What is an HCF Calculator?</h2>
-                    </div>
-                    <div class="card shadow-sm border-0">
+
+
+<!-- What is HCF -->
+<section class="p-4">
+<div class="card shadow border-0">
+   <div class="d-flex align-items-center p-4">
+      <div class="bg-primary text-white rounded-circle p-3 me-3"><i class="fas fa-question-circle fa-2x"></i></div>
+         <h2 class="mb-0">What is an HCF Calculator?</h2>
+         </div>
                         <div class="card-body">
-                            <p class="card-text">
-                                The Highest Common Factor (HCF), also known as the Greatest Common Divisor (GCD), 
-                                is a mathematical term used to describe the largest number that divides two or more 
-                                integers without leaving a remainder. For the example, the HCF of 40 and 60 is 20 
-                                because 20 is the largest number that can divide both 40 and 60 evenly. An HCF 
-                                Calculator is a tool designed to help you quickly find the HCF of two or more numbers. 
-                                Whether you are solving math problems, simplifying fractions, or dealing with other 
-                                number calculations, an HCF calculator is an essential tool to have on hand.
+                            <p class="card-text">The Highest Common Factor (HCF), also known as the Greatest Common Divisor (GCD), is a mathematical term used to describe the largest number that divides two or more integers without leaving a remainder. For the example, the HCF of 40 and 60 is 20 because 20 is the largest number that can divide both 40 and 60 evenly. An HCF Calculator is a tool designed to help you quickly find the HCF of two or more numbers. Whether you are solving math problems, simplifying fractions, or dealing with other number calculations, an HCF calculator is an essential tool to have on hand.
                             </p>
                         </div>
                     </div>
                 </section>
 
  <!-- How it works -->
- <section class="mb-5">
-                    <div class="d-flex align-items-center mb-4">
+<section class="p-4">
+ <div class="card shadow border-0">
+                    <div class="d-flex align-items-center p-4">
                         <div class="bg-primary text-white rounded-circle p-3 me-3">
                             <i class="fas fa-cogs fa-2x"></i>
                         </div>
                         <h2 class="mb-0">How Does the HCF Calculator Work?</h2>
                     </div>
-                    <div class="card shadow-sm border-0">
                         <div class="card-body">
-                            <p class="card-text">
-                                The HCF Calculator works by finding the largest number that divides all the entered 
-                                numbers without leaving a remainder. Here's how the calculator typically works:
-                            </p>
+                            <p class="card-text">The HCF Calculator works by finding the largest number that divides all the entered numbers without leaving a remainder. Here's how the calculator typically works: </p>
                             <div class="row mt-4">
                                 <div class="col-md-4 mb-4">
                                     <div class="text-center p-3 border rounded bg-light">
@@ -98,14 +84,14 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
                     </div>
                 </section>
   <!-- Importance -->
-<section class="mb-5">
-                    <div class="d-flex align-items-center mb-4">
+<section class="p-4">
+<div class="card shadow border-0">
+                     <div class="d-flex align-items-center p-4">
                         <div class="bg-primary text-white rounded-circle p-3 me-3">
                             <i class="fas fa-star fa-2x"></i>
                         </div>
                         <h2 class="mb-0">Why is the HCF Important?</h2>
                     </div>
-                    <div class="card shadow-sm border-0">
                         <div class="card-body">
                             <p class="card-text">
                                 The HCF is useful in various aspects of mathematics and real-world applications. 
@@ -160,16 +146,15 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
                         </div>
                     </div>
                 </section>
-
  <!-- How to Use -->
- <section class="mb-5">
-                    <div class="d-flex align-items-center mb-4">
+<section class="p-4">
+<div class="card shadow border-0">
+                     <div class="d-flex align-items-center p-4">
                         <div class="bg-primary text-white rounded-circle p-3 me-3">
                             <i class="fas fa-user fa-2x"></i>
                         </div>
                         <h2 class="mb-0">How to Use the HCF Calculator?</h2>
                     </div>
-                    <div class="card shadow-sm border-0">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-4 mb-4">
@@ -208,18 +193,16 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
                 </section>
 
 <!-- Example -->
- <section class="mb-5">
-                    <div class="d-flex align-items-center mb-4">
+<section class="p-4">
+ <div class="card shadow border-0">
+                     <div class="d-flex align-items-center p-4">
                         <div class="bg-primary text-white rounded-circle p-3 me-3">
                             <i class="fas fa-lightbulb fa-2x"></i>
                         </div>
                         <h2 class="mb-0">Example of Using the HCF Calculator</h2>
                     </div>
-                    <div class="card shadow-sm border-0">
                         <div class="card-body">
-                            <p class="card-text">
-                                Let's say you want to find the HCF of 12, 18, and 24.
-                            </p>
+                            <p class="card-text"> Let's say you want to find the HCF of 12, 18, and 24.</p>
                             <ol>
                                 <li>Enter 12, 18, 24 (separated by a comma or space).</li>
                                 <li>Click Calculate HCF.</li>
@@ -235,14 +218,14 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
                 </section>
 
 <!-- Benefits -->
- <section>
-                    <div class="d-flex align-items-center mb-4">
+<section class="p-4">
+ <div class="card shadow border-0">
+                    <div class="d-flex align-items-center p-4">
                         <div class="bg-primary text-white rounded-circle p-3 me-3">
                             <i class="fas fa-medal fa-2x"></i>
                         </div>
                         <h2 class="mb-0">Benefits of Using an HCF Calculator</h2>
                     </div>
-                    <div class="card shadow-sm border-0">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6 mb-4">
@@ -285,7 +268,7 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
                         </div>
                     </div>
                 </section>
-            </div>
+
 
 
 
