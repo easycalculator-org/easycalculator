@@ -30,14 +30,14 @@ description: "Convert numbers into words effortlessly with our Numbers to Words 
 </ol>
 
 <strong>FAQ:-</strong>
-<strong><p>1. Why would we need to convert numbers to words?</strong><br />Converting numbers to words is often necessary for writing checks, legal documents, invoices, or any formal documentation where clarity is essential. It helps prevent misunderstandings and fraud related to numeric values.</p>
-<strong><p>2. How do I use a number to word converter?</strong><br />Using a number to word converter is typically straightforward. You enter the numeric value into the provided field and click a button (like "Convert" or "Translate") to see the word representation of the number.</p>
-<strong><p>3. How to write 1 00 000 in words</strong><br />1 00 000 in words is One Hundred Thousand</p>
+<p>1. Why would we need to convert numbers to words?<br/>Converting numbers to words is often necessary for writing checks, legal documents, invoices, or any formal documentation where clarity is essential. It helps prevent misunderstandings and fraud related to numeric values.</p>
+<strong><p>2. How do I use a number to word converter?</strong><br/>Using a number to word converter is typically straightforward. You enter the numeric value into the provided field and click a button (like "Convert" or "Translate") to see the word representation of the number.</p>
+<strong><p>3. How to write 1 00 000 in words</strong><br/>1 00 000 in words is One Hundred Thousand</p>
 
 <p> Example of Number Names 1 to 50 Chart</p>
 <img src="/assets/images/number-to-word-1-to-50.jpg" alt="Example of Number to word , Number Names 1 to 50" fetchpriority="high" loading="auto">
 
-<p><strong>Conversion of numbers to words Table</strong></p>
+<!-- <p><strong>Conversion of numbers to words Table</strong></p>
 <table class="table table-bordered text-center table-striped">
 <thead class="table-primary">
 <tr><th scope="col">Number</th><th scope="col">Number in Words</th><th scope="col">Count of Zero</th></tr></thead>
@@ -65,5 +65,80 @@ description: "Convert numbers into words effortlessly with our Numbers to Words 
 <tr><td>100,000,000,000</td><td>One Hundred Billion</td><td>11</td></tr>
 <tr><td>1,000,000,000,000</td><td>One Trillion</td><td>12</td></tr>
 <tr><td>10,000,000,000,000</td><td>Ten Trillion</td><td>13</td></tr>
-</table>
+</table> -->
+<!-- Conversion Table -->
+<section class="card shadow-sm mb-5 border-0">
+            <div class="card-body p-4 p-md-5">
+                <h2 class="mb-4 pb-2 border-bottom border-2 border-primary" style="font-family: 'Roboto Slab', serif;">Number to Word Conversion Reference</h2>
+                <p class="fs-5">Below is a comprehensive reference table showing how different numerical values convert to their written form:</p>
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>Number</th>
+                                <th>In Words</th>
+                                <th>Zero Count</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold text-primary">0</td>
+                                <td>Zero</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-primary">10</td>
+                                <td>Ten</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-primary">100</td>
+                                <td>One Hundred</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-primary">1,000</td>
+                                <td>One Thousand</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-primary">10,000</td>
+                                <td>Ten Thousand</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-primary">100,000</td>
+                                <td>One Hundred Thousand</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-primary">1,000,000</td>
+                                <td>One Million</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-primary">10,000,000</td>
+                                <td>Ten Million</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-primary">100,000,000</td>
+                                <td>One Hundred Million</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-primary">1,000,000,000</td>
+                                <td>One Billion</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-primary">1,000,000,000,000</td>
+                                <td>One Trillion</td>
+                                <td>12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
 <script src="{{ '/assets/js/num-to-word.js' | relative_url }}"></script>
