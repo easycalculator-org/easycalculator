@@ -87,15 +87,70 @@ description: "Easily convert measurements with our Length Converter. Switch betw
 </div>
 
 <!-- Article part -->
-<h1 class="pt-4">What is a Length Converter?</h1>
-<p>A length converter is a tool that allows users to convert one unit of length into another. This helps in different applications where specific measurement systems are required, such as metric and imperial systems. </p>
+<br>
+<section class="card mb-5 border-0 shadow">
+            <div class="card-body p-4">
+                <h2 class="card-title mb-4"><i class="bi bi-question-circle me-2 text-primary"></i>What is a Length Converter?</h2>
+                <p class="card-text lead">A length converter is a tool that allows users to convert one unit of length into another. This helps in different applications where specific measurement systems are required, such as metric and imperial systems.</p>
+            </div>
+        </section>
 
-<h2>Common Length Conversion Units</h2>
-<h3>Metric System:</h3>
-<ul><li>Millimeter (mm)</li><li>Centimeter (cm)</li><li>Meter (m)</li><li>Kilometer (km)</li></ul>
-    
-<h3>Imperial & US Customary System:</h3>
-<ul><li>Inch (in)</li><li>Foot (ft)</li><li>Yard (yd)</li><li>Mile (mi)</li></ul>
+ <!-- Units Section -->
+<section class="mb-5">
+<h2 class="mb-4 pb-2 border-bottom"><i class="bi bi-list-columns me-2 text-primary"></i>Common Length Conversion Units</h2>
+  <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-primary">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="h5 mb-0"><i class="bi bi-globe-europe-africa me-2"></i>Metric System</h3>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Millimeter (mm)
+                                <span class="badge bg-light text-dark">1/1000 m</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Centimeter (cm)
+                                <span class="badge bg-light text-dark">1/100 m</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Meter (m)
+                                <span class="badge bg-light text-dark">Base unit</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Kilometer (km)
+                                <span class="badge bg-light text-dark">1000 m</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+<div class="col-md-6 mb-4">
+                    <div class="card h-100 border-warning">
+                        <div class="card-header bg-warning text-dark">
+                            <h3 class="h5 mb-0"><i class="bi bi-globe-americas me-2"></i>Imperial & US Customary System</h3>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Inch (in)
+                                <span class="badge bg-light text-dark">1/12 ft</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Foot (ft)
+                                <span class="badge bg-light text-dark">12 in</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Yard (yd)
+                                <span class="badge bg-light text-dark">3 ft</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Mile (mi)
+                                <span class="badge bg-light text-dark">1760 yd</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+</section>
 
 <h2>Length Conversion Chart</h2>
    <div class="table-responsive text-center">
@@ -122,45 +177,143 @@ description: "Easily convert measurements with our Length Converter. Switch betw
         </table>
     </div>
 <img class="img-fluid" alt="Length Measurement Conversion Chart – Metric" src="/assets/images/length-conversion-1.jpg" fetchpriority="high" loading="auto" style="object-fit: contain;" />
-<h2>Length Conversion Formulas</h2>
-<ul>
-<li>Millimeters to Centimeters: \( cm = \frac{mm}{10} \)</li>
-<li>Centimeters to Meters: \( m = \frac{cm}{100} \)</li>
-<li>Meters to Kilometers: \( km = \frac{m}{1000} \)</li>
-<li>Inches to Centimeters: \( cm = in \times 2.54 \)</li>
-<li>Feet to Meters: \( m = ft \times 0.3048 \)</li>
-<li>Yards to Meters: \( m = yd \times 0.9144 \)</li>
-<li>Miles to Kilometers: \( km = mi \times 1.60934 \)</li>
-</ul>
 
-<h2>Examples of Length Conversions</h2>
-<h3>Example 1: Convert 50 Inches to Centimeters</h3>
-<p>Using the formula: \( cm = in \times 2.54 \)</p>
-<p>\( 50 \times 2.54 = 127 \)</p>
-<p><strong>Result:</strong> 50 inches = 127 cm</p>
+<!-- Formulas and Examples -->
+<div class="row">
+            <!-- Formulas -->
+            <div class="col-lg-6 mb-5">
+                <div class="card h-100 border-success">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="h4 mb-0"><i class="bi bi-calculator me-2"></i>Length Conversion Formulas</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <span class="fw-bold">Millimeters to Centimeters:</span><br>
+                                cm = mm ÷ 10
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Centimeters to Meters:</span><br>
+                                m = cm ÷ 100
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Meters to Kilometers:</span><br>
+                                km = m ÷ 1000
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Inches to Centimeters:</span><br>
+                                cm = in × 2.54
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Feet to Meters:</span><br>
+                                m = ft × 0.3048
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Yards to Meters:</span><br>
+                                m = yd × 0.9144
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Miles to Kilometers:</span><br>
+                                km = mi × 1.60934
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Examples -->
+            <div class="col-lg-6 mb-5">
+                <div class="card h-100 border-info">
+                    <div class="card-header bg-info text-white">
+                        <h2 class="h4 mb-0"><i class="bi bi-journal-check me-2"></i>Examples of Length Conversions</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Example 1: Convert 50 Inches to Centimeters</h5>
+                                <p class="card-text">Using the formula: cm = in × 2.54</p>
+                                <p class="card-text">50 × 2.54 = 127 cm</p>
+                                <p class="fw-bold text-success">Result: 50 inches = 127 cm</p>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Example 2: Convert 5 Kilometers to Miles</h5>
+                                <p class="card-text">Using the formula: mi = km ÷ 1.60934</p>
+                                <p class="card-text">5 ÷ 1.60934 ≈ 3.10686 mi</p>
+                                <p class="fw-bold text-success">Result: 5 km ≈ 3.11 miles</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Example 3: Convert 100 Meters to Feet</h5>
+                                <p class="card-text">Using the formula: ft = m ÷ 0.3048</p>
+                                <p class="card-text">100 ÷ 0.3048 ≈ 328.084 ft</p>
+                                <p class="fw-bold text-success">Result: 100 meters ≈ 328.08 feet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<h3>Example 2: Convert 5 Kilometers to Miles</h3>
-<p>Using the formula: \( mi = km \times 0.621371 \)</p>
-<p>\( 5 \times 0.621371 = 3.11 \)</p>
-<p><strong>Result:</strong> 5 km = 3.11 miles</p>
+ <!-- Why Use -->
+ <section class="card mb-5 border-secondary">
+            <div class="card-header bg-secondary text-white">
+                <h2 class="h4 mb-0"><i class="bi bi-lightbulb me-2"></i>Why Use a Length Converter?</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="text-center p-3">
+                            <i class="bi bi-check-circle-fill text-success display-4 mb-3"></i>
+                            <h3 class="h5">Accuracy</h3>
+                            <p>Manual conversions can lead to errors; a length converter ensures precision.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="text-center p-3">
+                            <i class="bi bi-stopwatch-fill text-primary display-4 mb-3"></i>
+                            <h3 class="h5">Time-Saving</h3>
+                            <p>Quick and effortless conversion between units saves valuable time.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="text-center p-3">
+                            <i class="bi bi-gear-fill text-info display-4 mb-3"></i>
+                            <h3 class="h5">Convenience</h3>
+                            <p>Used in various industries including travel, construction, and academia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<h3>Example 3: Convert 100 Meters to Feet</h3>
-<p>Using the formula: \( ft = m \times 3.2808 \)</p>
-<p>\( 100 \times 3.2808 = 328.08 \)</p>
-<p><strong>Result:</strong> 100 meters = 328.08 feet</p>
-
-<h2>Why Use a Length Converter?</h2>
-<ul>
-<li><strong>Accuracy</strong> – Manual conversions can lead to errors; a length converter ensures precision.</li>
-<li><strong>Time-Saving</strong> – Quick and effortless conversion between units.</li>
-<li><strong>Convenience</strong> – Used in various industries, including travel, construction, and academia.</li>
-</ul>
-
-<h4>FAQ</h4>
-<p><strong>Can I convert between metric and imperial units? </strong> <br>
-Yes, you can! A length converter makes it simple to convert measurements from metric units, like meters and centimeters, to imperial units, such as feet and inches.</p>
-<p><strong>What units can I convert using a length converter? </strong><br>
-Common units for length conversion include meters, kilometers, feet, inches, yards, centimeters, and miles.</p>
+<!-- FAQ -->
+<section class="mb-5">
+            <h2 class="mb-4 pb-2 border-bottom"><i class="bi bi-question-circle me-2 text-primary"></i>Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">Can I convert between metric and imperial units? </button>
+                    </h3>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, you can! A length converter makes it simple to convert measurements from metric units, like meters and centimeters, to imperial units, such as feet and inches.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            What units can I convert using a length converter?
+                        </button>
+                    </h3>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body"> Common units for length conversion include meters, kilometers, feet, inches, yards, centimeters, and miles. Most converters support all standard metric and imperial length units.  </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 <!-- Article Part close -->
 <script>
