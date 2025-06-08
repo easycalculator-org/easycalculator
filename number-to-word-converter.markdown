@@ -6,20 +6,34 @@ description: "Convert numbers into words effortlessly with our Numbers to Words 
 ---
 
 
+<!-- Converter Tool -->
+ <section class="container p-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card shadow-lg border-0">
+                    <div class="card-header bg-white py-4 border-0">
+                        <h2 class="text-center text-primary mr-3"> <svg xmlns="http://www.w3.org/2000/svg" height="32" width="24" viewBox="0 0 384 512"><path fill="#098aec" d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-384c0-35.3-28.7-64-64-64L64 0zM96 64l192 0c17.7 0 32 14.3 32 32l0 32c0 17.7-14.3 32-32 32L96 160c-17.7 0-32-14.3-32-32l0-32c0-17.7 14.3-32 32-32zm32 160a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zM96 352a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM64 416c0-17.7 14.3-32 32-32l96 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-96 0c-17.7 0-32-14.3-32-32zM192 256a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm32 64a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm64-64a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm32 64a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zM288 448a32 32 0 1 1 0-64 32 32 0 1 1 0 64z"/></svg> Number to word Converter</h2>
+                    </div>
+                    <div class="card-body p-4 p-lg-5">
+                        <div class="row g-3 align-items-center mb-4">
+                            <div class="col-md-9">
+                                <input type="text" class="form-control form-control-lg py-3" id="numberInput" placeholder="Enter a number (e.g., 12345.67)" value="12345.67">
+                            </div>
+                            <div class="col-md-3 d-grid">
+                                <button id="convertBtn" class="btn btn-primary btn-lg py-3">Convert</button>
+                            </div>
+                        </div>
+                      <div class="alert alert-primary p-4 d-flex justify-content-between align-items-center">
+    <h5 class="mb-0" id="resultText">Twelve Thousand Three Hundred Forty-Five and Sixty-Seven Cents</h5>
+    <button class="btn btn-outline-secondary btn-sm" onclick="copyResultText()" title="Copy to clipboard"> Copy</button>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
- <div class="row justify-content-center ">
-  <div class="col-6 py-4  bg-body-tertiary custom-box ">
-   <div class="converter-box text-center">
-     <strong>Number to Word Converter</strong>
-       <div class="mb-3 pt-2"><input type="text" id="numberInput" class="form-control" placeholder="Enter a number (e.g., 123456)" >
-      </div>
-      <button id="convertButton" class="btn btn-primary mb-3">Convert</button>
-        <strong><div id="result" class="alert alert-info d-none"></div></strong> 
-       </div>
-      </div>
-    </div>
 <div class="py-5">
-
 <!-- Introduction Section -->
 <section class="card shadow-sm mb-5 border-0">
             <div class="card-body p-4 p-md-5">

@@ -1,44 +1,92 @@
- const numberToWords = (num) => {
-            const singleDigits = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
-            const teens = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
-            const bigNumbers = ["", "Thousand", "Million", "Billion", "Trillion", "Quadrillion", "Quintillion", "Sextillion", "Septillion", "Octillion", "Nonillion", "Decillion"];
-
-            if (num === "0") return "Zero";
-            if (!/^\d+$/.test(num)) return "Invalid input. Please enter a number.";
+// Number conversion function
+        function convertNumberToWords(number) {
+            const num = parseFloat(number);
+            if (isNaN(num)) return "Please enter a valid number";
+            const isNegative = num < 0;
+            const absoluteNum = Math.abs(num);
+            const dollars = Math.floor(absoluteNum);
+            const cents = Math.round((absoluteNum - dollars) * 100);
+            const dollarsText = convertIntegerToWords(dollars);
+            let centsText = "";
+            if (cents > 0) {
+                centsText = convertIntegerToWords(cents) + " Cent";
+                if (cents !== 1) centsText += "s";
+            }
+            let result = isNegative ? "Minus " : "";
+            result += dollarsText;
             
-            let result = "";
-            let index = 0;
-            while (num.length > 0) {
-                let chunk = num.slice(-3);
-                num = num.slice(0, -3);
+            if (dollars === 1) {
+                result += " Dollar";
+            } else if (dollars > 1) {
+                result += " Dollars";
+            }
+            if (centsText) {
+                if (dollars > 0) result += " and ";
+                result += centsText;
+            }
+            if (dollars === 0 && cents === 0) {
+                result = "Zero Dollars";
+            }
+            return result;
+        }
+        function convertIntegerToWords(num) {
+            if (num === 0) return "Zero";
+            const ones = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+            const teens = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
+            const tens = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+            const thousands = ['', 'Thousand', 'Million', 'Billion', 'Trillion'];
+            function convertHundreds(n) {
+                let str = '';
                 
-                if (parseInt(chunk) > 0) {
-                    result = parseChunk(chunk) + " " + bigNumbers[index] + " " + result;
+                if (n >= 100) {
+                    str += ones[Math.floor(n / 100)] + ' Hundred ';
+                    n %= 100;
                 }
-                index++;
-            }
-            return result.trim();
-
-            function parseChunk(chunk) {
-                let [hundreds, tens, ones] = ("000" + chunk).slice(-3).split("").map(Number);
-                let chunkResult = "";
-
-                if (hundreds) chunkResult += singleDigits[hundreds] + " Hundred ";
-                if (tens === 1) {
-                    chunkResult += ["Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"][ones];
-                } else {
-                    chunkResult += teens[tens];
-                    chunkResult += (tens && ones ? " " : "") + singleDigits[ones];
+                if (n >= 20) {
+                    str += tens[Math.floor(n / 10)] + ' ';
+                    n %= 10;
+                } else if (n >= 10) {
+                    str += teens[n - 10] + ' ';
+                    n = 0;
                 }
-
-                return chunkResult.trim();
+                if (n > 0) {
+                    str += ones[n] + ' ';
+                }
+                
+                return str.trim();
             }
-        };
-
-        document.getElementById("convertButton").addEventListener("click", () => {
-            const input = document.getElementById("numberInput").value.trim();
-            const result = numberToWords(input);
-            const resultBox = document.getElementById("result");
-            resultBox.textContent = result;
-            resultBox.classList.remove("d-none");
+            if (num === 0) return 'Zero';
+            let words = '';
+            let chunkCount = 0;
+            while (num > 0) {
+                const chunk = num % 1000;
+                if (chunk !== 0) {
+                    const chunkWords = convertHundreds(chunk);
+                    words = chunkWords + (thousands[chunkCount] ? ' ' + thousands[chunkCount] : '') + ' ' + words;
+                }
+                num = Math.floor(num / 1000);
+                chunkCount++;
+            }
+            
+            return words.trim();
+        }
+         // copy function
+    function copyResultText() {
+        const text = document.getElementById("resultText").innerText;
+        navigator.clipboard.writeText(text).catch(err => {
+            console.error("Copy failed", err);
         });
+    }
+        // Set up converter tool
+        document.getElementById('convertBtn').addEventListener('click', function() {
+            const input = document.getElementById('numberInput').value;
+            const result = convertNumberToWords(input);
+            document.getElementById('resultText').textContent = result;
+        });
+        // Convert on Enter key
+        document.getElementById('numberInput').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('convertBtn').click();
+            }
+        });
+ 
