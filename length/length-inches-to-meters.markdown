@@ -32,22 +32,20 @@ description: "Get precise inches to meters conversion with our simple and fast t
  <h2><span class="icon-circle"><i class="fas fa-exchange-alt"></i></span>Why Convert Inches to Meters?</h2>
  <p>Inches are commonly used in the United States, while meters are standard in most of the world under the metric system. Accurate conversion is essential in engineering, architecture, fitness tracking, and international communication.</p>
 <div class="highlight-box">
-                <h1>Inches to Meters Converter</h1>
-                <p>Looking to convert inches to meters with ease? Whether you're working on a DIY project, checking your height, or dealing with technical measurements, our guide helps you get precise results instantly. From 36 inches to meters to 60 inches to meters, this guide covers everything you need to know, including an inches to meters chart, fractional conversions, and tips for height conversions.</p>
+  <h1>Inches to Meters Converter</h1>
+   <p>Looking to convert inches to meters with ease? Whether you're working on a DIY project, checking your height, or dealing with technical measurements, our guide helps you get precise results instantly. From 36 inches to meters to 60 inches to meters, this guide covers everything you need to know, including an inches to meters chart, fractional conversions, and tips for height conversions.</p>
             </div>
 <h2><span class="icon-circle"><i class="fas fa-check-circle"></i></span>Common Conversions</h2>
             <p>Let's take a look at some frequently searched conversions:</p>
 <div class="row">
                 <div class="col-md-6">
                     <div class="example-box">
-                        <h4>36 inches to meters</h4>
-                        <p class="formula">36 × 0.0254 = 0.9144 meters</p>
+                        <h4>36 inches to meters</h4><p class="formula">36 × 0.0254 = 0.9144 meters</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="example-box">
-                        <h4>60 inches to meters</h4>
-                        <p class="formula">60 × 0.0254 = 1.524 meters</p>
+                        <h4>60 inches to meters</h4><p class="formula">60 × 0.0254 = 1.524 meters</p>
                     </div>
                 </div>
             </div>
@@ -61,49 +59,15 @@ description: "Get precise inches to meters conversion with our simple and fast t
             <p>Here is a handy inches to meters chart for quick reference:</p>
  <div class="table-responsive">
                 <table class="conversion-table">
-                    <thead>
-                        <tr>
-                            <th>Inches</th>
-                            <th>Meters</th>
-                            <th>Common Usage</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th>Inches</th><th>Meters</th><th>Common Usage</th></tr></thead>
                     <tbody>
-                        <tr>
-                            <td>12</td>
-                            <td>0.3048</td>
-                            <td>Standard ruler length</td>
-                        </tr>
-                        <tr>
-                            <td>24</td>
-                            <td>0.6096</td>
-                            <td>2-foot measurement</td>
-                        </tr>
-                        <tr>
-                            <td>36</td>
-                            <td>0.9144</td>
-                            <td>Yardstick length</td>
-                        </tr>
-                        <tr>
-                            <td>48</td>
-                            <td>1.2192</td>
-                            <td>4-foot measurement</td>
-                        </tr>
-                        <tr>
-                            <td>60</td>
-                            <td>1.524</td>
-                            <td>5-foot measurement</td>
-                        </tr>
-                        <tr>
-                            <td>72</td>
-                            <td>1.8288</td>
-                            <td>6-foot measurement (common height)</td>
-                        </tr>
-                        <tr>
-                            <td>84</td>
-                            <td>2.1336</td>
-                            <td>7-foot measurement</td>
-                        </tr>
+                      <tr> <td>12</td> <td>0.3048</td> <td>Standard ruler length</td> </tr> 
+                      <tr> <td>24</td> <td>0.6096</td> <td>2-foot measurement</td> </tr> 
+                      <tr> <td>36</td> <td>0.9144</td> <td>Yardstick length</td> </tr>
+                      <tr> <td>48</td> <td>1.2192</td> <td>4-foot measurement</td> </tr> 
+                      <tr> <td>60</td> <td>1.524</td> <td>5-foot measurement</td> </tr> 
+                      <tr> <td>72</td> <td>1.8288</td> <td>6-foot measurement (common height)</td> </tr>
+                      <tr> <td>84</td> <td>2.1336</td> <td>7-foot measurement</td> </tr>
                     </tbody>
                 </table>
             </div>
@@ -120,16 +84,12 @@ description: "Get precise inches to meters conversion with our simple and fast t
 <div class="row">
                 <div class="col-md-6">
                     <div class="example-box">
-                        <h4>5 1/2 inches to meters</h4>
-                        <p>Convert to decimal: 5.5 inches</p>
-                        <p class="formula">5.5 × 0.0254 = 0.1397 meters</p>
+                        <h4>5 1/2 inches to meters</h4><p>Convert to decimal: 5.5 inches</p><p class="formula">5.5 × 0.0254 = 0.1397 meters</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="example-box">
-                        <h4>12 3/4 inches to meters</h4>
-                        <p>Convert to decimal: 12.75 inches</p>
-                        <p class="formula">12.75 × 0.0254 = 0.32385 meters</p>
+                        <h4>12 3/4 inches to meters</h4><p>Convert to decimal: 12.75 inches</p><p class="formula">12.75 × 0.0254 = 0.32385 meters</p>
                     </div>
                 </div>
             </div>
