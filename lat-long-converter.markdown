@@ -78,7 +78,7 @@ description: "Quickly convert latitude and longitude between decimal degrees and
                                 <div class="bg-primary text-white p-2 rounded-circle me-3">
                                     <i class="fas fa-question-circle fa-lg"></i>
                                 </div>
-                                <h2 class="h4 mb-0">What Is a Latitude and Longitude Converter?</h2>
+                                <h1 class="h4 mb-0">Latitude and Longitude Converter</h1>
                             </div>
                             <p class="lead">A latitude and longitude converter is a tool that helps you translate geographical coordinates from one format to another.</p>
                             <p>Whether you're a traveler, developer, geographer, or surveyor, converting between coordinate formats like decimal degrees (DD) and degrees, minutes, seconds (DMS) is a crucial task. Our Latitude Longitude Converter helps you effortlessly switch between these formats, locate addresses, and even convert map coordinates to lat long.</p>
