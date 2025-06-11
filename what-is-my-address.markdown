@@ -167,7 +167,23 @@ description: "Find your current address and location with a single click. Use ou
             </div>
         </section>
 
-  
+  <!-- Addresss -->
+<section class="card shadow-sm">
+            <div class="card-body">
+                <h2 class="h4 mb-4">What is Address</h2>
+                <p>A physical or mailing address is a set of information that identifies a specific location where a person lives, a business operates, or where mail and packages are delivered. It acts like a location tag that helps postal services, delivery companies, and others find a place.</p>
+                <strong>Components of a Physical or Mailing Address</strong>
+            <ol>
+               <li> Street Number and Name ( e.g., 123 Main Street)</li>
+                <li>Apartment or Unit Number (e.g., Apt 4B or Suite 201)</li>
+                <li>City or Town (e.g., Los Angeles)</li>
+                <li>State or Province (e.g., California or Ontario)</li>
+                <li>Postal Code or ZIP Code (e.g., 90001 (U.S.) or M4B 1B3 (Canada))</li>
+                <li>Country (e.g., United States, Canada, United Kingdom)</li>
+                </ol>
+            </div>
+        </section>
+
 <!-- FAQ Section -->
 <section class="container my-5" id="faq">
     <h2 class="h4 mb-4 text-primary">Frequently Asked Questions</h2>
