@@ -254,7 +254,7 @@ image: "/assets/images/age-calc-open-graph.png"
             </div>
         </div>
   
-<script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
