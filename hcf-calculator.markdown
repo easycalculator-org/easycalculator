@@ -4,6 +4,46 @@ title: HCF Calculator - Find Highest Common Factor Instantly
 permalink: /hcf-calculator
 description: "Use our free HCF Calculator to quickly find the Highest Common Factor (HCF) of two or more numbers. Fast, accurate, and easy to use—perfect for students."
 ---
+<style> 
+        .math-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .math-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .prime-factor {
+            display: inline-block;
+            background-color: #e0f7fa;
+            border-radius: 4px;
+            padding: 3px 8px;
+            margin: 2px;
+            font-weight: 500;
+        }
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: #4361ee;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .method-icon {
+            font-size: 20px;
+            background: rgba(67, 97, 238, 0.1);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+    </style>
 <!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
  <div class="container py-5">
@@ -23,14 +63,11 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
       <div id="result" class="text-center fs-1 fw-semibold text-primary"></div>
     </div>
 
-
-
-
 <!-- What is HCF -->
 <section class="p-4">
 <div class="card shadow border-0">
    <div class="d-flex align-items-center p-4">
-      <div class="bg-primary text-white rounded-circle p-3 me-3"><i class="fas fa-question-circle fa-2x"></i></div>
+      <div class="bg-primary text-white rounded-circle p-3 me-3"><i class="fas fa-question-circle"></i></div>
          <h2 class="mb-0">What is an HCF Calculator?</h2>
          </div>
                         <div class="card-body">
@@ -40,12 +77,163 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
                     </div>
                 </section>
 
+<!-- HCF step -->
+<section class="p-4">
+         <h2 class="mb-0">How to do HCF step by step?</h2>
+         <p>To find the HCF (Highest Common Factor) of two numbers step by step, you can use two main methods:</p>      
+            <div class="row g-4">
+                <!-- Prime Factorization Method -->
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow math-card">
+                        <div class="card-header bg-primary text-white py-3">
+                            <div class="d-flex align-items-center">
+                                <div class="method-icon">
+                                    <i class="fas fa-superscript"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h4 mb-0">Method 1: Prime Factorization</h3>
+                                    <p class="mb-0">Best for smaller numbers</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <h4 class="mb-3">Step-by-Step Process:</h4>
+                                <div class="d-flex mb-3">
+                                    <span class="step-number">1</span>
+                                    <div>
+                                        <h5 class="mb-1">Find prime factors of both numbers</h5>
+                                        <p class="mb-0">Break down each number into its prime factors</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <span class="step-number">2</span>
+                                    <div>
+                                        <h5 class="mb-1">Identify common prime factors</h5>
+                                        <p class="mb-0">Find the prime factors that appear in both factorizations</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <span class="step-number">3</span>
+                                    <div>
+                                        <h5 class="mb-1">Multiply common prime factors</h5>
+                                        <p class="mb-0">Use the lowest power of each common prime factor</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4 rounded border">
+                                <h4 class="mb-3">Example: HCF of 60 and 48</h4>
+                                <p><strong>Step 1: Prime Factors</strong></p>
+                                <p>60 = 
+                                    <span class="prime-factor">2</span> × 
+                                    <span class="prime-factor">2</span> × 
+                                    <span class="prime-factor">3</span> × 
+                                    <span class="prime-factor">5</span>
+                                    <span class="ms-2">(2² × 3 × 5)</span>
+                                </p>
+                                <p>48 = 
+                                    <span class="prime-factor">2</span> × 
+                                    <span class="prime-factor">2</span> × 
+                                    <span class="prime-factor">2</span> × 
+                                    <span class="prime-factor">2</span> × 
+                                    <span class="prime-factor">3</span>
+                                    <span class="ms-2">(2⁴ × 3)</span>
+                                </p>
+                                <p class="mt-3"><strong>Step 2: Common Prime Factors</strong></p>
+                                <p>Common primes: 2 and 3</p>
+                                <p>Minimum powers: min(2², 2⁴) = 2² = 4 and min(3¹, 3¹) = 3</p>
+                                <p class="mt-3"><strong>Step 3: Multiply common factors</strong></p>
+                                <p>HCF = 2² × 3 = 4 × 3 = 12</p>
+                                <div class="alert alert-success mt-3 mb-0">
+                                    <i class="fas fa-check-circle me-2"></i> 
+                                    <strong>HCF(60, 48) = 12</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+                <!-- Euclidean Algorithm -->
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow math-card">
+                        <div class="card-header bg-primary text-white py-3">
+                            <div class="d-flex align-items-center">
+                                <div class="method-icon">
+                                    <i class="fas fa-divide"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h4 mb-0">Method 2: Euclidean Algorithm</h3>
+                                    <p class="mb-0">Efficient for larger numbers</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <h4 class="mb-3">Step-by-Step Process:</h4>
+                                <div class="d-flex mb-3">
+                                    <span class="step-number">1</span>
+                                    <div>
+                                        <h5 class="mb-1">Divide larger by smaller number</h5>
+                                        <p class="mb-0">Divide and note the remainder</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <span class="step-number">2</span>
+                                    <div>
+                                        <h5 class="mb-1">Divide divisor by remainder</h5>
+                                        <p class="mb-0">Replace dividend with divisor and divisor with remainder</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <span class="step-number">3</span>
+                                    <div>
+                                        <h5 class="mb-1">Repeat until remainder is 0</h5>
+                                        <p class="mb-0">The last non-zero remainder is the HCF</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4 rounded border">
+                                <h4 class="mb-3">Example: HCF of 60 and 48</h4>
+                                <div class="d-flex mb-3">
+                                    <span class="step-number">1</span>
+                                    <div>
+                                        <p>Divide 60 (larger) by 48 (smaller):</p>
+                                        <p class="mb-1">60 ÷ 48 = 1 with remainder <span class="badge bg-info">12</span></p>
+                                        <p class="mb-0">So: 60 = 48 × 1 + 12</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <span class="step-number">2</span>
+                                    <div>
+                                        <p>Divide 48 (previous divisor) by 12 (remainder):</p>
+                                        <p class="mb-1">48 ÷ 12 = 4 with remainder <span class="badge bg-info">0</span></p>
+                                        <p class="mb-0">So: 48 = 12 × 4 + 0</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <span class="step-number">3</span>
+                                    <div>
+                                        <p>Remainder is 0, so HCF is the last divisor:</p>
+                                        <p class="mb-0">The last non-zero remainder was 12</p>
+                                    </div>
+                                </div>
+                                <div class="alert alert-success mt-3 mb-0">
+                                    <i class="fas fa-check-circle me-2"></i> 
+                                    <strong>HCF(60, 48) = 12</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+
+
  <!-- How it works -->
 <section class="p-4">
  <div class="card shadow border-0">
                     <div class="d-flex align-items-center p-4">
                         <div class="bg-primary text-white rounded-circle p-3 me-3">
-                            <i class="fas fa-cogs fa-2x"></i>
+                            <i class="fas fa-cogs"></i>
                         </div>
                         <h2 class="mb-0">How Does the HCF Calculator Work?</h2>
                     </div>
