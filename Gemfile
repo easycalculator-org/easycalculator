@@ -38,3 +38,5 @@ gem 'jekyll-algolia'
 
 # gem last modify
 # gem 'jekyll-last-modified-at' (gthub not support this plugin)
+
+gem "algolia", "~> 3.18"
