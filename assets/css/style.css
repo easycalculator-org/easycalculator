@@ -44,3 +44,8 @@ a:hover {text-decoration: none;}
 #timerDisplay{font-size:6rem;font-weight:700;width:200px;height:200px;display:flex;align-items:center;justify-content:center;border-radius:20px;margin:20px auto;background-color:#f8f9fa}
 .display {color: blueviolet; font-size: 3em;    }
 .highlight { background-color: #e8f4ff; padding: 0.5rem; border-left: 4px solid #007bff;}
+ /* home loan    */  .faq-question {
+            font-weight: 600;
+            color: #1a56db;
+            margin-bottom: 0.5rem;
+        }
