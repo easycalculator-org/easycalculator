@@ -5,3 +5,5 @@ User-agent: *
 Disallow:
 
 Sitemap: https://easycalculator.org/sitemap.xml
+
+# Algolia-Crawler-Verif: 642BD36A20B19A19
