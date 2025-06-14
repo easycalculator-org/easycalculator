@@ -34,7 +34,10 @@ defaults:
     values:
       image: "/assets/images/android-chrome-512x512.png"
 
-
+algolia:
+  application_id: 'YourAlgoliaAppID'
+  index_name: 'your_index_name'
+  search_only_api_key: 'YourSearchOnlyAPIKey'
 
 # Build settings
 theme: minima
