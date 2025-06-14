@@ -7,6 +7,7 @@ description: "Explore detailed UTM zone maps with grid overlays and UTM coordina
  <!-- Leaflet -->
  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
  <style>
+  #map { height: 60vh; }
    .section{padding:2rem;margin-bottom:3rem;border-radius:.75rem;box-shadow:0 4px 12px rgba(0,0,0,.05)}
    .highlight{padding:.5rem;border-left:4px solid #007bff}
    .conversion-table{width:100%;border-collapse:separate;border-spacing:0;margin:2rem 0;border-radius:10px;overflow:hidden;box-shadow:0 .15rem .75rem rgba(0,0,0,.08)}
