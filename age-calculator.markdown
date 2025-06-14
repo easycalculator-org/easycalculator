@@ -66,7 +66,7 @@ image: "/assets/images/age-calc-open-graph.png"
 <p>  Last updated on: {{ site.time | date: "%d-%m-%Y" }}</p>
 <p>Looking for an accurate way to calculate your age? Our <strong>Age Calculator by date of birth </strong>is a easy and powerful tool that helps you find your exact age in years, months, weeks, days, hours, minutes, and even seconds. Whether you need an Age Calculator online for personal, medical, or legal purposes, our tool provides instant and precise results.</p>
     <h2 class="card-title text-primary">What is the Age Calculator</h2>
-       <p class="card-text">An age calculator is a tool that helps you find out how old someone or something is. You just need to enter the date of birth (or when something started) and the current date or future date. It will calculate the number of years, months, weeks, days and Hour also.</p>
+       <p class="card-text">An age calculator is a tool that calculates a person’s exact age from their birth date. It shows the age in years, months, days, and even hours and seconds, based on the current or a custom date.</p>
    </div>
 </div>
 
@@ -254,6 +254,28 @@ image: "/assets/images/age-calc-open-graph.png"
             </div>
         </div>
   
+<script>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How do I find my exact age today?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Use an age calculator by entering your date of birth. It instantly shows your age in years, months, and days."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Is my data secure when using the Age Calculator?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. This calculator does not store or track any personal data you enter."
+    }
+  }]
+}
+</script>
 
 <script src="{{ '/assets/js/age-calculator.js' | relative_url }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
