@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Free Online JSON Validator & Formatter | EasyCalculator
-permalink: /jsonvalidator
+permalink: /json-validator
 description: "Instantly validate JSON online with our free JSON Validator. Fast, easy-to-use tool for JSON verification, formatting, and error checking — perfect for developers!"
 #donot change title and description , use three keyword
 image: "/assets/images/json-validator.jpg"
