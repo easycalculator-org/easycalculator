@@ -67,7 +67,7 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
                                 <div class="card-body">
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="bg-primary text-white rounded-circle p-2 me-3">
-                                            <i class="bi bi-lightning fs-4"></i>
+                                            <i class="fa-solid fa-bolt" style="color:rgb(236, 239, 245);"></i>
                                         </div>
                                         <h3 class="h5 mb-0">Real-Time Count</h3>
                                     </div>
@@ -80,7 +80,7 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
                                 <div class="card-body">
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="bg-success text-white rounded-circle p-2 me-3">
-                                            <i class="bi bi-sliders fs-4"></i>
+                                            <i class="fa-brands fa-intercom fa-xl" style="color:rgb(248, 250, 252);"></i>
                                         </div>
                                         <h3 class="h5 mb-0">Customizable Options</h3>
                                     </div>
@@ -93,7 +93,7 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
                                 <div class="card-body">
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="bg-info text-white rounded-circle p-2 me-3">
-                                            <i class="bi bi-layout-text-sidebar fs-4"></i>
+                                           <i class="fa-solid fa-clipboard fa-xl" style="color:rgb(246, 245, 248);"></i>
                                         </div>
                                         <h3 class="h5 mb-0">Clean Interface</h3>
                                     </div>
@@ -106,7 +106,7 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
                                 <div class="card-body">
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="bg-warning text-dark rounded-circle p-2 me-3">
-                                            <i class="bi bi-phone fs-4"></i>
+                                        <i class="fa-solid fa-mobile fa-xl" style="color:rgb(248, 248, 250);"></i>
                                         </div>
                                         <h3 class="h5 mb-0">Mobile Friendly</h3>
                                     </div>
