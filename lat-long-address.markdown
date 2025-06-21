@@ -38,19 +38,12 @@ image: "/assets/images/lat-long-to-address.webp"
     </div>
   </div>
 </div>
-
-
-
-
 <!-- Article Part -->
 <hr>
-<h1 class="p-3">Latitude and Longitude to Address</h1>
-<p>Looking for a simple and efficient way to convert latitude and longitude coordinates into actual physical addresses? Our Reverse Geocoding Tool is designed to help you convert up to 100 coordinates at once into human-readable addresses with just a click. Whether you're a developer, marketer, researcher, or simply curious, this tool makes reverse geocoding fast, accurate, and convenient.</p>
-
-
-
  <!-- Main Content -->
  <div class="bg-white rounded-3 p-4 shadow mb-4">
+ <h1 class="p-3">Latitude and Longitude to Address</h1>
+<p>Looking for a simple and efficient way to convert latitude and longitude coordinates into actual physical addresses? Our Reverse Geocoding Tool is designed to help you convert up to 100 coordinates at once into human-readable addresses with just a click. Whether you're a developer, marketer, researcher, or simply curious, this tool makes reverse geocoding fast, accurate, and convenient.</p>
   <h3 class="h4 text-primary mb-2">🧭 What Is Reverse Geocoding?</h3>
             <p>Reverse geocoding is the process of converting geographic coordinates (latitude and longitude) into a physical address. For example, converting:</p> 
             <pre class="bg-light p-3 rounded-2 mb-3"><code>40.730610, -73.935242</code></pre>
@@ -121,7 +114,6 @@ image: "/assets/images/lat-long-to-address.webp"
  <!-- FAQ Section -->
 <section class="container my-5" id="faq">
     <h2 class="h4 mb-4 text-primary">🌍 Frequently Asked Questions</h2>
-    
     <div class="accordion">
         <!-- FAQ 1 -->
         <div class="accordion-item">
