@@ -5,6 +5,7 @@ permalink: /character-count
 description: "Quickly count characters, words, and spaces with our Advanced Character Count Tool. Easy to use, accurate, and perfect for writers, and marketers. Try it now!"
 #image: "/assets/images/age-calc-open-graph.png"
 ---
+
 <div class="container mt-3">
   <div class="d-flex justify-content-between align-items-center mb-4 " id="darkModeToggle"><h1 class="h2 mb-0"> Character Count Tool</h1>
   </div>    
@@ -249,7 +250,6 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
         </div>
                 </section>
 
-    
 <!-- Did You Know? -->
 <div class="card border-0 bg-light">
         <div class="card-body">
@@ -257,13 +257,6 @@ description: "Quickly count characters, words, and spaces with our Advanced Char
           <p class="mb-0">A standard SMS message is limited to 160 characters, making every word matter. Google search titles get cut off after around 60 characters, and Twitter/X posts are capped at 280 characters. Whether you're writing for SEO, social media, or mobile — tracking your character count ensures your message fits and performs better.</p>
         </div>
       </div>
- 
-
-
-
-
-
-
 
 
 <script src="{{ '/assets/js/character-count.js' | relative_url }}"></script>
