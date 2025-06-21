@@ -10,8 +10,6 @@ description: "Get precise inches to meters conversion with our simple and fast t
 
        .formula,h2{font-weight:700;color:var(--secondary)}.lead{font-size:1.25rem;max-width:700px;margin:0 auto;opacity:.9}
        .article-content{padding:0 2rem 3rem}h2{margin-top:2.5rem;margin-bottom:1.5rem;padding-bottom:.5rem;border-bottom:2px solid var(--accent);display:inline-block}.highlight-box{background:linear-gradient(135deg,#e3f2fd 0,#bbdefb 100%);border-left:4px solid var(--primary);padding:1.5rem;border-radius:0 8px 8px 0;margin:1.5rem 0;box-shadow:0 .125rem .25rem rgba(0,0,0,.075)}.conversion-table{width:100%;border-collapse:separate;border-spacing:0;margin:2rem 0;border-radius:10px;overflow:hidden;box-shadow:0 .15rem .75rem rgba(0,0,0,.08)}.conversion-table th{background:linear-gradient(to bottom,var(--primary),var(--secondary));color:#fff;font-weight:600;padding:1rem;text-align:center}.conversion-table td{padding:.85rem;text-align:center;border-bottom:1px solid #e0e0e0}.conversion-table tr:nth-child(2n){background-color:#f8f9ff}.conversion-table tr:last-child td{border-bottom:none}.formula-card{background:#fff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;box-shadow:0 .5rem 1rem rgba(0,0,0,.05);border-top:4px solid var(--accent);text-align:center}.formula{font-size:1.5rem;font-family:'Courier New',monospace;margin:1rem 0}.icon-circle{display:inline-flex;align-items:center;justify-content:center;width:50px;height:50px;background:var(--accent);color:#fff;border-radius:50%;margin-right:15px;font-size:1.2rem}.example-box{background:#f0f8ff;padding:1.25rem;border-radius:8px;margin:1.5rem 0;border-left:3px solid var(--accent)}
-      
-       
     </style>
 
 
@@ -25,9 +23,8 @@ description: "Get precise inches to meters conversion with our simple and fast t
 <div class="row">
 <div class="col-md-6">
  <div class="input-group mb-4">
-    <span class="input-group-text bg-primary text-white border-0"> <i class="fas fa-ruler-vertical me-2"></i>Inches</span>
-     <input type="number" id="inchesInput" class="form-control form-control-lg py-3" placeholder="Enter inches..." value="12">
-      <button id="convertBtn" class="btn btn-primary btn-lg px-4"><i class="fas fa-exchange-alt me-2"></i>Convert </button>
+      <input type="number" id="inchesInput" class="form-control form-control-lg py-3" placeholder="Enter inches..." value="12">
+      <button id="convertBtn" class="btn btn-primary btn-lg">Convert </button>
       </div>
 </div>
 
