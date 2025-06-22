@@ -67,7 +67,7 @@ description: "Easily convert Fahrenheit to Celsius with our simple online tool! 
       </div>
       <!-- What is Section1 -->
  <section class="mb-5">
-   <h2>🌡️ Fahrenheit to Celsius Converter</h2>
+   <h1>🌡️ Fahrenheit to Celsius Converter</h1>
      <p>The Fahrenheit to Celsius Converter is an essential tool that allows you to quickly convert temperatures from the imperial Fahrenheit scale to the metric Celsius scale. Whether you're tracking the weather, cooking, or studying science, this conversion helps make sense of temperature in a globally understood format.</p>
       <h3 class="p-3">✅ What is Fahrenheit to Celsius Conversion? </h3>
       <p>The Fahrenheit (°F) scale is commonly used in the United States, while the Celsius (°C) scale is used in most other countries and in science.<br>To convert Fahrenheit to Celsius, use this formula: <code>Celsius = (Fahrenheit - 32) × 5/9</code></p>

@@ -48,9 +48,7 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
  <div class="container py-5">
     <div class="card mx-auto p-4 shadow-sm" style="max-width: 600px;">
-      <h2 class="text-center mb-3 text-primary">
-        <i class="fas fa-calculator me-2"></i>HCF Calculator
-      </h2>
+      <h1 class="text-center mb-3 text-primary"><i class="fas fa-calculator me-2"></i>HCF Calculator </h1>
       <p class="text-center text-muted">Enter numbers separated by spaces or commas (e.g., 12, 18 24)</p>
       <div class="mb-3">
         <input type="text" id="numbersInput" class="form-control" placeholder="Enter numbers..." />

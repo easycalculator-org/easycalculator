@@ -63,19 +63,16 @@ description: "Convert Kelvin to Celsius quickly and accurately with our easy-to-
         <div class="text-muted"><i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }} </div>
       </div>
       <!-- What is Section1 -->
-      <section class="mb-5">
-        <h2>What is Kelvin to Celsius Calculator?</h2>
-        <p>A Kelvin to Celsius Calculator is an online temperature conversion that quickly converts temperatures from Kelvin (K) to Celsius (°C) using the formula: °C = K - 273.15. It is commonly used by students, scientists, and engineers to interpret scientific data in a more familiar temperature scale. This converter is accurate, user-friendly, and ideal for physics, chemistry, and everyday use. </p>
-
-        
+<section class="mb-5">
+  <h1>What is Kelvin to Celsius Calculator?</h1>
+   <p>A Kelvin to Celsius Calculator is an online temperature conversion that quickly converts temperatures from Kelvin (K) to Celsius (°C) using the formula: °C = K - 273.15. It is commonly used by students, scientists, and engineers to interpret scientific data in a more familiar temperature scale. This converter is accurate, user-friendly, and ideal for physics, chemistry, and everyday use. </p>
+      
   <hr class="my-5">
-
   <h2>🔁 How to Convert Kelvin to Celsius</h2>
   <p><strong>Formula:</strong> <code>Celsius (°C) = Kelvin (K) - 273.15</code></p>
   <p><strong>Example:</strong> 300 K → 300 - 273.15 = <strong>26.85°C</strong></p>
 
   <hr class="my-5">
-
   <div class="bg-light p-4 rounded mt-4">
    <h4 class="text-primary"><i class="fas fa-star me-2"></i>Features of the Kelvin to Celsius Calculator</h4>
     <ul class="list-group list-group-flush">

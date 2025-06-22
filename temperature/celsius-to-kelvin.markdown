@@ -63,7 +63,7 @@ description: "Convert Celsius to Kelvin easily with our quick calculator! Perfec
       </div>
       <!-- What is Section1 -->
       <section class="mb-5">
-        <h2>Celsius to Kelvin Converter</h2>
+        <h1>Celsius to Kelvin Converter</h1>
         <p>Celsius to Kelvin Converter is a handy tool that helps you convert temperatures from Celsius (°C) to Kelvin (K) instantly. It is widely used in scientific fields, laboratories, schools, and engineering where absolute temperature measurements are necessary.</p>
         <h3>What is Celsius to Kelvin Conversion?</h3>
         <p>The Kelvin scale is the SI (International System of Units) unit for temperature. Unlike the Celsius scale, Kelvin starts at absolute zero—the coldest possible temperature where all molecular motion stops. <br> To convert Celsius to Kelvin, use the simple formula: <code>Kelvin = Celsius + 273.15 </code></p>

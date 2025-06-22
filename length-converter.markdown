@@ -7,7 +7,7 @@ description: "Easily convert measurements with our Length Converter. Switch betw
 
 <div class="container p-4">
     <div class="card shadow-lg p-4 col-12 col-sm-8 col-md-6">
-        <h2 class="text-center mb-4">Length Converter</h2>
+        <h1 class="text-center mb-4">Length Converter</h1>
  <div class="mb-3">
             <input type="number" id="inputValue" class="form-control" placeholder="Enter value">
         </div>

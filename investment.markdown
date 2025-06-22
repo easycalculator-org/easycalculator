@@ -10,7 +10,7 @@ description: "Investment Calculator : How much your investment increases based o
         <!-- Left side: Input form -->
         <div class="col-md-6">
             <div class="shadow-box">
-                <h3 class="text-center">Investment Calculator</h3>
+                <h1 class="text-center">Investment Calculator</h1>
                 <form id="calculatorForm">
                     <div class="mb-3">
                         <label for="principal" class="form-label">Principal Amount ($)</label>
