@@ -45,6 +45,8 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-algolia
+
  # - jekyll-gzip  ( github not support this plugin)
  # - jekyll-minifier ( github not support this plugin)
  # - jekyll-robots.txt ( not require alredy used in root directory as custom)

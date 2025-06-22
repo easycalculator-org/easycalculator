@@ -1,0 +1,26 @@
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>
+<div id="searchbox"></div>
+<div id="hits"></div>
+
+<script>
+  const search = instantsearch({
+    indexName: 'jekyll_index',
+    searchClient: algoliasearch('YourAlgoliaAppID', 'YourSearchOnlyAPIKey'),
+  });
+
+  search.addWidgets([
+    instantsearch.widgets.searchBox({
+      container: '#searchbox',
+    }),
+    instantsearch.widgets.hits({
+      container: '#hits',
+      templates: {
+        item(hit) {
+          return `<a href="${hit.url}"><h4>${hit.title}</h4><p>${hit.excerpt}</p></a>`;
+        },
+      },
+    }),
+  ]);
+
+  search.start();
+</script>
