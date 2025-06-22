@@ -253,7 +253,7 @@ description: "Convert numbers into words effortlessly with our Numbers to Words 
                 </div>
 
 <!-- FAQ Section -->
-<h3 class="mb-4">FAQ on Number to word Converter</h3>
+<h3 class="p-4 mb-4">FAQ on Number to word Converter</h3>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
             <div class="fw-bold text-primary">1. Why would we need to convert numbers to words?</div>
