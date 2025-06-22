@@ -50,4 +50,73 @@ description: "Easily convert Fahrenheit to Celsius with our simple online tool! 
   </div>
 </div>
 
+
+
+<!-- Article Content -->
+<div class="article-container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <div class="d-flex align-items-center">
+          <div class="bg-light p-2 rounded-circle d-flex align-items-center justify-content-center me-3"> <i
+              class="fas fa-user text-primary"></i>
+          </div>
+          <div>
+            <h5 class="mb-0">Created by :- Narendra</h5>
+          </div>
+        </div>
+        <div class="text-muted"><i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }} </div>
+      </div>
+      <!-- What is Section1 -->
+ <section class="mb-5">
+   <h2>🌡️ Fahrenheit to Celsius Converter</h2>
+     <p>The Fahrenheit to Celsius Converter is an essential tool that allows you to quickly convert temperatures from the imperial Fahrenheit scale to the metric Celsius scale. Whether you're tracking the weather, cooking, or studying science, this conversion helps make sense of temperature in a globally understood format.</p>
+      <h3 class="p-3">✅ What is Fahrenheit to Celsius Conversion? </h3>
+      <p>The Fahrenheit (°F) scale is commonly used in the United States, while the Celsius (°C) scale is used in most other countries and in science.<br>To convert Fahrenheit to Celsius, use this formula: <code>Celsius = (Fahrenheit - 32) × 5/9</code></p>
+      <div class="highlight-box">
+         <h5><i class="fas fa-lightbulb text-warning me-2"></i>Example: Let’s convert 98.6°F (average human body temperature) to Celsius:</h5>
+          <p class="mb-0"> Celsius = (98.6 - 32) × 5/9   ≈ 37°C <br>So, 98.6°F is approximately equal to 37°C.</p>
+        </div>
+      </section>
+  <!-- FAQ Section -->
+      <section class="mb-5">
+        <h2 class="mb-4">FAQ on Fahrenheit to Celsius Converter</h2>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary">1. How do I convert Fahrenheit to Celsius manually?</div>
+            <p class="mb-0"> Use this formula: (°F - 32) × 5/9. Example: (68 - 32) × 5/9 = 20°C. </p>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary">2. What is the freezing point of water in Fahrenheit and Celsius?</div>
+            <p class="mb-0">Water freezes at 32°F or 0°C.</p>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary">3. Is 100°F a fever in Celsius?</div>
+            <p class="mb-0">Yes. 100°F is approximately 37.78°C, which is considered a mild fever.</p>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary">4. What is the easiest way to convert Fahrenheit to Celsius on the go?</div>
+            <p class="mb-0">Use an online Fahrenheit to Celsius Converter on your smartphone or browser.</p>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary">5. What is room temperature in Fahrenheit and Celsius?</div>
+            <p class="mb-0">Room temperature is typically around 20°C to 22°C, which equals 68°F to 72°F. </p>
+          </div>
+        </div>
+      </section>
+      <!-- Did You Know? -->
+      <div class="card border-0 bg-light mb-2">
+        <div class="card-body">
+          <h5 class="d-flex align-items-center"><i class="fas fa-info-circle me-3 text-primary"></i>Did You Know? </h5>
+          <p class="mb-0"> The Fahrenheit scale was developed in 1724 by Daniel Gabriel Fahrenheit, while Celsius came later in 1742 by Anders Celsius. The Celsius scale is now the standard in scientific research and used globally—except in the U.S., where Fahrenheit is still the norm! </p>
+        </div>
+      </div>
+    </div>
+
   <script src="{{ '/assets/js/fahrenheit-to-celsius.js' | relative_url }}"></script>

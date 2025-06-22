@@ -86,7 +86,7 @@ description: "Use EasyCalculator.org’s free online calculators to solve financ
 <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/json-validator"><div class="calculator-box text-center"><svg fill="#f50505" height="30px" width="30px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.48 -3.48 64.96 64.96" xml:space="preserve" stroke="#f50505" stroke-width="0.00058"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M33.655,45.988c-0.232-0.31-0.497-0.533-0.793-0.67s-0.608-0.205-0.937-0.205c-0.337,0-0.658,0.063-0.964,0.191 s-0.579,0.344-0.82,0.649s-0.431,0.699-0.567,1.183c-0.137,0.483-0.21,1.075-0.219,1.777c0.009,0.684,0.08,1.267,0.212,1.75 s0.314,0.877,0.547,1.183s0.497,0.528,0.793,0.67s0.608,0.212,0.937,0.212c0.337,0,0.658-0.066,0.964-0.198s0.579-0.349,0.82-0.649 s0.431-0.695,0.567-1.183s0.21-1.082,0.219-1.784c-0.009-0.684-0.08-1.265-0.212-1.743S33.888,46.298,33.655,45.988z"></path> <path d="M51.5,39V13.978c0-0.766-0.092-1.333-0.55-1.792L39.313,0.55C38.964,0.201,38.48,0,37.985,0H8.963 C7.777,0,6.5,0.916,6.5,2.926V39H51.5z M29.5,33c0,0.552-0.447,1-1,1s-1-0.448-1-1v-3c0-0.552,0.447-1,1-1s1,0.448,1,1V33z M37.5,3.391c0-0.458,0.553-0.687,0.877-0.363l10.095,10.095C48.796,13.447,48.567,14,48.109,14H37.5V3.391z M36.5,24v-4 c0-0.551-0.448-1-1-1c-0.553,0-1-0.448-1-1s0.447-1,1-1c1.654,0,3,1.346,3,3v4c0,1.103,0.897,2,2,2c0.553,0,1,0.448,1,1 s-0.447,1-1,1c-1.103,0-2,0.897-2,2v4c0,1.654-1.346,3-3,3c-0.553,0-1-0.448-1-1s0.447-1,1-1c0.552,0,1-0.449,1-1v-4 c0-1.2,0.542-2.266,1.382-3C37.042,26.266,36.5,25.2,36.5,24z M28.5,22c0.828,0,1.5,0.672,1.5,1.5S29.328,25,28.5,25 c-0.828,0-1.5-0.672-1.5-1.5S27.672,22,28.5,22z M16.5,26c1.103,0,2-0.897,2-2v-4c0-1.654,1.346-3,3-3c0.553,0,1,0.448,1,1 s-0.447,1-1,1c-0.552,0-1,0.449-1,1v4c0,1.2-0.542,2.266-1.382,3c0.84,0.734,1.382,1.8,1.382,3v4c0,0.551,0.448,1,1,1 c0.553,0,1,0.448,1,1s-0.447,1-1,1c-1.654,0-3-1.346-3-3v-4c0-1.103-0.897-2-2-2c-0.553,0-1-0.448-1-1S15.947,26,16.5,26z"></path> <path d="M6.5,41v15c0,1.009,1.22,2,2.463,2h40.074c1.243,0,2.463-0.991,2.463-2V41H6.5z M18.021,51.566 c0,0.474-0.087,0.873-0.26,1.196s-0.405,0.583-0.697,0.779s-0.627,0.333-1.005,0.41c-0.378,0.077-0.768,0.116-1.169,0.116 c-0.2,0-0.436-0.021-0.704-0.062s-0.547-0.104-0.834-0.191s-0.563-0.185-0.827-0.294s-0.487-0.232-0.67-0.369l0.697-1.107 c0.091,0.063,0.221,0.13,0.39,0.198s0.354,0.132,0.554,0.191s0.41,0.111,0.629,0.157s0.424,0.068,0.615,0.068 c0.483,0,0.868-0.094,1.155-0.28s0.439-0.504,0.458-0.95v-7.711h1.668V51.566z M25.958,52.298c-0.15,0.342-0.362,0.643-0.636,0.902 s-0.61,0.467-1.012,0.622s-0.856,0.232-1.367,0.232c-0.219,0-0.444-0.012-0.677-0.034s-0.467-0.062-0.704-0.116 c-0.237-0.055-0.463-0.13-0.677-0.226s-0.398-0.212-0.554-0.349l0.287-1.176c0.128,0.073,0.289,0.144,0.485,0.212 s0.398,0.132,0.608,0.191s0.419,0.107,0.629,0.144s0.405,0.055,0.588,0.055c0.556,0,0.982-0.13,1.278-0.39s0.444-0.645,0.444-1.155 c0-0.31-0.104-0.574-0.314-0.793s-0.472-0.417-0.786-0.595s-0.654-0.355-1.019-0.533s-0.706-0.388-1.025-0.629 s-0.583-0.526-0.793-0.854s-0.314-0.738-0.314-1.23c0-0.446,0.082-0.843,0.246-1.189s0.385-0.641,0.663-0.882 s0.602-0.426,0.971-0.554s0.759-0.191,1.169-0.191c0.419,0,0.843,0.039,1.271,0.116s0.774,0.203,1.039,0.376 c-0.055,0.118-0.118,0.248-0.191,0.39s-0.142,0.273-0.205,0.396s-0.118,0.226-0.164,0.308s-0.073,0.128-0.082,0.137 c-0.055-0.027-0.116-0.063-0.185-0.109s-0.166-0.091-0.294-0.137s-0.296-0.077-0.506-0.096s-0.479-0.014-0.807,0.014 c-0.183,0.019-0.355,0.07-0.52,0.157s-0.31,0.193-0.438,0.321s-0.228,0.271-0.301,0.431s-0.109,0.313-0.109,0.458 c0,0.364,0.104,0.658,0.314,0.882s0.47,0.419,0.779,0.588s0.647,0.333,1.012,0.492s0.704,0.354,1.019,0.581 s0.576,0.513,0.786,0.854s0.314,0.781,0.314,1.319C26.184,51.603,26.108,51.956,25.958,52.298z M35.761,51.156 c-0.214,0.647-0.511,1.185-0.889,1.613s-0.82,0.752-1.326,0.971s-1.06,0.328-1.661,0.328s-1.155-0.109-1.661-0.328 s-0.948-0.542-1.326-0.971s-0.675-0.966-0.889-1.613s-0.321-1.395-0.321-2.242s0.107-1.593,0.321-2.235s0.511-1.178,0.889-1.606 s0.82-0.754,1.326-0.978s1.06-0.335,1.661-0.335s1.155,0.111,1.661,0.335s0.948,0.549,1.326,0.978s0.675,0.964,0.889,1.606 s0.321,1.388,0.321,2.235S35.975,50.509,35.761,51.156z M45.68,54h-1.668l-3.951-6.945V54h-1.668V43.924h1.668l3.951,6.945v-6.945 h1.668V54z"></path> </g> </g></svg><h5>JSON Validator</h5></div></a></div>
 
 
-<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/triangle-area-calculator"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="24" viewBox="0 0 384 512"><path fill="#63E6BE" d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg><h5>Triangle Area Calculator</h5></div></a></div>
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/triangle-area-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-play fa-2xl" style="color: #63E6BE;"></i><h5>Triangle Area Calculator</h5></div></a></div>
 
 
 </div>
@@ -119,21 +119,21 @@ description: "Use EasyCalculator.org’s free online calculators to solve financ
 <h2>Math Calculator</h2>
 <div class="row g-4 p-3 ">
 
-<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="#"> <div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="24" viewBox="0 0 384 512"><path fill="#63E6BE" d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg><h5>Algebra Calculator</h5></div></a></div>
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="#"> <div class="calculator-box text-center"><i class="fa-solid fa-play fa-2xl" style="color:rgb(54, 82, 243);"></i><h5>Algebra Calculator</h5></div></a></div>
         
- <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/lcm-calculator"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512"><path fill="#74C0FC" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg><h5>LCM | HCF Calculator</h5></div></a></div>
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/lcm-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-square-plus fa-2xl"></i><h5>LCM | HCF Calculator</h5></div></a></div>
         
- <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/percentage-calculator"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="24" viewBox="0 0 384 512"><path fill="#63E6BE" d="M374.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-320 320c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l320-320zM128 128A64 64 0 1 0 0 128a64 64 0 1 0 128 0zM384 384a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/></svg><h5>Percentage Calculator</h5></div></a></div>
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/percentage-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-percent fa-2xl" style="color: #63E6BE;"></i><h5>Percentage Calculator</h5></div></a></div>
 
- <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="30" width="22" viewBox="0 0 384 512"><path fill="#B197FC" d="M224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112L48 144c-17.7 0-32 14.3-32 32s14.3 32 32 32l112 0 0 112c0 17.7 14.3 32 32 32s32-14.3 32-32l0-112 112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-112 0 0-112zM0 480c0 17.7 14.3 32 32 32l320 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 448c-17.7 0-32 14.3-32 32z"/></svg><h5>Interest Calculator</h5></div></a></div></div>
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-plus-minus fa-2xl" style="color: #B197FC;"></i><h5>Interest Calculator</h5></div></a></div></div>
 
 <hr>
 <h2>Geolocation Tool</h2>
 <div class="row g-4 p-3 ">
 
-<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/what-is-my-ip"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512"><path d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z"/></svg><h5>My IP Address</h5></div></a> </div>
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/what-is-my-ip"><div class="calculator-box text-center"><i class="fa-solid fa-globe fa-2xl" style="color: #B197FC;"></i><h5>My IP Address</h5></div></a> </div>
         
- <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/utm-zone-map"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="24" viewBox="0 0 384 512"><path fill="#63E6BE" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg><h5>UTM Zone Map</h5></div> </a></div>
+ <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/utm-zone-map"><div class="calculator-box text-center"><i class="fa-solid fa-location-dot fa-2xl" style="color: #63E6BE;"></i><h5>UTM Zone Map</h5></div> </a></div>
 
  <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/military-grid-reference-system-converter"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512"><path fill="#B197FC" d="M128 136c0-22.1-17.9-40-40-40L40 96C17.9 96 0 113.9 0 136l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48zm0 192c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48zm32-192l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM288 328c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48zm32-192l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM448 328c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48z"/></svg><h5>MGRS Converter</h5></div></a></div>
  <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/current-elevation"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="40" viewBox="0 0 640 512"><path fill="#5f69ec" d="M560 160A80 80 0 1 0 560 0a80 80 0 1 0 0 160zM55.9 512l325.2 0 75 0 122.8 0c33.8 0 61.1-27.4 61.1-61.1c0-11.2-3.1-22.2-8.9-31.8l-132-216.3C495 196.1 487.8 192 480 192s-15 4.1-19.1 10.7l-48.2 79L286.8 81c-6.6-10.6-18.3-17-30.8-17s-24.1 6.4-30.8 17L8.6 426.4C3 435.3 0 445.6 0 456.1C0 487 25 512 55.9 512z"/></svg><h5>Current Elevation</h5></div></a></div>
@@ -144,8 +144,6 @@ description: "Use EasyCalculator.org’s free online calculators to solve financ
 <div class="col-md-3 g-1 p-3  "><a class="text-decoration-none" href="/what-is-my-address"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#74C0FC" d="M224 32L64 32C46.3 32 32 46.3 32 64l0 64c0 17.7 14.3 32 32 32l377.4 0c4.2 0 8.3-1.7 11.3-4.7l48-48c6.2-6.2 6.2-16.4 0-22.6l-48-48c-3-3-7.1-4.7-11.3-4.7L288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32zM480 256c0-17.7-14.3-32-32-32l-160 0 0-32-64 0 0 32L70.6 224c-4.2 0-8.3 1.7-11.3 4.7l-48 48c-6.2 6.2-6.2 16.4 0 22.6l48 48c3 3 7.1 4.7 11.3 4.7L448 352c17.7 0 32-14.3 32-32l0-64zM288 480l0-96-64 0 0 96c0 17.7 14.3 32 32 32s32-14.3 32-32z"/></svg><h5>What is My Address</h5></div> </a></div>
 
  </div>
- 
-
  <!-- conversion-tool end-->
 
 
@@ -159,40 +157,199 @@ description: "Use EasyCalculator.org’s free online calculators to solve financ
 <!--<div class="col-2"><a href="#" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">About</a></div> -->
   </div>
 
-<!-- Math Calculator Closed -->
-<h1 class ="pt-4">Free Online Calculators & Conversion Tools</h1>
-<p>Welcome to <strong>EasyCalculator.org</strong>, your one-stop platform for <strong>free online calculators</strong>, <strong>conversion tools</strong>, and smart utilities. Whether you're calculating a loan EMI, converting currencies, or solving math problems, our tools are accurate, fast, and easy to use&mdash;no downloads or sign-ups required.</p>
+<!-- Hero Section -->
+<br>
+<section class="hero-section shadow-sm p-4 rounded-2">
+   <h1 class="display-4 fw-bold mb-1">Free Online Calculators & Conversion Tools</h1>
+     <p class="lead mb-4">Welcome to EasyCalculator.org, your one-stop platform for free online calculators, conversion tools, and smart utilities. Whether you're calculating a loan EMI, converting currencies, or solving math problems, our tools are accurate, fast, and easy to use—no downloads or sign-ups required.</p>
+  <h3 class="mb-3">Popular Calculators</h3>
+                            <div class="flex-wrap justify-content-center gap-3">
+                               <a href="/percentage-calculator" class="btn btn-outline-primary">Percentage Calculator</a>
+                               <a href="/currency" class="btn btn-outline-primary">Currency Converter</a>
+                               <a href="/number-to-word-converter" class="btn btn-outline-primary">Number to word</a>
+                               <a href="/epoch" class="btn btn-outline-primary">Epoch Time Calculator</a>
+                               <a href="/age-calculator" class="btn btn-outline-primary">Age Calculator</a>
+                                <a href="/world-clock" class="btn btn-outline-primary">World Clock</a>
+                            </div>
 
- <h2>Why Use EasyCalculator.org?</h2><p><strong>Free and Easy to Use:</strong> No sign-ups, no downloads—simply select your calculator and get started!<br><strong>Accurate Results Every Time:</strong>Our calculators are designed with precision algorithms to ensure top-notch accuracy.<br><strong>Wide Range of Categories:</strong> From math to health, and finance to everyday utilities.<br> <strong>Continuously Updated & Community Supported</strong> Every calculator is developed with care and rigorously tested. Found a bug or error? We welcome your feedback!</p> 
- <p>Each calculator was designed and tested on its own with careful attention. If you see any tiny errors, please tell us. We really appreciate your input.</p>
+
+ <div class="text-center mb-5 py-4">
+                <h2 class="section-title display-5 fw-bold">Why Use EasyCalculator.org?</h2>
+                <p class="lead mx-auto" style="max-width: 700px;">Discover why thousands of users trust our platform for their daily calculation needs</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="feature-icon"><i class="fas fa-thumbs-up"></i> </div>
+                        <h4 class="mb-3">Free & Easy to Use</h4>
+                        <p>No sign-ups, no downloads—simply select your calculator and get started!</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="feature-icon"><i class="fas fa-bullseye"></i> </div>
+                        <h4 class="mb-3">Accurate Results</h4>
+                        <p>Our calculators are designed with precision algorithms to ensure top-notch accuracy.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+                        <h4 class="mb-3">Wide Range of Tools</h4>
+                        <p>From math to health, and finance to everyday utilities—we have it all.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="feature-icon"><i class="fas fa-users"></i></div>
+                        <h4 class="mb-3">Community Supported</h4>
+                        <p>Continuously updated based on user feedback. Found an error? Let us know!</p>
+                    </div>
+                </div>
+            </div>
+ </section>
 
 
 
-<h2><strong>Explore Our Calculator Categories</strong></h2>
+<!-- Calculator Categories -->
+<section class="py-5 bg-light">
+   <div class="container">
+        <div class="text-center mb-5">
+                <h2 class="section-title display-5 fw-bold">Explore Our Calculator Categories</h2>
+                <p class="lead mx-auto" style="max-width: 700px;">Discover tools for every need across multiple categories</p>
+            </div>
+            <div class="row g-4">
+                <!-- Financial Calculators -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="category-card bg-white p-4">
+                        <div class="text-center mb-3">
+                            <div class="feature-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <h3 class="mb-3">Financial Calculators</h3>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                         <li class="list-group-item d-flex align-items-center border-0 py-2"><i class="fas fa-check-circle text-success me-2"></i>Loan Calculator: Monthly EMI Payments and Interest</li>
+                            <li class="list-group-item d-flex align-items-center border-0 py-2"> <i class="fas fa-check-circle text-success me-2"></i> Investment Calculator: Project returns </li>
+                            <li class="list-group-item d-flex align-items-center border-0 py-2"><i class="fas fa-check-circle text-success me-2"></i> Budget Planner: Manage income and expenses</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Math & Science -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="category-card bg-white p-4">
+                        <div class="text-center mb-3">
+                            <div class="feature-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h3 class="mb-3">Mathematics & Science</h3>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex align-items-center border-0 py-2"><i class="fas fa-check-circle text-success me-2"></i>Scientific Calculator: Advanced functions </li>
+                            <li class="list-group-item d-flex align-items-center border-0 py-2"><i class="fas fa-check-circle text-success me-2"></i> Equation Solver: Linear and quadratic equations </li>
+                            <li class="list-group-item d-flex align-items-center border-0 py-2"><i class="fas fa-check-circle text-success me-2"></i> Unit Converter: Length, weight, temperature</li>
+                        </ul>
+                    </div>
+                </div>
+ <!-- Everyday Tools -->
+<div class="col-md-6 col-lg-4">
+  <div class="category-card bg-white p-4">
+     <div class="text-center mb-3">
+        <div class="feature-icon"><i class="fas fa-toolbox"></i></div>
+            <h3 class="mb-3">Everyday Tools</h3>
+            </div>
+         <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex align-items-center border-0 py-2"><i class="fas fa-check-circle text-success me-2"></i>Age Calculator: Find your exact age</li>
+          <li class="list-group-item d-flex align-items-center border-0 py-2"><i class="fas fa-check-circle text-success me-2"></i>Percentage Calculator: Discounts and tips </li>
+          <li class="list-group-item d-flex align-items-center border-0 py-2"><i class="fas fa-check-circle text-success me-2"></i>Time Zone Converter: Global time checks</li>
+         </ul>
+                    </div>
+                </div>
+ <!-- Business Tools -->
+   <div class="col-md-6 col-lg-4">
+      <div class="category-card bg-white p-4">
+         <div class="text-center mb-3">
+            <div class="feature-icon"><i class="fas fa-briefcase"></i></div>
+                            <h3 class="mb-3">Business Tools</h3>
+                        </div>
+         <ul class="list-group list-group-flush">
+           <li class="list-group-item d-flex align-items-center border-0 py-2"><i class="fas fa-check-circle text-success me-2"></i> Profit Margin Calculator: Analyze profitability</li>
+           <li class="list-group-item d-flex align-items-center border-0 py-2"><i class="fas fa-check-circle text-success me-2"></i>Tax Calculator: Estimate tax liabilities </li>
+           <li class="list-group-item d-flex align-items-center border-0 py-2"><i class="fas fa-check-circle text-success me-2"></i> Currency Converter: Real-time exchange rates</li>
+          </ul>
+ </div>
+                </div>
+ <!-- GeoLocation Tools -->
+     <div class="col-md-6 col-lg-4">
+                    <div class="category-card bg-white p-4">
+                        <div class="text-center mb-3">
+                            <div class="feature-icon"><i class="fas fa-globe-americas"></i> </div>
+                            <h3 class="mb-3">GeoLocation Tools</h3>
+                        </div>
+   <ul class="list-group list-group-flush">
+    <li class="list-group-item d-flex align-items-center border-0 py-2"> <i class="fas fa-check-circle text-success me-2"></i> Geolocation Tool: Find location coordinates </li>
+    <li class="list-group-item d-flex align-items-center border-0 py-2"><i class="fas fa-check-circle text-success me-2"></i> My IP Address: Detect your public IP</li>
+    <li class="list-group-item d-flex align-items-center border-0 py-2"><i class="fas fa-check-circle text-success me-2"></i>UTM & MGRS Converters: Map reference systems </li>
+   </ul>
+ </div>
+                </div>
+ <!-- More Tools -->
+ <div class="col-md-6 col-lg-4">
+       <div class="category-card bg-white p-4 h-100 d-flex flex-column">
+          <div class="text-center mb-3">
+              <div class="feature-icon"><i class="fas fa-plus-circle"></i></div>
+                            <h3 class="mb-3">More Tools Coming Soon</h3>
+                        </div>
+            <p class="flex-grow-1">We're constantly developing new calculators based on user feedback. Have a suggestion? Let us know what tool you'd like to see next!</p>
+                        <div class="text-center mt-4">
+                            <a href="/contact" class="btn btn-outline-primary">Suggest a Calculator</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Why Calculators Matter -->
+<section class="py-5">
+  <div class="row align-items-center">
+     <div class="col-lg-6 mb-5 mb-lg-0">
+          <img src="/assets/images/easycalc-home-page.jpg" alt="Calculator Benefits" class="img-fluid rounded-3 shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title display-5 fw-bold mb-4">Why Online Calculators Matter</h2>
+                    <p class="lead mb-4">In today's digital world, online calculators save time, reduce human error, and make complex tasks simple.</p>
+                    <p>Whether you're a student, professional, traveler, or business owner, our tools help you make informed decisions quickly. Our calculators:</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success mt-1 me-2"></i><span>Eliminate manual calculation errors</span> </li>
+                        <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success mt-1 me-2"></i><span>Provide instant results for complex problems</span> </li>
+                        <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success mt-1 me-2"></i><span>Save time on repetitive calculations</span></li>
+                        <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success mt-1 me-2"></i><span>Help with financial planning and decision making</span></li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+<!-- Source Transparency -->
+<section class="row justify-content-center">
+  <div class="col-lg-10">
+    <div class="bg-white p-4 p-md-5 rounded-3 shadow-sm">
+       <h2 class="section-title display-5 fw-bold text-center">Source Transparency</h2>
+         <p class="lead mx-auto" style="max-width: 800px;">At EasyCalculator.org, we believe in transparency and accuracy. Our calculators are built using reliable sources and standards</p>
+          <p class="text-center mb-4">Each calculator is developed with care and rigorously tested. Found a bug or error? We welcome your feedback!</p>
+       <div class="mt-4">
+         <h4 class="mb-4 text-center">Our Primary Reference Sources:</h4>
+  <ul class="list-group list-group-flush">
+   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Wikipedia</strong>: for foundational mathematical and scientific concepts.</li>
+   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>NIST.gov</strong>:for unit standards and measurement conversions</li>
+   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>IRS.gov</strong>: for U.S. tax-related calculators</li>
+   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>USGS.gov</strong>: U.S. Geological Survey for geographical data</li>
+   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Open-source algorithms</strong>: verified by our developer community</li>
+  </ul>
+ </div>
+     <!-- <div class="text-center mt-5"><a href="#" class="btn btn-outline-primary me-2">Report an Issue</a><a href="#" class="btn btn-primary">View All Sources</a></div> -->
+     </div>
+    </div>
+    </section>
 
-<h4><strong>1. Financial Calculators</strong></h4><ul><li>Loan Calculator: Monthly EMI Payments and Interest for mortgages or personal loans.</li><li>Investment Calculator: Project returns based on principal, rate, and time.</li><li>Budget Planner: Manage your income and expenses effectively.</li></ul>
 
- <h4><strong>2. Mathematics and Science Calculators</strong></h4><ul><li>Scientific Calculator: Perform advanced functions like logarithms, trigonometry, and exponents.</li> <li>Equation Solver: Solve linear and quadratic equations in seconds.</li><li>Unit Converter: Convert between different units of measurement (e.g., length, weight, temperature).</li></ul>
 
- <h4><strong>3. Everyday Tools</strong></h4><ul><li>Age Calculator: Find out your exact age down to the days!</li><li>Percentage Calculator: Calculate discounts, tips, or proportions.</li><li>Time Zone Converter: Check the time across the globe.</li></ul>
-<h4><strong>4. Business Tools</strong></h4><ul><li>Profit Margin Calculator: Analyze your business’s profitability.</li><li>Tax Calculator: Estimate tax liabilities with ease.</li>
-<li>Currency Converter: Get real-time exchange rates for global currencies.</li></ul>
-<h4><strong>5. GeoLocation Tools</strong></h4><ul>
-<li><strong >Geolocation Tool</strong> &ndash; Find your location and its coordinates.</li>
-<li><strong >My IP Address</strong> &ndash; Instantly detect your public IP.</li>
-<li><strong >UTM &amp; MGRS Converters</strong> &ndash; Convert between different map reference systems.</li>
-<li><strong >Elevation &amp; Latitude/Longitude Tools</strong> &ndash; Access elevation data or convert coordinates to addresses.</li>
-</ul>
-
-<h3>Why Online Calculators Matter</h3><p>In today's digital world, online calculators save time, reduce human error, and make complex tasks simple. Whether you're a student, professional, traveler, or business owner, our tools help you make informed decisions quickly.</p>
-<h3>Source Transparency</h3>
-<p>At EasyCalculator.org, we believe in transparency. Where possible, we refer to:</p>
-<ul>
-<li><a class="" href="https://en.wikipedia.org" target="_new" rel="noopener" >Wikipedia</a> for foundational mathematical and scientific concepts</li>
-<li><a class="" href="https://www.nist.gov" target="_new" rel="noopener">NIST.gov</a> for unit standards and measurement conversions</li>
-<li><a class="" href="https://www.irs.gov" target="_new" rel="noopener" >IRS.gov</a> for U.S. tax-related calculators</li>
-<li><a class="" href="https://www.usgs.gov/" target="_new" rel="noopener" >usgs.gov</a> U.S. Geological Survey</li>
-</ul>
-
-</div>
 <script src="{{ '/assets/js/scientific-calculator.js' | relative_url }}"></script>
