@@ -74,9 +74,14 @@ description: "Quickly find your current elevation and explore an accurate elevat
           <h5><i class="fas fa-lightbulb text-warning me-2"></i> Example: My Current Elevation</h5>
           <p class="mb-0"> Current Location: Denver, Colorado, United States <br>My Current Elevation: Approximately 1,609 meters (5,280 feet) above sea level</p>
         </div>
+        <br>
+<div class="highlight-box">
+          <h5><i class="fas fa-lightbulb text-warning me-2"></i> 🌡️ Elevation vs. Altitude vs. Depth</h5>
+          <p class="mb-0">Elevation: Height above sea level (used for land and surface points).<br>Altitude: Height of an object in the air (like an airplane).<br>Depth: Distance below a surface (like underwater depth). </p>
+        </div>
       </section>
-      <!-- FAQ Section -->
-      <section class="mb-5">
+<!-- FAQ Section -->
+<section class="mb-5">
         <h2 class="mb-4">FAQ on Current Elevation</h2>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
