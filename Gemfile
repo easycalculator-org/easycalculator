@@ -34,9 +34,9 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem "jekyll-sitemap"
 
-gem 'jekyll-algolia'
+# gem 'jekyll-algolia'
 
 # gem last modify
 # gem 'jekyll-last-modified-at' (gthub not support this plugin)
 
-gem "algolia", "~> 3.18"
+# gem "algolia", "~> 3.18"

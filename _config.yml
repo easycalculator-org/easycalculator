@@ -34,10 +34,10 @@ defaults:
     values:
       image: "/assets/images/android-chrome-512x512.png"
 
-algolia:
-  application_id: '2M2HPEOFZR'
-  index_name: 'your_index_name'
-  search_only_api_key: '7569cc4504bfaa54283037f14d11a9ff'
+# algolia:
+#   application_id: '2M2HPEOFZR'
+#   index_name: 'your_index_name'
+#   search_only_api_key: '7569cc4504bfaa54283037f14d11a9ff'
 
 # Build settings
 theme: minima
@@ -45,7 +45,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-algolia
+  # - jekyll-algolia
 
  # - jekyll-gzip  ( github not support this plugin)
  # - jekyll-minifier ( github not support this plugin)
