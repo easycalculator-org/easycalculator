@@ -45,14 +45,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-lunr-js-search
   # - jekyll-algolia
-
-lunr_search:
-  exclude: [search.html]
-  fields:
-    title: 10
-    content: 1
 
   # - jekyll-gzip  ( github not support this plugin)
   # - jekyll-minifier ( github not support this plugin)
