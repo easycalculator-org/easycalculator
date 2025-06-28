@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 
+title:
 email: care@easycalculator.org
 description: >- # this means to ignore newlines until "baseurl:"
   EasyCalculator.org is an open-source platform with free online calculators for math, science, and finance. Fast, accurate results—no registration needed!.
@@ -45,18 +45,23 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-lunr-js-search
   # - jekyll-algolia
 
- # - jekyll-gzip  ( github not support this plugin)
- # - jekyll-minifier ( github not support this plugin)
- # - jekyll-robots.txt ( not require alredy used in root directory as custom)
- # - jekyll-last-modified-at ( github not support this plugin)
+lunr_search:
+  exclude: [search.html]
+  fields:
+    title: 10
+    content: 1
 
-
+  # - jekyll-gzip  ( github not support this plugin)
+  # - jekyll-minifier ( github not support this plugin)
+  # - jekyll-robots.txt ( not require alredy used in root directory as custom)
+  # - jekyll-last-modified-at ( github not support this plugin)
 
 # Add the IndexNow integration
 indexnow:
-  api_key: "/d69eb464903242de9049154268ab5ef1.txt"  # Path to the key file you created
+  api_key: "/d69eb464903242de9049154268ab5ef1.txt" # Path to the key file you created
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -67,14 +72,12 @@ indexnow:
 include:
   - ".htaccess"
 
+  # markdown: kramdown ( github not support this plugin)
 
-# markdown: kramdown ( github not support this plugin)
-
-
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
+  # Excluded items can be processed by explicitly listing the directories or
+  # their entries' file path in the `include:` list.
+  #
+  # exclude:
   - "README.md"
 #   - .sass-cache/
 #   - .jekyll-cache/
