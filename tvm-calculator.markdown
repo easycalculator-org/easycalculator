@@ -91,7 +91,7 @@ description: "Use our free TVM Calculator to compute the Time Value of Money inc
           <div class="bg-light p-2 rounded-circle d-flex align-items-center justify-content-center me-3"> <i class="fas fa-user text-primary"></i>
           </div>
           <div>
-            <h5 class="mb-0">Created by :- Narendra</h5>
+            <h5 class="mb-0">Created by :- Reema</h5>
           </div>
         </div>
         <div class="text-muted">
