@@ -84,13 +84,13 @@ function validateField(field) {
             let downPaymentAmount;
             if (downPaymentType === '%') {
                 downPaymentAmount = homePriceVal * (downPayment / 100);
-                isValid = !isNaN(downPayment) && downPayment >= 3 && downPayment <= 100;
+                isValid = !isNaN(downPayment) && downPayment >= 1 && downPayment <= 100;
                 if (!isValid) {
-                    showError(field, 'downPaymentError', 'Down payment must be between 3% and 100%');
+                    showError(field, 'downPaymentError', 'Down payment must be between 0% and 100%');
                 }
             } else {
                 downPaymentAmount = downPayment;
-                const minDownPayment = homePriceVal * 0.03;
+                const minDownPayment = homePriceVal * 0.00;
                 isValid = !isNaN(downPayment) && downPayment >= minDownPayment && downPayment <= homePriceVal;
                 if (!isValid) {
                     showError(field, 'downPaymentError', `Down payment must be between $${formatNumber(minDownPayment)} and $${formatNumber(homePriceVal)}`);

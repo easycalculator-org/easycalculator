@@ -104,7 +104,8 @@ description: "Use EasyCalculator.org’s free online calculators to solve financ
 <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/tvm-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-business-time fa-xl" style="color: #74C0FC;"></i><h5>TVM Calculator</h5></div></a></div>       
 <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/investment-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-bill-trend-up fa-xl" style="color: #5ae2a3;"></i><h5>Investment Calculator</h5></div></a></div>
 <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/currency"><div class="calculator-box text-center"><i class="fa-solid fa-coins fa-xl" style="color: #B197FC;"></i><h5>Currency Converter</h5></div></a></div>
-<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/loan-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar" style="color: #1968f0;"></i><h5>Loan Calculator</h5></div></a></div>          
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/loan-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl" style="color: #1968f0;"></i><h5>Loan Calculator</h5></div></a></div> 
+<div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/mortgage-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl" style="color:rgb(247, 86, 37);"></i><h5>Mortgage Calculator (USA)</h5></div></a></div>           
   </div>
 
 
