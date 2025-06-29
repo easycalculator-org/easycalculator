@@ -1,55 +1,28 @@
 ---
 layout: default
-title: Mortgage Calculator USA – Estimate Your Monthly Home Loan Payments with Taxes & Insurance
+title: Mortgage Calculator USA – Estimate Your Monthly Home Loan EMI
 permalink: /mortgage-calculator
-description: "Use our free online Mortgage Calculator to quickly estimate your monthly home loan payments. Includes principal, interest, taxes, insurance, and amortization chart. Fast, accurate, and easy to use!"
+description: "Use our free online Mortgage Calculator to quickly estimate your monthly home loan EMI. Includes principal, interest, taxes, insurance, and amortization chart."
 ---
 <style>
-        .input-error {
-            border-color: #dc3545 !important;
-        }
-        .error-message {
-            color: #dc3545;
-            font-size: 0.875em;
-            display: none;
-        }
-        .progress-bar.loan-amount {
-            background-color: #0d6efd;
-        }
-        .progress-bar.down-payment {
-            background-color: #198754;
-        }
-        .chart-container {
-            position: relative;
-            height: 300px;
-        }
-        .form-range::-webkit-slider-thumb {
-            background: #0d6efd;
-        }
-        .form-range::-moz-range-thumb {
-            background: #0d6efd;
-        }
-        .form-range::-ms-thumb {
-            background: #0d6efd;
-        }
-        .loan-term-value {
-            font-weight: bold;
-            color: #0d6efd;
-            font-size: 1.1rem;
-        }
-    </style>
- <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="card border-0 shadow-lg">
-                    <div class="card-header bg-primary text-white py-3">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div>
-                                <h2 class="mb-0"><i class="fas fa-home me-2"></i>USA Mortgage Calculator</h2>
-                                <p class="mb-0">Estimate your monthly home payment</p>
-                            </div>
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/125px-Flag_of_the_United_States.svg.png" alt="USA Flag" style="height: 40px;">
-                        </div>
+.input-error { border-color: #dc3545 !important; }
+.error-message {  color: #dc3545;  font-size: 0.875em; display: none;}
+.progress-bar.loan-amount { background-color: #0d6efd;}
+.progress-bar.down-payment { background-color: #198754; }
+.chart-container {  position: relative; height: 300px; }
+.form-range::-webkit-slider-thumb { background: #0d6efd;}
+.form-range::-moz-range-thumb { background: #0d6efd;}
+.form-range::-ms-thumb {background: #0d6efd;}
+.loan-term-value {font-weight: bold; color: #0d6efd; font-size: 1.1rem;}
+ </style>
+<div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="card border-0 shadow-lg">
+            <div class="card-header bg-primary text-white py-3">
+              <div class="d-flex align-items-center justify-content-between">
+                 <div><h1 class="mb-0"><i class="fas fa-home me-2"></i>USA Mortgage Calculator</h1><p class="mb-0">Estimate your monthly home loan EMI</p> </div>
+                    <img src="/assets/images/flag_of_the_united_states.png" alt="USA Flag" style="height: 40px;">
+                 </div>
                     </div>
                     <div class="card-body p-4">
                         <form id="mortgageForm" novalidate>
@@ -61,8 +34,7 @@ description: "Use our free online Mortgage Calculator to quickly estimate your m
                                         <div class="mb-3">
                                             <label for="homePrice" class="form-label">Home Price ($)</label>
                                             <div class="input-group">
-                                                <span class="input-group-text"><i class="fas fa-home"></i></span>
-                                                <input type="text" class="form-control" id="homePrice" placeholder="300,000" required>
+                                                <span class="input-group-text"><i class="fas fa-home"></i></span> <input type="text" class="form-control" id="homePrice" placeholder="300,000" required>
                                             </div>
                                             <div class="error-message" id="homePriceError">Please enter a valid home price ($50,000 minimum)</div>
                                         </div>
@@ -146,39 +118,29 @@ description: "Use our free online Mortgage Calculator to quickly estimate your m
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center mt-4 gap-3">
-                                <button type="reset" class="btn btn-outline-secondary px-4">
-                                    <i class="fas fa-redo me-2"></i>Reset
-                                </button>
-                                <button type="submit" class="btn btn-primary px-4">
-                                    <i class="fas fa-calculator me-2"></i>Calculate Payment
-                                </button>
+                                <button type="reset" class="btn btn-outline-secondary px-4"><i class="fas fa-redo me-2"></i>Reset</button>
+                                <button type="submit" class="btn btn-primary px-4"><i class="fas fa-calculator me-2"></i>Calculate Payment </button>
                             </div>
                         </form>
                         <div id="results" class="mt-5 d-none">
                             <div class="bg-white p-4 rounded border">
-                                <h3 class="text-center text-primary mb-4">
-                                    <i class="fas fa-file-invoice-dollar me-2"></i>Your Mortgage Breakdown
-                                </h3>
+                                <h3 class="text-center text-primary mb-4"><i class="fas fa-file-invoice-dollar me-2"></i>Your Mortgage Breakdown</h3>
                                 <div class="row">
                                     <!-- Left Results -->
                                     <div class="col-md-6">
                                         <div class="p-3">
                                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                                <h5 class="mb-0">Loan Details</h5>
-                                                <span class="badge bg-primary rounded-pill">LTV: <span id="ltv">0</span>%</span>
+                                                <h5 class="mb-0">Loan Details</h5><span class="badge bg-primary rounded-pill">LTV: <span id="ltv">0</span>%</span>
                                             </div>
                                             <div class="mb-3">
                                                 <div class="d-flex justify-content-between">
-                                                    <span>Home Price:</span>
-                                                    <strong>$<span id="displayHomePrice">0</span></strong>
+                                                    <span>Home Price:</span><strong>$<span id="displayHomePrice">0</span></strong>
                                                 </div>
                                                 <div class="d-flex justify-content-between">
-                                                    <span>Down Payment:</span>
-                                                    <strong>$<span id="downPaymentResult">0</span></strong>
+                                                    <span>Down Payment:</span><strong>$<span id="downPaymentResult">0</span></strong>
                                                 </div>
                                                 <div class="d-flex justify-content-between">
-                                                    <span>Loan Amount:</span>
-                                                    <strong>$<span id="loanAmount">0</span></strong>
+                                                    <span>Loan Amount:</span><strong>$<span id="loanAmount">0</span></strong>
                                                 </div>
                                             </div>
                                             <div class="progress mb-4" style="height: 10px;">
@@ -200,38 +162,30 @@ description: "Use our free online Mortgage Calculator to quickly estimate your m
                                         <div class="p-3">
                                             <h5 class="mb-3">Monthly Payment Breakdown</h5>
                                             <div class="d-flex justify-content-between mb-2">
-                                                <span>Principal & Interest:</span>
-                                                <strong>$<span id="principalInterest">0</span></strong>
+                                                <span>Principal & Interest:</span><strong>$<span id="principalInterest">0</span></strong>
                                             </div>
                                             <div class="d-flex justify-content-between mb-2">
-                                                <span>Property Tax:</span>
-                                                <strong>$<span id="monthlyTax">0</span></strong>
+                                                <span>Property Tax:</span><strong>$<span id="monthlyTax">0</span></strong>
                                             </div>
                                             <div class="d-flex justify-content-between mb-2">
-                                                <span>Home Insurance:</span>
-                                                <strong>$<span id="monthlyInsurance">0</span></strong>
+                                                <span>Home Insurance:</span><strong>$<span id="monthlyInsurance">0</span></strong>
                                             </div>
                                             <div class="d-flex justify-content-between mb-2">
-                                                <span>PMI:</span>
-                                                <strong>$<span id="monthlyPmi">0</span></strong>
+                                                <span>PMI:</span> <strong>$<span id="monthlyPmi">0</span></strong>
                                             </div>
                                             <div class="d-flex justify-content-between mb-2">
-                                                <span>HOA Fees:</span>
-                                                <strong>$<span id="hoaFeesResult">0</span></strong>
+                                                <span>HOA Fees:</span><strong>$<span id="hoaFeesResult">0</span></strong>
                                             </div>
                                             <hr class="border border-light-subtle">
                                             <div class="d-flex justify-content-between fs-5 fw-bold text-primary">
-                                                <span>Total Monthly Payment:</span>
-                                                <span>$<span id="totalMonthly">0</span></span>
+                                                <span>Total Monthly Payment:</span><span>$<span id="totalMonthly">0</span></span>
                                             </div>
                                             <hr class="border border-light-subtle">
                                             <div class="d-flex justify-content-between">
-                                                <span>Total Interest Paid:</span>
-                                                <strong>$<span id="totalInterest">0</span></strong>
+                                                <span>Total Interest Paid:</span><strong>$<span id="totalInterest">0</span></strong>
                                             </div>
                                             <div class="d-flex justify-content-between">
-                                                <span>Total Cost of Loan:</span>
-                                                <strong>$<span id="totalCost">0</span></strong>
+                                                <span>Total Cost of Loan:</span> <strong>$<span id="totalCost">0</span></strong>
                                             </div>
                                         </div>
                                     </div>
@@ -242,14 +196,10 @@ description: "Use our free online Mortgage Calculator to quickly estimate your m
                                 <h4 class="text-primary mb-4"><i class="fas fa-chart-pie me-2"></i>Payment Breakdown</h4>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="chart-container">
-                                            <canvas id="paymentChart" height="300"></canvas>
-                                        </div>
+                                        <div class="chart-container"> <canvas id="paymentChart" height="300"></canvas></div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="chart-container">
-                                            <canvas id="balanceChart" height="300"></canvas>
-                                        </div>
+                                        <div class="chart-container"><canvas id="balanceChart" height="300"></canvas> </div>
                                     </div>
                                 </div>
                             </div>
@@ -325,8 +275,6 @@ description: "Use our free online Mortgage Calculator to quickly estimate your m
                 </div>
             </div>
         </div>
-    </div>
-
 <!-- Article Content -->
 <div class="article-container">
       <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
@@ -341,7 +289,7 @@ description: "Use our free online Mortgage Calculator to quickly estimate your m
           <i class="fas fa-calendar me-1"></i>Last Updated: 28-06-2025
         </div>
       </div>
-<img src="/assets/images/morgage-loan-usa.jpg" alt="USA Mortgage Loan Process and Calculator"  title="Estimate Your Monthly Mortgage Payment in the USA"  class="img-fluid rounded shadow mb-4" loading="lazy">
+<img src="/assets/images/morgage-loan-usa.jpg" alt="USA Mortgage Loan Process and Calculator"  title="Estimate Your Monthly Mortgage Payment in the USA"  class="img-fluid rounded shadow-sm mb-4" loading="lazy">
 <!-- Section -->
 <section class="mb-5">
  <h3>USA Mortgage Calculator – Accurately Estimate Your Monthly Home Loan Payments</h3>
