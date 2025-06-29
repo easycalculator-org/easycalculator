@@ -208,6 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const doc = new jsPDF();
 
         // Add title
+
         doc.setFontSize(18);
         doc.text('Loan Calculator Results - EasyCalculator.org', 105, 15, { align: 'center' });
 
