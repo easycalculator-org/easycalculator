@@ -219,12 +219,12 @@ description: "Use our free online Mortgage Calculator to quickly estimate your m
                                                 <span>HOA Fees:</span>
                                                 <strong>$<span id="hoaFeesResult">0</span></strong>
                                             </div>
-                                            <hr>
+                                            <hr class="border border-light-subtle">
                                             <div class="d-flex justify-content-between fs-5 fw-bold text-primary">
                                                 <span>Total Monthly Payment:</span>
                                                 <span>$<span id="totalMonthly">0</span></span>
                                             </div>
-                                            <hr>
+                                            <hr class="border border-light-subtle">
                                             <div class="d-flex justify-content-between">
                                                 <span>Total Interest Paid:</span>
                                                 <strong>$<span id="totalInterest">0</span></strong>
@@ -341,91 +341,41 @@ description: "Use our free online Mortgage Calculator to quickly estimate your m
           <i class="fas fa-calendar me-1"></i>Last Updated: 28-06-2025
         </div>
       </div>
-
+<img src="/assets/images/morgage-loan-usa.jpg" alt="USA Mortgage Loan Process and Calculator"  title="Estimate Your Monthly Mortgage Payment in the USA"  class="img-fluid rounded shadow mb-4" loading="lazy">
 <!-- Section -->
 <section class="mb-5">
  <h3>USA Mortgage Calculator – Accurately Estimate Your Monthly Home Loan Payments</h3>
  <p>If you're planning to buy a home in the United States, understanding your monthly mortgage payment is crucial. Our USA Mortgage Calculator helps you estimate your monthly costs based on factors like home price, down payment, interest rate, loan term, property tax, insurance, PMI, and HOA fees.<br> Let’s break down each component to give you a comprehensive overview of how mortgage payments are calculated.</p>
 <h3>🏡 Home Price ($) </h3>
 <p>The home price is the total cost of the property you intend to purchase. It forms the basis for calculating your down payment and loan amount. <br>Example:<br>Home Price = $50,000 </p>
-<hr>
+<hr class="border border-light-subtle">
 <h3>💰 Down Payment</h3>
 <p>The down payment is the upfront amount you pay toward the home purchase. The rest is covered by your mortgage loan.</p>
 <p> <strong>Minimum Requirements:</strong><br> FHA Loans: Minimum 3.5% down<br>Conventional Loans: Minimum 3% down</p>
-<hr>
+<hr class="border border-light-subtle">
 <h3>📆 Loan Term – 20 Years </h3>
 <p>The loan term refers to the time period over which you agree to repay your loan. In this case, a 20-year fixed-rate mortgage means the monthly payments stay the same for the entire loan duration.</p>
-<hr>
+<hr class="border border-light-subtle">
 <h3>📈 Interest Rate (%)</h3>
 <p>The interest rate is the cost of borrowing money from the lender, expressed as a percentage.<br>Current Average Rate (June 2025): 6.5% (can vary based on credit score and lender)</p>
-<hr><h3>🏛️ Annual Property Tax ($) </h3><p>Property taxes vary by location. On average, U.S. homeowners pay around 1.1% of their home's value annually. <br>Example:<br>Annual Property Tax = $3,600<br>Monthly Property Tax = $300</p>
-<hr><h3>🛡️ Home Insurance ($/year)</h3>
+<hr class="border border-light-subtle"><h3>🏛️ Annual Property Tax ($) </h3><p>Property taxes vary by location. On average, U.S. homeowners pay around 1.1% of their home's value annually. <br>Example:<br>Annual Property Tax = $3,600<br>Monthly Property Tax = $300</p>
+<hr class="border border-light-subtle"><h3>🛡️ Home Insurance ($/year)</h3>
+<p>Lenders typically require homeowners insurance to protect against damages. <br>National Average: Around $1,200/year<br>Example:<br>$1,200 / 12 months = $100/month</p>
+<hr class="border border-light-subtle"><h3>📉 PMI (Private Mortgage Insurance)</h3><p>PMI is required if your down payment is less than 20% of the home price. It protects the lender if you default on the loan. <br>
+Typical PMI Rate: Around 0.5% of the loan amount per year</p>
+<hr class="border border-light-subtle"><h3>🏘️ HOA Fees ($/month)</h3>
+<p>Homeowners Association (HOA) fees apply if your home is in a condo or planned community.<br>Common Range: $100–$500/month<br>In our example: $1/month (likely symbolic or minimal)</p>
  
-  <h2 class="fw-bold mb-3">What is the Time Value of Money (TVM)?</h2>
-   <p>The Time Value of Money is the idea that money available today is worth more than the same amount in the future due to its earning potential. This core concept underlies virtually all areas of finance.</p>
-     <div class="card bg-light border-0 mb-3">
-        <div class="card-body "><p class="mb-0">For example, ₹1,000 today can be invested to earn interest. That same ₹1,000 a year later is worth less because you missed the opportunity to invest it.</p></div>
-                </div>
-            </section>
 <div class="bg-light p-4 rounded mt-4">
-       <h4 class="text-primary"><i class="fas fa-star me-2"></i>Key Components of TVM</h4>
-        <ul class="list-group list-group-flush">
-         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Present Value (PV) </strong>- The current value of future money.</li>
-         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Time Period (n) </strong>- The number of compounding periods.</li>
-         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Future Value (FV)</strong> - The amount money grows into after interest.</li>
-         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Interest Rate (r)</strong> - The rate at which your money grows.</li>
-         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Payment (PMT) </strong> - Periodic cash flows (like SIPs, EMI, annuities).</li>
-        </ul>
+   <h4 class="text-primary"><i class="fas fa-star me-2"></i>Tips for Reducing Your Monthly Mortgage Payment</h4>
+     <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Increase your down payment </strong>- Avoid PMI and reduce the loan amount.</li>
+      <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Shop for better interest rates </strong>- Even a 0.5% drop can save thousands.</li>
+      <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Refinance later </strong> - If rates drop in future.</li>
+      <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Avoid high HOA fees</strong> - Choose communities without mandatory fees.</li>
+     </ul>
      </div>
-
-
- <div class="mt-4 p-4 bg-light rounded-3">
-      <h4 class="h5 fw-bold mb-3"><i class="bi bi-journal-bookmark-fill text-primary me-2"></i> Where:</h4>
-        <p class="mb-1"><span class="fw-bold">PV (Present Value): </span> = The value of money today</p>
-        <p class="mb-1"><span class="fw-bold">FV (Future Value):</span> = The value of money at a future date</p>
-        <p class="mb-1"><span class="fw-bold">PMT (Payment): </span> = The fixed amount paid or received in each period (e.g., EMI, SIP, pension)</p>
-        <p class="mb-1"><span class="fw-bold">r (Interest Rate):</span> =  The rate per period (e.g., 8% annually = 0.08)</p>
-        <p class="mb-1"><span class="fw-bold">n (Number of Periods): </span> = Total number of time periods (e.g., 5 years × 12 months = 60 periods)</p>
-        </div>
-</section>
-
-<h3>TVM Calculator - How It Works</h3>
-<p>A TVM calculator allows you to input any 4 of the 5 variables (PV, FV, r, n, PMT) and solve for the fifth. It saves time and minimizes errors in complex financial calculations.</p>
-
- <!-- highlight-box 1-->
- <div class="highlight-box mb-2"><h5><i class="fas fa-lightbulb text-warning me-2"></i>Example 1: Simple Future Value Calculation</h5>
- <p class="mb-3">Question: You invest ₹10,000 at 8% annual interest for 5 years. What is the future value?</p><p><code class="bg-dark text-white mx-auto p-2 mb-2">FV = 10,000 × (1 + 0.08)5 = 10,000 × 1.4693 = ₹14,693 </code></p><p>So, your investment grows to ₹14,693 in 5 years.</p>
-    </div>
-
-  <!-- highlight-box 2-->
- <div class="highlight-box mb-2"><h5><i class="fas fa-lightbulb text-warning me-2"></i>Example 2: Present Value of Future Sum</h5>
- <p class="mb-3">Question: You need ₹50,000 in 3 years. What should you invest now at 6% annual return?</p><p><code class="bg-dark text-white mx-auto p-2 mb-2">PV = 50,000 / (1 + 0.06)3 = 50,000 / 1.1910 ≈ ₹41,981</code></p><p>Invest ₹41,981 today to have ₹50,000 after 3 years.</p>
-    </div>
-
  </section>
-      <!-- FAQ Section -->
-      <section class="mb-5">
-        <h2 class="mb-4">FAQ on TVM Calculator</h2>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary">1. What is the difference between simple interest and compound interest in TVM?</div>
-            <p class="mb-0">Simple interest is calculated only on the principal amount, while compound interest is calculated on the principal plus accumulated interest over time. TVM calculations typically use compound interest to reflect real-world scenarios more accurately.</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary">2. Can a TVM calculator help with loan EMI planning?</div>
-            <p class="mb-0">Yes. A TVM calculator can calculate the present value of loan payments, estimate EMIs (if payment and interest rate are known), and show the total interest paid over time—helping you compare loan offers and manage debt efficiently.</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 3. Can I use a TVM calculator for retirement planning?</div>
-            <p class="mb-0">Absolutely. By entering your monthly savings amount, expected rate of return, and retirement duration, a TVM calculator can project how much you’ll accumulate by retirement—making it an essential tool for long-term financial planning.</p>
-          </div>
-        </div>
-      </section>
-      <!-- Did You Know? -->
  </div>
 
 
