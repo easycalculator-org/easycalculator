@@ -18,19 +18,19 @@ description: "Use our free online Mortgage Calculator to quickly estimate your m
 <div class="row justify-content-center">
         <div class="col-lg-12">
           <div class="card border-0 shadow-lg">
-            <div class="card-header bg-primary text-white py-3">
+            <div class="card-header bg-primary text-white py-1">
               <div class="d-flex align-items-center justify-content-between">
-                 <div><h1 class="mb-0"><i class="fas fa-home me-2"></i>USA Mortgage Calculator</h1><p class="mb-0">Estimate your monthly home loan EMI</p> </div>
+                 <div><h1 class="mb-0 fs-3"><i class="fas fa-home me-2"></i>USA Mortgage Calculator</h1><p class="mb-0">Estimate your monthly home loan EMI</p> </div>
                     <img src="/assets/images/flag_of_the_united_states.png" alt="USA Flag" style="height: 40px;">
                  </div>
                     </div>
                     <div class="card-body p-4">
                         <form id="mortgageForm" novalidate>
-                            <div class="row g-4">
+                            <div class="row">
                                 <!-- Left Column -->
                                 <div class="col-md-6">
                                     <div class="bg-white p-3 rounded border">
-                                        <h5 class="text-primary mb-3"><i class="fas fa-dollar-sign me-2"></i>Home Details</h5>
+                                        <h5 class="text-primary mb-2"><i class="fas fa-dollar-sign me-2"></i>Home Details</h5>
                                         <div class="mb-3">
                                             <label for="homePrice" class="form-label">Home Price ($)</label>
                                             <div class="input-group">
@@ -38,7 +38,7 @@ description: "Use our free online Mortgage Calculator to quickly estimate your m
                                             </div>
                                             <div class="error-message" id="homePriceError">Please enter a valid home price ($50,000 minimum)</div>
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="mb-2">
                                             <label for="downPayment" class="form-label">Down Payment</label>
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="fas fa-hand-holding-usd"></i></span>
@@ -63,7 +63,7 @@ description: "Use our free online Mortgage Calculator to quickly estimate your m
                                                 <small>30 years</small>
                                             </div>
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="mb-1">
                                             <label for="interestRate" class="form-label">Interest Rate (%)</label>
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="fas fa-percent"></i></span>
@@ -77,7 +77,7 @@ description: "Use our free online Mortgage Calculator to quickly estimate your m
                                 <!-- Right Column -->
                                 <div class="col-md-6">
                                     <div class="bg-white p-3 rounded border">
-                                        <h5 class="text-primary mb-3"><i class="fas fa-calculator me-2"></i>Additional Costs</h5>
+                                        <h5 class="text-primary mb-2"><i class="fas fa-calculator me-2"></i>Additional Costs</h5>
                                         <div class="mb-3">
                                             <label for="propertyTax" class="form-label">Annual Property Tax ($)</label>
                                             <div class="input-group">
@@ -87,7 +87,7 @@ description: "Use our free online Mortgage Calculator to quickly estimate your m
                                             <div class="error-message" id="propertyTaxError">Must be 0 or positive value</div>
                                             <div class="form-text">US average: 1.1% of home value</div>
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="mb-2">
                                             <label for="homeInsurance" class="form-label">Home Insurance ($/year)</label>
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="fas fa-shield-alt"></i></span>
@@ -96,7 +96,7 @@ description: "Use our free online Mortgage Calculator to quickly estimate your m
                                             <div class="error-message" id="homeInsuranceError">Must be 0 or positive value</div>
                                             <div class="form-text">US average: $1,200/year</div>
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="mb-2">
                                             <label for="pmi" class="form-label">PMI (% of loan)</label>
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="fas fa-file-invoice-dollar"></i></span>
@@ -105,7 +105,7 @@ description: "Use our free online Mortgage Calculator to quickly estimate your m
                                             <div class="error-message" id="pmiError">Must be between 0% and 2%</div>
                                             <div class="form-text">Required if down payment < 20%</div>
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="mb-0">
                                             <label for="hoaFees" class="form-label">HOA Fees ($/month)</label>
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="fas fa-swimming-pool"></i></span>
