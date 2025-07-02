@@ -123,3 +123,5 @@ resetBtn.addEventListener('click', resetTimer);
 lapBtn.addEventListener('click', recordLap);
 exportBtn.addEventListener('click', exportLaps);
 fullscreenBtn.addEventListener('click', toggleFullscreen);
+
+
