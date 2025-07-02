@@ -1,89 +1,125 @@
-let stopwatchInterval;
+// Stopwatch functionality
+let startTime;
 let elapsedTime = 0;
-let running = false;
+let timerInterval;
 let lapCount = 0;
+let isRunning = false;
 
-function toggleStartPause() {
-    if (running) {
-        stopStopwatch();
-        document.getElementById("startPauseBtn").innerText = "Start";
-    } else {
-        startStopwatch();
-        document.getElementById("startPauseBtn").innerText = "Pause";
-    }
-}
-
-function startStopwatch() {
-    if (!running) {
-        running = true;
-        const startTime = Date.now() - elapsedTime;
-        stopwatchInterval = setInterval(() => {
-            elapsedTime = Date.now() - startTime;
-            updateStopwatch();
-        }, 10);
-    }
-}
-
-function stopStopwatch() {
-    running = false;
-    clearInterval(stopwatchInterval);
-}
-
-function resetStopwatch() {
-    running = false;
-    clearInterval(stopwatchInterval);
-    elapsedTime = 0;
-    lapCount = 0;
-    updateStopwatch();
-    document.getElementById("splitTable").innerHTML = "<tr><th>Lap</th><th>Time</th></tr>";
-    document.getElementById("startPauseBtn").innerText = "Start";
-}
-
-function splitTime() {
-    if (running) {
-        lapCount++;
-        const formattedTime = formatTime(elapsedTime);
-        
-        let table = document.getElementById("splitTable");
-        let row = table.insertRow();
-        row.insertCell(0).innerText = lapCount;
-        row.insertCell(1).innerText = formattedTime;
-    }
-}
-
-function updateStopwatch() {
-    document.getElementById('hours').innerText = formatTimePart(Math.floor(elapsedTime / 3600000));
-    document.getElementById('minutes').innerText = formatTimePart(Math.floor((elapsedTime % 3600000) / 60000));
-    document.getElementById('seconds').innerText = formatTimePart(Math.floor((elapsedTime % 60000) / 1000));
-    document.getElementById('centiseconds').innerText = formatTimePart(Math.floor((elapsedTime % 1000) / 10));
-}
-
-function formatTimePart(value) {
-    return String(value).padStart(2, '0');
-}
+const display = document.getElementById('display');
+const startBtn = document.getElementById('startBtn');
+const lapBtn = document.getElementById('lapBtn');
+const stopBtn = document.getElementById('stopBtn');
+const resetBtn = document.getElementById('resetBtn');
+const exportBtn = document.getElementById('exportBtn');
+const lapsTable = document.getElementById('lapsTable');
+const fullscreenBtn = document.getElementById('fullscreenBtn');
 
 function formatTime(ms) {
-    const h = formatTimePart(Math.floor(ms / 3600000));
-    const m = formatTimePart(Math.floor((ms % 3600000) / 60000));
-    const s = formatTimePart(Math.floor((ms % 60000) / 1000));
-    const cs = formatTimePart(Math.floor((ms % 1000) / 10));
-    return `${h}:${m}:${s}.${cs}`;
+    let date = new Date(ms);
+    let hours = date.getUTCHours().toString().padStart(2, '0');
+    let minutes = date.getUTCMinutes().toString().padStart(2, '0');
+    let seconds = date.getUTCSeconds().toString().padStart(2, '0');
+    let milliseconds = date.getUTCMilliseconds().toString().padStart(3, '0');
+
+    return `${hours}:${minutes}:${seconds}.${milliseconds}`;
 }
 
-function exportCSV() {
-    let csvContent = "Lap,Time\n";
-    const rows = document.querySelectorAll("#splitTable tr");
-    rows.forEach((row, index) => {
-        if (index > 0) {
-            let cols = row.querySelectorAll("td");
-            if (cols.length > 0) {
-                csvContent += cols[0].innerText + "," + cols[1].innerText + "\n";
-            }
-        }
-    });
-    let blob = new Blob([csvContent], { type: "text/csv" });
-    let a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "stopwatch_times.csv";
-    a.click();
+function updateDisplay() {
+    display.textContent = formatTime(elapsedTime);
 }
+// Start Timer
+function startTimer() {
+    if (!isRunning) {
+        startTime = Date.now() - elapsedTime;
+        timerInterval = setInterval(function () {
+            elapsedTime = Date.now() - startTime;
+            updateDisplay();
+        }, 10);
+        isRunning = true;
+
+        startBtn.disabled = true;
+        lapBtn.disabled = false;
+        stopBtn.disabled = false;
+        resetBtn.disabled = true;
+        exportBtn.disabled = true;
+    }
+}
+//stop timer
+function stopTimer() {
+    if (isRunning) {
+        clearInterval(timerInterval);
+        isRunning = false;
+
+        startBtn.disabled = false;
+        lapBtn.disabled = true;
+        stopBtn.disabled = true;
+        resetBtn.disabled = false;
+        exportBtn.disabled = false;
+    }
+}
+// reset timer
+function resetTimer() {
+    stopTimer();
+    elapsedTime = 0;
+    lapCount = 0;
+    updateDisplay();
+    lapsTable.innerHTML = '';
+
+    exportBtn.disabled = true;
+}
+
+function recordLap() {
+    if (isRunning) {
+        lapCount++;
+        const row = document.createElement('tr');
+        row.innerHTML = `
+             <td>${lapCount}</td>
+             <td>${formatTime(elapsedTime)}</td>
+             <td>${formatTime(elapsedTime)}</td>
+         `;
+        lapsTable.prepend(row);
+    }
+}
+//export button
+function exportLaps() {
+    if (lapCount === 0) return;
+
+    let csvContent = "Lap Number,Lap Time,Total Time\n";
+    const rows = lapsTable.querySelectorAll('tr');
+
+    rows.forEach(row => {
+        const cells = row.querySelectorAll('td');
+        csvContent += `${cells[0].textContent},${cells[1].textContent},${cells[2].textContent}\n`;
+    });
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', `stopwatch_laps_${new Date().toISOString().slice(0, 10)}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+//fullscreen
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => {
+            console.error(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+        fullscreenBtn.innerHTML = '<i class="fas fa-compress"></i>';
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+            fullscreenBtn.innerHTML = '<i class="fa-solid fa-expand"></i>';
+        }
+    }
+}
+// Event listeners
+startBtn.addEventListener('click', startTimer);
+stopBtn.addEventListener('click', stopTimer);
+resetBtn.addEventListener('click', resetTimer);
+lapBtn.addEventListener('click', recordLap);
+exportBtn.addEventListener('click', exportLaps);
+fullscreenBtn.addEventListener('click', toggleFullscreen);
