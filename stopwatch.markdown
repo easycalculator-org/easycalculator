@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Online Stopwatch | Digital Stopwatch - Easy to Use
+title: Stopwatch Online | Lap Timer | Easy, Accurate & Free
 permalink: /stopwatch
 description: "Use our online stopwatch, Accurate and user-friendly. Track lap times with export in CSV, Digital stopwatch, and enjoy optional split intervals for your timing needs."
 ---
 
 <div class="container d-flex flex-column justify-content-center align-items-center min-vh-20"><h1>Stopwatch</h1>
-<div class="card bg-black bg-opacity-50 p-4 rounded-4 shadow-lg" style="width: 100%; max-width: 600px;">
+<div class="card bg-black bg-opacity-50 p-4 rounded-4 shadow-lg" style="width: 100%; max-width: 650px;">
     <div class="d-flex justify-content-end mb-2"><button class="btn btn-sm btn-outline-light" id="fullscreenBtn" title="Toggle Fullscreen"><i class="fa-solid fa-expand"></i></button></div>
       <div class="card-body text-center">
         <h2 class="display-1 mb-4 font-monospace" id="display">00:00:00.000</h2>
