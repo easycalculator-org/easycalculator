@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const speedValue = document.getElementById('speed-value');
     const speedUnit = document.getElementById('speed-unit');
     const maxSpeedElement = document.getElementById('max-speed');
-    const maxSpeedUnitElement = document.querySelector('.max-speed-unit');
+    const maxSpeedUnitElement = document.getElementById('max-speed-unit');
     const unitButtons = document.querySelectorAll('.btn-unit');
     const gpsStatus = document.getElementById('gps-status');
 
@@ -11,14 +11,17 @@ document.addEventListener('DOMContentLoaded', function () {
     let maxSpeed = 0;
     let currentUnit = 'kmh';
     let watchId = null;
-    let isRunning = false;
+    let isRunning = true; // Start automatically
     let lastPosition = null;
     let lastTimestamp = null;
 
+    // Show the stop button since we're starting automatically
+    startBtn.style.display = 'block';
+
     const units = {
-        kmh: { label: 'km/h', conversion: 1 },
-        mph: { label: 'mph', conversion: 0.621371 },
-        ms: { label: 'm/s', conversion: 0.277778 }
+        kmh: { label: 'km/h', max: 200, conversion: 1 },
+        mph: { label: 'mph', max: 120, conversion: 0.621371 },
+        ms: { label: 'm/s', max: 60, conversion: 0.277778 }
     };
 
     unitButtons.forEach(button => {
@@ -26,14 +29,18 @@ document.addEventListener('DOMContentLoaded', function () {
             unitButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
             currentUnit = this.dataset.unit;
+
             speedUnit.textContent = units[currentUnit].label;
             maxSpeedUnitElement.textContent = units[currentUnit].label;
 
             if (maxSpeed > 0) {
-                maxSpeedElement.textContent = convertSpeed(maxSpeed, 'kmh', currentUnit).toFixed(1);
+                const convertedMaxSpeed = convertSpeed(maxSpeed, 'kmh', currentUnit);
+                maxSpeedElement.textContent = convertedMaxSpeed.toFixed(1);
             }
+
             if (currentSpeed > 0) {
-                speedValue.textContent = convertSpeed(currentSpeed, 'kmh', currentUnit).toFixed(1);
+                const convertedSpeed = convertSpeed(currentSpeed, 'kmh', currentUnit);
+                speedValue.textContent = convertedSpeed.toFixed(1);
             }
         });
     });
@@ -41,24 +48,28 @@ document.addEventListener('DOMContentLoaded', function () {
     startBtn.addEventListener('click', function () {
         if (isRunning) {
             stopGPSTracking();
-            this.textContent = 'Start GPS Speed Test';
-            gpsStatus.textContent = 'GPS Not Active';
+            this.innerHTML = '<i class="fas fa-location-arrow"></i> Start GPS Speed Test';
+            gpsStatus.innerHTML = '<i class="fas fa-circle"></i> GPS Not Active';
             gpsStatus.className = 'gps-status gps-inactive';
+            isRunning = false;
         } else {
             startGPSTracking();
-            this.textContent = 'Stop GPS Tracking';
+            this.innerHTML = '<i class="fas fa-stop"></i> Stop GPS Tracking';
+            isRunning = true;
         }
-        isRunning = !isRunning;
     });
+
+    // Start GPS automatically when page loads
+    startGPSTracking();
 
     function startGPSTracking() {
         if (navigator.geolocation) {
-            gpsStatus.textContent = 'Acquiring GPS Signal...';
+            gpsStatus.innerHTML = '<i class="fas fa-sync-alt fa-spin"></i> Acquiring GPS Signal...';
             gpsStatus.className = 'gps-status gps-active';
 
             watchId = navigator.geolocation.watchPosition(
                 position => {
-                    gpsStatus.textContent = 'GPS Active';
+                    gpsStatus.innerHTML = '<i class="fas fa-circle pulse"></i> GPS Active';
                     gpsStatus.className = 'gps-status gps-active';
 
                     const newPosition = position.coords;
@@ -82,7 +93,8 @@ document.addEventListener('DOMContentLoaded', function () {
                                 maxSpeedElement.textContent = convertSpeed(maxSpeed, 'kmh', currentUnit).toFixed(1);
                             }
 
-                            speedValue.textContent = convertSpeed(currentSpeed, 'kmh', currentUnit).toFixed(1);
+                            const displaySpeed = convertSpeed(currentSpeed, 'kmh', currentUnit);
+                            speedValue.textContent = displaySpeed.toFixed(1);
                         }
                     }
 
@@ -93,21 +105,26 @@ document.addEventListener('DOMContentLoaded', function () {
                     let errorMessage;
                     switch (error.code) {
                         case error.PERMISSION_DENIED:
-                            errorMessage = "Location permission denied";
+                            errorMessage = "<i class='fas fa-ban'></i> Location permission denied";
                             break;
                         case error.POSITION_UNAVAILABLE:
-                            errorMessage = "Location unavailable";
+                            errorMessage = "<i class='fas fa-exclamation-triangle'></i> Location unavailable";
                             break;
                         case error.TIMEOUT:
-                            errorMessage = "GPS signal timeout";
+                            errorMessage = "<i class='fas fa-clock'></i> GPS signal timeout";
                             break;
                         default:
-                            errorMessage = "GPS error";
+                            errorMessage = "<i class='fas fa-times'></i> GPS error";
                     }
 
-                    gpsStatus.textContent = errorMessage;
+                    gpsStatus.innerHTML = errorMessage;
                     gpsStatus.className = 'gps-status gps-inactive';
-                    speedValue.textContent = '0';
+                    resetSpeedDisplay();
+
+                    // Show start button if GPS fails
+                    startBtn.style.display = 'block';
+                    startBtn.innerHTML = '<i class="fas fa-location-arrow"></i> Start GPS Speed Test';
+                    isRunning = false;
                 },
                 {
                     enableHighAccuracy: true,
@@ -116,20 +133,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             );
         } else {
-            gpsStatus.textContent = "GPS not supported";
+            gpsStatus.innerHTML = "<i class='fas fa-times-circle'></i> GPS not supported";
             gpsStatus.className = 'gps-status gps-inactive';
+
+            // Hide start button if GPS not supported
+            startBtn.style.display = 'none';
         }
     }
-
     function stopGPSTracking() {
         if (watchId !== null) {
             navigator.geolocation.clearWatch(watchId);
             watchId = null;
         }
+        resetSpeedDisplay();
+    }
+    function resetSpeedDisplay() {
         currentSpeed = 0;
         speedValue.textContent = '0';
     }
-
     function calculateDistance(lat1, lon1, lat2, lon2) {
         const R = 6371e3;
         const φ1 = lat1 * Math.PI / 180;
@@ -144,7 +165,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         return R * c;
     }
-
     function convertSpeed(speed, fromUnit, toUnit) {
         let kmhSpeed;
         if (fromUnit === 'kmh') kmhSpeed = speed;
