@@ -135,7 +135,16 @@ description: "Use EasyCalculator.org’s free online calculators to solve financ
 
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/calculate-distance-from-latitude-longitude"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-pointer fa-2xl" style="color: #63E6BE;"></i><h5>Lat/long Distance Calculator</h5></div> </a></div>
  </div>
- <!-- conversion-tool end-->
+ <!-- geolocation-tool end-->
+ <hr>
+<h2>Speed Test </h2>
+<div class="row g-1 p-3 ">
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/train-speed-test"><div class="calculator-box text-center"><i class="fa-solid fa-network-wired fa-2xl" style="color: #B197FC;"></i><h5>Train Speed Test</h5></div></a> </div>    
+ <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/utm-zone-map"><div class="calculator-box text-center"><i class="fa-solid fa-location-dot fa-2xl" style="color: #63E6BE;"></i><h5>Speed Converter</h5></div> </a></div>
+ <div class="col-md-3  p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fas fa-location-dot fa-2xl"></i><h5>Bus Speed Test</h5></div></a></div>
+
+ </div>
+ <!-- geolocation-tool end-->
 
 <h3>Others Calculator</h3>
 <div class="row text-center g-3">
