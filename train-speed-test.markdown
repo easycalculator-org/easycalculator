@@ -12,8 +12,6 @@ description: "Instantly test and monitor the real-time speed of your train using
             --dark-color: #2c3e50;
             --light-color: #ecf0f1;
         }
-        
-     
         .speed-container {
             max-width: 500px;
             margin: 20px auto;
@@ -24,7 +22,6 @@ description: "Instantly test and monitor the real-time speed of your train using
             position: relative;
             overflow: hidden;
         }
-        
         .speed-container::before {
             content: "";
             position: absolute;
@@ -34,18 +31,15 @@ description: "Instantly test and monitor the real-time speed of your train using
             height: 5px;
             background: linear-gradient(90deg, var(--primary-color), var(--success-color));
         }
-        
         .header {
             text-align: center;
             margin-bottom: 25px;
         }
-        
         .header h4 {
             color: var(--dark-color);
             font-weight: 600;
             margin-bottom: 5px;
         }
-        
         .header p {
             color: #7f8c8d;
             font-size: 0.9rem;
@@ -79,7 +73,7 @@ description: "Instantly test and monitor the real-time speed of your train using
             font-size: 1.8rem;
             color: var(--primary-color);
             vertical-align: top;
-            margin-left: 5px;
+            margin-left: 0px;
             font-weight: 600;
             position: absolute;
             right: 0;
@@ -159,35 +153,29 @@ description: "Instantly test and monitor the real-time speed of your train using
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
         }
-        
         .btn-start:active {
             transform: translateY(0);
         }
-        
         .max-speed {
             text-align: center;
             margin-top: 25px;
             font-size: 1rem;
             color: #7f8c8d;
         }
-        
         .max-speed-value {
             font-weight: bold;
             color: var(--dark-color);
             font-size: 1.1rem;
         }
-        
         .train-icon {
             margin-right: 10px;
             color: var(--primary-color);
         }
-        
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
-        
         .pulse {
             animation: pulse 1.5s infinite;
         }
@@ -201,13 +189,13 @@ description: "Instantly test and monitor the real-time speed of your train using
     </style>
 <div class="speed-container">
 <div class="header">
-            <h4><i class="fas fa-train train-icon"></i>Train Speed Test</h4>
+            <h1><i class="fas fa-train train-icon"></i>Train Speed Test</h1>
             <p>Real-time speed measurement using GPS</p>
         </div>
         <div class="digital-display">
-            <div class="speed-value-container">
+            <div class="speed-value-container d-flex align-items-start gap-4 position-relative ">
                 <span class="speed-value" id="speed-value">0</span>
-                <span class="speed-unit" id="speed-unit">km/h</span>
+                <span class="speed-unit gap-4" id="speed-unit">km/h</span>
             </div>
         </div>
         <div class="unit-selector">
@@ -226,5 +214,29 @@ description: "Instantly test and monitor the real-time speed of your train using
         </div>
     </div>
 
+<!-- Article Content -->
+ <div class="article-container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <div class="d-flex align-items-center">
+          <div class="bg-light p-2 rounded-circle d-flex align-items-center justify-content-center me-3"> <i
+              class="fas fa-user text-primary"></i>
+          </div>
+          <div>
+            <h5 class="mb-0">Created by :- Narendra</h5>
+          </div>
+        </div>
+        <div class="text-muted">
+          <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}
+        </div>
+      </div>
+
+<!-- Section -->
+<section class="mb-5">
+<h2>Train Speed Test – Check Your Train's Real-Time Speed Online</h2>
+<p>Have you ever wondered how fast your train is going? Whether you're a railway enthusiast or a curious traveler, a Train Speed Test tool lets you check the live speed of your train using your phone’s GPS – no additional apps or sensors needed.</p>
+<h2 class="card-title text-primary">🧭 What is a Train Speed Test?</h2>
+<p class="card-text">A Train Speed Test measures the real-time speed of a moving train using GPS data from your smartphone or GPS device. It calculates your train's speed in km/h or mph by tracking how far you've traveled over time.</p>
+ </section>
+     
 <!-- Bootstrap JS Bundle with Popper -->
  <script src="{{ '/assets/js/train-speed-test.js' | relative_url }}"></script>
