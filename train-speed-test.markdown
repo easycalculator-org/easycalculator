@@ -4,6 +4,10 @@ title: Train Speed Test | Check Real-Time Train Speed Online
 permalink: /train-speed-test
 description: "Instantly test and monitor the real-time speed of your train using GPS technology. Perfect for train travelers, rail enthusiasts, and data lovers. Try our Train Speed Test online — fast, free, and accurate!"
 ---
+<link rel="manifest" href="/manifest-train-speed.json">
+<meta name="theme-color" content="#007bff">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <style>
         :root {
             --primary-color: #3498db;
@@ -44,19 +48,16 @@ description: "Instantly test and monitor the real-time speed of your train using
             color: #7f8c8d;
             font-size: 0.9rem;
         }
-        
         .digital-display {
             text-align: center;
             margin: 30px 0;
             position: relative;
         }
-        
         .speed-value-container {
             display: inline-block;
             position: relative;
             padding: 0 20px;
         }
-        
         .speed-value {
             font-size: 5rem;
             font-weight: 700;
@@ -68,7 +69,6 @@ description: "Instantly test and monitor the real-time speed of your train using
             display: inline-block;
             min-width: 180px;
         }
-        
         .speed-unit {
             font-size: 1.8rem;
             color: var(--primary-color);
@@ -79,7 +79,6 @@ description: "Instantly test and monitor the real-time speed of your train using
             right: 0;
             top: 15px;
         }
-        
         .speed-value::after {
             content: "";
             position: absolute;
@@ -90,13 +89,11 @@ description: "Instantly test and monitor the real-time speed of your train using
             background: linear-gradient(90deg, var(--primary-color), var(--success-color));
             border-radius: 3px;
         }
-        
         .unit-selector {
             display: flex;
             justify-content: center;
             margin-bottom: 25px;
         }
-        
         .btn-unit {
             margin: 0 5px;
             border-radius: 20px;
@@ -107,7 +104,6 @@ description: "Instantly test and monitor the real-time speed of your train using
             color: var(--dark-color);
             transition: all 0.3s;
         }
-        
         .btn-unit.active {
             background: var(--primary-color);
             color: white;
@@ -115,7 +111,6 @@ description: "Instantly test and monitor the real-time speed of your train using
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
         }
-        
         .gps-status {
             text-align: center;
             margin: 20px 0;
@@ -124,17 +119,14 @@ description: "Instantly test and monitor the real-time speed of your train using
             border-radius: 5px;
             background-color: rgba(236, 240, 241, 0.5);
         }
-        
         .gps-active {
             color: var(--success-color);
             background-color: rgba(46, 204, 113, 0.1);
         }
-        
         .gps-inactive {
             color: var(--danger-color);
             background-color: rgba(231, 76, 60, 0.1);
         }
-        
         .btn-start {
             display: block;
             width: 100%;
@@ -148,7 +140,6 @@ description: "Instantly test and monitor the real-time speed of your train using
             transition: all 0.3s;
             margin-top: 20px;
         }
-        
         .btn-start:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
@@ -179,7 +170,6 @@ description: "Instantly test and monitor the real-time speed of your train using
         .pulse {
             animation: pulse 1.5s infinite;
         }
-        
         @font-face {
             font-family: 'Segment7Standard';
             src: url('https://cdn.rawgit.com/raphaelbastide/Segment7Standard/master/Segment7Standard.otf') format('opentype');
@@ -187,6 +177,7 @@ description: "Instantly test and monitor the real-time speed of your train using
             font-style: italic;
         }
     </style>
+
 <div class="speed-container">
 <div class="header">
             <h1><i class="fas fa-train train-icon"></i>Train Speed Test</h1>
@@ -237,6 +228,29 @@ description: "Instantly test and monitor the real-time speed of your train using
 <h2 class="card-title text-primary">🧭 What is a Train Speed Test?</h2>
 <p class="card-text">A Train Speed Test measures the real-time speed of a moving train using GPS data from your smartphone or GPS device. It calculates your train's speed in km/h or mph by tracking how far you've traveled over time.</p>
  </section>
+
+ <!-- App Install script -->
+ <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/train-speed-test-sw.js', { scope: '/train-speed-test/' });
+  }
+  let deferredPrompt;
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    document.getElementById('install-btn').style.display = 'inline-block';
+  });
+  document.getElementById('install-btn').addEventListener('click', () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then(() => {
+        deferredPrompt = null;
+      });
+    }
+  });
+</script>
+
+<button id="install-btn" style="display:none; padding: 10px 20px; font-size: 1rem;">📲 Install Train Speed Test App</button>
      
 <!-- Bootstrap JS Bundle with Popper -->
  <script src="{{ '/assets/js/train-speed-test.js' | relative_url }}"></script>
