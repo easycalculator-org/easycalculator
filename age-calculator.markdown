@@ -63,9 +63,7 @@ image: "/assets/images/age-calc-open-graph.png"
           <div class="bg-light p-2 rounded-circle d-flex align-items-center justify-content-center me-3"> <i
               class="fas fa-user text-primary"></i>
           </div>
-          <div>
-            <h5 class="mb-0">Created by :- Narendra</h5>
-          </div>
+          <div><h5 class="mb-0">Created by :- Narendra</h5></div>
         </div>
         <div class="text-muted">
           <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}
