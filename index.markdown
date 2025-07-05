@@ -58,11 +58,11 @@ description: "Use EasyCalculator.org’s free online calculators to solve financ
 <hr>
 <!-- Age Calculator-->
 <div class="row p-3 ">
- <div class="col-md-3 p-3 "><a class="text-decoration-none" href="/age-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-person fa-2xl" style="color: #B197FC;"></i><h5>Age Calculator</h5></div></a></div>
+ <div class="col-md-3 p-3 "><a class="text-decoration-none" href="/age-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-person fa-xl" style="color: #B197FC;"></i><h5>Age Calculator</h5></div></a></div>
 <!-- speed -->
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/kmp-to-mph"><div class="calculator-box text-center"><i class="fa-solid fa-gauge-high fa-2xl" style="color: #63E6BE;"></i><h5>Speed Converter</h5> </div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/kmp-to-mph"><div class="calculator-box text-center"><i class="fa-solid fa-gauge-high fa-xl" style="color: #63E6BE;"></i><h5>Speed Converter</h5> </div></a></div>
 <!-- length -->
-<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/length-converter"><div class="calculator-box text-center"><i class="fa-solid fa-ruler-horizontal fa-2xl" style="color: #ea1f33;"></i><h5>Length</h5></div></a></div>
+<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/length-converter"><div class="calculator-box text-center"><i class="fa-solid fa-ruler-horizontal fa-xl" style="color: #ea1f33;"></i><h5>Length</h5></div></a></div>
 <!-- telecom -->
 <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/dbm-to-watt"> <div class="calculator-box text-center"><i class="fa-solid fa-tower-broadcast fa-xl" style="color: #74C0FC;"></i><h5>dBm to Watts</h5></div></a></div>
 <!-- temperature-->
@@ -75,8 +75,8 @@ description: "Use EasyCalculator.org’s free online calculators to solve financ
 <!-- world clock map -->
 <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/world-clock-map"><div class="calculator-box text-center"><i class="fa-solid fa-map-location fa-xl" style="color: #B197FC;"></i><h5>World Clock Map</h5></div></a></div>
 <!-- JSON validation -->
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/json-validator"><div class="calculator-box text-center"><i class="fas fa-code fa-2xl"></i><h5>JSON Validator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/triangle-area-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-play fa-2xl" style="color: #63E6BE;"></i><h5>Triangle Area Calculator</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/json-validator"><div class="calculator-box text-center"><i class="fas fa-code fa-xl"></i><h5>JSON Validator</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/triangle-area-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-play fa-xl" style="color: #63E6BE;"></i><h5>Triangle Area Calculator</h5></div></a></div>
 </div>
 
 
@@ -114,34 +114,34 @@ description: "Use EasyCalculator.org’s free online calculators to solve financ
 <hr>
 <h2>Math Calculator</h2>
 <div class="row p-3 ">
-<div class="col-md-3  p-3  "><a class="text-decoration-none" href="#"> <div class="calculator-box text-center"><i class="fa-solid fa-play fa-2xl" style="color:rgb(54, 82, 243);"></i><h5>Algebra Calculator</h5></div></a></div>
- <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/lcm-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-square-plus fa-2xl"></i><h5>LCM | HCF Calculator</h5></div></a></div>
- <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/percentage-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-percent fa-2xl" style="color: #63E6BE;"></i><h5>Percentage Calculator</h5></div></a></div>
- <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-plus-minus fa-2xl" style="color: #B197FC;"></i><h5>Interest Calculator</h5></div></a></div></div>
+<div class="col-md-3  p-3  "><a class="text-decoration-none" href="#"> <div class="calculator-box text-center"><i class="fa-solid fa-play fa-xl" style="color:rgb(54, 82, 243);"></i><h5>Algebra Calculator</h5></div></a></div>
+ <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/lcm-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-square-plus fa-xl"></i><h5>LCM | HCF Calculator</h5></div></a></div>
+ <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/percentage-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-percent fa-xl" style="color: #63E6BE;"></i><h5>Percentage Calculator</h5></div></a></div>
+ <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-plus-minus fa-xl" style="color: #B197FC;"></i><h5>Interest Calculator</h5></div></a></div></div>
 
 <hr>
 <h2>Geolocation Tool</h2>
 <div class="row g-1 p-3 ">
 
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/what-is-my-ip"><div class="calculator-box text-center"><i class="fa-solid fa-network-wired fa-2xl" style="color: #B197FC;"></i><h5>My IP Address</h5></div></a> </div>    
- <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/utm-zone-map"><div class="calculator-box text-center"><i class="fa-solid fa-location-dot fa-2xl" style="color: #63E6BE;"></i><h5>UTM Zone Map</h5></div> </a></div>
- <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/military-grid-reference-system-converter"><div class="calculator-box text-center"><i class="fas fa-location-dot fa-2xl"></i><h5>MGRS Converter</h5></div></a></div>
- <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/current-elevation"><div class="calculator-box text-center"><i class="fas fa-mountain fa-2xl"></i><h5>Current Elevation</h5></div></a></div>
- <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/latitude-longitude-converter"><div class="calculator-box text-center"><i class="fas fa-compass-drafting fa-2xl"></i> <h5>Lat/long Converter</h5></div></a> </div>
-  <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/latitude-longitude-to-address"><div class="calculator-box text-center"><i class="fas fa-map-pin fa-2xl"></i><h5>Lat/long to Address</h5></div></a> </div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/what-is-my-ip"><div class="calculator-box text-center"><i class="fa-solid fa-network-wired fa-xl" style="color: #B197FC;"></i><h5>My IP Address</h5></div></a> </div>    
+ <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/utm-zone-map"><div class="calculator-box text-center"><i class="fa-solid fa-location-dot fa-xl" style="color: #63E6BE;"></i><h5>UTM Zone Map</h5></div> </a></div>
+ <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/military-grid-reference-system-converter"><div class="calculator-box text-center"><i class="fas fa-location-dot fa-xl"></i><h5>MGRS Converter</h5></div></a></div>
+ <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/current-elevation"><div class="calculator-box text-center"><i class="fas fa-mountain fa-xl"></i><h5>Current Elevation</h5></div></a></div>
+ <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/latitude-longitude-converter"><div class="calculator-box text-center"><i class="fas fa-compass-drafting fa-xl"></i> <h5>Lat/long Converter</h5></div></a> </div>
+  <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/latitude-longitude-to-address"><div class="calculator-box text-center"><i class="fas fa-map-pin fa-xl"></i><h5>Lat/long to Address</h5></div></a> </div>
 
-<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/what-is-my-address"><div class="calculator-box text-center"><i class="fas fa-location-arrow fa-2xl"></i><h5>What is My Address</h5></div> </a></div>
-<div class="col-md-3 g-1 p-3  "><a class="text-decoration-none" href="/haversine-distance"><div class="calculator-box text-center"><i class="fa-solid fa-ruler fa-2xl" style="color:rgb(55, 73, 241);"></i><h5>Haversine Distance</h5></div> </a></div>
+<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/what-is-my-address"><div class="calculator-box text-center"><i class="fas fa-location-arrow fa-xl"></i><h5>What is My Address</h5></div> </a></div>
+<div class="col-md-3 g-1 p-3  "><a class="text-decoration-none" href="/haversine-distance"><div class="calculator-box text-center"><i class="fa-solid fa-ruler fa-xl" style="color:rgb(55, 73, 241);"></i><h5>Haversine Distance</h5></div> </a></div>
 
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/calculate-distance-from-latitude-longitude"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-pointer fa-2xl" style="color: #63E6BE;"></i><h5>Lat/long Distance Calculator</h5></div> </a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/calculate-distance-from-latitude-longitude"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-pointer fa-xl" style="color: #63E6BE;"></i><h5>Lat/long Distance Calculator</h5></div> </a></div>
  </div>
  <!-- geolocation-tool end-->
  <hr>
 <h2>Speed Test </h2>
 <div class="row g-1 p-3 ">
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/train-speed-test"><div class="calculator-box text-center"><i class="fa-solid fa-network-wired fa-2xl" style="color: #B197FC;"></i><h5>Train Speed Test</h5></div></a> </div>    
- <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/utm-zone-map"><div class="calculator-box text-center"><i class="fa-solid fa-location-dot fa-2xl" style="color: #63E6BE;"></i><h5>Speed Converter</h5></div> </a></div>
- <div class="col-md-3  p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fas fa-location-dot fa-2xl"></i><h5>Bus Speed Test</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/train-speed-test"><div class="calculator-box text-center"><i class="fa-solid fa-train fa-xl"></i><h5>Train Speed Test</h5></div></a> </div>    
+ <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/#"><div class="calculator-box text-center"><i class="fa-solid fa-gauge-simple-high fa-xl"></i><h5>Speed Converter</h5></div> </a></div>
+ <div class="col-md-3  p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-bus fa-xl"></i><h5>Bus Speed Test</h5></div></a></div>
 
  </div>
  <!-- geolocation-tool end-->
