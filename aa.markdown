@@ -13,7 +13,7 @@ description: "description"
           <div class=" p-2 "></div>
           <div>{% include narendra.html %}</div>
         </div>
-        <div class="text-muted">
+        <div class="text-muted p-3">
           <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}
         </div>
       </div>
@@ -52,19 +52,7 @@ description: "description"
             <p class="mb-0"> Yes, the Age Calculator does not store or share your data. It simply performs calculations based on the input you provide.</p>
           </div>
         </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 4.  Can I calculate age including time of birth?</div>
-            <p class="mb-0">Yes, if you provide the exact time of birth, the Age Calculator can give you a more precise age calculation down to the hour, minute, and second.</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 5. Can I use the Age Calculator for future dates?</div>
-            <p class="mb-0">Yes, you can use the Age Calculator to calculate your age on a future date, which is useful for planning events or milestones.</p>
-          </div>
-        </div>
-      </section>
+         </section>
     </div>
 
 <script src="{{ '/assets/js/age-calculator.js' | relative_url }}"></script>

@@ -63,7 +63,7 @@ image: "/assets/images/age-calc-open-graph.png"
           <div class=" p-2 "></div>
           <div>{% include narendra.html %}</div>
         </div>
-        <div class="text-muted">
+        <div class="text-muted p-3">
           <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}
         </div>
       </div>

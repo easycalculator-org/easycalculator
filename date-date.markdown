@@ -63,16 +63,27 @@ description: "Quickly calculate the number of days between two dates with our ac
 
 <!-- Article Part -->
 
-<!-- Definition Section -->
+<!-- Article Content -->
+ <div class="article-container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <div class="d-flex align-items-center">
+          <div class=" p-2 "></div>
+          <div>{% include narendra.html %}</div>
+        </div>
+        <div class="text-muted p-3">
+          <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}
+        </div>
+      </div>
+
+<!-- Section -->
 <section class="mb-5">
- <div class="card border-0 shadow-sm">
-  <div class="card-body p-4">
-  <h2 class="pt-2">Date to Date Calculator: Easily Calculate Days, Weeks, and Months Between Dates</h2>
+<h2 class="pt-2">Date to Date Calculator: Easily Calculate Days, Weeks, and Months Between Dates</h2>
 <p>In our daily lives, there are often times when we need to calculate the difference between two specific dates. Whether it's for business, planning, or personal reasons, knowing how much time has passed—or how much time remains—can be crucial. If you’ve ever wondered how to calculate the difference between two dates, our Date to Date Calculator is here to make this task simple and efficient.</p>
-    <h2 class="mb-4"><i class="fas fa-question-circle text-primary me-2"></i>What is a Date to Date Calculator?</h2>
+<h2 class="mb-4"><i class="fas fa-question-circle text-primary me-2"></i>What is a Date to Date Calculator?</h2>
     <p>A <strong >Date to Date Calculator</strong> is an online tool that helps you quickly calculate the number of days, weeks, and months between two selected dates. By simply entering a start date and an end date, this tool performs all the necessary calculations instantly, saving you time and effort.</p>
 <p >Whether you're planning for an event, tracking a project deadline, or calculating age, our <strong >Date to Date Calculator</strong> makes it easy to get precise time differences at a glance.</p>
-  <div class="bg-light p-4 rounded mt-4">
+
+<div class="bg-light p-4 rounded mt-4">
    <h4 class="text-primary"><i class="fas fa-star me-2"></i>Key Features of Our Date to Date Calculator</h4>
     <ul class="list-group list-group-flush">
      <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Calculate Days</strong>: Find out how many days are between two dates.</li>
@@ -84,6 +95,7 @@ description: "Quickly calculate the number of days between two dates with our ac
         </ul>
      </div>
 
+     
 <h3 class="p-3">How to Use the Date to Date Calculator</h3>
 <p>Using our <strong>Date to Date Calculator</strong> is a breeze! Follow these simple steps:</p>
 <ol>
@@ -92,80 +104,58 @@ description: "Quickly calculate the number of days between two dates with our ac
 <li><p><strong>Click Calculate</strong>: After selecting both dates, click the "Calculate" button.</p></li>
 <li><p><strong>View the Results</strong>: The calculator will display the total number of days, weeks, and months between the two dates.</p></li>
 </ol>
- </div>
-   </div>
+                       
+ <!-- highlight-box-->
+ <!-- <div class="highlight-box">
+   <h5><i class="fas fa-lightbulb text-warning me-2"></i>Example:</h5>
+    <p class="mb-0">A person born in 2003 will turn 21 years old in 2024. You can refer to the image below to determine your age, the month, and the number of weeks since your birth date.</p>
+    </div> -->
 </section>
-
 <!-- Benefits Section -->
  <section class="my-5 py-4">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2 class="fw-bold mb-4">Why Use a Date to Date Calculator?</h2>
-                    <div class="benefit-item">
-                        <div class="benefit-icon"><i class="fas fa-briefcase"></i></div>
-                        <div>
-                            <h5>Project Management</h5>
-                            <p>Track time between milestones and deadlines to ensure projects stay on schedule.</p>
-                        </div>
-                    </div>
+    <div class="row">
+       <div class="col-lg-6">
+          <h2 class="fw-bold mb-4">Why Use a Date to Date Calculator?</h2>
+             <div class="benefit-item">
+                 <div class="benefit-icon"><i class="fas fa-briefcase"></i></div>
+                  <div><h5>Project Management</h5><p>Track time between milestones and deadlines to ensure projects stay on schedule.</p></div>
+                 </div>
                     <div class="benefit-item">
                         <div class="benefit-icon"><i class="fas fa-birthday-cake"></i></div>
-                        <div>
-                            <h5>Age Calculation</h5>
-                            <p>Use the App to calculate age by selecting the birthdate and the current date.</p>
-                        </div>
+                        <div><h5>Age Calculation</h5><p>Use the App to calculate age by selecting the birthdate and the current date.</p></div>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon"><i class="fas fa-umbrella-beach"></i> </div>
-                        <div>
-                            <h5>Vacation Planning</h5>
-                            <p>Calculate how many days are left before your vacation begins or how many days you’ve spent on vacation.</p>
-                        </div>
+                        <div><h5>Vacation Planning</h5><p>Calculate how many days are left before your vacation begins or how many days you’ve spent on vacation.</p></div>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon"><i class="fa-solid fa-champagne-glasses"></i> </div>
-                        <div>
-                            <h5>Planning Events</h5>
-                            <p>Whether you're planning a wedding, anniversary, or business event, knowing the exact number of days until your big day can help you plan better.</p>
-                        </div>
+                        <div><h5>Planning Events</h5> <p>Whether you're planning a wedding, anniversary, or business event, knowing the exact number of days until your big day can help you plan better.</p></div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <h2 class="fw-bold mb-4">Benefits of Our Calculator</h2>
                     <div class="benefit-item">
                         <div class="benefit-icon"><i class="fas fa-clock"></i></div>
-                        <div>
-                            <h5>Saves Time</h5>
-                            <p>Get instant results instead of manual counting days on a calendar.</p>
-                        </div>
+                        <div><h5>Saves Time</h5><p>Get instant results instead of manual counting days on a calendar.</p> </div>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
-                        <div>
-                            <h5>100% Accurate</h5>
-                            <p>No more errors in date calculations - we account for leap years and month variations.</p>
-                        </div>
+                        <div><h5>100% Accurate</h5> <p>No more errors in date calculations - we account for leap years and month variations.</p></div>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon"><i class="fas fa-mobile-alt"></i></div>
-                        <div>
-                            <h5>Accessible Anywhere</h5>
-                            <p>Works on all devices - desktop, tablet, or mobile phone.</p>
-                        </div>
+                        <div> <h5>Accessible Anywhere</h5> <p>Works on all devices - desktop, tablet, or mobile phone.</p></div>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
-                        <div>
-                            <h5>Free and Easy to Use</h5>
-                            <p>The calculator is free to use and requires no signup, registration, or subscription.</p>
-                        </div>
+                        <div> <h5>Free and Easy to Use</h5> <p>The calculator is free to use and requires no signup, registration, or subscription.</p> </div>
                     </div>
                 </div>
             </div>
         </section>
-
 <!-- FAQ Section -->
- <section class="mb-5">
+ <section class="mb-3">
   <h2 class="mb-4">FAQ on Date to Date Calculator</h2>
  <div class="card mb-3 border-0 rounded">
     <div class="card-body bg-light">
@@ -192,6 +182,23 @@ description: "Quickly calculate the number of days between two dates with our ac
                         </div>
                     </div>
                 </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Flatpickr JS -->
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="{{ '/assets/js/date-to-date.js' | relative_url }}"></script>
