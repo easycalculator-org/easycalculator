@@ -1,118 +1,17 @@
-<style>
-    .profile-container {
-        font-family: 'Segoe UI', system-ui, sans-serif
-    }
 
-    .profile-item {
-        padding: 4px
-    }
 
-    .profile-link {
-        padding: 6px 10px;
-        border-radius: 50px;
-        transition: all 0.3s ease
-    }
 
-    .profile-link:hover {
-        background: rgba(0, 0, 0, 0.05)
-    }
-
-    .profile-img {
-        border-color: #0d6efd !important;
-        object-fit: cover
-    }
-
-    .profile-card {
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 220px;
-        background: #fff;
-        border-radius: 12px;
-        padding: 16px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        z-index: 1000;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-        margin-bottom: 12px
-    }
-
-    .profile-item:hover .profile-card {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(-50%) translateY(-8px)
-    }
-
-    .profile-card-img {
-        border-color: #198754 !important;
-        object-fit: cover;
-        margin: 0 auto;
-        display: block
-    }
-
-    .profile-card-name {
-        color: #212529;
-        text-align: center
-    }
-
-    .profile-details {
-        padding-top: 8px;
-        color: #495057
-    }
-
-    .detail-label {
-        color: #6c757d;
-        min-width: 60px
-    }
-
-    .profile-name {
-        transition: color 0.2s ease
-    }
-
-    .profile-link:hover .profile-name {
-        color: #0d6efd
-    }
-</style>
-<div class="profile-container d-flex justify-content-center gap-4 align-items-center">
-
-    <div class="profile-item position-relative"><a href="https://linkedin.com/in/creator" target="_blank"
-            class="profile-link d-flex align-items-center gap-2 text-decoration-none"><img
-                src="https://uploads-cdn.omnicalculator.com/people/adena_benn.png?width=300&height=300&format=webp"
-                class="profile-img rounded-circle border border-3 border-primary" width="40" height="40"
-                alt="Creator"><span class="profile-name text-dark fw-medium">Narendra </span>
-            <div class="profile-card"><img
-                    src="https://uploads-cdn.omnicalculator.com/people/adena_benn.png?width=300&height=300&format=webp"
-                    class="profile-card-img rounded-circle border border-3 border-primary mb-2" width="60" height="60"
-                    alt="Creator">
-                <h6 class="profile-card-name mb-1 fw-bold">Narendra</h6>
-                <ul class="profile-details list-unstyled small mb-0">
-                    <li class="d-flex"><span class="detail-label fw-medium me-2">Role:</span><span
-                            class="detail-value">Content Creator</span></li>
-                    <li class="d-flex"><span class="detail-label fw-medium me-2">Email:</span><span
-                            class="detail-value">creator@example.com</span></li>
-                    <li class="d-flex"><span class="detail-label fw-medium me-2">Company:</span><span
-                            class="detail-value">ABC Inc.</span></li>
-                </ul>
-            </div>
-        </a></div>
-    <div class="profile-item position-relative"><a href="https://linkedin.com/in/reviewer" target="_blank"
-            class="profile-link d-flex align-items-center gap-2 text-decoration-none"><img src="reviewer.jpg"
-                class="profile-img rounded-circle border border-3 border-success" width="40" height="40"
-                alt="Reviewer"><span class="profile-name text-dark fw-medium">Reema Singh</span>
-            <div class="profile-card"><img src="reviewer.jpg"
-                    class="profile-card-img rounded-circle border border-3 border-success mb-2" width="60" height="60"
-                    alt="Reviewer">
+<div class="position-relative d-flex align-items-center gap-2">
+    <img src="/assets/images/user-profile/narendra.jpg" class="profile-img rounded-circle border border-3 border-primary" width="40" height="40" alt="Creator">
+ Created by : <a href="#" target="_blank" class="text-decoration-none profile-item"> Reema Singh 
+      <div class="profile-card">
+        <img src="/assets/images/user-profile/narendra.jpg" class="profile-card-img rounded-circle border border-3 border-primary mb-2" width="60" height="60" alt="Creator">
                 <h6 class="profile-card-name mb-1 fw-bold">Reema Singh</h6>
-                <ul class="profile-details list-unstyled small mb-0">
-                    <li class="d-flex"><span class="detail-label fw-medium me-2">Role:</span><span
-                            class="detail-value">Content Reviewer</span></li>
-                    <li class="d-flex"><span class="detail-label fw-medium me-2">Email:</span><span
-                            class="detail-value">reviewer@example.com</span></li>
-                    <li class="d-flex"><span class="detail-label fw-medium me-2">Company:</span><span
-                            class="detail-value">XYZ Corp.</span></li>
-                </ul>
-            </div>
-        </a></div>
+    <ul class="profile-details list-unstyled small mb-0">
+      <li class="d-flex"><span class="detail-label fw-medium me-2">Role:</span><span class="detail-value">Finance Analyst</span></li>
+      <li class="d-flex"><span class="detail-label fw-medium me-2">Expertise:</span><span class="detail-value">Financial Analysis, Budgeting, Forecasting, Data Visualization, Mortgage Loan Reviewing.</span></li>
+     </ul>
+    </div>
+   </a>
 </div>
+
