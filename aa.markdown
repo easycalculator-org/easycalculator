@@ -6,6 +6,23 @@ description: "description"
 #image: "/assets/images/age-calc-open-graph.png"
 ---
 
+---
+layout: default
+title: Airport Finder
+---
+
+<div class="container my-5">
+  <h1 class="mb-4">Nearest Airport Finder</h1>
+  <p>This tool uses your location to find the 5 closest airports or heliports near you.</p>
+  <div id="result" class="mt-4">
+    <p>Fetching your location and matching airports...</p>
+  </div>
+</div>
+
+<script src="/assets/js/airport-finder.js"></script>
+
+
+
 <!-- Article Content -->
  <div class="article-container">
       <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
