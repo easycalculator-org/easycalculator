@@ -23,21 +23,13 @@ description: "Instantly find the nearest airport to you using your current locat
   }
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
-
-  <div class="hero mb-1">
-    <h1 class="display-5 fw-bold">Nearest Airport to Me</h1>
-    <p class="lead">Find your closest airport using GPS and view its location on a live map instantly.</p>
-  </div>
-  <div id="map" class="mb-5"></div>
+<div class="hero mb-1">
+  <h1 class="display-5 fw-bold">Nearest Airport to Me</h1><p class="lead">Find your closest airport using GPS and view its location on a live map instantly.</p>
+ </div>
+   <div id="map" class="mb-5"></div>
   <div id="result">
-    <div class="alert alert-info">Detecting your location and finding nearby airports...</div>
-  </div>
-
-
-
-
-
+   <div class="alert alert-info">Detecting your location and finding nearby airports...</div>
+ </div>
 
 <!-- Article Content -->
  <div class="article-container">
@@ -52,34 +44,84 @@ description: "Instantly find the nearest airport to you using your current locat
       </div>
 
 <!-- Section -->
-<section class="mb-5">
- <h2>Age Calculator – Calculate Your Exact Age Instantly</h2>
-  <p>Looking for an accurate way to calculate your age? Our <strong>Age Calculator by date of birth </strong>is a easy and powerful tool that helps you find your exact age in years, months, weeks, days, hours, minutes, and even seconds. Whether you need an Age Calculator online for personal, medical, or legal purposes, our tool provides instant and precise results.</p>
-  <h2 class="card-title text-primary">What is the Age Calculator</h2>
-   <p class="card-text">An age calculator is a tool en hours m date.</p>
-                       
- <!-- highlight-box-->
- <div class="highlight-box">
-   <h5><i class="fas fa-lightbulb text-warning me-2"></i>Example:</h5>
-    <p class="mb-0">A person born in 2003 will turn 21 years old in 2024. You can refer to the image below to determine your age, the month, and the number of weeks since your birth date.</p>
-    </div>
-</section>
+ <h2>🛫 Nearest Airport to Me: Find the Closest Airport Instantly</h2>
+  <p>Whether you're planning a spontaneous getaway, catching a last-minute business flight, or simply curious about the closest air travel hub, knowing the nearest airport to you can save you time, stress, and money. <br>In this guide, we’ll show you how to easily find the nearest airport using GPS-based tools, explore how airport proximity affects travel costs, and answer common questions travelers ask.</p>
+
+<div class="bg-light p-4 rounded mt-4">
+  <h4 class="text-primary">🌍 Why It’s Important to Know the Nearest Airport</h4>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Save Time: Shorter travel times to the airport mean more convenience and less stress.</li>
+     <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Save Money: Choosing a nearby airport may reduce transportation costs (taxi, cab, parking).</li>
+         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i> Emergency Flights: In case of emergencies, locating the nearest airport is crucial.</li>
+         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Planning Road Trips or Stopovers: Ideal when planning long drives or multi-stop air journeys.</li>
+        </ul>
+     </div>
+
+<!-- How It Works -->
+<br>
+<section class="card shadow-sm mb-5 border-info">
+   <div class="card-header bg-info text-white"><h2 class="h4 mb-0"><i class="fa-solid fa-gear"></i> How It Works (Behind the Scenes)</h2></div>
+    <div class="card-body">
+      <div class="row g-4">
+          <div class="col-md-6">
+              <div class="d-flex">
+                    <div><h3 class="h5">Browser Location Request</h3><p>Uses HTML5 Geolocation API to get your coordinates</p> </div>
+                   </div>
+                  </div>
+              <div class="col-md-6">
+                 <div class="d-flex">
+                       <div> <h3 class="h5">Data Processing</h3> <p>Lat/Long passed to backend for calculation</p> </div>
+                       </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div><h3 class="h5">Distance Calculation</h3> <p>Haversine formula or MySQL spatial query compares locations</p> </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div> <h3 class="h5">Results Display</h3><p>Nearest airport returned with details and map</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+ <!-- Map View -->
+ <section class="card shadow-sm mb-5 border-success">
+   <div class="card-header bg-success text-white"> <h2 class="h4 mb-0 gap-3"><i class="fa-solid fa-map-location-dot"></i> Interactive Map View</h2></div>
+     <div class="card-body">
+      <div class="bg-light p-4 rounded text-center mb-3"><i class="fa-solid fa-map-location-dot fa-2xl" style="color: #74C0FC;"></i><p class="mt-2">[Interactive map would appear here]</p> </div>
+         <p>Once location permission is granted, you'll see:</p>
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item"><i class="fa-solid fa-circle-dot"></i> Your Live Location (blue dot)</li>
+            <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> Nearby Airports with pins</li>
+            <li class="list-group-item"><i class="fa-solid fa-circle-info"></i> Click markers for airport details</li>
+            <li class="list-group-item"><i class="fa-solid fa-mobile"></i> Mobile-Friendly with zoom and directions</li>
+          </ul>
+        </div>
+   </section>
       <!-- FAQ Section -->
       <section class="mb-5">
-        <h2 class="mb-4">FAQ on Age Calculator</h2>
+        <h2 class="mb-4">FAQ on Nearest Airport</h2>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
-            <div class="fw-bold text-primary">1. Why is age important?</div>
-            <p class="mb-0"> Age is important because it helps in personal growth tracking, healthcare decisions, educational placements, legal rights, cultural traditions, historical understanding, and more.</p>
+            <div class="fw-bold text-primary">1. How does this tool detect my location?</div>
+            <p class="mb-0"> It uses your browser's geolocation API (with your permission). On mobile, it may use GPS; on desktop, it may use IP or WiFi networks.</p>
           </div>
         </div>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
-            <div class="fw-bold text-primary"> 2. How do I find my exact age today?</div>
-            <p class="mb-0">Enter your date of birth in the Age Calculator and click "Calculate." The tool will display your exact age in years, months, days, and even hours if needed.</p>
+            <div class="fw-bold text-primary"> 2. What kind of airports are included?</div>
+            <p class="mb-0">All types: International Airports (e.g., JFK, LAX), Regional Airports, Heliports, and Private/Charter terminals.</p>
           </div>
         </div>
          </section>
+
+ <!-- highlight-box-->
+ <div class="highlight-box">
+   <h5><i class="fas fa-lightbulb text-warning me-2"></i>Do you know</h5>
+    <p class="mb-0">There are over 40,000 airports and airstrips worldwide, and more than 33% of them are located in the United States alone — the highest number of any country! 🇺🇸</p>
     </div>
 
 
