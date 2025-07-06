@@ -2,37 +2,18 @@
 layout: default
 title: What Is My Zip Code? Instantly Find Your ZIP Code by Location 
 permalink: /what-is-my-zip-code
-description: "Easily find your ZIP code using your current location. Auto-detect and lookup your postal code, area code, or 9-digit ZIP in seconds—no search required."
+description: "What Is My ZIP Code? Find your 5-digit or 9-digit ZIP code using GPS or Google Maps. Search postal code by location, address, or city anywhere in the world"
 #image: "/assets/images/age-calc-open-graph.png"
 ---
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <style>
-#map { 
-            height: 300px;
-            width: 100%; /* Ensure full width */
-        }
-        #spinner {
-            display: none;
-        }
-        .spinner-border {
-            width: 1.5rem;
-            height: 1.5rem;
-        }
-        .card-map {
-            min-height: 350px;
-        }
-        /* Map container fixes */
-        #map-container {
-            display: none;
-            width: 100%;
-            padding: 0; /* Remove any padding */
-            margin: 0; /* Remove any margins */
-        }
-        /* Ensure card body doesn't constrain map */
-        .card-body {
-            overflow: visible; /* Fix for clipped maps */
-        }
-    </style>
+#map {  height: 300px; width: 100%;  }
+#spinner { display: none;}
+.spinner-border { width: 1.5rem; height: 1.5rem; }
+.card-map {  min-height: 350px;  }
+#map-container { display: none; width: 100%; padding: 0;  margin: 0;  }
+.card-body { overflow: visible; }
+</style>
 <div class="row justify-content-center">
     <div class="col-md-12">
         <div class="card shadow-sm">
@@ -77,7 +58,7 @@ description: "Easily find your ZIP code using your current location. Auto-detect
                     <!-- Right Side: Map -->
                     <div class="col-md-6">
                         <div id="map-container" style="height: 400px;">
-                            <div id="map" style="width: 100%; height: 100%; border-radius: 10px;"></div>
+                            <div id="map" style="width: 100%; height: 100%; border-radius: 5px;"></div>
                         </div>
                     </div>
                 </div> <!-- End Row -->
