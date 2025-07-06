@@ -1,8 +1,8 @@
 ---
 layout: default
-title: My Current Elevation and Elevation Map - Find Altitude Easily
+title: Current Elevation – Check Your Altitude Instantly with Interactive Elevation Map
 permalink: /current-elevation
-description: "Quickly find your current elevation and explore an accurate elevation map. Use our app to check your altitude instantly for any location worldwide."
+description: "Find your current elevation and view an interactive elevation map for any location worldwide. Instantly check your altitude using GPS—accurate, fast, and free."
 ---
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome@6.4.0/css/all.min.css">
@@ -61,14 +61,13 @@ description: "Quickly find your current elevation and explore an accurate elevat
         </div>
       </div>
       <!-- What is Section1 -->
-      <section class="mb-5">
-      <h2>Elevation</h2><p>The elevation of a geographic location is its height above or below a fixed reference point, most commonly refer  the Earth's sea level. The term elevation is mainly used when referring to points on the Earth's surface. </p>
-<h3>My Current Elevation</h3><p>Ever wondered how high above sea level you are right now? Whether you’re hiking, planning a flight, or just curious, knowing your current elevation unlocks fascinating insights about your environment. This guide explains how to find your elevation instantly and harness elevation maps for outdoor adventures, science, and more—with trusted sources and practical tips.</p>
+<section class="mb-5">
+<h2>🌍 What Is My Current Elevation? </h2>
+<p>The elevation of a geographic location is its height above or below a fixed reference point—most commonly mean sea level. Elevation is typically expressed in feet or meters and is a vital data point for hikers, travelers, scientists, and everyday users curious about their surroundings. </p>
 
-<h3>Maps and GIS</h3>
-<p>GIS or geographic information system is a computer system that allows for visualizing, manipulating, capturing, and storage of data with associated attributes. GIS offers better understanding of patterns and relationships of the landscape at different scales. Tools inside the GIS allow for manipulation of data for spatial analysis or cartography.</p>
-<p><br />A topographical map is the main type of map used to depict elevation, often through contour lines. In a Geographic Information System (GIS), digital elevation models (DEM) are commonly used to represent the surface (topography) of a place, through a raster (grid) dataset of elevations. Digital terrain models are another way to represent terrain in GIS.</p>
-<p>USGS (United States Geologic Survey) is developing a 3D Elevation Program (3DEP) to keep up with growing needs for high quality topographic data. 3DEP is a collection of enhanced elevation data in the form of high quality LiDAR data over the conterminous United States, Hawaii, and the U.S. territories. There are three bare earth DEM layers in 3DEP which are nationally seamless at the resolution of 1/3, 1, and 2 arcseconds.</p>
+<h2>What Is Elevation?</h2>
+<p>Elevation is a geographic term used to describe the height of a point on the Earth’s surface above a fixed reference point, often mean sea level (MSL).<br>Elevation is used for locations on land (e.g., a city or hill).<br>It's measured in meters (m) or feet (ft).<br>Different from altitude (used for flying objects) and depth (used below a surface, like sea level or ground).</p>
+
 
 <div class="highlight-box">
           <h5><i class="fas fa-lightbulb text-warning me-2"></i> Example: My Current Elevation</h5>

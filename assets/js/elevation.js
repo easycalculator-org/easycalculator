@@ -55,7 +55,7 @@
                     currentLocationMarker = L.marker([lat, lng], {
                         icon: L.divIcon({
                             className: 'elevation-marker',
-                            html: `<div class="bg-primary text-white">${elevation}m</div>`
+                            html: `<div class= "bg-primary fw-semibold fs-3">${elevation}m</div>`
                         })
                     }).addTo(map);
 
