@@ -134,6 +134,7 @@ description: "Use EasyCalculator.org’s free online calculators to solve financ
 <div class="col-md-3 g-1 p-3  "><a class="text-decoration-none" href="/haversine-distance"><div class="calculator-box text-center"><i class="fa-solid fa-ruler fa-xl" style="color:rgb(55, 73, 241);"></i><h5>Haversine Distance</h5></div> </a></div>
 
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/calculate-distance-from-latitude-longitude"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-pointer fa-xl" style="color: #63E6BE;"></i><h5>Lat/long Distance Calculator</h5></div> </a></div>
+<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/what-is-my-zip-code"><div class="calculator-box text-center"><i class="fa-solid fa-envelopes-bulk fa-xl"></i><h5>My Zipcode</h5></div></a></div>
  </div>
  <!-- geolocation-tool end-->
  <hr>
@@ -142,9 +143,9 @@ description: "Use EasyCalculator.org’s free online calculators to solve financ
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/train-speed-test"><div class="calculator-box text-center"><i class="fa-solid fa-train fa-xl"></i><h5>Train Speed Test</h5></div></a> </div>    
  <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/#"><div class="calculator-box text-center"><i class="fa-solid fa-gauge-simple-high fa-xl"></i><h5>Speed Converter</h5></div> </a></div>
  <div class="col-md-3  p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-bus fa-xl"></i><h5>Bus Speed Test</h5></div></a></div>
-
- </div>
- <!-- geolocation-tool end-->
+ 
+</div>
+ <!-- Speed Test end-->
 
 <h3>Others Calculator</h3>
 <div class="row text-center g-3">
