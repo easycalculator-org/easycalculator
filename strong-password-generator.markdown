@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Strong Password Generator | Create Password 
+title: Strong Password Generator | Create Secure & Unique Passwords Instantly
 permalink: /strong-password-generator
-description: "Generate strong passwords to protect your onlineaccount with our random password generator. Mix letters, numbers and symbols for safe password."
+description: "Strong password generator — free tool to instantly create secure passwords with symbols, numbers, and letters. Best tool for online protection."
 image: "/assets/images/strong-password-generator.jpg"
 ---
+
 <!-- Password Generator -->
  <section class="mb-5 p-4" id="generate">
             <div class="card border-0 shadow">
