@@ -23,27 +23,19 @@ image: "/assets/images/strong-password-generator.jpg"
                                 <label class="form-label">Include:</label>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="uppercase" checked>
-                                    <label class="form-check-label" for="uppercase">
-                                        Uppercase Letters (A-Z)
-                                    </label>
+                                    <label class="form-check-label" for="uppercase"> Uppercase Letters (A-Z) </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="lowercase" checked>
-                                    <label class="form-check-label" for="lowercase">
-                                        Lowercase Letters (a-z)
-                                    </label>
+                                    <label class="form-check-label" for="lowercase"> Lowercase Letters (a-z)</label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="numbers" checked>
-                                    <label class="form-check-label" for="numbers">
-                                        Numbers (0-9)
-                                    </label>
+                                    <label class="form-check-label" for="numbers">  Numbers (0-9) </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="symbols" checked>
-                                    <label class="form-check-label" for="symbols">
-                                        Special Symbols (!@#$%^&*)
-                                    </label>
+                                    <label class="form-check-label" for="symbols"> Special Symbols (!@#$%^&*)</label>
                                 </div>
                             </div>
                             <button class="btn btn-primary w-100 py-3" id="generate-btn"><i class="fas fa-sync-alt me-2"></i>Generate Secure Password</button>
@@ -59,9 +51,7 @@ image: "/assets/images/strong-password-generator.jpg"
                                     <div class="progress mb-3">
                                         <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
                                     </div>
-                                    <p class="text-success mb-0" id="strength-text">
-                                        <i class="fas fa-check-circle me-1"></i>Very Strong Password
-                                    </p>
+                                    <p class="text-success mb-0" id="strength-text"> <i class="fas fa-check-circle me-1"></i>Very Strong Password </p>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +59,90 @@ image: "/assets/images/strong-password-generator.jpg"
                 </div>
             </div>
         </section>
+
 <!-- Article Part -->
+
+<!-- Article Content -->
+ <div class="article-container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <div class="d-flex align-items-center">
+          <div class=" p-2 "></div>
+          <div>{% include narendra.html %}</div>
+        </div>
+        <div class="text-muted p-3">
+          <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}
+        </div>
+      </div>
+
+<!-- Section -->
+<section class="mb-5">
+ <h2>Age Calculator – Calculate Your Exact Age Instantly</h2>
+  <p>Looking for an accurate way to calculate your age? Our <strong>Age Calculator by date of birth </strong>is a easy and powerful tool that helps you find your exact age in years, months, weeks, days, hours, minutes, and even seconds. Whether you need an Age Calculator online for personal, medical, or legal purposes, our tool provides instant and precise results.</p>
+  <h2 class="card-title text-primary">What is the Age Calculator</h2>
+   <p class="card-text">An age calculator is a tool en hours m date.</p>
+                       
+ <!-- highlight-box-->
+ <div class="highlight-box">
+   <h5><i class="fas fa-lightbulb text-warning me-2"></i>Example:</h5>
+    <p class="mb-0">A person born in 2003 will turn 21 years old in 2024. You can refer to the image below to determine your age, the month, and the number of weeks since your birth date.</p>
+    </div>
+</section>
+      <!-- FAQ Section -->
+      <section class="mb-5">
+        <h2 class="mb-4">FAQ on Strong Password generator</h2>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary">1. Why should I use a strong password generator?</div>
+            <p class="mb-0"> Using a strong password generator helps ensure that your passwords are unique and complex, reducing the risk of unauthorized access to your accounts. Strong passwords are essential for protecting sensitive information and maintaining cybersecurity.</p>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary"> 2. How does a strong password generator work?</div>
+            <p class="mb-0">A strong password generator uses algorithms to create passwords based on specified criteria, such as length and character variety. Users can often customize the settings to meet their security needs.</p>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary"> 3. What makes a password strong?</div>
+            <p class="mb-0"> A strong password generally consists of at least 12 characters, includes a mix of uppercase and lowercase letters, numbers, and special symbols, and avoids easily guessable information such as names, birthdays, or common words.</p>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 bg-light">
+        <div class="card-body ">
+            <div class="fw-bold text-primary"> 4. Can I customize the passwords generated?</div>
+            <p class="mb-0"> Yes, many strong password generators allow you to customize the length and character types used in the generated passwords, giving you control over the complexity and format.</p>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 bg-light">
+        <div class="card-body ">
+            <div class="fw-bold text-primary"> 5. How secure is an 8-character password?</div>
+            <p class="mb-0">A secure 8-character password should include a mix of uppercase and lowercase letters, numbers, and special characters. Here's an example: <code>G7$pL@9z</code>. However, for maximum security, we recommend using at least 12 characters..</p>
+          </div>
+        </div>
+         </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Definition Section -->
 <section class="mb-5">
  <div class="card border-0 shadow-sm">
@@ -291,40 +364,7 @@ image: "/assets/images/strong-password-generator.jpg"
                         </div>
                     </div>
          </section>
-<!-- FAQ Section -->
-<section class="mb-5">
- <h2 class="mb-4">FAQs on Password generator </h2>
- <div class="card mb-3 border-0 rounded">
-  <div class="card-body bg-light">
-   <div class=" text-primary fw-bold">1. Why should I use a strong password generator?</div>
-     <p class="mb-0">Using a strong password generator helps ensure that your passwords are unique and complex, reducing the risk of unauthorized access to your accounts. Strong passwords are essential for protecting sensitive information and maintaining cybersecurity.</p>
-     </div>
-                    </div>
-                    <div class="card mb-3 border-0 rounded">
-                        <div class="card-body bg-light">
-                            <div class=" text-primary fw-bold">2. How does a strong password generator work?</div>
-                            <p class="mb-0">A strong password generator uses algorithms to create passwords based on specified criteria, such as length and character variety. Users can often customize the settings to meet their security needs.</p>
-                        </div>
-                    </div>
-                    <div class="card mb-3 border-0 rounded">
-                        <div class="card-body bg-light">
-                            <div class=" text-primary fw-bold">3. What makes a password strong?</div>
-                            <p class="mb-0"> A strong password generally consists of at least 12 characters, includes a mix of uppercase and lowercase letters, numbers, and special symbols, and avoids easily guessable information such as names, birthdays, or common words.</p>
-                        </div>
-                    </div>
-                    <div class="card mb-3 border-0 rounded">
-                        <div class="card-body bg-light">
-                            <div class=" text-primary fw-bold">4.  Can I customize the passwords generated?</div>
-                            <p class="mb-0">Yes, many strong password generators allow you to customize the length and character types used in the generated passwords, giving you control over the complexity and format.</p>
-                        </div>
-                    </div>
-                    <div class="card mb-3 border-0 rounded">
-                        <div class="card-body bg-light">
-                            <div class=" text-primary fw-bold">5. How secure is an 8-character password?</div>
-                            <p class="mb-0"> A secure 8-character password should include a mix of uppercase and lowercase letters, numbers, and special characters. Here's an example: <code>G7$pL@9z</code>. However, for maximum security, we recommend using at least 12 characters.</p>
-                        </div>
-                    </div>
-                </section>
+
 
 
 <script src="{{ '/assets/js/pass-gen.js' | relative_url }}"></script>
