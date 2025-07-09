@@ -32,7 +32,7 @@ description: "Use our SIP calculator to estimate your mutual fund returns with e
 <div class="mb-4">
   <div class="d-flex justify-content-between align-items-center mb-2">
      <label for="investmentPeriod" class="form-label"><i class="far fa-calendar-alt text-primary me-2"></i>Investment Period (Years) </label>
-     <input type="number" class="form-control" id="investmentPeriod" value="10" style="max-width: 150px;">
+     <input type="number" class="form-control bg-primary-subtle" id="investmentPeriod" value="10" style="max-width: 150px;">
    </div>  
       <input type="range" class="form-range mb-2" min="1" max="40" id="investmentPeriodRange" value="10">
    </div> 
@@ -41,7 +41,7 @@ description: "Use our SIP calculator to estimate your mutual fund returns with e
   <div class="mb-4">
    <div class="d-flex justify-content-between align-items-center mb-2">
       <label for="expectedReturn" class="form-label"><i class="fas fa-chart-line text-primary me-2"></i>Expected Return Rate (%) </label>
-      <input type="number" class="form-control" id="expectedReturn" value="12" step="0.1" style="max-width: 150px;">
+      <input type="number" class="form-control bg-primary-subtle" id="expectedReturn" value="12" step="0.1" style="max-width: 150px;">
      </div>
         <input type="range" class="form-range mb-2" min="1" max="30" step="0.1" id="expectedReturnRange" value="12">
   </div>
@@ -50,7 +50,7 @@ description: "Use our SIP calculator to estimate your mutual fund returns with e
  <div class="mb-4">
   <div class="d-flex justify-content-between align-items-center mb-2">
     <label for="inflationRate" class="form-label">  <i class="fas fa-money-bill-trend-up text-primary me-2"></i>Inflation Rate (%)  </label>
- <input type="number" class="form-control" id="inflationRate" value="6" step="0.1" style="max-width: 150px;">
+ <input type="number" class="form-control bg-primary-subtle" id="inflationRate" value="6" step="0.1" style="max-width: 150px;">
  </div> 
     <input type="range" class="form-range mb-2" min="0" max="15" step="0.1" id="inflationRateRange" value="6" >
                </div>
