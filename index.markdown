@@ -2,6 +2,7 @@
 layout: default
 title: EasyCalculator | Free Online Calculators for Finance, Math & More
 description: "Use EasyCalculator.org’s free online calculators to solve finance, math, and everyday problems in seconds. No sign-ups, no downloads—just fast and accurate results. "
+image: "/assets/images/apple-touch-icon.png"
 ---
 <link rel="stylesheet" href="{{ '/assets/css/calculator.css' | relative_url }}">
 <!-- Calculator start -->
