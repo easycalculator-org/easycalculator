@@ -20,37 +20,41 @@ description: "Use our SIP calculator to estimate your mutual fund returns with e
      <div class="card-body">
         <div class="row g-4">
          <div class="col-md-6">
-             <div class="mb-4">
-                 <label for="monthlyInvestment" class="form-label"> <i class="fas fa-wallet text-primary me-2"></i>Monthly Investment</label>
-                   <input type="range" class="form-range mb-2" min="500" max="100000" step="500" id="monthlyInvestmentRange" value="10000">
-                 <div class="input-group">
-                      <span class="input-group-text"><i class="fas fa-wallet"></i></span><input type="number" class="form-control" id="monthlyInvestment" value="10000">
-                      </div>
-                  </div>
+
+<div class="mb-4">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <label for="monthlyInvestment" class="form-label mb-0"><i class="fas fa-wallet text-primary me-2"></i>Monthly Investment</label>
+    <input type="number" class="form-control bg-primary-subtle ms-3" style="max-width: 150px;" id="monthlyInvestment" value="10000">
+  </div>
+  <input type="range" class="form-range" min="500" max="100000" step="500" id="monthlyInvestmentRange" value="10000">
+</div>
+
+<div class="mb-4">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+     <label for="investmentPeriod" class="form-label"><i class="far fa-calendar-alt text-primary me-2"></i>Investment Period (Years) </label>
+     <input type="number" class="form-control" id="investmentPeriod" value="10" style="max-width: 150px;">
+   </div>  
+      <input type="range" class="form-range mb-2" min="1" max="40" id="investmentPeriodRange" value="10">
+   </div> 
+
+                
   <div class="mb-4">
-       <label for="investmentPeriod" class="form-label"><i class="far fa-calendar-alt text-primary me-2"></i>Investment Period (Years) </label>
-           <input type="range" class="form-range mb-2" min="1" max="40" id="investmentPeriodRange" value="10">
-              <div class="input-group">
-                   <span class="input-group-text"><i class="fas fa-clock"></i></span>
-                    <input type="number" class="form-control" id="investmentPeriod" value="10"> <span class="input-group-text">Years</span>
-                  </div>
-                 </div>
-  <div class="mb-4">
+   <div class="d-flex justify-content-between align-items-center mb-2">
       <label for="expectedReturn" class="form-label"><i class="fas fa-chart-line text-primary me-2"></i>Expected Return Rate (%) </label>
-          <input type="range" class="form-range mb-2" min="1" max="30" step="0.1" id="expectedReturnRange" value="12">
-          <div class="input-group">
-           <span class="input-group-text"><i class="fas fa-percent"></i></span>
-                   <input type="number" class="form-control" id="expectedReturn" value="12" step="0.1">
-                   </div>
-                  </div>
-    <div class="mb-4">
-          <label for="inflationRate" class="form-label">  <i class="fas fa-money-bill-trend-up text-primary me-2"></i>Inflation Rate (%)  </label>
-                                    <input type="range" class="form-range mb-2" min="0" max="15" step="0.1" id="inflationRateRange" value="6">
-                                    <div class="input-group">
-                                        <span class="input-group-text"><i class="fas fa-percent"></i></span>
-                                        <input type="number" class="form-control" id="inflationRate" value="6" step="0.1">
-                                    </div>
-                                </div> 
+      <input type="number" class="form-control" id="expectedReturn" value="12" step="0.1" style="max-width: 150px;">
+     </div>
+        <input type="range" class="form-range mb-2" min="1" max="30" step="0.1" id="expectedReturnRange" value="12">
+  </div>
+
+
+ <div class="mb-4">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <label for="inflationRate" class="form-label">  <i class="fas fa-money-bill-trend-up text-primary me-2"></i>Inflation Rate (%)  </label>
+ <input type="number" class="form-control" id="inflationRate" value="6" step="0.1" style="max-width: 150px;">
+ </div> 
+    <input type="range" class="form-range mb-2" min="0" max="15" step="0.1" id="inflationRateRange" value="6" >
+               </div>
+                               
               <div class="form-check form-switch mb-3">
                                     <input class="form-check-input" type="checkbox" id="stepUpSIP" checked>
                                     <label class="form-check-label" for="stepUpSIP"> <i class="fas fa-step-forward text-primary me-2"></i>Annual Step-up SIP </label>
