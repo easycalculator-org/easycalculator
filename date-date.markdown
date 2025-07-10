@@ -3,6 +3,7 @@ layout: default
 title: Date to Date Calculator – Calculate Days Between Dates
 permalink: /date-to-date-calculator
 description: "Quickly calculate the number of days between two dates with our accurate Date to Date Calculator. Includes weekends, weekdays, and leap years."
+image: "/assets/images/date-to-date-calculator.jpg"
 ---
 
 <style>
