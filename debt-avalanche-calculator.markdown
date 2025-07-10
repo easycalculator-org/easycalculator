@@ -10,9 +10,7 @@ description: "Use our free Debt Avalanche Calculator to create a smart debt payo
                 <div class="card shadow-lg">
                     <div class="card-header bg-primary text-white">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h1 class="h4 mb-0">
-                                <i class="fas fa-snowflake me-2"></i>Advanced Debt Avalanche Calculator
-                            </h1>
+                            <h1 class="h4 mb-0"><i class="fas fa-snowflake me-2"></i>Debt Avalanche Calculator</h1>
                             <span class="badge bg-light text-primary">v2.1</span>
                         </div>
                     </div>
@@ -201,9 +199,32 @@ description: "Use our free Debt Avalanche Calculator to create a smart debt payo
         </div>
 
 
+
+<!-- Article Content -->
+ <div class="article-container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <div class="d-flex align-items-center">
+          <div class=" p-2 "></div>
+          <div>{% include narendra.html %}</div>
+        </div>
+        <div class="text-muted p-3">
+          <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}
+        </div>
+      </div>
+
+<!-- Section -->
+<section class="mb-5">
+ <h2>Debt Avalanche Calculator – Pay Off Debt Smarter and Save on Interest</h2>
+  <p>Are you managing multiple debts and want to save money on interest? The Debt Avalanche Calculator is a powerful tool that helps you pay off your debts faster and more efficiently—no matter where you live.</p>
+  <h2 class="card-title text-primary">What is the Debt Avalanche Method?</h2>
+   <p class="card-text">The debt avalanche method is a strategy that prioritizes paying off debts with the highest interest rates first. By focusing on high-interest debts (like credit cards or personal loans), you reduce the total amount of interest you pay over time—unlike the snowball method, which starts with the smallest balance. <br>This method is ideal for those who want to become debt-free while saving the most money.</p>
+
+</section>
+    </div>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
-
 <script src="{{ '/assets/js/debt-avalanche.js' | relative_url }}"></script>
 
 
