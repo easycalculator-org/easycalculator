@@ -95,8 +95,10 @@ image: "/assets/images/apple-touch-icon.png"
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/currency"><div class="calculator-box text-center"><i class="fa-solid fa-coins fa-xl" style="color: #B197FC;"></i><h5>Currency Converter</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/loan-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl" style="color: #1968f0;"></i><h5>Loan Calculator</h5></div></a></div> 
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/sip-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-bill-wheat fa-xl" style="color: #B197FC;"></i><h5>SIP Calculator</h5></div></a></div> 
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/mortgage-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl" style="color:rgb(247, 86, 37);"></i><h5>Mortgage Calculator (USA)</h5></div></a></div>           
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/mortgage-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl" style="color:rgb(247, 86, 37);"></i><h5>Mortgage Calculator (USA)</h5></div></a></div> 
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/debt-avalanche-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-scale-unbalanced-flip fa-xl" style="color:rgb(33, 236, 118);"></i><h5>Debt Avalanche Calculato</h5></div></a></div>           
   </div>
+
 
 
 
