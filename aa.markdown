@@ -1,20 +1,54 @@
 ---
 layout: default
 title: Title 
-permalink: /#
+permalink: /123
 description: "description"
 #image: "/assets/images/age-calc-open-graph.png"
 ---
+<style>
+  
+ </style> 
+<main id="page-root">
+<div class="peer" data-cid="skill-2"></div>
+      
+<div class="overflow-hidden gradient-blue-darker bg-gradient-to-tl bg-cover mb-14" style="margin-top:-110px">
+ <section  class="mx-6 sm:mx-page-grid-sm md:mx-page-grid-md lg:mx-page-grid-lg xl:mx-auto xl:w-page-grid-xl gap-0 md:gap-0 lg:gap-4 xl:gap-4 pt-40 pb-8 lg:pb-6 col-span-12 grid grid-cols-11 items-center">
+ <div  class="flex flex-col col-span-12 text-center items-center lg:col-span-8 lg:text-start lg:items-start">
+ <div class="bg-white p-4 max-w-[800px] shadow-sm rounded-lg mx-auto text-gray-900 px-8 py-4 mb-0">
+ <div class="mt-10 mb-4" data-cid="skill-talent-navigator-0">
+ <div class="relative group"><img alt="World map with time zones" src="https://assets.toptal.io/images?url=https%3A%2F%2Ffrontier-assets.toptal.com%2F4c352138ec8f6058.png" class="block w-full h-auto object-top object-contain mix-blend-multiply relative z-10 pointer-events-none" width="600" height="291" /></div>
+    </div>
+      </div>
+         </div>  
+      </section>
+        </div>  
 
-<div class="container my-5">
-  <h1 class="mb-4">Nearest Airport Finder</h1>
-  <p>This tool uses your location to find the 5 closest airports or heliports near you.</p>
-  <div id="result" class="mt-4">
-    <p>Fetching your location and matching airports...</p>
-  </div>
-</div>
+ </main>
 
-<script src="/assets/js/airport-finder.js"></script>
+<script type="application/json" data-hid="skill-talent-navigator-0">{"skill":"Web Development"}</script>
+<script src="https://frontier-assets.toptal.com/runtime~skill.6461af08f572f8d1.js" defer></script>
+<script src="https://frontier-assets.toptal.com/45108.db06991634b57896.js" defer></script>
+<script src="https://frontier-assets.toptal.com/4816.927263ca1d2cfe45.js" defer></script>
+<script src="https://frontier-assets.toptal.com/40728.2093de0cf47418f6.js" defer></script>
+<script src="https://frontier-assets.toptal.com/64622.12edca95b2eabcac.js" defer></script>
+<script src="https://frontier-assets.toptal.com/91328.918df0b44b5cf799.js" defer></script>
+<script src="https://frontier-assets.toptal.com/55145.0ba968d5c5d43b8f.js" defer></script>
+<script src="https://frontier-assets.toptal.com/46591.a63b9cd0637b763e.js" defer></script>
+<script src="https://frontier-assets.toptal.com/82658.b92819862678006e.js" defer></script>
+<script src="https://frontier-assets.toptal.com/91168.0a82ab2beaeace6e.js" defer></script>
+<script src="https://frontier-assets.toptal.com/11251.7ab5fa59b31defad.js" defer></script>
+<script src="https://frontier-assets.toptal.com/11027.ba1486211243d418.js" defer></script>
+<script src="https://frontier-assets.toptal.com/98163.8edff1797f9cd113.js" defer></script>
+<script src="https://frontier-assets.toptal.com/43563.4bd9200af683f0c3.js" defer></script>
+<script src="https://frontier-assets.toptal.com/51327.b34184dc76ce1867.js" defer></script>
+<script src="https://frontier-assets.toptal.com/48365.838ca96cd6e59e35.js" defer></script>
+<script src="https://frontier-assets.toptal.com/25737.71a05c6de44a096e.js" defer></script>
+<script src="https://frontier-assets.toptal.com/8459.66d6162c46ab7cd0.js" defer></script>
+<script src="https://frontier-assets.toptal.com/99879.64e02ea6c8b39cd7.js" defer></script>
+<script src="https://frontier-assets.toptal.com/76000.872490b155577f2f.js" defer></script>
+<script src="https://frontier-assets.toptal.com/16605.c9a1f0d4b4a31bb6.js" defer></script>
+<script src="https://frontier-assets.toptal.com/skill.706096dc7cc75993.js" defer></script>
+
 
 
 
