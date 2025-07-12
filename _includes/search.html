@@ -1,11 +1,18 @@
----
-layout: default
-title: Search
----
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <!-- Search Form -->
+      <div class="search-container position-relative">
+        <input type="search" 
+               id="searchInput" 
+               class="form-control form-control-lg" 
+               placeholder="Search..." 
+               autocomplete="off"
+               aria-label="Search">
+        <div id="searchResults" class="list-group position-absolute w-100 d-none"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h1>Search</h1>
-<input type="text" id="search-box" placeholder="Search...">
-<ul id="results"></ul>
-
-<script src="https://unpkg.com/lunr/lunr.js"></script>
-<script src="/assets/js/lunrsearch.js"></script>
+<script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
