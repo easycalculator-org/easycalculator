@@ -1,0 +1,699 @@
+[
+  {
+    "id": 1,
+    "title": "BMI Calculator",
+    "url": "/bmi-calculator"
+  },
+  {
+    "id": 2,
+    "title": "Pregnancy Due Date Calculator",
+    "url": "/pregnancy-due-date"
+  },
+  {
+    "id": 3,
+    "title": "Age Calculator",
+    "url": "/age-calculator"
+  },
+  {
+    "id": 4,
+    "title": "Pregnancy Calculator",
+    "url": "/pregnancy-calculator"
+  },
+  {
+    "id": 5,
+    "title": "Simple Interest Calculator",
+    "url": "/simple-interest-calculator"
+  },
+  {
+    "id": 6,
+    "title": "Compound Interest Calculator",
+    "url": "/compound-interest-calculator"
+  },
+  {
+    "id": 7,
+    "title": "Loan EMI Calculator",
+    "url": "/loan-emi-calculator"
+  },
+  {
+    "id": 8,
+    "title": "Currency Converter",
+    "url": "/currency-converter"
+  },
+  {
+    "id": 9,
+    "title": "Unit Converter",
+    "url": "/unit-converter"
+  },
+  {
+    "id": 10,
+    "title": "Percentage Calculator",
+    "url": "/percentage-calculator"
+  },
+  {
+    "id": 11,
+    "title": "Time Zone Converter",
+    "url": "/time-zone-converter"
+  },
+  {
+    "id": 12,
+    "title": "Date Difference Calculator",
+    "url": "/date-difference-calculator"
+  },
+  {
+    "id": 13,
+    "title": "Hex to RGB Converter",
+    "url": "/hex-to-rgb"
+  },
+  {
+    "id": 14,
+    "title": "RGB to Hex Converter",
+    "url": "/rgb-to-hex"
+  },
+  {
+    "id": 15,
+    "title": "Loan Eligibility Calculator",
+    "url": "/loan-eligibility-calculator"
+  },
+  {
+    "id": 16,
+    "title": "Savings Calculator",
+    "url": "/savings-calculator"
+  },
+  {
+    "id": 17,
+    "title": "Mortgage Calculator",
+    "url": "/mortgage-calculator"
+  },
+  {
+    "id": 18,
+    "title": "Body Fat Calculator",
+    "url": "/body-fat-calculator"
+  },
+  {
+    "id": 19,
+    "title": "Calorie Calculator",
+    "url": "/calorie-calculator"
+  },
+  {
+    "id": 20,
+    "title": "Loan Repayment Calculator",
+    "url": "/loan-repayment-calculator"
+  },
+  {
+    "id": 21,
+    "title": "Retirement Calculator",
+    "url": "/retirement-calculator"
+  },
+  {
+    "id": 22,
+    "title": "Fuel Cost Calculator",
+    "url": "/fuel-cost-calculator"
+  },
+  {
+    "id": 23,
+    "title": "Tip Calculator",
+    "url": "/tip-calculator"
+  },
+  {
+  "id": 24,
+  "title": "Loan Comparison Calculator",
+  "url": "/loan-comparison-calculator",
+  },
+  {
+    "id": 25,
+    "title": "Health Insurance Calculator",
+    "url": "/health-insurance-calculator"
+  },
+  {
+    "id": 26,
+    "title": "Investment Growth Calculator",
+    "url": "/investment-growth-calculator"
+  },
+  {
+    "id": 27,
+    "title": "Expense Tracker",
+    "url": "/expense-tracker"
+  },
+  {
+    "id": 28,
+    "title": "Budget Planner",
+    "url": "/budget-planner"
+  },
+  {
+    "id": 29,
+    "title": "Credit Score Calculator",
+    "url": "/credit-score-calculator"
+  },
+  {
+    "id": 30,
+    "title": "Debt Payoff Calculator",
+    "url": "/debt-payoff-calculator"
+  },
+  {
+    "id": 31,
+    "title": "Savings Goal Calculator",
+    "url": "/savings-goal-calculator"
+  },
+  {
+    "id": 32,
+    "title": "Expense Splitter",
+    "url": "/expense-splitter"
+  },
+  {
+    "id": 33,
+    "title": "Loan Affordability Calculator",
+    "url": "/loan-affordability-calculator"
+  },
+  {
+    "id": 34,
+    "title": "Retirement Savings Calculator",
+    "url": "/retirement-savings-calculator"
+  },
+  {
+    "id": 35,
+    "title": "Health Cost Estimator",
+    "url": "/health-cost-estimator"
+  },
+  {
+    "id": 36,
+    "title": "Investment Risk Calculator",
+    "url": "/investment-risk-calculator"
+  },
+  {
+    "id": 37,
+    "title": "Child Education Cost Calculator",
+    "url": "/child-education-cost-calculator"
+  },
+  {
+    "id": 38,
+    "title": "Home Renovation Cost Estimator",
+    "url": "/home-renovation-cost-estimator"
+  },
+  {
+    "id": 15,
+    "title": "Loan Eligibility Calculator",
+    "url": "/loan-eligibility-calculator"
+  },
+  {
+    "id": 16,
+    "title": "Savings Calculator",
+    "url": "/savings-calculator"
+  },
+  {
+    "id": 17,
+    "title": "Mortgage Calculator",
+    "url": "/mortgage-calculator"
+  },
+  {
+    "id": 18,
+    "title": "Body Fat Calculator",
+    "url": "/body-fat-calculator"
+  },
+  {
+    "id": 19,
+    "title": "Calorie Calculator",
+    "url": "/calorie-calculator"
+  },
+  {
+    "id": 20,
+    "title": "Loan Repayment Calculator",
+    "url": "/loan-repayment-calculator"
+  },
+  {
+    "id": 21,
+    "title": "Retirement Calculator",
+    "url": "/retirement-calculator"
+
+  },
+  {
+    "id": 22,
+    "title": "Fuel Cost Calculator",
+    "url": "/fuel-cost-calculator"
+    "url": "/fuel-cost-calculator"
+  },
+  {
+    "id": 23,
+    "title": "Tip Calculator",
+    "url": "/tip-calculator"
+  },
+  {
+    "id": 24,
+    "title": "Loan Comparison Calculator",
+    "url": "/loan-comparison-calculator"
+    "url": "/loan-comparison-calculator"
+  },
+  {
+    "id": 25,
+    "title": "Health Insurance Calculator",
+    "description": "Estimate health insurance costs",
+    "url": "/health-insurance-calculator"
+  },
+  {
+    "id": 26,
+    "title": "Investment Growth Calculator",
+    "description": "Calculate investment growth over time",
+    "url": "/investment-growth-calculator"
+  } ,
+  {
+    "id": 27,
+    "title": "Expense Tracker",
+    "description": "Track your daily expenses",
+    "url": "/expense-tracker"
+  },
+  {
+    "id": 28,
+    "title": "Budget Planner",
+    "description": "Plan your monthly budget",
+    "url": "/budget-planner"
+  },
+  {
+    "id": 29,
+    "title": "Credit Score Calculator",
+    "description": "Estimate your credit score",
+    "url": "/credit-score-calculator"
+  },
+  {
+    "id": 30,
+    "title": "Debt Payoff Calculator",
+    "description": "Plan your debt repayment strategy",
+    "url": "/debt-payoff-calculator"
+  },
+  {
+    "id": 31,
+    "title": "Savings Goal Calculator",
+    "description": "Set and track your savings goals",
+    "url": "/savings-goal-calculator"
+  },
+  {
+    "id": 32,
+    "title": "Expense Splitter",
+    "description": "Split expenses among friends",
+    "url": "/expense-splitter"
+  },
+  {
+    "id": 33,
+    "title": "Loan Affordability Calculator",
+    "description": "Check how much loan you can afford",
+    "url": "/loan-affordability-calculator"
+  },
+  {
+    "id": 34,
+    "title": "Retirement Savings Calculator",
+    "description": "Estimate how much to save for retirement",
+    "url": "/retirement-savings-calculator"
+  },
+  {
+    "id": 35,
+    "title": "Health Cost Estimator",
+    "description": "Estimate healthcare costs",
+    "url": "/health-cost-estimator"
+  },
+  {
+    "id": 36,
+    "title": "Investment Risk Calculator",
+    "description": "Assess your investment risk tolerance",
+    "url": "/investment-risk-calculator"
+  },
+  {
+    "id": 37,
+    "title": "Child Education Cost Calculator",
+    "description": "Estimate costs for child education",
+    "url": "/child-education-cost-calculator"
+  },
+  {
+    "id": 38,
+    "title": "Home Renovation Cost Estimator",
+    "description": "Estimate costs for home renovations",
+    "url": "/home-renovation-cost-estimator"
+  },
+  {
+    "id": 39,
+    "title": "Travel Budget Calculator",
+    "description": "Plan your travel budget",
+    "url": "/travel-budget-calculator"
+  },
+  {
+    "id": 40,
+    "title": "Emergency Fund Calculator",
+    "description": "Calculate how much to save for emergencies",
+    "url": "/emergency-fund-calculator"
+  },
+  {
+    "id": 41,
+    "title": "Car Loan Calculator",
+    "description": "Calculate monthly payments for car loans",
+    "url": "/car-loan-calculator"
+  },
+  {
+    "id": 42,
+    "title": "Home Loan Calculator",
+    "description": "Calculate monthly payments for home loans",
+    "url": "/home-loan-calculator"
+  },
+  {
+    "id": 43,
+    "title": "Personal Loan Calculator",
+    "description": "Calculate monthly payments for personal loans",
+    "url": "/personal-loan-calculator"
+  },
+  {
+    "id": 44,
+    "title": "Business Loan Calculator",
+    "description": "Calculate monthly payments for business loans",
+    "url": "/business-loan-calculator"
+  },
+  {
+    "id": 45,
+    "title": "Student Loan Calculator",
+    "description": "Calculate monthly payments for student loans",
+    "url": "/student-loan-calculator"
+  },
+  {
+    "id": 46,
+    "title": "Credit Card Interest Calculator",
+    "description": "Calculate interest on credit card balances",
+    "url": "/credit-card-interest-calculator"
+  },
+  {
+    "id": 47,
+    "title": "Insurance Premium Calculator",
+    "description": "Estimate insurance premiums",
+    "url": "/insurance-premium-calculator"
+  },
+  {
+    "id": 48,
+    "title": "Tax Calculator",
+    "description": "Estimate your tax liabilities",
+    "url": "/tax-calculator"
+  },
+  {
+    "id": 49,
+    "title": "Retirement Withdrawal Calculator",
+    "description": "Plan withdrawals from retirement accounts",
+    "url": "/retirement-withdrawal-calculator"
+  },
+  {
+    "id": 50,
+    "title": "Financial Goal Tracker",
+    "description": "Track your financial goals",
+    "url": "/financial-goal-tracker"
+  },
+  {
+    "id": 51,
+    "title": "Investment Portfolio Tracker",
+    "description": "Track your investment portfolio performance",
+    "url": "/investment-portfolio-tracker"
+  },
+  {
+    "id": 52,
+    "title": "Expense Forecasting Tool",
+    "description": "Forecast future expenses based on trends",
+    "url": "/expense-forecasting-tool"
+  },
+  {
+    "id": 53,
+    "title": "Savings Rate Calculator",
+    "description": "Calculate your savings rate",
+    "url": "/savings-rate-calculator"
+  },
+  {
+    "id": 54,
+    "title": "Debt-to-Income Ratio Calculator",
+    "description": "Calculate your debt-to-income ratio",
+    "url": "/debt-to-income-ratio-calculator"
+  },
+  {
+    "id": 55,
+    "title": "Investment Return Calculator",
+    "description": "Calculate returns on investments",
+    "url": "/investment-return-calculator"
+  },
+  {
+    "id": 56,
+    "title": "Financial Independence Calculator",
+    "description": "Estimate when you can achieve financial independence",
+    "url": "/financial-independence-calculator"
+  },
+  {
+    "id": 57,
+    "title": "Expense Ratio Calculator",
+    "description": "Calculate the expense ratio of your investments",
+    "url": "/expense-ratio-calculator"
+  },
+  {
+    "id": 58,
+    "title": "Net Worth Calculator",
+    "description": "Calculate your net worth",
+    "url": "/net-worth-calculator"
+  },
+  {
+    "id": 59,
+    "title": "Savings Compound Interest Calculator",
+    "description": "Calculate compound interest on savings",
+    "url": "/savings-compound-interest-calculator"
+  },
+  {
+    "id": 60,
+    "title": "Investment Diversification Calculator",
+    "description": "Assess the diversification of your investment portfolio",
+    "url": "/investment-diversification-calculator"
+  },
+  {
+    "id": 61,
+    "title": "Expense Categorization Tool",
+    "description": "Categorize your expenses for better tracking",
+    "url": "/expense-categorization-tool"
+  },
+  {
+    "id": 62,
+    "title": "Financial Ratios Calculator",
+    "description": "Calculate key financial ratios for analysis",
+    "url": "/financial-ratios-calculator"
+  },
+  {
+    "id": 63,
+    "title": "Investment Fee Calculator",
+    "description": "Estimate fees associated with investments",
+    "url": "/investment-fee-calculator"
+  },
+  {
+    "id": 64,
+    "title": "Retirement Income Calculator",
+    "description": "Estimate income during retirement",
+    "url": "/retirement-income-calculator"
+  },
+  {
+    "id": 65,
+    "title": "Financial Planning Checklist",
+    "description": "A checklist for effective financial planning",
+    "url": "/financial-planning-checklist"
+  },
+  {
+    "id": 66,
+    "title": "Expense Reduction Calculator",
+    "description": "Identify areas to reduce expenses",
+    "url": "/expense-reduction-calculator"
+  },
+  {
+    "id": 67,
+    "title": "Investment Tax Calculator",
+    "description": "Estimate taxes on investment gains",
+    "url": "/investment-tax-calculator"
+  },
+  {
+    "id": 68,
+    "title": "Financial Literacy Quiz",
+    "description": "Test your financial knowledge",
+    "url": "/financial-literacy-quiz"
+  },
+  {
+    "id": 69,
+    "title": "Emergency Budget Calculator",
+    "description": "Create a budget for emergencies",
+    "url": "/emergency-budget-calculator"
+  },
+  {
+    "id": 70,
+    "title": "Investment Horizon Calculator",
+    "description": "Determine your investment horizon",
+    "url": "/investment-horizon-calculator"
+  },
+  {
+    "id": 71,
+    "title": "Financial Goal Setting Tool",
+    "description": "Set and track your financial goals",
+    "url": "/financial-goal-setting-tool"
+  },
+  {
+    "id": 72,
+    "title": "Expense Tracking App",
+    "description": "An app to track your daily expenses",
+    "url": "/expense-tracking-app"
+  },
+  {
+    "id": 73,
+    "title": "Investment Strategy Planner",
+    "description": "Plan your investment strategy",
+    "url": "/investment-strategy-planner"
+  },
+  {
+    "id": 74,
+    "title": "Financial Health Assessment",
+    "description": "Assess your financial health",
+    "url": "/financial-health-assessment"
+  },
+  {
+    "id": 75,
+    "title": "Expense Comparison Tool",
+    "description": "Compare expenses across different categories",
+    "url": "/expense-comparison-tool"
+  },
+  {
+    "id": 76,
+    "title": "Investment Performance Tracker"
+  },
+  {
+    "id": 75,
+    "title": "Expense Comparison Tool",
+    "description": "Compare expenses across different categories",
+    "url": "/expense-comparison-tool"
+  },
+  {
+    "id": 76,
+    "title": "Investment Performance Tracker",
+    "description": "Track the performance of your investments",
+    "url": "/investment-performance-tracker"
+  },
+  {
+    "id": 77,
+    "title": "Financial Goal Progress Tracker",
+    "description": "Track progress towards your financial goals",
+    "url": "/financial-goal-progress-tracker"
+  },
+  {
+    "id": 78,
+    "title": "Expense Forecasting App",
+    "description": "An app to forecast future expenses",
+    "url": "/expense-forecasting-app"
+  },
+  {
+    "id": 79,
+    "title": "Investment Allocation Calculator",
+    "description": "Calculate optimal investment allocation",
+    "url": "/investment-allocation-calculator"
+  },
+  {
+    "id": 80,
+    "title": "Financial Planning Guide",
+    "description": "A comprehensive guide to financial planning",
+    "url": "/financial-planning-guide"
+  } ,
+  {
+    "id": 81,
+    "title": "Expense Management Tool",
+    "description": "Manage your expenses effectively",
+    "url": "/expense-management-tool"
+  },
+  {
+    "id": 82,
+    "title": "Investment Risk Assessment Tool",
+    "description": "Assess the risk of your investments",
+    "url": "/investment-risk-assessment-tool"
+  },
+  {
+    "id": 83,
+    "title": "Financial Goal Achievement Tracker",
+    "description": "Track achievement of your financial goals",
+    "url": "/financial-goal-achievement-tracker"
+  },
+  {
+    "id": 84,
+    "title": "Expense Reporting Tool",
+    "description": "Generate reports on your expenses",
+    "url": "/expense-reporting-tool"
+  },
+  {
+    "id": 85,
+    "title": "Investment Portfolio Analysis Tool",
+    "description": "Analyze your investment portfolio",
+    "url": "/investment-portfolio-analysis-tool"
+  },
+  {
+    "id": 86,
+    "title": "Financial Planning Software",
+    "description": "Software for comprehensive financial planning",
+    "url": "/financial-planning-software"
+  },
+  {
+    "id": 87,
+    "title": "Expense Tracking Software",
+    "description": "Software to track and manage expenses",
+    "url": "/expense-tracking-software"
+  },
+  {
+    "id": 88,
+    "title": "Investment Management Tool",
+    "url": "/investment-management-tool"
+  },
+  {
+    "id": 89,
+    "title": "Financial Planning App",
+    "url": "/financial-planning-app"
+  },
+  {
+    "id": 90,
+    "title": "Expense Tracking App",
+    "url": "/expense-tracking-app"
+  },
+  {
+    "id": 91,
+    "title": "Investment Portfolio Management App",
+    "url": "/investment-portfolio-management-app"
+  },
+  {
+    "id": 92,
+    "title": "Financial Planning Dashboard",
+    "url": "/financial-planning-dashboard"
+  },
+  {
+    "id": 93,
+    "title": "Expense Tracking Dashboard",
+    "url": "/expense-tracking-dashboard"
+  },
+  {
+    "id": 94,
+    "title": "Investment Portfolio Dashboard",
+    "url": "/investment-portfolio-dashboard"
+  },
+  {
+    "id": 95,
+    "title": "Financial Planning Tools",
+    "url": "/financial-planning-tools"
+  },
+  {
+    "id": 96,
+    "title": "Expense Tracking Tools",
+    "url": "/expense-tracking-tools"
+  },
+  {
+    "id": 97,
+    "title": "Investment Portfolio Tools",
+    "url": "/investment-portfolio-tools"
+  },
+  {
+    "id": 98,
+    "title": "Financial Planning Resources",
+    "url": "/financial-planning-resources"
+  },
+  {
+    "id": 99,
+    "title": "Expense Tracking Resources",
+    "url": "/expense-tracking-resources"
+  },
+  {
+    "id": 100,
+    "title": "Investment Portfolio Resources",
+    "url": "/investment-portfolio-resources"
+  } 
+]
+

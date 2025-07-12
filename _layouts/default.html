@@ -41,5 +41,65 @@
 <!-- Bootstrap JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="Z0/t0hcMJ93aJQJzxKnVPA" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+<script>
+  let idx;
+  let documents = [];
+
+  fetch('/search.json')
+    .then(res => res.json())
+    .then(json => {
+      documents = json;
+
+      idx = lunr(function () {
+        this.ref('url');
+        this.field('title');
+        this.field('description');
+
+        documents.forEach(doc => this.add(doc));
+      });
+
+      const query = new URLSearchParams(window.location.search).get('q');
+      if (query) {
+        document.getElementById('searchBox').value = query;
+        performSearch(query);
+      }
+    });
+
+  document.getElementById('searchBox').addEventListener('input', function () {
+    const query = this.value.trim();
+    if (query.length >= 2) {
+      performSearch(query);
+    } else {
+      document.getElementById('results').innerHTML = '';
+    }
+  });
+
+  function performSearch(query) {
+    const resultsBox = document.getElementById('results');
+    resultsBox.innerHTML = '';
+
+    if (!idx || !query) return;
+
+    const results = idx.search(query).slice(0, 5); // Limit to top 5 results
+
+    if (results.length === 0) {
+      resultsBox.innerHTML = '<li>No results found.</li>';
+      return;
+    }
+
+    results.forEach(result => {
+      const match = documents.find(doc => doc.url === result.ref);
+      resultsBox.innerHTML += `
+        <li>
+          <a href="${match.url}">${match.title}</a><br>
+          <small>${match.description}</small>
+        </li>
+      `;
+    });
+  }
+</script>
+
+
 </body>
 </html>
