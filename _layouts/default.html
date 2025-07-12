@@ -33,11 +33,8 @@
 </head>
 <body>
 {% include header.html %}
-<br><br>
-
 <main class="container my-2">
-{% raw %}{% include search.html %}{% endraw %}
-<script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+
 {{ content }}
 </main>
 {% include footer.html %}
