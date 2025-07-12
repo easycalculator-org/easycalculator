@@ -1,0 +1,12 @@
+{% raw %}---
+layout: null
+---
+[
+  {% for item in site.data.urls %}
+    {
+      "url": "{{ item.url | escape }}",
+      "title": "{{ item.title | escape }}",
+      "description": "{{ item.description | escape }}"
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]{% endraw %}
