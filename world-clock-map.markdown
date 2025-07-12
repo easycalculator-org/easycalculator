@@ -1,20 +1,16 @@
 ---
 layout: default
-title: World Clock Map |  Time zone map
+title: World Clock Map | Interactive Time Zone Map with Live Time
 permalink: /world-clock-map
 description: "World Clock Map with Time Zones – Click anywhere on the map to see local time zone, date, city and country. Features digital & analog clocks for real-time tracking!"
 ---
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 <link rel="stylesheet" href="/assets/css/world-clock-map.css">
-
-
 <div class="container mt-4">
 <h1 class="text-center">World Clock Map</h1>
 <div id="map"></div>
 
-<div class="alert alert-info mt-3 text-center" id="time-display">
-        Click on the map to see the time.
-</div>
+<div class="alert alert-info mt-3 text-center" id="time-display"> Click on the map to see the time.</div>
 
  <!-- Clock Display -->
  <div class="clock-container mt-3">
