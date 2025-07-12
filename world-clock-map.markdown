@@ -29,7 +29,6 @@ description: "World Clock Map with Time Zones – Click anywhere on the map to s
     </div>
 </div>
 <!-- Article -->
- <div class="p-4">
 <h3>What is the World Clock?</h3>
 <p>The World Clock Map is an interactive tool that lets you click anywhere on a world map to see the current time, date, city, country, time zone, and coordinates for that location.<br> With both digital and analog clocks, you can easily check the local time anywhere in the world. Whether you're a traveler, a business professional, or just curious about global time zones, our app provides the most advanced and accurate real-time information.<br>
 
@@ -43,8 +42,17 @@ description: "World Clock Map with Time Zones – Click anywhere on the map to s
 <strong> For Students & Researchers: </strong>
 Need to track global events, stock market timings, or scientific studies? This clock map gives you precise time zone insights in seconds.</p>
 <h4>Time zone map</h4>
-<img src="/assets/images/world-time-zone-map.png" alt="time zone world clock map">
- </div>
+<!-- time zone map image and css, script  -->
+<script type="text/javascript"  src="/assets/js/world-clockmap3.js"></script>
+<link rel="stylesheet" href="{{ '/assets/css/worldmap.css' | relative_url }}">
+<div data-page-type="world-map-timezones">
+<div class="ad-container-wtd"><div data-fuse="23203724861" id="div-gpt-ad-1" class="margin-bottom-15"></div> </div>
+<div id="timezones-map" style="width: 100%; height: 700px; margin-bottom: 0.8em;"></div>
+<script type="text/javascript" src="/assets/js/world-clock-map-scripts.js"></script>
+<script type="text/javascript" src="/assets/js/world-clock-map-moment-with-data.js"></script>
+<script type="text/javascript" src="/assets/js/world-clockmap2.js"></script>
+<!-- time zone map image and css, script  -->
+
 
 
 <!-- Leaflet JS -->
