@@ -1,6 +1,6 @@
 a {text-decoration: none;}
 a:hover {text-decoration: none;}
-
+ .navbar-toggler {    border: none !important;    box-shadow: none !important;    outline: none !important;    background: transparent !important;  }
 .calculator-box{background:#fff;padding:20px;border-radius:10px;transition:.3s ease-in-out;box-shadow:0 4px 8px rgba(0,0,0,.2);text-decoration:none}
 .calculator-box:hover {box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);transform: translateY(-5px);}
 
