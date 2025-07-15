@@ -96,9 +96,11 @@ image: "/assets/images/apple-touch-icon.png"
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/loan-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl" style="color: #1968f0;"></i><h5>Loan Calculator</h5></div></a></div> 
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/sip-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-bill-wheat fa-xl" style="color: #B197FC;"></i><h5>SIP Calculator</h5></div></a></div> 
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/mortgage-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl" style="color:rgb(247, 86, 37);"></i><h5>Mortgage Calculator (USA)</h5></div></a></div> 
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/debt-avalanche-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-scale-unbalanced-flip fa-xl" style="color:rgb(33, 236, 118);"></i><h5>Debt Avalanche Calculato</h5></div></a></div>           
-  </div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/debt-avalanche-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-scale-unbalanced-flip fa-xl" style="color:rgb(33, 236, 118);"></i><h5>Debt Avalanche Calculator</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/loan-comparison-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-code-compare fa-xl"></i><h5>Loan Comparison Calculator</h5></div></a></div>    
 
+  </div>
+<!-- Finance Calculator close -->
 
 
 
@@ -106,10 +108,8 @@ image: "/assets/images/apple-touch-icon.png"
 <hr>
 <h2>Conversion Tool</h2>
 <div class="row p-3 ">
-
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/number-to-word-converter"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-up-a-z fa-xl" style="color: #B197FC;"></i><h5>Num to Word</h5></div></a> </div>
  <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-weight-scale fa-xl"></i><h5>Weight Converter</h5></div> </a></div>
-
  <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-gauge fa-xl" style="color: #B197FC;"></i><h5>Speed Converter</h5></div></a></div>
  <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-shapes fa-xl" style="color: #B197FC;"></i><h5>Area Converter</h5></div></a></div></div>
 
@@ -126,7 +126,6 @@ image: "/assets/images/apple-touch-icon.png"
 <hr>
 <h2>Geolocation Tool</h2>
 <div class="row g-1 p-3 ">
-
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/what-is-my-ip"><div class="calculator-box text-center"><i class="fa-solid fa-network-wired fa-xl" style="color: #B197FC;"></i><h5>My IP Address</h5></div></a> </div>    
  <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/utm-zone-map"><div class="calculator-box text-center"><i class="fa-solid fa-location-dot fa-xl" style="color: #63E6BE;"></i><h5>UTM Zone Map</h5></div> </a></div>
  <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/military-grid-reference-system-converter"><div class="calculator-box text-center"><i class="fas fa-location-dot fa-xl"></i><h5>MGRS Converter</h5></div></a></div>
