@@ -1,7 +1,7 @@
  // Card data from JSON
        let cardData = [];
 
-fetch('/assets/credit.json')
+fetch('/assets/json/credit.json')
   .then(response => response.json())
   .then(data => {
     cardData = data;
@@ -12,50 +12,27 @@ fetch('/assets/credit.json')
     console.error('Error loading card data:', error);
   });
 
-        // DOM Elements
-        const cardForm = document.getElementById('cardForm');
+// DOM Elements
         const cardNumberInput = document.getElementById('cardNumber');
-        const cardHolderInput = document.getElementById('cardHolder');
-        const cardExpiryInput = document.getElementById('cardExpiry');
-        const cardCVVInput = document.getElementById('cardCVV');
-        
-        // Display elements
         const displayCardNumber = document.getElementById('displayCardNumber');
-        const displayCardHolder = document.getElementById('displayCardHolder');
-        const displayCardExpiry = document.getElementById('displayCardExpiry');
-        const displayCardCVV = document.getElementById('displayCardCVV');
-        
-        // Result elements
-        const cardTypeResult = document.getElementById('cardTypeResult');
-        const cardStatus = document.getElementById('cardStatus');
+        const validateBtn = document.getElementById('validateBtn');
+        const cardBrand = document.getElementById('cardBrand');
+        const cardTypeEl = document.getElementById('cardType');
+        const cardBrandLogo = document.getElementById('cardBrandLogo');
+        const resultBrandLogo = document.getElementById('resultBrandLogo');
+        const issuerLogo = document.getElementById('issuerLogo');
+        const issuerName = document.getElementById('issuerName');
+        const cardCategory = document.getElementById('cardCategory');
+        const countryFlag = document.getElementById('countryFlag');
+        const countryName = document.getElementById('countryName');
         const lengthCheck = document.getElementById('lengthCheck');
         const numberCheck = document.getElementById('numberCheck');
         const binCheck = document.getElementById('binCheck');
         const validationProgress = document.getElementById('validationProgress');
+        const progressPercent = document.getElementById('progressPercent');
+        const cardStatus = document.getElementById('cardStatus');
         const historyContainer = document.getElementById('historyContainer');
-        const cardDetailsSection = document.getElementById('cardDetailsSection');
-        
-        // Card details elements
-        const issuerLogo = document.getElementById('issuerLogo');
-        const issuerName = document.getElementById('issuerName');
-        const cardCategory = document.getElementById('cardCategory');
-        const countryLogo = document.getElementById('countryLogo');
-        const countryName = document.getElementById('countryName');
-        const cardType = document.getElementById('cardType');
-        
-        // Card flip functionality
-        const creditCard = document.querySelector('.credit-card');
-        const flipBtn = document.getElementById('flipBtn');
-        const flipBackBtn = document.getElementById('flipBackBtn');
-        
-        flipBtn.addEventListener('click', () => {
-            creditCard.classList.add('flipped');
-        });
-        
-        flipBackBtn.addEventListener('click', () => {
-            creditCard.classList.remove('flipped');
-        });
-        
+
         // Format card number input
         cardNumberInput.addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, '');
@@ -68,76 +45,8 @@ fetch('/assets/credit.json')
             
             e.target.value = formatted;
             displayCardNumber.textContent = formatted || '•••• •••• •••• ••••';
-            
-            // Detect card type as user types
-            detectCardType(value);
         });
-        
-        // Format expiry date input
-        cardExpiryInput.addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, '');
-            
-            if (value.length > 2) {
-                value = value.slice(0, 2) + '/' + value.slice(2, 4);
-            }
-            
-            e.target.value = value;
-            displayCardExpiry.textContent = value || '••/••';
-        });
-        
-        // Update card holder display
-        cardHolderInput.addEventListener('input', function(e) {
-            displayCardHolder.textContent = e.target.value || 'John Doe';
-        });
-        
-        // Update CVV display
-        cardCVVInput.addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, '');
-            e.target.value = value;
-            displayCardCVV.textContent = value || '•••';
-        });
-        
-        // Detect card type based on BIN
-        function detectCardType(cardNumber) {
-            const bin = cardNumber.substring(0, 6);
-            let detectedCard = null;
-            
-            // Find matching BIN in cardData
-            for (const card of cardData) {
-                if (card.bin === bin) {
-                    detectedCard = card;
-                    break;
-                }
-            }
-            
-            // Update card logo and styling
-            const cardLogo = document.querySelector('.card-logo i');
-            if (detectedCard) {
-                // Update card brand logo
-                const brand = detectedCard.card_brand.toLowerCase();
-                if (brand.includes('visa')) {
-                    cardLogo.className = 'fab fa-cc-visa';
-                    cardLogo.style.color = 'var(--visa-blue)';
-                } else if (brand.includes('master')) {
-                    cardLogo.className = 'fab fa-cc-mastercard';
-                    cardLogo.style.color = 'var(--mastercard-red)';
-                } else if (brand.includes('amex')) {
-                    cardLogo.className = 'fab fa-cc-amex';
-                    cardLogo.style.color = 'var(--amex-blue)';
-                } else {
-                    cardLogo.className = 'fab fa-credit-card';
-                    cardLogo.style.color = '#6c757d';
-                }
-                
-                // Also update the back logo
-                document.querySelector('.card-back .card-logo i').className = cardLogo.className;
-            } else {
-                cardLogo.className = 'fab fa-credit-card';
-                cardLogo.style.color = '#6c757d';
-                document.querySelector('.card-back .card-logo i').className = 'fab fa-credit-card';
-            }
-        }
-        
+
         // Validate card using Luhn algorithm
         function validateCardNumber(cardNumber) {
             const num = cardNumber.replace(/\D/g, '');
@@ -160,7 +69,7 @@ fetch('/assets/credit.json')
             
             return (sum % 10) === 0;
         }
-        
+
         // Find card details by BIN
         function findCardByBin(cardNumber) {
             const bin = cardNumber.substring(0, 6);
@@ -171,19 +80,20 @@ fetch('/assets/credit.json')
             }
             return null;
         }
-        
+
         // Validate the entire card
         function validateCard() {
             const cardNumber = cardNumberInput.value.replace(/\D/g, '');
             const cardDetails = findCardByBin(cardNumber);
             
             // Reset validation UI
-            lengthCheck.innerHTML = '<i class="fas fa-times text-danger"></i>';
-            numberCheck.innerHTML = '<i class="fas fa-times text-danger"></i>';
-            binCheck.innerHTML = '<i class="fas fa-times text-danger"></i>';
+            lengthCheck.innerHTML = '<i class="fas fa-times-circle text-danger"></i>';
+            numberCheck.innerHTML = '<i class="fas fa-times-circle text-danger"></i>';
+            binCheck.innerHTML = '<i class="fas fa-times-circle text-danger"></i>';
             validationProgress.style.width = '0%';
-            validationProgress.className = 'progress-bar';
-            cardDetailsSection.style.display = 'none';
+            progressPercent.textContent = '0%';
+            cardStatus.textContent = 'Validating...';
+            cardStatus.className = 'fw-bold fs-5 text-primary';
             
             // Validation checks
             let validLength = false;
@@ -193,80 +103,89 @@ fetch('/assets/credit.json')
             // Check length
             if (cardNumber.length >= 13 && cardNumber.length <= 19) {
                 validLength = true;
-                lengthCheck.innerHTML = '<i class="fas fa-check text-success"></i>';
+                lengthCheck.innerHTML = '<i class="fas fa-check-circle text-success"></i>';
             }
             
             // Check number validity
             validNumber = validateCardNumber(cardNumber);
             if (validNumber) {
-                numberCheck.innerHTML = '<i class="fas fa-check text-success"></i>';
+                numberCheck.innerHTML = '<i class="fas fa-check-circle text-success"></i>';
             }
             
             // Check if BIN found
             if (cardDetails) {
                 validBin = true;
-                binCheck.innerHTML = '<i class="fas fa-check text-success"></i>';
+                binCheck.innerHTML = '<i class="fas fa-check-circle text-success"></i>';
                 
-                // Update card type display
-                let iconClass = 'fab fa-credit-card';
-                let brandName = cardDetails.card_brand;
+                // Update card brand display
+                cardBrand.textContent = cardDetails.card_brand;
+                cardTypeEl.textContent = cardDetails.card_type;
                 
-                if (brandName.toLowerCase().includes('visa')) {
-                    iconClass = 'fab fa-cc-visa';
-                    cardTypeResult.className = 'card-type visa';
-                } else if (brandName.toLowerCase().includes('master')) {
-                    iconClass = 'fab fa-cc-mastercard';
-                    cardTypeResult.className = 'card-type mastercard';
-                } else if (brandName.toLowerCase().includes('amex')) {
-                    iconClass = 'fab fa-cc-amex';
-                    cardTypeResult.className = 'card-type amex';
+                // Update card brand logos
+                if (cardDetails.card_brand_logo) {
+                    cardBrandLogo.innerHTML = `<img src="${cardDetails.card_brand_logo}" alt="${cardDetails.card_brand}" onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-credit-card text-white\' style=\'font-size:2.5rem;\'></i>'">`;
+                    resultBrandLogo.innerHTML = `<img src="${cardDetails.card_brand_logo}" alt="${cardDetails.card_brand}" onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-credit-card\'></i>'">`;
                 } else {
-                    cardTypeResult.className = 'card-type';
+                    cardBrandLogo.innerHTML = `<i class="fas fa-credit-card text-white" style="font-size: 2.5rem;"></i>`;
+                    resultBrandLogo.innerHTML = `<i class="fas fa-credit-card"></i>`;
                 }
                 
-                cardTypeResult.innerHTML = `
-                    <i class="${iconClass} card-icon"></i>
-                    <span>${brandName}</span>
-                `;
+                // Handle issuer information
+                if (cardDetails.issuer_name.includes("not assigned")) {
+                    issuerLogo.innerHTML = '<div class="not-assigned"><i class="fas fa-ban me-2"></i>Not Assigned</div>';
+                    issuerName.textContent = "Not assigned to any bank";
+                } else {
+                    if (cardDetails.issuer_name_logo) {
+                        issuerLogo.innerHTML = `<img src="${cardDetails.issuer_name_logo}" alt="${cardDetails.issuer_name}" onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-university\'></i>'">`;
+                    } else {
+                        issuerLogo.innerHTML = '<i class="fas fa-university"></i>';
+                    }
+                    issuerName.textContent = cardDetails.issuer_name;
+                }
                 
-                // Show card details
-                issuerLogo.src = cardDetails.issuer_name_logo || 'https://via.placeholder.com/50?text=Bank';
-                issuerName.textContent = cardDetails.issuer_name;
                 cardCategory.textContent = cardDetails.card_category;
-                countryLogo.src = cardDetails.country_logo || 'https://via.placeholder.com/50?text=Flag';
+                
+                // Update country info
+                if (cardDetails.country_logo) {
+                    countryFlag.innerHTML = `<img src="${cardDetails.country_logo}" alt="${cardDetails.country_name}" onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-flag\'></i>'">`;
+                } else {
+                    countryFlag.innerHTML = '<i class="fas fa-flag"></i>';
+                }
                 countryName.textContent = cardDetails.country_name;
-                cardType.textContent = cardDetails.card_type;
-                cardDetailsSection.style.display = 'block';
             } else {
-                cardTypeResult.innerHTML = `
-                    <i class="fab fa-credit-card card-icon"></i>
-                    <span>Unknown</span>
-                `;
-                cardTypeResult.className = 'card-type';
+                // Reset card details
+                cardBrand.textContent = "Card Brand";
+                cardTypeEl.textContent = "Card Type";
+                cardBrandLogo.innerHTML = '<i class="fas fa-credit-card text-white" style="font-size: 2.5rem;"></i>';
+                resultBrandLogo.innerHTML = '<i class="fas fa-credit-card"></i>';
+                issuerLogo.innerHTML = '<i class="fas fa-university"></i>';
+                issuerName.textContent = "Bank Name";
+                cardCategory.textContent = "Card Category";
+                countryFlag.innerHTML = '<i class="fas fa-flag"></i>';
+                countryName.textContent = "Country Name";
             }
             
             // Update validation progress
             const validChecks = [validLength, validNumber, validBin].filter(Boolean).length;
             const progress = (validChecks / 3) * 100;
             validationProgress.style.width = `${progress}%`;
+            progressPercent.textContent = `${Math.round(progress)}%`;
             
             // Update status
             if (validLength && validNumber && validBin) {
                 cardStatus.textContent = 'Valid Card';
-                cardStatus.className = 'text-success fw-bold';
+                cardStatus.className = 'fw-bold fs-5 text-success';
                 validationProgress.className = 'progress-bar bg-success';
             } else {
                 cardStatus.textContent = 'Invalid Card';
-                cardStatus.className = 'text-danger fw-bold';
+                cardStatus.className = 'fw-bold fs-5 text-danger';
                 validationProgress.className = 'progress-bar bg-danger';
             }
             
             // Add to history
             addToHistory(cardNumber, validLength && validNumber && validBin);
-            
-            return validLength && validNumber && validBin;
         }
-        
+
         // Add validation to history
         function addToHistory(cardNumber, isValid) {
             // Create history item
@@ -285,7 +204,7 @@ fetch('/assets/credit.json')
                     <div class="small text-muted">${new Date().toLocaleString()}</div>
                 </div>
                 <div>
-                    <span class="badge ${isValid ? 'bg-success' : 'bg-danger'}">
+                    <span class="badge ${isValid ? 'bg-success' : 'bg-danger'} rounded-pill p-2">
                         ${isValid ? 'Valid' : 'Invalid'}
                     </span>
                 </div>
@@ -304,21 +223,23 @@ fetch('/assets/credit.json')
                 historyContainer.removeChild(historyContainer.lastChild);
             }
         }
-        
-        // Form submission handler
-        cardForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+
+        // Validate button handler
+        validateBtn.addEventListener('click', function() {
+            if (cardNumberInput.value.trim() === '') {
+                alert('Please enter a card number');
+                return;
+            }
             validateCard();
         });
-        
+
         // Initialize with sample valid card
         function initSampleCard() {
-            const sampleCard = '1234567890123456';
+            const sampleCard = '3645661234567890';
             const formatted = sampleCard.replace(/(\d{4})(?=\d)/g, '$1 ');
             cardNumberInput.value = formatted;
             displayCardNumber.textContent = formatted;
-            detectCardType(sampleCard);
         }
-        
+
         // Initialize
         initSampleCard();
