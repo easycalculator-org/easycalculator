@@ -3,7 +3,7 @@ layout: default
 title: What Is My Address? Instantly Find Your Current Location and Address
 permalink: /what-is-my-address
 description: "Find your current address and location with a single click. Use our free What Is My Address tool to get your real-time street, city, state, ZIP code, and coordinates instantly—no sign-up required!"
-image: "/assets/images/what-is-my-address1.jpg
+image: "/assets/images/what-is-my-address1.jpg"
 ---
 <style>.card-modern{border:none;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.07);background:#fff}#map{width:100%;height:100%;min-height:400px;border-radius:16px}.spinner-border{width:3rem;height:3rem}.list-group-item{border:none;padding:.75rem 0}.section-title{font-weight:700;font-size:1.5rem}
   </style>
