@@ -7,16 +7,7 @@ image: "/assets/images/credit-card-validator.png"
 ---
 <style>
        
-        .card-display {
-            /* background: linear-gradient(135deg, #2c3e50, #4a6491);
-            border-radius: 12px;
-            color: white;
-            padding: 25px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            position: relative;
-            overflow: hidden; */
-             /* width: 400px; */
+ .card-display {
       height: 250px;
       border-radius: 15px;
       color: white;
@@ -236,7 +227,7 @@ image: "/assets/images/credit-card-validator.png"
      
     </style>
  <div class="row">
-    <h1 class="mb-3">Credit Card Validator</h1>
+    <h1 class="mb-3 text-center text-primary">Credit Card Validator</h1>
 <!-- left side -->
  <div class="col-md-6">
         <div class="card-display">
@@ -254,17 +245,8 @@ image: "/assets/images/credit-card-validator.png"
           <div>12/29</div>
         </div>
       </div>
-            <!-- <div class="card-details">
-                <div class="card-holder">
-                    <div class="small">CARD HOLDER</div>
-                    <div id="displayCardHolder">JOHN DOE</div>
-                </div>
-                <div class="card-expiry">
-                    <div class="small">EXPIRES</div>
-                    <div id="displayCardExpiry">••/••</div>
-                </div>
-            </div> -->
         </div>
+        <br>
         <div class="validator-container shadow">
             <h3 class="mb-4"><i class="fas fa-credit-card me-2"></i>Card Validation</h3>
             <div class="mb-4">
@@ -354,6 +336,41 @@ image: "/assets/images/credit-card-validator.png"
             </div>
         </div>
     </div>
+
+
+<!-- Article Content -->
+ <div class="article-container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <div class="d-flex align-items-center">
+          <div class=" p-2 "></div>
+          <div>{% include narendra.html %}</div>
+        </div>
+        <div class="text-muted p-3">
+          <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}
+        </div>
+      </div>
+
+<!-- Section -->
+<section class="mb-5">
+ <h2>Credit Card Validator – Instantly Validate and Verify Credit Card Numbers</h2>
+   <p>Looking to validate or verify a credit card number? Our free credit card validation tool allows you to instantly perform a credit card validity check using the official Luhn algorithm. This tool is designed to help users, developers, and merchants ensure that a credit card number is structurally valid and issued by a recognized card network.</p>
+  
+  <h2 class="card-title text-primary">What Is a Credit Card Validator?</h2>
+      <p class="card-text">A credit card validator is an online tool that checks if a credit card number is correctly formatted and valid, based on the standard credit card validator algorithm (Luhn algorithm). It helps detect typing mistakes or invalid card numbers before submitting them for payment or processing.<br>⚠️ This tool does not generate fake card numbers. It only validates existing card numbers issued by banks or credit card networks.</p>
+    <div class="bg-light p-4 rounded mt-4">
+      <h4 class="text-primary"><i class="fas fa-star me-2"></i>Why Use Our Credit Card Validator Checker?</h4><p>Our credit card validator checker is perfect for:</p>
+        <ul class="list-group list-group-flush">
+         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>E-commerce businesses verifying user entries</li>
+         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Developers testing form validation logic</li>
+         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Users double-checking credit card numbers for errors</li>
+         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Preventing invalid entries before payment attempts</li>
+         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>validation during netflix subcription</li>
+        </ul>
+     </div>
+ 
+
+
+
 
 <script src="/assets/js/credit-card-validate.js"></script>
 
