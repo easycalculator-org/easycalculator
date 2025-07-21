@@ -75,6 +75,57 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
             font-size: 1.5rem;
             font-weight: bold;
         }
+         .chart-modal .modal-dialog {
+            max-width: 900px;
+        }
+        .chart-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .chart-table th {
+            background-color: #0d6efd;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        .chart-table td {
+            padding: 6px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+            font-size: 0.85rem;
+        }
+        .chart-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        .brand-logo {
+            font-weight: 700;
+            color: #0d6efd;
+            font-size: 1.2rem;
+        }
+        .brand-logo span {
+            color: #fd7e14;
+        }
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            .chart-print, .chart-print * {
+                visibility: visible;
+            }
+            .chart-print {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                margin: 0;
+                padding: 15px;
+                font-size: 12px;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
         @media (max-width: 768px) {
             .converter-col {
                 margin-bottom: 30px;
@@ -104,9 +155,7 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
                             </div>
                         </div>
                         <div class="text-center mt-auto">
-                            <button class="btn btn-convert text-white w-100" onclick="convertToRoman()">
-                                <i class="fas fa-exchange-alt me-2"></i>Convert
-                            </button>
+                            <button class="btn btn-convert text-white w-100" onclick="convertToRoman()"> <i class="fas fa-exchange-alt me-2"></i>Convert </button>
                         </div>
                         <div class="mt-4 p-3 result-box">
                             <h5 class="d-flex align-items-center">
@@ -233,14 +282,11 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="text-center mt-3">
-                                <button class="btn btn-outline-info">
-                                    <i class="bi bi-download me-2"></i>Download Full Chart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+           <div class="text-center mt-3">
+            <button class="btn btn-primary btn-lg px-5 py-3 mb-4" data-bs-toggle="modal" data-bs-target="#chartModal"><i class="bi bi-table me-2"></i>View Full Chart</button> </div>
+            </div>
+        </div>
+        </div>
 
 
 
@@ -292,7 +338,59 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
   <li><p class="mb-0">There's no symbol for zero in the Roman numeral system. The concept of "zero" came later from Arabic numerals.</p></li>
   <li><p>Roman numerals are still used in modern clocks, movie sequels (e.g., Rocky II, III, IV), and the Olympics.</p></li></ul>
  </div>
-
+<!-- Chart Modal -->
+    <div class="modal fade chart-modal" id="chartModal" tabindex="-1" aria-labelledby="chartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="chartModalLabel">Roman Numerals 1-100 Chart</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-between mb-3">
+                        <span class="brand-logo">easy<span>calculator</span>.org</span>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-sm btn-success" onclick="window.print()">
+                                <i class="bi bi-printer-fill me-1"></i>Print
+                            </button>
+                            <button class="btn btn-sm btn-danger" id="downloadPdfBtn">
+                                <i class="bi bi-file-earmark-pdf-fill me-1"></i>Download PDF
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chart-print">
+                        <div class="table-responsive">
+                            <table class="chart-table">
+                                <thead>
+                                    <tr>
+                                        <th>Number</th>
+                                        <th>Roman</th>
+                                        <th>Number</th>
+                                        <th>Roman</th>
+                                        <th>Number</th>
+                                        <th>Roman</th>
+                                        <th>Number</th>
+                                        <th>Roman</th>
+                                        <th>Number</th>
+                                        <th>Roman</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Rows will be inserted by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-4 small text-muted text-center">
+                            <p>Generated by easycalculator.org on <span id="currentDate"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -303,4 +401,5 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
 
 
 <script src="{{ '/assets/js/roman.js' | relative_url }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
