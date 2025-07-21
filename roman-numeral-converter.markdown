@@ -12,24 +12,19 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
             --light-color: #f8f9fa;
             --dark-color: #343a40;
         }
-        
-     
-        .converter-card {
+         .converter-card {
             border-radius: 15px;
             border: none;
             box-shadow: 0 10px 30px rgba(108, 99, 255, 0.2);
             transition: transform 0.3s ease;
         }
-        
         .converter-card:hover {
             transform: translateY(-5px);
         }
-        
         .card-header {
             border-radius: 15px 15px 0 0 !important;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
         }
-        
         .btn-convert {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             border: none;
@@ -39,22 +34,18 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
             letter-spacing: 0.5px;
             transition: all 0.3s ease;
         }
-        
         .btn-convert:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
         }
-        
         .result-box {
             background-color: rgba(108, 99, 255, 0.05);
             border-left: 4px solid var(--primary-color);
             border-radius: 8px;
         }
-        
         .input-field {
             position: relative;
         }
-        
         .input-field i {
             position: absolute;
             left: 15px;
@@ -62,26 +53,39 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
             transform: translateY(-50%);
             color: var(--primary-color);
         }
-        
         .input-field input {
             padding-left: 45px;
             border-radius: 8px;
             border: 1px solid #dee2e6;
             height: 50px;
         }
-        
+         .roman-header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+        }
+        .symbol-card {
+            transition: transform 0.3s;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .symbol-card:hover {
+            transform: translateY(-5px);
+        }
+        .symbol-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
         @media (max-width: 768px) {
             .converter-col {
                 margin-bottom: 30px;
             }
         }
     </style>
-<div class="container py-5">
-        <div class="text-center mb-5">
+<div class="container py-1">
+        <div class="text-center mb-1">
             <h1 class="display-4 fw-bold">Roman Numeral Converter</h1>
             <p class="lead text-muted">Convert between numbers and Roman numerals with ease</p>
         </div>
-        
         <div class="row justify-content-center">
             <!-- Number to Roman Converter -->
             <div class="col-lg-5 col-md-6 converter-col">
@@ -99,13 +103,11 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
                                 <input type="number" class="form-control" id="numberInput" min="1" max="3999" placeholder="e.g. 42">
                             </div>
                         </div>
-                        
                         <div class="text-center mt-auto">
                             <button class="btn btn-convert text-white w-100" onclick="convertToRoman()">
                                 <i class="fas fa-exchange-alt me-2"></i>Convert
                             </button>
                         </div>
-                        
                         <div class="mt-4 p-3 result-box">
                             <h5 class="d-flex align-items-center">
                                 <i class="fas fa-history me-2"></i>Result:
@@ -115,7 +117,6 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
                     </div>
                 </div>
             </div>
-            
             <!-- Roman to Number Converter -->
             <div class="col-lg-5 col-md-6 converter-col">
                 <div class="card converter-card h-100">
@@ -132,13 +133,11 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
                                 <input type="text" class="form-control text-uppercase" id="romanInput" placeholder="e.g. XIV">
                             </div>
                         </div>
-                        
                         <div class="text-center mt-auto">
                             <button class="btn btn-convert text-white w-100" onclick="convertToNumber()">
                                 <i class="fas fa-exchange-alt me-2"></i>Convert
                             </button>
                         </div>
-                        
                         <div class="mt-4 p-3 result-box">
                             <h5 class="d-flex align-items-center">
                                 <i class="fas fa-history me-2"></i>Result:
@@ -150,5 +149,158 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
             </div>
         </div>
     </div>
+
+<!-- Article Content -->
+ <div class="article-container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <div class="d-flex align-items-center">
+          <div class=" p-2 "></div>
+          <div>{% include narendra.html %}</div>
+        </div>
+        <div class="text-muted p-3">
+          <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}
+        </div>
+      </div>
+
+<!-- Section -->
+<section class="mb-5">
+ <h2>Roman Numerals Converter – Convert Numbers to Roman and Roman to Numbers Instantly</h2>
+   <p>A Roman Numeral Converter is a free online tool that instantly converts Arabic numbers (like 1, 50, 100, 2025) into Roman numerals (I, L, C, MMXXV) and vice versa. It simplifies the process of understanding and using Roman numerals, which are widely used in clocks, books, movie titles, academic references, historical timelines, and official documents. Whether you're a student, teacher, historian, or just curious about Roman numbering, this tool provides fast, accurate, and easy conversions between number systems.</p>
+  <!-- Information Sections -->
+<section id="learn" class="mb-5">
+            <div class="row g-4">
+                <!-- What Are Roman Numerals -->
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class=" bg-warning bg-opacity-10 py-3">
+                            <h2 class="h4 mb-0"><i class="bi bi-question-circle-fill text-warning me-2"></i>What Are Roman Numerals?</h2>
+                        </div>
+                        <div class="card-body">
+                            <p>Roman numerals use letters from the Latin alphabet to represent values. They are made of seven core symbols:</p>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover">
+                                    <thead class="table-warning">
+                                        <tr>
+                                            <th>Symbol</th>
+                                            <th>Value</th>
+                                            <th>Example</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>I</td><td>1</td><td>I = 1</td></tr>
+                                        <tr><td>V</td><td>5</td><td>VI = 6</td></tr>
+                                        <tr><td>X</td><td>10</td><td>IV = 4</td></tr>
+                                        <tr><td>L</td><td>50</td><td>XL = 40</td></tr>
+                                        <tr><td>C</td><td>100</td><td>XC = 90</td></tr>
+                                        <tr><td>D</td><td>500</td><td>CD = 400</td></tr>
+                                        <tr><td>M</td><td>1000</td><td>CM = 900</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="alert alert-info mt-3">
+                                <i class="bi bi-info-circle-fill me-2"></i>
+                                The numerals are added or subtracted depending on their order.
+                            <br><ul><li>VI = 6 = 5+1</li><li>IV = 4 = 5-1 </li><li>XL = 40 = 50-10 </li><li>XC = 90 = 100-10</li><li>100 in Roman numerals = C</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Roman Numerals Chart -->
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class=" bg-info bg-opacity-10 py-3 ">
+                            <h2 class="h4 mb-0"><i class="bi bi-table text-info me-2"></i>Roman Numerals 1-100 Chart</h2>
+                        </div>
+                        <div class="card-body">
+                            <p>Here's a useful chart to understand patterns between 1 and 100:</p>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped">
+                                    <thead class="table-info">
+                                        <tr>
+                                            <th>Number</th>
+                                            <th>Roman</th>
+                                            <th>Number</th>
+                                            <th>Roman</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>1</td><td>I</td><td>50</td><td>L</td></tr>
+                                        <tr><td>5</td><td>V</td><td>60</td><td>LX</td></tr>
+                                        <tr><td>10</td><td>X</td><td>70</td><td>LXX</td></tr>
+                                        <tr><td>20</td><td>XX</td><td>80</td><td>LXXX</td></tr>
+                                        <tr><td>30</td><td>XXX</td><td>90</td><td>XC</td></tr>
+                                        <tr><td>40</td><td>XL</td><td>100</td><td>C</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button class="btn btn-outline-info">
+                                    <i class="bi bi-download me-2"></i>Download Full Chart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                      
+ <!-- highlight-box-->
+ <div class="highlight-box">
+   <h5><i class="fas fa-lightbulb text-warning me-2"></i>Example:</h5>
+    <p class="mb-0">A person born in 2003 will turn 21 years old in 2024. You can refer to the image below to determine your age, the month, and the number of weeks since your birth date.</p>
+    </div>
+
+ </div>
+
+ </section>
+      <!-- FAQ Section -->
+      <section class="mb-5">
+        <h5 class="mb-4">FAQ on Roman Numeral converter</h5>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary">1. What is C in Roman numerals?</div>
+            <p class="mb-0">C represents 100 in the Roman numeral system. It comes from the Latin word "centum" meaning hundred.</p>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary"> 2. What does L stand for in Roman numerals?</div>
+            <p class="mb-0">L equals 50 in Roman numerals. It's one of the seven basic symbols in the system.</p>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary"> 3. Is "XCX" a valid Roman numeral? </div>
+            <p class="mb-0"> No, "XCX" is not a valid Roman numeral. The correct representation for 100 is simply "C".</p>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary"> 4.  What is the Roman numeral for 2025?</div>
+            <p class="mb-0">2025 = MMXXV (M=1000, X=10, V=5)</p>
+          </div>
+        </div>
+      </section>
+<!-- Did You Know? -->
+<div class="card border-0 bg-light mb-5 p-3">
+ <h5 class="d-flex align-items-center"><i class="fas fa-info-circle me-3 text-primary"></i>Did You Know?</h5>
+ <ul>
+  <li><p class="mb-0">There's no symbol for zero in the Roman numeral system. The concept of "zero" came later from Arabic numerals.</p></li>
+  <li><p>Roman numerals are still used in modern clocks, movie sequels (e.g., Rocky II, III, IV), and the Olympics.</p></li></ul>
+ </div>
+
+
+
+
+
+
+
+
+
+
 <script src="{{ '/assets/js/roman.js' | relative_url }}"></script>
 
