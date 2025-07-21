@@ -289,17 +289,6 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
         </div>
 
 
-
-
-
-
-                      
- <!-- highlight-box-->
- <div class="highlight-box">
-   <h5><i class="fas fa-lightbulb text-warning me-2"></i>Example:</h5>
-    <p class="mb-0">A person born in 2003 will turn 21 years old in 2024. You can refer to the image below to determine your age, the month, and the number of weeks since your birth date.</p>
-    </div>
-
  </div>
 
  </section>
