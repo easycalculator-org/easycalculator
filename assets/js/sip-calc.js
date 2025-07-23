@@ -181,9 +181,8 @@
             document.getElementById('inflationRate').value = 6;
             document.getElementById('inflationRateRange').value = 6;
             document.getElementById('stepUpSIP').checked = true;
-            document.getElementById('stepUpPercentage').value = 10;
+            document.getElementById('stepUpPercentage').value = 0;
             document.getElementById('stepUpContainer').style.display = 'block';
-            
             calculateSIP();
         }
         function formatNumber(num) {
