@@ -98,12 +98,10 @@ image: "/assets/images/apple-touch-icon.png"
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/mortgage-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl" style="color:rgb(247, 86, 37);"></i><h5>Mortgage Calculator (USA)</h5></div></a></div> 
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/debt-avalanche-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-scale-unbalanced-flip fa-xl" style="color:rgb(33, 236, 118);"></i><h5>Debt Avalanche Calculator</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/loan-comparison-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-code-compare fa-xl"></i><h5>Loan Comparison Calculator</h5></div></a></div>   
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/credit-card-validator"><div class="calculator-box text-center"><i class="fa-solid fa-credit-card fa-xl"></i><h5>Credit Card Validator</h5></div></a></div>   
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/credit-card-validator"><div class="calculator-box text-center"><i class="fa-solid fa-credit-card fa-xl"></i><h5>Credit Card Validator</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/car-loan-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-car fa-xl"></i><h5>Car Loan Calculator</h5></div></a></div>   
 
-
-
-
-  </div>
+ </div>
 <!-- Finance Calculator close -->
 
 
@@ -162,7 +160,7 @@ image: "/assets/images/apple-touch-icon.png"
 <div class="col-md-3 g-4"><a href="/roman-numeral-converter" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Roman Numeral Converter</a></div>
 
 <!--<div class="col-2"><a href="#" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">About</a></div> -->
-  </div>
+ </div>
 
 <!-- Hero Section -->
 <br>
@@ -319,18 +317,18 @@ image: "/assets/images/apple-touch-icon.png"
 <!-- Why Calculators Matter -->
 <section class="py-5">
   <div class="row align-items-center">
-     <div class="col-lg-6 mb-5 mb-lg-0">
+     <div class="col-lg-6 mb-2 mb-lg-0">
           <img src="/assets/images/easycalc-home-page.jpg" alt="Calculator Benefits" class="img-fluid rounded-3 shadow">
                 </div>
                 <div class="col-lg-6">
-                    <h2 class="section-title display-5 fw-bold mb-4">Why Online Calculators Matter</h2>
-                    <p class="lead mb-4">In today's digital world, online calculators save time, reduce human error, and make complex tasks simple.</p>
+                    <h2 class="section-title display-5 fw-bold mb-2">Why Online Calculators Matter</h2>
+                    <p class="lead mb-2">In today's digital world, online calculators save time, reduce human error, and make complex tasks simple.</p>
                     <p>Whether you're a student, professional, traveler, or business owner, our tools help you make informed decisions quickly. Our calculators:</p>
                     <ul class="list-unstyled">
-                        <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success mt-1 me-2"></i><span>Eliminate manual calculation errors</span> </li>
-                        <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success mt-1 me-2"></i><span>Provide instant results for complex problems</span> </li>
-                        <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success mt-1 me-2"></i><span>Save time on repetitive calculations</span></li>
-                        <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success mt-1 me-2"></i><span>Help with financial planning and decision making</span></li>
+                        <li class="mb-1 d-flex"><i class="fas fa-check-circle text-success mt-1 me-2"></i><span>Eliminate manual calculation errors</span> </li>
+                        <li class="mb-1 d-flex"><i class="fas fa-check-circle text-success mt-1 me-2"></i><span>Provide instant results for complex problems</span> </li>
+                        <li class="mb-1 d-flex"><i class="fas fa-check-circle text-success mt-1 me-2"></i><span>Save time on repetitive calculations</span></li>
+                        <li class="mb-1 d-flex"><i class="fas fa-check-circle text-success mt-1 me-2"></i><span>Help with financial planning and decision making</span></li>
                     </ul>
                 </div>
             </div>
