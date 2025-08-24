@@ -37,7 +37,7 @@ description: "Calculate accurate great-circle distances between two latitude-lon
 
 
  <div class="calculator-container">
-    <h2 class="text-center mb-4">Haversine Distance Calculator</h2>
+    <h1 class="text-center mb-1">Haversine Distance Calculator</h1>
      <p class="text-muted text-center mb-4">Calculate the great-circle distance between two points on Earth</p>
         <form id="haversineForm">
             <div class="row mb-3">
