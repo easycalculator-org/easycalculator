@@ -9,9 +9,7 @@ description: "Investment Calculator : How much your investment increases based o
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        <h2 class="h4 mb-0">Investment Calculator</h2>
-                    </div>
+                    <div class="card-header bg-primary text-white"><h1 class="h4 mb-0">Investment Calculator</h1></div>
                     <div class="card-body">
                         <form id="investmentForm">
                             <div class="row g-3">
@@ -73,10 +71,7 @@ description: "Investment Calculator : How much your investment increases based o
                                 </div>
                                 <div class="tab-pane fade" id="monthly" role="tabpanel">
                                     <div class="d-flex justify-content-between mb-3">
-                                        <div class="dropdown">
-                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="yearDropdown" data-bs-toggle="dropdown"> Select Year</button>
-                                            <ul class="dropdown-menu" id="yearDropdownMenu"></ul>
-                                        </div>
+                                        <div class="dropdown"> <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="yearDropdown" data-bs-toggle="dropdown"> Select Year</button> <ul class="dropdown-menu" id="yearDropdownMenu"></ul></div>
                                         <button class="btn btn-sm btn-outline-info" id="showAllMonths">Show All Months</button>
                                     </div>
                                     <div class="table-responsive">
@@ -129,8 +124,7 @@ description: "Investment Calculator : How much your investment increases based o
 <!-- Section -->
 <section class="mb-5">
  <h2>Investment Calculator</h2>
-  <p>If you're looking to make smart financial decisions, our Investment Calculator is your ultimate tool for planning and tracking your investment journey. Whether you're saving for retirement, a home, or future education, this calculator shows you how consistent investing and compounding interest can grow your wealth over time.<br>
-Designed for everyone—from beginners to financial professionals—this tool helps you calculate your investment amount, estimate total returns, and explore different growth scenarios.</p>
+ <p>If you're looking to make smart financial decisions, our Investment Calculator is your ultimate tool for planning and tracking your investment journey. Whether you're saving for retirement, a home, or future education, this calculator shows you how consistent investing and compounding interest can grow your wealth over time.<br> Designed for everyone—from beginners to financial professionals—this tool helps you calculate your investment amount, estimate total returns, and explore different growth scenarios.</p>
 
 
 <div class="bg-light p-4 rounded mt-4">
@@ -145,12 +139,12 @@ Designed for everyone—from beginners to financial professionals—this tool he
      </div>
 
  <!-- highlight-box-->
- <div class="highlight-box">
-   <h5><i class="fas fa-lightbulb text-warning me-2"></i> Key Components of Investment Calculation:</h5>
-    <p class="mb-2"><strong>1. Investment Amount: </strong> This is your total contribution—either a one-time lump sum or periodic payments (monthly, quarterly, annually). You can input the amount you're able to invest and see how it grows.</p>
-    <p class="mb-2"><strong>2. Total Amount (Future Value): </strong> The final amount you'll have at the end of your investment period. This includes your initial contribution, ongoing investments, and all the compound interest earned.</p>
-    <p class="mb-2"><strong>3. Interest Earned: </strong> The extra money you earn through compounding. It’s the reward for letting your investment grow. The longer your money stays invested, the more interest you accumulate.</p>
-    </div>
+<div class="highlight-box">
+<h5><i class="fas fa-lightbulb text-warning me-2"></i> Key Components of Investment Calculation:</h5>
+<p class="mb-2"><strong>1. Investment Amount: </strong> This is your total contribution—either a one-time lump sum or periodic payments (monthly, quarterly, annually). You can input the amount you're able to invest and see how it grows.</p>
+<p class="mb-2"><strong>2. Total Amount (Future Value): </strong> The final amount you'll have at the end of your investment period. This includes your initial contribution, ongoing investments, and all the compound interest earned.</p>
+<p class="mb-2"><strong>3. Interest Earned: </strong> The extra money you earn through compounding. It’s the reward for letting your investment grow. The longer your money stays invested, the more interest you accumulate.</p>
+</div>
 
  <!-- Example Section -->
 <section class="mb-5 bg-info bg-opacity-10 p-5 rounded-3">
@@ -193,10 +187,6 @@ Designed for everyone—from beginners to financial professionals—this tool he
                 </div>
             </div>
         </section>
-
-                   
-
-
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="{{ '/assets/js/investment.js' | relative_url }}"></script>

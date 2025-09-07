@@ -228,31 +228,62 @@ image: "/assets/images/high-speed-test.jpg"
 <h2>Train Speed Test – Check Your Train's Real-Time Speed Online</h2>
 <p>Have you ever wondered how fast your train is going? Whether you're a railway enthusiast or a curious traveler, a Train Speed Test tool lets you check the live speed of your train using your phone’s GPS – no additional apps or sensors needed.</p>
 <h2 class="card-title text-primary">🧭 What is a Train Speed Test?</h2>
-<p class="card-text">A Train Speed Test measures the real-time speed of a moving train using GPS data from your smartphone or GPS device. It calculates your train's speed in km/h or mph by tracking how far you've traveled over time.</p>
+<p class="card-text">A Train Speed Test is a simple online tool that measures the real-time speed of a moving train. It works by capturing GPS data from your mobile phone and calculating how far the train has traveled within a given time. The speed can be displayed in kilometers per hour (km/h) or miles per hour (mph) depending on your preference.</p>
+<p>This tool is widely used not only by travelers but also by railway fans who love tracking train performance, schedules, and punctuality. </p>
+<h3>🚄 How Does the Train Speed Test Work?</h3>
+<p>The process is straightforward:</p>
+<ol>
+<li><p><strong>Enable GPS on your phone</strong> &ndash; The tool uses satellite data to detect your location.</p></li>
+<li><p><strong>Open the Train Speed Test tool online</strong> &ndash; No need to install an app.</p></li>
+<li><p><strong>Start your journey</strong> &ndash; The tool will automatically show your train&rsquo;s live speed as you move.</p></li>
+<li><p><strong>Switch units if needed</strong> &ndash; Choose between km/h and mph for convenience.</p></li>
+</ol>
+<p>Because the tool relies on GPS, it works on most smartphones, tablets, and GPS-enabled devices.</p>
+
+<h3>🌍 Why Should You Use a Train Speed Test?</h3>
+<p>Using a train speed checker is not only fun but also useful:</p>
+<ul>
+<li><p><strong>Track Punctuality</strong> &ndash; Compare your train&rsquo;s actual speed with the scheduled speed.</p></li>
+<li><p><strong>Enhance Travel Experience</strong> &ndash; Make your journey more engaging by monitoring speed.</p></li>
+<li><p><strong>For Railway Enthusiasts</strong> &ndash; Record data for analysis, train spotting, or personal blogs.</p></li>
+<li><p><strong>Curiosity</strong> &ndash; Satisfy your question: <em>&ldquo;How fast are we really going?&rdquo;</em></p></li>
+</ul>
+<h3>📱 Train Speed Test on Mobile</h3>
+<p>Most people prefer checking train speed directly on their smartphones. Since all modern phones come with <strong>built-in GPS</strong>, you don&rsquo;t need any extra device. Simply open the <strong>Train Speed Test tool online</strong>, allow location access, and you&rsquo;ll see the train&rsquo;s real-time speed on your screen.</p>
  </section>
+
+ <button id="install-btn" style="display:none; padding: 10px 20px; font-size: 1rem; border: none; background: #0d6efd; color: #fff; border-radius: 8px; cursor: pointer;">📲 Install Train Speed Test App</button>
 
  <!-- App Install script -->
  <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/train-speed-test-sw.js', { scope: '/train-speed-test/' });
-  }
   let deferredPrompt;
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
+  const installBtn = document.getElementById("install-btn");
+  // Listen for beforeinstallprompt event
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault(); // Prevent auto prompt
     deferredPrompt = e;
-    document.getElementById('install-btn').style.display = 'inline-block';
+    installBtn.style.display = "inline-block"; // Show the button
   });
-  document.getElementById('install-btn').addEventListener('click', () => {
+  // Handle install button click
+  installBtn.addEventListener("click", async () => {
     if (deferredPrompt) {
       deferredPrompt.prompt();
-      deferredPrompt.userChoice.then(() => {
-        deferredPrompt = null;
-      });
+      const { outcome } = await deferredPrompt.userChoice;
+      console.log(`User response: ${outcome}`);
+      deferredPrompt = null;
+      installBtn.style.display = "none"; // Hide after install
     }
+  });
+  // Hide button if app is already installed
+  window.addEventListener("appinstalled", () => {
+    console.log("App installed");
+    installBtn.style.display = "none";
   });
 </script>
 
-<button id="install-btn" style="display:none; padding: 10px 20px; font-size: 1rem;">📲 Install Train Speed Test App</button>
+
+
+
      
 <!-- Bootstrap JS Bundle with Popper -->
  <script src="{{ '/assets/js/train-speed-test.js' | relative_url }}"></script>
