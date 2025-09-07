@@ -1,6 +1,6 @@
 {
     "name": "easycalculator",
-    "short_name": "Website",
+    "short_name": "Easy calculator",
     "description": "EasyCalculator.org is an open-source platform with free online calculators for math, science, and finance. Fast, accurate results—no registration needed!",
     "start_url": "/",
     "display": "standalone",
