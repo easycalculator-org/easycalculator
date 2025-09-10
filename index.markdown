@@ -99,8 +99,8 @@ image: "/assets/images/apple-touch-icon.png"
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/debt-avalanche-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-scale-unbalanced-flip fa-xl" style="color:rgb(33, 236, 118);"></i><h5>Debt Avalanche Calculator</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/loan-comparison-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-code-compare fa-xl"></i><h5>Loan Comparison Calculator</h5></div></a></div>   
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/credit-card-validator"><div class="calculator-box text-center"><i class="fa-solid fa-credit-card fa-xl"></i><h5>Credit Card Validator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/car-loan-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-car fa-xl"></i><h5>Car Loan Calculator</h5></div></a></div>   
-
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/car-loan-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-car fa-xl"></i><h5>Car Loan Calculator</h5></div></a></div>  
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/cagr-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-up-right-dots fa-xl"></i><h5>CAGR Calculator</h5></div></a></div>  
  </div>
 <!-- Finance Calculator close -->
 
