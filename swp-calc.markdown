@@ -210,7 +210,151 @@ image: "/assets/images/systematic-withdrawal-plan.png"
             </div>
         </div>
     </div>
- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<!-- Article Part -->
+<div class="article-container">
+ <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
+   <div class="d-flex align-items-center">
+      <div class="bg-light p-2 rounded-circle d-flex align-items-center justify-content-center me-3"> <i class="fas fa-user text-primary"></i></div>
+          <div>
+            <h5 class="mb-0">Created by :- Narendra</h5>
+          </div>
+        </div>
+        <div class="text-muted">
+         <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}
+        </div>
+      </div>
+      <!-- What is Section1 -->
+<section class="mb-5">
+<h2>SWP Calculator – Smart Way to Plan Your Monthly Withdrawals</h2>
+<p>Investors often look for a balance between regular income and capital preservation. That’s where Systematic Withdrawal Plan (SWP) comes in. An SWP calculator helps you plan how much you can withdraw every month from your mutual fund investments while still keeping your corpus working for growth. Whether you are a retiree seeking a steady income or a professional planning for future expenses, an SWP calculator can make your financial journey smoother.</p>
+
+<h2>What is an SWP?</h2>
+<p>A Systematic Withdrawal Plan (SWP) is a facility offered by mutual funds that allows investors to withdraw a fixed amount from their investment at regular intervals (monthly, quarterly, or annually). Unlike lump-sum withdrawals, SWP provides a disciplined way of generating cash flow without fully redeeming your investments. </p>
+
+
+<div class="highlight-box"><p class="mb-0"> <i class="fas fa-lightbulb text-warning me-2"></i>  For example, if you invest $10,00,000 in a mutual fund and set up an SWP of $20,000 per month, the fund will redeem the required number of units every month and transfer the amount to your bank account.</p> </div>
+
+<div class="bg-light p-4 rounded mt-4">
+   <h4 class="text-primary"><i class="fas fa-chart-line me-2"></i>Why Use an SWP Calculator?</h4><p>Planning withdrawals without a tool can be risky. You may withdraw too much and exhaust your corpus early, or too little and not meet your income needs. An SWP calculator solves this by showing:</p>
+    <ul class="list-group list-group-flush">
+     <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>How long your money will last at a given withdrawal rate</li>
+         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Impact of expected returns on your corpus</li>
+         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Balance left after a set number of withdrawals.</li>
+         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Tax considerations on capital gains.</li>
+         <p class="mt-3">By visualizing these numbers, you can decide the most sustainable withdrawal plan for your goals.</p>
+        </ul>
+     </div>
+
+<h2 class="p-4"><i class="fas fa-cogs"></i> How Does the SWP Calculator Work?</h2>
+ <p>The SWP calculator typically requires you to enter:</p>
+  <ul>
+     <li><strong>Initial Investment Amount</strong> – The total sum you invested in the mutual fund.</li>
+     <li><strong>Withdrawal Amount (per month/quarter)</strong> – The fixed sum you want to withdraw.</li>
+     <li><strong>Expected Rate of Return</strong> – Average annual growth you expect from the fund (say 8% p.a.).</li>
+     <li><strong>Investment Duration</strong> – Number of years you want the withdrawals to continue.</li>
+    </ul>
+      <p>Based on these, the calculator shows:</p>
+     <ul>
+      <li>Monthly payout schedule</li>
+      <li>Corpus balance after withdrawals</li>
+      <li>Total withdrawal amount received</li>
+      <li>Growth or shortfall based on market returns</li>
+     </ul>  
+    <p>This gives you a clear roadmap before you commit.</p>
+
+<hr>
+
+<div class="card card-body border border-0 bg-light"><h5> Benefits of Using an SWP Calculator</h5>
+<ul>
+  <li>Financial Clarity – See how long your money will last and avoid over-withdrawal.</li>
+  <li>Customisation – Adjust different scenarios (higher return, smaller withdrawal) to make better decisions.</li>
+   <li>Tax Efficiency – SWP withdrawals are considered redemption of units, so only the gains portion is taxed.</li>
+   <li>Discipline – Encourages consistent income instead of impulsive withdrawals.</li>
+   <li>Retirement Planning – Perfect for retirees who need monthly income while keeping money invested.</li>     
+ </ul>
+</div>
+<br>
+<div class="card card-body border border-0 bg-light"><h5><i class="fas fa-list-alt"></i> Example: SWP in Action</h5>
+  <p>Suppose you invest $15,00,000 in a balanced mutual fund. You set a monthly SWP of $25,000 with an expected return of 9% p.a.</p>
+  <p><strong>Year 1:</strong> You receive $3,00,000 ($25,000 × 12).</p>
+  <p><strong>Year 5:</strong> Despite withdrawing $15,00,000 over five years, your corpus may still hold value due to compounding returns.</p>
+  <p><strong>Year 10:</strong> You can check if the corpus sustains or if withdrawals start reducing the balance drastically.</p>
+  <p>The calculator makes such projections simple and precise.</p>
+ </div>
+
+
+
+
+<!-- FAQ Section -->
+<section class="p-4">
+        <h2 class="mb-4">FAQ on SWP Calculator</h2>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary"> 1. What is the main benefit of using an SWP calculator?</div>
+            <p class="mb-0">An SWP calculator helps you plan your withdrawals in a way that ensures steady income without exhausting your investment too quickly. It gives you clarity on how long your money will last and helps you adjust for different scenarios.</p>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary"> 2. Is SWP better than a fixed deposit (FD)? </div>
+            <p class="mb-0">Unlike FDs, SWPs allow your money to stay invested in mutual funds, which can potentially earn higher returns. SWPs also offer tax efficiency, as only the gains portion of your withdrawal is taxed. However, returns in SWP are market-linked, unlike the guaranteed returns in FDs.</p>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary"> 3. Can I change my SWP amount after starting?</div>
+            <p class="mb-0">Yes, most mutual funds allow you to modify or stop your SWP anytime. You can increase or decrease the withdrawal amount or even pause the plan if your financial needs change.</p>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary"> 4. Is there any tax on SWP withdrawals?</div>
+            <p class="mb-0">Yes, SWP withdrawals are treated as redemption of mutual fund units. Depending on the holding period, you may be liable for short-term or long-term capital gains tax. The tax rate also depends on whether you invested in equity or debt funds.</p>
+          </div>
+        </div>
+         <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary"> 5. Who should use an SWP?</div>
+            <p class="mb-0">An SWP is ideal for retirees seeking regular income, families needing monthly support for expenses, or anyone wanting to withdraw money in a disciplined, tax-efficient way while keeping their investment growing.</p>
+          </div>
+        </div>
+      </section>
+      <!-- Did You Know? -->
+      <div class="card border-0 bg-light mb-2">
+        <div class="card-body">
+          <h5 class="d-flex align-items-center"><i class="fas fa-info-circle me-3 text-primary"></i>Did You Know? </h5>
+          <p class="mb-0"> 🧗‍♂️ SWPs allow you to choose your withdrawal frequency – monthly, quarterly, half-yearly, or yearly – giving you complete flexibility based on your cash flow needs.</p>
+        </div>
+      </div>
+
+
+
+
+</section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="{{ '/assets/js/swp-calc.js' | relative_url }}"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
