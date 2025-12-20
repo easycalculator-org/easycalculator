@@ -9,7 +9,7 @@ description: "Use our free TVM Calculator to compute the Time Value of Money inc
             <div class="col-lg-10">
                 <div class="card shadow">
                     <div class="card-header bg-primary text-white">
-                        <h2 class="text-center mb-0">Time Value of Money Calculator</h2>
+                        <h1 class="text-center mb-0">Time Value of Money Calculator</h1>
                     </div>
                     <div class="card-body">
                         <div class="row mb-2">
