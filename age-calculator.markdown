@@ -213,8 +213,7 @@ image: "/assets/images/age-calc-open-graph.png"
         </div>
       </section>
       <!-- Did You Know? -->
-    
-    </div>
+ </div>
 
 <script type="application/ld+json">
 {

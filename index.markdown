@@ -78,6 +78,8 @@ image: "/assets/images/apple-touch-icon.png"
 <!-- JSON validation -->
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/json-validator"><div class="calculator-box text-center"><i class="fas fa-code fa-xl"></i><h5>JSON Validator</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/triangle-area-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-play fa-xl" style="color: #63E6BE;"></i><h5>Triangle Area Calculator</h5></div></a></div>
+<!-- Date to date -->
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/date-to-date-calculator"><div class="calculator-box text-center"><i class="fa-regular fa-calendar fa-xl" style="color: #448bf7ff;"></i><h5>Date to Date Calculator</h5></div></a></div>
 </div>
 
 
