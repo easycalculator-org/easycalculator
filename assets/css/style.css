@@ -1,6 +1,16 @@
-a {text-decoration: none;}
+/* Header */
+.main-navbar {  background: linear-gradient(135deg, #f8f9ff, #f8f9ff); padding: 14px 0; box-shadow:  0 4px 12px rgba(0, 0, 0, 0.05), 0 10px 30px rgba(67, 97, 238, 0.08);  position: sticky;  top: 0; z-index: 1020;}
+.main-navbar .navbar-brand img {transition: transform 0.3s ease;}
+.main-navbar .navbar-brand img:hover {transform: scale(1.03);}
+.main-navbar .nav-link { font-weight: 500; color: #2b2d42; padding: 8px 14px; margin-left: 6px; border-radius: 8px; transition: all 0.25s ease;}
+.main-navbar .nav-link:hover { background: rgba(67, 97, 238, 0.1);color: #4361ee;}
+.main-navbar .nav-link.active { background: #4361ee; color: #fff;}
+.navbar-toggler {border: none;font-size: 1.3rem;color: #4361ee;}
+.navbar-toggler:focus {box-shadow: none;}
+
+
+a {text-decoration: none;} 
 a:hover {text-decoration: none;}
- .navbar-toggler {    border: none !important;    box-shadow: none !important;    outline: none !important;    background: transparent !important;  }
 .calculator-box{background:#fff;padding:20px;border-radius:10px;transition:.3s ease-in-out;box-shadow:0 4px 8px rgba(0,0,0,.2);text-decoration:none}
 .calculator-box:hover {box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);transform: translateY(-5px);}
 

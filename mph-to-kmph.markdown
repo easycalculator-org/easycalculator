@@ -3,33 +3,59 @@ layout: default
 title: MPH to KMPH Speed Converter | Convert Miles Per Hour to Kilometers Per Hour
 permalink: /mph-to-kmph
 description: "Easily convert miles per hour (mph) to kilometers per hour (km/h) with our simple speed converter. Includes a conversion formula, examples, and a quick reference chart."
+image: "/assets/images/mph-to-kmph.jpg"
 ---
+<style>
+ .converter-card{ max-width:520px;  margin:auto;  border-radius:18px; box-shadow:0 12px 32px rgba(0,0,0,0.08); }
+.result-box{ background:#eef4ff;  border-radius:14px; font-size:1.3rem; font-weight:600; }
+</style>
 
-<div class="container d-flex justify-content-center align-items-center full-height">
-    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
-        <div class="card shadow-lg">
-            <div class="card-body">
-                <h4 class="card-title text-center mb-4">MPH to KM/H Converter</h4>
-                <form id="converterForm">
- <!-- KM/H to MPH -->
-<div class="mb-3">
-<label for="kmInput" class="form-label">Speed in MPH</label>
-<input type="number" class="form-control" id="kmInput" placeholder="Enter speed in km/h">
-</div>
-<div class="mb-3">
-<label for="mileOutput" class="form-label">Speed in KM/H</label>
-<input type="text" class="form-control" id="mileOutput" readonly>
-</div>
-<button type="button" class="btn btn-primary w-100 mb-3" onclick="convertToMPH()">Convert</button>
-</form>
-</div>
-</div>
-</div>
+<div class="container py-5">
+ <div class="card converter-card p-4">
+   <h2 class="text-center mb-2">🚗 MPH to KMPH Converter</h2>
+    <div class="mb-3">
+            <label class="form-label fw-semibold">Speed in MPH</label>
+            <input type="number" id="mph" class="form-control form-control-lg" placeholder="Enter speed in mph">
+        </div>
+        <div class="d-grid gap-2 my-3">
+            <button class="btn btn-primary btn-lg" onclick="convertMPHtoKMPH()"> Convert to KMPH </button>
+            <button class="btn btn-outline-secondary" onclick="resetFields()">  Reset </button>
+        </div>
+        <div id="result" class="result-box text-center p-3 d-none"></div>
+    </div>
 </div>
 
+<!-- Article Content -->
+<div class="article-container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
+        <div class="d-flex align-items-center">
+          <div>
+  <div class="position-relative d-flex align-items-center gap-2">
+   <img src="/assets/images/user-profile/narendra.jpg" class="profile-img rounded-circle border border-3 border-primary" width="40" height="40" alt="Creator" />
+ Created by : <a href="https://www.linkedin.com/in/narendra-kumar-775b0421/" target="_blank" class="text-decoration-none profile-item"> Narendra 
+      <div class="profile-card">
+        <img src="/assets/images/user-profile/narendra.jpg" class="profile-card-img rounded-circle border border-3 border-primary mb-2" width="60" height="60" alt="Creator" />
+                <h6 class="profile-card-name mb-1 fw-bold">Narendra Kumar</h6>
+    <ul class="profile-details list-unstyled small mb-0">
+      <li class="d-flex"><span class="detail-label fw-medium me-2">Role:</span><span class="detail-value">Engineer</span></li>
+      <li class="d-flex"><span class="detail-label fw-medium me-2">Expertise:</span><span class="detail-value">RF Planning &amp; Optimization, Geospatial Engineering, Wireless Network Design, GIS Analysis, Python Automation, and GitHub Enthusiast.</span></li>
+     </ul>
+    </div>
+   </a>
+</div>
 
+</div>
+        </div>
+        <div class="text-muted p-3"><i class="fas fa-calendar me-1"></i>Last Updated: 20-12-2025</div>
+      </div>
+
+
+
+<!-- Section -->
+<section class="mb-5">
 <h1>MPH to KMPH Speed Converter</h1>
 <p>Miles per hour (mph) and kilometers per hour (km/h) are commonly used speed units worldwide. While mph is widely used in the United States and the United Kingdom, km/h is the standard measurement in most other countries. Converting between these units is essential for drivers, athletes, and travelers.</p>
+
 
 <h3>How to Convert MPH to KMPH</h3>
 <p>To convert miles per hour (mph) to kilometers per hour (km/h), use the following formula:</p>
@@ -44,6 +70,7 @@ description: "Easily convert miles per hour (mph) to kilometers per hour (km/h) 
 <li><strong>100 mph to km/h:</strong> 100 × 1.60934 = <strong>160.93 km/h</strong></li>
 <li><strong>150 mph to km/h:</strong> 150 × 1.60934 = <strong>241.40 km/h</strong></li>
 </ul>
+
 
 <h3>MPH to KMPH Conversion Chart</h3>
 <div class="table-responsive">
@@ -80,32 +107,26 @@ description: "Easily convert miles per hour (mph) to kilometers per hour (km/h) 
 <hr>
 <a href="/kmp-to-mph" class="btn btn-success w-30">Convert Mph to KM/H</a>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
-    function convertToMPH() {
-        let kmh = document.getElementById("kmInput").value;
-        let mph = kmh * 0.621371;
-        document.getElementById("mileOutput").value = mph.toFixed(2);
+  function convertMPHtoKMPH(){
+    let mph = document.getElementById("mph").value;
+    let resultBox = document.getElementById("result");
+
+    if(mph === "" || mph <= 0){
+        resultBox.innerHTML = "Please enter a valid speed in MPH.";
+        resultBox.classList.remove("d-none");
+        return;
     }
 
-    function convertToKMPH() {
-        let mph = document.getElementById("mphInput").value;
-        let kmh = mph / 0.621371;
-        document.getElementById("kmOutput").value = kmh.toFixed(2);
-    }
+    let kmph = (mph * 1.60934).toFixed(2);
+    resultBox.innerHTML = `${mph} mph = ${kmph} km/h`;
+    resultBox.classList.remove("d-none");
+}
+
+function resetFields(){
+    document.getElementById("mph").value = "";
+    document.getElementById("result").classList.add("d-none");
+}
 </script>
 
 <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6"> </script>

@@ -1,17 +1,9 @@
-<nav class="navbar navbar-expand-lg shadow">
+<!-- <nav class="navbar navbar-expand-lg shadow">
  <div class="container">
-<!-- logo -->
 <a class="navbar-brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="Logo of easycalculator" width="200px"></a>
 
 
-
-<!-- mobile -->
-<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> -->
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <i class="fa-solid fa-bars-staggered"></i>
-    </button>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars-staggered"></i> </button>
 
 
 <div class="collapse navbar-collapse" id="navbarNav">
@@ -21,16 +13,33 @@
  <li class="nav-item"><a class="nav-link" href="{{ '/countdown' | relative_url }}">Countdown</a></li>
  <li class="nav-item"><a class="nav-link" href="{{ '/world-clock' | relative_url }}">World Clock</a></li>
  <li class="nav-item"><a class="nav-link" href="{{ '/epoch' | relative_url }}">Epoch Time</a></li>
-
-<!-- search  -->
-<!-- <div class="search-wrapper">
-<form method="get" action="/" onsubmit="return false;">
-  <label for="searchBox" class="visually-hidden">Search tools:</label>
-    <input type="text" id="searchBox" name="q" placeholder="Search tools..." aria-label="Search tools">
-  </form>
-<ul id="results" aria-live="polite"></ul>
-</div> -->
 </ul>
+    </div>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg main-navbar shadow">
+  <div class="container">
+    <!-- logo -->
+    <a class="navbar-brand" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="Logo of easycalculator" width="200">
+    </a>
+
+    <!-- mobile toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars-staggered"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="{{ '/age-calculator' | relative_url }}">Age Calculator</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ '/currency' | relative_url }}">Currency Converter</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ '/countdown' | relative_url }}">Countdown</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ '/world-clock' | relative_url }}">World Clock</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ '/epoch' | relative_url }}">Epoch Time</a></li>
+      </ul>
     </div>
   </div>
 </nav>

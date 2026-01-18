@@ -3,28 +3,33 @@ layout: default
 title: KMPH to MPH Speed Converter | Convert Kilometers Per Hour to Miles Per Hour 
 permalink: /kmp-to-mph
 description: "Easily convert kilometers per hour to miles per hour (kmp to mph) with our free tool. Check out conversion tables and learn about other speed units today!"
-image: "/assets/images/kmp-to-mph.webp"
+image: "/assets/images/kmph-to-mph.jpg"
 ---
-<div class="container d-flex justify-content-center align-items-center full-height p-4">
-        <div class="col-12 col-sm-8 col-md-6 col-lg-4">
-            <div class="card shadow-lg">
-                <div class="card-body">
-                    <h4 class="card-title text-center mb-4">KM/H to MPH Converter</h4>
-                    <form id="converterForm">
-                        <div class="mb-3">
-                            <label for="kmInput" class="form-label">Speed in km/h</label>
-                            <input type="number" class="form-control" id="kmInput" placeholder="Enter speed in km/h" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="mileOutput" class="form-label">Speed in mph</label>
-                            <input type="text" class="form-control" id="mileOutput" readonly>
-                        </div>
-                        <button type="button" class="btn btn-primary w-100" onclick="convertSpeed()">Convert</button>
-                    </form>
-                </div>
-            </div>
+
+<style>
+ .converter-card{max-width:520px; margin:auto; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.08); }
+ .result-box{ background:#f1f5ff; border-radius:12px; font-size:1.25rem; font-weight:600;}
+</style>
+
+
+<div class="container py-5">
+ <div class="card converter-card p-4">
+  <h2 class="text-center mb-3">🚀 KM/H to MPH Converter</h2>
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Speed in KMPH</label>
+            <input type="number" id="kmph" class="form-control form-control-lg" placeholder="Enter speed in km/h">
         </div>
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Speed in MPH</label>
+             <input type="number" id="mph" class="form-control form-control-lg" placeholder="speed in mph" disabled>
+        </div>
+        <div class="d-grid gap-2 my-3">
+            <button class="btn btn-primary btn-lg" onclick="convertSpeed()">  Convert Speed </button>
+            <button class="btn btn-outline-secondary" onclick="resetFields()">  Reset </button>
+        </div>
+        <div id="result" class="result-box text-center p-3 d-none"></div>
     </div>
+</div>
 
 
 <!-- Article Content -->
