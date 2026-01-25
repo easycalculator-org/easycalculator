@@ -4,6 +4,7 @@ title: About Easy Calculator – Your Everyday Calculation Companion
 permalink: /about
 description: "Easy Calculator offers simple, accurate tools for everyday math, finance, and conversion needs—free, fast, and easy to use for everyone."
 ---
+
 <div class="container">
 <h1>About US - EasyCalculator</h1>
 <p class="last-updated">  Last updated on: {{ site.time | date: "%d-%m-%Y" }}</p>

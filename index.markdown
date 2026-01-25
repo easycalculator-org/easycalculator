@@ -4,6 +4,7 @@ title: EasyCalculator | Free Online Calculators for Finance, Math & More
 description: "EasyCalculator.org delivers reliable, expert-designed calculators for finance, math, and everyday needs. Get fast, accurate results online - free and secure."
 image: "/assets/images/apple-touch-icon.png"
 ---
+
 <link rel="stylesheet" href="{{ '/assets/css/calculator.css' | relative_url }}">
 <!-- Calculator start -->
 <div class="calculator">
@@ -25,7 +26,7 @@ image: "/assets/images/apple-touch-icon.png"
         <button class="button basic-stuff">±</button>
         <button class="button numbers">0</button>
         <button class="button basic-stuff">.</button>
-</div>   
+</div>
  <div class="functions-two">
             <button class="button triggers">&#60;=</button>
             <button class="button complex-stuff">%</button>
@@ -51,7 +52,6 @@ image: "/assets/images/apple-touch-icon.png"
       </div>
     </div>
 <!-- calculator end -->
-
 
 <!-- Article -->
 <div class="container py-5">
@@ -80,34 +80,34 @@ image: "/assets/images/apple-touch-icon.png"
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/triangle-area-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-play fa-xl" style="color: #63E6BE;"></i><h5>Triangle Area Calculator</h5></div></a></div>
 <!-- Date to date -->
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/date-to-date-calculator"><div class="calculator-box text-center"><i class="fa-regular fa-calendar fa-xl" style="color: #448bf7ff;"></i><h5>Date to Date Calculator</h5></div></a></div>
+<!-- chacter count -->
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/character-count"><div class="calculator-box text-center">📒<h5>Character Count</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/roman-numeral-converter"><div class="calculator-box text-center"><i class="fa-solid fa-diagram-successor fa-2xl" style="color: #448bf7ff;"></i><h5>Roman Numeral Converter</h5></div></a></div>
 </div>
-
 
 <h2>Timer</h2>
 <div class="row p-3 ">
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/countdown"><div class="calculator-box text-center"><i class="fa-solid fa-stopwatch-20 fa-xl" style="color: #63E6BE;"></i><h5>Countdown</h5></div></a></div>     
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/countdown"><div class="calculator-box text-center"><i class="fa-solid fa-stopwatch-20 fa-xl" style="color: #63E6BE;"></i><h5>Countdown</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/stopwatch"><div class="calculator-box text-center"><i class="fa-solid fa-stopwatch fa-xl" style="color: #B197FC;"></i><h5>StopWatch</h5></div></a></div>
 <div class="col-md-3 p-3  "> <a class="text-decoration-none" href="/current-time"><div class="calculator-box text-center"><i class="fa-solid fa-clock fa-xl" style="color:rgb(226, 66, 17);"></i><h5>Current Timer zone</h5></div> </a></div>
  <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/epoch"> <div class="calculator-box text-center"><i class="fa-solid fa-history fa-xl" style="color: #0a5ceb;"></i><h5>Epoch Time</h5></div> </a> </div> </div>
 <!-- Finance Calculator -->
 <h2>Finance</h2>
 <div class="row p-3 ">
-<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/tvm-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-chart-line fa-xl" style="color: #74C0FC;"></i><h5>TVM Calculator</h5></div></a></div>       
+<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/tvm-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-chart-line fa-xl" style="color: #74C0FC;"></i><h5>TVM Calculator</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/investment-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-bill-trend-up fa-xl" style="color: #5ae2a3;"></i><h5>Investment Calculator</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/currency"><div class="calculator-box text-center"><i class="fa-solid fa-coins fa-xl" style="color: #B197FC;"></i><h5>Currency Converter</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/loan-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl" style="color: #1968f0;"></i><h5>Loan Calculator</h5></div></a></div> 
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/loan-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl" style="color: #1968f0;"></i><h5>Loan Calculator</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/sip-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-bill-wheat fa-xl" style="color: #B197FC;"></i><h5>SIP Calculator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/systematic-withdrawal-plan-calculator-with-inflation"><div class="calculator-box text-center"><i class="fa-solid fa-plant-wilt fa-xl" style="color: #2d7cf1ff;"></i><h5>SWP Calculator</h5></div></a></div> 
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/mortgage-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl" style="color:rgb(247, 86, 37);"></i><h5>Mortgage Calculator (USA)</h5></div></a></div> 
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/systematic-withdrawal-plan-calculator-with-inflation"><div class="calculator-box text-center"><i class="fa-solid fa-plant-wilt fa-xl" style="color: #2d7cf1ff;"></i><h5>SWP Calculator</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/mortgage-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl" style="color:rgb(247, 86, 37);"></i><h5>Mortgage Calculator (USA)</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/debt-avalanche-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-scale-unbalanced-flip fa-xl" style="color:rgb(33, 236, 118);"></i><h5>Debt Avalanche Calculator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/loan-comparison-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-code-compare fa-xl"></i><h5>Loan Comparison Calculator</h5></div></a></div>   
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/loan-comparison-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-code-compare fa-xl"></i><h5>Loan Comparison Calculator</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/credit-card-validator"><div class="calculator-box text-center"><i class="fa-solid fa-credit-card fa-xl"></i><h5>Credit Card Validator</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/car-loan-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-car fa-xl"></i><h5>Car Loan Calculator</h5></div></a></div>  
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/cagr-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-up-right-dots fa-xl"></i><h5>CAGR Calculator</h5></div></a></div>  
  </div>
 <!-- Finance Calculator close -->
-
-
 
  <!-- conversion-tool -->
 <hr>
@@ -131,7 +131,7 @@ image: "/assets/images/apple-touch-icon.png"
 <hr>
 <h2>Geolocation Tool</h2>
 <div class="row g-1 p-3 ">
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/what-is-my-ip"><div class="calculator-box text-center"><i class="fa-solid fa-network-wired fa-xl" style="color: #B197FC;"></i><h5>My IP Address</h5></div></a> </div>    
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/what-is-my-ip"><div class="calculator-box text-center"><i class="fa-solid fa-network-wired fa-xl" style="color: #B197FC;"></i><h5>My IP Address</h5></div></a> </div>
  <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/utm-zone-map"><div class="calculator-box text-center"><i class="fa-solid fa-location-dot fa-xl" style="color: #63E6BE;"></i><h5>UTM Zone Map</h5></div> </a></div>
  <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/military-grid-reference-system-converter"><div class="calculator-box text-center"><i class="fas fa-location-dot fa-xl"></i><h5>MGRS Converter</h5></div></a></div>
  <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/current-elevation"><div class="calculator-box text-center"><i class="fas fa-mountain fa-xl"></i><h5>Current Elevation</h5></div></a></div>
@@ -149,21 +149,12 @@ image: "/assets/images/apple-touch-icon.png"
  <hr>
 <h2>Speed Test </h2>
 <div class="row g-1 p-3 ">
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/train-speed-test"><div class="calculator-box text-center"><i class="fa-solid fa-train fa-xl"></i><h5>Train Speed Test</h5></div></a> </div>    
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/train-speed-test"><div class="calculator-box text-center"><i class="fa-solid fa-train fa-xl"></i><h5>Train Speed Test</h5></div></a> </div>
  <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/#"><div class="calculator-box text-center"><i class="fa-solid fa-gauge-simple-high fa-xl"></i><h5>Speed Converter</h5></div> </a></div>
  <div class="col-md-3  p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-bus fa-xl"></i><h5>Bus Speed Test</h5></div></a></div>
- 
+
 </div>
  <!-- Speed Test end-->
-
-<h3>Others Calculator</h3>
-<div class="row text-center g-3">
-<div class="col-md-3 g-4"><a href="/date-to-date-calculator" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Date to Date Calculator</a></div>
-<div class="col-md-3 g-4"><a href="/character-count" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Character Count</a></div>
-<div class="col-md-3 g-4"><a href="/roman-numeral-converter" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">Roman Numeral Converter</a></div>
-
-<!--<div class="col-2"><a href="#" class="d-block text-decoration-none text-dark p-2 rounded hover-shadow bg-light">About</a></div> -->
- </div>
 
 <!-- Hero Section -->
 <br>
@@ -179,7 +170,6 @@ image: "/assets/images/apple-touch-icon.png"
                                <a href="/age-calculator" class="btn btn-outline-primary">Age Calculator</a>
                                 <a href="/world-clock" class="btn btn-outline-primary">World Clock</a>
                             </div>
-
 
  <div class="text-center mb-5 py-4">
                 <h2 class="section-title display-5 fw-bold">Why Use EasyCalculator.org?</h2>
@@ -216,8 +206,6 @@ image: "/assets/images/apple-touch-icon.png"
                 </div>
             </div>
  </section>
-
-
 
 <!-- Calculator Categories -->
 <section class="py-5 bg-light">
@@ -357,7 +345,5 @@ image: "/assets/images/apple-touch-icon.png"
      </div>
     </div>
     </section>
-
-
 
 <script src="{{ '/assets/js/scientific-calculator.js' | relative_url }}"></script>

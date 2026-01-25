@@ -4,7 +4,8 @@ title: HCF Calculator - Find Highest Common Factor Instantly
 permalink: /hcf-calculator
 description: "Use our free HCF Calculator to quickly find the Highest Common Factor (HCF) of two or more numbers. Fast, accurate, and easy to use—perfect for students."
 ---
-<style> 
+
+<style>
         .math-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -45,7 +46,6 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
         }
     </style>
 <!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
  <div class="container py-5">
     <div class="card mx-auto p-4 shadow-sm" style="max-width: 600px;">
       <h1 class="text-center mb-3 text-primary"><i class="fas fa-calculator me-2"></i>HCF Calculator </h1>
@@ -78,7 +78,7 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
 <!-- HCF step -->
 <section class="p-4">
          <h2 class="mb-0">How to do HCF step by step?</h2>
-         <p>To find the HCF (Highest Common Factor) of two numbers step by step, you can use two main methods:</p>      
+         <p>To find the HCF (Highest Common Factor) of two numbers step by step, you can use two main methods:</p>
             <div class="row g-4">
                 <!-- Prime Factorization Method -->
                 <div class="col-lg-6">
@@ -122,18 +122,18 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
                             <div class="bg-light p-4 rounded border">
                                 <h4 class="mb-3">Example: HCF of 60 and 48</h4>
                                 <p><strong>Step 1: Prime Factors</strong></p>
-                                <p>60 = 
-                                    <span class="prime-factor">2</span> × 
-                                    <span class="prime-factor">2</span> × 
-                                    <span class="prime-factor">3</span> × 
+                                <p>60 =
+                                    <span class="prime-factor">2</span> ×
+                                    <span class="prime-factor">2</span> ×
+                                    <span class="prime-factor">3</span> ×
                                     <span class="prime-factor">5</span>
                                     <span class="ms-2">(2² × 3 × 5)</span>
                                 </p>
-                                <p>48 = 
-                                    <span class="prime-factor">2</span> × 
-                                    <span class="prime-factor">2</span> × 
-                                    <span class="prime-factor">2</span> × 
-                                    <span class="prime-factor">2</span> × 
+                                <p>48 =
+                                    <span class="prime-factor">2</span> ×
+                                    <span class="prime-factor">2</span> ×
+                                    <span class="prime-factor">2</span> ×
+                                    <span class="prime-factor">2</span> ×
                                     <span class="prime-factor">3</span>
                                     <span class="ms-2">(2⁴ × 3)</span>
                                 </p>
@@ -143,13 +143,13 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
                                 <p class="mt-3"><strong>Step 3: Multiply common factors</strong></p>
                                 <p>HCF = 2² × 3 = 4 × 3 = 12</p>
                                 <div class="alert alert-success mt-3 mb-0">
-                                    <i class="fas fa-check-circle me-2"></i> 
+                                    <i class="fas fa-check-circle me-2"></i>
                                     <strong>HCF(60, 48) = 12</strong>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>   
+                </div>
                 <!-- Euclidean Algorithm -->
                 <div class="col-lg-6">
                     <div class="card h-100 border-0 shadow math-card">
@@ -215,7 +215,7 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
                                     </div>
                                 </div>
                                 <div class="alert alert-success mt-3 mb-0">
-                                    <i class="fas fa-check-circle me-2"></i> 
+                                    <i class="fas fa-check-circle me-2"></i>
                                     <strong>HCF(60, 48) = 12</strong>
                                 </div>
                             </div>
@@ -224,7 +224,6 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
                 </div>
             </div>
 </section>
-
 
  <!-- How it works -->
 <section class="p-4">
@@ -280,7 +279,7 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
                     </div>
                         <div class="card-body">
                             <p class="card-text">
-                                The HCF is useful in various aspects of mathematics and real-world applications. 
+                                The HCF is useful in various aspects of mathematics and real-world applications.
                                 Here are a few reasons why the HCF is important:
                             </p>
                             <div class="row mt-4">
@@ -396,7 +395,7 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
                             </ol>
                             <div class="alert alert-info mt-4">
                                 <i class="fas fa-info-circle me-2"></i>
-                                This video explains how to calculate HCF using our free HCF calculator. 
+                                This video explains how to calculate HCF using our free HCF calculator.
                                 Watch the steps and try it yourself using the tool below.
                             </div>
                         </div>
@@ -454,13 +453,5 @@ description: "Use our free HCF Calculator to quickly find the Highest Common Fac
                         </div>
                     </div>
                 </section>
-
-
-
-
-
-
-
-
 
 <script src="{{ '/assets/js/hcf-calc.js' | relative_url }}"></script>
