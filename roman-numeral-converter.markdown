@@ -229,7 +229,6 @@ image: "/assets/images/roman-number-converter.jpg"
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- Rows will be inserted by JavaScript -->
                                 </tbody>
                             </table>
                         </div>
