@@ -2,136 +2,12 @@
 layout: default
 title: Roman Numeral Converter – Convert Numbers to Roman & Vice Versa
 permalink: /roman-numeral-converter
-description: "Easily convert numbers to Roman numerals and Roman numerals to numbers using our free Roman Numeral Converter tool. Instant results, accurate conversions, and user-friendly interface!"
-# image: "/assets/images/pregnancy-calculator.jpg"
+description: "Easily convert numbers to Roman numerals and Roman to numbers with our free Roman Numeral Converter. Fast, accurate results with a simple interface."
+image: "/assets/images/roman-number-converter.jpg"
 ---
 <style>
-        :root {
-            --primary-color: #6c63ff;
-            --secondary-color: #4d44db;
-            --light-color: #f8f9fa;
-            --dark-color: #343a40;
-        }
-         .converter-card {
-            border-radius: 15px;
-            border: none;
-            box-shadow: 0 10px 30px rgba(108, 99, 255, 0.2);
-            transition: transform 0.3s ease;
-        }
-        .converter-card:hover {
-            transform: translateY(-5px);
-        }
-        .card-header {
-            border-radius: 15px 15px 0 0 !important;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-        }
-        .btn-convert {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border: none;
-            padding: 10px 25px;
-            border-radius: 50px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-        }
-        .btn-convert:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
-        }
-        .result-box {
-            background-color: rgba(108, 99, 255, 0.05);
-            border-left: 4px solid var(--primary-color);
-            border-radius: 8px;
-        }
-        .input-field {
-            position: relative;
-        }
-        .input-field i {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--primary-color);
-        }
-        .input-field input {
-            padding-left: 45px;
-            border-radius: 8px;
-            border: 1px solid #dee2e6;
-            height: 50px;
-        }
-         .roman-header {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
-        }
-        .symbol-card {
-            transition: transform 0.3s;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .symbol-card:hover {
-            transform: translateY(-5px);
-        }
-        .symbol-value {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-         .chart-modal .modal-dialog {
-            max-width: 900px;
-        }
-        .chart-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .chart-table th {
-            background-color: #0d6efd;
-            color: white;
-            padding: 8px;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-        .chart-table td {
-            padding: 6px;
-            text-align: center;
-            border: 1px solid #dee2e6;
-            font-size: 0.85rem;
-        }
-        .chart-table tr:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-        .brand-logo {
-            font-weight: 700;
-            color: #0d6efd;
-            font-size: 1.2rem;
-        }
-        .brand-logo span {
-            color: #fd7e14;
-        }
-        @media print {
-            body * {
-                visibility: hidden;
-            }
-            .chart-print, .chart-print * {
-                visibility: visible;
-            }
-            .chart-print {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                margin: 0;
-                padding: 15px;
-                font-size: 12px;
-            }
-            .no-print {
-                display: none !important;
-            }
-        }
-        @media (max-width: 768px) {
-            .converter-col {
-                margin-bottom: 30px;
-            }
-        }
-    </style>
+  :root{--primary-color:#6c63ff;--secondary-color:#4d44db;--light-color:#f8f9fa;--dark-color:#343a40}.converter-card{border-radius:15px;border:none;box-shadow:0 10px 30px #6c63ff33;transition:transform .3s ease}.converter-card:hover{transform:translateY(-5px)}.card-header{border-radius:15px 15px 0 0!important;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color))}.btn-convert{background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));border:none;padding:10px 25px;border-radius:50px;font-weight:600;letter-spacing:.5px;transition:all .3s ease}.btn-convert:hover{transform:translateY(-2px);box-shadow:0 5px 15px #6c63ff66}.result-box{background-color:#6c63ff0d;border-left:4px solid var(--primary-color);border-radius:8px}.input-field{position:relative}.input-field i{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--primary-color)}.input-field input{padding-left:45px;border-radius:8px;border:1px solid #dee2e6;height:50px}.roman-header{background:linear-gradient(135deg,#6a11cb 0%,#2575fc 100%);color:#fff}.symbol-card{transition:transform .3s;border-radius:10px;box-shadow:0 4px 6px #0000001a}.symbol-card:hover{transform:translateY(-5px)}.symbol-value{font-size:1.5rem;font-weight:700}.chart-modal .modal-dialog{max-width:900px}.chart-table{width:100%;border-collapse:collapse}.chart-table th{background-color:#0d6efd;color:#fff;padding:8px;text-align:center;font-size:.9rem}.chart-table td{padding:6px;text-align:center;border:1px solid #dee2e6;font-size:.85rem}.chart-table tr:nth-child(even){background-color:#f8f9fa}.brand-logo{font-weight:700;color:#0d6efd;font-size:1.2rem}.brand-logo span{color:#fd7e14}@media print{body *{visibility:hidden}.chart-print,.chart-print *{visibility:visible}.chart-print{position:absolute;left:0;top:0;width:100%;margin:0;padding:15px;font-size:12px}.no-print{display:none!important}}@media (max-width: 768px){.converter-col{margin-bottom:30px}}
+ </style>
 <div class="container py-1">
         <div class="text-center mb-1">
             <h1 class="display-4 fw-bold">Roman Numeral Converter</h1>
@@ -142,25 +18,20 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
             <div class="col-lg-5 col-md-6 converter-col">
                 <div class="card converter-card h-100">
                     <div class="card-header text-white">
-                        <h3 class="card-title text-center mb-0 py-2">
-                            <i class="fas fa-digital-tachograph me-2"></i>Number to Roman
-                        </h3>
+                        <h3 class="card-title text-center mb-0 py-2"><i class="fas fa-digital-tachograph me-2"></i>Number to Roman</h3>
                     </div>
                     <div class="card-body d-flex flex-column">
                         <div class="mb-4">
                             <label for="numberInput" class="form-label fw-bold">Enter a number (1-3999)</label>
                             <div class="input-field mb-3">
-                                <i class="fas fa-keyboard"></i>
-                                <input type="number" class="form-control" id="numberInput" min="1" max="3999" placeholder="e.g. 42">
+                                <i class="fas fa-keyboard"></i> <input type="number" class="form-control" id="numberInput" min="1" max="3999" placeholder="e.g. 42">
                             </div>
                         </div>
                         <div class="text-center mt-auto">
                             <button class="btn btn-convert text-white w-100" onclick="convertToRoman()"> <i class="fas fa-exchange-alt me-2"></i>Convert </button>
                         </div>
                         <div class="mt-4 p-3 result-box">
-                            <h5 class="d-flex align-items-center">
-                                <i class="fas fa-history me-2"></i>Result:
-                            </h5>
+                            <h5 class="d-flex align-items-center">  <i class="fas fa-history me-2"></i>Result:  </h5>
                             <div id="romanResult" class="fs-4 fw-bold text-primary"></div>
                         </div>
                     </div>
@@ -170,16 +41,13 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
             <div class="col-lg-5 col-md-6 converter-col">
                 <div class="card converter-card h-100">
                     <div class="card-header text-white">
-                        <h3 class="card-title text-center mb-0 py-2">
-                            <i class="fas fa-font me-2"></i>Roman to Number
-                        </h3>
+                        <h3 class="card-title text-center mb-0 py-2"> <i class="fas fa-font me-2"></i>Roman to Number </h3>
                     </div>
                     <div class="card-body d-flex flex-column">
                         <div class="mb-4">
                             <label for="romanInput" class="form-label fw-bold">Enter a Roman numeral</label>
                             <div class="input-field mb-3">
-                                <i class="fas fa-text-height"></i>
-                                <input type="text" class="form-control text-uppercase" id="romanInput" placeholder="e.g. XIV">
+                                <i class="fas fa-text-height"></i>  <input type="text" class="form-control text-uppercase" id="romanInput" placeholder="e.g. XIV">
                             </div>
                         </div>
                         <div class="text-center mt-auto">
@@ -188,9 +56,7 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
                             </button>
                         </div>
                         <div class="mt-4 p-3 result-box">
-                            <h5 class="d-flex align-items-center">
-                                <i class="fas fa-history me-2"></i>Result:
-                            </h5>
+                            <h5 class="d-flex align-items-center">  <i class="fas fa-history me-2"></i>Result:  </h5>
                             <div id="numberResult" class="fs-4 fw-bold text-primary"></div>
                         </div>
                     </div>
@@ -206,9 +72,7 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
           <div class=" p-2 "></div>
           <div>{% include narendra.html %}</div>
         </div>
-        <div class="text-muted p-3">
-          <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}
-        </div>
+        <div class="text-muted p-3"> <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }} </div>
       </div>
 
 <!-- Section -->
@@ -380,14 +244,6 @@ description: "Easily convert numbers to Roman numerals and Roman numerals to num
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
 
 <script src="{{ '/assets/js/roman.js' | relative_url }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
