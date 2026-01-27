@@ -1,39 +1,27 @@
 ---
 layout: default
 title: Police Map
-permalink: /1#
+permalink: /111
 ---
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<!-- Article Content -->
+<div class="article-container">
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <!-- EEAT Pills -->
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren1.html %}
+      {% include naren2.html %}
+      {% include naren3.html %}
+    </div>
+    <!-- Last Updated -->
+    <!-- <div class="text-muted small d-flex align-items-center gap-1"> -->
+    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0">
+      <i class="fas fa-calendar"></i>
+      Last Updated: {{ site.time | date: "%d-%m-%Y" }}
+    </div>
+  </div>
+</div>
+
 <style>
-  html, body, #map {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
+.creator-icon-pill{display:flex;align-items:center;gap:10px;background:#f6f8fa;padding:8px 14px;border-radius:999px;font-size:13px;color:#212529;transition:background .2s ease}.creator-icon-pill:hover{background:#eef2f6}.creator-icon-pill img{width:34px;height:34px;border-radius:50%;object-fit:cover}.creator-icon-text{line-height:1.2}.creator-icon-role{font-size:11px;color:#6c757d}.creator-icon-name{font-weight:600;font-size:13px}
 </style>
-
-<div id="map"></div>
-
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>
-  // Initialize map
-  var map = L.map('map').setView([20.5937, 78.9629], 5);
-  // Add OpenStreetMap tiles
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
-  // ✅ Load local geojson file from /assets
-fetch('https://corsproxy.io/?https://raw.githubusercontent.com/datta07/INDIAN-SHAPEFILES/master/INDIA/INDIA_POLICE_STATIONS.geojson')
-    .then(response => response.json())
-    .then(data => {
-      L.geoJSON(data, {
-        onEachFeature: function (feature, layer) {
-          if (feature.properties && feature.properties.ps) {
-            layer.bindPopup("<b>Police Station:</b> " + feature.properties.ps);
-          }
-        }
-      }).addTo(map);
-    })
-    .catch(err => console.error("Failed to load GeoJSON:", err));
-</script>
