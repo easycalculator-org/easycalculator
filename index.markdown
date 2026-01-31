@@ -92,7 +92,7 @@ image: "/assets/images/apple-touch-icon.png"
 <div class="col-md-3 p-3  "> <a class="text-decoration-none" href="/current-time"><div class="calculator-box text-center"><i class="fa-solid fa-clock fa-xl" style="color:rgb(226, 66, 17);"></i><h5>Current Timer zone</h5></div> </a></div>
  <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/epoch"> <div class="calculator-box text-center"><i class="fa-solid fa-history fa-xl" style="color: #0a5ceb;"></i><h5>Epoch Time</h5></div> </a> </div> </div>
 <!-- Finance Calculator -->
-<h2>Finance</h2>
+<h2>Finance Calculators</h2><p>Plan loans, investments, SIPs, and savings using accurate finance calculators.</p>
 <div class="row p-3 ">
 <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/tvm-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-chart-line fa-xl" style="color: #74C0FC;"></i><h5>TVM Calculator</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/investment-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-bill-trend-up fa-xl" style="color: #5ae2a3;"></i><h5>Investment Calculator</h5></div></a></div>
@@ -115,7 +115,6 @@ image: "/assets/images/apple-touch-icon.png"
 <div class="row p-3 ">
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/number-to-word-converter"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-up-a-z fa-xl" style="color: #B197FC;"></i><h5>Num to Word</h5></div></a> </div>
  <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-weight-scale fa-xl"></i><h5>Weight Converter</h5></div> </a></div>
- <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-gauge fa-xl" style="color: #B197FC;"></i><h5>Speed Converter</h5></div></a></div>
  <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-shapes fa-xl" style="color: #B197FC;"></i><h5>Area Converter</h5></div></a></div></div>
 
  <!-- conversion-tool end-->
@@ -150,16 +149,14 @@ image: "/assets/images/apple-touch-icon.png"
 <h2>Speed Test </h2>
 <div class="row g-1 p-3 ">
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/train-speed-test"><div class="calculator-box text-center"><i class="fa-solid fa-train fa-xl"></i><h5>Train Speed Test</h5></div></a> </div>
- <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/#"><div class="calculator-box text-center"><i class="fa-solid fa-gauge-simple-high fa-xl"></i><h5>Speed Converter</h5></div> </a></div>
  <div class="col-md-3  p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-bus fa-xl"></i><h5>Bus Speed Test</h5></div></a></div>
 
 </div>
  <!-- Speed Test end-->
 
 <!-- Hero Section -->
-<br>
 <section class="hero-section shadow-sm p-4 rounded-2">
-   <h1 class="display-4 fw-bold mb-1">Free Online Calculators & Conversion Tools</h1>
+   <h1>EasyCalculator.org – Free Online Calculators for Finance, Math & Daily Use</h1>
      <p class="lead mb-4">Welcome to EasyCalculator.org, your one-stop platform for free online calculators, conversion tools, and smart utilities. Whether you're calculating a loan EMI, converting currencies, or solving math problems, our tools are accurate, fast, and easy to use—no downloads or sign-ups required.</p>
   <h3 class="mb-3">Popular Calculators</h3>
                             <div class="flex-wrap justify-content-center gap-3">
@@ -309,7 +306,7 @@ image: "/assets/images/apple-touch-icon.png"
 <section class="py-5">
   <div class="row align-items-center">
      <div class="col-lg-6 mb-2 mb-lg-0">
-          <img src="/assets/images/easycalc-home-page.jpg" alt="Calculator Benefits" class="img-fluid rounded-3 shadow">
+          <img src="/assets/images/easycalc-home-page.jpg" alt="Benefits of using online calculators on EasyCalculator.org" class="img-fluid rounded-3 shadow">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="section-title display-5 fw-bold mb-2">Why Online Calculators Matter</h2>
@@ -325,7 +322,7 @@ image: "/assets/images/apple-touch-icon.png"
             </div>
     </section>
 <!-- Source Transparency -->
-<section class="row justify-content-center">
+<section class="row justify-content-center mb-4">
   <div class="col-lg-10">
     <div class="bg-white p-4 p-md-5 rounded-3 shadow-sm">
        <h2 class="section-title display-5 fw-bold text-center">Source Transparency</h2>
@@ -341,9 +338,15 @@ image: "/assets/images/apple-touch-icon.png"
    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Open-source algorithms</strong>: verified by our developer community</li>
   </ul>
  </div>
-     <!-- <div class="text-center mt-5"><a href="#" class="btn btn-outline-primary me-2">Report an Issue</a><a href="#" class="btn btn-primary">View All Sources</a></div> -->
-     </div>
+       </div>
     </div>
     </section>
+<section class="bg-light p-4 rounded-2 mt-4">
+<h2>Who We Are</h2>
+<p>EasyCalculator.org is maintained by a team of developers focused on accuracy, usability, and transparency. Our tools are regularly reviewed and updated based on trusted standards and user feedback. </p>
 
+<h2>Editorial & Accuracy Policy</h2>
+<p>All calculators on EasyCalculator.org are built using verified formulas and reviewed periodically for accuracy. <br>Have a question or found an issue? <a href="/contact">Contact our team</a>. </p>
+
+</section>
 <script src="{{ '/assets/js/scientific-calculator.js' | relative_url }}"></script>
