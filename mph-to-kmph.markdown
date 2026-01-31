@@ -27,27 +27,13 @@ image: "/assets/images/mph-to-kmph.jpg"
 
 <!-- Article Content -->
 <div class="article-container">
-      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-        <div class="d-flex align-items-center">
-          <div>
-  <div class="position-relative d-flex align-items-center gap-2">
-   <img src="/assets/images/user-profile/narendra.jpg" class="profile-img rounded-circle border border-3 border-primary" width="40" height="40" alt="Creator" />
- Created by : <a href="https://www.linkedin.com/in/narendra-kumar-775b0421/" target="_blank" class="text-decoration-none profile-item"> Narendra 
-      <div class="profile-card">
-        <img src="/assets/images/user-profile/narendra.jpg" class="profile-card-img rounded-circle border border-3 border-primary mb-2" width="60" height="60" alt="Creator" />
-                <h6 class="profile-card-name mb-1 fw-bold">Narendra Kumar</h6>
-    <ul class="profile-details list-unstyled small mb-0">
-      <li class="d-flex"><span class="detail-label fw-medium me-2">Role:</span><span class="detail-value">Engineer</span></li>
-      <li class="d-flex"><span class="detail-label fw-medium me-2">Expertise:</span><span class="detail-value">RF Planning &amp; Optimization, Geospatial Engineering, Wireless Network Design, GIS Analysis, Python Automation, and GitHub Enthusiast.</span></li>
-     </ul>
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
     </div>
-   </a>
-</div>
-
-</div>
-        </div>
-        <div class="text-muted p-3"><i class="fas fa-calendar me-1"></i>Last Updated: 20-12-2025</div>
-      </div>
+    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+  </div>
 
 
 

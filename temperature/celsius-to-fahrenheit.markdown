@@ -49,20 +49,16 @@ description: "Easily convert Celsius (°C) to Fahrenheit (°F) with this fast an
 
  <!-- Article Content -->
  <div class="article-container">
-      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-        <div class="d-flex align-items-center">
-          <div class="bg-light p-2 rounded-circle d-flex align-items-center justify-content-center me-3"> <i
-              class="fas fa-user text-primary"></i>
-          </div>
-          <div>
-            <h5 class="mb-0">Created by :- Narendra</h5>
-          </div>
-        </div>
-        <div class="text-muted"><i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }} </div>
-      </div>
-      <!-- What is Section1 -->
-      <section class="mb-5">
-       <h1 class="pt-4">Celsius to Fahrenheit Converter: A Complete Guide</h1>
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+  </div>
+  <!-- What is Section1 -->
+ <section class="mb-5">
+ <h1 class="pt-4">Celsius to Fahrenheit Converter: A Complete Guide</h1>
 <p>Temperature conversion is a basic yet essential calculation that we often encounter in daily life, whether it’s checking the weather forecast or measuring fever. In this guide, we will cover everything you need to know about Celsius to Fahrenheit conversion, including an easy-to-use Celsius to Fahrenheit converter chart. </p>
 <h3>What is Celsius to Fahrenheit Conversion?</h3>
 <p>Celsius (°C) and Fahrenheit (°F) are two commonly used temperature scales. The Celsius scale is widely used around the world, while Fahrenheit is primarily used in the United States. Converting between these two scales is simple with the following formula:<br>Fahrenheit (°F) = (Celsius × 9/5) + 32</p>

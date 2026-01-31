@@ -47,20 +47,15 @@ description: "Find your current elevation and view an interactive elevation map 
 
 <!-- Article Content -->
 <div class="article-container">
-      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-        <div class="d-flex align-items-center">
-          <div class="bg-light p-2 rounded-circle d-flex align-items-center justify-content-center me-3"> <i
-              class="fas fa-user text-primary"></i>
-          </div>
-          <div>
-            <h5 class="mb-0">Created by :- Narendra</h5>
-          </div>
-        </div>
-        <div class="text-muted">
-         <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}
-        </div>
-      </div>
-      <!-- What is Section1 -->
+ <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+  <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+  </div>
+
+<!-- What is Section1 -->
 <section class="mb-5">
 <h2>🌍 What Is My Current Elevation? </h2>
 <p>The elevation of a geographic location is its height above or below a fixed reference point—most commonly mean sea level. Elevation is typically expressed in feet or meters and is a vital data point for hikers, travelers, scientists, and everyday users curious about their surroundings. </p>
@@ -69,12 +64,12 @@ description: "Find your current elevation and view an interactive elevation map 
 <p>Elevation is a geographic term used to describe the height of a point on the Earth’s surface above a fixed reference point, often mean sea level (MSL).<br>Elevation is used for locations on land (e.g., a city or hill).<br>It's measured in meters (m) or feet (ft).<br>Different from altitude (used for flying objects) and depth (used below a surface, like sea level or ground).</p>
 
 
-<div class="highlight-box">
+<div class="bg-light round-2 border-0 p-4 mb-2">
           <h5><i class="fas fa-lightbulb text-warning me-2"></i> Example: My Current Elevation</h5>
           <p class="mb-0"> Current Location: Denver, Colorado, United States <br>My Current Elevation: Approximately 1,609 meters (5,280 feet) above sea level</p>
         </div>
         
-<div class="highlight-box">
+<div class="bg-light round-2 border-0 p-4 mb-2">
           <h5><i class="fas fa-lightbulb text-warning me-2"></i> 🌡️ Elevation vs. Altitude vs. Depth</h5>
           <p class="mb-0">Elevation: Height above sea level (used for land and surface points).<br>Altitude: Height of an object in the air (like an airplane).<br>Depth: Distance below a surface (like underwater depth). </p>
         </div>
@@ -126,5 +121,4 @@ description: "Find your current elevation and view an interactive elevation map 
 
  <!-- Scripts -->
  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
  <script src="{{ '/assets/js/elevation.js' | relative_url }}"></script>  

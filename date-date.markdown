@@ -61,21 +61,15 @@ image: "/assets/images/date-to-date-calculator.jpg"
                 </div>
             </div>
         </section>
-
-<!-- Article Part -->
-
 <!-- Article Content -->
  <div class="article-container">
-      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-        <div class="d-flex align-items-center">
-          <div class=" p-2 "></div>
-          <div>{% include narendra.html %}</div>
-        </div>
-        <div class="text-muted p-3">
-          <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}
-        </div>
-      </div>
-
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+  </div>
 <!-- Section -->
 <section class="mb-5">
 <h2 class="pt-2">Date to Date Calculator: Easily Calculate Days, Weeks, and Months Between Dates</h2>
