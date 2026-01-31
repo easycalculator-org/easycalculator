@@ -111,7 +111,7 @@ image: "/assets/images/apple-touch-icon.png"
 
  <!-- conversion-tool -->
 <hr>
-<h2>Conversion Tool</h2>
+<h2>Conversion Tool</h2><p>Convert numbers, units, temperature, and formats with accurate online tools.</p>
 <div class="row p-3 ">
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/number-to-word-converter"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-up-a-z fa-xl" style="color: #B197FC;"></i><h5>Num to Word</h5></div></a> </div>
  <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-weight-scale fa-xl"></i><h5>Weight Converter</h5></div> </a></div>
