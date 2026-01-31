@@ -2,9 +2,9 @@
 layout: default
 title: Epoch Time Converter | Convert Unix Timestamps to Human-readable Dates
 permalink: /epoch
-description: "Convert Unix epoch timestamps to readable date and time formats with our tool. Ideal for developers and analysts working with UTC or different time zones."
+description: "Epoch Time Converter lets you convert Unix timestamps to date and time instantly. Supports UTC and local time for accurate time calculations."
 ---
- <style> :root{--primary:#3b82f6;--secondary:#1e293b;--accent:#10b981;--light:#f8f9fa;--dark:#1e293b}.hero-section{background:linear-gradient(135deg,#4b6cb7 0,#182848 100%);color:#fff;padding:2rem 0;border-radius:0 0 20px 20px;box-shadow:0 4px 15px rgba(0,0,0,.15);margin-bottom:2rem}.converter-section{background:#f8fafc;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;border:1px solid #e2e8f0}.result-box{background-color:#fff;border-radius:8px;padding:1.2rem;margin-top:1.2rem;border:1px solid #e2e8f0;box-shadow:0 2px 8px rgba(0,0,0,.05)}.current-time-card{background:linear-gradient(to right,#3b82f6,#2563eb);color:#fff;border-radius:12px;padding:1.5rem;text-align:center;box-shadow:0 5px 15px rgba(59,130,246,.3)}.btn-convert{background:var(--primary);color:#fff;border:none;padding:.7rem 1.1rem;border-radius:8px;font-weight:600;transition:.3s}.btn-convert:hover{background:#2563eb;transform:translateY(-2px);box-shadow:0 4px 8px rgba(37,99,235,.3)}.btn-utility{background:#fff;color:var(--primary);border:1px solid var(--primary);padding:.5rem 1.2rem;border-radius:8px;transition:.3s}.btn-utility:hover{background:var(--primary);color:#fff}.article-container{background:#fff;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.05);padding:2.5rem;margin-top:2rem;border:1px solid #e2e8f0}.section-title{position:relative;padding-left:20px;margin-bottom:1.8rem}.faq-card,.feature-card{background:#f8fafc;border-radius:12px;margin-bottom:1.2rem;padding:1.5rem}.section-title::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:8px;height:30px;background:var(--primary);border-radius:4px}.feature-card{border-left:4px solid var(--primary);transition:transform .3s,box-shadow .3s}.feature-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.08)}.faq-card{border-left:4px solid #10b981}.faq-question{font-weight:700;color:#1e293b;margin-bottom:.8rem;font-size:1.1rem}.highlight-box{background:linear-gradient(to right,#e6f7ff,#f0f9ff);border-left:4px solid #1890ff;padding:1.5rem;border-radius:0 12px 12px 0;margin:2rem 0}</style>
+ <style> :root{--primary:#3b82f6;--secondary:#1e293b;--accent:#10b981;--light:#f8f9fa;--dark:#1e293b}.hero-section{background:linear-gradient(135deg,#4b6cb7 0,#182848 100%);color:#fff;padding:2rem 0;border-radius:0 0 20px 20px;box-shadow:0 4px 15px rgba(0,0,0,.15);margin-bottom:2rem}.converter-section{background:#f8fafc;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;border:1px solid #e2e8f0}.result-box{background-color:#fff;border-radius:8px;padding:1.2rem;margin-top:1.2rem;border:1px solid #e2e8f0;box-shadow:0 2px 8px rgba(0,0,0,.05)}.current-time-card{background:linear-gradient(to right,#3b82f6,#2563eb);color:#fff;border-radius:12px;padding:1.5rem;text-align:center;box-shadow:0 5px 15px rgba(59,130,246,.3)}.btn-convert{background:var(--primary);color:#fff;border:none;padding:.7rem 1.1rem;border-radius:8px;font-weight:600;transition:.3s}.btn-convert:hover{background:#2563eb;transform:translateY(-2px);box-shadow:0 4px 8px rgba(37,99,235,.3)}.btn-utility{background:#fff;color:var(--primary);border:1px solid var(--primary);padding:.5rem 1.2rem;border-radius:8px;transition:.3s}.btn-utility:hover{background:var(--primary);color:#fff}.article-container{background:#fff;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.05);padding:2.5rem;margin-top:2rem;border:1px solid #e2e8f0}.faq-card,.feature-card{background:#f8fafc;border-radius:12px;margin-bottom:1.2rem;padding:1.5rem}.feature-card{transition:transform .3s,box-shadow .3s}.feature-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.08)}.faq-question{font-weight:700;color:#1e293b;margin-bottom:.8rem;font-size:1.1rem}</style>
 <!-- Converter Tool -->
 <div class="container">
         <div class="converter-container">
@@ -22,9 +22,7 @@ description: "Convert Unix epoch timestamps to readable date and time formats wi
                             <div class="input-group mb-3">
                                 <span class="input-group-text bg-light"><i class="fas fa-hashtag"></i></span>
                                 <input type="text" class="form-control" id="epochInput" placeholder="Enter epoch timestamp" value="1728889200">
-                                <button class="btn-convert" type="button" id="convertEpochBtn">
-                                    <i class="fas fa-exchange-alt me-1"></i> Convert
-                                </button>
+                                <button class="btn-convert" type="button" id="convertEpochBtn"> <i class="fas fa-exchange-alt me-1"></i> Convert </button>
                             </div>
                             <div class="form-text">Example: 1617197423 or 1728889200</div>
                         </div>
@@ -50,9 +48,7 @@ description: "Convert Unix epoch timestamps to readable date and time formats wi
                             <div class="input-group mb-3">
                                 <span class="input-group-text bg-light"><i class="fas fa-clock"></i></span>
                                 <input type="time" class="form-control" id="timeInput" value="17:00">
-                                <button class="btn-convert" type="button" id="convertHumanBtn">
-                                    <i class="fas fa-exchange-alt me-1"></i> Convert
-                                </button>
+                                <button class="btn-convert" type="button" id="convertHumanBtn">   <i class="fas fa-exchange-alt me-1"></i> Convert </button>
                             </div>
                         </div>
                         <div class="result-box">
@@ -88,37 +84,33 @@ description: "Convert Unix epoch timestamps to readable date and time formats wi
                 </div>
             </div>
         </div>
-        <!-- Article Content -->
-        <div class="article-container">
-            <!-- Article Meta -->
-            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-                <div class="d-flex align-items-center">
-                    <div class="bg-light p-2 rounded-circle d-flex align-items-center justify-content-center me-3">
-                        <i class="fas fa-user text-primary"></i>
-                    </div>
-                    <div>
-                        <h5 class="mb-0">Created by :- Narendra</h5>
-                    </div>
-                </div>
-                <div class="text-muted">
-                    <i class="fas fa-calendar me-1"></i>Last Updated: June 13, 2025
-                </div>
-            </div>
-            <!-- What is Epoch Time? -->
-            <section class="mb-5">
-                <h2 class="section-title">What is Epoch Time?</h2>
-                <p>Epoch Time, also known as Unix Time or POSIX Time, is a system for tracking time in many computing environments. It counts the total number of seconds elapsed since 00:00:00 UTC on January 1, 1970, excluding leap seconds. This starting point is called the Unix Epoch.</p>
-                <p>Unix time is a core concept in computer programming, used extensively in databases, system logs, APIs, and time-based calculations.</p>
-                <p>Unix time started as the time system for Unix operating systems. Now, it's commonly used in many other computer operating systems, file systems, programming languages, and databases. Nowadays, in computing, values can also be saved with more precision, like microseconds or nanoseconds.</p>
-                <p>Unix time 0 is exactly midnight UTC on January 1, 1970. After that, Unix time goes up by 1 for every non-leap second. For instance, 00:00:00 UTC on January 1, 1971, is shown in Unix time as 31536000. If a system allows it, negative values show times before the Unix epoch, going down by 1 for each non-leap second before that time. For example, 00:00:00 UTC on January 1, 1969, is shown in Unix time as −31536000. In Unix time, every day has exactly 86400 seconds.</p>
-                <div class="highlight-box">
-                    <h5><i class="fas fa-lightbulb text-warning me-2"></i>Example:</h5>
-                    <p class="mb-0">Unix Timestamp <code>1617197423</code> → Human-readable Date: <strong>March 31, 2021, 05:57:03 UTC</strong></p>
-                </div>
-            </section>
-            <!-- How to Use -->
-            <section class="mb-5">
-                <h2 class="section-title">How to Use the Epoch Time Converter</h2>
+
+<!-- Article Content -->
+<div class="article-container">
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+  </div>
+   <!-- Article-->
+ <!-- What is Epoch Time? -->
+ <section class="mb-2 pt-4">
+ <h2>What is Epoch Time?</h2>
+  <p>Epoch Time (Unix Time) is the total number of seconds passed since <strong>January 1, 1970, 00:00:00 UTC</strong>, excluding leap seconds. It is widely used in programming, databases, APIs, and system logs for accurate time tracking.</p>
+   <p>Unix time is a core concept in computer programming, used extensively in databases, system logs, APIs, and time-based calculations.</p>
+   <p>Unix time started as the time system for Unix operating systems. Now, it's commonly used in many other computer operating systems, file systems, programming languages, and databases. Nowadays, in computing, values can also be saved with more precision, like microseconds or nanoseconds.</p>
+   <p>Unix time 0 is exactly midnight UTC on January 1, 1970. After that, Unix time goes up by 1 for every non-leap second. For instance, 00:00:00 UTC on January 1, 1971, is shown in Unix time as 31536000. If a system allows it, negative values show times before the Unix epoch, going down by 1 for each non-leap second before that time. For example, 00:00:00 UTC on January 1, 1969, is shown in Unix time as −31536000. In Unix time, every day has exactly 86400 seconds.</p>
+    <div class="bg-primary-subtle text-primary-emphasis rounded border-0 p-4">
+      <h5><i class="fas fa-lightbulb text-warning me-2"></i>Example:</h5>
+        <p class="mb-0">Unix Timestamp <code>1617197423</code> → Human-readable Date: <strong>March 31, 2021, 05:57:03 UTC</strong></p>
+       </div>
+  </section>
+
+<!-- How to Use -->
+ <section class="mb-2 pt-4">
+                <h2>How to Use the Epoch Time Converter</h2>
                 <p>Our Epoch Time Converter Tool is designed to handle multiple time conversion needs:</p>
                 <div class="row">
                     <div class="col-md-4 mb-4">
@@ -142,10 +134,10 @@ description: "Convert Unix epoch timestamps to readable date and time formats wi
                 </div>
             </section>
             <!-- Why Use? -->
-            <section class="mb-5">
-                <h2 class="section-title">Why Use a Unix Timestamp Converter?</h2>
-                <div class="row">
-                    <div class="col-md-6 mb-4">
+            <section class="mb-2">
+                <h2>Why Use a Unix Timestamp Converter?</h2>
+                <div class="row mb-3 p-4">
+                    <div class="col-md-6 ">
                         <div class="feature-card">
                             <h5 class="d-flex align-items-center"><i class="fas fa-bolt text-warning me-2"></i> Instant Conversions</h5>
                             <p class="mb-0">Get immediate results with no delays or waiting time.</p>
@@ -173,7 +165,7 @@ description: "Convert Unix epoch timestamps to readable date and time formats wi
             </section>  
             <!-- Live Epoch Clock -->
             <section class="mb-5">
-                <h2 class="section-title">Live Epoch Clock – Current Epoch Time</h2>
+                <h2>Live Epoch Clock – Current Epoch Time</h2>
                 <p>Want to check epoch time now? Our tool includes a real-time epoch clock that refreshes every second. It's perfect for:</p>
                 <div class="row mt-4">
                     <div class="col-md-6">
@@ -192,7 +184,7 @@ description: "Convert Unix epoch timestamps to readable date and time formats wi
             </section>
             <!-- FAQ Section -->
             <section class="mb-5">
-                <h2 class="section-title">Frequently Asked Questions (FAQ)</h2>
+                <h2>FAQ on Epoch Time</h2>
                 <div class="faq-card">
                     <div class="faq-question">1. What is the difference between Epoch and Unix time?</div>
                     <p class="mb-0">They're the same! Both refer to the number of seconds since January 1, 1970, UTC.</p>
@@ -224,4 +216,60 @@ description: "Convert Unix epoch timestamps to readable date and time formats wi
         </div>
     </div>
 <script src="{{ '/assets/js/epoch-time.js' | relative_url }}"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is epoch time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Epoch time, also known as Unix time, is the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC, excluding leap seconds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is epoch time and Unix time the same?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Epoch time and Unix time refer to the same concept—counting seconds since January 1, 1970 (UTC)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does epoch time include time zones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Epoch time is always calculated in UTC. Time zones must be applied separately when converting to local time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many digits are in a Unix timestamp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most Unix timestamps have 10 digits representing seconds. Some systems use 13-digit timestamps to represent milliseconds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can epoch time represent past and future dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Epoch time can represent dates before and after 1970. However, 32-bit systems may face issues after January 19, 2038."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do developers use epoch time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Developers use epoch time because it is a simple, standardized, and language-independent format for storing, comparing, and calculating dates and times."
+      }
+    }
+  ]
+}
+</script>
 
