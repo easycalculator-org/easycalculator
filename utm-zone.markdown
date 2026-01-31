@@ -15,7 +15,7 @@ description: "Explore detailed UTM zone maps with grid overlays and UTM coordina
    .conversion-table td{padding:.85rem;text-align:center;border-bottom:1px solid #e0e0e0}
    .conversion-table tr:nth-child(2n){background-color:#f8f9ff}
    .conversion-table tr:last-child td{border-bottom:none}
-   .faq-card{background:#f8fafc;border-radius:12px;padding:1.5rem;margin-bottom:1.2rem;border-left:4px solid #10b981}
+   .faq-card{background:#f8fafc;border-radius:12px;padding:1.5rem;margin-bottom:1.2rem;
    .faq-question{font-weight:700;color:#1e293b;margin-bottom:.8rem;font-size:1.1rem}
   </style>
 
@@ -103,7 +103,7 @@ description: "Explore detailed UTM zone maps with grid overlays and UTM coordina
 
 <!-- FAQ Section -->
 <section class="mb-5">
-   <h2 class="section-title">Frequently Asked Questions (FAQ)</h2>
+   <h2 class="section-title">FAQ on UTM Zone</h2>
     <div class="faq-card">
       <div class="faq-question">1. What is a UTM zone and how is it used?</div>
           <p class="mb-0">A UTM zone is one of 60 longitudinal strips the Earth is divided into, each 6 degrees wide, under the Universal Transverse Mercator coordinate system. These zones are used to provide highly accurate, meter-based location references for GPS, mapping, and geospatial applications. Each zone has its own coordinate grid to minimize distortion.</p>

@@ -31,10 +31,10 @@ description: "Easily convert Military Grid Reference System (MGRS) coordinates t
       </div>
 <!-- Lat/Long to MGRS Card -->
 <div class="col-12 col-md-6">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title mb-3">Latitude & Longitude → MGRS</h5>
-            <div class="mb-3"><label for="latInput" class="form-label">Enter Latitude</label><input type="number" step="any" class="form-control" id="latInput" placeholder="Latitude" /></div>
+ <div class="card shadow-sm">
+   <div class="card-body">
+     <h5 class="card-title mb-3">Latitude & Longitude → MGRS</h5>
+         <div class="mb-3"><label for="latInput" class="form-label">Enter Latitude</label><input type="number" step="any" class="form-control" id="latInput" placeholder="Latitude" /></div>
             <div class="mb-3"><label for="lonInput" class="form-label">Enter Longitude</label><input type="number" step="any" class="form-control" id="lonInput" placeholder="Longitude" /></div>
             <button class="btn btn-success w-100 " onclick="convertLatLonToMGRS()">Convert to MGRS</button>
           </div>
@@ -53,14 +53,13 @@ description: "Easily convert Military Grid Reference System (MGRS) coordinates t
   </div>
 <!-- Article Part -->
 <div class="article-container">
-      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-        <div class="d-flex align-items-center">
-          <div class="bg-light p-2 rounded-circle d-flex align-items-center justify-content-center me-3"><i class="fas fa-user text-primary"></i></div>
-          <div><h5 class="mb-0">Created by :- Narendra</h5></div>
-        </div>
-        <div class="text-muted"><i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
-      </div>
-
+   <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+  </div>
 <!-- Section -->
 <section>
  <h2>What is MGRS?</h2>
@@ -178,13 +177,11 @@ description: "Easily convert Military Grid Reference System (MGRS) coordinates t
 
 <!-- Example Conversion Section -->
 <div class="card border-0 p-4 mb-5">
-                        <div class="card-header text-primary">
-                            <h2 class="h4 mb-0"><i class="fas fa-code me-2"></i>Example Conversion</h2>
-                        </div>
-                        <div class="card-body">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="bg-light p-3 rounded-2"><h3 class="h6 fw-bold">Input (MGRS)</h3><code class="d-block p-2 bg-white rounded mb-2">33TWN8567932516</code><p class="small mb-0">1-meter precision coordinate</p></div>
+    <div class="card-header text-primary"><h2 class="h4 mb-0"><i class="fas fa-code me-2"></i>Example Conversion</h2>  </div>
+      <div class="card-body">
+         <div class="row g-3">
+               <div class="col-md-6">
+                   <div class="bg-light p-3 rounded-2"><h3 class="h6 fw-bold">Input (MGRS)</h3><code class="d-block p-2 bg-white rounded mb-2">33TWN8567932516</code><p class="small mb-0">1-meter precision coordinate</p></div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="bg-light p-3 rounded-2"><h3 class="h6 fw-bold">Output (Lat/Long)</h3><code class="d-block p-2 bg-white rounded mb-2">50.0567°N, 8.6821°E</code><p class="small mb-0">WGS84 datum</p></div>
@@ -196,11 +193,11 @@ description: "Easily convert Military Grid Reference System (MGRS) coordinates t
 
 <!-- Use Cases Section -->
 <div class="mb-5">
-                        <h2 class="fw-bold mb-4"><i class="fas fa-bullseye me-2 text-danger"></i>Why Use an MGRS Converter?</h2>
-                        <div class="row g-4">
-                            <div class="col-md-6 col-lg-4">
-                                <div class="card h-100">
-                                    <div class="card-body text-center">
+       <h2 class="fw-bold mb-4"><i class="fas fa-bullseye me-2 text-danger"></i>Why Use an MGRS Converter?</h2>
+            <div class="row g-4">
+                 <div class="col-md-6 col-lg-4">
+                          <div class="card h-100">
+                                <div class="card-body text-center">
                                         <div class="bg-primary bg-opacity-10 p-3 rounded-circle d-inline-block mb-3"><i class="fa-solid fa-person-military-pointing fa-2x"></i></div>
                                         <h3 class="h5">Military Operations</h3><p class="small mb-0">Essential for tactical maps, mission planning, and navigation.</p>
                                     </div>
