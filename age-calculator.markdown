@@ -21,7 +21,7 @@ image: "/assets/images/age-calc-open-graph.png"
     <h1 class="text-center mb-4">Age Calculator</h1>
     <div class="card shadow p-4">
       <form id="ageForm">
-        <div class="row mb-4 gap-4">
+        <div class="row mb-4 gap-4 p-3">
           <div class="col-md-5 mx-auto">
             <label for="startDate" class="form-label"><strong>Start Date</strong></label>
             <div class="input-group">
@@ -37,7 +37,7 @@ image: "/assets/images/age-calc-open-graph.png"
             </div>
           </div>
         </div>
-        <div class="text-center">
+        <div class="text-center p-4">
           <button type="button" id="calculateBtn" class="btn btn-primary">Calculate Age</button>
         </div>
       </form>
@@ -57,16 +57,17 @@ image: "/assets/images/age-calc-open-graph.png"
   </div>
 
 <!-- Article Content -->
- <div class="article-container">
-      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-        <div class="d-flex align-items-center">
-          <div class=" p-2 "></div>
-          <div>{% include narendra.html %}</div>
-        </div>
-        <div class="text-muted p-3">
-          <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}
-        </div>
-      </div>
+<div class="article-container">
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <!-- Last Updated -->
+    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+  </div>
+
+
 
 <!-- Section -->
 <section class="mb-5">
@@ -147,7 +148,7 @@ image: "/assets/images/age-calc-open-graph.png"
                                 </div>
                             </div>
                         </div>
-                        <div class="alert alert-success mt-4">
+                        <div class="alert alert-success border-0 mt-4">
                             <p class="mb-0"><strong>In short, age helps us make sense of life and the world around us! 😊</strong></p>
                         </div>
                     </div>
@@ -219,24 +220,51 @@ image: "/assets/images/age-calc-open-graph.png"
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "How do I find my exact age today?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Use an age calculator by entering your date of birth. It instantly shows your age in years, months, and days."
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is age important?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Age is important for healthcare decisions, education eligibility, legal rights, retirement planning, and tracking personal life milestones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I calculate my exact age today?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your date of birth into the Age Calculator and click Calculate. The tool instantly shows your age in years, months, and days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my personal data safe while using this Age Calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Age Calculator does not store, track, or share any personal data and performs calculations directly in your browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate age including time of birth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. By entering your exact time of birth, you can get a more precise age calculation including hours and minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate my age for a future date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Age Calculator allows you to calculate your age for any future date, which is useful for planning events and milestones."
+      }
     }
-  },
-  {
-    "@type": "Question",
-    "name": "Is my data secure when using the Age Calculator?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes. This calculator does not store or track any personal data you enter."
-    }
-  }]
+  ]
 }
 </script>
+
 
 <script src="{{ '/assets/js/age-calculator.js' | relative_url }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
