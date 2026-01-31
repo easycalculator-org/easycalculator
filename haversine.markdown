@@ -3,6 +3,7 @@ layout: default
 title: Haversine Distance Calculator – Accurate Air Distance Tool
 permalink: /haversine-distance
 description: "Calculate accurate great-circle distances between two latitude-longitude points using the Haversine formula. Ideal for aviation, geolocation, and mapping."
+image: "/assets/images/haversine-distance-calculator-formula.jpg"
 ---
  <style> 
   .formula {
@@ -86,18 +87,13 @@ description: "Calculate accurate great-circle distances between two latitude-lon
 
 <!-- Article Content -->
 <div class="article-container">
-  <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-        <div class="d-flex align-items-center">
-          <div class="bg-light p-2 rounded-circle d-flex align-items-center justify-content-center me-3"> <i class="fas fa-user text-primary"></i>
-          </div>
-          <div>
-            <h5 class="mb-0">Created by :- Narendra</h5>
-          </div>
-        </div>
-        <div class="text-muted">
-         <i class="fas fa-calendar me-1"></i>Last Updated: 29-06-2025
-        </div>
-      </div>
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+  </div>
   <!-- What is Section1 -->
 <section class="mb-5">
 <h3>What is a Haversine Distance Calculator?</h3>
