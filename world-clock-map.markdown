@@ -42,8 +42,14 @@ image: "/assets/images/World_Time_Zones_Map.svg"
  
 <!-- Article -->
 
-<div class="container my-5">
-  <article class="bg-white p-4 p-md-5 rounded shadow-sm">
+<div class="article-container">
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+  </div>
     <!-- Page Title -->
     <header class="text-center mb-4">
       <h1 class="fw-bold mb-3">World Clock Map – Check Local Time Anywhere in the World</h1>
@@ -54,7 +60,7 @@ image: "/assets/images/World_Time_Zones_Map.svg"
       <h2 class="h4 fw-semibold mb-3">What is the World Clock?</h2>
       <p> The <strong>World Clock Map</strong> is a simple and interactive online tool that helps you check the current local time of any place in the world. Just click on a location on the map, and you’ll instantly see the time,  date, and time zone for that area.</p>
       <p> It’s designed to be easy for everyone to use—no calculations, no confusion. Whether you’re traveling, working with people in different countries, or just curious about the time somewhere else,  this tool gives you accurate information in seconds. </p>
-      <p>  You can use a fast and reliable World Clock Map on<a href="https://easycalculator.org/" class="fw-semibold text-decoration-none">easycalculator.org</a>, where all tools are built for accuracy and ease of use.</p>
+      <p>  You can use a fast and reliable World Clock Map on <a href="https://easycalculator.org/" class="fw-semibold text-decoration-none"> easycalculator.org</a>, where all tools are built for accuracy and ease of use.</p>
     </section>
     <!-- Features -->
     <section class="mb-5">
@@ -136,7 +142,6 @@ image: "/assets/images/World_Time_Zones_Map.svg"
 
 </section>
 
-  </article>
 </div>
 
 
