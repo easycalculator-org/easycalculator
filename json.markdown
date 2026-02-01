@@ -66,10 +66,10 @@ image: "/assets/images/json-validator.jpg"
         </div>
     </header>
 <!-- What is a JSON Validator?  -->
- <section id="what-is" class="mb-5">
-                    <h2 class="mb-4"><i class="fas fa-question-circle text-primary me-2"></i>What is a JSON Validator? </h2>
+ <section id="what-is" class="mb-5">                  
                     <div class="card border-0 shadow-sm mb-4">
                         <div class="card-body">
+                        <h2 class="mb-4"><i class="fas fa-question-circle text-primary me-2"></i>What is a JSON Validator? </h2>
                             <p>A JSON validator is a simple yet powerful tool that checks your JSON data for errors. Whether you're building an app or working with APIs, ensuring that your JSON is clean
                                 and correctly structured is critical.</p>
                             <p>By using our tool JSON checker online, you can quickly identify issues like missing brackets, incorrect formatting, or wrong data types — before they cause bigger problems in your project.
@@ -78,13 +78,10 @@ image: "/assets/images/json-validator.jpg"
                     </div>
                 </section>
 <!-- Why Validate JSON Online -->
-<section id="why-validate" class="mb-5">
-                    <h2 class="mb-4">
-                        <i class="fas fa-check-double text-success me-2"></i>
-                        Why You Should Validate JSON Online
-                    </h2>
+<section id="why-validate" class="mb-5">        
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
+                        <h2 class="mb-4"> <i class="fas fa-check-double text-success me-2"></i>Why You Should Validate JSON Online</h2>
                             <p>There are several strong reasons to validate JSON online:</p>
                             <div class="row mt-4">
                                 <div class="col-md-6 mb-4">
@@ -142,51 +139,27 @@ image: "/assets/images/json-validator.jpg"
                 </section>
  <!-- How to Use -->
 <section id="how-to" class="mb-5">
-                    <h2 class="mb-4">
-                        <i class="fas fa-magic text-warning me-2"></i>
-                        How to Use a JSON Checker Online
-                    </h2>
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-body">
-                            <p>Using a JSON checker online is simple and fast:</p>
-                            <ol class="list-group list-group-numbered">
-                                <li class="list-group-item border-0">
-                                    Copy your JSON data
-                                </li>
-                                <li class="list-group-item border-0">
-                                    Paste it into the JSON validator
-                                </li>
-                                <li class="list-group-item border-0">
-                                    Click "Validate" or "Check JSON Validity"
-                                </li>
-                                <li class="list-group-item border-0">
-                                    Review any errors or confirmations that your JSON is valid
-                                </li>
-                            </ol>
-                            <div class="mt-3">
-                                <i class="fas fa-lightbulb text-warning me-2"></i>
-                                Some tools also include an option for JSON linter functionality, 
-                                helping you format and beautify your data automatically.
-                            </div>
+     <div class="card border-0 shadow-sm">
+             <div class="card-body">
+                <h2 class="mb-4"> <i class="fas fa-magic text-warning me-2"></i> How to Use a JSON Checker Online</h2>
+                   <p>Using a JSON checker online is simple and fast:</p>
+                <ol class="list-group list-group-numbered">
+                 <li class="list-group-item border-0">  Copy your JSON data </li>
+                 <li class="list-group-item border-0">  Paste it into the JSON validator </li>
+                 <li class="list-group-item border-0"> Click "Validate" or "Check JSON Validity" </li>
+                 <li class="list-group-item border-0">  Review any errors or confirmations that your JSON is valid  </li>
+                 </ol>
+                            <div class="mt-3"> <i class="fas fa-lightbulb text-warning me-2"></i>  Some tools also include an option for JSON linter functionality,   helping you format and beautify your data automatically. </div>
                         </div>
                     </div>
                 </section>
  <!-- JSON Verification -->
 <section class="mb-5">
-                    <h2 class="mb-4">
-                        <i class="fas fa-shield-alt text-success me-2"></i>
-                        What is JSON Verification?
-                    </h2>
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
-                            <p>
-                                JSON verification goes beyond just finding errors. It confirms that your JSON follows 
-                                the correct structure and syntax required by the system you're using.
-                            </p>
-                            <p>
-                                For example, if you're submitting JSON data to an API, JSON verification ensures that 
-                                everything — from brackets to data types — is exactly how it should be.
-                            </p>
+                         <h2 class="mb-4"> <i class="fas fa-shield-alt text-success me-2"></i>  What is JSON Verification? </h2>
+                            <p>  JSON verification goes beyond just finding errors. It confirms that your JSON follows   the correct structure and syntax required by the system you're using.  </p>
+                            <p> For example, if you're submitting JSON data to an API, JSON verification ensures that  everything — from brackets to data types — is exactly how it should be. </p>
                             <div class="alert alert-success mt-3">
                                 <i class="fas fa-star me-2"></i>
                                 Tools offering JSON schema validation online even allow you to validate against specific 
@@ -197,10 +170,8 @@ image: "/assets/images/json-validator.jpg"
                 </section>
 <!-- Benefits Card -->
 <div class="card border-0 shadow-sm mb-4">
-                    <div class="card-header bg-info text-white">
-                        <h4 class="mb-0"><i class="fas fa-star me-2"></i>Key Benefits of JSON Validation </h4>
-                    </div>
                     <div class="card-body">
+                    <h4 class="mb-2"><i class="fas fa-star me-2"></i>Key Benefits of JSON Validation </h4>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Prevents application crashes</li>
                             <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Saves debugging time</li>
@@ -212,9 +183,9 @@ image: "/assets/images/json-validator.jpg"
                 </div>
 <!-- JSON Linter -->
 <section class="mb-5">
-                    <h2 class="mb-4"><i class="fas fa-broom text-info me-2"></i>Benefits of Using a JSON Linter </h2>
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
+                         <h2 class="mb-4"><i class="fas fa-broom text-info me-2"></i>Benefits of Using a JSON Linter </h2>
                             <p> A JSON linter checks your JSON for both errors and style issues. It ensures:  </p>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> Consistent formatting </li>
@@ -227,13 +198,13 @@ image: "/assets/images/json-validator.jpg"
                 </section>
  <!-- Features -->
 <section class="mb-5">
-                    <h2 class="mb-4"><i class="fas fa-list-alt text-primary me-2"></i>Features to Look for in a JSON Validator </h2>
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
+                          <h2 class="mb-4"><i class="fas fa-list-alt text-primary me-2"></i>Features to Look for in a JSON Validator </h2>
                             <p>When choosing a tool to validate JSON online, here are the features you should look for:</p>
                             <div class="row mt-3">
                                 <div class="col-md-6 mb-3">
-                                    <div class="card h-100 border-primary">
+                                    <div class="card h-100 border">
                                         <div class="card-body">
                                             <h5 class="card-title"> <i class="fas fa-rocket text-primary me-2"></i> Fast and accurate validation </h5>
                                             <p class="card-text">Quickly identifies errors without delays</p>
@@ -241,54 +212,40 @@ image: "/assets/images/json-validator.jpg"
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <div class="card h-100 border-primary">
+                                    <div class="card h-100 border">
                                         <div class="card-body">
-                                            <h5 class="card-title">
-                                                <i class="fas fa-keyboard text-primary me-2"></i>
-                                                Real-time JSON verify
-                                            </h5>
+                                            <h5 class="card-title"> <i class="fas fa-keyboard text-primary me-2"></i>  Real-time JSON verify</h5>
                                             <p class="card-text">Get instant feedback as you type</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <div class="card h-100 border-primary">
+                                    <div class="card h-100 border">
                                         <div class="card-body">
-                                            <h5 class="card-title">
-                                                <i class="fas fa-project-diagram text-primary me-2"></i>
-                                                Schema validation
-                                            </h5>
+                                            <h5 class="card-title"> <i class="fas fa-project-diagram text-primary me-2"></i> Schema validation </h5>
                                             <p class="card-text">Validate against custom schemas</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <div class="card h-100 border-primary">
+                                    <div class="card h-100 border">
                                         <div class="card-body">
-                                            <h5 class="card-title">
-                                                <i class="fas fa-highlighter text-primary me-2"></i>
-                                                Clear error highlighting
-                                            </h5>
+                                            <h5 class="card-title">  <i class="fas fa-highlighter text-primary me-2"></i>   Clear error highlighting </h5>
                                             <p class="card-text">Pinpoints exact locations of issues</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <div class="card h-100 border-primary">
+                                    <div class="card h-100 border">
                                         <div class="card-body">
-                                            <h5 class="card-title">
-                                                <i class="fas fa-paint-brush text-primary me-2"></i>
-                                                Automatic formatting
-                                            </h5>
+                                            <h5 class="card-title">  <i class="fas fa-paint-brush text-primary me-2"></i> Automatic formatting </h5>
                                             <p class="card-text">Pretty print your JSON for readability</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <i class="fas fa-lightbulb text-warning me-2"></i>
-                                The best JSON checker will not only help you check JSON validity but will also enhance your productivity.
-                            </div>
+                                <i class="fas fa-lightbulb text-warning me-2"></i>  The best JSON checker will not only help you check JSON validity but will also enhance your productivity. </div>
                         </div>
                     </div>
                 </section>               
@@ -326,25 +283,6 @@ image: "/assets/images/json-validator.jpg"
                         </div>
                     </div>
                 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.3/ace.js"></script>

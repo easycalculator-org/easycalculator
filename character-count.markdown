@@ -17,7 +17,7 @@ image: "/assets/images/charater-count.png"
             
 <div class="row g-3 mt-1">
  <div class="col-md-6">
-   <div class="stat-card card text-info-emphasis bg-secondary-subtle border border-secondary-subtle rounded-3 p-3">
+   <div class="stat-card card text-info-emphasis bg-light border-0 rounded-3 p-3">
      <h3 class="h5"> Basic Stats</h3>
         <ul class="list-unstyled">
            <li><strong>Characters:</strong> <span id="charCount">0</span></li>
@@ -30,7 +30,7 @@ image: "/assets/images/charater-count.png"
       </div>
                 
  <div class="col-md-6">
-<div class="stat-card card text-info-emphasis bg-secondary-subtle border border-secondary-subtle rounded-3 p-2">
+<div class="stat-card card text-info-emphasis bg-light border-0 rounded-3 p-4">
  <h3 class="h5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/></svg> Readability</h3>
            <ul class="list-unstyled">
              <li><strong>Reading Time:</strong> <span id="readingTime">0</span> mins</li>
@@ -51,17 +51,13 @@ image: "/assets/images/charater-count.png"
     </div>
 <!-- Article Content -->
 <div class="article-container">
-      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-        <div class="d-flex align-items-center">
-          <div class="bg-light p-2 rounded-circle d-flex align-items-center justify-content-center me-3"> <i
-              class="fas fa-user text-primary"></i>
-          </div>
-          <div>
-            <h5 class="mb-0">Created by :- Narendra</h5>
-          </div>
-        </div>
-        <div class="text-muted"><i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }} </div>
-      </div>
+       <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+  </div>
       <!-- What is Section1 -->
       <section class="mb-5">
     <h2 class="h3 fw-bold mb-3 pb-2">What is the Character Count Tool?</h2>
@@ -72,7 +68,7 @@ image: "/assets/images/charater-count.png"
                     <h2 class="h3 fw-bold mb-4 border-bottom pb-2">Key Features</h2>
                     <div class="row g-4">
                         <div class="col-md-6">
-                            <div class="card h-100 border-0 shadow">
+                            <div class="card h-100 border-0 shadow-sm">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="bg-primary text-white rounded-circle p-2 me-3">
@@ -85,7 +81,7 @@ image: "/assets/images/charater-count.png"
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="card h-100 border-0 shadow">
+                            <div class="card h-100 border-0 shadow-sm">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="bg-success text-white rounded-circle p-2 me-3">
@@ -98,7 +94,7 @@ image: "/assets/images/charater-count.png"
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="card h-100 border-0 shadow">
+                            <div class="card h-100 border-0 shadow-sm">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="bg-info text-white rounded-circle p-2 me-3">
@@ -111,7 +107,7 @@ image: "/assets/images/charater-count.png"
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="card h-100 border-0 shadow">
+                            <div class="card h-100 border-0 shadow-sm">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="bg-warning text-dark rounded-circle p-2 me-3">
