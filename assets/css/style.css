@@ -52,3 +52,5 @@ a:hover {text-decoration: none;}
 .profile-link:hover .profile-name:after{transform:scaleX(1)} /* user profile end*/
 /* user profile donot delete*/
 .creator-icon-pill{display:flex;align-items:center;gap:10px;background:#f6f8fa;padding:8px 14px;border-radius:999px;font-size:13px;color:#212529;transition:background .2s ease}.creator-icon-pill:hover{background:#eef2f6}.creator-icon-pill img{width:34px;height:34px;border-radius:50%;object-fit:cover}.creator-icon-text{line-height:1.2}.creator-icon-role{font-size:11px;color:#6c757d}.creator-icon-name{font-weight:600;font-size:13px}
+.hover-shadow {transition: all 0.25s ease;cursor: pointer;background-color: #ffffff;}
+.hover-shadow:hover {transform: translateY(-6px) scale(1.03); box-shadow: 0 12px 28px rgba(13, 110, 253, 0.25);border-color: #0d6efd; background-color: #f4f8ff;}
