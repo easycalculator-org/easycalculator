@@ -105,75 +105,18 @@ image: "/assets/images/strong-password-generator.jpg"
     </div>
 </section>
 
-
-
-
- <!-- <section class="mb-5 p-4" id="generate">
-            <div class="card border-0 shadow">
-                <div class="card-header bg-primary text-white py-3">
-                    <h3 class="mb-0"><i class="fas fa-key me-2"></i>Strong Password Geneator</h3>
-                </div>
-                <div class="card-body p-4">
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="mb-4">
-                                <label class="form-label">Password Length: <span id="length-value">12</span> characters</label>
-                                <input type="range" class="form-range" min="8" max="32" value="12" id="length-slider">
-                            </div>
-                            <div class="mb-4">
-                                <label class="form-label">Include:</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="uppercase" checked>
-                                    <label class="form-check-label" for="uppercase"> Uppercase Letters (A-Z) </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="lowercase" checked>
-                                    <label class="form-check-label" for="lowercase"> Lowercase Letters (a-z)</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="numbers" checked>
-                                    <label class="form-check-label" for="numbers">  Numbers (0-9) </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="symbols" checked>
-                                    <label class="form-check-label" for="symbols"> Special Symbols (!@#$%^&*)</label>
-                                </div>
-                            </div>
-                            <button class="btn btn-primary w-100 py-3" id="generate-btn"><i class="fas fa-sync-alt me-2"></i>Generate Secure Password</button>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card bg-light">
-                                <div class="card-body text-center p-4">
-                                    <h5 class="text-muted mb-3">Your Secure Password</h5>
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control form-control-lg text-center fw-bold" id="password-output" value="Click Generate" readonly>
-                                        <button class="btn btn-outline-secondary" id="copy-btn"><i class="fas fa-copy"></i></button>
-                                    </div>
-                                    <div class="progress mb-3">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
-                                    </div>
-                                    <p class="text-success mb-0" id="strength-text"> <i class="fas fa-check-circle me-1"></i>Very Strong Password </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
 <!-- Article Part -->
 
 <!-- Article Content -->
  <div class="article-container">
-      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-        <div class="d-flex align-items-center">
-          <div class=" p-2 "></div>
-          <div>{% include narendra.html %}</div>
-        </div>
-        <div class="text-muted p-3"><i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }} </div>
-      </div>
-<!-- Section -->
-<!-- Definition Section -->
+       <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+  </div>
+<!-- Definition -->
 <section class="mb-5">
  <div class="card border-0 shadow-sm">
   <div class="card-body p-4">
