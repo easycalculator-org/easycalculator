@@ -3,6 +3,7 @@ layout: default
 title: Smart Loan EMI Calculator – Charts & Detailed Amortization Table
 permalink: /loan-calculator
 description: "Free online Loan EMI Calculator with chart and amortization table. Calculate monthly EMIs, total interest, and repayment schedule in seconds."
+last_modified_at: 2026-02-03
 ---
 <style>
  .calculator-container {

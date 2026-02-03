@@ -4,6 +4,7 @@ title: Octal to Binary Converter (Base-8 to Base-2) | EasyCalculator
 permalink: /octal-to-binary
 description: "Easily convert octal (base-8) numbers to binary (base-2). Simple, fast, and accurate Octal to Binary converter for students and developers."
 # image: "/assets/images/age-calc-open-graph.png"
+last_modified_at: 2026-02-03
 ---
 
 <div class="row p-4">

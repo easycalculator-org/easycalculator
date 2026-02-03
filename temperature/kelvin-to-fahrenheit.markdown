@@ -3,6 +3,7 @@ layout: default
 title: Kelvin to Fahrenheit Conversion - convert K to °F Easily
 permalink: /kelvin-to-fahrenheit/
 description: "Convert Kelvin to Fahrenheit easily with our simple calculator! Get quick results and understand temperature changes in no time. Try it now!"
+last_modified_at: 2026-02-03
 ---
  <style>
         :root {
@@ -12,9 +13,7 @@ description: "Convert Kelvin to Fahrenheit easily with our simple calculator! Ge
             --light-bg: #f8f9fa;
             --dark-bg: #343a40;
         }
-        
 
-        
         .hero-section {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
@@ -119,7 +118,6 @@ description: "Convert Kelvin to Fahrenheit easily with our simple calculator! Ge
   </div>
 </div>
 <hr>
-
 <div class="row justify-content-center">
   
   <div class="col-auto">
@@ -170,7 +168,6 @@ description: "Convert Kelvin to Fahrenheit easily with our simple calculator! Ge
   <div class="container">
     <div class="row">
       <div class="col-lg-9 mx-auto">
-
         <!-- Intro Card -->
         <div class="card shadow-sm border-0 mb-4">
           <div class="card-body fs-5">
@@ -179,7 +176,6 @@ description: "Convert Kelvin to Fahrenheit easily with our simple calculator! Ge
             with a clear formula, real examples, and a quick reference chart.
           </div>
         </div>
-
         <!-- What is Kelvin -->
         <div class="card shadow-sm border-0 mb-4">
           <div class="card-body">
@@ -191,7 +187,6 @@ description: "Convert Kelvin to Fahrenheit easily with our simple calculator! Ge
             </p>
           </div>
         </div>
-
         <!-- Formula Highlight -->
         <div class="card shadow-sm border-0 mb-4 bg-light">
           <div class="card-body text-center">
@@ -201,34 +196,28 @@ description: "Convert Kelvin to Fahrenheit easily with our simple calculator! Ge
             </div>
           </div>
         </div>
-
         <!-- Examples -->
         <div class="card shadow-sm border-0 mb-4">
           <div class="card-body">
             <h2 class="h5 fw-semibold mb-3">Examples</h2>
-
             <div class="border rounded p-3 mb-3 bg-light">
               <strong>100 K → Fahrenheit</strong><br>
               (100 − 273.15) × 9/5 + 32 = <span class="fw-bold text-primary">-279.67°F</span>
             </div>
-
             <div class="border rounded p-3 mb-3 bg-light">
               <strong>300 K → Fahrenheit</strong><br>
               (300 − 273.15) × 9/5 + 32 = <span class="fw-bold text-primary">80.33°F</span>
             </div>
-
             <div class="border rounded p-3 bg-light">
               <strong>1000 K → Fahrenheit</strong><br>
               (1000 − 273.15) × 9/5 + 32 = <span class="fw-bold text-primary">1340.33°F</span>
             </div>
           </div>
         </div>
-
         <!-- Conversion Table -->
         <div class="card shadow-sm border-0 mb-4">
           <div class="card-body">
             <h2 class="h5 fw-semibold mb-3">Kelvin to Fahrenheit Table</h2>
-
             <div class="table-responsive">
               <table class="table table-bordered text-center mb-0">
                 <thead class="table-primary">
@@ -248,7 +237,6 @@ description: "Convert Kelvin to Fahrenheit easily with our simple calculator! Ge
             </div>
           </div>
         </div>
-
         <!-- Why Use -->
         <div class="card shadow-sm border-0 mb-4 bg-light">
           <div class="card-body">
@@ -275,26 +263,21 @@ description: "Convert Kelvin to Fahrenheit easily with our simple calculator! Ge
             </div>
           </div>
         </div>
-
         <!-- FAQ -->
         <div class="card shadow-sm border-0">
           <div class="card-body">
             <h2 class="h5 fw-semibold mb-3">FAQs</h2>
-
             <p><strong>What is the Kelvin to Fahrenheit formula?</strong><br>
               F = (K − 273.15) × 9/5 + 32
             </p>
-
             <p><strong>What is 100 Kelvin in Fahrenheit?</strong><br>
               -279.67°F
             </p>
-
             <p><strong>Is there an easy way to convert Kelvin?</strong><br>
               Yes, use the online calculator on <strong>easycalculator.org</strong>.
             </p>
           </div>
         </div>
-
       </div>
     </div>
   </div>

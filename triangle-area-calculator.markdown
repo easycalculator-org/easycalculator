@@ -4,6 +4,7 @@ title: Triangle Area Calculator | find the area of a triangle
 permalink: /triangle-area-calculator
 description: "Easily calculate the area of a triangle with our Triangle Area Calculator. Use base-height, Heron's formula, or coordinates for accurate results. Fast and user-friendly."
 image: "/assets/images/area-of-triangle-formula-base-height.jpg"
+last_modified_at: 2026-02-03
 ---
 <style>
 .input-section{background-color:#f8f9fa;padding:25px}.result-section{background-color:#e9ecef;padding:25px}h2{color:#0d6efd;margin-bottom:20px;font-size:1.5rem}.triangle-diagram{width:100%;max-width:200px;margin:15px auto;display:block}.input-values,.result-title{margin-bottom:15px}.input-group-text{min-width:80px}.result-card{background:#fff;border-radius:8px;padding:20px;box-shadow:0 2px 5px rgba(0,0,0,.1)}.calculation,.input-values{padding:10px;background:#f8f9fa;border-radius:5px}.result-title{color:#0d6efd;font-weight:600}.input-value{margin-bottom:5px}.calculation{font-size:1.1rem;margin:10px 0}.final-result{background:#d4edda;padding:15px;border-radius:8px;text-align:center;margin-top:15px;font-weight:600;font-size:1.2rem}.btn-calculate{background-color:#0d6efd;border:none;padding:8px 20px}.nav-tabs .nav-link{font-size:.9rem;padding:8px 15px}    

@@ -3,6 +3,7 @@ layout: default
 title: Simple Investment Calculator, ROI
 permalink: /investment-calculator
 description: "Investment Calculator : How much your investment increases based on your contributions, timeframe, expected returns, check the investment charts and tables."
+last_modified_at: 2026-02-03
 ---
 <!-- calc-->
 <div class="container py-1">

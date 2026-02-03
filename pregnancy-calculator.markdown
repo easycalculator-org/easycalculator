@@ -4,6 +4,7 @@ title: Pregnancy Due Date Calculator – Find Your Baby’s Due Date
 permalink: /pregnancy-due-date-calculator
 description: "Use our medically reviewed Pregnancy Due Date Calculator to find your estimated due date, track pregnancy milestones, and plan ahead. Based on LMP or conception date"
 image: "/assets/images/pregnancy-calculator.jpg"
+last_modified_at: 2026-02-03
 ---
 
 <div class="container py-2">

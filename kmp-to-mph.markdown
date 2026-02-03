@@ -4,6 +4,7 @@ title: KMPH to MPH Speed Converter | Convert Kilometers Per Hour to Miles Per Ho
 permalink: /kmp-to-mph
 description: "Easily convert kilometers per hour to miles per hour (kmp to mph) with our free tool. Check out conversion tables and learn about other speed units today!"
 image: "/assets/images/kmph-to-mph.jpg"
+last_modified_at: 2026-02-03
 ---
 
 <style>

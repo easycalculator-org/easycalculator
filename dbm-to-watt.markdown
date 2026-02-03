@@ -4,6 +4,7 @@ title: dBm to Watts Converter | Formula, Examples & Table
 permalink: /dbm-to-watt
 description: "Convert dBm to Watts easily with our calculator. Explore dBm to Watts formula, tables, and charts at easycalculator for quick and accurate results."
 image: "/assets/images/dbm-to-watt-converter-with-formula-and-example.jpg"
+last_modified_at: 2026-02-03
 ---
 
 <div class="container mt-5">

@@ -4,6 +4,7 @@ title: Haversine Distance Calculator – Accurate Air Distance Tool
 permalink: /haversine-distance
 description: "Calculate accurate great-circle distances between two latitude-longitude points using the Haversine formula. Ideal for aviation, geolocation, and mapping."
 image: "/assets/images/haversine-distance-calculator-formula.jpg"
+last_modified_at: 2026-02-03
 ---
  <style> 
   .formula {

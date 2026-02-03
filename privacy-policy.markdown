@@ -3,6 +3,7 @@ layout: default
 title: Privacy Policy – Your Data Security with us
 permalink: /privacy-policy
 description: "At EasyCalculator, your privacy matters. Learn how we protect and use your data while offering 500+ free online calculators."
+last_modified_at: 2026-02-03
 ---
 
 

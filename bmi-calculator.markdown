@@ -4,6 +4,7 @@ title: BMI Calculator - Body Mass Index Calculator Online 2025
 permalink: /bmi-calculator
 description: "Free BMI Calculator 2025 – Check your Body Mass Index online using height and weight. Find out if you are underweight, healthy, overweight, or obese instantly."
 image: "/assets/images/bmi-calculator.png"
+last_modified_at: 2026-02-03
 ---
 <style>
         .calculator-container {

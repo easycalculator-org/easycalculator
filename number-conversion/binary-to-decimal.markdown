@@ -4,6 +4,7 @@ title: Binary to Decimal Converter | EasyCalculator
 permalink: /binary-to-decimal
 description: "Convert binary numbers to decimal (base-10) instantly using our Binary to Decimal calculator. Fast, accurate, and mobile-friendly."
 # image: "/assets/images/age-calc-open-graph.png"
+last_modified_at: 2026-02-03
 ---
 
 <div class="row p-4">

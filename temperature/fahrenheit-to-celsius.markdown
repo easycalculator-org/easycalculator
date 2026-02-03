@@ -3,6 +3,7 @@ layout: default
 title: Fahrenheit to Celsius Converter - Convert °F to °C Easily
 permalink: /fahrenheit-to-celsius/
 description: "Easily convert Fahrenheit to Celsius with our simple online tool! Get quick and accurate temperature conversions in just a few clicks."
+last_modified_at: 2026-02-03
 ---
 
 <div class="container mt-5">

@@ -3,6 +3,7 @@ layout: default
 title: Current Time in the World’s Top 10 Cities – Live Time Updates
 permalink: /current-time
 description: "Check the current time in the top 10 cities worldwide, including New York, London, Tokyo, Dubai, and more. Get accurate, real-time updates for different time zones instantly!."
+last_modified_at: 2026-02-03
 ---
 
 

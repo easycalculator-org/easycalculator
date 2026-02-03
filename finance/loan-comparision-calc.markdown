@@ -3,6 +3,7 @@ layout: default
 title: Loan Comparison Calculator – Compare Interest Rates, EMI & Total Cost
 permalink: /loan-comparison-calculator
 description: "Quickly compare multiple loan options side by side with our free Loan Comparison Calculator. Analyze interest rates, monthly payments, and total costs to choose the best loan for your needs."
+last_modified_at: 2026-02-03
 ---
 <div class="container py-4">
    <div class="text-center mb-4"><h1>Advanced Loan Comparison Calculator</h1></div>

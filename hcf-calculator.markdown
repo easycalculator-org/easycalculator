@@ -3,7 +3,7 @@ layout: default
 title: HCF Calculator - Find Highest Common Factor Instantly
 permalink: /hcf-calculator
 description: "Use our free HCF Calculator to quickly find the Highest Common Factor (HCF) of two or more numbers. Fast, accurate, and easy to use—perfect for students."
-
+last_modified_at: 2026-02-03
 ---
 
 <style>

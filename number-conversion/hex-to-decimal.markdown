@@ -4,6 +4,7 @@ title: Hexadecimal to Decimal Converter (Hex to Dec) | EasyCalculator
 permalink: /hex-to-decimal
 description: "Easily convert Hexadecimal to Decimal online. Supports large hex values with step-by-step explanation. Fast, free, and accurate calculator."
 # image: "/assets/images/age-calc-open-graph.png"
+last_modified_at: 2026-02-03
 ---
 
 <div class="row p-4">

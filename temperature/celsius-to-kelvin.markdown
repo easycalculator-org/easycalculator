@@ -3,6 +3,7 @@ layout: default
 title: Celsius to Kelvin Conversion - Convert °C to K Easily
 permalink: /celsius-to-kelvin/
 description: "Convert Celsius to Kelvin easily with our quick calculator! Perfect for science projects, education, and research. Get instant results now!"
+last_modified_at: 2026-02-03
 ---
 <div class="container mt-5">
   <div class="row justify-content-center">

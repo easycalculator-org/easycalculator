@@ -4,6 +4,7 @@ title: LCM Calculator | Least Common Multiple Calculator
 permalink: /lcm-calculator
 description: "Use our free LCM calculator to quickly find the least common multiple of up to 4 numbers. It's easy, fast, and perfect for your math needs!"
 image: "/assets/images/lcm-calculation.jpg"
+last_modified_at: 2026-02-03
 ---
 
  <div class="container py-1">

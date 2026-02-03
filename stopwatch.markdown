@@ -3,6 +3,7 @@ layout: default
 title: Stopwatch Online | Lap Timer | Easy, Accurate & Free
 permalink: /stopwatch
 description: "Use our online stopwatch, Accurate and user-friendly. Track lap times with export in CSV, Digital stopwatch, and enjoy optional split intervals for your timing needs."
+last_modified_at: 2026-02-03
 ---
 
 <div class="container d-flex flex-column justify-content-center align-items-center min-vh-20"><h1>Stopwatch</h1>

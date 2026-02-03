@@ -4,6 +4,7 @@ title: Percentage Calculator | Percentage Formula
 permalink: /percentage-calculator
 description: "Use our free online percentage calculator to simplify your math! Learn the step-by-step process for quick and easy percentage formula and calculations."
 image: "/assets/images/percentage-calculation-example.jpg"
+last_modified_at: 2026-02-03
 ---
 
 

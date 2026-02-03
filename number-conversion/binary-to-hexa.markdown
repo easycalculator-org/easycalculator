@@ -4,6 +4,7 @@ title: Binary to Hexadecimal Converter (Binary to Hex) | EasyCalculator
 permalink: /binary-to-hex
 description: "Easily convert binary (base-2) numbers to hexadecimal (base-16). Free Binary to Hex converter with instant results."
 # image: "/assets/images/age-calc-open-graph.png"
+last_modified_at: 2026-02-03
 ---
 <div class="row p-4">
     <h1 class="text-primary p-4">Binary to Hexadecimal Converter</h1>

@@ -3,6 +3,7 @@ layout: default
 title: Love Calculator | Your Love Percentage Today!
 permalink: /love-calculator
 description: "Calculate your love percentage for free! Use our love calculator to see how well you match with your partner and uncover your romantic potential"
+last_modified_at: 2026-02-03
 ---
 
 

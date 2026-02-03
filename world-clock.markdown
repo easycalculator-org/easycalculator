@@ -3,6 +3,7 @@ layout: default
 title: World Clock – Custom City Time Tracker
 permalink: /world-clock
 description: "Easily track time across cities with our customizable world clock. Add cities, view real-time updates, and stay on schedule across time zones. Perfect for travelers!"
+last_modified_at: 2026-02-03
 ---
 
 <div class="container mt-4">

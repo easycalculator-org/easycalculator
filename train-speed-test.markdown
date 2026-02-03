@@ -4,7 +4,7 @@ title: Train Speed Test | Check Real-Time Train Speed Online
 permalink: /train-speed-test
 description: "Instantly test and monitor the real-time speed of your train using GPS technology. Perfect for train travelers, rail enthusiasts, and data lovers. Try our Train Speed Test online — fast, free, and accurate!"
 image: "/assets/images/high-speed-test.jpg"
-
+last_modified_at: 2026-02-03
 ---
 <link rel="manifest" href="/manifest-train-speed.json">
 <meta name="theme-color" content="#007bff">

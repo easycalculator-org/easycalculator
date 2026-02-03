@@ -3,6 +3,7 @@ layout: default
 title: Live Currency Exchange Calculator – Convert Any Currency
 description: "Convert currencies instantly with our free online currency converter. Get real-time exchange rates for USD, EUR, GBP, INR, and more."
 permalink: /currency
+last_modified_at: 2026-02-03
 ---
 <!-- Styles -->
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">

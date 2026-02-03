@@ -4,6 +4,7 @@ title: Octal to Hexadecimal Converter (Base-8 to Base-16) | EasyCalculator
 permalink: /octal-to-hex
 description: "Convert octal (base-8) values to hexadecimal (base-16) instantly using our free Octal to Hexadecimal calculator. Works on all devices."
 # image: "/assets/images/age-calc-open-graph.png"
+last_modified_at: 2026-02-03
 ---
 
 

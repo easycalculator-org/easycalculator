@@ -4,6 +4,7 @@ title: Debt Avalanche Calculator – Pay Off High-Interest Debt Faster
 permalink: /debt-avalanche-calculator
 description: "Use our free Debt Avalanche Calculator to create a smart debt payoff plan that saves you money on interest. Organize your debts by highest interest rate and pay them off faster."
 #image: "/assets/images/age-calc-open-graph.png"
+last_modified_at: 2026-02-03
 ---
   <div class="row justify-content-center">
             <div class="col-lg-10">

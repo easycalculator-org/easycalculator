@@ -3,6 +3,7 @@ layout: default
 title: What Is My IP Address – Instant IP Lookup & Location Info
 permalink: /what-is-my-ip
 description: "Find your public IP address instantly along with location details like country, city, ISP, latitude, and longitude. Fast, accurate, and free IP lookup tool."
+last_modified_at: 2026-02-03
 ---
 <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet">
 <style>

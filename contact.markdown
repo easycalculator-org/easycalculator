@@ -3,6 +3,7 @@ layout: default
 title: Contact Us – Get in Touch with EasyCalculator
 permalink: /contact
 description: "Have questions or feedback? Contact EasyCalculator for support, suggestions, or inquiries. We're here to help you with our 500+ online calculators. Reach out today!"
+last_modified_at: 2026-02-03
 ---
 <div class="container py-5">
         <div class="row justify-content-center">

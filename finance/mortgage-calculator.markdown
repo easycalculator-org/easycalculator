@@ -3,6 +3,7 @@ layout: default
 title: Mortgage Calculator USA – Estimate Your Monthly Home Loan EMI
 permalink: /mortgage-calculator
 description: "Use our free online Mortgage Calculator to quickly estimate your monthly home loan EMI. Includes principal, interest, taxes, insurance, and amortization chart."
+last_modified_at: 2026-02-03
 ---
 <style>
 .input-error { border-color: #dc3545 !important; }

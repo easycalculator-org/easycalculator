@@ -4,6 +4,7 @@ title: World Clock Map | Interactive Time Zone Map with Live Time
 permalink: /world-clock-map
 description: "World Clock Map with Time Zones – Click anywhere on the map to see local time zone, date, city and country. Features digital & analog clocks for real-time tracking!"
 image: "/assets/images/World_Time_Zones_Map.svg"
+last_modified_at: 2026-02-03
 ---
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 <link rel="stylesheet" href="/assets/css/world-clock-map.css">

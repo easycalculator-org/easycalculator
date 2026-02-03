@@ -4,6 +4,7 @@ title: What Is My Zip Code? Instantly Find Your ZIP Code by Location
 permalink: /what-is-my-zip-code
 description: "What Is My ZIP Code? Find your 5-digit or 9-digit ZIP code using GPS or Google Maps. Search postal code by location, address, or city anywhere in the world"
 #image: "/assets/images/age-calc-open-graph.png"
+last_modified_at: 2026-02-03
 ---
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <style>

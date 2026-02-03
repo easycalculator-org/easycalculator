@@ -3,6 +3,7 @@ layout: default
 title: Current Elevation – Check Your Altitude Instantly with Interactive Elevation Map
 permalink: /current-elevation
 description: "Find your current elevation and view an interactive elevation map for any location worldwide. Instantly check your altitude using GPS—accurate, fast, and free."
+last_modified_at: 2026-02-03
 ---
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome@6.4.0/css/all.min.css">

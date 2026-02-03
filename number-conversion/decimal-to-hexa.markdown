@@ -4,6 +4,7 @@ title: Decimal to Hexadecimal Converter (Base-10 to Base-16) | EasyCalculator
 permalink: /decimal-to-hex
 description: "Convert decimal (base-10) values to hexadecimal (base-16) instantly. Free Decimal to Hexadecimal calculator for programmers and students."
 # image: "/assets/images/age-calc-open-graph.png"
+last_modified_at: 2026-02-03
 ---
 
 <div class="row p-4">

@@ -3,6 +3,7 @@ layout: default
 title: Military Grid Reference System (MGRS) Converter | Convert MGRS Easily
 permalink: /military-grid-reference-system-converter
 description: "Easily convert Military Grid Reference System (MGRS) coordinates to latitude and longitude or vice versa with our powerful and easy online MGRS converter tool."
+last_modified_at: 2026-02-03
 ---
 <style>
 :root{--primary-color:#4361ee;--secondary-color:#3f37c9;--accent-color:#4cc9f0;--light-bg:#f8f9fa;--dark-bg:#212529}

@@ -4,6 +4,7 @@ title: Nearest Airport to Me | Find Closest Airports Instantly
 permalink: /nearest-airport-to-me
 description: "Instantly find the nearest airport to you using your current location. View airport name, distance, and location on map with this fast and accurate tool"
 image: "/assets/images/airport.png"
+last_modified_at: 2026-02-03
 ---
 <style>
   .hero {

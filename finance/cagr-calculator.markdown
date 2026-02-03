@@ -4,6 +4,7 @@ title: CAGR Calculator - Calculate Compound Annual Growth Rate
 permalink: /cagr-calculator
 description: "Use our free CAGR Calculator to quickly find the compound annual growth rate of your investments. Simple, accurate, and easy to use online tool."
 image: "/assets/images/cagr-calculator.png"
+last_modified_at: 2026-02-03
 ---
 <style>
         .calculator-card {

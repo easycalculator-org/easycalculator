@@ -3,6 +3,7 @@ layout: default
 title: Square Root Calculator – Instant & Accurate Results
 permalink: /square-root-calculator
 description: "Quickly find the square root of any number with our free online Square Root Calculator. Easy-to-use, accurate, and perfect for math, science, and everyday calculations. Try it now!"
+last_modified_at: 2026-02-03
 ---
 <link rel="stylesheet" href="/assets/css/square-root.css">
 <div class="container mt-5 text-center">

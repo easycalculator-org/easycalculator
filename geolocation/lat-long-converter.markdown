@@ -3,6 +3,7 @@ layout: default
 title: Latitude Longitude Converter | Convert Decimal to DMS Easily and Fast
 permalink: /latitude-longitude-converter
 description: "Quickly convert latitude and longitude between decimal degrees and DMS (degrees, minutes, seconds) formats. Use our Lat Long Converter easy and powerful tool."
+last_modified_at: 2026-02-03
 ---
 
 <style>

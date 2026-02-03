@@ -4,6 +4,7 @@ title: Decimal to Octal Converter (Base-10 to Base-8) | EasyCalculator
 permalink: /decimal-to-octal
 description: "Easily convert decimal numbers to octal (base-8) using our online Decimal to Octal converter. Accurate results with step-by-step support."
 # image: "/assets/images/age-calc-open-graph.png"
+last_modified_at: 2026-02-03
 ---
 
 <div class="row p-4">

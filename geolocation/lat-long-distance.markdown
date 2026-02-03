@@ -3,6 +3,7 @@ layout: default
 title: Calculate Distance from Latitude and Longitude – Easy & Accurate Tool
 permalink: /calculate-distance-from-latitude-longitude
 description: "Use this free online tool to calculate the distance between two locations using latitude and longitude coordinates. Accurate, fast, and ideal for mapping, travel, or geolocation analysis."
+last_modified_at: 2026-02-03
 ---
 <!-- Leaflet CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />

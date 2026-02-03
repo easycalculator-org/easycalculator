@@ -4,6 +4,7 @@ title: Decimal to Binary Converter (Base-10 to Base-2) | EasyCalculator
 permalink: /decimal-to-binary
 description: "Convert decimal (base-10) numbers to binary (base-2) instantly with our fast and accurate Decimal to Binary calculator. Free & mobile-friendly."
 # image: "/assets/images/age-calc-open-graph.png"
+last_modified_at: 2026-02-03
 ---
 
 <div class="row p-4">

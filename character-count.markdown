@@ -4,6 +4,7 @@ title: Character Count Tool – Count Characters, Words & Spaces Online
 permalink: /character-count
 description: "Free Character Count Tool to count characters, words, spaces, sentences, and paragraphs instantly. Ideal for SEO titles, meta descriptions, social media posts, SMS, and academic writing."
 image: "/assets/images/charater-count.png"
+last_modified_at: 2026-02-03
 ---
 
 <div class="container mt-3">
