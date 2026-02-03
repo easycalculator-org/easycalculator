@@ -18,7 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title:
+title: EasyCalculator.org
+author: EasyCalculator.org
 email: care@easycalculator.org
 description: >- # this means to ignore newlines until "baseurl:"
   EasyCalculator.org is an open-source platform with free online calculators for math, science, and finance. Fast, accurate results—no registration needed!.
@@ -44,7 +45,8 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap
+  - jekyll-sitemap 
+  - jekyll-indexnow
   # - jekyll-algolia
 
   # - jekyll-gzip  ( github not support this plugin)
@@ -62,6 +64,10 @@ indexnow:
 # the internal "default list".
 #
 
+
+
+
+
 include:
   - ".htaccess"
 
@@ -70,8 +76,8 @@ include:
   # Excluded items can be processed by explicitly listing the directories or
   # their entries' file path in the `include:` list.
   #
-  # exclude:
-  - "README.md"
+exclude:
+    - "README.md"
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

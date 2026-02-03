@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Age Calculator | Calculate My Age today | find my age
-permalink: /age-calculator
-description: "Use our free Age Calculator to find your age from your birth date or see the age difference in days. It's quick and easy to find your age today!"
+title: Title
+permalink: /#123
+description: "Description !"
 image: "/assets/images/age-calc-open-graph.png"
 ---
 
@@ -26,31 +26,31 @@ image: "/assets/images/age-calc-open-graph.png"
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
             <div class="fw-bold text-primary">1. Why is age important?</div>
-            <p class="mb-0"> Age is important because it helps in personal growth tracking, healthcare decisions, educational placements, legal rights, cultural traditions, historical understanding, and more.</p>
+            <p class="mb-0"> Age is important because it helps in personal growth tracking, historical understanding, and more.</p>
           </div>
         </div>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
             <div class="fw-bold text-primary"> 2. How do I find my exact age today?</div>
-            <p class="mb-0">Enter your date of birth in the Age Calculator and click "Calculate." The tool will display your exact age in years, months, days, and even hours if needed.</p>
+            <p class="mb-0">Enter your date of birth in the Age Calculator even hours if needed.</p>
           </div>
         </div>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
             <div class="fw-bold text-primary"> 3.Is my data secure when using the Age Calculator? </div>
-            <p class="mb-0"> Yes, the Age Calculator does not store or share your data. It simply performs calculations based on the input you provide.</p>
+            <p class="mb-0"> Yes, the Age Calculator does not store or share  you provide.</p>
           </div>
         </div>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
             <div class="fw-bold text-primary"> 4.  Can I calculate age including time of birth?</div>
-            <p class="mb-0">Yes, if you provide the exact time of birth, the Age Calculator can give you a more precise age calculation down to the hour, minute, and second.</p>
+            <p class="mb-0">Yes, if you provide the exact time of birth, the Agethe hour, minute, and second.</p>
           </div>
         </div>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
             <div class="fw-bold text-primary"> 5. Can I use the Age Calculator for future dates?</div>
-            <p class="mb-0">Yes, you can use the Age Calculator to calculate your age on a future date, which is useful for planning events or milestones.</p>
+            <p class="mb-0">Yes, you can use the Age Calculator to ng events or milestones.</p>
           </div>
         </div>
       </section>
