@@ -3,7 +3,7 @@ layout: default
 title: Title
 permalink: /#123
 description: "Description !"
-image: "/assets/images/age-calc-open-graph.png"
+#image: "/assets/images/age-calc.png"
 ---
 
 <!-- Article Content -->
@@ -22,11 +22,11 @@ image: "/assets/images/age-calc-open-graph.png"
 
 <!-- FAQ Section -->
  <section class="mb-5">
-        <h2 class="mb-4">FAQ on Age Calculator</h2>
+        <h2 class="mb-4">FAQ on Calculator</h2>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
             <div class="fw-bold text-primary">1. Why is age important?</div>
-            <p class="mb-0"> Age is important because it helps in personal growth tracking, historical understanding, and more.</p>
+            <p class="mb-0"> is important because it helps in personal growth tracking, historical understanding, and more.</p>
           </div>
         </div>
         <div class="card mb-3 border-0 bg-light">
