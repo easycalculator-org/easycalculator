@@ -1,7 +1,8 @@
 ---
 layout: default
 title: EasyCalculator | Free Online Calculators for Finance, Math & More
-description: "EasyCalculator.org delivers reliable, expert-designed calculators for finance, math, and everyday needs. Get fast, accurate results online - free and secure."
+description: "Free online calculators for finance, math, conversion & geolocation. EMI, SIP, percentage, age, currency & more on EasyCalculator.org."
+
 image: "/assets/images/apple-touch-icon.png"
 ---
 
@@ -306,7 +307,7 @@ image: "/assets/images/apple-touch-icon.png"
 <section class="py-5">
   <div class="row align-items-center">
      <div class="col-lg-6 mb-2 mb-lg-0">
-          <img src="/assets/images/easycalc-home-page.jpg" alt="Benefits of using online calculators on EasyCalculator.org" class="img-fluid rounded-3 shadow">
+          <img src="/assets/images/easycalc-home-page.jpg" alt="Benefits of using online calculators on EasyCalculator.org" class="img-fluid rounded-3 shadow" loading="lazy">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="section-title display-5 fw-bold mb-2">Why Online Calculators Matter</h2>

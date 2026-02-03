@@ -70,7 +70,7 @@ description: "Easily convert Hexadecimal to Decimal online. Supports large hex v
   <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
     <div class="d-flex align-items-center gap-3 flex-wrap">
       {% include naren_create.html %}
-      {% include reema_verify.html %}
+     {% include bahadur.html %}
     </div>
     <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
   </div>

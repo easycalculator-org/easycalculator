@@ -7,37 +7,49 @@ description: "Convert hexadecimal (base-16) numbers to octal (base-8) instantly 
 ---
 
 <div class="row p-4">
-   <h1 class="text-primary p-4">Hexadecimal to Octal Converter</h1>
-     <div class="col-md-6">
+    <h1 class="text-primary p-4">Hexadecimal to Octal Converter</h1>
+    <div class="col-md-6">
         <label for="hexInput" class="form-label fw-bold">Hexadecimal Input</label>
-          <input type="text" class="form-control form-control-lg" id="hexInput"  placeholder="Enter hexadecimal value (e.g., 1A, FF, 3E8)" maxlength="10">
-             <div class="form-text"> Valid hexadecimal characters: 0-9, A-F (case insensitive) </div>
-                <div class="mb-4"> <button id="convertBtn" class="btn btn-primary w-100 py-2 fw-bold"> Convert to  Decimal </button> </div>
-                    <div class="mb-4">
-                        <label class="form-label fw-bold">Decimal Result</label>
-                        <div class="bg-primary-subtle rounded-3 p-3"><h2 id="decimalResult" class="text-center mb-0 ">0</h2> </div>
-                    </div>
+        <input type="text" class="form-control form-control-lg" id="hexInput" placeholder="Enter hexadecimal value (e.g., 1A, FF, 3E8)" maxlength="10">
+        <div class="form-text">Valid hexadecimal characters: 0-9, A-F (case insensitive)</div>
+        <div class="mb-4">
+            <button id="convertBtn" class="btn btn-primary w-100 py-2 fw-bold">Convert to Octal</button>
+        </div>
+        <div class="mb-4">
+            <label class="form-label fw-bold">Octal Result</label>
+            <div class="bg-primary-subtle rounded-3 p-3">
+                <h2 id="octalResult" class="text-center mb-0">0</h2>
+            </div>
+        </div>
+        <!-- Quick Examples Section -->
+        <div class="mt-4">
+            <h5 class="border-bottom pb-2">Quick Examples</h5>
+            <div class="row mt-3">
+                <div class="col-6 col-md-3 mb-2">
+                    <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-hex="A">A → 12</button>
                 </div>
-                <div class="col-md-6">
-                    <div class="mb-4 bg-light p-3 rounded">
-                        <label class="form-label fw-bold">Conversion Details</label>
-                        <div id="conversionSteps" class=" p-3"> <p class="mb-1"><small>Enter a hexadecimal value to see the conversion steps here.</small> </p> </div>
-                    </div>
+                <div class="col-6 col-md-3 mb-2">
+                    <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-hex="FF">FF → 377</button>
+                </div>
+                <div class="col-6 col-md-3 mb-2">
+                    <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-hex="10">10 → 20</button>
+                </div>
+                <div class="col-6 col-md-3 mb-2">
+                    <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-hex="3E8">3E8 → 1750</button>
                 </div>
             </div>
-
-
-<!-- Quick Examples Section  -->
-<div class="bg-light rounded-3 p-3 mt-4">
-  <div class="d-flex flex-wrap gap-3 justify-content-start">
-      <h5>Quick Examples of hex to Decimal</h5>
-    <button class="btn btn-outline-primary btn-sm example-btn" data-hex="A">A → 10</button>
-    <button class="btn btn-outline-primary btn-sm example-btn" data-hex="FF">FF → 255</button>
-    <button class="btn btn-outline-primary btn-sm example-btn" data-hex="BB">BB → 187</button>
-    <button class="btn btn-outline-primary btn-sm example-btn" data-hex="1F4">1F4 → 500</button>
-    <button class="btn btn-outline-primary btn-sm example-btn" data-hex="3E8">3E8 → 1000</button>
-  </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="mb-4 bg-light p-3 rounded">
+            <label class="form-label fw-bold">Conversion Details</label>
+            <div id="conversionSteps" class="p-3">
+                <p class="mb-1"><small>Enter a hexadecimal value to see the conversion steps here.</small></p>
+            </div>
+        </div>
+    </div>
 </div>
+
 
 
 
@@ -70,12 +82,45 @@ description: "Convert hexadecimal (base-16) numbers to octal (base-8) instantly 
   <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
     <div class="d-flex align-items-center gap-3 flex-wrap">
       {% include naren_create.html %}
-      {% include reema_verify.html %}
+      {% include bahadur.html %}
     </div>
     <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
   </div>
    <!-- Article-->
-   
+   <!-- Hex-Octal Reference Table -->
+        <div class="bg-light p-3 rounded">
+            <h5 class="fw-bold mb-3">Hex to Octal Reference</h5>
+            <div class="table-responsive">
+                <table class="table table-sm table-bordered">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Hex</th>
+                            <th>Octal</th>
+                            <th>Binary</th>
+                            <th>Decimal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0</td><td>0</td><td>000</td><td>0</td></tr>
+                        <tr><td>1</td><td>1</td><td>001</td><td>1</td></tr>
+                        <tr><td>2</td><td>2</td><td>010</td><td>2</td></tr>
+                        <tr><td>3</td><td>3</td><td>011</td><td>3</td></tr>
+                        <tr><td>4</td><td>4</td><td>100</td><td>4</td></tr>
+                        <tr><td>5</td><td>5</td><td>101</td><td>5</td></tr>
+                        <tr><td>6</td><td>6</td><td>110</td><td>6</td></tr>
+                        <tr><td>7</td><td>7</td><td>111</td><td>7</td></tr>
+                        <tr><td>8</td><td>10</td><td>1000</td><td>8</td></tr>
+                        <tr><td>9</td><td>11</td><td>1001</td><td>9</td></tr>
+                        <tr><td>A</td><td>12</td><td>1010</td><td>10</td></tr>
+                        <tr><td>B</td><td>13</td><td>1011</td><td>11</td></tr>
+                        <tr><td>C</td><td>14</td><td>1100</td><td>12</td></tr>
+                        <tr><td>D</td><td>15</td><td>1101</td><td>13</td></tr>
+                        <tr><td>E</td><td>16</td><td>1110</td><td>14</td></tr>
+                        <tr><td>F</td><td>17</td><td>1111</td><td>15</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 </div>
 
- <script src="{{ '/assets/js/number-conversion/hexa-to-decimal.js' | relative_url }}"></script>
+ <script src="{{ '/assets/js/number-conversion/hexa-to-octal.js' | relative_url }}"></script>

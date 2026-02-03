@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Binary to Decimal Converter (Base-2 to Base-10) | EasyCalculator
+title: Binary to Decimal Converter | EasyCalculator
 permalink: /binary-to-decimal
 description: "Convert binary numbers to decimal (base-10) instantly using our Binary to Decimal calculator. Fast, accurate, and mobile-friendly."
 # image: "/assets/images/age-calc-open-graph.png"
@@ -21,31 +21,21 @@ description: "Convert binary numbers to decimal (base-10) instantly using our Bi
                 <h2 id="decimalResult" class="text-center mb-0">0</h2>
             </div>
         </div>
-        <!-- Quick Examples Section -->
-        <div class="mt-4">
-            <h5 class="border-bottom pb-2">Quick Examples</h5>
-            <div class="row mt-3">
-                <div class="col-6 col-md-3 mb-2">
-                    <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-binary="1010">1010 → 10</button>
-                </div>
-                <div class="col-6 col-md-3 mb-2">
-                    <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-binary="1111">1111 → 15</button>
-                </div>
-                <div class="col-6 col-md-3 mb-2">
-                    <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-binary="10000">10000 → 16</button>
-                </div>
-                <div class="col-6 col-md-3 mb-2">
-                    <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-binary="101010">101010 → 42</button>
-                </div>
-            </div>
+ <!-- Quick Examples Section -->
+ <div class="mt-4">
+     <h5 class="border-bottom pb-2">Quick Examples</h5>
+      <div class="row mt-3">
+          <div class="col-6 col-md-3 mb-2">  <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-binary="1010">1010 → 10</button> </div>
+          <div class="col-6 col-md-3 mb-2"> <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-binary="1111">1111 → 15</button> </div>
+          <div class="col-6 col-md-3 mb-2"> <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-binary="10000">10000 → 16</button></div>
+          <div class="col-6 col-md-3 mb-2">  <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-binary="101010">101010 → 42</button> </div>
         </div>
+       </div>
     </div>
     <div class="col-md-6">
         <div class="mb-4 bg-light p-3 rounded">
             <label class="form-label fw-bold">Conversion Details</label>
-            <div id="conversionSteps" class="p-3">
-                <p class="mb-1"><small>Enter a binary value to see the conversion steps here.</small></p>
-            </div>
+            <div id="conversionSteps" class="p-3"> <p class="mb-1"><small>Enter a binary value to see the conversion steps here.</small></p> </div>
         </div>
     </div>
 </div>
@@ -81,7 +71,7 @@ description: "Convert binary numbers to decimal (base-10) instantly using our Bi
   <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
     <div class="d-flex align-items-center gap-3 flex-wrap">
       {% include naren_create.html %}
-      {% include reema_verify.html %}
+      {% include bahadur.html %}
     </div>
     <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
   </div>
