@@ -46,7 +46,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap 
-  - jekyll-indexnow
+  # - jekyll-indexnow
   # - jekyll-algolia
 
   # - jekyll-gzip  ( github not support this plugin)

@@ -60,49 +60,49 @@ last_modified_at: 2026-02-03
 <hr>
 <!-- Age Calculator-->
 <div class="row p-3 ">
- <div class="col-md-3 p-3 "><a class="text-decoration-none" href="/age-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-person fa-xl" style="color: #B197FC;"></i><h5>Age Calculator</h5></div></a></div>
+ <div class="col-md-3 p-3 "><a class="text-decoration-none" href="/age-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-person fa-xl"></i><h5>Age Calculator</h5></div></a></div>
 <!-- speed -->
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/kmp-to-mph"><div class="calculator-box text-center"><i class="fa-solid fa-gauge-high fa-xl" style="color: #63E6BE;"></i><h5>Speed Converter</h5> </div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/kmp-to-mph"><div class="calculator-box text-center"><i class="fa-solid fa-gauge-high fa-xl"></i><h5>Speed Converter</h5> </div></a></div>
 <!-- length -->
-<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/length-converter"><div class="calculator-box text-center"><i class="fa-solid fa-ruler-horizontal fa-xl" style="color: #ea1f33;"></i><h5>Length</h5></div></a></div>
+<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/length-converter"><div class="calculator-box text-center"><i class="fa-solid fa-ruler-horizontal fa-xl"></i><h5>Length</h5></div></a></div>
 <!-- telecom -->
-<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/dbm-to-watt"> <div class="calculator-box text-center"><i class="fa-solid fa-tower-broadcast fa-xl" style="color: #74C0FC;"></i><h5>dBm to Watts</h5></div></a></div>
+<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/dbm-to-watt"> <div class="calculator-box text-center"><i class="fa-solid fa-tower-broadcast fa-xl"></i><h5>dBm to Watts</h5></div></a></div>
 <!-- temperature-->
-<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/celsius-to-fahrenheit"><div class="calculator-box text-center"><i class="fa-solid fa-temperature-high fa-xl" style="color: #B197FC;"></i><h5>Temperature</h5></div></a></div>
+<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/celsius-to-fahrenheit"><div class="calculator-box text-center"><i class="fa-solid fa-temperature-high fa-xl"></i><h5>Temperature</h5></div></a></div>
 <!-- strong password-->
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/strong-password-generator"><div class="calculator-box text-center"><i class="fa-solid fa-lock fa-xl" style="color: #e2223f;"></i><h5>Strong Password Generator</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/strong-password-generator"><div class="calculator-box text-center"><i class="fa-solid fa-lock fa-xl"></i><h5>Strong Password Generator</h5></div></a></div>
 
 <!-- world clock -->
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/world-clock"><div class="calculator-box text-center"><i class="fa-solid fa-earth-americas fa-xl" style="color: #377ffb;"></i><h5>World Clock</h5></div></a> </div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/world-clock"><div class="calculator-box text-center"><i class="fa-solid fa-earth-americas fa-xl"></i><h5>World Clock</h5></div></a> </div>
 <!-- world clock map -->
-<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/world-clock-map"><div class="calculator-box text-center"><i class="fa-solid fa-map-location fa-xl" style="color: #B197FC;"></i><h5>World Clock Map</h5></div></a></div>
+<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/world-clock-map"><div class="calculator-box text-center"><i class="fa-solid fa-map-location fa-xl"></i><h5>World Clock Map</h5></div></a></div>
 <!-- JSON validation -->
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/json-validator"><div class="calculator-box text-center"><i class="fas fa-code fa-xl"></i><h5>JSON Validator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/triangle-area-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-play fa-xl" style="color: #63E6BE;"></i><h5>Triangle Area Calculator</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/triangle-area-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-play fa-xl"></i><h5>Triangle Area Calculator</h5></div></a></div>
 <!-- Date to date -->
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/date-to-date-calculator"><div class="calculator-box text-center"><i class="fa-regular fa-calendar fa-xl" style="color: #448bf7ff;"></i><h5>Date to Date Calculator</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/date-to-date-calculator"><div class="calculator-box text-center"><i class="fa-regular fa-calendar fa-xl"></i><h5>Date to Date Calculator</h5></div></a></div>
 <!-- chacter count -->
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/character-count"><div class="calculator-box text-center">📒<h5>Character Count</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/roman-numeral-converter"><div class="calculator-box text-center"><i class="fa-solid fa-diagram-successor fa-2xl" style="color: #448bf7ff;"></i><h5>Roman Numeral Converter</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/roman-numeral-converter"><div class="calculator-box text-center"><i class="fa-solid fa-diagram-successor fa-2xl"></i><h5>Roman Numeral Converter</h5></div></a></div>
 </div>
 
 <h2>Timer</h2>
 <div class="row p-3 ">
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/countdown"><div class="calculator-box text-center"><i class="fa-solid fa-stopwatch-20 fa-xl" style="color: #63E6BE;"></i><h5>Countdown</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/stopwatch"><div class="calculator-box text-center"><i class="fa-solid fa-stopwatch fa-xl" style="color: #B197FC;"></i><h5>StopWatch</h5></div></a></div>
-<div class="col-md-3 p-3  "> <a class="text-decoration-none" href="/current-time"><div class="calculator-box text-center"><i class="fa-solid fa-clock fa-xl" style="color:rgb(226, 66, 17);"></i><h5>Current Timer zone</h5></div> </a></div>
- <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/epoch"> <div class="calculator-box text-center"><i class="fa-solid fa-history fa-xl" style="color: #0a5ceb;"></i><h5>Epoch Time</h5></div> </a> </div> </div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/countdown"><div class="calculator-box text-center"><i class="fa-solid fa-stopwatch-20 fa-xl"></i><h5>Countdown</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/stopwatch"><div class="calculator-box text-center"><i class="fa-solid fa-stopwatch fa-xl" ></i><h5>StopWatch</h5></div></a></div>
+<div class="col-md-3 p-3  "> <a class="text-decoration-none" href="/current-time"><div class="calculator-box text-center"><i class="fa-solid fa-clock fa-xl"></i><h5>Current Timer zone</h5></div> </a></div>
+ <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/epoch"> <div class="calculator-box text-center"><i class="fa-solid fa-history fa-xl"></i><h5>Epoch Time</h5></div> </a> </div> </div>
 <!-- Finance Calculator -->
 <h2>Finance Calculators</h2><p>Plan loans, investments, SIPs, and savings using accurate finance calculators.</p>
 <div class="row p-3 ">
-<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/tvm-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-chart-line fa-xl" style="color: #74C0FC;"></i><h5>TVM Calculator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/investment-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-bill-trend-up fa-xl" style="color: #5ae2a3;"></i><h5>Investment Calculator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/currency"><div class="calculator-box text-center"><i class="fa-solid fa-coins fa-xl" style="color: #B197FC;"></i><h5>Currency Converter</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/loan-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl" style="color: #1968f0;"></i><h5>Loan Calculator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/sip-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-bill-wheat fa-xl" style="color: #B197FC;"></i><h5>SIP Calculator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/systematic-withdrawal-plan-calculator-with-inflation"><div class="calculator-box text-center"><i class="fa-solid fa-plant-wilt fa-xl" style="color: #2d7cf1ff;"></i><h5>SWP Calculator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/mortgage-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl" style="color:rgb(247, 86, 37);"></i><h5>Mortgage Calculator (USA)</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/debt-avalanche-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-scale-unbalanced-flip fa-xl" style="color:rgb(33, 236, 118);"></i><h5>Debt Avalanche Calculator</h5></div></a></div>
+<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/tvm-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-chart-line fa-xl"></i><h5>TVM Calculator</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/investment-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-bill-trend-up fa-xl"></i><h5>Investment Calculator</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/currency"><div class="calculator-box text-center"><i class="fa-solid fa-coins fa-xl"></i><h5>Currency Converter</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/loan-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl"></i><h5>Loan Calculator</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/sip-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-bill-wheat fa-xl"></i><h5>SIP Calculator</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/systematic-withdrawal-plan-calculator-with-inflation"><div class="calculator-box text-center"><i class="fa-solid fa-plant-wilt fa-xl"></i><h5>SWP Calculator</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/mortgage-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl"></i><h5>Mortgage Calculator (USA)</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/debt-avalanche-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-scale-unbalanced-flip fa-xl"></i><h5>Debt Avalanche Calculator</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/loan-comparison-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-code-compare fa-xl"></i><h5>Loan Comparison Calculator</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/credit-card-validator"><div class="calculator-box text-center"><i class="fa-solid fa-credit-card fa-xl"></i><h5>Credit Card Validator</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/car-loan-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-car fa-xl"></i><h5>Car Loan Calculator</h5></div></a></div>  
@@ -114,34 +114,34 @@ last_modified_at: 2026-02-03
 <hr>
 <h2>Conversion Tool</h2><p>Convert numbers, units, temperature, and formats with accurate online tools.</p>
 <div class="row p-3 ">
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/number-to-word-converter"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-up-a-z fa-xl" style="color: #B197FC;"></i><h5>Num to Word</h5></div></a> </div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/number-to-word-converter"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-up-a-z fa-xl"></i><h5>Num to Word</h5></div></a> </div>
  <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-weight-scale fa-xl"></i><h5>Weight Converter</h5></div> </a></div>
- <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-shapes fa-xl" style="color: #B197FC;"></i><h5>Area Converter</h5></div></a></div></div>
+ <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-shapes fa-xl"></i><h5>Area Converter</h5></div></a></div></div>
 
  <!-- conversion-tool end-->
 <!-- Math Calculator -->
 <hr>
 <h2>Math Calculator</h2>
 <div class="row p-3 ">
-<div class="col-md-3  p-3  "><a class="text-decoration-none" href="#"> <div class="calculator-box text-center"><i class="fa-solid fa-play fa-xl" style="color:rgb(54, 82, 243);"></i><h5>Algebra Calculator</h5></div></a></div>
+<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/decimal-to-binary"> <div class="calculator-box text-center"><i class="fa-solid fa-play fa-xl"></i><h5>Number Conversion</h5></div></a></div>
  <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/lcm-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-square-plus fa-xl"></i><h5>LCM | HCF Calculator</h5></div></a></div>
- <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/percentage-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-percent fa-xl" style="color: #63E6BE;"></i><h5>Percentage Calculator</h5></div></a></div>
- <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-plus-minus fa-xl" style="color: #B197FC;"></i><h5>Interest Calculator</h5></div></a></div></div>
+ <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/percentage-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-percent fa-xl"></i><h5>Percentage Calculator</h5></div></a></div>
+ <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-plus-minus fa-xl"></i><h5>Interest Calculator</h5></div></a></div></div>
 
 <hr>
 <h2>Geolocation Tool</h2>
 <div class="row g-1 p-3 ">
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/what-is-my-ip"><div class="calculator-box text-center"><i class="fa-solid fa-network-wired fa-xl" style="color: #B197FC;"></i><h5>My IP Address</h5></div></a> </div>
- <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/utm-zone-map"><div class="calculator-box text-center"><i class="fa-solid fa-location-dot fa-xl" style="color: #63E6BE;"></i><h5>UTM Zone Map</h5></div> </a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/what-is-my-ip"><div class="calculator-box text-center"><i class="fa-solid fa-network-wired fa-xl"></i><h5>My IP Address</h5></div></a> </div>
+ <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/utm-zone-map"><div class="calculator-box text-center"><i class="fa-solid fa-location-dot fa-xl" ></i><h5>UTM Zone Map</h5></div> </a></div>
  <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/military-grid-reference-system-converter"><div class="calculator-box text-center"><i class="fas fa-location-dot fa-xl"></i><h5>MGRS Converter</h5></div></a></div>
  <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/current-elevation"><div class="calculator-box text-center"><i class="fas fa-mountain fa-xl"></i><h5>Current Elevation</h5></div></a></div>
  <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/latitude-longitude-converter"><div class="calculator-box text-center"><i class="fas fa-compass-drafting fa-xl"></i> <h5>Lat/long Converter</h5></div></a> </div>
   <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/latitude-longitude-to-address"><div class="calculator-box text-center"><i class="fas fa-map-pin fa-xl"></i><h5>Lat/long to Address</h5></div></a> </div>
 
 <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/what-is-my-address"><div class="calculator-box text-center"><i class="fas fa-location-arrow fa-xl"></i><h5>What is My Address</h5></div> </a></div>
-<div class="col-md-3 g-1 p-3  "><a class="text-decoration-none" href="/haversine-distance"><div class="calculator-box text-center"><i class="fa-solid fa-ruler fa-xl" style="color:rgb(55, 73, 241);"></i><h5>Haversine Distance</h5></div> </a></div>
+<div class="col-md-3 g-1 p-3  "><a class="text-decoration-none" href="/haversine-distance"><div class="calculator-box text-center"><i class="fa-solid fa-ruler fa-xl"></i><h5>Haversine Distance</h5></div> </a></div>
 
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/calculate-distance-from-latitude-longitude"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-pointer fa-xl" style="color: #63E6BE;"></i><h5>Lat/long Distance Calculator</h5></div> </a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/calculate-distance-from-latitude-longitude"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-pointer fa-xl"></i><h5>Lat/long Distance Calculator</h5></div> </a></div>
 <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/what-is-my-zip-code"><div class="calculator-box text-center"><i class="fa-solid fa-envelopes-bulk fa-xl"></i><h5>My Zipcode</h5></div></a></div>
 <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/nearest-airport-to-me"><div class="calculator-box text-center"><i class="fa-solid fa-plane-circle-check fa-xl"></i><h5>Nearest Airport</h5></div></a></div>
  </div>
