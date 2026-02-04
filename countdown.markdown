@@ -4,7 +4,7 @@ title: Countdown Timer – Digital Countdown Clock to Track Time Accurately
 permalink: /countdown
 description: "Use our free countdown timer and digital countdown clock to track time accurately for any task. Perfect for work, study, cooking, and events. Set your timer for any duration, like a 2-minute timer, 1-minute timer."
 image: "/assets/images/countdown-timer.jpg"
-last_modified_at: 2026-02-03
+last_modified_at: 2026-02-04
 ---
 <style>
 .timer-card {border-radius: 12px;box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);border: none;}
@@ -75,7 +75,7 @@ last_modified_at: 2026-02-03
     <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
   </div>
 
-<h1 class="fw-bold">Countdown Timer – Track Time Accurately with a Digital Countdown Clock</h1>
+<h2 class="fw-bold">Countdown Timer – Track Time Accurately with a Digital Countdown Clock</h2>
 <p class="lead text-muted">  A <strong>countdown timer</strong> is an essential tool for tracking time accurately until a specific task or event ends.  Whether you need a <strong>1-minute timer</strong>, <strong>2-minute timer</strong>, or a fullscreen countdown for presentations,  our free online countdown timer on <strong>easycalculator.org</strong> helps you stay focused and on schedule.</p>
 
 <h2 class="h4 fw-semibold pt-4">What is a Countdown Timer?</h2>

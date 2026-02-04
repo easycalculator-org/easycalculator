@@ -3,14 +3,14 @@ layout: default
 title: Advance TVM Calculator – Calculate Time Value of Money Instantly
 permalink: /tvm-calculator
 description: "Use our free TVM Calculator to compute the Time Value of Money including present value, future value, interest rate, periods, or payment. Simple, accurate & fast financial tool."
-last_modified_at: 2026-02-03
+last_modified_at: 2026-02-04
 ---
 
 <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        <h1 class="text-center mb-0">Time Value of Money Calculator</h1>
+                    <div class="card-header bg-primary text-white text-center mb-2">
+                        <h1>Time Value of Money Calculator</h1>
                     </div>
                     <div class="card-body">
                         <div class="row mb-2">
