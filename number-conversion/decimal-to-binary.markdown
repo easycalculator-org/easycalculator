@@ -4,7 +4,7 @@ title: Decimal to Binary Converter (Base-10 to Base-2) | EasyCalculator
 permalink: /decimal-to-binary
 description: "Convert decimal (base-10) numbers to binary (base-2) instantly with our fast and accurate Decimal to Binary calculator. Free & mobile-friendly."
 image: "/assets/images/decimal-to-binary-conversion-table.jpg"
-last_modified_at: 2026-02-03
+last_modified_at: 2026-02-07
 ---
 
 <div class="row p-4">
@@ -22,31 +22,20 @@ last_modified_at: 2026-02-03
                 <h2 id="binaryResult" class="text-center mb-0">0</h2>
             </div>
         </div>
- <!-- Quick Examples Section -->
-        <div class="mt-4">
+ <div class="mt-4">
             <h5 class="border-bottom pb-2">Quick Examples</h5>
             <div class="row mt-3">
-                <div class="col-6 col-md-3 mb-2">
-                    <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-decimal="10">10 → 1010</button>
-                </div>
-                <div class="col-6 col-md-3 mb-2">
-                    <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-decimal="15">15 → 1111</button>
-                </div>
-                <div class="col-6 col-md-3 mb-2">
-                    <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-decimal="16">16 → 10000</button>
-                </div>
-                <div class="col-6 col-md-3 mb-2">
-                    <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-decimal="42">42 → 101010</button>
-                </div>
+                <div class="col-6 col-md-3 mb-2"> <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-decimal="10">10 → 1010</button> </div>
+                <div class="col-6 col-md-3 mb-2">  <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-decimal="15">15 → 1111</button> </div>
+                <div class="col-6 col-md-3 mb-2"> <button class="btn btn-outline-primary btn-sm w-100 example-btn" data-decimal="16">16 → 10000</button></div>
+                <div class="col-6 col-md-3 mb-2"><button class="btn btn-outline-primary btn-sm w-100 example-btn" data-decimal="42">42 → 101010</button> </div>
             </div>
         </div>
     </div>
     <div class="col-md-6">
         <div class="mb-4 bg-light p-3 rounded">
             <label class="form-label fw-bold">Conversion Details</label>
-            <div id="conversionSteps" class="p-3">
-                <p class="mb-1"><small>Enter a decimal value to see the conversion steps here.</small></p>
-            </div>
+            <div id="conversionSteps" class="p-3"><p class="mb-1"><small>Enter a decimal value to see the conversion steps here.</small></p> </div>
         </div>
     </div>
 </div>
@@ -86,7 +75,8 @@ last_modified_at: 2026-02-03
    <!-- Article-->
 <h2 class="mb-3">Decimal to Binary Converter</h2>
 <p class="lead"> A <strong>Decimal to Binary Converter</strong> helps convert decimal numbers (base-10) into binary numbers (base-2), which are used by computers. </p>
-<div class="p-4 bg-light"> <strong>Quick Answer:</strong><br> To convert decimal to binary, divide the number by 2 repeatedly and write the remainders from bottom to top. </div>
+<div class="p-4 bg-light border-start border-4 border-primary"> <strong>Decimal to Binary Conversion Formula:</strong><br>   Divide the decimal number by 2 repeatedly, note the remainders, and read them from bottom to top to get the binary number.
+</div>
 <div class="pt-4"><h3>What Is the Decimal Number System?</h3></div>
 <p>The decimal number system is the number system we use in daily life. It has 10 digits: <strong>0 to 9</strong>. </p>
 <h3>What Is the Binary Number System?</h3>
@@ -189,5 +179,22 @@ last_modified_at: 2026-02-03
       }
     }
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Decimal to Binary Converter",
+  "url": "https://easycalculator.org/decimal-to-binary",
+  "applicationCategory": "Calculator",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
+  "description": "Convert decimal numbers to binary instantly using this fast, accurate, and student-friendly online calculator.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
 }
 </script>
