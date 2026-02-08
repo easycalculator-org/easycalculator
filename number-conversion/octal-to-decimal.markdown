@@ -3,7 +3,7 @@ layout: default
 title: Octal to Decimal Converter (Base-8 to Base-10) | EasyCalculator
 permalink: /octal-to-decimal
 description: "Convert octal (base-8) numbers to decimal (base-10) instantly with our free Octal to Decimal calculator. Accurate, fast, and mobile-friendly."
-# image: "/assets/images/age-calc-open-graph.png"
+image: "/assets/images/octal-to-decimal-conversion-table.jpg"
 last_modified_at: 2026-02-03
 ---
 

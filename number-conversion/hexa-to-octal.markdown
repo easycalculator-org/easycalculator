@@ -3,7 +3,7 @@ layout: default
 title: Hexadecimal to Octal Converter (Hex to Oct) | EasyCalculator
 permalink: /hex-to-octal
 description: "Convert hexadecimal (base-16) numbers to octal (base-8) instantly using our Hex to Octal calculator. Fast, accurate, and mobile-friendly."
-# image: "/assets/images/age-calc-open-graph.png"
+image: "/assets/images/hexa-to-octal-conversion-table.jpg"
 last_modified_at: 2026-02-03
 ---
 
