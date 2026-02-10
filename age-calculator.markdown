@@ -161,7 +161,7 @@ last_modified_at: 2026-02-10
 
  </div>
  </div>
-<img class="img-fluid d-flex" alt="Age Calculator, how to find my age and date of birth calculation" src="/assets/images/age-calculator.webp" fetchpriority="high" loading="auto" style="object-fit: contain;">
+<img class="img-fluid d-flex" alt="Age calculator to find exact age by date of birth" src="/assets/images/age-calculator.webp" fetchpriority="high" loading="auto" style="object-fit: contain;">
 
  </section>
       <!-- FAQ Section -->
