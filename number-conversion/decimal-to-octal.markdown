@@ -4,7 +4,7 @@ title: Decimal to Octal Converter (Base-10 to Base-8) | EasyCalculator
 permalink: /decimal-to-octal
 description: "Easily convert decimal numbers to octal (base-8) using our online Decimal to Octal converter. Accurate results with step-by-step support."
 image: "/assets/images/decimal-to-octal-conversion-table.jpg"
-last_modified_at: 2026-02-03
+last_modified_at: 2026-02-08
 ---
 
 <div class="row p-4">
@@ -85,31 +85,6 @@ last_modified_at: 2026-02-03
     <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
   </div>
    <!-- Article-->
-    <!-- Decimal-Octal Reference Table -->
-        <!-- <div class="bg-light p-3 rounded">
-            <h5 class="fw-bold mb-3">Decimal to Octal Reference</h5>
-            <div class="table-responsive">
-                <table class="table table-sm table-bordered">
-                    <thead class="table-primary">
-                        <tr>
-                            <th>Decimal</th>
-                            <th>Octal</th>
-                            <th>Binary</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>0</td><td>0</td><td>000</td></tr>
-                        <tr><td>1</td><td>1</td><td>001</td></tr>
-                        <tr><td>2</td><td>2</td><td>010</td></tr>
-                        <tr><td>3</td><td>3</td><td>011</td></tr>
-                        <tr><td>4</td><td>4</td><td>100</td></tr>
-                        <tr><td>5</td><td>5</td><td>101</td></tr>
-                        <tr><td>6</td><td>6</td><td>110</td></tr>
-                        <tr><td>7</td><td>7</td><td>111</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div> -->
 <h2 class="mb-3">Decimal to Octal Converter</h2>
 <p class="lead"> A <strong>Decimal to Octal Converter</strong> helps convert decimal numbers (base-10) into octal numbers (base-8). Octal numbers are commonly used in computer science, digital electronics, and Unix file permissions. </p>
 <div class="p-4 bg-light border-start border-4 border-primary mb-4"><strong>Decimal to Octal Conversion Formula:</strong><br> Divide the decimal number by 8 repeatedly, write down the remainders, and read them from bottom to top to get the octal number.</div>
@@ -130,7 +105,7 @@ last_modified_at: 2026-02-03
 
   <h3>Example: Convert 25 (Decimal) to Octal</h3>
 
-  <img src="/assets/images/decimal-to-octal-conversion-table.jpg" alt="Decimal to octal conversion example showing step by step division of 25 into octal 31 with a decimal to octal conversion table" loading="lazy" width="800" height="600" class="img-fluid mb-4" />
+  <img src="/assets/images/decimal-to-octal-conversion-table.jpg" alt="Decimal to octal conversion example showing step by step division of 25 into octal 31 with a decimal to octal conversion table" loading="lazy" width="800" height="600" class="img-fluid p-4" />
 
 
   <h3>Decimal to Octal Conversion Table</h3>

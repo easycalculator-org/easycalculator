@@ -128,7 +128,7 @@ last_modified_at: 2026-02-07
     <li>Read the result from bottom to top</li>
   </ol>
   <h3>Example: Convert 25 (Decimal) to Hexadecimal</h3>
-  <img src="/assets/images/decimal-to-hexa-conversion-table.jpg" alt="Decimal to hexadecimal conversion example showing step by step division of 25 into hexadecimal 19 with a decimal to hexadecimal conversion table"  loading="lazy"  width="800" height="600"  class="img-fluid mb-4" />
+  <img src="/assets/images/decimal-to-hexa-conversion-table.jpg" alt="Decimal to hexadecimal conversion example showing step by step division of 25 into hexadecimal 19 with a decimal to hexadecimal conversion table"  loading="lazy"  width="800" height="600"  class="img-fluid p-4" />
   <h3>Decimal to Hexadecimal Conversion Table</h3>
   <div class="table-responsive col-md-7">
     <table class="table table-striped table-bordered text-center">

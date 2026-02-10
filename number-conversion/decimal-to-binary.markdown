@@ -91,7 +91,7 @@ last_modified_at: 2026-02-07
   </ol>
 
   <h4>Example: Convert 25 (Decimal) to Binary and Table</h4>
-  <img src="/assets/images/decimal-to-binary-conversion-table.jpg"  alt="Decimal to binary conversion example showing step by step division of 25 into binary 11001 with a decimal to binary table from 1 to 10 and 20, 50, 100"   class="img-fluid" loading="lazy" >
+  <img src="/assets/images/decimal-to-binary-conversion-table.jpg"  alt="Decimal to binary conversion example showing step by step division of 25 into binary 11001 with a decimal to binary table from 1 to 10 and 20, 50, 100"   class="img-fluid p-4" loading="lazy" >
   <div class="text-center col-md-7 pt-4">
   <h4>Decimal to Binary Conversion Table</h4>
   <table class="table table-striped table-bordered text-center">

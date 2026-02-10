@@ -4,7 +4,7 @@ title: Binary to Hexadecimal Converter (Binary to Hex) | EasyCalculator
 permalink: /binary-to-hex
 description: "Easily convert binary (base-2) numbers to hexadecimal (base-16). Free Binary to Hex converter with instant results."
 image: "/assets/images/binary-to-hexa-conversion-table.jpg"
-last_modified_at: 2026-02-03
+last_modified_at: 2026-02-08
 ---
 <div class="row p-4">
     <h1 class="text-primary p-4">Binary to Hexadecimal Converter</h1>
@@ -178,8 +178,8 @@ last_modified_at: 2026-02-03
 
   <p><strong>11001011₂ = CB₁₆</strong></p>
 
-   <h4>Example: Convert Binary to HexaDecimal and Table</h4>
-  <img src="/assets/images/binary-to-hexa-conversion-table.jpg"  alt="Decimal to binary conversion example showing step by step division of 25 into binary 11001 with a decimal to binary table from 1 to 10 and 20, 50, 100"   class="img-fluid" loading="lazy" >
+<h4>Example: Convert Binary to HexaDecimal and Table</h4>
+<img  src="/assets/images/binary-to-hexa-conversion-table.jpg" alt="Binary to hexadecimal conversion example showing step by step grouping of binary digits into 4 bits with a binary to hex conversion table" class="img-fluid p-4" loading="lazy">
 
 
   <h3>Binary to Hexadecimal Conversion Table</h3>

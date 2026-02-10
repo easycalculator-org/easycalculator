@@ -4,7 +4,7 @@ title: Binary to Decimal Converter | EasyCalculator
 permalink: /binary-to-decimal
 description: "Convert binary numbers to decimal (base-10) instantly using our Binary to Decimal calculator. Fast, accurate, and mobile-friendly."
 image: "/assets/images/binary-to-decimal-conversion-table.jpg"
-last_modified_at: 2026-02-03
+last_modified_at: 2026-02-08
 ---
 
 <div class="row p-4">
@@ -162,9 +162,9 @@ last_modified_at: 2026-02-03
 
   <p><strong>11001₂ = 25₁₀</strong></p>
  <h4>Example: Convert Binary to (Decimal) and Table</h4>
-  <img src="/assets/images/binary-to-decimal-conversion-table.jpg"  alt="Decimal to binary conversion example showing step by step division of 25 into binary 11001 with a decimal to binary table from 1 to 10 and 20, 50, 100"   class="img-fluid" loading="lazy" >
-  <h3>Binary to Decimal Conversion Table</h3>
+<img  src="/assets/images/binary-to-decimal-conversion-table.jpg" alt="Binary to decimal conversion example showing step by step calculation using powers of 2 with a binary to decimal table" class="img-fluid p-4" loading="lazy">
 
+ <h3>Binary to Decimal Conversion Table</h3>
   <div class="table-responsive col-md-7">
     <table class="table table-striped table-bordered text-center">
       <thead class="table-dark">

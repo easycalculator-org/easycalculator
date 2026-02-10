@@ -4,28 +4,9 @@ title: Binary to Octal Converter (Base-2 to Base-8) | EasyCalculator
 permalink: /binary-to-octal
 description: "Convert binary numbers to octal (base-8) quickly with our Binary to Octal calculator. Accurate, simple, and easy to use."
 image: "/assets/images/binary-to-octal-conversion-table.jpg"
-last_modified_at: 2026-02-03
+last_modified_at: 2026-02-08
 ---
 
-<!-- <div class="row p-4">
-   <h1 class="text-primary p-4">Binary to Octal Converter</h1>
-     <div class="col-md-6">
-        <label for="hexInput" class="form-label fw-bold">Hexadecimal Input</label>
-          <input type="text" class="form-control form-control-lg" id="hexInput"  placeholder="Enter hexadecimal value (e.g., 1A, FF, 3E8)" maxlength="10">
-             <div class="form-text"> Valid hexadecimal characters: 0-9, A-F (case insensitive) </div>
-                <div class="mb-4"> <button id="convertBtn" class="btn btn-primary w-100 py-2 fw-bold"> Convert to  Decimal </button> </div>
-                    <div class="mb-4">
-                        <label class="form-label fw-bold">Decimal Result</label>
-                        <div class="bg-primary-subtle rounded-3 p-3"><h2 id="decimalResult" class="text-center mb-0 ">0</h2> </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="mb-4 bg-light p-3 rounded">
-                        <label class="form-label fw-bold">Conversion Details</label>
-                        <div id="conversionSteps" class=" p-3"> <p class="mb-1"><small>Enter a hexadecimal value to see the conversion steps here.</small> </p> </div>
-                    </div>
-                </div>
-            </div> -->
 <div class="row p-4">
     <h1 class="text-primary p-4">Binary to Octal Converter</h1>
     <div class="col-md-6">
@@ -199,10 +180,12 @@ last_modified_at: 2026-02-03
     </table>
   </div>
 
-  <p><strong>100111011₂ = 473₈</strong></p>
+<p><strong>100111011₂ = 473₈</strong></p>
+
+<img src="/assets/images/binary-to-octal-conversion-table.jpg" alt="Binary to octal conversion example showing step by step grouping of binary digits into 3 bits with a binary to octal conversion table" class="img-fluid p-4"loading="lazy">
+
 
   <h3>Binary to Octal Conversion Table</h3>
-
   <div class="table-responsive col-md-7">
     <table class="table table-striped table-bordered text-center">
       <thead class="table-dark">
@@ -233,10 +216,7 @@ last_modified_at: 2026-02-03
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
       <div class="fw-bold text-primary">1. What is binary to octal conversion?</div>
-      <p class="mb-0">
-        Binary to octal conversion is the process of converting a base-2 number
-        into a base-8 number by grouping binary digits into sets of three.
-      </p>
+      <p class="mb-0">Binary to octal conversion is the process of converting a base-2 number into a base-8 number by grouping binary digits into sets of three.</p>
     </div>
   </div>
 
