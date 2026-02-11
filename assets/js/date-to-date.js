@@ -4,7 +4,7 @@
                 altInput: true,
                 altFormat: "F j, Y",
                 dateFormat: "Y-m-d",
-                defaultDate: "2025-01-01",
+                defaultDate: "2026-01-01",
                 maxDate: "today"
             });
             
