@@ -34,3 +34,35 @@ function calculate() {
     
     document.getElementById("result").innerText = result;
       }
+
+      function calculate() {
+  const inputValue = parseFloat(document.getElementById("inputValue").value);
+  const conversionType = document.getElementById("conversionType").value;
+  const resultDiv = document.getElementById("result");
+  const resultCard = document.getElementById("resultCard");
+
+  if (isNaN(inputValue)) {
+    resultDiv.innerHTML = "Please enter a valid number.";
+    resultCard.classList.remove("d-none");
+    return;
+  }
+
+  let result;
+
+  if (conversionType === "dbm-to-watts") {
+    result = Math.pow(10, (inputValue - 30) / 10);
+    resultDiv.innerHTML = inputValue + " dBm = " + result.toFixed(6) + " Watts";
+  } 
+  else {
+    result = 10 * Math.log10(inputValue) + 30;
+    resultDiv.innerHTML = inputValue + " Watts = " + result.toFixed(2) + " dBm";
+  }
+
+  // Show result smoothly
+  resultCard.classList.remove("d-none");
+}
+
+function resetCalculator() {
+  document.getElementById("resultCard").classList.add("d-none");
+  document.getElementById("result").innerHTML = "";
+}
