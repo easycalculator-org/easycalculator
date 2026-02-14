@@ -3,49 +3,44 @@ layout: default
 title: Numbers to Words Converter | Num to Word 
 permalink: /number-to-word-converter
 description: "Convert numbers into words effortlessly with our Numbers to Words Converter. Simple, fast, and accurate, it's the perfect tool for all your conversion needs."
-last_modified_at: 2026-02-03
+image: "/assets/images/number-to-words.jpg"
+last_modified_at: 2026-02-15
 ---
 <!-- Converter Tool -->
- <section class="container p-4">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="card shadow-lg border-0">
-                    <div class="card-header bg-white py-4 border-0">
-            <h1 class="text-center text-primary mr-3"><i class="fa-solid fa-calculator" style="color: #74C0FC;"></i> Number to word Converter</h1>
-                    </div>
-                    <div class="card-body p-4 p-lg-5">
-                        <div class="row g-3 align-items-center mb-4">
-                            <div class="col-md-9">
-                                <input type="text" class="form-control form-control-lg py-3" id="numberInput" placeholder="Enter a number (e.g., 12345.67)" value="12345.67">
-                            </div>
-                            <div class="col-md-3 d-grid">
-                                <button id="convertBtn" class="btn btn-primary btn-lg py-3">Convert</button>
-                            </div>
-                        </div>
-                      <div class="alert alert-primary p-4 d-flex justify-content-between align-items-center">
+<section class="container p-4">
+ <div class="row justify-content-center">
+  <div class="col-lg-10">
+   <div class="card shadow-lg border-0">
+    <div class="card-header bg-white py-4 border-0">
+      <h1 class="text-center text-primary mr-3"><i class="fa-solid fa-calculator text-primary"></i> Number to word Converter</h1>
+      </div>
+    <div class="card-body p-4 p-lg-5">
+     <div class="row g-3 align-items-center mb-4">
+      <div class="col-md-9"> <input type="text" class="form-control form-control-lg py-3" id="numberInput" placeholder="Enter a number (e.g., 12345.67)" value="12345.67"> </div>
+        <div class="col-md-3 d-grid"><button id="convertBtn" class="btn btn-primary btn-lg py-3">Convert</button></div>
+        </div>
+<div class="alert alert-primary p-4 d-flex justify-content-between align-items-center">
     <h5 class="mb-0" id="resultText">Twelve Thousand Three Hundred Forty-Five and Sixty-Seven Cents</h5>
     <button class="btn btn-outline-secondary btn-sm" onclick="copyResultText()" title="Copy to clipboard"> Copy</button>
 </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
+     </div>
+     </div>
+ </div>
+</section>
 
 <div class="py-5">
 <!-- Introduction Section -->
 <section class="card shadow-sm mb-5 border-0">
-            <div class="card-body p-4 p-md-5">
-                <h2 class="mb-4 pb-2 border-bottom border-2 border-primary" >What is a Number to Word Converter?</h2>
-                <p class="fs-5">A <span class="text-primary fw-bold">Number to Word Calculator</span> is an essential digital tool that transforms numerical values into their written word equivalents in US English format. This practical solution converts complex numbers into human-readable text with perfect grammatical structure.</p>
-                <p class="fs-5">Whether you're writing checks, completing legal forms, drafting financial documents, or assisting with schoolwork, this converter eliminates the tedious and error-prone process of manual conversion. By automating what was once a complex task, it ensures precision and saves valuable time.</p>
+    <div class="card-body p-4 p-md-5">
+     <h2 class="mb-4 pb-2 border-bottom border-2 border-primary" >What is a Number to Word Converter?</h2>
+         <p class="lead">A <span class="text-primary fw-bold">Number to Word Calculator</span> is an essential digital tool that transforms numerical values into their written word equivalents in US English format. This practical solution converts complex numbers into human-readable text with perfect grammatical structure.</p>
+                <p class="lead">Whether you're writing checks, completing legal forms, drafting financial documents, or assisting with schoolwork, this converter eliminates the tedious and error-prone process of manual conversion. By automating what was once a complex task, it ensures precision and saves valuable time.</p>
                 <div class="row mt-4 g-4">
                     <div class="col-md-4">
                         <div class="card h-100 shadow-sm border-bottom border-primary border-3">
                             <div class="card-body text-center p-4">
-                                <div class="text-primary mb-3">
-                                    <i class="fas fa-file-invoice-dollar fa-3x"></i>
-                                </div>
+                                <div class="text-primary mb-3"><i class="fas fa-file-invoice-dollar fa-3x"></i> </div>
                                 <h3 class="h5 mb-3">Financial Documents</h3>
                                 <p class="mb-0">Essential for writing checks, invoices, and financial statements where written amounts are required.</p>
                             </div>
@@ -54,9 +49,7 @@ last_modified_at: 2026-02-03
                     <div class="col-md-4">
                         <div class="card h-100 shadow-sm border-bottom border-primary border-3">
                             <div class="card-body text-center p-4">
-                                <div class="text-primary mb-3">
-                                    <i class="fas fa-gavel fa-3x"></i>
-                                </div>
+                                <div class="text-primary mb-3">  <i class="fas fa-gavel fa-3x"></i></div>
                                 <h3 class="h5 mb-3">Legal Forms</h3>
                                 <p class="mb-0">Critical for contracts, agreements, and legal documentation to prevent ambiguity.</p>
                             </div>
@@ -65,9 +58,7 @@ last_modified_at: 2026-02-03
                     <div class="col-md-4">
                         <div class="card h-100 shadow-sm border-bottom border-primary border-3">
                             <div class="card-body text-center p-4">
-                                <div class="text-primary mb-3">
-                                    <i class="fas fa-graduation-cap fa-3x"></i>
-                                </div>
+                                <div class="text-primary mb-3"><i class="fas fa-graduation-cap fa-3x"></i>  </div>
                                 <h3 class="h5 mb-3">Educational Use</h3>
                                 <p class="mb-0">Helps students learn number notation and improves numerical literacy.</p>
                             </div>
@@ -79,9 +70,9 @@ last_modified_at: 2026-02-03
 
 <!-- How It Works Section -->
 <section class="card shadow mb-5 border-0">
-            <div class="card-body p-4 p-md-5">
-                <h2 class="mb-4 pb-2 border-bottom border-2 border-primary">How Does a Number to Word Converter Work?</h2>
-                <p class="fs-5">At its core, the converter uses sophisticated algorithms to translate numerical input into grammatically correct text. The process involves:</p>
+   <div class="card-body p-4 p-md-5">
+     <h2 class="mb-4 pb-2 border-bottom border-2 border-primary">How Does a Number to Word Converter Work?</h2>
+       <p class="fs-5">At its core, the converter uses sophisticated algorithms to translate numerical input into grammatically correct text. The process involves:</p>
                 <ol class="fs-5">
                     <li class="mb-2"><strong>Parsing the input</strong> to separate whole numbers from decimals</li>
                     <li class="mb-2"><strong>Breaking the number</strong> into manageable chunks (thousands, millions, etc.)</li>
@@ -120,13 +111,8 @@ last_modified_at: 2026-02-03
             </div>
         </section>
 
-
-
 <p>Example of Number Names 1 to 50 Chart</p>
 <img src="/assets/images/number-to-word-1-to-50.jpg" alt="Example of Number to word , Number Names 1 to 50" fetchpriority="high" loading="auto">
-
-
-
 
  <!-- Benefits Section -->
  <section class="card shadow mb-5 border-0">

@@ -142,6 +142,4 @@ last_modified_at: 2026-02-14
         </div>
       </div>
     </div>
-
-
   <script src="{{ '/assets/js/kelvin-to-celsius.js' | relative_url }}"></script>
