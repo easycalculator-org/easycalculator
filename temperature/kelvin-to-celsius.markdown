@@ -3,7 +3,8 @@ layout: default
 title: Kelvin to Celsius Calculator - Convert K to °C Easily
 permalink: /kelvin-to-celsius/
 description: "Convert Kelvin to Celsius quickly and accurately with our easy-to-use calculator! Perfect for science, weather, and school projects. Get results instantly!"
-last_modified_at: 2026-02-03
+image: "/assets/images/kelvin-to-celsius.jpg"
+last_modified_at: 2026-02-14
 ---
 <div class="container mt-5">
   <div class="row justify-content-center">
@@ -16,7 +17,7 @@ last_modified_at: 2026-02-03
           <form id="converter-form">
             <div class="mb-3">
               <label for="kelvinInput" class="form-label">Kelvin</label>
-              <input type="number" class="form-control" id="kelvinInput" placeholder="Enter temperature in Kelvin">
+              <input type="number" class="form-control form-control-lg" id="kelvinInput" placeholder="Enter temperature in Kelvin">
             </div>
             <div class="mb-3 text-center">
               <button type="button" class="btn btn-primary" onclick="convertToCelsius()">Convert</button>
@@ -30,24 +31,12 @@ last_modified_at: 2026-02-03
 </div>
 
 <hr>
-
 <div class="row justify-content-center">
-  <div class="col-auto">
-    <a class="btn btn-light shadow-sm" href="/kelvin-to-fahrenheit">Kelvin to Fahrenheit</a>
-  </div>
-  <div class="col-auto">
-    <a class="btn btn-light shadow-sm" href="/fahrenheit-to-celsius">Fahrenheit to Celsius</a>
-  </div>
-  <div class="col-auto">
-    <a class="btn btn-light shadow-sm" href="/celsius-to-kelvin">Celsius to Kelvin</a>
-  </div>
- 
-  <div class="col-auto">
-    <a class="btn btn-light shadow-sm" href="/fahrenheit-to-kelvin">Fahrenheit to Kelvin</a>
-  </div>
-  <div class="col-auto">
-    <a class="btn btn-light shadow-sm" href="/celsius-to-fahrenheit">Celsius to Fahrenheit</a>
-  </div>
+  <div class="col-auto"><a class="btn btn-light shadow-sm" href="/kelvin-to-fahrenheit">Kelvin to Fahrenheit</a></div>
+  <div class="col-auto"><a class="btn btn-light shadow-sm" href="/fahrenheit-to-celsius">Fahrenheit to Celsius</a></div>
+  <div class="col-auto"><a class="btn btn-light shadow-sm" href="/celsius-to-kelvin">Celsius to Kelvin</a></div>
+  <div class="col-auto"><a class="btn btn-light shadow-sm" href="/fahrenheit-to-kelvin">Fahrenheit to Kelvin</a></div>
+  <div class="col-auto"><a class="btn btn-light shadow-sm" href="/celsius-to-fahrenheit">Celsius to Fahrenheit</a></div>
 </div>
 
  <!-- Article Content -->
@@ -69,7 +58,7 @@ last_modified_at: 2026-02-03
   <p><strong>Formula:</strong> <code>Celsius (°C) = Kelvin (K) - 273.15</code></p>
   <p><strong>Example:</strong> 300 K → 300 - 273.15 = <strong>26.85°C</strong></p>
 
-  <hr class="my-5">
+<hr class="my-5">
   <div class="bg-light p-4 rounded mt-4">
    <h4 class="text-primary"><i class="fas fa-star me-2"></i>Features of the Kelvin to Celsius Calculator</h4>
     <ul class="list-group list-group-flush">
@@ -78,13 +67,13 @@ last_modified_at: 2026-02-03
          <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Science-Ready</strong> – Built for labs and academics.</li>
          <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Responsive Design</strong> – Use on mobile, tablet, or desktop.</li>
 </ul>
-     </div>
+ </div>
 
 
 
 
-  <h2>🧠 Why Use Kelvin?</h2>
-  <p>The Kelvin scale is the <strong>SI unit of temperature</strong>, commonly used in physics and chemistry. It starts from <strong>absolute zero (0 K)</strong>, where atomic movement stops. Unlike Celsius, Kelvin values never go negative.</p>
+<h2>🧠 Why Use Kelvin?</h2>
+ <p>The Kelvin scale is the <strong>SI unit of temperature</strong>, commonly used in physics and chemistry. It starts from <strong>absolute zero (0 K)</strong>, where atomic movement stops. Unlike Celsius, Kelvin values never go negative.</p>
 
   <div class="table-responsive mt-3">
     <table class="table table-bordered">
@@ -102,64 +91,33 @@ last_modified_at: 2026-02-03
     </table>
   </div>
 
-  <hr class="my-5">
+<hr class="my-5">
 <div class="info-card">
-                    <h3><i class="fas fa-flask science-icon"></i> Common Use Cases</h3>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-meteor science-icon"></i>
-                                <span>Astrophysics & Space Science</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-vial science-icon"></i>
-                                <span>Chemistry Lab Reports</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-atom science-icon"></i>
-                                <span>Physics & Thermodynamics</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-graduation-cap science-icon"></i>
-                                <span>Student Projects</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-book science-icon"></i>
-                                <span>Scientific Publications</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+    <h3><i class="fas fa-flask science-icon"></i> Common Use Cases</h3>
+       <div class="row">
+         <div class="col-md-6 mb-3"><div class="d-flex align-items-center"><i class="fas fa-meteor science-icon"></i>   <span>Astrophysics & Space Science</span> </div></div>
+         <div class="col-md-6 mb-3"><div class="d-flex align-items-center"><i class="fas fa-vial science-icon"></i><span>Chemistry Lab Reports</span> </div> </div>
+         <div class="col-md-6 mb-3"> <div class="d-flex align-items-center"><i class="fas fa-atom science-icon"></i><span>Physics & Thermodynamics</span> </div></div>
+         <div class="col-md-6 mb-3"><div class="d-flex align-items-center"><i class="fas fa-graduation-cap science-icon"></i><span>Student Projects</span> </div> </div>
+         <div class="col-md-6 mb-3"><div class="d-flex align-items-center"><i class="fas fa-book science-icon"></i><span>Scientific Publications</span>   </div> </div>
+        </div>
+      </div>
 
   <hr class="my-5">
-
   <h2>🛠️ How to Use the Calculator</h2>
   <ol>
     <li>Enter the temperature in Kelvin.</li>
     <li>Click or tab out – Celsius value appears instantly.</li>
     <li>Use the result for reports, projects, or experiments.</li>
   </ol>
-        <!-- <div class="highlight-box">
-          <h5><i class="fas fa-lightbulb text-warning me-2"></i>Example:</h5>
-          <p class="mb-0"> Unix Timestamp <code>1617197423</code> → Human-readable Date: <strong>March 31, 2021,   05:57:03 UTC</strong> </p>
-        </div> -->
-      </section>
+</section>
 <!-- FAQ Section -->
-      <section class="mb-5">
-        <h2 class="mb-4">FAQ on Kelvin to Celsius Calculator</h2>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 1. How do I convert Kelvin to Celsius? </div>
-            <p class="mb-0"> To convert Kelvin to Celsius, simply subtract 273.15 from the Kelvin value. <br> Formula: Celsius = Kelvin - 273.15. <br>For example, 300 K is 26.85°C. </p>
+<section class="mb-5">
+  <h2 class="mb-4">FAQ on Kelvin to Celsius Calculator</h2>
+    <div class="card mb-3 border-0 bg-light">
+      <div class="card-body ">
+       <div class="fw-bold text-primary"> 1. How do I convert Kelvin to Celsius? </div>
+         <p class="mb-0"> To convert Kelvin to Celsius, simply subtract 273.15 from the Kelvin value. <br> Formula: Celsius = Kelvin - 273.15. <br>For example, 300 K is 26.85°C. </p>
           </div>
         </div>
         <div class="card mb-3 border-0 bg-light">
@@ -186,4 +144,4 @@ last_modified_at: 2026-02-03
     </div>
 
 
-  <script src="{{ '/assets/js/temp.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/kelvin-to-celsius.js' | relative_url }}"></script>
