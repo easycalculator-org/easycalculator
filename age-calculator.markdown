@@ -4,20 +4,19 @@ layout: default
 title:  Age Calculator – Find Your Exact Age in Years, Months & Days
 permalink: /age-calculator
 description: "Use our free Age Calculator to find your age from your birth date or see the age difference in days. It's quick and easy to find your age today!"
-image: "/assets/images/age-calc-open-graph.png"
-last_modified_at: 2026-02-10
+image: "/assets/images/age-calculator.webp"
+last_modified_at: 2026-02-14
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
- <style>
-    #results { display: none; transition: all 0.4s ease-in-out; }
-    #results.show { display: block; opacity: 1; transform: translateY(0); }
-    #results h3 { font-weight: bold; margin-bottom: 15px; }
-    #results .list-group-item { font-size: 1rem; background: #fff; border: none; margin-bottom: 8px; padding: 15px 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); border-radius: 12px; }
-    /* .card { padding: 20px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); border-radius: 12px; } */
-    .input-group .form-control { border-right: none; }
-    .input-group .input-group-text { background: #fff; border-left: none; }
-  </style>
+<style>
+   #results { display: none; transition: all 0.4s ease-in-out; }
+   #results.show { display: block; opacity: 1; transform: translateY(0); }
+   #results h3 { font-weight: bold; margin-bottom: 15px; }
+   #results .list-group-item { font-size: 1rem; background: #fff; border: none; margin-bottom: 8px; padding: 15px 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); border-radius: 12px; }
+   .input-group .form-control { border-right: none; }
+   .input-group .input-group-text { background: #fff; border-left: none; }
+</style>
 
 <div class="container mt-5">
     <h1 class="text-center mb-4">Age Calculator</h1>
@@ -28,14 +27,14 @@ last_modified_at: 2026-02-10
             <label for="startDate" class="form-label"><strong>Start Date</strong></label>
             <div class="input-group">
               <input type="text" id="startDate" class="form-control flatpickr" placeholder="Select start date" required>
-              <span class="input-group-text bg-light"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="17.5" viewBox="0 0 448 512"><path fill="#74C0FC" d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm80 64c-8.8 0-16 7.2-16 16l0 96c0 8.8 7.2 16 16 16l96 0c8.8 0 16-7.2 16-16l0-96c0-8.8-7.2-16-16-16l-96 0z" /></svg></span>
+              <span class="input-group-text bg-light"><i class="fa-solid fa-calendar-day text-primary"></i></span>
             </div>
           </div>
           <div class="col-md-5 mx-auto">
             <label for="endDate" class="form-label"><strong>End Date</strong></label>
             <div class="input-group">
               <input type="text" id="endDate" class="form-control flatpickr" placeholder="Select end date" required>
-              <span class="input-group-text bg-light"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="17.5" viewBox="0 0 448 512"><path fill="#74C0FC" d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm80 64c-8.8 0-16 7.2-16 16l0 96c0 8.8 7.2 16 16 16l96 0c8.8 0 16-7.2 16-16l0-96c0-8.8-7.2-16-16-16l-96 0z" /></svg></span>
+              <span class="input-group-text bg-light"><i class="fa-solid fa-calendar-day text-primary"></i></span>
             </div>
           </div>
         </div>
@@ -46,17 +45,19 @@ last_modified_at: 2026-02-10
 
 <div class="mt-4" id="results">
         <h3 class="text-center">Your Age Results</h3>
-        <ul class="list-group">
-          <li class="list-group-item" id="result1"></li>
-          <li class="list-group-item" id="result2"></li>
-          <li class="list-group-item" id="result3"></li>
-          <li class="list-group-item" id="result4"></li>
-          <li class="list-group-item" id="result5"></li>
-          <li class="list-group-item" id="result6"></li>
+         <ul class="list-group">
+          <li class="list-group-item fs-5" id="result1"></li>
+          <li class="list-group-item fs-5" id="result2"></li>
+          <li class="list-group-item fs-5" id="result3"></li>
+          <li class="list-group-item fs-5" id="result4"></li>
+          <li class="list-group-item fs-5" id="result5"></li>
+          <li class="list-group-item fs-5" id="result6"></li>
+          <li class="list-group-item fs-5" id="result7"></li>
         </ul>
       </div>
     </div>
   </div>
+
 
 <!-- Article Content -->
 <div class="article-container">
@@ -79,7 +80,7 @@ last_modified_at: 2026-02-10
       <p class="card-text">An age calculator is a tool that calculates a person’s exact age from their birth date. It shows the age in years, months, days, and even hours and seconds, based on the current or a custom date.</p>
        <h2 class="card-title text-primary"><i class="bi bi-clock-history me-2"></i>Chronological age calculator</h2>
     <p>Chronological age is the number of full years, months, and days a person has lived since their birth. It’s the most common way to measure age and is used in schools,  hospitals, legal documentation, and more.</p>
-   <div class="alert alert-info"><p class="mb-0"><strong>Example:</strong> If someone was born on April 10, 2000, and today is April 10, 2025, their chronological age is exactly 25 years.</p></div>
+   <div class="alert alert-info border-0"><p class="mb-0"><strong>Example:</strong> If someone was born on April 10, 2000, and today is April 10, 2025, their chronological age is exactly 25 years.</p></div>
 <div class="card border-light shadow-sm mb-4">
  <div class="card-body">
    <h2 class="card-title text-primary"><i class="bi bi-alarm me-2"></i>Birth Time Options for Precision</h2>
