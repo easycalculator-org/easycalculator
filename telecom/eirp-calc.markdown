@@ -178,9 +178,7 @@ last_modified_at: 2026-02-03
 <div class="my-5 text-center">
 <img src="/assets/images/eirp-calculator.jpg" alt="EIRP Calculator diagram showing transmitter power antenna gain and cable loss formula" class="img-fluid rounded shadow">
 </div>
-<p class="visually-hidden">
-EIRP (dBm) = Tx Power (dBm) + Antenna Gain (dBi) - Cable Loss (dB)
-</p>
+<p class="visually-hidden">EIRP (dBm) = Tx Power (dBm) + Antenna Gain (dBi) - Cable Loss (dB)</p>
 
 
 
