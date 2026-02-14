@@ -2,7 +2,7 @@
 layout: default
 title: RF Link Budget Calculator | LTE, 5G, EIRP & Path Loss Formula
 permalink: /rf-link-budget-calculator
-description: "DescriCalculate RF link budget including transmit power, antenna gain, cable loss and free space path loss. Accurate LTE & 5G link budget calculator with EIRP and received power formula."
+description: "Calculate RF link budget including transmit power, antenna gain, cable loss and free space path loss. Accurate LTE & 5G link budget calculator with EIRP and received power formula."
 #image: "/assets/images/age-calc.png"
 last_modified_at: 2026-02-10
 ---
