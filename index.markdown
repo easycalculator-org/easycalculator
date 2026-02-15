@@ -1,9 +1,9 @@
 ---
 layout: default
 title: EasyCalculator | Free Online Calculators for Finance, Math & More
-description: "Free online calculators for finance, math, conversion & geolocation. EMI, SIP, percentage, age, currency & more on EasyCalculator.org."
+description: "Use 200+ free online calculators for EMI, SIP, finance, math, conversion, RF, geolocation, age, percentage and currency & more on EasyCalculator.org"
 image: "/assets/images/apple-touch-icon.png"
-last_modified_at: 2026-02-03
+last_modified_at: 2026-02-15
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/calculator.css' | relative_url }}">
@@ -82,7 +82,7 @@ last_modified_at: 2026-02-03
 <!-- Date to date -->
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/date-to-date-calculator"><div class="calculator-box text-center"><i class="fa-regular fa-calendar fa-xl"></i><h5>Date to Date Calculator</h5></div></a></div>
 <!-- chacter count -->
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/character-count"><div class="calculator-box text-center">📒<h5>Character Count</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/character-count"><div class="calculator-box text-center"><i class="fa-solid fa-book fa-xl"></i><h5>Character Count</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/roman-numeral-converter"><div class="calculator-box text-center"><i class="fa-solid fa-diagram-successor fa-2xl"></i><h5>Roman Numeral Converter</h5></div></a></div>
 </div>
 

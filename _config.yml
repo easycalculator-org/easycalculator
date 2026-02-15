@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: EasyCalculator.org
-author: EasyCalculator.org
+author: EasyCalculator Team
 email: care@easycalculator.org
 description: >- # this means to ignore newlines until "baseurl:"
   EasyCalculator.org is an open-source platform with free online calculators for math, science, and finance. Fast, accurate results—no registration needed!.
