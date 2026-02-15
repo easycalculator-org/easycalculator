@@ -66,7 +66,7 @@ last_modified_at: 2026-02-03
 
   <p>Convert dBm to Watt formula with example and most usefull values, for Example 1W in dBm is 33dBm, representing the output power of mobile phones.</p>
 
-<!-- Real Engineering Examples Section -->
+<!-- Examples Section -->
 <section class="my-5">
   <h2 class="mb-4">Real Engineering Examples of dBm to Watts Conversion</h2>
   <p>Understanding practical RF power conversions helps engineers design and optimize wireless networks. Below are real-world examples commonly used in LTE, 5G, and microwave systems. </p>
@@ -105,7 +105,7 @@ last_modified_at: 2026-02-03
 <h2 class="mb-4">Where is dBm to Watts Conversion Used in Real Applications?</h2>
  <p> The dBm to Watts conversion is widely used in wireless communication, RF engineering,  telecom network planning, and electronic system design. Engineers prefer dBm  because it simplifies large power calculations using a logarithmic scale. </p>
   <div class="row g-4">
-    <!-- LTE / 5G -->
+    <!-- LTE -->
     <div class="col-md-6 col-lg-4">
       <div class="card shadow-sm border-0 h-100">
         <div class="card-body">
@@ -155,10 +155,9 @@ last_modified_at: 2026-02-03
       </div>
     </div>
   </div>
-
   <div class="alert alert-info mt-4"> <strong>Expert Insight:</strong>  In practical LTE deployments, 43 dBm (~20W) is a common macro cell transmit power,  while small cells may operate between 30–37 dBm depending on deployment scenarios. <br></div>
 </section>
-<!-- Advanced RF Engineering Insight -->
+<!-- RF Engineering Insight -->
 <section class="my-4">
   <div class="card border-0 shadow-sm">
     <div class="card-body">
@@ -187,50 +186,37 @@ last_modified_at: 2026-02-03
     </div>
   </div>
 </section>
-<!-- EIRP and Massive MIMO Section -->
+<!-- EIRP-->
 <section class="my-5">
-  <div class="card shadow-sm border-0">
-    <div class="card-body">
-      <h4 class="text-primary mb-3"> Effective Radiated Power (EIRP) and Massive MIMO Systems </h4>
-      <p> In advanced LTE and 5G deployments, transmit power is not only defined by  per-port output power in dBm, but also by <strong>Effective Isotropic Radiated Power (EIRP)</strong>.</p>
-      <h5 class="mt-3">What is EIRP?</h5>
-      <p> EIRP represents the total radiated power after considering antenna gain.  It is calculated as:</p>
-      <div class="bg-light p-3 rounded">  <strong>EIRP (dBm) = Transmit Power (dBm) + Antenna Gain (dBi) − Cable Loss (dB)</strong> </div>
-      <p class="mt-3"> For example, if a transmitter outputs <strong>43 dBm</strong> and the antenna gain is  <strong>17 dBi</strong>, the EIRP becomes:  </p>
-      <div class="bg-light p-3 rounded">
-        43 dBm + 17 dBi = <strong>60 dBm EIRP</strong>
-      </div>
-      <p>  60 dBm corresponds to <strong>1000 Watts (1 kW)</strong> of effective radiated power.</p>
-      <h5 class="mt-4">Massive MIMO (8T8R, 32T32R, 64T64R)</h5>
-      <p>
-        In Massive MIMO systems, multiple antenna elements transmit simultaneously 
-        using beamforming techniques. Instead of increasing per-port power significantly, 
-        beamforming focuses energy toward the user, increasing signal strength and coverage.
-      </p>
-      <ul>
-        <li>8T8R systems commonly used in advanced LTE deployments</li>
-        <li>32T32R and 64T64R used in 5G NR Massive MIMO</li>
-        <li>Per-antenna power may be lower, but beamforming increases effective EIRP</li>
-      </ul>
-      <div class="alert alert-info mt-3">
-        <strong>Engineering Insight:</strong> 
-        In 5G Massive MIMO, even if each antenna port transmits lower power (e.g., 37–40 dBm), 
-        beamforming gain can significantly increase effective coverage compared to traditional 2T2R systems.
-      </div>
-      <p class="small text-muted">
-        Understanding EIRP and antenna gain is essential for accurate RF link budget calculations, 
-        regulatory compliance, and network performance optimization.
-      </p>
+ <div class="card shadow-sm border-0">
+ <div class="card-body">
+  <h4 class="text-primary mb-3"> Effective Radiated Power (EIRP) and Massive MIMO Systems </h4>
+  <p> In advanced LTE and 5G deployments, transmit power is not only defined by  per-port output power in dBm, but also by <strong>Effective Isotropic Radiated Power (EIRP)</strong>.</p>
+   <h5 class="mt-3">What is EIRP?</h5>
+   <p> EIRP represents the total radiated power after considering antenna gain.  It is calculated as:</p>
+   <div class="bg-light p-3 rounded">  <strong>EIRP (dBm) = Transmit Power (dBm) + Antenna Gain (dBi) − Cable Loss (dB)</strong> </div>
+   <p class="mt-3"> For example, if a transmitter outputs <strong>43 dBm</strong> and the antenna gain is  <strong>17 dBi</strong>, the EIRP becomes:  </p>
+   <div class="bg-light p-3 rounded"> 43 dBm + 17 dBi = <strong>60 dBm EIRP</strong></div>
+   <p>  60 dBm corresponds to <strong>1000 Watts (1 kW)</strong> of effective radiated power.</p>
+   <h5 class="mt-4">Massive MIMO (8T8R, 32T32R, 64T64R)</h5>
+   <p>In Massive MIMO systems, multiple antenna elements transmit simultaneously   using beamforming techniques. Instead of increasing per-port power significantly,  beamforming focuses energy toward the user, increasing signal strength and coverage. </p>
+   <ul>
+    <li>8T8R systems commonly used in advanced LTE deployments</li>
+    <li>32T32R and 64T64R used in 5G NR Massive MIMO</li>
+    <li>Per-antenna power may be lower, but beamforming increases effective EIRP</li>
+   </ul>
+ <div class="alert alert-info mt-3"> <strong>Engineering Insight:</strong>   In 5G Massive MIMO, even if each antenna port transmits lower power (e.g., 37–40 dBm),  beamforming gain can significantly increase effective coverage compared to traditional 2T2R systems. </div>
+   <p class="small text-muted"> Understanding EIRP and antenna gain is essential for accurate RF link budget calculations,  regulatory compliance, and network performance optimization. </p>
     </div>
   </div>
 </section>
 
 
-  <img src="/assets/images/dbm-to-watt-converter-with-formula-and-example.jpg" alt="dBm to Watt conversion formula with worked RF example" fetchpriority="high" loading="lazy">
+<img src="/assets/images/dbm-to-watt-converter-with-formula-and-example.jpg" alt="dBm to Watt conversion formula with worked RF example" fetchpriority="high" loading="lazy">
 
 <h3>dBm to Watt Conversion Table</h3>
 <div class="table-container">
- <table class="table table-striped table-bordered text-center"> <thead class="table-primary ">
+<table class="table table-striped table-bordered text-center"> <thead class="table-primary ">
 <tr><th scope="col">dBm</th><th scope="col">Watts</th><th scope="col">Description</th></tr> </thead>
 <tbody id="conversionTable">
 <tr><td>-30 dBm</td><td>0.000001 W</td><td>Low power</td></tr>

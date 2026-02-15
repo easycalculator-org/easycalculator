@@ -58,8 +58,6 @@ last_modified_at: 2026-02-03
             transform: scale(1.02);
             box-shadow: 0 8px 18px rgba(13,110,253,0.3);
         }
-      
-    
          #eirpWatt {
             transition: background-color 0.2s ease, padding 0.1s;
             padding: 0.2rem 0.5rem;
@@ -107,7 +105,7 @@ last_modified_at: 2026-02-03
                         </div>
                         <small class="form-text ms-1">insertion loss (positive dB)</small>
                     </div>
- <!-- Additional loss (optional) -->
+ <!-- Additional loss-->
                     <div class="col-md-6">
                         <label class="form-label fw-semibold"><i class="fas fa-cloud-rain me-1"></i>Other losses (optional)</label>
                         <div class="input-group">
@@ -118,7 +116,7 @@ last_modified_at: 2026-02-03
                         <small class="form-text ms-1">misc. loss / margin</small>
                     </div>
                 </div>
-                <!-- EIRP result display + reset button -->
+      <!-- EIRP result display -->
 <div class="d-flex flex-wrap align-items-center justify-content-between mt-5 pt-2">
                     <div class="d-flex align-items-center mb-2 mb-sm-0">
                         <span class="result-badge"> <i class="fas fa-bullseye me-2"></i> EIRP  <span class="eirp-value" id="eirpDisplay">38.00</span>  <span id="eirpUnit" class="fs-5 fw-normal">dBm</span> </span>
@@ -130,9 +128,9 @@ last_modified_at: 2026-02-03
                 </div>
  <div class="mt-3 text-end text-secondary" style="font-size:0.95rem"><span><i class="far fa-clock me-1"></i>EIRP (linear): </span> <strong id="eirpWatt" class="text-primary">6.31 W</strong></div>
   <hr class="my-4 opacity-50">
-                <div class="small text-secondary d-flex justify-content-between align-items-center flex-wrap">
-                    <span><i class="fas fa-info-circle me-1"></i> EIRP [dBm] = Ptx[dBm] + G[dBi] – L[dB]  (losses include cable + other)</span>
-                    <span class="badge bg-light text-dark px-3 py-2 mt-2 mt-sm-0">  <i class="fas fa-calculator me-1"></i> 1 W = 30 dBm </span>
+    <div class="small text-secondary d-flex justify-content-between align-items-center flex-wrap">
+        <span><i class="fas fa-info-circle me-1"></i> EIRP [dBm] = Ptx[dBm] + G[dBi] – L[dB]  (losses include cable + other)</span>
+         <span class="badge bg-light text-dark px-3 py-2 mt-2 mt-sm-0">  <i class="fas fa-calculator me-1"></i> 1 W = 30 dBm </span>
                 </div>
             </div> 
         </div> 
@@ -182,10 +180,7 @@ last_modified_at: 2026-02-03
 
 
 
-
 </div>
-
-
 
 
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>

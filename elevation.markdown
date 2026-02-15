@@ -3,7 +3,8 @@ layout: default
 title: Current Elevation – Check Your Altitude Instantly with Interactive Elevation Map
 permalink: /current-elevation
 description: "Find your current elevation and view an interactive elevation map for any location worldwide. Instantly check your altitude using GPS—accurate, fast, and free."
-last_modified_at: 2026-02-03
+image: "/assets/images/current-elevation.jpg"
+last_modified_at: 2026-02-15
 ---
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome@6.4.0/css/all.min.css">
@@ -13,38 +14,30 @@ last_modified_at: 2026-02-03
 
  <!-- Header -->
  <div class="text-center mb-2"> <h1 class="gradient-text display-4 fw-bold mb-3">My Current Elevation and Elevation Map</h1></div>
-
  <!-- Main Content -->
  <div class="row g-4">
-     <!-- Map Section -->
-      <div class="col-lg-8">
-         <div id="map" class="glass-panel"></div>
-        </div>
+  <div class="col-lg-8">
+   <div id="map" class="glass-panel"></div>
+   </div>
 
 <!-- Controls Section -->
  <div class="col-lg-4">
- <!-- Current Location Button -->
- <button class="btn w-100 control-btn mb-4" onclick="getCurrentLocation()"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512"><path fill="#74C0FC" d="M256 0c17.7 0 32 14.3 32 32l0 34.7C368.4 80.1 431.9 143.6 445.3 224l34.7 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-34.7 0C431.9 368.4 368.4 431.9 288 445.3l0 34.7c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-34.7C143.6 431.9 80.1 368.4 66.7 288L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l34.7 0C80.1 143.6 143.6 80.1 224 66.7L224 32c0-17.7 14.3-32 32-32zM128 256a128 128 0 1 0 256 0 128 128 0 1 0 -256 0zm128-80a80 80 0 1 1 0 160 80 80 0 1 1 0-160z"/></svg>Find My Elevation</button>
+ <button class="btn w-100 control-btn mb-4" onclick="getCurrentLocation()"><i class="fa-solid fa-location-crosshairs fa-xl"></i>Find My Elevation</button>
+<!-- Current Location -->
+<div class="glass-panel mb-4">
+   <h5 class="d-flex align-items-center gap-2 text-primary"><i class="fa-solid fa-compass fa-xl"></i>Current Location </h5>
+    <div id="currentLocationInfo" class="mt-3 text-muted">
+      <div class="d-flex align-items-center"> <i class="fas fa-sync loading-spinner" style="display: none;"></i> <span>Click the button above</span></div>
+      </div>
+    </div>
 
- <!-- Current Location Card -->
-  <div class="glass-panel mb-4">
-    <h5 class="d-flex align-items-center gap-2 text-primary"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512"><path fill="#B197FC" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>Current Location </h5>
-                    <div id="currentLocationInfo" class="mt-3 text-muted">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-sync loading-spinner" style="display: none;"></i>
-                            <span>Click the button above</span>
-                        </div>
-                    </div>
-                </div>
-
-  <!-- Recent Locations Card -->
+  <!-- Recent Locations -->
  <div class="glass-panel">
-  <h5 class="d-flex align-items-center gap-2 text-secondary"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512"><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z"/></svg>Recent Locations </h5>
-      <div id="recentLocations" class="recent-list mt-3"></div>
-                </div>
-            </div>
-        </div>
-
+   <h5 class="d-flex align-items-center gap-2"><i class="fa-solid fa-clock-rotate-left fa-xl"></i>Recent Locations </h5>
+   <div id="recentLocations" class="recent-list mt-3"></div>
+  </div>
+ </div>
+ </div>
 
 <!-- Article Content -->
 <div class="article-container">
@@ -58,25 +51,75 @@ last_modified_at: 2026-02-03
 
 <!-- What is Section1 -->
 <section class="mb-5">
-<h2>🌍 What Is My Current Elevation? </h2>
+<h2>What Is My Current Elevation?</h2>
 <p>The elevation of a geographic location is its height above or below a fixed reference point—most commonly mean sea level. Elevation is typically expressed in feet or meters and is a vital data point for hikers, travelers, scientists, and everyday users curious about their surroundings. </p>
 
+
+<div class="bg-primary-subtle p-4 rounded-3 my-3">
+<p class="mb-0">You can instantly check your current elevation using your device’s location permission, or click anywhere on the map to find the elevation of any location in the world.</p>
+</div>
+
 <h2>What Is Elevation?</h2>
-<p>Elevation is a geographic term used to describe the height of a point on the Earth’s surface above a fixed reference point, often mean sea level (MSL).<br>Elevation is used for locations on land (e.g., a city or hill).<br>It's measured in meters (m) or feet (ft).<br>Different from altitude (used for flying objects) and depth (used below a surface, like sea level or ground).</p>
+<p>Elevation describes the height of a place on Earth above sea level. It is used for land locations such as cities, mountains, valleys, and hills.</p>
 
 
 <div class="bg-light round-2 border-0 p-4 mb-2">
-          <h5><i class="fas fa-lightbulb text-warning me-2"></i> Example: My Current Elevation</h5>
-          <p class="mb-0"> Current Location: Denver, Colorado, United States <br>My Current Elevation: Approximately 1,609 meters (5,280 feet) above sea level</p>
-        </div>
+  <h5><i class="fas fa-lightbulb text-warning me-2"></i> Example: My Current Elevation</h5>
+  <p class="mb-0"> Current Location: Denver, Colorado, United States <br>My Current Elevation: Approximately 1,609 meters (5,280 feet) above sea level</p>
+</div>
         
 <div class="bg-light round-2 border-0 p-4 mb-2">
-          <h5><i class="fas fa-lightbulb text-warning me-2"></i> 🌡️ Elevation vs. Altitude vs. Depth</h5>
-          <p class="mb-0">Elevation: Height above sea level (used for land and surface points).<br>Altitude: Height of an object in the air (like an airplane).<br>Depth: Distance below a surface (like underwater depth). </p>
-        </div>
-      </section>
+  <h5><i class="fas fa-lightbulb text-warning me-2"></i> 🌡️ Elevation vs. Altitude vs. Depth</h5>
+  <p class="mb-0">Elevation: Height above sea level (used for land and surface points).<br>Altitude: Height of an object in the air (like an airplane).<br>Depth: Distance below a surface (like underwater depth). </p>
+</div>
+</section>
+
+
+
+<h2>📍 Check Your Current Location Elevation</h2>
+<p>To find your elevation automatically:</p>
+
+<ol>
+<li>Click the <strong>“Find my elevation”</strong> button.</li>
+<li>Allow location permission when your browser asks.</li>
+<li>Your elevation will appear instantly on map.</li>
+</ol>
+
+<div class="bg-light rounded-3 border-0 p-4 mb-3">
+<h5>🔐 Location Permission Required</h5>
+<p class="mb-0">For accurate results, your browser needs permission to access your location. We only use your location to calculate elevation — nothing is stored or shared.</p>
+</div>
+
+<h2>🗺️ Find Elevation by Clicking on the Map</h2>
+<p>You can also check the elevation of <strong>any place in the world</strong>.</p>
+
+<ol>
+<li>Zoom in to your desired area on the map.</li>
+<li>Click on any point.</li>
+<li>Instantly see the elevation of that location including of Lat/long.</li>
+</ol>
+
+<p>This feature is useful for:</p>
+<ul>
+<li>🏔️ Hikers and trekkers</li>
+<li>🏗️ Construction planning</li>
+<li>🌦️ Weather research</li>
+<li>🌍 Travel and exploration</li>
+</ul>
+
+<section class="mb-5 pt-4">
+<h2>🗺️ Click on the Map to Find Elevation</h2>
+<p>You can easily find the elevation of any location by clicking directly on the map. Just zoom in, tap on a point, and the elevation will appear instantly. </p>
+
+<div class="text-center my-4">
+<img src="/assets/images/click-map-to-check-elevation.gif" class="img-fluid rounded shadow-sm" alt="User clicking on map to check elevation of selected location" loading="lazy">
+</div>
+
+<p class="text-muted small text-center">Example: Clicking anywhere on the map instantly displays elevation in meters and feet.</p>
+</section>
+
 <!-- FAQ Section -->
-<section class="mb-5">
+<section class="mb-5 pt-4">
         <h2 class="mb-4">FAQ on Current Elevation</h2>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
