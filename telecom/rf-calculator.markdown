@@ -15,8 +15,8 @@ last_modified_at: 2026-02-10
  <div class="col-md-3 p-3"><a class="text-decoration-none" href="/vswr-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-circle-dot fa-xl"></i><h5>VSWR Calculator</h5></div></a></div>
  <div class="col-md-3 p-3"><a class="text-decoration-none" href="/rf-link-budget-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-radiation fa-xl"></i><h5>Link Budget Calculator</h5></div></a> </div>
  <div class="col-md-3 p-3"><a class="text-decoration-none" href="/free-space-path-loss-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-tower-broadcast fa-xl"></i><h5>Free Space Path Loss (FSPL) Calculator</h5></div> </a></div>
- <div class="col-md-3 p-3"><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-wave-square fa-xl"></i><h5>Frequency to Wavelength Calculator</h5></div></a></div>
-  <div class="col-md-3 p-3"><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-wave-square fa-xl"></i><h5>Wavelength to Frequency Calculator</h5></div></a></div>
+ <div class="col-md-3 p-3"><a class="text-decoration-none" href="/frequency-to-wavelength-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-wave-square fa-xl"></i><h5>Frequency to Wavelength Calculator</h5></div></a></div>
+  <div class="col-md-3 p-3"><a class="text-decoration-none" href="/wavelength-to-frequency-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-wave-square fa-xl"></i><h5>Wavelength to Frequency Calculator</h5></div></a></div>
  </div>
 
 
