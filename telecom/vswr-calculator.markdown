@@ -2,7 +2,7 @@
 layout: default
 title: VSWR Calculator – Voltage Standing Wave Ratio Calculator
 permalink: /vswr-calculator
-description: "Use our free VSWR Calculator to calculate Voltage Standing Wave Ratio from return loss or reflection coefficient. Fast, accurate RF tool for antenna and transmission."
+description: "Free VSWR Calculator to calculate Voltage Standing Wave Ratio from return loss or reflection coefficient. Fast, accurate tool for antenna and RF engineers."
 image: "/assets/images/vswr-calculation-infographic.jpg"
 last_modified_at: 2026-02-22
 ---
