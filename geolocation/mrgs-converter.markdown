@@ -45,10 +45,10 @@ last_modified_at: 2026-02-24
           <div class="card-body p-4">
             <h5 class="fw-bold mb-3 text-success">🌍 Latitude & Longitude → MGRS </h5>
             <div class="mb-3">
-              <label for="latInput" class="form-label fw-semibold"> Enter Latitude </label>
-              <input type="number" step="any" class="form-control form-control-lg"  id="latInput" placeholder="e.g.`  50.5123">
+              <label for="latInput" class="form-label fw-semibold">Enter Latitude</label>
+              <input type="number" step="any" class="form-control form-control-lg"  id="latInput" placeholder="e.g.  50.5123">
             </div>
-+              <label for="lonInput" class="form-label fw-semibold">  Enter Longitude </label>
++              <label for="lonInput" class="form-label fw-semibold">Enter Longitude</label>
               <input type="number"   step="any" class="form-control form-control-lg"  id="lonInput" placeholder="e.g. 21.61104">
             </div>
             <button class="btn btn-success w-100 btn-lg rounded-3 shadow-sm" onclick="convertLatLonToMGRS()"> Convert to MGRS  </button>
@@ -59,15 +59,6 @@ last_modified_at: 2026-02-24
 
 
 
-
-
-
-
-
-
-
-
-
  <div id="result" class="alert alert-info mt-4" style="display: none;">
       <h5 class="mb-3">Converted Coordinates:</h5>
       <p><strong>Latitude:</strong> <span id="latitude"></span></p>
@@ -75,8 +66,8 @@ last_modified_at: 2026-02-24
       <p><strong>MGRS:</strong> <span id="mgrs"></span></p>
     </div>
 
- <div id="map" class="mt-4 rounded shadow-sm" style="height: 420px;"></div>
-  </div>
+ <div id="map" class="mt-4 rounded shadow-sm" style="height: 520px;"></div>
+
 <!-- Article Part -->
 <div class="article-container">
    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
