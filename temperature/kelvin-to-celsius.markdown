@@ -68,13 +68,33 @@ last_modified_at: 2026-02-14
          <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Responsive Design</strong> – Use on mobile, tablet, or desktop.</li>
 </ul>
  </div>
+<div class="pt-4">
+<h2>Kelvin to Celsius Conversion Chart</h2>
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead class="table-light">
+<tr>
+<th>Kelvin (K)</th>
+<th>Celsius (°C)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>100 K</td><td>-173.15°C</td></tr>
+<tr><td>200 K</td><td>-73.15°C</td></tr>
+<tr><td>250 K</td><td>-23.15°C</td></tr>
+<tr><td>273.15 K</td><td>0°C</td></tr>
+<tr><td>298.15 K</td><td>25°C</td></tr>
+<tr><td>310.15 K</td><td>37°C</td></tr>
+<tr><td>373.15 K</td><td>100°C</td></tr>
+</tbody>
+</table>
+</div>
+</div>
 
-
-
-
-<h2>🧠 Why Use Kelvin?</h2>
+<div class="pt-4">
+<h2> Why Use Kelvin?</h2>
  <p>The Kelvin scale is the <strong>SI unit of temperature</strong>, commonly used in physics and chemistry. It starts from <strong>absolute zero (0 K)</strong>, where atomic movement stops. Unlike Celsius, Kelvin values never go negative.</p>
-
+</div>
   <div class="table-responsive mt-3">
     <table class="table table-bordered">
       <thead class="table-light">
@@ -143,3 +163,28 @@ last_modified_at: 2026-02-14
       </div>
     </div>
   <script src="{{ '/assets/js/kelvin-to-celsius.js' | relative_url }}"></script>
+
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How do I convert Kelvin to Celsius?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Subtract 273.15 from the Kelvin value. Formula: °C = K − 273.15."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is 0 Kelvin in Celsius?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "0 Kelvin equals −273.15°C, known as absolute zero."
+   }
+  }
+ ]
+}
+</script>
