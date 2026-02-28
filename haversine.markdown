@@ -99,10 +99,10 @@ last_modified_at: 2026-02-03
 <section class="mb-5">
 <h3>What is a Haversine Distance Calculator?</h3>
 <p>The Haversine Distance Calculator helps determine the shortest distance over the Earth’s surface between two geographic points based on their latitude and longitude coordinates. This calculation assumes a spherical Earth and uses the Haversine formula—a well-known equation in navigation and mapping applications. <br> Whether you’re a developer, traveler, GIS analyst, or someone who needs to calculate geographic distances, this tool gives you quick and reliable results.</p>
-<h3>🌍How Does the Haversine Formula Work?</h3>
+<h3>How Does the Haversine Formula Work?</h3>
 <p>The Haversine formula is based on spherical trigonometry and calculates the great-circle distance between two points on the surface of a sphere, making it perfect for geographical distance calculations.</p>
 
-<h4 class="mt-4">The Formula:</h4>
+<h4 class="mt-4">The Haversine Formula:</h4>
                     <div class="formula">
                         <div class="mb-3">a = sin²(Δφ/2) + cos(φ₁) · cos(φ₂) · sin²(Δλ/2)</div>
                         <div class="mb-3">c = 2 · atan2(√a, √(1−a))</div>
@@ -121,8 +121,77 @@ last_modified_at: 2026-02-03
         </ul>
      </div>
 
+<!-- Haversine Excel Section -->
+<section class="container my-5">
+  <div class="text-center mb-4">
+   <h2 class="fw-bold">📊 Haversine Distance in Excel</h2>
+   <p class="text-muted"> Calculate the great-circle distance between two latitude and longitude  points directly in Microsoft Excel using the formula below.</p>
+  </div>
+
+  <div class="row justify-content-center g-4">
+    <!-- Excel Formula Card -->
+    <div class="col-lg-8">
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title fw-bold mb-3"> 🧮 Excel Formula (Kilometers) </h5>
+          <!-- Formula Box -->
+          <div class="position-relative">
+            <button class="btn btn-sm btn-outline-secondary position-absolute top-0 end-0 m-2"  onclick="copyHaversineFormula(this)" title="Copy formula"> 📋 </button>
+ <pre class="bg-light p-3 rounded small mb-0"><code id="haversineFormula">=6371*ACOS(
+COS(RADIANS(A2))*COS(RADIANS(C2))*
+COS(RADIANS(D2)-RADIANS(B2))+
+SIN(RADIANS(A2))*SIN(RADIANS(C2))
+)</code></pre> </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Example Table -->
+  <div class="card shadow-sm border-0 mt-5">
+    <div class="card-body">
+      <h5 class="fw-bold mb-3">📌 Example Coordinates</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped align-middle text-center">
+          <thead class="table-light">
+            <tr>
+              <th>Latitude-1</th>
+              <th>Longitude-1</th>
+              <th>Latitude-2</th>
+              <th>Longitude-2</th>
+              <th>Distance in Kilometer</th>
+              <th>Distance in Mile</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>28.6139</td>
+              <td>77.2090</td>
+              <td>19.0760</td>
+              <td>72.8777</td>
+              <td>1148.09</td>
+              <td>713.39</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Download Button -->
+  <div class="text-center mt-4">
+    <a href="/assets/files/havershine-formula.xlsx" class="btn btn-primary btn-lg"> Download Sample Excel File</a>
+    <p class="small text-muted mt-2 mb-0">Includes ready-to-use Haversine Excel formula and example data.</p>
+  </div>
+
+</section>
+
+
+
+
  <!-- FAQ Section -->
-<section class="mb-5">
+<section class="mb-5 pt-4">
         <h2 class="mb-4">FAQ on Haversine Distance Calculator</h2>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
@@ -201,4 +270,13 @@ last_modified_at: 2026-02-03
                 default: return '';
             }
         }
-    </script>
+     function copyHaversineFormula(btn) {
+  const text = document.getElementById("haversineFormula").innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    btn.innerText = "✅";
+    setTimeout(() => {
+      btn.innerText = "📋";
+    }, 1500);
+  });
+}
+ </script>
