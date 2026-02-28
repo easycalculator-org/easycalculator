@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Current Elevation – Check Your Altitude Instantly with Interactive Elevation Map
+title: What Is My Elevation? | Current Elevation Finder & Altitude Map
 permalink: /current-elevation
 description: "Find your current elevation and view an interactive elevation map for any location worldwide. Instantly check your altitude using GPS—accurate, fast, and free."
 image: "/assets/images/current-elevation.jpg"
-last_modified_at: 2026-02-15
+last_modified_at: 2026-02-28
 ---
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome@6.4.0/css/all.min.css">
@@ -13,7 +13,9 @@ last_modified_at: 2026-02-15
  </style>
 
  <!-- Header -->
- <div class="text-center mb-2"> <h1 class="gradient-text display-4 fw-bold mb-3">My Current Elevation and Elevation Map</h1></div>
+ <div class="mb-2"> <h1 class="gradient-text display-4 fw-bold mb-3">What Is My Current Elevation?</h1>
+<p><strong>Your current elevation</strong> is the height of your location above mean sea level. You can instantly check your elevation using GPS or by selecting any point on the interactive map. Our free Current Elevation Finder provides fast and accurate altitude data worldwide in meters and feet.</p>
+ </div>
  <!-- Main Content -->
  <div class="row g-4">
   <div class="col-lg-8">
@@ -166,3 +168,35 @@ last_modified_at: 2026-02-15
  <!-- Scripts -->
  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
  <script src="{{ '/assets/js/elevation.js' | relative_url }}"></script>  
+ <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is elevation?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Elevation refers to the height of a location above mean sea level, usually measured in meters or feet."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I find my current elevation?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Click the Find My Elevation button and allow location access. The tool will instantly show your elevation on the map."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is elevation the same as altitude?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "No. Elevation refers to height above sea level for land locations, while altitude usually refers to objects in the air."
+   }
+  }
+ ]
+}
+</script>

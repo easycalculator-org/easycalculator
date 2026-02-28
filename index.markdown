@@ -157,7 +157,7 @@ last_modified_at: 2026-02-15
 
 <!-- Hero Section -->
 <section class="hero-section shadow-sm p-4 rounded-2">
-   <h1>EasyCalculator.org – Free Online Calculators for Finance, Math & Daily Use</h1>
+   <h1>EasyCalculator.org – Free Online Calculators for Finance, Math & Conversion</h1>
      <p class="lead mb-4">Welcome to EasyCalculator.org, your one-stop platform for free online calculators, conversion tools, and smart utilities. Whether you're calculating a loan EMI, converting currencies, or solving math problems, our tools are accurate, fast, and easy to use—no downloads or sign-ups required.</p>
   <h3 class="mb-3">Popular Calculators</h3>
                             <div class="flex-wrap justify-content-center gap-3">
