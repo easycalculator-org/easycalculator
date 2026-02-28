@@ -1,42 +1,14 @@
 ---
 layout: default
-title: Haversine Distance Calculator – Accurate Air Distance Tool
+title: Haversine Distance Calculator – Lat Long Distance Tool
 permalink: /haversine-distance
-description: "Calculate accurate great-circle distances between two latitude-longitude points using the Haversine formula. Ideal for aviation, geolocation, and mapping."
+description: "Calculate the great-circle distance between two latitude and longitude points using the Haversine formula. Fast, accurate air distance tool for maps and GPS."
 image: "/assets/images/haversine-distance-calculator-formula.jpg"
-last_modified_at: 2026-02-03
+last_modified_at: 2026-02-28
 ---
  <style> 
-  .formula {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 1.5rem 0;
-            border: 1px solid #eee;
-            font-size: 1.1rem;
-            color: var(--secondary-color);
-        }
-         .calculator-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-        }
-        .result-box {
-            background-color: #e9ecef;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .form-label {
-            font-weight: 500;
-        }
-        </style>
-
-
+ .formula{font-family:'Courier New',Courier,monospace;background-color:#f8f9fa;padding:1.5rem;border-radius:10px;margin:1.5rem 0;border:1px solid #eee;font-size:1.1rem;color:var(--secondary-color)}.calculator-container{max-width:600px;margin:0 auto;background-color:#fff;padding:30px;border-radius:10px;box-shadow:0 0 15px #0000001a}.result-box{background-color:#e9ecef;padding:15px;border-radius:5px;margin-top:20px}.form-label{font-weight:500}
+ </style>
 
  <div class="calculator-container">
     <h1 class="text-center mb-1">Haversine Distance Calculator</h1>
@@ -124,7 +96,7 @@ last_modified_at: 2026-02-03
 <!-- Haversine Excel Section -->
 <section class="container my-5">
   <div class="text-center mb-4">
-   <h2 class="fw-bold">📊 Haversine Distance in Excel</h2>
+   <h2 class="fw-bold">Haversine Distance in Excel</h2>
    <p class="text-muted"> Calculate the great-circle distance between two latitude and longitude  points directly in Microsoft Excel using the formula below.</p>
   </div>
 
@@ -133,7 +105,7 @@ last_modified_at: 2026-02-03
     <div class="col-lg-8">
       <div class="card shadow-sm border-0">
         <div class="card-body">
-          <h5 class="card-title fw-bold mb-3"> 🧮 Excel Formula (Kilometers) </h5>
+          <h5 class="card-title fw-bold mb-3">Excel Formula (Kilometers) </h5>
           <!-- Formula Box -->
           <div class="position-relative">
             <button class="btn btn-sm btn-outline-secondary position-absolute top-0 end-0 m-2"  onclick="copyHaversineFormula(this)" title="Copy formula"> 📋 </button>

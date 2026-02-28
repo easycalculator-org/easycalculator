@@ -23,6 +23,7 @@ last_modified_at: 2026-02-22
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/calculate-distance-from-latitude-longitude"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-pointer fa-xl"></i><h5>Lat/long Distance Calculator</h5></div> </a></div>
 <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/what-is-my-zip-code"><div class="calculator-box text-center"><i class="fa-solid fa-envelopes-bulk fa-xl"></i><h5>My Zipcode</h5></div></a></div>
 <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/nearest-airport-to-me"><div class="calculator-box text-center"><i class="fa-solid fa-plane-circle-check fa-xl"></i><h5>Nearest Airport</h5></div></a></div>
+<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/azimuth-calculator"><div class="calculator-box text-center"><i class="fa-solid  fa-route"></i><h5>Azimuth Calculator</h5></div></a></div>
  </div>
  <!-- geolocation-tool end-->
 
