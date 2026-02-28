@@ -2,7 +2,7 @@
 layout: default
 title: Free Azimuth Calculator | Find Azimuth Angle from Coordinates
 permalink: /azimuth-calculator
-description: "Calculate azimuth angle instantly with our free Azimuth Calculator. Learn what azimuth is, how to calculate azimuth from coordinates, and its uses in navigation, surveying, and RF engineering."
+description: "Calculate azimuth angle instantly with our free Azimuth Calculator. Find accurate direction between coordinates for navigation, surveying, and RF antenna alignment."
 image: "/assets/images/azimuth-calculator.jpg"
 last_modified_at: 2026-02-28
 ---
