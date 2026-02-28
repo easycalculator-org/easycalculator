@@ -116,8 +116,8 @@ last_modified_at: 2026-02-24
                 
  <!-- Key Components -->
  <div class="row g-4">
-                    <!-- Grid Zone Designator -->
-                    <div class="col-md-4">
+   <!-- Grid Zone Designator -->
+       <div class="col-md-4">
                         <div class="component-card h-100">
                             <div class="component-header">
                                 <h3 class="h5 mb-0">Grid Zone Designator</h3>
@@ -236,88 +236,55 @@ last_modified_at: 2026-02-24
 
 <!-- Use Cases Section -->
 <div class="mb-5">
-
-  <h2 class="fw-bold mb-4">
-    <i class="fas fa-bullseye me-2 text-danger"></i>
-    Why Use an MGRS Converter?
-  </h2>
-
+  <h2 class="fw-bold mb-4"><i class="fas fa-bullseye me-2 text-danger"></i> Why Use an MGRS Converter?</h2>
   <div class="row g-3">
-
     <!-- Item -->
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 border">
         <div class="card-body text-center">
-          <i class="fa-solid fa-person-military-pointing fa-2x text-primary mb-3"></i>
-          <h3 class="h6 fw-bold">Military Operations</h3>
-          <p class="small text-muted mb-0">
-            Essential for tactical maps, mission planning, and navigation.
-          </p>
+          <i class="fa-solid fa-person-military-pointing fa-2x text-primary mb-3"></i><h3 class="h6 fw-bold">Military Operations</h3>
+          <p class="small text-muted mb-0"> Essential for tactical maps, mission planning, and navigation.</p>
         </div>
       </div>
     </div>
-
     <!-- Item -->
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 border">
         <div class="card-body text-center">
-          <i class="fas fa-truck-medical fa-2x text-success mb-3"></i>
-          <h3 class="h6 fw-bold">Disaster Response</h3>
-          <p class="small text-muted mb-0">
-            First responders can pinpoint exact locations quickly.
-          </p>
+          <i class="fas fa-truck-medical fa-2x text-success mb-3"></i><h3 class="h6 fw-bold">Disaster Response</h3><p class="small text-muted mb-0"> First responders can pinpoint exact locations quickly.</p>
         </div>
       </div>
     </div>
-
     <!-- Item -->
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 border">
         <div class="card-body text-center">
-          <i class="fas fa-map-marked-alt fa-2x text-info mb-3"></i>
-          <h3 class="h6 fw-bold">GIS & Mapping</h3>
-          <p class="small text-muted mb-0">
-            Integrates with GPS systems and mapping software.
-          </p>
+          <i class="fas fa-map-marked-alt fa-2x text-info mb-3"></i> <h3 class="h6 fw-bold">GIS & Mapping</h3><p class="small text-muted mb-0"> Integrates with GPS systems and mapping software. </p>
         </div>
       </div>
     </div>
-
     <!-- Item -->
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 border">
         <div class="card-body text-center">
-          <i class="fas fa-hiking fa-2x text-warning mb-3"></i>
-          <h3 class="h6 fw-bold">Outdoor Activities</h3>
-          <p class="small text-muted mb-0">
-            Helps hikers and adventurers navigate remote areas.
-          </p>
+          <i class="fas fa-hiking fa-2x text-warning mb-3"></i> <h3 class="h6 fw-bold">Outdoor Activities</h3> <p class="small text-muted mb-0">  Helps hikers and adventurers navigate remote areas.</p>
         </div>
       </div>
     </div>
-
-    <!-- Item -->
+<!-- Item -->
+<div class="col-md-6 col-lg-4">
+ <div class="card h-100 border">
+  <div class="card-body text-center">
+  <i class="fas fa-ruler-combined fa-2x text-danger mb-3"></i> <h3 class="h6 fw-bold">Surveying</h3><p class="small text-muted mb-0"> Critical for engineers and cartographers.</p>
+ </div>
+ </div>
+ </div>
+ <!-- Item -->
     <div class="col-md-6 col-lg-4">
       <div class="card h-100 border">
         <div class="card-body text-center">
-          <i class="fas fa-ruler-combined fa-2x text-danger mb-3"></i>
-          <h3 class="h6 fw-bold">Surveying</h3>
-          <p class="small text-muted mb-0">
-            Critical for engineers and cartographers.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item -->
-    <div class="col-md-6 col-lg-4">
-      <div class="card h-100 border">
-        <div class="card-body text-center">
-          <i class="fas fa-satellite-dish fa-2x text-secondary mb-3"></i>
-          <h3 class="h6 fw-bold">Drone Operations</h3>
-          <p class="small text-muted mb-0">
-            Precision navigation for UAV missions.
-          </p>
+          <i class="fas fa-satellite-dish fa-2x text-secondary mb-3"></i><h3 class="h6 fw-bold">Drone Operations</h3>
+          <p class="small text-muted mb-0"> Precision navigation for UAV missions. </p>
         </div>
       </div>
     </div>
