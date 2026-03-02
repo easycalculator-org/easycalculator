@@ -143,17 +143,11 @@ If you use meters or GHz, you must adjust the constant value in the formula.</p>
 <ul><li>Distance = 5 km</li><li>Frequency = 2400 MHz</li></ul>
 
 <p>Applying the formula:</p>
-
 <div class="alert alert-light border">FSPL ≈ 20 log₁₀(5) + 20 log₁₀(2400) + 32.44  <br><strong>FSPL ≈ 114 dB</strong></div>
-
 <p>If transmitter power is 0 dBm and both antennas have 2 dBi gain:</p>
-
 <p>Received Power = 0 + 2 + 2 − 114 ≈ <strong>−110 dBm</strong></p>
-
 <hr>
-
 <h2>Why FSPL is Important in RF and Wireless Communication</h2>
-
 <ul>
 <li>Microwave link budget planning</li>
 <li>LTE and 5G network design</li>
@@ -161,9 +155,7 @@ If you use meters or GHz, you must adjust the constant value in the formula.</p>
 <li>WiFi coverage analysis</li>
 <li>RF propagation modeling</li>
 </ul>
-
 <p>Engineers use FSPL calculations to estimate signal coverage, optimize antenna placement, and predict received signal strength.</p>
-
 <hr>
 
 <h2>FSPL vs Link Budget</h2>
@@ -175,8 +167,8 @@ If you use meters or GHz, you must adjust the constant value in the formula.</p>
 <li>Connector losses</li>
 <li>Fade margin</li>
 </ul>
+<figure class="text-center my-4"><img src="/assets/images/free-space-path-loss-fspl-diagram.jpg" alt="Free Space Path Loss FSPL diagram showing distance frequency and RF signal attenuation" class="img-fluid rounded shadow-sm" loading="lazy" width="800"  height="450"><figcaption class="text-muted small mt-2">Free Space Path Loss (FSPL) increases logarithmically with distance and frequency.</figcaption></figure>
 
-<p>For complete RF analysis, FSPL is the starting point of every wireless system design.</p>
 
 <!-- FAQ Section -->
  <section class="mb-5 pt-4">
@@ -189,13 +181,13 @@ If you use meters or GHz, you must adjust the constant value in the formula.</p>
         </div>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
-            <div class="fw-bold text-primary"> 2. How do you calculate FSPL?<</div>
+            <div class="fw-bold text-primary">2. How do you calculate FSPL?</div>
             <p class="mb-0">FSPL is calculated using:  <strong>20 log₁₀(d) + 20 log₁₀(f) + 32.44</strong>  where distance is in km and frequency in MHz.</p>
           </div>
         </div>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
-            <div class="fw-bold text-primary"> 3.Does FSPL depend on antenna gain?< </div>
+            <div class="fw-bold text-primary"> 3.Does FSPL depend on antenna gain?</div>
             <p class="mb-0">No. FSPL depends only on distance and frequency. Antenna gains are included separately in link budget calculations.</p>
           </div>
         </div>
@@ -251,5 +243,24 @@ If you use meters or GHz, you must adjust the constant value in the formula.</p>
       }
     }
   ]
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [{
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://easycalculator.org/"
+ },{
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Free Space Path Loss Calculator",
+   "item": "https://easycalculator.org/free-space-path-loss-calculator"
+ }]
 }
 </script>
