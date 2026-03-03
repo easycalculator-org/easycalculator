@@ -15,7 +15,6 @@ last_modified_at: 2026-03-03
  <!-- Header -->
  <div class="mb-2"> <h1 class="gradient-text display-4 fw-bold mb-3">What Is My Current Elevation?</h1>
 <p><strong>Your current elevation</strong> is the height of your location above mean sea level. You can instantly check your elevation using GPS or by selecting any point on the interactive map. Our free Current Elevation Finder provides fast and accurate altitude data worldwide in meters and feet.</p>
-<p>Your current elevation is the height of your location above mean sea level. 
  </div>
  <!-- Main Content -->
  <div class="row g-4">
