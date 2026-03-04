@@ -3,6 +3,7 @@ layout: default
 title: Miles to Yards Converter – Fast Miles to Yards Conversion
 permalink: /length-converter/miles-to-yards
 description: "Convert miles to yards in seconds with our accurate online tool. Great for sports, road distances, and measurement needs."
+last_modified_at: 2026-01-03
 ---
 
 <div class="container p-4">

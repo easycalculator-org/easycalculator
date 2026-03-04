@@ -3,6 +3,7 @@ layout: default
 title: MM to Inches Converter – Easy MM to Inches Conversion
 permalink: /length-converter/mm-to-inches
 description: "Instantly convert millimeters to inches with our simple and precise tool. Ideal for small-scale measurements in various industries."
+last_modified_at: 2026-01-03
 ---
 
 <div class="container p-4">

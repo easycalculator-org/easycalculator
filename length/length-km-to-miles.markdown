@@ -3,6 +3,7 @@ layout: default
 title: KM to Miles Converter – Quick Kilometers to Miles Conversion
 permalink: /length-converter/km-to-miles
 description: "Convert kilometers to miles with ease using our quick and accurate online converter. Great for travel, running, and distance calculations."
+last_modified_at: 2026-01-03
 ---
 
 

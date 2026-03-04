@@ -3,6 +3,7 @@ layout: default
 title: Yards to Inches Converter – Accurate Yards to Inches Conversion
 permalink: /length-converter/yards-to-inches
 description: "Convert yards to inches quickly and accurately with our online tool. Ideal for sewing, sports fields, and measurements."
+last_modified_at: 2026-01-03
 ---
 
 <div class="container p-4">

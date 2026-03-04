@@ -3,6 +3,7 @@ layout: default
 title: Feet to CM Converter – Easily Convert Feet to Centimeters
 permalink: /length-converter/feet-to-cm
 description: "Easily convert feet to centimeters with our fast and reliable converter. Get instant results for height, measurements, and more!"
+last_modified_at: 2026-01-03
 ---
 
 

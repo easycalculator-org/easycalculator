@@ -3,6 +3,7 @@ layout: default
 title: Inches to Yards Converter – Easy Inches to Yards Conversion
 permalink: /length-converter/inches-to-yards
 description: "Easily convert inches to yards with our accurate and instant conversion tool. Perfect for tailoring, sports, and measurements."
+last_modified_at: 2026-01-03
 ---
 
 

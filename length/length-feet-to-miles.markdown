@@ -3,6 +3,7 @@ layout: default
 title: Feet to Miles Converter – Fast Feet to Miles Conversion
 permalink: /length-converter/feet-to-miles
 description: "Fast and reliable feet to miles conversion tool. Perfect for travel, running distances, and measurement conversions."
+last_modified_at: 2026-01-03
 ---
 
 

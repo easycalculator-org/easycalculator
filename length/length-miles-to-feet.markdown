@@ -3,6 +3,7 @@ layout: default
 title: Miles to Feet Converter – Quick Miles to Feet Conversion
 permalink: /length-converter/miles-to-feet
 description: "Easily convert miles to feet with our fast and accurate online converter. Great for travel distances, running, and navigation."
+last_modified_at: 2026-01-03
 ---
 
 

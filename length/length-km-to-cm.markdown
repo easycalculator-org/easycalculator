@@ -3,6 +3,7 @@ layout: default
 title: KM to CM Converter – Convert Kilometers to Centimeters Instantly
 permalink: /length-converter/km-to-cm
 description: "Instantly convert kilometers to centimeters with our easy tool. Get fast, accurate results for mapping, science, and engineering."
+last_modified_at: 2026-01-03
 --- 
 
 

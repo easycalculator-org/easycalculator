@@ -3,6 +3,7 @@ layout: default
 title: KM to MM Converter – Convert Kilometers to Millimeters Easily
 permalink: /length-converter/km-to-mm
 description: "Instantly convert kilometers to millimeters for precise calculations in science, engineering, and large-scale measurements."
+last_modified_at: 2026-01-03
 ---
 
 

@@ -3,6 +3,7 @@ layout: default
 title: Feet to MM Converter – Accurate Feet to Millimeters Conversion
 permalink: /length-converter/feet-to-mm
 description: "Convert feet to millimeters with accuracy in seconds. Use our online tool for precise conversions in engineering, construction, and more."
+last_modified_at: 2026-01-03
 ---
 
 

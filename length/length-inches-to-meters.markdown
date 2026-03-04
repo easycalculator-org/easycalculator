@@ -3,6 +3,7 @@ layout: default
 title: Inches to Meters Converter – Accurate Inches to Meters Conversion
 permalink: /length-converter/inches-to-meters
 description: "Get precise inches to meters conversion with our simple and fast tool. Great for projects requiring metric measurements."
+last_modified_at: 2026-01-03
 ---
 
  <style>

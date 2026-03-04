@@ -3,6 +3,7 @@ layout: default
 title: Meters to Miles Converter – Simple Meters to Miles Conversion
 permalink: /length-converter/meters-to-miles
 description: "Convert meters to miles instantly with our easy-to-use tool. Ideal for travel, sports, and distance-related calculations."
+last_modified_at: 2026-01-03
 ---
 
 

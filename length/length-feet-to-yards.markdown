@@ -3,6 +3,7 @@ layout: default
 title: Feet to Yards Converter – Simple Feet to Yards Conversion
 permalink: /length-converter/feet-to-yards
 description: "Simple and fast feet to yards conversion tool. Easily switch between feet and yards for landscaping, sports, and construction."
+last_modified_at: 2026-01-03
 ---
 
 

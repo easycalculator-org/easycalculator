@@ -3,6 +3,7 @@ layout: default
 title: Inches to CM Converter – Convert Inches to Centimeters Quickly
 permalink: /length-converter/inches-to-cm
 description: "Instantly convert inches to centimeters with our easy and accurate converter. Great for measurements, crafts, and more!"
+last_modified_at: 2026-01-03
 ---
 
 <main class="container my-5">

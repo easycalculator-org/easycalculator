@@ -3,6 +3,7 @@ layout: default
 title: Meters to Inches Converter – Convert Meters to Inches Online
 permalink: /length-converter/meters-to-inches
 description: "Easily convert meters to inches with our fast and precise conversion tool. Great for home improvement, design, and engineering."
+last_modified_at: 2026-01-03
 ---
 
 

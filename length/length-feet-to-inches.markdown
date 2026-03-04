@@ -3,6 +3,7 @@ layout: default
 title: Feet to Inches Converter – Quick Feet to Inches Conversion
 permalink: /length-converter/feet-to-inches
 description: "Quickly convert feet to inches using our simple and accurate tool. Ideal for height, DIY projects, and other measurements"
+last_modified_at: 2026-01-03
 ---
 
 

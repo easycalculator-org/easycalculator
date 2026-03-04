@@ -3,6 +3,7 @@ layout: default
 title: Yards to Meters Converter – Convert Yards to Meters Easily
 permalink: /length-converter/yards-to-meters
 description: "Get fast and precise yards to meters conversion with our simple online tool. Great for athletics, surveying, and more."
+last_modified_at: 2026-01-03
 ---
 
 <div class="container p-4">

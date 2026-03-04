@@ -5,6 +5,7 @@ permalink: /length-converter/cm-to-feet
 description: "Quickly convert centimeters to feet with our fast and reliable tool. Great for height, home projects, and easy conversions."
 last_modified_at: 2026-01-03
 ---
+
 <!-- cm to feet -->
 <div class="container p-4">
     <div class="card shadow-lg p-4 col-12 col-sm-8 col-md-6">
@@ -20,7 +21,6 @@ last_modified_at: 2026-01-03
     function convert() {
         let inputValue = document.getElementById("inputValue").value;
         let resultElement = document.getElementById("result");
-
         if (inputValue === "" || isNaN(inputValue)) {
             resultElement.innerText = "Please enter a valid number";
             return;

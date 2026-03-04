@@ -3,6 +3,7 @@ layout: default
 title: Meters to Feet Converter – Accurate Meters to Feet Conversion
 permalink: /length-converter/meters-to-feet
 description: "Convert meters to feet quickly and accurately with our online tool. Ideal for height, construction, and measurement conversions."
+last_modified_at: 2026-01-03
 --- 
 
 

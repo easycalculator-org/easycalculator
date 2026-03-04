@@ -3,6 +3,7 @@ layout: default
 title: MM to Feet Converter – Quick Millimeters to Feet Conversion
 permalink: /length-converter/mm-to-feet
 description: "Convert millimeters to feet easily with our fast and accurate converter. Perfect for engineering, carpentry, and technical projects."
+last_modified_at: 2026-01-03
 ---
 
 <div class="container p-4">

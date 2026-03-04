@@ -3,6 +3,7 @@ layout: default
 title: Inches to Feet Converter – Instant Inches to Feet Conversion
 permalink: /length-converter/inches-to-feet
 description: "Convert inches to feet in a snap with our instant online tool. Perfect for quick calculations in home improvement and design."
+last_modified_at: 2026-01-03
 ---
 
 

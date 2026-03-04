@@ -3,6 +3,7 @@ layout: default
 title: Miles to Meters Converter – Accurate Miles to Meters Conversion
 permalink: /length-converter/miles-to-meters
 description: "Fast and easy miles to meters conversion tool. Get accurate results for athletics, distances, and scientific calculations."
+last_modified_at: 2026-01-03
 ---
 
 
