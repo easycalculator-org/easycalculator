@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Pro Rata Calculator – Calculate Proportional Amount, Salary & Interest Online
+title: Pro Rata Calculator – Calculate Proportional Payments
 permalink: /pro-rata-calculator
-description: "Use the Pro Rata Calculator to quickly calculate proportional amounts such as salary, rent, interest, or fees based on time or quantity. Simple formula, examples, and instant results."
+description: "Use the Pro Rata Calculator to calculate proportional amounts for salary, rent, interest, or fees based on time, quantity, or share instantly."
 image: "/assets/images/og/pro-rata-calculator.jpg"
 last_modified_at: 2026-03-05
 ---
