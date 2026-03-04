@@ -17,7 +17,7 @@ last_modified_at: 2026-03-05
 
 
 <div class="row mb-3 align-items-center">
- <label class="col-md-4 col-form-label fw-medium text-dark">💰 Total Amount:</label>
+ <label class="col-md-4 col-form-label fw-medium text-dark"><i class="fa-solid fa-file-invoice-dollar"></i> Total Amount:</label>
   <div class="col-md-8">
   <div class="input-group"><span class="input-group-text bg-white">$</span><input type="number" id="totalAmount" class="form-control" value="1000" step="0.01" min="0"> </div>
  </div>
@@ -37,18 +37,18 @@ last_modified_at: 2026-03-05
 </div>
 
 <div id="customFullPeriodGroup" class="row mb-3 align-items-center">
-    <label class="col-md-4 col-form-label fw-medium text-dark">📆 Custom Period (days):</label>
+    <label class="col-md-4 col-form-label fw-medium text-dark"><i class="fa-solid fa-calendar-days"></i> Custom Period (days):</label>
     <div class="col-md-8"><input type="number" id="customFullDays" class="form-control" value="500" step="1" min="1"></div>
 </div>
 
 <div class="row mb-3 align-items-center">
-  <label class="col-md-4 col-form-label fw-medium text-dark">✅ Actual Days Used/Worked:</label>
+  <label class="col-md-4 col-form-label fw-medium text-dark"><i class="fa-solid fa-calendar"></i> Actual Days Used/Worked:</label>
   <div class="col-md-8"><input type="number" id="actualDays" class="form-control" value="25" step="1" min="0"></div>
 </div>
 <!-- calculate & reset -->
  <div class="d-flex gap-3 mt-4">
-   <button id="calculateBtn" class="btn btn-primary flex-fill fw-semibold py-2"> <i class="bi bi-check2-circle me-1"></i>Calculate </button>
-   <button id="resetBtn" class="btn btn-outline-secondary flex-fill fw-semibold py-2"><i class="bi bi-arrow-repeat me-1"></i>Reset</button>
+   <button id="calculateBtn" class="btn btn-primary flex-fill fw-semibold py-2"><i class="fa-solid fa-calculator"></i> Calculate </button>
+   <button id="resetBtn" class="btn btn-outline-secondary flex-fill fw-semibold py-2"><i class="fa-solid fa-arrow-rotate-left"></i> Reset</button>
   </div>
 
 <!-- results area  -->
