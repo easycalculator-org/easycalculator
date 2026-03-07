@@ -11,6 +11,7 @@ last_modified_at: 2026-03-06
 <!-- Finance Calculator -->
 <div class="row p-3 ">
 
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/proportion-calculator"><div class="calculator-box text-center"><h5>Proportion Calculator</h5></div></a></div>  
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/proportion-calculator"><div class="calculator-box text-center"><h5>Proportion Calculator</h5></div></a></div> 
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/adding-fractions-calculator"><div class="calculator-box text-center"><h5>Adding Fractions Calculator</h5></div></a></div>  
 
  </div>
