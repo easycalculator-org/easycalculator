@@ -133,44 +133,41 @@ last_modified_at: 2026-02-10
                                 <div id="marginProgress" class="progress-bar progress-bar-custom" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
-                        <!-- small chart: path loss & receiver sensitivity visualization -->
-                        <div class="chart-container mt-2 mb-2">
-                            <canvas id="gainChart"></canvas>
-                        </div>
-                        <div class="row g-2 mt-1">
-                            <div class="col-6">
-                                <div class="p-2 bg-light bg-opacity-75 rounded-4 border border-info">
-                                    <span class="d-block text-nowrap small text-uppercase text-primary">FS Path Loss</span>
-                                    <span class="fs-5 fw-semibold" id="pathLossVal" >129.1</span> <small>dB</small>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="p-2 bg-light bg-opacity-75 rounded-4 border border-info" >
-                                    <span class="d-block small text-uppercase text-primary">Rx Sensitivity</span>
-                                    <span class="fs-5 fw-semibold" id="sensVal" >-98.2</span> <small >dBm</small>
-                                </div>
-                            </div>
-                            <div class="col-6 mt-2">
-                                <div class="p-2 bg-light bg-opacity-75 rounded-4 border border-info" >
-                                    <span class="d-block small text-uppercase text-primary">EIRP</span>
-                                    <span class="fs-5 fw-semibold" id="eirpVal" >49.5</span> <small>dBm</small>
-                                </div>
-                            </div>
-                            <div class="col-6 mt-2">
-                                <div class="p-2 bg-light bg-opacity-75 rounded-4 border border-info">
-                                    <span class="d-block small text-uppercase text-primary">Noise Power</span>
-                                    <span class="fs-5 fw-semibold" id="noisePowVal" >-110.2</span> <small>dBm</small>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- reset/default hint -->
-                        <div class="mt-auto small text-secondary pt-3">
-                            <i class="fas fa-arrows-rotate me-1"></i> All parameters update live — click <span class="badge bg-secondary text-white" id="resetDefaults">⟲ reset to 5G example</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- main row -->
+ <!-- small chart: path loss & receiver sensitivity visualization -->
+<div class="chart-container mt-2 mb-2"> <canvas id="gainChart"></canvas></div>
+  <div class="row g-2 mt-1">
+   <div class="col-6">
+     <div class="p-2 bg-light bg-opacity-75 rounded-4 border border-info">
+       <span class="d-block text-nowrap  text-primary"><a href="/free-space-path-loss-calculator" class="text-decoration-none" >FS Path Loss</a></span>
+       <span class="fs-5 fw-semibold" id="pathLossVal" >129.1</span> <small>dB</small>
+      </div>
+      </div>
+        <div class="col-6">
+          <div class="p-2 bg-light bg-opacity-75 rounded-4 border border-info" >
+           <span class="d-block small text-uppercase text-primary">Rx Sensitivity</span><span class="fs-5 fw-semibold" id="sensVal" >-98.2</span> <small >dBm</small> </div>
+         </div>
+    <div class="col-6 mt-2">
+       <div class="p-2 bg-light bg-opacity-75 rounded-4 border border-info" >
+        <a href="/eirp-calculator" class="text-decoration-none"><span class="d-block text-primary">EIRP</span></a>
+         <!-- <span class="d-block small text-uppercase text-primary">EIRP</span> -->
+         <span class="fs-5 fw-semibold" id="eirpVal" >49.5</span> <small>dBm</small>
+         </div>
+         </div>
+    <div class="col-6 mt-2">
+      <div class="p-2 bg-light bg-opacity-75 rounded-4 border border-info">
+        <span class="d-block small text-uppercase text-primary">Noise Power</span>
+        <span class="fs-5 fw-semibold" id="noisePowVal" >-110.2</span> <small>dBm</small>
+        </div>
+        </div>
+       </div>
+ <!-- reset/default hint -->
+    <div class="mt-auto small text-secondary pt-3">
+      <i class="fas fa-arrows-rotate me-1"></i> All parameters update live — click <span class="badge bg-secondary text-white" id="resetDefaults">⟲ reset to 5G example</span>
+       </div>
+      </div>
+     </div>
+   </div>
+  </div> 
         <!-- second row: more details or description -->
 <div class="row mt-4">
   <div class="col-12">
