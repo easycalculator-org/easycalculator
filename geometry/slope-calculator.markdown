@@ -183,7 +183,7 @@ last_modified_at: 2026-03-09
 
 <hr class="my-4">
 
-<h2 class="fw-bold mb-3">Applications of Slope in Real Life</h2>
+<h2 class="fw-bold mb-3">Real-World Applications of Slope</h2>
 <h5 class="mt-3">Mathematics and Education</h5>
 <p>Students use slope to understand graphs and analyze coordinate geometry problems.</p>
 
@@ -225,11 +225,29 @@ last_modified_at: 2026-03-09
 </div>
 </div>
 
-
-
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="{{ '/assets/js/geomatry/slope-calc.js' | relative_url }}"></script>
-
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"FAQPage",
+"mainEntity":[
+{
+"@type":"Question",
+"name":"What does slope mean in math?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Slope represents the rate of change between two points on a line and describes how steep the line is."
+}
+},
+{
+"@type":"Question",
+"name":"How do you find the slope between two points?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Use the formula m = (y2 − y1) / (x2 − x1) by subtracting the y-coordinates and dividing by the difference between the x-coordinates."
+}
+}
+]
+}
+</script>
