@@ -152,7 +152,7 @@ decimal-to-fraction -->
 </ul>
 </div>
 <!-- Title -->
-<h2 class="fw-bold mb-3">Adding Fractions Calculator</h2>
+<h1>Adding Fractions Calculator</h1>
 <p>The <strong>Adding Fractions Calculator</strong> allows you to quickly add two or more fractions and get the correct result instantly. Simply enter the numerator and denominator of each fraction, and the calculator will automatically calculate the sum, simplify the result, and show the decimal value.</p>
 <p>This tool is useful for <strong>students, teachers, and anyone learning basic mathematics</strong>. It also displays step-by-step explanations and visual charts to help you understand how fraction addition works.</p>
 <p>You can use this tool as a <strong>fraction addition calculator</strong>, an <strong>add fractions online calculator</strong>, or a <strong>fractions sum calculator</strong>. It works with fractions that have both <strong>the same denominators</strong> and <strong>different denominators</strong>.</p>

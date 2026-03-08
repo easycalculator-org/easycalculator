@@ -67,7 +67,6 @@ last_modified_at: 2026-03-06
 </div>
 
 <!-- Article -->
-
 <div class="article-container mt-5">
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
 <div class="d-flex align-items-center gap-3 flex-wrap">
@@ -135,7 +134,7 @@ last_modified_at: 2026-03-06
 
 <h4 class="mt-5">FAQ on Proportion Calculator</h4>
  <div class="card mb-3 border-0 bg-light">
-  <div class="card-body"><strong>What is a proportion in math?</strong><p class="mb-0">A proportion is an equation showing that two ratios are equal.</p></div>
+ <div class="card-body"><strong>What is a proportion in math?</strong><p class="mb-0">A proportion is an equation showing that two ratios are equal.</p></div>
  </div>
 
 <div class="card mb-3 border-0 bg-light">
@@ -148,7 +147,7 @@ last_modified_at: 2026-03-06
 
 </div>
 
-<script src="/assets/js/proportion-calc.js"></script>
+<script src="/assets/js/fractions/proportion-calc.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.7.0/math.min.js"></script>
 
 <script type="application/ld+json">
