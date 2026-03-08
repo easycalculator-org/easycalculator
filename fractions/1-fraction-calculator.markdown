@@ -17,7 +17,7 @@ last_modified_at: 2026-03-06
 <div class="col-md-3 p-3"><a class="text-decoration-none" href="/multiplying-fractions-calculator"><div class="calculator-box text-center"><h5>Multiplying Fractions Calculator</h5></div></a></div> 
 <div class="col-md-3 p-3"><a class="text-decoration-none" href="/dividing-fractions-calculator"><div class="calculator-box text-center"><h5>Dividing Fractions Calculator</h5></div></a></div> 
 <div class="col-md-3 p-3"><a class="text-decoration-none" href="/simplify-fractions-calculator"><div class="calculator-box text-center"><h5>Simplify Fractions Calculator</h5></div></a></div> 
-<div class="col-md-3 p-3"><a class="text-decoration-none" href="/mixed-number-calculator"><div class="calculator-box text-center"><h5>Mixed Number Calculator</h5></div></a></div> 
+<!-- <div class="col-md-3 p-3"><a class="text-decoration-none" href="/mixed-number-calculator"><div class="calculator-box text-center"><h5>Mixed Number Calculator</h5></div></a></div>  -->
 <div class="col-md-3 p-3"><a class="text-decoration-none" href="/improper-fraction-calculator"><div class="calculator-box text-center"><h5>Improper Fraction Calculator</h5></div></a></div> 
 <div class="col-md-3 p-3"><a class="text-decoration-none" href="/fraction-to-decimal-calculator"><div class="calculator-box text-center"><h5>Fraction to decimal Calculator</h5></div></a></div> 
 <div class="col-md-3 p-3"><a class="text-decoration-none" href="/decimal-to-fraction-calculator"><div class="calculator-box text-center"><h5>Decimal to Fraction Calculator</h5></div></a></div> 
