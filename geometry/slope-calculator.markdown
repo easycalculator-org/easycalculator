@@ -2,7 +2,7 @@
 layout: default
 title: Slope Calculator – Find Slope Between Two Points with Graph & Steps
 permalink: /slope-calculator
-description: "Use the Slope Calculator to find the slope between two points instantly. Enter coordinates (x1,y1) and (x2,y2) to calculate slope (Δy/Δx), see the graph, and view step-by-step calculations."
+description: "Use the Slope Calculator to find the slope between two points instantly. Enter (x1,y1) and (x2,y2) to calculate slope (Δy/Δx), view the graph, and see step-by-step results."
 #image: "/assets/images/age-calc.png"
 last_modified_at: 2026-03-09
 ---
