@@ -57,7 +57,8 @@ last_modified_at: 2026-02-15
    <!-- Article-->
 
  <!-- Main Title -->
-<h1 class="fw-bold mb-3">Frequency to Wavelength Calculator</h1>
+
+<h1>Frequency to Wavelength Calculator</h1>
 <p class="lead">The frequency to wavelength calculator converts electromagnetic frequency (in Hz) into wavelength (in meters) using the formula <strong>λ = c / f</strong>, where c is the speed of light (3 × 10⁸ m/s). This calculation is essential in antenna design, RF planning, telecommunications, and wireless system engineering.</p>
 
 
