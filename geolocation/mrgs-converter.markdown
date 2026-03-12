@@ -83,7 +83,7 @@ last_modified_at: 2026-02-24
 <p>The <strong>Military Grid Reference System (MGRS)</strong> is a standard coordinate system used by NATO military forces to find and share locations anywhere on Earth. It is based on the <strong>Universal Transverse Mercator (UTM)</strong> and <strong>Universal Polar Stereographic (UPS)</strong> systems and divides the world into numbered zones and lettered latitude bands.</p>
 <p>MGRS was designed to make location reporting fast and easy for soldiers and marines. Instead of using long UTM coordinates, MGRS converts them into a shorter and more readable format while still maintaining high accuracy.</p>
 <h2>How the MGRS System Works</h2>
-<p>The MGRS coordinate starts with a <strong data-start="830" data-end="860">Grid Zone Designator (GZD)</strong>. The Earth is divided into:</p>
+<p>The MGRS coordinate starts with a <strong>Grid Zone Designator (GZD)</strong>. The Earth is divided into:</p>
 <ul>
 <li><strong>60 vertical longitudinal zones</strong></li>
 <li ><strong>Latitude bands usually 8&deg; high</strong></li>

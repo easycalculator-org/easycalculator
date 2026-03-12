@@ -126,8 +126,9 @@ last_modified_at: 2026-02-15
 <div class="col-md-3  p-3  "><a class="text-decoration-none" href="/decimal-to-binary"> <div class="calculator-box text-center"><i class="fa-solid fa-play fa-xl"></i><h5>Number Conversion</h5></div></a></div>
  <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/lcm-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-square-plus fa-xl"></i><h5>LCM | HCF Calculator</h5></div></a></div>
  <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/percentage-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-percent fa-xl"></i><h5>Percentage Calculator</h5></div></a></div>
- <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/fraction-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-divide fa-xl"></i><h5>Fraction Calculator</h5></div></a></div></div>
-
+ <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/fraction-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-divide fa-xl"></i><h5>Fraction Calculator</h5></div></a></div>
+  <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/triangle-calculators"><div class="calculator-box text-center"><i class="fa-solid fa-caret-up fa-xl"></i><h5>Triangle  Calculators</h5></div></a></div>
+ </div>
 <hr>
 <h2>Geolocation Tool</h2>
 <div class="row g-1 p-3 ">

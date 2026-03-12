@@ -236,7 +236,7 @@ last_modified_at: 2026-02-03
 
 <h2 >What is CAGR?</h2>
 <p>CAGR stands for <strong >Compound Annual Growth Rate</strong>, and it measures how an investment grows consistently over time.</p>
-<p data-start="1239" data-end="1453">For example, say you invested $50,000 in a stock in 2015. By 2020, it grew to $1,00,000. The CAGR tells you the <strong>annual growth rate</strong>&mdash;not just the overall gain&mdash;making it easier to compare with other investments.</p>
+<p>For example, say you invested $50,000 in a stock in 2015. By 2020, it grew to $1,00,000. The CAGR tells you the <strong>annual growth rate</strong>&mdash;not just the overall gain&mdash;making it easier to compare with other investments.</p>
 <p >This is why investors, analysts, and businesses often rely on a <strong>CAGR growth rate calculator</strong> to evaluate performance.</p>
 
 
