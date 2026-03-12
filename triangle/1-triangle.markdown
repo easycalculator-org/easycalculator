@@ -39,5 +39,5 @@ last_modified_at: 2026-03-10
 <div class="triangle-card"><a href="/law-of-cosines-calculator"><div class="calc-title">Law of Cosines Calculator</div></a></div>
 <div class="triangle-card"><a href="/scalene-triangle-calculator"><div class="calc-title">Scalene Triangle Calculator</div></a></div>
 <div class="triangle-card"><a href="/triangle-coordinate-calculator"><div class="calc-title">Triangle Coordinate Calculator</div></a></div>
-<div class="triangle-card"><a href="/triangle-angle-sum-calculator"><div class="calc-title">Triangle Angle Sum Calculator</div></a></div>
+<div class="triangle-card"><a href="/triangle-sum-calculator"><div class="calc-title">Triangle Sum Calculator</div></a></div>
 </div>
