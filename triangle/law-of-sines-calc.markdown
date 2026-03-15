@@ -43,7 +43,7 @@ last_modified_at: 2026-03-11
 </div>
 
 <div class="alert alert-light mt-4 text-center">
-<strong>Law of Sines Formula</strong>
+<strong> Law of Sines Formula</strong>
 
 <div class="mt-2">
 
@@ -284,7 +284,7 @@ c = \frac{a \cdot \sin(C)}{\sin(A)}
 <li><strong>SSA (Side–Side–Angle)</strong> – Two sides and one opposite angle are known</li>
 </ul>
 
-<p>However, the SSA case may produce two different triangles. This situation is called the<strong>ambiguous case</strong>.</p>
+<p>However, the SSA case may produce two different triangles. This situation is called the<strong> ambiguous case</strong>.</p>
 
 <hr class="my-4">
 
