@@ -1,27 +1,23 @@
 ---
 layout: default
-title: Kelvin to Celsius Calculator - Convert K to °C Easily
+title: Kelvin to Celsius Calculator (K → °C) + Formula & Chart
 permalink: /kelvin-to-celsius/
 description: "Convert Kelvin to Celsius quickly and accurately with our easy-to-use calculator! Perfect for science, weather, and school projects. Get results instantly!"
 image: "/assets/images/kelvin-to-celsius.jpg"
-last_modified_at: 2026-02-14
+last_modified_at: 2026-03-16
 ---
 <div class="container mt-5">
   <div class="row justify-content-center">
-    <div class="col-md-6">
+    <div class="col-md-8">
       <div class="card shadow-sm">
-        <div class="card-header bg-primary text-white text-center">
-          <h4>Kelvin to Celsius Calculator</h4>
-        </div>
+        <div class="card-header bg-primary text-white text-center p-4"><h1>Kelvin to Celsius Calculator (K → °C)</h1></div>
         <div class="card-body">
           <form id="converter-form">
             <div class="mb-3">
-              <label for="kelvinInput" class="form-label">Kelvin</label>
+              <label for="kelvinInput" class="form-label p-4">Kelvin</label>
               <input type="number" class="form-control form-control-lg" id="kelvinInput" placeholder="Enter temperature in Kelvin">
             </div>
-            <div class="mb-3 text-center">
-              <button type="button" class="btn btn-primary" onclick="convertToCelsius()">Convert</button>
-            </div>
+            <div class="mb-4 text-center"><button type="button" class="btn btn-primary" onclick="convertToCelsius()">Convert</button></div>
             <div class="alert alert-info d-none font-monospace fs-3" id="result"></div>
           </form>
         </div>
@@ -50,34 +46,29 @@ last_modified_at: 2026-02-14
   </div>
       <!-- What is Section1 -->
 <section class="mb-5">
-  <h1>What is Kelvin to Celsius Calculator?</h1>
-   <p>A Kelvin to Celsius Calculator is an online temperature conversion that quickly converts temperatures from Kelvin (K) to Celsius (°C) using the formula: °C = K - 273.15. It is commonly used by students, scientists, and engineers to interpret scientific data in a more familiar temperature scale. This converter is accurate, user-friendly, and ideal for physics, chemistry, and everyday use. </p>
+<h2>What is Kelvin to Celsius Calculator?</h2>
+ <p>A Kelvin to Celsius Calculator is an online temperature conversion that quickly converts temperatures from Kelvin (K) to Celsius (°C) using the formula: °C = K - 273.15. It is commonly used by students, scientists, and engineers to interpret scientific data in a more familiar temperature scale. This converter is accurate, user-friendly, and ideal for physics, chemistry, and everyday use. </p>
       
-  <hr class="my-5">
-  <h2>🔁 How to Convert Kelvin to Celsius</h2>
+<hr class="my-5">
+ <h2>🔁 How to Convert Kelvin to Celsius</h2>
   <p><strong>Formula:</strong> <code>Celsius (°C) = Kelvin (K) - 273.15</code></p>
   <p><strong>Example:</strong> 300 K → 300 - 273.15 = <strong>26.85°C</strong></p>
 
 <hr class="my-5">
-  <div class="bg-light p-4 rounded mt-4">
-   <h4 class="text-primary"><i class="fas fa-star me-2"></i>Features of the Kelvin to Celsius Calculator</h4>
-    <ul class="list-group list-group-flush">
-     <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Instant Conversion</strong> – Get results in real-time.</li>
-         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Precise Results</strong> – Accurate up to two decimals.</li>
-         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Science-Ready</strong> – Built for labs and academics.</li>
-         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Responsive Design</strong> – Use on mobile, tablet, or desktop.</li>
-</ul>
- </div>
+ <div class="bg-light p-4 rounded mt-4">
+  <h4 class="text-primary"><i class="fas fa-star me-2"></i>Features of the Kelvin to Celsius Calculator</h4>
+   <ul class="list-group list-group-flush">
+    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Instant Conversion</strong> – Get results in real-time.</li>
+    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Precise Results</strong> – Accurate up to two decimals.</li>
+    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Science-Ready</strong> – Built for labs and academics.</li>
+   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Responsive Design</strong> – Use on mobile, tablet, or desktop.</li>
+ </ul>
+</div>
 <div class="pt-4">
-<h2>Kelvin to Celsius Conversion Chart</h2>
-<div class="table-responsive">
-<table class="table table-bordered">
-<thead class="table-light">
-<tr>
-<th>Kelvin (K)</th>
-<th>Celsius (°C)</th>
-</tr>
-</thead>
+ <h2>Kelvin to Celsius Conversion Chart</h2>
+ <div class="table-responsive">
+ <table class="table table-bordered">
+ <thead class="table-light"><tr><th>Kelvin (K)</th><th>Celsius (°C)</th></tr></thead>
 <tbody>
 <tr><td>100 K</td><td>-173.15°C</td></tr>
 <tr><td>200 K</td><td>-73.15°C</td></tr>
@@ -97,11 +88,7 @@ last_modified_at: 2026-02-14
 </div>
   <div class="table-responsive mt-3">
     <table class="table table-bordered">
-      <thead class="table-light">
-        <tr>
-          <th>Kelvin (K)</th>
-          <th>Celsius (°C)</th>
-        </tr>
+      <thead class="table-light"><tr><th>Kelvin (K)</th><th>Celsius (°C)</th></tr>
       </thead>
       <tbody>
         <tr><td>0 K</td><td>-273.15°C</td></tr>
@@ -112,16 +99,37 @@ last_modified_at: 2026-02-14
   </div>
 
 <hr class="my-5">
-<div class="info-card">
-    <h3><i class="fas fa-flask science-icon"></i> Common Use Cases</h3>
-       <div class="row">
-         <div class="col-md-6 mb-3"><div class="d-flex align-items-center"><i class="fas fa-meteor science-icon"></i>   <span>Astrophysics & Space Science</span> </div></div>
-         <div class="col-md-6 mb-3"><div class="d-flex align-items-center"><i class="fas fa-vial science-icon"></i><span>Chemistry Lab Reports</span> </div> </div>
-         <div class="col-md-6 mb-3"> <div class="d-flex align-items-center"><i class="fas fa-atom science-icon"></i><span>Physics & Thermodynamics</span> </div></div>
-         <div class="col-md-6 mb-3"><div class="d-flex align-items-center"><i class="fas fa-graduation-cap science-icon"></i><span>Student Projects</span> </div> </div>
-         <div class="col-md-6 mb-3"><div class="d-flex align-items-center"><i class="fas fa-book science-icon"></i><span>Scientific Publications</span>   </div> </div>
-        </div>
+<div class="info-card my-5">
+  <h3 class="mb-4"><i class="fas fa-flask science-icon me-2"></i>Common Use Cases</h3>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="d-flex align-items-start p-3 bg-light rounded shadow-sm h-100">
+        <i class="fas fa-meteor science-icon me-3 fs-4 text-primary"></i><span>Astrophysics & Space Science</span>
       </div>
+    </div>
+    <div class="col-md-6">
+      <div class="d-flex align-items-start p-3 bg-light rounded shadow-sm h-100">
+        <i class="fas fa-vial science-icon me-3 fs-4 text-success"></i><span>Chemistry Laboratory Reports</span>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="d-flex align-items-start p-3 bg-light rounded shadow-sm h-100">
+        <i class="fas fa-atom science-icon me-3 fs-4 text-danger"></i><span>Physics & Thermodynamics Calculations</span>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="d-flex align-items-start p-3 bg-light rounded shadow-sm h-100">
+        <i class="fas fa-graduation-cap science-icon me-3 fs-4 text-warning"></i><span>School and College Science Projects</span>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="d-flex align-items-start p-3 bg-light rounded shadow-sm h-100">
+        <i class="fas fa-book science-icon me-3 fs-4 text-info"></i><span>Scientific Publications & Research Papers</span>
+      </div>
+    </div>
+
+  </div>
+</div>
 
   <hr class="my-5">
   <h2>🛠️ How to Use the Calculator</h2>
