@@ -8,18 +8,22 @@ last_modified_at: 2026-02-10
 ---
 <!-- RF Calculator -->
 <div class="row p-4">
-<h2>List of RF Calculator</h2>
-<p>An RF Calculator helps engineers and telecom professionals perform essential radio frequency calculations like dBm to Watt conversion, EIRP/ERP, VSWR, FSPL, Link Budget, and Frequency-Wavelength conversion. Use this free online RF calculator for accurate wireless network planning and RF system analysis.</p>
-<div class="col-md-3 p-3"><a class="text-decoration-none" href="/dbm-to-watt"><div class="calculator-box text-center"><i class="fa-solid fa-radio fa-xl"></i><h5>dBm to Watt Converter</h5></div></a> </div>
- <div class="col-md-3 p-3"><a class="text-decoration-none" href="/eirp-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-solid fa-signal fa-xl"></i><h5>EIRP Calculator</h5></div> </a></div>
- <div class="col-md-3 p-3"><a class="text-decoration-none" href="/vswr-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-circle-dot fa-xl"></i><h5>VSWR Calculator</h5></div></a></div>
- <div class="col-md-3 p-3"><a class="text-decoration-none" href="/rf-link-budget-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-radiation fa-xl"></i><h5>Link Budget Calculator</h5></div></a> </div>
- <div class="col-md-3 p-3"><a class="text-decoration-none" href="/free-space-path-loss-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-tower-broadcast fa-xl"></i><h5>Free Space Path Loss (FSPL) Calculator</h5></div> </a></div>
- <div class="col-md-3 p-3"><a class="text-decoration-none" href="/frequency-to-wavelength-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-wave-square fa-xl"></i><h5>Frequency to Wavelength Calculator</h5></div></a></div>
-  <div class="col-md-3 p-3"><a class="text-decoration-none" href="/wavelength-to-frequency-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-wave-square fa-xl"></i><h5>Wavelength to Frequency Calculator</h5></div></a></div>
-   <div class="col-md-3 p-3"><a class="text-decoration-none" href="/arfcn-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-2"></i><i class="fa-solid fa-g"></i><h5>ARFCN Calculator</h5></div></a></div>
-      <div class="col-md-3 p-3"><a class="text-decoration-none" href="/earfcn-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-4"></i><i class="fa-solid fa-g"></i><h5>eARFCN Calculator</h5></div></a></div>
+ <h2>List of RF Calculator</h2>
+ <p>An RF Calculator helps engineers and telecom professionals perform essential radio frequency calculations like dBm to Watt conversion, EIRP/ERP, VSWR, FSPL, Link Budget, and Frequency-Wavelength conversion. Use this free online RF calculator for accurate wireless network planning and RF system analysis.</p>
+  <div class="col-md-3 p-3"><a href="/dbm-to-watt"><div class="calculator-box text-center"><i class="fa-solid fa-radio fa-xl"></i><h5>dBm to Watt Converter</h5></div></a> </div>
+  <div class="col-md-3 p-3"><a href="/eirp-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-solid fa-signal fa-xl"></i><h5>EIRP Calculator</h5></div> </a></div>
+  <div class="col-md-3 p-3"><a href="/vswr-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-circle-dot fa-xl"></i><h5>VSWR Calculator</h5></div></a></div>
+  <div class="col-md-3 p-3"><a href="/rf-link-budget-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-radiation fa-xl"></i><h5>Link Budget Calculator</h5></div></a> </div>
+  <div class="col-md-3 p-3"><a href="/free-space-path-loss-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-tower-broadcast fa-xl"></i><h5>Free Space Path Loss (FSPL) Calculator</h5></div> </a></div>
+  <div class="col-md-3 p-3"><a  href="/frequency-to-wavelength-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-wave-square fa-xl"></i><h5>Frequency to Wavelength Calculator</h5></div></a></div>
+  <div class="col-md-3 p-3"><a  href="/wavelength-to-frequency-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-wave-square fa-xl"></i><h5>Wavelength to Frequency Calculator</h5></div></a></div>
+  <div class="col-md-3 p-3"><a href="/arfcn-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-2"></i><i class="fa-solid fa-g"></i><h5>ARFCN Calculator</h5></div></a></div>
+  <div class="col-md-3 p-3"><a href="/earfcn-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-4"></i><i class="fa-solid fa-g"></i><h5>eARFCN Calculator</h5></div></a></div>
+<div class="col-md-3 p-3"><a href="/microstrip-line-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-grip-lines"></i><h5>Microstrip Line Calculator</h5></div></a></div>
+
  </div>
+
+
 
 
 <!-- Article Content -->

@@ -1,82 +1,114 @@
- (function() {
+
+    (function() {
       // ----- DOM elements -----
       const currentInput = document.getElementById('currentSalary');
-
-      // mode cards
       const optionNewCard = document.getElementById('optionNewSalaryCard');
       const optionPercentCard = document.getElementById('optionPercentCard');
       const activeBadge = document.getElementById('activeModeBadge');
-
-      // dynamic field groups
       const newSalaryGroup = document.getElementById('newSalaryFieldGroup');
       const percentGroup = document.getElementById('percentFieldGroup');
-
-      // new salary input (mode A)
       const newSalaryInput = document.getElementById('newSalaryInput');
-
-      // percent controls (mode B)
       const percentSlider = document.getElementById('hikePercentSlider');
       const percentNumber = document.getElementById('hikePercentNumber');
 
-      // result spans (annual)
+      // result spans
       const resultNewAnnual = document.getElementById('resultNewAnnual');
       const resultHikePercent = document.getElementById('resultHikePercent');
       const resultHikeAmount = document.getElementById('resultHikeAmount');
       const displayCurrent = document.getElementById('displayCurrent');
       const displayHikeAmount = document.getElementById('displayHikeAmount');
       const displayRevised = document.getElementById('displayRevised');
-
-      // monthly spans
       const monthlyCurrent = document.getElementById('monthlyCurrent');
       const monthlyNew = document.getElementById('monthlyNew');
+      
+      // number in words spans
+      const currentInWords = document.getElementById('currentInWords');
+      const newInWords = document.getElementById('newInWords');
 
       const resetBtn = document.getElementById('resetBtn');
 
       // ----- state -----
       let activeMode = 'newSalary';   // 'newSalary' or 'percent'
 
-      // helper: format number with commas (no currency symbol)
+      // ----- number to words function (supports up to millions) -----
+      function numberToWords(num) {
+        if (num === undefined || num === null || isNaN(num) || num === '') return '';
+        num = parseFloat(num);
+        if (num < 0) return 'negative ' + numberToWords(-num);
+        if (num === 0) return 'zero';
+        
+        const ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
+                      'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen',
+                      'seventeen', 'eighteen', 'nineteen'];
+        const tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+        
+        function convertLessThanThousand(n) {
+          if (n === 0) return '';
+          if (n < 20) return ones[n];
+          if (n < 100) return tens[Math.floor(n/10)] + (n%10 ? ' ' + ones[n%10] : '');
+          return ones[Math.floor(n/100)] + ' hundred' + (n%100 ? ' ' + convertLessThanThousand(n%100) : '');
+        }
+        
+        let result = '';
+        if (num >= 1000000) {
+          result += convertLessThanThousand(Math.floor(num / 1000000)) + ' million';
+          num %= 1000000;
+          if (num > 0) result += ' ';
+        }
+        if (num >= 1000) {
+          result += convertLessThanThousand(Math.floor(num / 1000)) + ' thousand';
+          num %= 1000;
+          if (num > 0) result += ' ';
+        }
+        if (num > 0) {
+          result += convertLessThanThousand(num);
+        }
+        return result.trim();
+      }
+
+      // helper: format with commas
       function formatNumber(amount) {
+        if (isNaN(amount) || amount === null) return '0';
         return Math.round(amount).toLocaleString('en-US');
       }
 
-      // update all displays
+      // --- update displays based on current inputs ---
       function refreshCalculator() {
-        // get current salary (annual)
+        // get current salary (allow blank/empty)
         let current = parseFloat(currentInput.value);
         if (isNaN(current) || current < 0) current = 0;
         if (current > 1e9) current = 1e9;
-        currentInput.value = Math.round(current);
+        // don't set input value here - keep as user typed, only sanitize on blur
+        // we'll use current for calculations, but not overwrite field
 
         let hikeAmount = 0;
         let newAnnual = 0;
         let effectivePercent = 0;
 
         if (activeMode === 'newSalary') {
-          // mode A: new salary given
+          // MODE A: new salary from input
           let newSal = parseFloat(newSalaryInput.value);
           if (isNaN(newSal) || newSal < 0) newSal = 0;
           if (newSal > 1e9) newSal = 1e9;
-          newSalaryInput.value = Math.round(newSal);
 
           newAnnual = newSal;
           hikeAmount = newAnnual - current;
-          if (hikeAmount < 0) hikeAmount = 0;   // no negative hike
-          newAnnual = current + hikeAmount;      // reflect adjusted
-          newSalaryInput.value = newAnnual;
-
+          
           if (current > 0) {
             effectivePercent = (hikeAmount / current) * 100;
           } else {
-            effectivePercent = (hikeAmount > 0) ? 999.9 : 0;
+            effectivePercent = (hikeAmount > 0) ? 999.9 : (hikeAmount < 0 ? -999.9 : 0);
           }
 
           // sync percent fields (display only)
-          percentSlider.value = effectivePercent > 100 ? 100 : Math.min(100, effectivePercent);
+          let displayPerc = effectivePercent;
+          if (displayPerc > 100) displayPerc = 100;
+          if (displayPerc < 0) displayPerc = 0;
+          percentSlider.value = displayPerc;
           percentNumber.value = effectivePercent.toFixed(1);
 
         } else { 
-          // mode B: percent mode
+          // MODE B: percent mode
           let percent = parseFloat(percentSlider.value);
           if (isNaN(percent) || percent < 0) percent = 0;
           if (percent > 100) percent = 100;
@@ -88,14 +120,16 @@
           newAnnual = current + hikeAmount;
           effectivePercent = percent;
 
+          // update newSalaryInput field (in percent mode we control it)
           newSalaryInput.value = newAnnual;
         }
 
         hikeAmount = Math.round(hikeAmount);
         newAnnual = Math.round(newAnnual);
 
-        // --- update annual displays ---
+        // --- update displays ---
         resultNewAnnual.textContent = formatNumber(newAnnual);
+        
         if (current > 0 || hikeAmount === 0) {
           resultHikePercent.textContent = (effectivePercent > 0 ? '+' : '') + effectivePercent.toFixed(1) + '%';
         } else if (current === 0 && hikeAmount > 0) {
@@ -111,11 +145,27 @@
         displayHikeAmount.textContent = formatNumber(hikeAmount);
         displayRevised.textContent = formatNumber(newAnnual);
 
-        // --- monthly (annual / 12) ---
+        // monthly
         let currentMonthly = current / 12;
         let newMonthly = newAnnual / 12;
         monthlyCurrent.textContent = formatNumber(currentMonthly);
         monthlyNew.textContent = formatNumber(newMonthly);
+
+        // number to words
+        let currentVal = parseFloat(currentInput.value);
+        let newVal = parseFloat(newSalaryInput.value);
+        
+        if (!isNaN(currentVal) && currentVal > 0) {
+          currentInWords.textContent = '▪ ' + numberToWords(currentVal) + (currentVal === 1 ? '' : '');
+        } else {
+          currentInWords.textContent = '';
+        }
+        
+        if (!isNaN(newVal) && newVal > 0) {
+          newInWords.textContent = '▪ ' + numberToWords(newVal);
+        } else {
+          newInWords.textContent = '';
+        }
 
         // update badge
         activeBadge.textContent = (activeMode === 'newSalary') ? 'new salary mode' : 'percentage hike mode';
@@ -149,17 +199,36 @@
 
       // ---- event listeners ----
       currentInput.addEventListener('input', function() {
-        let val = parseFloat(currentInput.value);
-        if (isNaN(val) || val < 0) val = 0;
-        currentInput.value = Math.round(val);
+        // Don't sanitize on input, just refresh display
         refreshCalculator();
       });
 
       newSalaryInput.addEventListener('input', function() {
         if (activeMode !== 'newSalary') return;
+        refreshCalculator();
+      });
+
+      // Sanitize on blur only
+      currentInput.addEventListener('blur', function() {
+        let val = parseFloat(currentInput.value);
+        if (isNaN(val) || val < 0) {
+          currentInput.value = '';
+        } else {
+          if (val > 1e9) val = 1e9;
+          currentInput.value = Math.round(val);
+        }
+        refreshCalculator();
+      });
+
+      newSalaryInput.addEventListener('blur', function() {
+        if (activeMode !== 'newSalary') return;
         let val = parseFloat(newSalaryInput.value);
-        if (isNaN(val) || val < 0) val = 0;
-        newSalaryInput.value = Math.round(val);
+        if (isNaN(val) || val < 0) {
+          newSalaryInput.value = '';
+        } else {
+          if (val > 1e9) val = 1e9;
+          newSalaryInput.value = Math.round(val);
+        }
         refreshCalculator();
       });
 
@@ -188,29 +257,14 @@
       });
 
       resetBtn.addEventListener('click', function() {
-        currentInput.value = 80000;
-        newSalaryInput.value = 100000;
+        currentInput.value = '';
+        newSalaryInput.value = '';
         percentSlider.value = 25;
         percentNumber.value = 25;
-        refreshCalculator();
+        setMode('newSalary');
       });
 
-      currentInput.addEventListener('blur', function() {
-        let v = parseFloat(currentInput.value);
-        if (isNaN(v) || v < 0) v = 0;
-        currentInput.value = Math.round(v);
-        refreshCalculator();
-      });
-
-      newSalaryInput.addEventListener('blur', function() {
-        if (activeMode !== 'newSalary') return;
-        let v = parseFloat(newSalaryInput.value);
-        if (isNaN(v) || v < 0) v = 0;
-        newSalaryInput.value = Math.round(v);
-        refreshCalculator();
-      });
-
-      // initialise
+      // initialise with blank fields
       setMode('newSalary');
       refreshCalculator();
     })();

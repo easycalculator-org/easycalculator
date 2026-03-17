@@ -1,0 +1,47 @@
+
+<svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto">
+
+<!-- Substrate -->
+<polygon points="140,180 560,180 620,220 200,220"
+fill="#e6e6e6" stroke="#888"/>
+
+<!-- Ground plane -->
+<polygon points="200,220 620,220 620,240 200,240"
+fill="#f4a300"/>
+<text x="410" y="270" text-anchor="middle" font-size="14">Ground Plane</text>
+
+<!-- Conductor -->
+<polygon points="280,140 420,140 470,170 330,170"
+fill="#ffd23f" stroke="#caa400"/>
+<text x="350" y="120" text-anchor="middle" font-size="14">Conductor</text>
+
+<!-- W arrow -->
+<line x1="300" y1="155" x2="400" y2="155" stroke="black"
+marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="350" y="145" text-anchor="middle" font-size="13">W</text>
+
+<!-- L arrow -->
+<line x1="430" y1="140" x2="510" y2="180" stroke="black"
+marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="525" y="160" font-size="13">L</text>
+
+<!-- Height arrow -->
+<line x1="250" y1="170" x2="250" y2="220" stroke="black"
+marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="235" y="200" font-size="13">h</text>
+
+<!-- Dielectric label -->
+<text x="360" y="205" text-anchor="middle" font-size="14">
+Dielectric (εr)
+</text>
+
+<!-- Arrow marker -->
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10"
+refX="5" refY="5" orient="auto">
+<path d="M0,0 L10,5 L0,10 z" fill="black"/>
+</marker>
+</defs>
+
+</svg>
+
