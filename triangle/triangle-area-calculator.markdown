@@ -21,11 +21,12 @@ last_modified_at: 2026-02-03
      </ul>
                 
 <div class="tab-content" id="methodTabsContent">
-                    <!-- Base & Height Method -->
-                    <div class="tab-pane fade show active" id="base-height" role="tabpanel">
-                        <div class="triangle-container">
-                            <svg class="triangle-diagram" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                                <polygon points="30,130 170,130 100,30" fill="#d4edda" stroke="#155724" stroke-width="2"/>
+ <!-- Base & Height Method -->
+  <div class="tab-pane fade show active" id="base-height" role="tabpanel">
+    <div class="triangle-container">
+      <svg class="triangle-diagram" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+      
+ <polygon points="30,130 170,130 100,30" fill="#d4edda" stroke="#155724" stroke-width="2"/>
                                 <line x1="100" y1="30" x2="100" y2="130" stroke="#dc3545" stroke-width="2" stroke-dasharray="5,3"/>
                                 <line x1="30" y1="135" x2="170" y2="135" stroke="#0d6efd" stroke-width="2"/>
                                 <text x="100" y="145" text-anchor="middle" fill="#0d6efd" font-size="12">Base</text>
