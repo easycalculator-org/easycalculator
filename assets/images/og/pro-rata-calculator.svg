@@ -1,0 +1,56 @@
+<svg width="900" height="500" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 32px Arial, sans-serif; fill: #222; }
+    .formula { font: 20px Georgia, serif; fill: #222; }
+    .card { fill: #1589FF; rx: 20; }
+    .text { font: 16px Arial, sans-serif; fill: #1a1a1a; }
+    .bold { font-weight: bold; }
+    .box { fill: #f1f1f1; rx: 10; }
+  </style>
+
+  <!-- Title -->
+  <text x="450" y="60" text-anchor="middle" class="title">
+    Pro Rata Calculator
+  </text>
+
+  <!-- Formula -->
+  <text x="450" y="120" text-anchor="middle" class="formula">
+    Pro Rata Amount = (Actual Portion / Full Portion) × Total Amount
+  </text>
+
+  <!-- Card Background -->
+  <rect x="100" y="150" width="700" height="280" class="card"/>
+
+  <!-- Example Title -->
+  <text x="450" y="190" text-anchor="middle" class="text bold" font-size="22">
+    Example 1: Pro Rata Salary
+  </text>
+
+  <!-- Description -->
+  <text x="450" y="220" text-anchor="middle" class="text">
+    Suppose an employee earns a monthly salary of $3000
+  </text>
+  <text x="450" y="245" text-anchor="middle" class="text">
+    but works only 20 days out of 30 days.
+  </text>
+
+  <!-- Calculation Label -->
+  <text x="450" y="280" text-anchor="middle" class="text bold">
+    Calculation:
+  </text>
+
+  <!-- Calculation Box -->
+  <rect x="200" y="300" width="500" height="100" class="box"/>
+
+  <!-- Calculation Text -->
+  <text x="450" y="330" text-anchor="middle" class="text">
+    Pro Rata Salary = (20 ÷ 30) × 3000
+  </text>
+  <text x="450" y="355" text-anchor="middle" class="text">
+    Pro Rata Salary = 0.6667 × 3000
+  </text>
+  <text x="450" y="380" text-anchor="middle" class="text bold">
+    Pro Rata Salary = $2000
+  </text>
+
+</svg>
