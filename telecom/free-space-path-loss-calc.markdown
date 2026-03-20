@@ -3,22 +3,15 @@ layout: default
 title: Free Space Path Loss Calculator (FSPL) – Formula & dB Calculation
 permalink: /free-space-path-loss-calculator
 description: "Calculate Free Space Path Loss (FSPL) in dB using frequency and distance. Use our free FSPL calculator with formula, example, and RF planning guide for telecom and wireless networks."
-image: "/assets/images/og/free-space-path-loss-calculator.jpg"
-last_modified_at: 2026-03-03
+image: "/assets/images/og/free-space-path-loss-calculator.svg"
+last_modified_at: 2026-03-20
 ---
- <style>
-    .fspl-big-number {
-      font-size: 3rem;
-      font-weight: 600;
-      line-height: 1.2;
-    }
-    .rx-badge {
-      background-color: #e7f1ff;
-      border-radius: 50px;
-      padding: 0.5rem 1.2rem;
-      font-size: 1.4rem;
-    }
-  </style>
+<style> 
+.fspl-big-number {font-size: 3rem; font-weight: 600; line-height: 1.2; }
+.rx-badge {background-color: #e7f1ff; border-radius: 50px; padding: 0.5rem 1.2rem; font-size: 1.4rem;}
+.article-container img {max-width: 100%; height: auto; border-radius: 14px;}
+.article-container figure { background: #f8fafc;  padding: 12px;  border-radius: 16px;}
+</style>
  <div class="row justify-content-center">
    <div class="col-lg-8 col-xl-7">
       <div class="card shadow border-0 rounded-4">
@@ -116,8 +109,16 @@ last_modified_at: 2026-03-03
 
 <h2>FSPL Formula (Free Space Path Loss Equation)</h2>
 <p>The standard FSPL formula in decibels (dB) is:</p>
-
 <div class="alert alert-info fs-5"><strong>FSPL (dB) = 20 log₁₀(d) + 20 log₁₀(f) + 32.44</strong></div>
+
+<figure class="text-center my-4">
+  <img src="/assets/images/free-space-path-loss-calculator.svg"  alt="Free Space Path Loss diagram showing transmitter receiver distance frequency and signal attenuation" 
+    class="img-fluid rounded-4 shadow"  loading="lazy"  width="800" height="450" />
+  <figcaption class="text-muted small mt-2">FSPL depends on distance and frequency — higher values increase signal attenuation.</figcaption>
+</figure>
+
+
+
 
 <ul>
 <li><strong>d</strong> = distance in kilometers (km)</li>
@@ -167,8 +168,6 @@ If you use meters or GHz, you must adjust the constant value in the formula.</p>
 <li>Connector losses</li>
 <li>Fade margin</li>
 </ul>
-<figure class="text-center my-4"><img src="/assets/images/free-space-path-loss-fspl-diagram.jpg" alt="Free Space Path Loss FSPL diagram showing distance frequency and RF signal attenuation" class="img-fluid rounded shadow-sm" loading="lazy" width="800"  height="450"><figcaption class="text-muted small mt-2">Free Space Path Loss (FSPL) increases logarithmically with distance and frequency.</figcaption></figure>
-
 
 <!-- FAQ Section -->
  <section class="mb-5 pt-4">
