@@ -1,0 +1,59 @@
+<svg width="600" height="460" viewBox="0 0 600 460" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- 🔥 Title -->
+  <text x="300" y="30" text-anchor="middle"
+        font-size="24" font-weight="700" fill="#000">
+    Hypotenuse Calculator
+  </text>
+
+  <!-- Triangle -->
+  <polygon points="50,300 350,300 350,50"
+           fill="#fffdb3" stroke="#333" stroke-width="2"/>
+
+  <!-- Hypotenuse edge -->
+  <line x1="50" y1="300" x2="350" y2="50"
+        stroke="#333" stroke-width="2"/>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5"
+            orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#000"/>
+    </marker>
+  </defs>
+
+  <!-- Perfect aligned arrow -->
+  <line x1="80" y1="275" x2="320" y2="75"
+        stroke="#000" stroke-width="2.5"
+        marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+
+  <!-- Label -->
+  <text x="150" y="190" transform="rotate(-40 150,190)"
+        font-size="20" fill="#000" font-weight="600">
+    Hypotenuse
+  </text>
+
+  <!-- Base -->
+  <text x="150" y="330" font-size="18" fill="#333">B = 6 in</text>
+
+  <!-- Perpendicular -->
+  <text x="370" y="180" font-size="18" fill="#333">A = 8 in</text>
+
+  <!-- Right angle -->
+  <rect x="330" y="280" width="20" height="20" fill="#1e63c6"/>
+
+  <text x="270" y="260" font-size="26" fill="#c25a00">90°</text>
+
+  <!-- Example Box -->
+  <rect x="30" y="360" width="540" height="70" rx="10"
+        fill="#e6f2ff" stroke="#99c2ff"/>
+
+  <text x="40" y="380" font-size="16" font-weight="bold" fill="#003366">
+    Example:
+  </text>
+
+  <text x="40" y="405" font-size="14" fill="#003366">
+    B = 6 in, A = 8 in → H = √(6² + 8²) = √(36 + 64) = √100 = 10 in
+  </text>
+
+</svg>

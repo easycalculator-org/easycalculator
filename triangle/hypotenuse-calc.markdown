@@ -3,6 +3,7 @@ layout: default
 title: Hypotenuse Calculator – Find Hypotenuse of a Right Triangle
 permalink: /hypotenuse-calculator
 description: "Calculate the hypotenuse of a right triangle using the Pythagorean theorem. Enter the two legs to instantly compute the longest side."
+image: "/assets/images/hypotenuse-calculator.svg" 
 last_modified_at: 2026-03-11
 ---
 
@@ -66,12 +67,10 @@ Instead of solving square roots manually, this calculator gives you fast and acc
 </p>
 
 <hr>
-
-<h2 class="h5 fw-semibold mt-4">📘 How the Hypotenuse is Calculated</h2>
-
-<p>
-The hypotenuse is calculated using the Pythagorean theorem, which applies only to right-angled triangles.
-</p>
+<div class="row">
+<div class="col-md-6">
+<h2 class="h5 fw-semibold mt-4">📘 How to calculate the hypotenuse of a right triangle?</h2>
+<p>The hypotenuse is the longest side of a right triangle, located opposite the 90° angle.  It is calculated using the Pythagorean theorem:</p>
 
 <div class="bg-light p-3 rounded text-center">
 \[
@@ -79,16 +78,20 @@ c = \sqrt{a^2 + b^2}
 \]
 </div>
 
-<p class="mt-2">
-Where:
-</p>
-
+<p class="mt-2">Where:</p>
 <ul>
 <li><strong>a</strong> = one side of the triangle</li>
 <li><strong>b</strong> = second side of the triangle</li>
 <li><strong>c</strong> = hypotenuse (longest side)</li>
 </ul>
+</div>
+<div class="col-md-6">
 
+<div class="text-center mb-4">
+  <img src="/assets/images/hypotenuse-calculator.svg" alt="how to calculate hypotenuse of a right triangle example 6 8 10" class="img-fluid rounded shadow-sm" width="600" height="460" loading="eager" fetchpriority="high">
+</div>
+</div>
+</div>
 <hr>
 
 <h2 class="h5 fw-semibold mt-4">🧮 Step-by-Step Example</h2>
