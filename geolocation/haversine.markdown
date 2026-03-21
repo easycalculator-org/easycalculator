@@ -106,14 +106,14 @@ last_modified_at: 2026-02-28
   </div>
 
 </div>
-
+<div class="pt-4">
 <h2>Example of Haversine Distance Calculation</h2>
 <p>Distance between New York (40.7128, -74.0060) and Los Angeles (34.0522, -118.2437):</p>
 <ul>
 <li>Distance: ~3936 km</li>
 <li>Distance: ~2445 miles</li>
 </ul>
-  
+  </div>
 
 
 <!-- Haversine Excel Section -->
@@ -206,6 +206,12 @@ SIN(RADIANS(A2))*SIN(RADIANS(C2))
             <p class="mb-0">For most applications, the Haversine formula provides accurate results within a small margin of error. However, for high-precision needs (e.g., aviation, military), ellipsoidal models like Vincenty's may be preferred.</p>
           </div>
         </div>
+          <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary">4. What is the difference between Haversine distance and driving distance? </div>
+            <p class="mb-0">Haversine distance is the straight-line distance between two points on Earth, while driving distance depends on roads, terrain, and routes.</p>
+          </div>
+        </div>
       </section>
 
 
@@ -215,3 +221,51 @@ SIN(RADIANS(A2))*SIN(RADIANS(C2))
    </div>
 </section>
 <script src="{{ '/assets/js/geolocation/haversine.js' | relative_url }}"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Haversine formula used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Haversine formula is used to calculate the shortest distance (great-circle distance) between two points on Earth using latitude and longitude coordinates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the Haversine distance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Haversine formula provides highly accurate results for most applications. For very high precision, ellipsoidal models like Vincenty’s formula may be used."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate Haversine distance in miles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the Haversine calculator supports kilometers, miles, meters, and nautical miles for distance calculation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Haversine distance and driving distance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Haversine distance is the straight-line distance between two points on Earth, while driving distance depends on roads, terrain, and routes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What inputs are required for the Haversine calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You need the latitude and longitude of two points. The calculator uses these coordinates to compute the distance."
+      }
+    }
+  ]
+}
+</script>
