@@ -297,9 +297,9 @@ last_modified_at: 2026-02-24
   <h2 class="fw-bold mb-3"><i class="fas fa-download text-primary me-2"></i>Download MGRS Boundary Files  </h2>
   <p class="text-muted mb-4">Download global MGRS grid boundaries in multiple GIS formats: GeoJSON, KML, and Shapefile.</p>
   <div class="d-flex flex-wrap justify-content-center gap-3">
-  <a href="/assets/files/mgrs/MGRS Geojson Boundary.zip" class="btn btn-primary btn-lg px-4 shadow-sm" download>GeoJSON</a>
-  <a href="/assets/files/mgrs/MGRS Kml boundary.zip" class="btn btn-success btn-lg px-4 shadow-sm" download>KML</a>
-  <a href="/assets/files/mgrs/MGRS shapefile Boundary.zip" class="btn btn-warning btn-lg px-4 shadow-sm" download>Shapefile</a>
+  <a href="/assets/files/mgrs/mgrs-geojson-boundary.zip" class="btn btn-primary btn-lg px-4 shadow-sm" download>GeoJSON (~82MB) </a>
+  <a href="/assets/files/mgrs/mgrs-kml-boundary.zip" class="btn btn-success btn-lg px-4 shadow-sm" download>KML (~63MB)</a>
+  <a href="/assets/files/mgrs/mgrs-shapefile-boundary.zip" class="btn btn-warning btn-lg px-4 shadow-sm" download>Shapefile (~56MB)</a>
   </div>
 </div>
  <!-- FAQ Section -->

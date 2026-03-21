@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Haversine Distance Calculator – Lat Long Distance Tool
+title: Haversine Distance Calculator (Lat Long) + Formula & Example
 permalink: /haversine-distance
-description: "Calculate the great-circle distance between two latitude and longitude points using the Haversine formula. Fast, accurate air distance tool for maps and GPS."
-image: "/assets/images/haversine-distance-calculator-formula.jpg"
+description: "Calculate haversine distance between two coordinates instantly. Free online haversine calculator with formula, example, and step-by-step explanation (km, miles)."
+image: "/assets/images/haversine-distance-calculator-formula.svg"
 last_modified_at: 2026-02-28
 ---
  <style> 
@@ -11,12 +11,12 @@ last_modified_at: 2026-02-28
  </style>
 
  <div class="calculator-container">
-    <h1 class="text-center mb-1">Haversine Distance Calculator</h1>
-     <p class="text-muted text-center mb-4">Calculate the great-circle distance between two points on Earth</p>
-        <form id="haversineForm">
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <h5>Point A</h5>
+   <h1 class="text-center mb-1">Haversine Distance Calculator</h1>
+    <p class="text-muted text-center mb-4">Calculate the great-circle distance between two points on Earth</p>
+     <form id="haversineForm">
+        <div class="row mb-3">
+          <div class="col-md-6">
+             <h5>Point A</h5>
                     <div class="mb-3">
                         <label for="lat1" class="form-label">Latitude</label>
                         <input type="number" class="form-control" id="lat1" step="any" placeholder="e.g. 40.7128" required>
@@ -48,7 +48,7 @@ last_modified_at: 2026-02-28
                 </select>
             </div>
             <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary">Calculate Distance</button>
+                <button type="submit" class="btn btn-primary">Calculate Haversine Distance</button>
             </div>
         </form>
         <div id="result" class="result-box text-center" style="display: none;">
@@ -73,25 +73,48 @@ last_modified_at: 2026-02-28
 <p>The Haversine Distance Calculator helps determine the shortest distance over the Earth’s surface between two geographic points based on their latitude and longitude coordinates. This calculation assumes a spherical Earth and uses the Haversine formula—a well-known equation in navigation and mapping applications. <br> Whether you’re a developer, traveler, GIS analyst, or someone who needs to calculate geographic distances, this tool gives you quick and reliable results.</p>
 <h3>How Does the Haversine Formula Work?</h3>
 <p>The Haversine formula is based on spherical trigonometry and calculates the great-circle distance between two points on the surface of a sphere, making it perfect for geographical distance calculations.</p>
-
+<div class="pt-4">
+<h2>What is Haversine Distance?</h2>
+<p>Haversine distance is the shortest distance between two points on a sphere, calculated using latitude and longitude coordinates.</p>
+  </div>
+<div class="row align-items-center">
 <h4 class="mt-4">The Haversine Formula:</h4>
-                    <div class="formula">
-                        <div class="mb-3">a = sin²(Δφ/2) + cos(φ₁) · cos(φ₂) · sin²(Δλ/2)</div>
-                        <div class="mb-3">c = 2 · atan2(√a, √(1−a))</div>
-                        <div>d = R · c</div>
-                    </div>
+  <!-- Formula Section -->
+  <div class="col-md-6">
+    <div class="formula p-3 bg-light rounded shadow-sm">
+      <div class="mb-2">a = sin²(Δφ/2) + cos(φ₁) · cos(φ₂) · sin²(Δλ/2)</div>
+      <div class="mb-2">c = 2 · atan2(√a, √(1 − a))</div>
+      <div>d = R · c</div>
+    </div>
+    <!-- Variables -->
+    <div class="bg-light rounded mt-4 p-3 shadow-sm">
+      <h5 class="text-primary mb-3"> <i class="fas fa-star me-2"></i>Variables Explained:</h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-light"><strong>φ₁, φ₂</strong>: Latitudes of point 1 and point 2 (in radians)</li>
+        <li class="list-group-item bg-light"> <strong>λ₁, λ₂</strong>: Longitudes of point 1 and point 2 (in radians)</li>
+        <li class="list-group-item bg-light"> <strong>Δφ</strong>: Difference in latitude (φ₂ − φ₁) </li>
+        <li class="list-group-item bg-light"> <strong>Δλ</strong>: Difference in longitude (λ₂ − λ₁) </li>
+        <li class="list-group-item bg-light"><strong>R</strong>: Earth’s radius (6,371 km or 3,959 miles)</li>
+        <li class="list-group-item bg-light"><strong>d</strong>: Distance between the two points </li>
+      </ul>
+    </div>
+  </div>
 
-<div class="bg-light p-4 rounded mt-4">
-   <h4 class="text-primary"><i class="fas fa-star me-2"></i>Variables Explained:</h4>
-    <ul class="list-group list-group-flush">
-     <li class="list-group-item bg-light"><strong>φ₁, φ₂ </strong>: Latitudes of point 1 and point 2 (in radians)</li>
-      <li class="list-group-item bg-light"><strong>λ₁, λ₂ </strong>: Longitudes of point 1 and point 2 (in radians)</li>
-         <li class="list-group-item bg-light"><strong>φ </strong>: Difference between latitudes (φ₂ - φ₁)</li>
-         <li class="list-group-item bg-light"><strong>Δλ</strong>: Difference between longitudes (λ₂ - λ₁)</li>
-         <li class="list-group-item bg-light"><strong>R</strong>: Earth's radius (6,371 km or 3,959 miles)</li>
-         <li class="list-group-item bg-light"><strong>d</strong>:  Distance between the two points</li>
-        </ul>
-     </div>
+  <!-- Image Section -->
+  <div class="col-md-6 text-center">
+   <img src="/assets/images/haversine-distance-calculator-formula.svg" alt="Haversine formula diagram showing great-circle distance between two points on Earth" class="img-fluid rounded shadow-sm" loading="lazy" width="100%">
+  </div>
+
+</div>
+
+<h2>Example of Haversine Distance Calculation</h2>
+<p>Distance between New York (40.7128, -74.0060) and Los Angeles (34.0522, -118.2437):</p>
+<ul>
+<li>Distance: ~3936 km</li>
+<li>Distance: ~2445 miles</li>
+</ul>
+  
+
 
 <!-- Haversine Excel Section -->
 <section class="container my-5">
@@ -187,68 +210,8 @@ SIN(RADIANS(A2))*SIN(RADIANS(C2))
 
 
 <div class="highlight-box">
-  <h5><i class="fas fa-lightbulb text-warning me-2"></i> Did you know</h5><p class="mb-0">📏 The term "Haversine" comes from "half versed sine", a trigonometric function used in spherical geometry and navigation since the 19th century. <br>🗺️ The Haversine formula is widely used in GPS devices, geofencing applications, and fitness tracking apps like Strava or Runkeeper.</p>
+ <h5><i class="fas fa-lightbulb text-warning me-2"></i> Did you know</h5>
+ <p class="mb-0">📏 The term "Haversine" comes from "half versed sine", a trigonometric function used in spherical geometry and navigation since the 19th century. <br>🗺️ The Haversine formula is widely used in GPS devices, geofencing applications, and fitness tracking apps like Strava or Runkeeper.</p>
    </div>
 </section>
-<script>
-        document.getElementById('haversineForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Get input values
-            const lat1 = parseFloat(document.getElementById('lat1').value);
-            const lon1 = parseFloat(document.getElementById('lon1').value);
-            const lat2 = parseFloat(document.getElementById('lat2').value);
-            const lon2 = parseFloat(document.getElementById('lon2').value);
-            const unit = document.getElementById('unit').value;
-            // Calculate distance
-            const distance = haversineDistance(lat1, lon1, lat2, lon2, unit);
-            // Display result
-            document.getElementById('distanceResult').textContent = distance + ' ' + getUnitName(unit);
-            document.getElementById('result').style.display = 'block';
-        });
-        function haversineDistance(lat1, lon1, lat2, lon2, unit) {
-            // Earth radius in kilometers
-            const R = 6371;
-            // Convert degrees to radians
-            const dLat = (lat2 - lat1) * Math.PI / 180;
-            const dLon = (lon2 - lon1) * Math.PI / 180;
-            const a = 
-                Math.sin(dLat/2) * Math.sin(dLat/2) +
-                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
-                Math.sin(dLon/2) * Math.sin(dLon/2); 
-            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-            let distance = R * c;
-            // Convert to selected unit
-            switch(unit) {
-                case 'm':
-                    distance *= 1000;
-                    break;
-                case 'mi':
-                    distance *= 0.621371;
-                    break;
-                case 'nmi':
-                    distance *= 0.539957;
-                    break;
-                // km is default
-            }
-            // Round to 2 decimal places
-            return Math.round(distance * 100) / 100;
-        }
-        function getUnitName(unit) {
-            switch(unit) {
-                case 'km': return 'km';
-                case 'm': return 'meters';
-                case 'mi': return 'miles';
-                case 'nmi': return 'nautical miles';
-                default: return '';
-            }
-        }
-     function copyHaversineFormula(btn) {
-  const text = document.getElementById("haversineFormula").innerText;
-  navigator.clipboard.writeText(text).then(() => {
-    btn.innerText = "✅";
-    setTimeout(() => {
-      btn.innerText = "📋";
-    }, 1500);
-  });
-}
- </script>
+<script src="{{ '/assets/js/geolocation/haversine.js' | relative_url }}"></script>
