@@ -292,8 +292,18 @@ last_modified_at: 2026-02-24
   </div>
 </div>
  </section>
-      <!-- FAQ Section -->
-      <section class="mb-5">
+<!-- MGRS Boundary Download Section -->
+<div class="card border-0 shadow-sm mt-5 p-4 bg-light text-center">
+  <h2 class="fw-bold mb-3"><i class="fas fa-download text-primary me-2"></i>Download MGRS Boundary Files  </h2>
+  <p class="text-muted mb-4">Download global MGRS grid boundaries in multiple GIS formats: GeoJSON, KML, and Shapefile.</p>
+  <div class="d-flex flex-wrap justify-content-center gap-3">
+  <a href="/assets/files/mgrs/MGRS Geojson Boundary.zip" class="btn btn-primary btn-lg px-4 shadow-sm" download>GeoJSON</a>
+  <a href="/assets/files/mgrs/MGRS Kml boundary.zip" class="btn btn-success btn-lg px-4 shadow-sm" download>KML</a>
+  <a href="/assets/files/mgrs/MGRS shapefile Boundary.zip" class="btn btn-warning btn-lg px-4 shadow-sm" download>Shapefile</a>
+  </div>
+</div>
+ <!-- FAQ Section -->
+<section class="pt-4">
         <h2 class="mb-4">FAQ on MRGS Converter</h2>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
