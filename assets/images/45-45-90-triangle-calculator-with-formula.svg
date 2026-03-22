@@ -1,0 +1,76 @@
+<svg width="700" height="420" viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="40" y="40" font-size="26" font-weight="700" fill="#0f172a">
+    45-45-90 Triangle Formulas
+  </text>
+
+  <!-- Triangle Group -->
+  <g transform="translate(40,40)">
+    
+    <!-- Triangle Fill -->
+    <polygon points="80,280 80,60 320,280" 
+             fill="#3b82f6" 
+             fill-opacity="0.15"
+             stroke="#2563eb" 
+             stroke-width="3"/>
+
+    <!-- Right angle box -->
+    <rect x="80" y="260" width="22" height="22" 
+          fill="#ffffff" 
+          stroke="#2563eb" 
+          stroke-width="2"/>
+
+    <!-- Side labels -->
+    <text x="180" y="305" font-size="18" fill="#1e293b" font-weight="600">x</text>
+    <text x="50" y="180" font-size="18" fill="#1e293b" font-weight="600">x</text>
+    <text x="210" y="170" font-size="18" fill="#1e293b" font-weight="600">x√2</text>
+
+    <!-- Angles -->
+    <text x="85" y="75" font-size="16" fill="#334155">45°</text>
+    <text x="280" y="275" font-size="16" fill="#334155">45°</text>
+
+  </g>
+
+  <!-- Right Content Section -->
+  <g transform="translate(380,70)">
+
+    <!-- Ratio -->
+    <text x="0" y="0" font-size="18" font-weight="700" fill="#0f172a">
+      Ratio of Side Lengths
+    </text>
+
+    <rect x="0" y="10" width="200" height="36" rx="8" fill="#e0f2fe"/>
+    <text x="15" y="34" font-size="18" fill="#0369a1" font-weight="600">
+      1 : 1 : √2
+    </text>
+
+    <!-- Side Info -->
+    <text x="0" y="80" font-size="16" fill="#1e293b">Side 1 = x</text>
+    <text x="0" y="105" font-size="16" fill="#1e293b">Side 2 = x</text>
+    <text x="0" y="130" font-size="16" fill="#1e293b">Hypotenuse = x√2</text>
+
+    <!-- Area -->
+    <text x="0" y="180" font-size="18" font-weight="700" fill="#0f172a">
+      Area
+    </text>
+    <rect x="70" y="160" width="90" height="36" rx="8" fill="#dcfce7"/>
+    <text x="85" y="184" font-size="18" fill="#166534" font-weight="600">
+      x²/2
+    </text>
+
+    <!-- Perimeter -->
+    <text x="0" y="240" font-size="18" font-weight="700" fill="#0f172a">
+      Perimeter
+    </text>
+    <rect x="100" y="220" width="130" height="36" rx="8" fill="#fef3c7"/>
+    <text x="110" y="244" font-size="18" fill="#92400e" font-weight="600">
+      x(2+√2)
+    </text>
+
+  </g>
+
+</svg>
