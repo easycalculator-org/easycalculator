@@ -4,8 +4,8 @@ layout: default
 title:  Age Calculator – Find Your Exact Age in Years, Months & Days
 permalink: /age-calculator
 description: "Use our free Age Calculator to find your age from your birth date or see the age difference in days. It's quick and easy to find your age today!"
-image: "/assets/images/age-calculator.webp"
-last_modified_at: 2026-02-14
+image: "/assets/images/age-calculator-formula-example.svg"
+last_modified_at: 2026-03-23
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -155,14 +155,14 @@ last_modified_at: 2026-02-14
     <p>To find out your age today, just enter your date of birth in the Start date field and click on calculate to find your age today. Our tool will show you your age in total years and days.</p>
                        
  <!-- highlight-box-->
- <div class="highlight-box">
-   <h5><i class="fas fa-lightbulb text-warning me-2"></i>Example:</h5>
-    <p class="mb-0">A person born in 2003 will turn 21 years old in 2024. You can refer to the image below to determine your age, the month, and the number of weeks since your birth date.</p>
+<div class="highlight-box">
+ <h5><i class="fas fa-lightbulb text-warning me-2"></i>Example:</h5>
+  <p class="mb-0">A person born in 2003 will turn 21 years old in 2024. You can refer to the image below to determine your age, the month, and the number of weeks since your birth date.</p>
     </div>
 
  </div>
  </div>
-<img class="img-fluid d-flex" alt="Age calculator to find exact age by date of birth" src="/assets/images/age-calculator.webp" fetchpriority="high" loading="auto" style="object-fit: contain;">
+<img class="img-fluid d-flex" alt="Age calculator formula example showing years months and days calculation" src="/assets/images/age-calculator-formula-example.svg" fetchpriority="high" loading="auto" style="object-fit: contain;" title="Age Calculator Formula with Example">
 
  </section>
       <!-- FAQ Section -->
