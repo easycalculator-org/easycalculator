@@ -3,8 +3,8 @@ layout: default
 title: EIRP Calculator Online – Effective Isotropic Radiated Power (dBm & Watts)
 permalink: /eirp-calculator
 description: "Calculate Effective Isotropic Radiated Power (EIRP) instantly using our free online EIRP Calculator. Convert transmitter power, antenna gain, and cable loss into  EIRP values in dBm"
-image: "/assets/images/eirp-calculator.jpg"
-last_modified_at: 2026-02-03
+image: "/assets/images/eirp-calculator.svg"
+last_modified_at: 2026-03-25
 ---
 
  <style>
@@ -131,8 +131,8 @@ last_modified_at: 2026-02-03
     <div class="small text-secondary d-flex justify-content-between align-items-center flex-wrap">
         <span><i class="fas fa-info-circle me-1"></i> EIRP [dBm] = Ptx[dBm] + G[dBi] – L[dB]  (losses include cable + other)</span>
          <span class="badge bg-light text-dark px-3 py-2 mt-2 mt-sm-0">  <i class="fas fa-calculator me-1"></i> 1 W = 30 dBm </span>
-                </div>
-            </div> 
+        </div>
+       </div> 
         </div> 
     </div>
 <!-- Article Content -->
@@ -145,8 +145,8 @@ last_modified_at: 2026-02-03
     <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
   </div>
    <!-- Article-->
-  <h1>EIRP Calculator – Effective Isotropic Radiated Power</h1> 
-  <p>The <strong>EIRP Calculator</strong> helps you determine the total radiated power of a transmitter system after considering antenna gain and transmission losses. EIRP (Effective Isotropic Radiated Power) is a critical parameter in RF planning, telecom network design, satellite communication, and wireless system analysis.</p>
+<h1>EIRP Calculator – Effective Isotropic Radiated Power</h1> 
+<p>The <strong>EIRP Calculator</strong> helps you determine the total radiated power of a transmitter system after considering antenna gain and transmission losses. EIRP (Effective Isotropic Radiated Power) is a critical parameter in RF planning, telecom network design, satellite communication, and wireless system analysis.</p>
 <p>Whether you are working in LTE, 5G, microwave links, or Wi-Fi deployment, calculating EIRP ensures regulatory compliance and proper coverage planning.</p>
 <h2> What is EIRP?</h2>
 <p><strong>Effective Isotropic Radiated Power (EIRP)</strong> represents the total power radiated by an antenna in a specific direction compared to an ideal isotropic antenna.</p>
@@ -161,27 +161,89 @@ last_modified_at: 2026-02-03
  <!-- Formula Section -->
 <section class="my-5">
 <div class="card shadow-sm border-0 rounded-4">
-        <div class="card-body text-center p-4">
-            <h2 class="fw-bold text-primary mb-4">EIRP Formula</h2>
-            <!-- dBm Formula -->
-            <div class="mb-4">
-                <p class="fs-5">   $$    \text{EIRP (dBm)} = \text{Tx Power (dBm)} + \text{Antenna Gain (dBi)} - \text{Cable Loss (dB)}   $$  </p>
-            </div>
-            <div>
-                <p class="fs-5">   $$ \text{EIRP (W)} = 10^{\frac{\text{EIRP(dBm)} - 30}{10}}    $$  </p>
-            </div>
-        </div>
+  <div class="card-body text-center p-4">
+    <h2 class="fw-bold text-primary mb-4">EIRP Formula</h2>
+     <!-- dBm Formula -->
+      <div class="mb-4"><p class="fs-5">$$    \text{EIRP (dBm)} = \text{Tx Power (dBm)} + \text{Antenna Gain (dBi)} - \text{Cable Loss (dB)}   $$  </p></div>
+      <div><p class="fs-5">$$ \text{EIRP (W)} = 10^{\frac{\text{EIRP(dBm)} - 30}{10}}    $$  </p></div>
+     </div>
     </div>
 </section>
 <div class="my-5 text-center">
-<img src="/assets/images/eirp-calculator.jpg" alt="EIRP Calculator diagram showing transmitter power antenna gain and cable loss formula" class="img-fluid rounded shadow">
+<img src="/assets/images/eirp-calculator.svg" alt="EIRP formula diagram with transmitter power antenna gain and cable loss explanation" class="img-fluid rounded shadow">
 </div>
 <p class="visually-hidden">EIRP (dBm) = Tx Power (dBm) + Antenna Gain (dBi) - Cable Loss (dB)</p>
 
-
-
+<div class="pt-4">
+<h2>How to Use EIRP Calculator</h2>
+<ol>
+<li>Enter <strong>Transmitter Power</strong> (in dBm, W, or mW)</li>
+<li>Enter <strong>Antenna Gain</strong> (in dBi)</li>
+<li>Enter <strong>Cable Loss</strong> (in dB)</li>
+<li>Add optional <strong>extra losses</strong> if needed</li>
+<li>Click calculate to get <strong>EIRP in dBm and Watts</strong></li>
+</ol>
 </div>
+<div class="p-4 bg-light rounded-4">
+<h2>EIRP Calculation Example</h2>
+<p>Let’s calculate EIRP with real values:</p>
+<ul>
+<li>Transmitter Power = <strong>30 dBm</strong></li>
+<li>Antenna Gain = <strong>6 dBi</strong></li>
+<li>Cable Loss = <strong>2 dB</strong></li>
+</ul>
+<p><strong>EIRP = 30 + 6 - 2 = 34 dBm</strong></p>
+<p>Convert to watts:</p>
+<p><strong>EIRP ≈ 2.51 Watts</strong></p>
+</div>
+<div class="p-4">
+<h2>What is EIRP in Telecom?</h2>
+<p><strong>Effective Isotropic Radiated Power (EIRP)</strong> is the total power radiated by an antenna in a specific direction, compared to an ideal isotropic radiator.</p>
 
+<p>It is a key parameter used in:</p>
+<ul>
+<li>5G and LTE network planning</li>
+<li>Wi-Fi signal strength analysis</li>
+<li>Satellite communication systems</li>
+<li>RF link budget calculations</li>
+</ul>
+</div>
+<!-- FAQ Section -->
+<section class="p-3">
+ <h2 class="mb-4">FAQ on EIRP Calculator</h2>
+  <div class="card mb-3 border-0 bg-light">
+   <div class="card-body ">
+    <div class="fw-bold text-primary">What is a good EIRP value?</div>
+     <p class="mb-0">A good EIRP depends on the application. For Wi-Fi, it is usually below regulatory limits, while telecom networks use higher values for better coverage.</p>
+    </div>
+   </div>
+    <div class="card mb-3 border-0 bg-light">
+     <div class="card-body ">
+      <div class="fw-bold text-primary"></div>
+      <p class="mb-0">EIRP in dBm represents the effective radiated power in logarithmic scale, combining transmitter power, antenna gain, and losses.</p>
+      </div>
+      </div>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary">How do you calculate EIRP?</div>
+            <p class="mb-0">EIRP = Transmitter Power (dBm) + Antenna Gain (dBi) − Cable Loss (dB)</p>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary">Why is antenna gain added in EIRP?</div>
+            <p class="mb-0">Antenna gain focuses energy in a direction, increasing effective radiated power compared to an isotropic antenna.</p>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary">What is difference between ERP and EIRP?</div>
+            <p class="mb-0">EIRP is referenced to an isotropic antenna, while ERP is referenced to a dipole antenna (ERP is ~2.15 dB lower than EIRP).</p>
+          </div>
+        </div>
+</section>
+      <!-- Did You Know? -->
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 <script src="{{ '/assets/js/eirp-calculator.js' | relative_url }}"></script>
@@ -194,4 +256,37 @@ window.MathJax = {
     fontCache: 'global'
   }
 };
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is EIRP?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "EIRP (Effective Isotropic Radiated Power) is the total radiated power of an antenna system considering transmitter power, antenna gain, and losses."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How to calculate EIRP?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "EIRP = Tx Power (dBm) + Antenna Gain (dBi) − Cable Loss (dB)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is 30 dBm in watts?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "30 dBm is equal to 1 Watt."
+   }
+  }
+ ]
+}
 </script>
