@@ -1,0 +1,61 @@
+<svg width="100%" height="320" viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="800" height="320" fill="#f8fafc"/>
+
+  <!-- Ground -->
+  <line x1="50" y1="250" x2="750" y2="250" stroke="#6c757d" stroke-width="2"/>
+
+  <!-- Transmitter Tower -->
+  <g>
+    <rect x="80" y="170" width="20" height="80" fill="#0d6efd"/>
+    <text x="60" y="270" font-size="12" fill="#333">Transmitter (TX)</text>
+  </g>
+
+  <!-- Receiver Tower -->
+  <g>
+    <rect x="700" y="170" width="20" height="80" fill="#198754"/>
+    <text x="670" y="270" font-size="12" fill="#333">Receiver (RX)</text>
+  </g>
+
+  <!-- Line of Sight -->
+  <line x1="90" y1="170" x2="710" y2="170" stroke="#000" stroke-dasharray="5,5"/>
+  <text x="330" y="160" font-size="12" fill="#000">Line of Sight (LOS)</text>
+
+  <!-- Fresnel Zone Ellipse -->
+  <ellipse cx="400" cy="170" rx="280" ry="70"
+           fill="rgba(13,110,253,0.15)"
+           stroke="#0d6efd"
+           stroke-width="2"/>
+
+  <!-- Label Fresnel -->
+  <text x="330" y="120" font-size="14" fill="#0d6efd" font-weight="600">
+    1st Fresnel Zone
+  </text>
+
+  <!-- Obstruction -->
+  <rect x="380" y="210" width="30" height="40" fill="#dc3545"/>
+  <text x="360" y="270" font-size="12" fill="#dc3545">Obstacle</text>
+
+  <!-- Clearance Arrow -->
+  <line x1="395" y1="210" x2="395" y2="170" stroke="#dc3545" stroke-width="2"/>
+  <polygon points="395,170 390,180 400,180" fill="#dc3545"/>
+  <text x="405" y="195" font-size="12" fill="#dc3545">Clearance</text>
+
+  <!-- Distance Label -->
+  <text x="350" y="300" font-size="12" fill="#333">
+    Distance (d), d₁, d₂
+  </text>
+
+  <!-- Frequency -->
+  <text x="330" y="30" font-size="13" fill="#333">
+    Frequency (f) affects Fresnel radius
+  </text>
+
+  <!-- Waves -->
+  <path d="M90 170 Q110 150 130 170 Q150 190 170 170"
+        stroke="#0d6efd" fill="none"/>
+  <path d="M710 170 Q690 150 670 170 Q650 190 630 170"
+        stroke="#198754" fill="none"/>
+
+</svg>
