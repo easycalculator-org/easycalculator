@@ -3,7 +3,8 @@ layout: default
 title: Salary Hike Calculator – Calculate Salary Increase & Percentage
 permalink: /salary-hike-calculator
 description: "Calculate your new salary after a hike using our free Salary Hike Calculator. Enter your current salary and hike percentage to instantly find your salary increase and updated pay."
-last_modified_at: 2026-03-16
+image: "/assets/images/salary-hike-calculator.svg"
+last_modified_at: 2026-03-28
 ---
 
 <div class="row justify-content-center">
