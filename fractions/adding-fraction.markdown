@@ -71,64 +71,6 @@ last_modified_at: 2026-03-06
 </div>
 
 
-<!-- Other Fraction Calculators -->
-<!-- 
-<div class="mt-5">
-<h3 class="fw-semibold mb-3">Other Fraction Calculators</h3>
-<div class="row g-3">
-<div class="col-md-4">
-<a href="/subtracting-fractions-calculator" class="text-decoration-none"><div class="card border-0 shadow-sm h-100"><div class="card-body text-center"><h6 class="mb-0">Subtracting Fractions Calculator</h6></div>
-</div>
-</a>
-</div>
-
-<div class="col-md-4">
-<a href="/multiplying-fractions-calculator" class="text-decoration-none"><div class="card border-0 shadow-sm h-100"><div class="card-body text-center"><h6 class="mb-0">Multiplying Fractions Calculator</h6></div></div></a>
-</div>
-
-<div class="col-md-4">
-<a href="/dividing-fractions-calculator" class="text-decoration-none">
-<div class="card border-0 shadow-sm h-100">
-<div class="card-body text-center">
-<h6 class="mb-0">Dividing Fractions Calculator</h6>
-</div>
-</div>
-</a>
-</div>
-
-<div class="col-md-4">
-<a href="/simplify-fractions-calculator" class="text-decoration-none">
-<div class="card border-0 shadow-sm h-100">
-<div class="card-body text-center">
-<h6 class="mb-0">Simplify Fractions Calculator</h6>
-</div>
-</div>
-</a>
-</div>
-
-<div class="col-md-4">
-<a href="/mixed-number-calculator" class="text-decoration-none">
-<div class="card border-0 shadow-sm h-100">
-<div class="card-body text-center">
-<h6 class="mb-0">Mixed Number Calculator</h6>
-</div>
-</div>
-</a>
-</div>
-
-</div>
-</div> -->
-
-<!-- fraction-calculator
-adding-fractions-calculator
-subtracting-fractions-calculator
-multiplying-fractions-calculator
-dividing-fractions-calculator
-simplify-fractions-calculator
-mixed-number-calculator
-improper-fraction-calculator
-fraction-to-decimal
-decimal-to-fraction -->
 
 
 <!-- Article Content -->
@@ -369,7 +311,7 @@ LCM(4,6)=12
         </div>
       </section>
       <!-- Did You Know? -->
-
+{% include fractions.html %}
 </div>
 
 <script src="/assets/js/fractions/adding-fractions-calc.js"></script>

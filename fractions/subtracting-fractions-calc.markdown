@@ -286,7 +286,8 @@ Convert to common denominator
           </div>
         </div>
 </section>
-      <!-- Did You Know? -->
+{% include fractions.html %}
 
+ </div>
 <script src="/assets/js/fractions/subtracting-fractions-calc.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
