@@ -21,6 +21,3 @@ last_modified_at: 2026-03-06
 <div class="col-md-3 p-3"><a  href="/fraction-to-decimal-calculator"><div class="calculator-box text-center"><h5>Fraction to decimal Calculator</h5></div></a></div> 
 <div class="col-md-3 p-3"><a  href="/decimal-to-fraction-calculator"><div class="calculator-box text-center"><h5>Decimal to Fraction Calculator</h5></div></a></div> 
  </div>
-
-
-
