@@ -2,7 +2,7 @@
  <div class="container">
   <a class="navbar-brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="EasyCalculator.org Logo" width="200"></a>
    <!-- mobile toggle -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <i class="fa-solid fa-bars-staggered"></i></button>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <i class="fa-solid fa-bars-staggered"></i></button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-lg-center">
         <li class="nav-item"><a class="nav-link" href="{{ '/rf-calculator' | relative_url }}">RF Calculator</a></li>
@@ -11,9 +11,16 @@
         <li class="nav-item"><a class="nav-link" href="{{ '/age-calculator' | relative_url }}">Age Calculator</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ '/currency' | relative_url }}">Currency Converter</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ '/world-clock' | relative_url }}">World Clock</a></li>
-        <!-- <li class="nav-item"><a class="nav-link" href="{{ '/epoch' | relative_url }}">Epoch Time</a></li> -->
       </ul>
+    </div>
+    <!-- Search Icon -->
+    <button id="searchToggle" class="btn btn-link text-dark"><i class="fa-solid fa-magnifying-glass text-primary fs-3"></i></button>
+    <div id="searchOverlay">
+      <div class="search-box">
+        <input type="text" id="searchBox" placeholder="Search calculator..." autofocus>
+        <span id="closeSearch">&times;</span>
+        <ul id="results"></ul>
+      </div>
     </div>
   </div>
 </nav>
-
