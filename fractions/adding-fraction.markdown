@@ -3,7 +3,7 @@ layout: default
 title: Adding Fractions Calculator – Add & Simplify Fractions Online
 permalink: /adding-fractions-calculator
 description: "Use the Adding Fractions Calculator to quickly add two or more fractions. Get the sum of fractions, simplified results, and step-by-step calculations instantly."
-#image: "/assets/images/og/proportion-calculator-formula.jpg"
+image: "/assets/images/og/adding-fractions-calculator-with-example.jpg"
 last_modified_at: 2026-03-06
 ---
 <style>
@@ -98,6 +98,16 @@ last_modified_at: 2026-03-06
 <p>The <strong>Adding Fractions Calculator</strong> allows you to quickly add two or more fractions and get the correct result instantly. Simply enter the numerator and denominator of each fraction, and the calculator will automatically calculate the sum, simplify the result, and show the decimal value.</p>
 <p>This tool is useful for <strong>students, teachers, and anyone learning basic mathematics</strong>. It also displays step-by-step explanations and visual charts to help you understand how fraction addition works.</p>
 <p>You can use this tool as a <strong>fraction addition calculator</strong>, an <strong>add fractions online calculator</strong>, or a <strong>fractions sum calculator</strong>. It works with fractions that have both <strong>the same denominators</strong> and <strong>different denominators</strong>.</p>
+
+<div class="bg-light p-3 rounded mb-4">
+<h2>How to Add Fractions (Step-by-Step)</h2>
+<ol>
+<li>Find a common denominator (LCM)</li>
+<li>Convert fractions to equivalent fractions</li>
+<li>Add the numerators</li>
+<li>Simplify the result</li>
+</ol>
+</div>
 
 <hr class="my-4">
 
@@ -281,35 +291,53 @@ LCM(4,6)=12
  <div class="p-4"><h3 class="mt-4">Practice Problems</h3><ul><li>1/3 + 2/5</li><li>3/7 + 4/9</li><li>5/6 + 1/8</li><li>2/3 + 3/10</li></ul> </div>
 
 <!-- FAQ Section -->
- <section class="mb-5 pt-4 ">
-        <h2 class="mb-4">FAQ on Adding Fractions Calculator</h2>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
+<section class="mb-5 pt-4 ">
+    <h2 class="mb-4">FAQ on Adding Fractions Calculator</h2>
+    <div class="card mb-3 border-0 bg-light">
+        <div class="card-body ">
             <div class="fw-bold text-primary">1. What is a fraction?</div>
             <p class="mb-2">A fraction represents a part of a whole and consists of two numbers:</p>
-             <ul class="mb-2"><li><strong>Numerator</strong> – the top number</li><li><strong>Denominator</strong> – the bottom number</li></ul>
-             <p class="mb-0">Example:<button class="btn btn-outline-secondary btn-lg ms-4 text-left">\[ \frac{3}{4} \]</button></p>
-          </div>
+            <ul class="mb-2">
+                <li><strong>Numerator</strong> – the top number</li>
+                <li><strong>Denominator</strong> – the bottom number</li>
+            </ul>
+            <p class="mb-0">Example:<button class="btn btn-outline-secondary btn-lg ms-4 text-left">\[ \frac{3}{4}
+                    \]</button></p>
         </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
+    </div>
+    <div class="card mb-3 border-0 bg-light">
+        <div class="card-body ">
             <div class="fw-bold text-primary">2. Can you add fractions with different denominators?</div>
-            <p class="mb-0">Yes. You must first convert them into equivalent fractions with a common denominator, then add the numerators.</p>
-          </div>
+            <p class="mb-0">Yes. You must first convert them into equivalent fractions with a common denominator, then
+                add the numerators.</p>
         </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
+    </div>
+    <div class="card mb-3 border-0 bg-light">
+        <div class="card-body ">
             <div class="fw-bold text-primary">3. Does the calculator simplify fractions?</div>
             <p class="mb-0"> Yes. The calculator automatically reduces the fraction to its simplest form.</p>
-          </div>
         </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary">4.  Can I add more than two fractions?</div>
-            <p class="mb-0">Yes. The calculator allows you to add multiple fractions at once and automatically calculates the final result.</p>
-          </div>
+    </div>
+    <div class="card mb-3 border-0 bg-light">
+        <div class="card-body ">
+            <div class="fw-bold text-primary">4. Can I add more than two fractions?</div>
+            <p class="mb-0">Yes. The calculator allows you to add multiple fractions at once and automatically
+                calculates the final result.</p>
         </div>
-      </section>
+    </div>
+    <div class="card mb-3 border-0 bg-light">
+        <div class="card-body">
+            <div class="fw-bold text-primary">5. How do you add fractions step by step?</div>
+            <p>Find a common denominator, convert fractions, add numerators, and simplify.</p>
+        </div>
+    </div>
+    <div class="card mb-3 border-0 bg-light">
+        <div class="card-body">
+            <div class="fw-bold text-primary">6. What is the easiest way to add fractions?</div>
+            <p>The easiest way is to use a fraction calculator or convert fractions to a common denominator.</p>
+        </div>
+    </div>
+</section>
       <!-- Did You Know? -->
 {% include fractions.html %}
 </div>
