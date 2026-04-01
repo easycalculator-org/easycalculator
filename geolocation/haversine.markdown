@@ -10,6 +10,15 @@ last_modified_at: 2026-04-01
  .formula{font-family:'Courier New',Courier,monospace;background-color:#f8f9fa;padding:1.5rem;border-radius:10px;margin:1.5rem 0;border:1px solid #eee;font-size:1.1rem;color:var(--secondary-color)}.calculator-container{max-width:600px;margin:0 auto;background-color:#fff;padding:30px;border-radius:10px;box-shadow:0 0 15px #0000001a}.result-box{background-color:#e9ecef;padding:15px;border-radius:5px;margin-top:20px}.form-label{font-weight:500}
  </style>
 
+<div aria-label="breadcrumb" class="mb-3 p-3">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Haversine Distance Calculator</li>
+  </ol>
+</div>
+
+
  <div class="calculator-container">
    <h1 class="text-center mb-1">Haversine Distance Calculator</h1>
     <p class="text-muted text-center mb-4">Calculate the great-circle distance between two points on Earth</p>
@@ -80,11 +89,11 @@ last_modified_at: 2026-04-01
 <div class="row align-items-center">
 <h4 class="mt-4">The Haversine Formula:</h4>
   <!-- Formula Section -->
-  <div class="col-md-6">
-    <div class="formula p-3 bg-light rounded shadow-sm">
-      <div class="mb-2">a = sin²(Δφ/2) + cos(φ₁) · cos(φ₂) · sin²(Δλ/2)</div>
-      <div class="mb-2">c = 2 · atan2(√a, √(1 − a))</div>
-      <div>d = R · c</div>
+ <div class="col-md-6">
+   <div class="formula p-3 bg-light rounded shadow-sm">
+     <div class="mb-2">a = sin²(Δφ/2) + cos(φ₁) · cos(φ₂) · sin²(Δλ/2)</div>
+     <div class="mb-2">c = 2 · atan2(√a, √(1 − a))</div>
+     <div>d = R · c</div>
     </div>
     <!-- Variables -->
     <div class="bg-light rounded mt-4 p-3 shadow-sm">
@@ -100,9 +109,16 @@ last_modified_at: 2026-04-01
     </div>
   </div>
 
-  <!-- Image Section -->
-  <div class="col-md-6 text-center">
-   <img src="/assets/images/haversine-distance-calculator-formula.svg" alt="Haversine formula diagram showing great-circle distance between two points on Earth" class="img-fluid rounded shadow-sm" loading="lazy" width="100%">
+ <!-- Image Section -->
+<div class="col-md-6 text-center">
+<!-- <img  src="/assets/images/haversine-distance-calculator-formula.svg" alt="Haversine formula diagram showing great-circle distance between two geographic coordinates on Earth"   class="img-fluid rounded shadow-sm"    loading="lazy"   decoding="async"   width="100%" height="auto"> -->
+<img  src="/assets/images/haversine-distance-calculator-formula.svg"
+  alt="Haversine formula diagram: a = sin²(Δφ/2) + cos(φ₁)·cos(φ₂)·sin²(Δλ/2), c = 2·atan2(√a, √(1−a)), d = R·c — showing great-circle distance between two points on Earth"
+  class="img-fluid rounded shadow-sm"
+  loading="lazy"
+  decoding="async"
+  width="100%"
+  height="auto" >
   </div>
 
 </div>
@@ -119,7 +135,7 @@ last_modified_at: 2026-04-01
 <!-- Haversine Excel Section -->
 <section class="container my-5">
   <div class="text-center mb-4">
-   <h2 class="fw-bold">Haversine Distance in Excel</h2>
+   <h3 class="fw-bold">Haversine Distance in Excel</h3>
    <p class="text-muted"> Calculate the great-circle distance between two latitude and longitude  points directly in Microsoft Excel using the formula below.</p>
   </div>
 
@@ -185,7 +201,7 @@ SIN(RADIANS(A2))*SIN(RADIANS(C2))
   <div class="card shadow-sm border-0 mb-4">
     <div class="card-body">
      <div class="text-center mb-4">
-  <h2 class="fw-bold">Haversine Distance Using CSV File in Python</h2>
+  <h3 class="fw-bold">Haversine Distance Using CSV File in Python</h3>
    <p class="text-muted">You can calculate distance for multiple coordinates using a CSV file and export results with kilometers and miles automatically using Python.</p>
   </div>
      <p class="mb-3">👉 Simply download the sample CSV file and Python script below, run the code on your system, and get an output CSV file with calculated distances. </p>
@@ -341,3 +357,29 @@ print("Output saved as output.csv")</code></pre></div>
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://easycalculator.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Geolocation Tools",
+      "item": "https://easycalculator.org/geolocation-tools"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Haversine Distance Calculator",
+      "item": "https://easycalculator.org/haversine-distance"
+    }
+  ]
+}
+</script>
