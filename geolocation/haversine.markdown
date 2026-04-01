@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Haversine Distance Calculator (Lat Long) + Formula & Example
+title: Haversine Distance Calculator | Haversine Formula & Example
 permalink: /haversine-distance
-description: "Calculate haversine distance between two coordinates instantly. Free online haversine calculator with formula, example, and step-by-step explanation (km, miles)."
-image: "/assets/images/haversine-distance-calculator-formula.svg"
-last_modified_at: 2026-02-28
+description: "Calculate haversine distance between two coordinates instantly. Free online haversine Formula calculator with example, and step-by-step explanation (km, miles)."
+image: "/assets/images/og/haversine-distance-calculator-formula.jpg"
+last_modified_at: 2026-04-01
 ---
  <style> 
  .formula{font-family:'Courier New',Courier,monospace;background-color:#f8f9fa;padding:1.5rem;border-radius:10px;margin:1.5rem 0;border:1px solid #eee;font-size:1.1rem;color:var(--secondary-color)}.calculator-container{max-width:600px;margin:0 auto;background-color:#fff;padding:30px;border-radius:10px;box-shadow:0 0 15px #0000001a}.result-box{background-color:#e9ecef;padding:15px;border-radius:5px;margin-top:20px}.form-label{font-weight:500}
@@ -175,12 +175,83 @@ SIN(RADIANS(A2))*SIN(RADIANS(C2))
   </div>
 
   <!-- Download Button -->
-  <div class="text-center mt-4">
-    <a href="/assets/files/havershine-formula.xlsx" class="btn btn-primary btn-lg"> Download Sample Excel File</a>
-    <p class="small text-muted mt-2 mb-0">Includes ready-to-use Haversine Excel formula and example data.</p>
+<div class="text-center mt-4">
+  <a href="/assets/files/havershine-formula.xlsx" class="btn btn-primary btn-lg"> Download Sample Excel File</a>
+  <p class="small text-muted mt-2 mb-0">Includes ready-to-use Haversine Excel formula and example data.</p>
+  </div>
+</section>
+
+<section class="my-5">
+  <div class="card shadow-sm border-0 mb-4">
+    <div class="card-body">
+     <div class="text-center mb-4">
+  <h2 class="fw-bold">Haversine Distance Using CSV File in Python</h2>
+   <p class="text-muted">You can calculate distance for multiple coordinates using a CSV file and export results with kilometers and miles automatically using Python.</p>
+  </div>
+     <p class="mb-3">👉 Simply download the sample CSV file and Python script below, run the code on your system, and get an output CSV file with calculated distances. </p>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">📄 The input CSV file contains latitude and longitude values</li>
+    <li class="list-group-item">🐍 The Python script reads the CSV and applies the Haversine formula</li>
+    <li class="list-group-item">📊 It generates a new CSV file with distance in <strong>KM and Miles</strong></li>
+  </ul>
+</div>
   </div>
 
+<div class="row g-4">
+<!-- Input CSV Example -->
+<div class="col-lg-6">
+  <div class="card shadow-sm border-0 h-100">
+    <div class="card-body">
+      <h5 class="fw-bold mb-3">📄 Example Input CSV File</h5>
+      <div class="position-relative">
+        <button class="btn btn-sm btn-outline-secondary position-absolute top-0 end-0 m-2" onclick="copyCSV(this)">📋</button>
+<pre class="bg-light p-3 rounded small mb-0"><code id="csvExample">Latitude-1,Longitude-1,Latitude-2,Longitude-2 
+28.6139,77.2090,19.0760,72.8777</code></pre>
+      </div>
+      <a href="/assets/files/havershine/haversine-input.csv" class="btn btn-primary mt-3 w-100">⬇️ Download Sample CSV </a>
+    </div>
+  </div>
+</div>
+
+<!-- Python Code -->
+<div class="col-lg-6">
+  <div class="card shadow-sm border-0 h-100">
+    <div class="card-body">
+      <h5 class="fw-bold mb-3">Python Code (CSV to Distance)</h5>
+      <div class="position-relative">
+        <button class="btn btn-sm btn-outline-secondary position-absolute top-0 end-0 m-2" onclick="copyCode(this)">📋</button>
+<pre class="bg-light p-3 rounded small mb-0"><code id="pythonCode">import csv
+import math
+def haversine(lat1, lon1, lat2, lon2):
+    lat1, lon1, lat2, lon2 = map(math.radians, [float(lat1), float(lon1), float(lat2), float(lon2)])
+    dlat = lat2 - lat1
+    dlon = lon2 - lon1
+    a = math.sin(dlat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon/2)**2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    R = 6371
+    km = R * c
+    miles = km * 0.621371
+    return round(km,2), round(miles,2)
+with open('haversine-input.csv', 'r') as infile, open('output.csv', 'w', newline='') as outfile:
+    reader = csv.DictReader(infile)
+    fieldnames = reader.fieldnames + ["Distance_KM","Distance_Miles"]
+    writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+    writer.writeheader()
+    for row in reader:
+        km, miles = haversine(row["Latitude-1"], row["Longitude-1"], row["Latitude-2"], row["Longitude-2"])
+        row["Distance_KM"] = km
+        row["Distance_Miles"] = miles
+        writer.writerow(row)
+print("Output saved as output.csv")</code></pre></div>
+      <a href="/assets/files/havershine/haversine-python.py" class="btn btn-success mt-3 w-100"> ⬇️ Download Python Script </a>
+    </div>
+  </div>
+</div>
+
+  </div>
 </section>
+
+
 
 
 
@@ -269,3 +340,4 @@ SIN(RADIANS(A2))*SIN(RADIANS(C2))
   ]
 }
 </script>
+

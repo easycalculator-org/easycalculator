@@ -58,3 +58,17 @@
     }, 1500);
   });
 }
+
+function copyCode(btn){
+  const code = document.getElementById("pythonCode").innerText;
+  navigator.clipboard.writeText(code);
+  btn.innerText = "✅";
+  setTimeout(()=>btn.innerText="📋",2000);
+}
+
+function copyCSV(btn){
+  const code = document.getElementById("csvExample").innerText;
+  navigator.clipboard.writeText(code);
+  btn.innerText = "✅";
+  setTimeout(()=>btn.innerText="📋",2000);
+}
