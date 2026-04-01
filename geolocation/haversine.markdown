@@ -141,14 +141,28 @@ last_modified_at: 2026-04-01
   </div>
 
 </div>
-<div class="pt-4">
+<br>
+<div class="p-4 bg-light rounded-2">
 <h2 id="example">Example of Haversine Distance Calculation</h2>
 <p>Distance between New York (40.7128, -74.0060) and Los Angeles (34.0522, -118.2437):</p>
-<ul>
-<li>Distance: ~3936 km</li>
-<li>Distance: ~2445 miles</li>
-</ul>
-  </div>
+<p>Distance: ~3936 km | Distance: ~2445 miles</p>
+  
+
+<h3>Step-by-Step Calculation</h3>
+<p>Point A: New York — lat₁ = 40.7128°, lon₁ = −74.0060°<br>
+Point B: Los Angeles — lat₂ = 34.0522°, lon₂ = −118.2437°</p>
+
+<ol>
+  <li>Convert to radians: φ₁ = 0.7101, φ₂ = 0.5942, λ₁ = −1.2920, λ₂ = −2.0643</li>
+  <li>Δφ = 0.5942 − 0.7101 = −0.1159 rad</li>
+  <li>Δλ = −2.0643 − (−1.2920) = −0.7723 rad</li>
+  <li>a = sin²(−0.0580) + cos(0.7101) · cos(0.5942) · sin²(−0.3862)<br>a = 0.003364 + 0.7648 · 0.8290 · 0.1416 = 0.003364 + 0.08983 = 0.09319</li>
+  <li>c = 2 · atan2(√0.09319, √0.90681) = 2 · atan2(0.3053, 0.9523) = 0.6178 rad</li>
+  <li>d = 6371 × 0.6178 = <strong>3,936 km</strong> (~2,445 miles)</li>
+</ol>
+</div>
+
+
 
 
 <!-- Haversine Excel Section -->
