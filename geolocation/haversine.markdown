@@ -77,17 +77,36 @@ last_modified_at: 2026-04-01
     <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
   </div>
   <!-- What is Section1 -->
+
+<div class="card shadow-sm border-0 mb-4">
+  <div class="card-body">
+    <h5 class="fw-bold mb-3">📑 Table of Contents</h5>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><a href="#what-is-haversine" class="text-decoration-none">1. What is a Haversine Distance Calculator?</a></li>
+      <li class="list-group-item"><a href="#how-it-works" class="text-decoration-none">2. How Does the Haversine Formula Work?</a></li>
+      <li class="list-group-item"><a href="#haversine-distance" class="text-decoration-none">3. What is Haversine Distance?</a></li>
+      <li class="list-group-item"><a href="#formula" class="text-decoration-none">4. Haversine Formula</a></li>
+      <li class="list-group-item"><a href="#example" class="text-decoration-none">5. Example Calculation</a></li>
+      <li class="list-group-item"><a href="#excel" class="text-decoration-none">6. Haversine Distance in Excel</a></li>
+      <li class="list-group-item"><a href="#python" class="text-decoration-none">7. CSV & Python Method</a></li>
+      <li class="list-group-item"><a href="#faq" class="text-decoration-none">8. FAQ</a></li>
+    </ul>
+  </div>
+</div>
+
+
+  
 <section class="mb-5">
-<h3>What is a Haversine Distance Calculator?</h3>
+<h2 id="what-is-haversine">What is a Haversine Distance Calculator?</h2>
 <p>The Haversine Distance Calculator helps determine the shortest distance over the Earth’s surface between two geographic points based on their latitude and longitude coordinates. This calculation assumes a spherical Earth and uses the Haversine formula—a well-known equation in navigation and mapping applications. <br> Whether you’re a developer, traveler, GIS analyst, or someone who needs to calculate geographic distances, this tool gives you quick and reliable results.</p>
-<h3>How Does the Haversine Formula Work?</h3>
+<h2 id="how-it-works">How Does the Haversine Formula Work?</h2>
 <p>The Haversine formula is based on spherical trigonometry and calculates the great-circle distance between two points on the surface of a sphere, making it perfect for geographical distance calculations.</p>
 <div class="pt-4">
-<h2>What is Haversine Distance?</h2>
+<h2 id="haversine-distance">What is Haversine Distance?</h2>
 <p>Haversine distance is the shortest distance between two points on a sphere, calculated using latitude and longitude coordinates.</p>
   </div>
 <div class="row align-items-center">
-<h4 class="mt-4">The Haversine Formula:</h4>
+<h3 class="mt-4" id="formula">The Haversine Formula:</h3>
   <!-- Formula Section -->
  <div class="col-md-6">
    <div class="formula p-3 bg-light rounded shadow-sm">
@@ -123,7 +142,7 @@ last_modified_at: 2026-04-01
 
 </div>
 <div class="pt-4">
-<h2>Example of Haversine Distance Calculation</h2>
+<h2 id="example">Example of Haversine Distance Calculation</h2>
 <p>Distance between New York (40.7128, -74.0060) and Los Angeles (34.0522, -118.2437):</p>
 <ul>
 <li>Distance: ~3936 km</li>
@@ -135,7 +154,7 @@ last_modified_at: 2026-04-01
 <!-- Haversine Excel Section -->
 <section class="container my-5">
   <div class="text-center mb-4">
-   <h3 class="fw-bold">Haversine Distance in Excel</h3>
+   <h3 class="fw-bold" id="excel">Haversine Distance in Excel</h3>
    <p class="text-muted"> Calculate the great-circle distance between two latitude and longitude  points directly in Microsoft Excel using the formula below.</p>
   </div>
 
@@ -201,7 +220,7 @@ SIN(RADIANS(A2))*SIN(RADIANS(C2))
   <div class="card shadow-sm border-0 mb-4">
     <div class="card-body">
      <div class="text-center mb-4">
-  <h3 class="fw-bold">Haversine Distance Using CSV File in Python</h3>
+  <h3 class="fw-bold" id="python">Haversine Distance Using CSV File in Python</h3>
    <p class="text-muted">You can calculate distance for multiple coordinates using a CSV file and export results with kilometers and miles automatically using Python.</p>
   </div>
      <p class="mb-3">👉 Simply download the sample CSV file and Python script below, run the code on your system, and get an output CSV file with calculated distances. </p>
@@ -233,7 +252,7 @@ SIN(RADIANS(A2))*SIN(RADIANS(C2))
 <div class="col-lg-6">
   <div class="card shadow-sm border-0 h-100">
     <div class="card-body">
-      <h5 class="fw-bold mb-3">Python Code (CSV to Distance)</h5>
+      <h5 class="fw-bold mb-3" >Python Code (CSV to Distance)</h5>
       <div class="position-relative">
         <button class="btn btn-sm btn-outline-secondary position-absolute top-0 end-0 m-2" onclick="copyCode(this)">📋</button>
 <pre class="bg-light p-3 rounded small mb-0"><code id="pythonCode">import csv
@@ -274,7 +293,7 @@ print("Output saved as output.csv")</code></pre></div>
 
  <!-- FAQ Section -->
 <section class="mb-5 pt-4">
-        <h2 class="mb-4">FAQ on Haversine Distance Calculator</h2>
+        <h2 class="mb-4" id="faq">FAQ on Haversine Distance Calculator</h2>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
             <div class="fw-bold text-primary">1. What is the Haversine formula used for?</div>
