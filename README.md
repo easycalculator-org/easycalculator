@@ -1,7 +1,7 @@
 <h1 data-pm-slice="1 1 []">Online Calculator (EasyCalculator)</h1>
 <p>Welcome to the <strong>EasyCalculator</strong>&nbsp;project! This is an open-source web-based calculator built using <a href="https://jekyllrb.com/">Jekyll</a>. We invite developers, designers, and contributors of all skill levels to collaborate and improve this project.</p>
 <h2>Live Demo</h2>
-click on for live demo of online calculator <a href="https://github.com/easycalculator-org/easycalculator">EasyCalculator</a>
+click on for live demo of online calculator <a href="https://easycalculator.org">EasyCalculator</a>
 <h2>🚀 Features</h2>
 <ul data-spread="false">
 <li>Basic arithmetic operations (Addition, Subtraction, Multiplication, Division)</li>
