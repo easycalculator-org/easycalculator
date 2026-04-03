@@ -47,7 +47,7 @@ last_modified_at: 2026-02-03
         }
     </style>
 <!-- Icons -->
- <div class="container py-5">
+ <div class="py-5">
     <div class="card mx-auto p-4 shadow-sm" style="max-width: 600px;">
       <h1 class="text-center mb-3 text-primary"><i class="fas fa-calculator me-2"></i>HCF Calculator </h1>
       <p class="text-center text-muted">Enter numbers separated by spaces or commas (e.g., 12, 18 24)</p>

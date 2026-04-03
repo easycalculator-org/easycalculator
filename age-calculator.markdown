@@ -18,7 +18,7 @@ last_modified_at: 2026-03-23
    .input-group .input-group-text { background: #fff; border-left: none; }
 </style>
 
-<div class="container mt-5">
+<div class="mt-5">
     <h1 class="text-center mb-4">Age Calculator</h1>
     <div class="card shadow p-4">
       <form id="ageForm">

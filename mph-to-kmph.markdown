@@ -11,7 +11,7 @@ last_modified_at: 2026-02-03
 .result-box{ background:#eef4ff;  border-radius:14px; font-size:1.3rem; font-weight:600; }
 </style>
 
-<div class="container py-5">
+<div class="py-5">
  <div class="card converter-card p-4">
    <h2 class="text-center mb-2">🚗 MPH to KMPH Converter</h2>
     <div class="mb-3">

@@ -7,7 +7,7 @@ image: "/assets/images/lcm-calculation.jpg"
 last_modified_at: 2026-02-03
 ---
 
- <div class="container py-1">
+ <div class="py-1">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="card shadow">

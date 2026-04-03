@@ -57,7 +57,7 @@ last_modified_at: 2026-04-01
 </style>
 
 
-<div class="container mt-5">
+<div class="mt-5">
  <div class="row justify-content-center">
   <div class="col-12 col-md-10 col-lg-8">
    <div class="card shadow-lg border-0 p-4 rounded-4">

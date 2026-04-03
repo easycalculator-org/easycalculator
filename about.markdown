@@ -5,8 +5,6 @@ permalink: /about
 description: "Easy Calculator offers simple, accurate tools for everyday math, finance, and conversion needs—free, fast, and easy to use for everyone."
 last_modified_at: 2026-03-03
 ---
-
-<div class="container">
 <h1>About US - EasyCalculator</h1>
 <p class="last-updated">  Last updated on: {{ site.time | date: "%d-%m-%Y" }}</p>
 <p>Welcome to <strong>EasyCalculator</strong>, a free online calculator designed to make complex calculations easy and simple for everyone.</p>
@@ -38,4 +36,3 @@ last_modified_at: 2026-03-03
                 <a href="https://github.com/easycalculator-org/easycalculator" class="btn btn-primary mt-3">Contribute on GitHub</a>
             </div>
         </div>
-    </div>

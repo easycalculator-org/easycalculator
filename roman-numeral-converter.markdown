@@ -4,67 +4,64 @@ title: Roman Numeral Converter – Convert Numbers to Roman & Vice Versa
 permalink: /roman-numeral-converter
 description: "Easily convert numbers to Roman numerals and Roman to numbers with our free Roman Numeral Converter. Fast, accurate results with a simple interface."
 image: "/assets/images/roman-number-converter.jpg"
-last_modified_at: 2026-02-03
+last_modified_at: 2026-04-03
 ---
 <style>
-  :root{--primary-color:#6c63ff;--secondary-color:#4d44db;--light-color:#f8f9fa;--dark-color:#343a40}.converter-card{border-radius:15px;border:none;box-shadow:0 10px 30px #6c63ff33;transition:transform .3s ease}.converter-card:hover{transform:translateY(-5px)}.card-header{border-radius:15px 15px 0 0!important;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color))}.btn-convert{background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));border:none;padding:10px 25px;border-radius:50px;font-weight:600;letter-spacing:.5px;transition:all .3s ease}.btn-convert:hover{transform:translateY(-2px);box-shadow:0 5px 15px #6c63ff66}.result-box{background-color:#6c63ff0d;border-left:4px solid var(--primary-color);border-radius:8px}.input-field{position:relative}.input-field i{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--primary-color)}.input-field input{padding-left:45px;border-radius:8px;border:1px solid #dee2e6;height:50px}.roman-header{background:linear-gradient(135deg,#6a11cb 0%,#2575fc 100%);color:#fff}.symbol-card{transition:transform .3s;border-radius:10px;box-shadow:0 4px 6px #0000001a}.symbol-card:hover{transform:translateY(-5px)}.symbol-value{font-size:1.5rem;font-weight:700}.chart-modal .modal-dialog{max-width:900px}.chart-table{width:100%;border-collapse:collapse}.chart-table th{background-color:#0d6efd;color:#fff;padding:8px;text-align:center;font-size:.9rem}.chart-table td{padding:6px;text-align:center;border:1px solid #dee2e6;font-size:.85rem}.chart-table tr:nth-child(even){background-color:#f8f9fa}.brand-logo{font-weight:700;color:#0d6efd;font-size:1.2rem}.brand-logo span{color:#fd7e14}@media print{body *{visibility:hidden}.chart-print,.chart-print *{visibility:visible}.chart-print{position:absolute;left:0;top:0;width:100%;margin:0;padding:15px;font-size:12px}.no-print{display:none!important}}@media (max-width: 768px){.converter-col{margin-bottom:30px}}
+:root{--primary-color:#6c63ff;--secondary-color:#4d44db;--light-color:#f8f9fa;--dark-color:#343a40}
+.converter-card{border:none;border-radius:16px;box-shadow:0 8px 25px #0000000f;transition:.3s ease;overflow:hidden}.converter-card:hover{transform:translateY(-5px)}.card-header{background:linear-gradient(135deg,#4e73df,#224abe);border:none}.input-field{position:relative}.input-field i{position:absolute;top:50%;left:12px;transform:translateY(-50%);color:#999}.input-field input{padding-left:38px;height:50px;border-radius:10px}.btn-convert{background:linear-gradient(135deg,#1cc88a,#17a673);border:none;padding:12px;font-weight:600;border-radius:10px;transition:.3s}.btn-convert:hover{opacity:.9;transform:scale(1.02)}.result-box{background:#f8f9fc;border-radius:12px;border-left:5px solid #4e73df}.result-box h5{font-size:14px;color:#666}.result-box div{font-size:28px;letter-spacing:1px}.converter-col{margin-bottom:20px}
+ .chart-modal .modal-dialog{max-width:900px}.chart-table{width:100%;border-collapse:collapse}.chart-table th{background-color:#0d6efd;color:#fff;padding:8px;text-align:center;font-size:.9rem}.chart-table td{padding:6px;text-align:center;border:1px solid #dee2e6;font-size:.85rem}.chart-table tr:nth-child(even){background-color:#f8f9fa}
+ .brand-logo{font-weight:700;color:#0d6efd;font-size:1.2rem}
+ .brand-logo span{color:#fd7e14}@media print{body *{visibility:hidden}.chart-print,.chart-print *{visibility:visible}.chart-print{position:absolute;left:0;top:0;width:100%;margin:0;padding:15px;font-size:12px}.no-print{display:none!important}}@media (max-width: 768px){.converter-col{margin-bottom:30px}}
  </style>
-<div class="container py-1">
-        <div class="text-center mb-1">
-            <h1 class="display-4 fw-bold">Roman Numeral Converter</h1>
-            <p class="lead text-muted">Convert between numbers and Roman numerals with ease</p>
-        </div>
-        <div class="row justify-content-center">
-            <!-- Number to Roman Converter -->
-            <div class="col-lg-5 col-md-6 converter-col">
-                <div class="card converter-card h-100">
-                    <div class="card-header text-white">
-                        <h3 class="card-title text-center mb-0 py-2"><i class="fas fa-digital-tachograph me-2"></i>Number to Roman</h3>
-                    </div>
-                    <div class="card-body d-flex flex-column">
-                        <div class="mb-4">
-                            <label for="numberInput" class="form-label fw-bold">Enter a number (1-3999)</label>
-                            <div class="input-field mb-3">
-                                <i class="fas fa-keyboard"></i> <input type="number" class="form-control" id="numberInput" min="1" max="3999" placeholder="e.g. 42">
-                            </div>
-                        </div>
-                        <div class="text-center mt-auto">
-                            <button class="btn btn-convert text-white w-100" onclick="convertToRoman()"> <i class="fas fa-exchange-alt me-2"></i>Convert </button>
-                        </div>
-                        <div class="mt-4 p-3 result-box">
-                            <h5 class="d-flex align-items-center">  <i class="fas fa-history me-2"></i>Result:  </h5>
-                            <div id="romanResult" class="fs-4 fw-bold text-primary"></div>
-                        </div>
+
+  <div class="text-center mb-4">
+   <h1>Roman Numeral Converter</h1>
+   <p class="text-muted">Convert numbers ↔ Roman numerals instantly</p>
+   </div>
+  <div class="row justify-content-center g-4">
+   <!-- Number to Roman -->
+    <div class="col-lg-5 col-md-6">
+     <div class="card converter-card h-100">
+      <div class="card-header text-white text-center py-3">
+        <h4 class="mb-0"><i class="fas fa-hashtag me-2"></i>Number → Roman</h4>
+       </div>
+     <div class="card-body d-flex flex-column">
+      <label class="fw-semibold mb-2">Enter Number</label>
+       <div class="input-field mb-4">
+         <i class="fas fa-keyboard"></i>
+         <input type="number" id="numberInput" class="form-control"  min="1" max="3999" placeholder="e.g. 42">
+       </div>
+     <button class="btn btn-convert text-white w-100 mt-auto" onclick="convertToRoman()"><i class="fas fa-sync-alt me-2"></i>Convert</button>
+    <div class="result-box mt-4 p-3 text-center">
+      <h5><i class="fas fa-bolt me-1"></i>Result</h5>
+      <div id="romanResult" class="fw-bold text-primary"></div>
                     </div>
                 </div>
             </div>
-            <!-- Roman to Number Converter -->
-            <div class="col-lg-5 col-md-6 converter-col">
-                <div class="card converter-card h-100">
-                    <div class="card-header text-white">
-                        <h3 class="card-title text-center mb-0 py-2"> <i class="fas fa-font me-2"></i>Roman to Number </h3>
+        </div>
+        <!-- Roman to Number -->
+        <div class="col-lg-5 col-md-6">
+            <div class="card converter-card h-100">
+                <div class="card-header text-white text-center py-3">
+                    <h4 class="mb-0"><i class="fas fa-font me-2"></i>Roman → Number</h4>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <label class="fw-semibold mb-2">Enter Roman Numeral</label>
+                    <div class="input-field mb-4">
+                        <i class="fas fa-text-height"></i>
+                        <input type="text" id="romanInput" class="form-control text-uppercase" placeholder="e.g. XIV">
                     </div>
-                    <div class="card-body d-flex flex-column">
-                        <div class="mb-4">
-                            <label for="romanInput" class="form-label fw-bold">Enter a Roman numeral</label>
-                            <div class="input-field mb-3">
-                                <i class="fas fa-text-height"></i>  <input type="text" class="form-control text-uppercase" id="romanInput" placeholder="e.g. XIV">
-                            </div>
-                        </div>
-                        <div class="text-center mt-auto">
-                            <button class="btn btn-convert text-white w-100" onclick="convertToNumber()">
-                                <i class="fas fa-exchange-alt me-2"></i>Convert
-                            </button>
-                        </div>
-                        <div class="mt-4 p-3 result-box">
-                            <h5 class="d-flex align-items-center">  <i class="fas fa-history me-2"></i>Result:  </h5>
-                            <div id="numberResult" class="fs-4 fw-bold text-primary"></div>
-                        </div>
+                    <button class="btn btn-convert text-white w-100 mt-auto"  onclick="convertToNumber()"> <i class="fas fa-sync-alt me-2"></i>Convert</button>
+                    <div class="result-box mt-4 p-3 text-center">
+                        <h5><i class="fas fa-bolt me-1"></i>Result</h5>
+                        <div id="numberResult" class="fw-bold text-primary"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
 
 <!-- Article Content -->
  <div class="article-container">
@@ -148,28 +145,75 @@ last_modified_at: 2026-02-03
                             </div>
            <div class="text-center mt-3">
             <button class="btn btn-primary btn-lg px-5 py-3 mb-4" data-bs-toggle="modal" data-bs-target="#chartModal"><i class="bi bi-table me-2"></i>View Full Chart</button> </div>
-            </div>
-        </div>
-        </div>
+          </div>
 
-
+<div class="text-center p-4">
+<p class="mb-2 fw-semibold">📥 Download Roman Numerals 1–100 Chart (PDF)  </p>
+ <p class="text-muted small mb-3"> Get a complete <strong>Roman numerals chart from 1 to 100 in PDF format</strong> for easy learning, printing, and offline use. This printable chart is perfect for students, teachers, and exam preparation. Quickly reference Roman numbers anytime without internet access.</p>
+ <a href="/assets/files/roman/roman-numerals-1-100.pdf"  class="btn btn-success btn-sm px-4 py-2" download> <i class="bi bi-download me-1"></i>Download PDF  </a>
+</div>
+  </div>
  </div>
+ </div>
+</section>
 
- </section>
-      <!-- FAQ Section -->
-      <section class="mb-5">
-        <h5 class="mb-4">FAQ on Roman Numeral converter</h5>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary">1. What is C in Roman numerals?</div>
-            <p class="mb-0">C represents 100 in the Roman numeral system. It comes from the Latin word "centum" meaning hundred.</p>
+
+<section class="p-4">
+  <h2 class="mb-4">How Roman Numerals Work (Easy Explanation)</h2>
+  <div class="row g-4">
+    <!-- Addition Rule -->
+    <div class="col-md-6">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-header bg-success bg-opacity-10">
+          <h3 class="h5 mb-0 text-white">Addition Rule </h3>
+        </div>
+        <div class="card-body">
+          <p>When a smaller or equal number comes after a larger one, you <strong>add values</strong>.  </p>
+          <div class="bg-light p-3 rounded">
+            <ul class="mb-0">
+              <li><strong>VI</strong> = 5 + 1 = 6</li>
+              <li><strong>XV</strong> = 10 + 5 = 15</li>
+              <li><strong>XX</strong> = 10 + 10 = 20</li>
+            </ul>
           </div>
         </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 2. What does L stand for in Roman numerals?</div>
-            <p class="mb-0">L equals 50 in Roman numerals. It's one of the seven basic symbols in the system.</p>
+      </div>
+    </div>
+    <!-- Subtraction Rule -->
+    <div class="col-md-6">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-header bg-danger bg-opacity-10">
+          <h3 class="h5 mb-0 text-white"> ➤ Subtraction Rule</h3>
+        </div>
+        <div class="card-body">
+          <p>When a smaller number appears before a larger number, you <strong>subtract</strong>.</p>
+          <div class="bg-light p-3 rounded">
+            <ul class="mb-0">
+              <li><strong>IV</strong> = 5 − 1 = 4</li>
+              <li><strong>IX</strong> = 10 − 1 = 9</li>
+              <li><strong>XL</strong> = 50 − 10 = 40</li>
+              <li><strong>XC</strong> = 100 − 10 = 90</li>
+            </ul>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- FAQ Section -->
+ <section class="mb-5">
+   <h5 class="mb-4">FAQ on Roman Numeral converter</h5>
+    <div class="card mb-3 border-0 bg-light">
+      <div class="card-body ">
+       <div class="fw-bold text-primary">1. What is C in Roman numerals?</div>
+        <p class="mb-0">C represents 100 in the Roman numeral system. It comes from the Latin word "centum" meaning hundred.</p>
+       </div>
+      </div>
+     <div class="card mb-3 border-0 bg-light">
+      <div class="card-body ">
+       <div class="fw-bold text-primary"> 2. What does L stand for in Roman numerals?</div>
+        <p class="mb-0">L equals 50 in Roman numerals. It's one of the seven basic symbols in the system.</p>
+        </div>
         </div>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
@@ -179,11 +223,28 @@ last_modified_at: 2026-02-03
         </div>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
-            <div class="fw-bold text-primary"> 4.  What is the Roman numeral for 2025?</div>
+            <div class="fw-bold text-primary"> 4. What is the Roman numeral for 2025?</div>
             <p class="mb-0">2025 = MMXXV (M=1000, X=10, V=5)</p>
           </div>
         </div>
+        <div class="card mb-3 border-0 bg-light">
+          <div class="card-body ">
+            <div class="fw-bold text-primary"> 5. What is 777 in Roman numerals?</div>
+            <p class="mb-0"> <strong>777 in Roman numerals is DCCLXXVII.</strong> It is formed by combining 700 (DCC), 70 (LXX), and 7 (VII). <br> Break 777 into Step-by-step <br>  
+              <ul class="mb-0 ps-3">
+      <li><strong>700</strong> = DCC (500 + 100 + 100)</li>
+      <li><strong>70</strong> = LXX (50 + 10 + 10)</li>
+      <li><strong>7</strong> = VII (5 + 1 + 1)</li>
+    </ul>
+     </p>
+          </div>
+        </div>
       </section>
+
+
+
+
+
 <!-- Did You Know? -->
 <div class="card border-0 bg-light mb-5 p-3">
  <h5 class="d-flex align-items-center"><i class="fas fa-info-circle me-3 text-primary"></i>Did You Know?</h5>
@@ -246,4 +307,59 @@ last_modified_at: 2026-02-03
 
 <script src="{{ '/assets/js/roman.js' | relative_url }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+
+    {
+      "@type": "Question",
+      "name": "What is C in Roman numerals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "C represents 100 in the Roman numeral system. It comes from the Latin word 'centum' meaning hundred."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What does L stand for in Roman numerals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L equals 50 in Roman numerals. It is one of the seven basic symbols used in the system."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Is XCX a valid Roman numeral?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, XCX is not a valid Roman numeral. The correct representation for 100 is simply C."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What is the Roman numeral for 2025?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2025 in Roman numerals is MMXXV."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What is 777 in Roman numerals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "777 in Roman numerals is DCCLXXVII. It is calculated as 700 = DCC, 70 = LXX, and 7 = VII."
+      }
+    }
+
+  ]
+}
+</script>
 

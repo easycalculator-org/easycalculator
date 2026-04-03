@@ -7,7 +7,7 @@ image: "/assets/images/character-count.jpg"
 last_modified_at: 2026-02-03
 ---
 
-<div class="container mt-3">
+<div class="mt-3">
   <div class="d-flex justify-content-between align-items-center"><h1> Character Count Tool</h1> </div>    
   <p class="lead">A Character Count Tool helps you instantly calculate the number of characters, words, spaces, sentences, and paragraphs in any text. It is commonly used for SEO meta descriptions, social media posts, SMS messages, and academic writing where character limits apply.</p>
 

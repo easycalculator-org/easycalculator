@@ -6,7 +6,7 @@ description: "Quickly find the square root of any number with our free online Sq
 last_modified_at: 2026-02-03
 ---
 <link rel="stylesheet" href="/assets/css/square-root.css">
-<div class="container mt-5 text-center">
+<div class="mt-5 text-center">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h1 class="mb-4">Square Root Calculator</h1>
