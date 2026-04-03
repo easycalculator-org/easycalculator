@@ -4,7 +4,7 @@ title: Rent Proration Calculator | Daily Rent & Prorated Rent Calculator
 permalink: /rent-proration-calculator
 description: "Free Rent Proration Calculator to calculate daily rent, prorated rent, and partial month rent. Perfect for move-in, move-out, and lease adjustments."
 last_modified_at: 2026-03-27
-image: "/assets/images/rent-proration-calculator.svg"
+image: "/assets/images/og/rent-proration-calculator.jpg"
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <style>
