@@ -35,33 +35,31 @@ last_modified_at: 2026-04-03
     <div class="result-box mt-4 p-3 text-center">
       <h5><i class="fas fa-bolt me-1"></i>Result</h5>
       <div id="romanResult" class="fw-bold text-primary"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Roman to Number -->
-        <div class="col-lg-5 col-md-6">
-            <div class="card converter-card h-100">
-                <div class="card-header text-white text-center py-3">
-                    <h4 class="mb-0"><i class="fas fa-font me-2"></i>Roman → Number</h4>
-                </div>
-                <div class="card-body d-flex flex-column">
-                    <label class="fw-semibold mb-2">Enter Roman Numeral</label>
-                    <div class="input-field mb-4">
-                        <i class="fas fa-text-height"></i>
-                        <input type="text" id="romanInput" class="form-control text-uppercase" placeholder="e.g. XIV">
-                    </div>
-                    <button class="btn btn-convert text-white w-100 mt-auto"  onclick="convertToNumber()"> <i class="fas fa-sync-alt me-2"></i>Convert</button>
-                    <div class="result-box mt-4 p-3 text-center">
-                        <h5><i class="fas fa-bolt me-1"></i>Result</h5>
-                        <div id="numberResult" class="fw-bold text-primary"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
+     </div>
     </div>
-
-
+   </div>
+ <!-- Roman to Number -->
+   <div class="col-lg-5 col-md-6">
+      <div class="card converter-card h-100">
+         <div class="card-header text-white text-center py-3">
+           <h4 class="mb-0"><i class="fas fa-font me-2"></i>Roman → Number</h4>
+          </div>
+            <div class="card-body d-flex flex-column">
+               <label class="fw-semibold mb-2">Enter Roman Numeral</label>
+                <div class="input-field mb-4">
+                   <i class="fas fa-text-height"></i>
+                    <input type="text" id="romanInput" class="form-control text-uppercase" placeholder="e.g. XIV">
+                   </div>
+                   <button class="btn btn-convert text-white w-100 mt-auto"  onclick="convertToNumber()"> <i class="fas fa-sync-alt me-2"></i>Convert</button>
+                   <div class="result-box mt-4 p-3 text-center">
+                     <h5><i class="fas fa-bolt me-1"></i>Result</h5>
+                    <div id="numberResult" class="fw-bold text-primary"></div>
+                 </div>
+               </div>
+           </div>
+       </div>
+   </div>
 
 <!-- Article Content -->
  <div class="article-container">
