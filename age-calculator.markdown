@@ -4,8 +4,8 @@ layout: default
 title:  Age Calculator – Find Your Exact Age in Years, Months & Days
 permalink: /age-calculator
 description: "Use our free Age Calculator to find your age from your birth date or see the age difference in days. It's quick and easy to find your age today!"
-image: "/assets/images/age-calculator-formula-example.svg"
-last_modified_at: 2026-03-23
+image: "/assets/images/og/age-calculator-formula-example.jpg"
+last_modified_at: 2026-04-04
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
