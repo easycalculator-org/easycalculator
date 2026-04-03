@@ -17,11 +17,21 @@ last_modified_at: 2026-02-28
  .result-card{  transition: all .25s ease;}
  .result-card:hover{  transform: translateY(-2px);  box-shadow:0 12px 28px rgba(0,0,0,0.10);}
 </style>
-  <div class="col-12 col-xl-11">
-     <div class="text-primary p-4">  <h1>Azimuth Calculator</h1>
-       <div class="row g-4">
-         <div class="col-12 col-md-5">
-           <div class="row g-3">
+
+<div aria-label="breadcrumb" class="mb-3 p-3">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Azimuth Calculator</li>
+  </ol>
+</div>
+
+ <div class="col-12 col-xl-11">
+  <div class="text-primary p-4">
+   <h1>Azimuth Calculator</h1>
+    <div class="row g-4">
+    <div class="col-12 col-md-5">
+   <div class="row g-3">
  <!-- point A -->
        <div class="col-12">
        <div class="border rounded p-3 bg-white">
@@ -185,9 +195,95 @@ last_modified_at: 2026-02-28
       </table>
     </div>
 <p class="text-muted mb-0">Most modern geolocation and RF planning tools prefer azimuth because it provides a continuous 360-degree directional reference. </p>
+
+
+
+
+<!-- FAQ Section -->
+<section class="p-4">
+  <h2 class="mb-4">FAQ on Calculator</h2>
+   <div class="card mb-3 border-0 bg-light">
+     <div class="card-body ">
+       <div class="fw-bold text-primary">1. What is an azimuth angle?</div>
+       <p class="mb-0">The <strong>azimuth angle</strong> is the horizontal angle measured clockwise from <strong>true north (0&deg;)</strong> to a target direction. It ranges from <strong>0&deg; to 360&deg;</strong> and is widely used in navigation, GIS, and RF antenna alignment.</p>
+     </div>
+   </div>
+    <div class="card mb-3 border-0 bg-light">
+      <div class="card-body ">
+        <div class="fw-bold text-primary"> 2. How is azimuth calculated?</div>
+         <p class="mb-0">Azimuth is calculated using the latitude and longitude of two points. The formula uses trigonometric functions like sine, cosine, and arctangent to determine the direction from Point A to Point B.</p>
+       </div>
+     </div>
+    <div class="card mb-3 border-0 bg-light">
+      <div class="card-body ">
+        <div class="fw-bold text-primary"> 3. Does azimuth always measure clockwise?</div>
+        <p class="mb-0">Yes. Azimuth is always measured clockwise from true north, which makes it a consistent 360° directional system.</p>
+       </div>
+     </div>
+   <div class="card mb-3 border-0 bg-light">
+     <div class="card-body ">
+       <div class="fw-bold text-primary"> 4. What does 0°, 90°, 180°, and 270° mean in azimuth?</div>
+        <p class="mb-0">0° → North | 90° → East | 180° → South | 270° → West</p>
+       </div>
+     </div>
+   <div class="card mb-3 border-0 bg-light">
+     <div class="card-body ">
+       <div class="fw-bold text-primary"> 5. Is azimuth 0 360?</div>
+        <p class="mb-0">Yes — azimuth is measured from 0° to 360° clockwise from north, where 0° and 360° both represent north.</p>
+       </div>
+     </div>
+   </section>
+      <!-- Did You Know? -->
+
 </section>
-
-</div>   
-
 <script src="{{ '/assets/js/azimuth-calc.js' | relative_url }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an azimuth angle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The azimuth angle is the horizontal angle measured clockwise from true north (0°) to a target direction. It ranges from 0° to 360° and is widely used in navigation, GIS, and RF antenna alignment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is azimuth calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Azimuth is calculated using the latitude and longitude of two points. The formula uses trigonometric functions like sine, cosine, and arctangent to determine the direction from Point A to Point B."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does azimuth always measure clockwise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, azimuth is always measured clockwise from true north, making it a consistent 360-degree directional system."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does 0°, 90°, 180°, and 270° mean in azimuth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "0° represents North, 90° represents East, 180° represents South, and 270° represents West."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is azimuth 0 360?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, azimuth is measured from 0° to 360° clockwise from north, where both 0° and 360° represent north."
+      }
+    }
+  ]
+}
+</script>
