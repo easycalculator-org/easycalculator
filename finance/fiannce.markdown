@@ -27,7 +27,7 @@ last_modified_at: 2026-02-03
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/car-loan-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-car fa-xl"></i><h5>Car Loan Calculator</h5></div></a></div>  
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/cagr-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-up-right-dots fa-xl"></i><h5>CAGR Calculator</h5></div></a></div>  
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/pro-rata-calculator"><div class="calculator-box text-center"><h5>Pro rata Calculator</h5></div></a></div>  
-
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/daily-interest-calculator"><div class="calculator-box text-center"><h5>Daily Interest Calculator</h5></div></a></div>  
  </div>
 
 

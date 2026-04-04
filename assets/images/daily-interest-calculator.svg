@@ -1,0 +1,75 @@
+<svg width="100%" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef2ff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+
+    <linearGradient id="primaryGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#0d6efd"/>
+    </linearGradient>
+
+    <linearGradient id="successGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="url(#bgGradient)"/>
+
+  <!-- Title -->
+  <text x="50%" y="50" text-anchor="middle" font-size="30" font-weight="700" fill="#1e293b">
+    Daily Interest Calculator
+  </text>
+
+  <!-- Formula Box -->
+  <rect x="200" y="80" width="500" height="70" rx="16" fill="url(#primaryGradient)"/>
+  <text x="450" y="120" text-anchor="middle" font-size="18" font-weight="600" fill="#ffffff">
+    (Principal × Rate × Days) / (100 × 365)
+  </text>
+
+  <!-- Input Boxes -->
+  <rect x="80" y="180" width="200" height="70" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="180" y="215" text-anchor="middle" font-size="14" fill="#334155">Principal 50,000</text>
+
+  <rect x="350" y="180" width="200" height="70" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="450" y="215" text-anchor="middle" font-size="14" fill="#334155">Rate 10%</text>
+
+  <rect x="620" y="180" width="200" height="70" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="720" y="215" text-anchor="middle" font-size="14" fill="#334155">Days 30</text>
+
+  <!-- Arrows -->
+  <line x1="180" y1="250" x2="450" y2="290" stroke="#4f46e5" stroke-width="2"/>
+  <line x1="450" y1="250" x2="450" y2="290" stroke="#4f46e5" stroke-width="2"/>
+  <line x1="720" y1="250" x2="450" y2="290" stroke="#4f46e5" stroke-width="2"/>
+
+  <!-- Result Box -->
+  <rect x="300" y="290" width="300" height="70" rx="16" fill="url(#successGradient)"/>
+  <text x="450" y="325" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">
+    Interest ≈ 410.96
+  </text>
+
+  <!-- Conversion Title -->
+  <text x="450" y="400" text-anchor="middle" font-size="20" font-weight="600" fill="#16a34a">
+    Daily → Monthly → Yearly
+  </text>
+
+  <!-- Conversion Boxes -->
+  <rect x="150" y="420" width="180" height="60" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="240" y="455" text-anchor="middle" font-size="14" fill="#334155">Daily 13.69</text>
+
+  <rect x="360" y="420" width="180" height="60" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="450" y="455" text-anchor="middle" font-size="14" fill="#334155">Monthly 410.96</text>
+
+  <rect x="570" y="420" width="180" height="60" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="660" y="455" text-anchor="middle" font-size="14" fill="#334155">Yearly 5000</text>
+
+  <!-- Arrows -->
+  <line x1="330" y1="450" x2="360" y2="450" stroke="#16a34a" stroke-width="2"/>
+  <line x1="540" y1="450" x2="570" y2="450" stroke="#16a34a" stroke-width="2"/>
+
+</svg>
