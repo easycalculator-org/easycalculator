@@ -88,6 +88,8 @@ canvas { max-height:180px; }
 </div>
 
 
-<script src="{{ '/assets/js/compound-interest-calc.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/finance/compound-interest-calc.js' | relative_url }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+D:\github\easycalculator\assets\js\finance\compound-interest-calc.js
