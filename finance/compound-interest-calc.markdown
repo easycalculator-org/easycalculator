@@ -7,7 +7,6 @@ last_modified_at: 2026-03-11
 ---
 
 <style>
-body { background:#f4f6f9; }
 .card { border-radius:16px; }
 .result-card { background:#f8f9fa; border-radius:12px; padding:12px; }
 .small-text { font-size:0.85rem; color:#6c757d; }
@@ -92,4 +91,3 @@ canvas { max-height:180px; }
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-D:\github\easycalculator\assets\js\finance\compound-interest-calc.js
