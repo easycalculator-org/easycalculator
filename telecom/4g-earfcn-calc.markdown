@@ -236,7 +236,7 @@ last_modified_at: 2026-02-28
  </div>
   </div>
 </section>     
-   
+        {% include rf.html %}
 </div>
 <script src="{{ '/assets/js/erfcn-calc.js' | relative_url }}"></script> 
 

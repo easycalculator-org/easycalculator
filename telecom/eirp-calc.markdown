@@ -243,6 +243,7 @@ last_modified_at: 2026-03-25
         </div>
 </section>
       <!-- Did You Know? -->
+           {% include rf.html %}
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>

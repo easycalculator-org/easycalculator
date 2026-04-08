@@ -237,6 +237,8 @@ last_modified_at: 2026-02-22
         <strong class="d-block mb-1">5. Why is low VSWR important?</strong>
         <p class="mb-0">Low VSWR ensures maximum power transfer, protects transmitters, and improves network performance.</p>
       </div>
+
+           {% include rf.html %}
     </div>
 
 

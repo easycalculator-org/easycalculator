@@ -254,7 +254,7 @@ L \approx 16.75\,mm
         </div>
       </section>
       <!-- Did You Know? -->
-
+     {% include rf.html %}
 </div>
 
 <script src="{{ '/assets/js/rf/microstrip-line-calc.js' | relative_url }}"></script>

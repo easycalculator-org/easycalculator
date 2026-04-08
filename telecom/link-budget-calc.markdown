@@ -348,6 +348,8 @@ last_modified_at: 2026-02-10
 <p >A well-designed link budget ensures predictable and stable performance.</p>
 
    </div>
+
+        {% include rf.html %}
     </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

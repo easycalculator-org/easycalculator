@@ -404,7 +404,7 @@ last_modified_at: 2026-03-27
    </div>
   </section>
 <!-- Did You Know? -->
-
+     {% include rf.html %}
 
    <script src="{{ '/assets/js/rf/fresnel-zone-calc.js' | relative_url }}"></script>
 

@@ -196,6 +196,8 @@ If you use meters or GHz, you must adjust the constant value in the formula.</p>
             <p class="mb-0">Yes. Path loss increases as frequency increases.</p>
           </div>
         </div>
+
+             {% include rf.html %}
       </section>
 
 
