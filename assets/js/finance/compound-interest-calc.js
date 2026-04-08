@@ -96,7 +96,17 @@ function calculateCI(){
 }
 
 
+function getCompoundingLabel() {
+  let custom = document.getElementById("customCompound").value;
+  let select = document.getElementById("compound");
 
+  if (custom && custom > 0) {
+    return custom + " times/year";
+  }
+
+  let text = select.options[select.selectedIndex].text;
+  return text; // Yearly / Monthly / Daily
+}
 async function downloadPDF() {
   const { jsPDF } = window.jspdf;
   let doc = new jsPDF();
@@ -106,83 +116,90 @@ async function downloadPDF() {
   let time = document.getElementById("time").value;
   let total = document.getElementById("totalAmount").innerText;
   let interest = document.getElementById("interestAmount").innerText;
+  let compounding = getCompoundingLabel();
 
   if (!total || total === "—") {
     alert("Please calculate first");
     return;
   }
 
-  // ===== LOGO =====
-  const logoUrl = "https://easycalculator.org/assets/images/logo.png";
+  const pageWidth = doc.internal.pageSize.getWidth();
 
-  try {
-    const img = await fetch(logoUrl)
-      .then(res => res.blob())
-      .then(blob => new Promise(resolve => {
-        const reader = new FileReader();
-        reader.onloadend = () => resolve(reader.result);
-        reader.readAsDataURL(blob);
-      }));
+  // ===== HEADER =====
+  doc.setFillColor(41, 128, 185);
+  doc.rect(0, 0, pageWidth, 20, "F");
 
-    doc.addImage(img, "PNG", 20, 10, 40, 15);
-  } catch (e) {
-    console.log("Logo load failed");
-  }
+  doc.setTextColor(255,255,255);
+  doc.setFontSize(16);
+  doc.text("Compound Interest Report", pageWidth/2, 13, { align: "center" });
 
-  // ===== TITLE =====
-  doc.setFont("helvetica", "bold");
-  doc.setFontSize(18);
-  doc.text("Compound Interest Report", 105, 25, null, null, "center");
+  doc.setTextColor(0);
 
-  doc.setLineWidth(0.5);
-  doc.line(20, 30, 190, 30);
+  // ===== SUMMARY =====
+  doc.setFillColor(236,240,241);
+  doc.roundedRect(10, 30, 190, 35, 3, 3, "F");
 
-  // ===== INPUT BOX =====
-  doc.setFontSize(12);
-  doc.setFont("helvetica", "bold");
-  doc.text("Input Details", 20, 45);
+  doc.setFont("helvetica","bold");
+  doc.text("Summary", 15, 38);
 
-  doc.rect(20, 50, 170, 30);
+  doc.setFont("helvetica","normal");
+  doc.text(`Total Value: ${total}`, 15, 48);
+  doc.text(`Interest Earned: ${interest}`, 15, 56);
 
-  doc.setFont("helvetica", "normal");
-  doc.text(`Principal: ${P}`, 25, 60);
-  doc.text(`Rate: ${rate}%`, 25, 68);
-  doc.text(`Time: ${time} years`, 25, 76);
+  // ===== INPUTS =====
+  doc.setFont("helvetica","bold");
+  doc.text("Investment Details", 10, 80);
 
-  // ===== RESULT BOX =====
-  doc.setFont("helvetica", "bold");
-  doc.text("Results", 20, 95);
+  doc.rect(10, 85, 190, 40);
 
-  doc.rect(20, 100, 170, 30);
+  doc.setFont("helvetica","normal");
+  doc.text(`Principal: ${P}`, 15, 95);
+  doc.text(`Rate: ${rate}%`, 15, 103);
+  doc.text(`Time: ${time} years`, 15, 111);
 
-  doc.setFont("helvetica", "normal");
-  doc.text(`Total Amount: ${total}`, 25, 110);
-  doc.text(`Interest Earned: ${interest}`, 25, 118);
+  // 🔥 NEW: Compounding type
+  doc.text(`Compounding: ${compounding}`, 15, 119);
 
-  // ===== CHART IMAGE =====
+  // ===== CHART =====
   try {
     let chartCanvas = document.getElementById("chart");
     let chartImage = chartCanvas.toDataURL("image/png");
 
-    doc.addImage(chartImage, "PNG", 50, 140, 100, 60);
-  } catch (e) {
-    console.log("Chart not added");
-  }
+    doc.addImage(chartImage, "PNG", 40, 130, 120, 55);
+  } catch(e){}
 
   // ===== TABLE =====
-  doc.setFont("helvetica", "bold");
-  doc.text("Year-wise Growth", 20, 210);
+  doc.setFont("helvetica","bold");
+  doc.text("Year-wise Growth", 10, 195);
 
-  let y = 220;
-  doc.setFont("helvetica", "normal");
+  let y = 205;
+
+  doc.setFillColor(52,152,219);
+  doc.rect(10, y-6, 190, 8, "F");
+
+  doc.setTextColor(255);
+  doc.text("Year", 20, y);
+  doc.text("Amount", 120, y);
+
+  doc.setTextColor(0);
+  y += 10;
 
   let rows = document.querySelectorAll("#yearTable tr");
 
-  rows.forEach((row) => {
+  rows.forEach((row, index) => {
     let cols = row.querySelectorAll("td");
+
     if (cols.length === 2) {
-      doc.text(`Year ${cols[0].innerText}: ${cols[1].innerText}`, 20, y);
-      y += 7;
+
+      if(index % 2 === 0){
+        doc.setFillColor(245,245,245);
+        doc.rect(10, y-6, 190, 8, "F");
+      }
+
+      doc.text(cols[0].innerText, 20, y);
+      doc.text(cols[1].innerText, 120, y);
+
+      y += 8;
 
       if (y > 280) {
         doc.addPage();
@@ -191,20 +208,18 @@ async function downloadPDF() {
     }
   });
 
-  // ===== FOOTER + LINK =====
-  doc.setTextColor(0, 102, 204);
+  // ===== FOOTER =====
+  doc.setFontSize(9);
+  doc.setTextColor(100);
+
   doc.textWithLink(
-    "easycalculator.org/compound-interest-calculator",
-    105,
+    "Visit: easycalculator.org/compound-interest-calculator",
+    pageWidth/2,
     285,
-    { url: "http://easycalculator.org/compound-interest-calculator", align: "center" }
+    { align: "center", url: "http://easycalculator.org/compound-interest-calculator" }
   );
 
-  doc.setTextColor(150);
-  doc.setFontSize(9);
-  doc.text("Generated by EasyCalculator", 105, 292, null, null, "center");
+  doc.text("Generated by EasyCalculator", pageWidth/2, 292, { align: "center" });
 
-  // SAVE
   doc.save("compound-interest-report.pdf");
 }
-
