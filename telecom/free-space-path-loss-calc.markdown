@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Free Space Path Loss Calculator (FSPL) – Formula & dB Calculation
+title: Free Space Path Loss Calculator (FSPL) | Formula & Example
 permalink: /free-space-path-loss-calculator
-description: "Calculate Free Space Path Loss (FSPL) in dB using frequency and distance. Use our free FSPL calculator with formula, example, and RF planning guide for telecom and wireless networks."
+description: "Calculate Free Space Path Loss (FSPL) in dB using frequency and distance. Includes formula, example, and RF planning guide for telecom networks."
 image: "/assets/images/og/free-space-path-loss-calculator.svg"
 last_modified_at: 2026-03-20
 ---
@@ -13,24 +13,24 @@ last_modified_at: 2026-03-20
 .article-container figure { background: #f8fafc;  padding: 12px;  border-radius: 16px;}
 </style>
  <div class="row justify-content-center">
-   <div class="col-lg-8 col-xl-7">
-      <div class="card shadow border-0 rounded-4">
-        <div class="card-header bg-transparent border-bottom"><h1>Free Space Path Loss Calculator</h1> </div>
-        <div class="card-body p-4 p-xl-5">
+  <div class="col-lg-8 col-xl-7">
+   <div class="card shadow border-0 rounded-4">
+    <div class="card-header bg-transparent border-bottom"><h1>Free Space Path Loss Calculator</h1> </div>
+    <div class="card-body p-4 p-xl-5">
  <!-- two column input: distance and frequency -->
   <div class="row g-4">
-            <div class="col-md-6">
-              <label class="form-label fw-semibold"><i class="fa-solid fa-route"></i> Distance</label>
-              <div class="input-group">
-                <input type="number" id="distVal" class="form-control form-control-lg" step="any" value="5">
-                <select id="distUnit" class="form-select" style="max-width: 110px;">
-                  <option value="km" selected>km</option>
-                  <option value="m">m</option>
-                  <option value="mile">mile</option>
-                  <option value="nmi">NM</option>
-                </select>
-              </div>
-            </div>
+    <div class="col-md-6">
+     <label class="form-label fw-semibold"><i class="fa-solid fa-route"></i> Distance</label>
+     <div class="input-group">
+     <input type="number" id="distVal" class="form-control form-control-lg" step="any" value="5">
+       <select id="distUnit" class="form-select" style="max-width: 110px;">
+        <option value="km" selected>km</option>
+        <option value="m">m</option>
+        <option value="mile">mile</option>
+       <option value="nmi">NM</option>
+      </select>
+     </div>
+    </div>
             <div class="col-md-6">
               <label class="form-label fw-semibold"><i class="fa-solid fa-wave-square"></i> Frequency</label>
               <div class="input-group">
@@ -55,9 +55,7 @@ last_modified_at: 2026-03-20
               <input type="number" id="rxGain" class="form-control form-control-lg" step="any" value="2.0">
             </div>
           </div>
-          <div class="d-grid mt-4">
-            <button class="btn btn-primary btn-lg" id="calcFsplBtn">Calculate FSPL</button>
-          </div>
+          <div class="d-grid mt-4"><button class="btn btn-primary btn-lg" id="calcFsplBtn">Calculate FSPL</button></div>
   <!-- results part: FSPL and receive power panel -->
           <div class="row mt-2 g-4">
             <div class="col-md-6">
@@ -77,9 +75,9 @@ last_modified_at: 2026-03-20
           </div>
           <br>
  <!-- fspl formula -->
-          <div class="alert alert-light bg-opacity-50 small d-flex align-items-center py-2 mb-4 border" role="alert">
-            <i class="bi bi-antenna me-2 fs-5"></i> <span>FSPL (dB) = 20·log₁₀(km) + 20·log₁₀(MHz) + 32.44.<br> <strong>Rx power</strong> (dBm) = Tx power (fixed 0 dBm) + TX gain + RX gain – FSPL.</span>
-          </div>
+ <div class="alert alert-light bg-opacity-50 small d-flex align-items-center py-2 mb-4 border" role="alert">
+ <span>FSPL (dB) = 20·log₁₀(km) + 20·log₁₀(MHz) + 32.44.<br><strong>Rx power</strong> (dBm) = Tx power (fixed 0 dBm) + TX gain + RX gain – FSPL.</span>
+     </div>
      </div> 
       </div> 
     </div> 
@@ -100,17 +98,13 @@ last_modified_at: 2026-03-20
 <p>Free Space Path Loss (FSPL) represents the reduction in signal strength as a radio wave travels through free space without obstacles. It is a fundamental concept in RF engineering, microwave communication, satellite links, LTE, and 5G network planning.</p>
 
 <p>FSPL depends only on two variables:</p>
-
 <ul><li><strong>Distance between transmitter and receiver</strong></li><li><strong>Operating frequency</strong></li></ul>
-
 <p>As distance or frequency increases, the signal attenuation increases logarithmically.</p>
-
 <hr>
 
 <h2>FSPL Formula (Free Space Path Loss Equation)</h2>
 <p>The standard FSPL formula in decibels (dB) is:</p>
 <div class="alert alert-info fs-5"><strong>FSPL (dB) = 20 log₁₀(d) + 20 log₁₀(f) + 32.44</strong></div>
-
 <figure class="text-center my-4">
   <img src="/assets/images/free-space-path-loss-calculator.svg"  alt="Free Space Path Loss diagram showing transmitter receiver distance frequency and signal attenuation" 
     class="img-fluid rounded-4 shadow"  loading="lazy"  width="800" height="450" />
@@ -130,8 +124,7 @@ last_modified_at: 2026-03-20
 
 <hr>
 <h2>Should Distance Be in km or m for FSPL?</h2>
-<p>In the standard engineering formula, distance must be entered in <strong>kilometers (km)</strong> and frequency in <strong>MHz</strong>.  
-If you use meters or GHz, you must adjust the constant value in the formula.</p>
+<p>In the standard engineering formula, distance must be entered in <strong>kilometers (km)</strong> and frequency in <strong>MHz</strong>. If you use meters or GHz, you must adjust the constant value in the formula.</p>
 
 <p>For example:</p>
 <ul><li>Distance in meters → constant becomes 147.55</li><li>Frequency in GHz → adjust formula accordingly</li></ul>
@@ -170,42 +163,37 @@ If you use meters or GHz, you must adjust the constant value in the formula.</p>
 </ul>
 
 <!-- FAQ Section -->
- <section class="mb-5 pt-4">
-        <h2 class="mb-4">FAQ on Calculator</h2>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary">1. What is FSPL?</div>
-            <p class="mb-0">FSPL (Free Space Path Loss) is the signal attenuation that occurs when a radio wave propagates through free space without obstacles.</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary">2. How do you calculate FSPL?</div>
-            <p class="mb-0">FSPL is calculated using:  <strong>20 log₁₀(d) + 20 log₁₀(f) + 32.44</strong>  where distance is in km and frequency in MHz.</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 3.Does FSPL depend on antenna gain?</div>
-            <p class="mb-0">No. FSPL depends only on distance and frequency. Antenna gains are included separately in link budget calculations.</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 4. Is FSPL higher at higher frequencies?</div>
-            <p class="mb-0">Yes. Path loss increases as frequency increases.</p>
-          </div>
-        </div>
-
-             {% include rf.html %}
-      </section>
-
-
-
+<section class="mb-5 pt-4">
+  <h2 class="mb-4">FAQ on Calculator</h2>
+   <div class="card mb-3 border-0 bg-light">
+     <div class="card-body ">
+      <div class="fw-bold text-primary">1. What is FSPL?</div>
+       <p class="mb-0">FSPL (Free Space Path Loss) is the signal attenuation that occurs when a radio wave propagates through free space without obstacles.</p>
+     </div>
+   </div>
+    <div class="card mb-3 border-0 bg-light">
+     <div class="card-body ">
+     <div class="fw-bold text-primary">2. How do you calculate FSPL?</div>
+     <p class="mb-0">FSPL is calculated using:  <strong>20 log₁₀(d) + 20 log₁₀(f) + 32.44</strong>  where distance is in km and frequency in MHz.</p>
+    </div>
+   </div>
+    <div class="card mb-3 border-0 bg-light">
+     <div class="card-body ">
+      <div class="fw-bold text-primary"> 3.Does FSPL depend on antenna gain?</div>
+       <p class="mb-0">No. FSPL depends only on distance and frequency. Antenna gains are included separately in link budget calculations.</p>
+      </div>
+     </div>
+   <div class="card mb-3 border-0 bg-light">
+    <div class="card-body ">
+     <div class="fw-bold text-primary"> 4. Is FSPL higher at higher frequencies?</div>
+      <p class="mb-0">Yes. Path loss increases as frequency increases.</p>
+     </div>
+   </div>
+    {% include rf.html %}
+  </section>
 
 
 <script src="{{ '/assets/js/free-spac-calc.js' | relative_url }}"></script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -247,21 +235,3 @@ If you use meters or GHz, you must adjust the constant value in the formula.</p>
 }
 </script>
 
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "BreadcrumbList",
- "itemListElement": [{
-   "@type": "ListItem",
-   "position": 1,
-   "name": "Home",
-   "item": "https://easycalculator.org/"
- },{
-   "@type": "ListItem",
-   "position": 2,
-   "name": "Free Space Path Loss Calculator",
-   "item": "https://easycalculator.org/free-space-path-loss-calculator"
- }]
-}
-</script>
