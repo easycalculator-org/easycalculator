@@ -244,8 +244,7 @@ That’s where the USA Car Loan Calculator on EasyCalculator.org becomes essenti
                                     <span class="fw-bold">$24,564</span>
                                 </li>
                             </ul>
-                            <div class="alert alert-info mt-3 mb-0">
-                                <i class="bi bi-info-circle"></i> A longer loan reduces monthly cost but increases interest by <strong>$744</strong>.
+                            <div class="alert alert-info mt-3 mb-0">A longer loan reduces monthly cost but increases interest by <strong>$744</strong>.
                             </div>
                         </div>
                     </div>

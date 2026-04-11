@@ -77,9 +77,9 @@ last_modified_at: 2026-03-11
 <!-- buttons -->
 
 <div class="row g-2 mb-4">
-<div class="col-md-4"><button class="btn btn-primary w-100 py-2 shadow-sm" id="calcSideCBtn"><i class="bi bi-calculator"></i>Solve Side c</button></div>
-<div class="col-md-4"><button class="btn btn-success w-100 py-2 shadow-sm" id="calcAngleCBtn"><i class="bi bi-compass"></i>Solve Angle C</button></div>
-<div class="col-md-4"><button class="btn btn-light border w-100 py-2" id="clearBtn"><i class="bi bi-arrow-repeat"></i>Reset</button></div>
+<div class="col-md-4"><button class="btn btn-primary w-100 py-2 shadow-sm" id="calcSideCBtn">Solve Side c</button></div>
+<div class="col-md-4"><button class="btn btn-success w-100 py-2 shadow-sm" id="calcAngleCBtn">Solve Angle C</button></div>
+<div class="col-md-4"><button class="btn btn-light border w-100 py-2" id="clearBtn">Reset</button></div>
 </div>
 
 <div class="text-center mb-3"><button class="btn btn-outline-secondary btn-sm" onclick="loadExample()">Load Example</button>

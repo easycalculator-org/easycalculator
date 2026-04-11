@@ -72,8 +72,8 @@ last_modified_at: 2026-02-03
  <div class="d-flex justify-content-between mb-3 p-3">
     <h4>Monthly Payment Breakdown</h4>
        <div>
-       <button id="downloadPdf" class="btn btn-success" disabled><i class="bi bi-download"></i> Download PDF</button>
-       <button id="shareResults" class="btn btn-info" disabled><i class="bi bi-share"></i> Share</button>
+       <button id="downloadPdf" class="btn btn-success" disabled>Download PDF</button>
+       <button id="shareResults" class="btn btn-info" disabled> Share</button>
       </div>
      </div>
 <div class="payment-breakdown">

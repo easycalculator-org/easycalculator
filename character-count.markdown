@@ -63,7 +63,7 @@ last_modified_at: 2026-02-03
       <section class="mb-5">
     <h2 class="h3 fw-bold mb-3 pb-2">What is the Character Count Tool?</h2>
 <p class="lead">A Character Count Tool is a web application that counts the number of characters in a given text. It is used to find out the length of text, often according to character limits set by the SMS sender operator, social media platforms, Meta Title, Meta description or writing assignment. our tool helps you monitor character and word counts in real time.</p>
-    <div class="alert alert-info mt-4"> <i class="bi bi-info-circle me-2"></i>Our tool is completely free, requires no sign-up, and works seamlessly on both desktop and mobile devices.</div>
+    <div class="alert alert-info mt-4"> Our tool is completely free, requires no sign-up, and works seamlessly on both desktop and mobile devices.</div>
 <!-- Features Section -->
 <section id="features" class="mb-5">
                     <h2 class="h3 fw-bold mb-4 border-bottom pb-2">Key Features</h2>

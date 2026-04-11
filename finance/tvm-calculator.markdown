@@ -177,7 +177,7 @@ last_modified_at: 2026-02-04
                 </div>
             </div>
  <div class="mt-4 p-4 bg-light rounded-3">
-      <h4 class="h5 fw-bold mb-3"><i class="bi bi-journal-bookmark-fill text-primary me-2"></i> Where:</h4>
+      <h4 class="h5 fw-bold mb-3"> Where:</h4>
         <p class="mb-1"><span class="fw-bold">PV (Present Value): </span> = The value of money today</p>
         <p class="mb-1"><span class="fw-bold">FV (Future Value):</span> = The value of money at a future date</p>
         <p class="mb-1"><span class="fw-bold">PMT (Payment): </span> = The fixed amount paid or received in each period (e.g., EMI, SIP, pension)</p>

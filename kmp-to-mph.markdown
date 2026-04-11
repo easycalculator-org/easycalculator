@@ -58,7 +58,7 @@ last_modified_at: 2026-02-03
 </ul>
 <div class="card border-light shadow-sm mb-4">
  <div class="card-body">
-  <h3 class="card-title text-primary"><i class="bi bi-alarm me-2"></i>What are KM/H and MPH?</h3>
+  <h3 class="card-title text-primary">What are KM/H and MPH?</h3>
   <p><strong> KM/H (Kilometers per Hour)</strong>  tells us how many kilometers something travels in one hour. Most countries around the world use km/h, including Canada, Australia, India, and most of Europe.</p>
 <p><strong> MPH (Miles per Hour) </strong> tells us how many miles something travels in one hour. The United States, United Kingdom (on roads), and a few other countries use mph.</p>
  </div>

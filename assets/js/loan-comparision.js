@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     `;
                     bestOptionCard.innerHTML = `
                         <div class="text-muted mb-3">
-                            <i class="bi bi-graph-up" style="font-size: 2rem;"></i>
+                           <i class="fa-solid fa-chart-line" style="font-size: 2rem;"></i>
                             <p class="mt-2">Calculate loans to see the best option</p>
                         </div>
                     `;

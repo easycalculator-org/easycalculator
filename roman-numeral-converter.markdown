@@ -81,7 +81,7 @@ last_modified_at: 2026-04-03
                 <div class="col-lg-6">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class=" bg-warning bg-opacity-10 py-3">
-                            <h2 class="h4 mb-0"><i class="bi bi-question-circle-fill text-warning me-2"></i>What Are Roman Numerals?</h2>
+                            <h2 class="h4 mb-0">What Are Roman Numerals?</h2>
                         </div>
                         <div class="card-body">
                             <p>Roman numerals use letters from the Latin alphabet to represent values. They are made of seven core symbols:</p>
@@ -106,7 +106,6 @@ last_modified_at: 2026-04-03
                                 </table>
                             </div>
                             <div class="alert alert-info mt-3">
-                                <i class="bi bi-info-circle-fill me-2"></i>
                                 The numerals are added or subtracted depending on their order.
                             <br><ul><li>VI = 6 = 5+1</li><li>IV = 4 = 5-1 </li><li>XL = 40 = 50-10 </li><li>XC = 90 = 100-10</li><li>100 in Roman numerals = C</li></ul>
                             </div>
@@ -117,7 +116,7 @@ last_modified_at: 2026-04-03
                 <div class="col-lg-6">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class=" bg-info bg-opacity-10 py-3 ">
-                            <h2 class="h4 mb-0"><i class="bi bi-table text-info me-2"></i>Roman Numerals 1-100 Chart</h2>
+                            <h2 class="h4 mb-0">Roman Numerals 1-100 Chart</h2>
                         </div>
                         <div class="card-body">
                             <p>Here's a useful chart to understand patterns between 1 and 100:</p>
@@ -142,13 +141,13 @@ last_modified_at: 2026-04-03
                                 </table>
                             </div>
            <div class="text-center mt-3">
-            <button class="btn btn-primary btn-lg px-5 py-3 mb-4" data-bs-toggle="modal" data-bs-target="#chartModal"><i class="bi bi-table me-2"></i>View Full Chart</button> </div>
+            <button class="btn btn-primary btn-lg px-5 py-3 mb-4" data-bs-toggle="modal" data-bs-target="#chartModal">View Full Chart</button> </div>
           </div>
 
 <div class="text-center p-4">
 <p class="mb-2 fw-semibold">📥 Download Roman Numerals 1–100 Chart (PDF)  </p>
  <p class="text-muted small mb-3"> Get a complete <strong>Roman numerals chart from 1 to 100 in PDF format</strong> for easy learning, printing, and offline use. This printable chart is perfect for students, teachers, and exam preparation. Quickly reference Roman numbers anytime without internet access.</p>
- <a href="/assets/files/roman/roman-numerals-1-100.pdf"  class="btn btn-success btn-sm px-4 py-2" download> <i class="bi bi-download me-1"></i>Download PDF  </a>
+ <a href="/assets/files/roman/roman-numerals-1-100.pdf"  class="btn btn-success btn-sm px-4 py-2" download>Download PDF  </a>
 </div>
   </div>
  </div>
@@ -262,12 +261,8 @@ last_modified_at: 2026-04-03
                     <div class="d-flex justify-content-between mb-3">
                         <span class="brand-logo">easy<span>calculator</span>.org</span>
                         <div class="d-flex gap-2">
-                            <button class="btn btn-sm btn-success" onclick="window.print()">
-                                <i class="bi bi-printer-fill me-1"></i>Print
-                            </button>
-                            <button class="btn btn-sm btn-danger" id="downloadPdfBtn">
-                                <i class="bi bi-file-earmark-pdf-fill me-1"></i>Download PDF
-                            </button>
+                            <button class="btn btn-sm btn-success" onclick="window.print()">Print</button>
+                            <button class="btn btn-sm btn-danger" id="downloadPdfBtn">Download PDF</button>
                         </div>
                     </div>
                     <div class="chart-print">

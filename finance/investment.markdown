@@ -151,7 +151,7 @@ last_modified_at: 2026-02-03
 <section class="mb-5 bg-info bg-opacity-10 p-5 rounded-3">
             <div class="row">
                 <div class="col-lg-10 mx-auto">
-                    <h2 class="text-center mb-4"><i class="bi bi-journal-bookmark"></i> Example Calculation</h2>
+                    <h2 class="text-center mb-4"> Example Calculation</h2>
                     <div class="card border-0 shadow-sm">
                         <div class="card-body p-4">
                             <p class="lead">Let's say you:</p>

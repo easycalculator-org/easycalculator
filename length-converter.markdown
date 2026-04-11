@@ -291,7 +291,7 @@ last_modified_at: 2026-02-03
 
 <!-- FAQ -->
 <section class="mb-5">
-            <h2 class="mb-4 pb-2 border-bottom"><i class="bi bi-question-circle me-2 text-primary"></i>Frequently Asked Questions</h2>
+            <h2 class="mb-4 pb-2 border-bottom">Frequently Asked Questions</h2>
             <div class="accordion" id="faqAccordion">
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="headingOne">

@@ -122,7 +122,7 @@ last_modified_at: 2026-02-03
                                 </div>
                             </div>
                         </div> 
-                        <button class="btn btn-calculate btn-lg" id="calculateBtn"> Calculate BMI <i class="bi bi-arrow-right"></i> </button>
+                        <button class="btn btn-calculate btn-lg" id="calculateBtn"> Calculate BMI </button>
                         <div class="result-container" id="resultContainer">
                             <h3>Your BMI Result</h3>
                             <div class="bmi-value" id="bmiValue">--</div>
@@ -138,7 +138,7 @@ last_modified_at: 2026-02-03
                             </div>
                         </div>
                         <div class="info-container">
-                            <h4 class="info-title"><i class="bi bi-info-circle"></i> About BMI</h4>
+                            <h4 class="info-title">About BMI</h4>
                             <p>Body Mass Index (BMI) is a measure of body fat based on height and weight that applies to adult men and women.</p>
                             <div class="row text-center">
                                 <div class="col-6 col-md-3">
