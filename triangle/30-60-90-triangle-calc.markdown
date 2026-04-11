@@ -2,7 +2,7 @@
 layout: default
 title: 30-60-90 Triangle Calculator | Find Sides, Area, Perimeter & Formula
 permalink: /30-60-90-triangle-calculator
-description: "Use this free 30-60-90 triangle calculator to find sides, hypotenuse, area, and perimeter instantly. Solve special right triangle problems using formulas and examples."
+description: "Use this free 30-60-90 triangle calculator to find sides, hypotenuse, and perimeter instantly. Solve special right triangle problems using formulas and examples."
 image: "/assets/images/og/30-60-90-triangle-calculator.jpg"
 last_modified_at: 2026-04-10
 ---
@@ -123,7 +123,7 @@ last_modified_at: 2026-04-10
 </div>
 
 <div class="row align-items-center p-4 ">
-  <!-- LEFT SIDE (TEXT) -->
+  <!-- LEFT -->
   <div class="col-md-6 bg-light rounded-3 p-4 ">
     <h3 class="h5 fw-bold mb-3">30-60-90 Triangle Side Ratio</h3>
     <p class="mb-2">The sides follow this fixed ratio:</p>
@@ -139,34 +139,23 @@ last_modified_at: 2026-04-10
       </tbody>
     </table>
   </div>
-  <!-- RIGHT SIDE (IMAGE) -->
+  <!-- RIGHT -->
   <div class="col-md-6 text-center mt-4 mt-md-0">
     <img src="/assets/images/30-60-90-triangle.svg" alt="30-60-90 triangle diagram showing 1 sqrt 3 2 ratio with labeled sides" class="img-fluid rounded shadow-sm"  loading="lazy" width="400" height="300">
   </div>
-
 </div>
-
-
-
-
-
-
 
 
 <!-- Area and Perimeter -->
 <div class="card shadow-sm mb-4">
 <div class="card-body">
-
 <h3 class="h5 fw-bold mb-3">Area and Perimeter</h3>
-
 <div class="row g-3">
-
 <div class="col-md-6">
 <div class="border rounded p-3 bg-light">
 <h6 class="fw-bold">Area Formula</h6>
 <p class="mb-1">Area = ½ × a × b</p>
 <p class="mb-0">Area = (√3 / 2)a²</p>
-
 </div>
 </div>
 
@@ -176,7 +165,6 @@ last_modified_at: 2026-04-10
 <h6 class="fw-bold">Perimeter Formula</h6>
 <p class="mb-1">Perimeter = a + b + c</p>
 <p class="mb-0">Perimeter = a(3 + √3)</p>
-
 </div>
 </div>
 
