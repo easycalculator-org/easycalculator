@@ -124,7 +124,7 @@ last_modified_at: 2026-04-10
 
 <div class="row align-items-center p-4 ">
   <!-- LEFT SIDE (TEXT) -->
-  <div class="col-md-6 bg-light rounded-3 mb-4">
+  <div class="col-md-6 bg-light rounded-3 p-4 ">
     <h3 class="h5 fw-bold mb-3">30-60-90 Triangle Side Ratio</h3>
     <p class="mb-2">The sides follow this fixed ratio:</p>
     <p class="fw-semibold fs-5 text-primary mb-3">1 : √3 : 2</p>
