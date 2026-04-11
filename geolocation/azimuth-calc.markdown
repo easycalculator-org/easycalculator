@@ -18,7 +18,7 @@ last_modified_at: 2026-02-28
  .result-card:hover{  transform: translateY(-2px);  box-shadow:0 12px 28px rgba(0,0,0,0.10);}
 </style>
 
-<div aria-label="breadcrumb" class="mb-3 p-3">
+<div aria-label="breadcrumb" class="p-3">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
     <li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li>
@@ -27,7 +27,7 @@ last_modified_at: 2026-02-28
 </div>
 
  <div class="col-12 col-xl-11">
-  <div class="text-primary p-4">
+  <div class="text-primary">
    <h1>Azimuth Calculator</h1>
     <div class="row g-4">
     <div class="col-12 col-md-5">
@@ -201,7 +201,7 @@ last_modified_at: 2026-02-28
 
 <!-- FAQ Section -->
 <section class="p-4">
-  <h2 class="mb-4">FAQ on Calculator</h2>
+  <h2 class="mb-4">FAQ on Azimuth Calculator</h2>
    <div class="card mb-3 border-0 bg-light">
      <div class="card-body ">
        <div class="fw-bold text-primary">1. What is an azimuth angle?</div>
@@ -233,7 +233,9 @@ last_modified_at: 2026-02-28
        </div>
      </div>
    </section>
-      <!-- Did You Know? -->
+<!-- Did You Know? -->
+
+{% include geolocation.html %}
 
 </section>
 <script src="{{ '/assets/js/azimuth-calc.js' | relative_url }}"></script>
