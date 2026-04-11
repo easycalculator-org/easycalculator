@@ -219,7 +219,15 @@ last_modified_at: 2026-04-10
             <p class="mb-0"> The long leg (opposite 60°) is found by multiplying the short leg by <strong>√3</strong>.  <br>Formula: <strong>b = a√3</strong></p>
           </div>
         </div>
-
+<div class="card mb-3 border-0 bg-light">
+  <div class="card-body">
+    <div class="fw-bold text-primary">6. Why is the ratio 1 : √3 : 2?</div>
+    <p class="mb-0">
+      This ratio comes from dividing an equilateral triangle into two right triangles, 
+      which creates angles of 30°, 60°, and 90°.
+    </p>
+  </div>
+</div>
 
 </section>
 
@@ -232,7 +240,6 @@ last_modified_at: 2026-04-10
 "@context": "https://schema.org",
 "@type": "FAQPage",
 "mainEntity": [
-
 {
 "@type": "Question",
 "name": "What is the ratio of a 30-60-90 triangle?",
@@ -241,7 +248,6 @@ last_modified_at: 2026-04-10
 "text": "The sides of a 30-60-90 triangle follow the ratio 1 : √3 : 2, where the shortest side is opposite 30°, the longest side (hypotenuse) is opposite 90°, and the middle side is opposite 60°."
 }
 },
-
 {
 "@type": "Question",
 "name": "What is the formula for area of a 30-60-90 triangle?",
@@ -277,7 +283,16 @@ last_modified_at: 2026-04-10
 "text": "The hypotenuse is found by multiplying the shortest side by 2. Formula: c = 2a."
 }
 }
-
 ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "30-60-90 Triangle Calculator",
+ "applicationCategory": "Calculator",
+ "operatingSystem": "Web"
 }
 </script>
