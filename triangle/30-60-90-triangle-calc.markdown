@@ -1,22 +1,18 @@
 ---
 layout: default
-title: 30-60-90 Triangle Calculator (Find Sides, Area & Perimeter)
+title: 30-60-90 Triangle Calculator | Find Sides, Area, Perimeter & Formula
 permalink: /30-60-90-triangle-calculator
-description: "Use the 30-60-90 triangle calculator to find missing sides, area, and perimeter instantly. Enter any value to solve the special right triangle using the 1:√3:2 ratio."
-last_modified_at: 2026-03-11
+description: "Use this free 30-60-90 triangle calculator to find sides, hypotenuse, area, and perimeter instantly. Solve special right triangle problems using formulas and examples."
+image: "/assets/images/og/30-60-90-triangle-calculator.jpg"
+last_modified_at: 2026-04-10
 ---
 
 <div class="py-4">
-<p class="fs-2 fw-bold">30-60-90 Triangle Calculator</p>
-<p class="text-muted">Use this calculator to find the sides, area and perimeter of a special right triangle. Enter any side and the calculator will compute the remaining values automatically.</p>
-
-<!-- Calculator Card -->
-
-<div class="card shadow-sm mb-4 border-0">
+<h1>30-60-90 Triangle Calculator</h1>
+<div class="card shadow mb-4 border-0">
 <div class="card-body">
 <div class="row g-4">
 <!-- Inputs -->
-
 <div class="col-md-5">
 <label class="form-label fw-semibold">Short leg (a)</label>
 <input type="number" step="any" id="shortLeg" class="form-control mb-3" placeholder="Enter short side (opposite 30°)" autocomplete="off">
@@ -72,9 +68,12 @@ last_modified_at: 2026-03-11
     <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
   </div>
 <!-- Article-->
-<h1>30-60-90 Triangle Calculator</h1>
+<h2>30-60-90 Triangle Calculator</h2>
 <p>The <strong>30-60-90 triangle calculator</strong> helps you quickly find the sides, area, and perimeter of a special right triangle whose angles are <strong>30&deg;, 60&deg;, and 90&deg;</strong>. By entering any one side, the calculator automatically computes the remaining sides using the well-known <strong>1 : &radic;3 : 2 ratio</strong>.</p>
 <p>This triangle appears frequently in <strong>geometry, trigonometry, architecture, and engineering</strong>, so understanding its properties can make many math problems easier to solve.</p>
+
+<div class="alert alert-success"><strong>30-60-90 Triangle Formula:</strong><br>Short side = x<br>Long side = x√3<br>Hypotenuse = 2x</div>
+
 <h2>What Is a 30-60-90 Triangle?</h2>
 <p>A <strong>30-60-90 triangle</strong> is a special right triangle where the three interior angles measure:</p>
 <ul class="mb-3">
@@ -87,9 +86,6 @@ last_modified_at: 2026-03-11
 
 <p class="mb-0">Since it contains a right angle, the triangle follows the<strong>Pythagorean theorem</strong>.</p>
 <div class="alert alert-primary text-center fw-bold mt-3">a² + b² = c²</div>
-
-
-
 
 <!-- Formula Section -->
 <div class="row g-4 mb-4 pt-4">
@@ -126,19 +122,28 @@ last_modified_at: 2026-03-11
 </div>
 </div>
 
-<div class="bg-light p-4 rounded-3 mb-4">
-<h3 class="h5 fw-bold mb-3">30-60-90 Triangle Side Ratio</h3>
-<p class="mb-2">The sides follow this fixed ratio:</p>
-<p class="fw-semibold fs-5 text-primary mb-3">1 : √3 : 2</p>
-<table class="table table-sm mb-0">
-<thead><tr><th>Side</th><th>Description</th></tr></thead>
+<div class="row align-items-center p-4 ">
+  <!-- LEFT SIDE (TEXT) -->
+  <div class="col-md-6 bg-light rounded-3 mb-4">
+    <h3 class="h5 fw-bold mb-3">30-60-90 Triangle Side Ratio</h3>
+    <p class="mb-2">The sides follow this fixed ratio:</p>
+    <p class="fw-semibold fs-5 text-primary mb-3">1 : √3 : 2</p>
+    <table class="table table-sm mb-0">
+      <thead>
+        <tr><th>Side</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>a</td><td>Short leg (opposite 30°)</td></tr>
+        <tr><td>b</td><td>Long leg (opposite 60°)</td></tr>
+        <tr><td>c</td><td>Hypotenuse (opposite 90°)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- RIGHT SIDE (IMAGE) -->
+  <div class="col-md-6 text-center mt-4 mt-md-0">
+    <img src="/assets/images/30-60-90-triangle.svg" alt="30-60-90 triangle diagram showing 1 sqrt 3 2 ratio with labeled sides" class="img-fluid rounded shadow-sm"  loading="lazy" width="400" height="300">
+  </div>
 
-<tbody>
-<tr><td>a</td><td>Short leg (opposite 30°)</td></tr>
-<tr><td>b</td><td>Long leg (opposite 60°)</td></tr>
-<tr><td>c</td><td>Hypotenuse (opposite 90°)</td></tr>
-</tbody>
-</table>
 </div>
 
 
@@ -182,57 +187,97 @@ last_modified_at: 2026-03-11
 
 <!-- FAQ Section -->
  <section class="mb-5">
-        <h2 class="mb-4">FAQ</h2>
+        <h2 class="mb-4">FAQ on 30-60-90 Triangle Calculator</h2>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
             <div class="fw-bold text-primary">1. What is the ratio of a 30-60-90 triangle?</div>
-            <p class="mb-0">The side ratio is <strong>1 : √3 : 2</strong>.</p>
+            <p class="mb-0">The sides of a 30-60-90 triangle always follow the fixed ratio <strong>1 : √3 : 2</strong>, where the shortest side is opposite 30°, 
+          the longest side (hypotenuse) is opposite 90°, and the middle side is opposite 60°.</p>
           </div>
         </div>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
-            <div class="fw-bold text-primary"> 2. How do you find the hypotenuse?</div>
-            <p class="mb-0">Multiply the shortest side by <strong>2</strong>.</p>
+            <div class="fw-bold text-primary"> 2.  What is the formula for area of a 30-60-90 triangle?</div>
+            <p class="mb-0"> The area is calculated using: <br><strong>Area = (√3 / 2) × a²</strong> where <strong>a</strong> is the shortest side.</p>
           </div>
         </div>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
-            <div class="fw-bold text-primary"> 3. How do you find the long leg?</div>
-            <p class="mb-0"> Multiply the short leg by <strong>√3</strong>.</p>
+            <div class="fw-bold text-primary"> 3. How do you solve a 30-60-90 triangle?</div>
+            <p class="mb-0">You can solve a 30-60-90 triangle by using the fixed ratio <strong>1 : √3 : 2</strong>.  If you know one side, you can calculate the other two sides using simple multiplication.</p>
           </div>
         </div>
-        <div class="card mb-3 border-0 bg-light">
+<div class="card mb-3 border-0 bg-light">
+  <div class="card-body ">
+    <div class="fw-bold text-primary"> 4. Where are 30-60-90 triangles used?</div>
+     <p class="mb-0">These triangles are widely used in <strong>geometry, trigonometry, engineering, architecture, construction, and RF planning</strong> because of their predictable side ratios.</p>
+   </div>
+  </div>
+   <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
-            <div class="fw-bold text-primary"> 4. Where are 30-60-90 triangles used?</div>
-            <p class="mb-0">They appear in geometry, engineering, architecture, and trigonometry problems.</p>
+            <div class="fw-bold text-primary">5. How do you calculate the long leg?</div>
+            <p class="mb-0"> The long leg (opposite 60°) is found by multiplying the short leg by <strong>√3</strong>.  <br>Formula: <strong>b = a√3</strong></p>
           </div>
         </div>
-      </section>
+
+
+</section>
+
+      {% include triangle.html%}
       <!-- Did You Know? -->
 
 <script src="{{ '/assets/js/triangle/30-60-90-triangle-calc.js' | relative_url }}"></script>
-
 <script type="application/ld+json">
 {
-"@context":"https://schema.org",
-"@type":"FAQPage",
-"mainEntity":[
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+
 {
-"@type":"Question",
-"name":"What is the ratio of a 30-60-90 triangle?",
-"acceptedAnswer":{
-"@type":"Answer",
-"text":"The side ratio of a 30-60-90 triangle is 1 : √3 : 2."
+"@type": "Question",
+"name": "What is the ratio of a 30-60-90 triangle?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "The sides of a 30-60-90 triangle follow the ratio 1 : √3 : 2, where the shortest side is opposite 30°, the longest side (hypotenuse) is opposite 90°, and the middle side is opposite 60°."
 }
 },
+
 {
-"@type":"Question",
-"name":"How do you find the hypotenuse in a 30-60-90 triangle?",
-"acceptedAnswer":{
-"@type":"Answer",
-"text":"Multiply the shortest side by 2 to get the hypotenuse."
+"@type": "Question",
+"name": "What is the formula for area of a 30-60-90 triangle?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "The area of a 30-60-90 triangle is calculated using Area = (√3 / 2) × a², where a is the shortest side."
+}
+},
+
+{
+"@type": "Question",
+"name": "How do you solve a 30-60-90 triangle?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "You can solve a 30-60-90 triangle using the ratio 1 : √3 : 2. If one side is known, the other sides can be calculated using simple multiplication."
+}
+},
+
+{
+"@type": "Question",
+"name": "Where are 30-60-90 triangles used?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "30-60-90 triangles are used in geometry, trigonometry, engineering, architecture, construction, and RF planning because of their predictable side ratios."
+}
+},
+
+{
+"@type": "Question",
+"name": "How do you find the hypotenuse in a 30-60-90 triangle?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "The hypotenuse is found by multiplying the shortest side by 2. Formula: c = 2a."
 }
 }
+
 ]
 }
 </script>
