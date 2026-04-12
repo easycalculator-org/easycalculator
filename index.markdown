@@ -349,11 +349,11 @@ last_modified_at: 2026-04-12
 
 <h2>Editorial & Accuracy Policy</h2>
 <p>All calculators on EasyCalculator.org are built using verified formulas and reviewed periodically for accuracy. <br>Have a question or found an issue? <a href="/contact">Contact our team</a>. </p>
-
+</section>
 
 
 <!-- FAQ Section -->
-<section class="mb-5">
+<section class="p-4">
   <h2 class="mb-4">FAQ on Easy Calculator</h2>
    <div class="card mb-3 border-0 bg-light">
      <div class="card-body ">
@@ -389,7 +389,7 @@ last_modified_at: 2026-04-12
 
 
 
-</section>
+
 <script src="{{ '/assets/js/scientific-calculator.js' | relative_url }}"></script>
 <script type="application/ld+json">
 {
