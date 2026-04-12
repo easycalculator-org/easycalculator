@@ -115,8 +115,8 @@ last_modified_at: 2026-04-12
 <h2>Conversion Tool</h2><p>Convert numbers, units, temperature, and formats with accurate online tools.</p>
 <div class="row p-3 ">
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/number-to-word-converter"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-up-a-z fa-xl"></i><h5>Num to Word</h5></div></a> </div>
- <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-weight-scale fa-xl"></i><h5>Weight Converter</h5></div> </a></div>
- <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-shapes fa-xl"></i><h5>Area Converter</h5></div></a></div></div>
+ <!-- <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-weight-scale fa-xl"></i><h5>Weight Converter</h5></div> </a></div>
+ <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-shapes fa-xl"></i><h5>Area Converter</h5></div></a></div></div> -->
 
  <!-- conversion-tool end-->
 <!-- Math Calculator -->
@@ -151,14 +151,14 @@ last_modified_at: 2026-04-12
 <h2>Speed Test </h2>
 <div class="row g-1 p-3 ">
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/train-speed-test"><div class="calculator-box text-center"><i class="fa-solid fa-train fa-xl"></i><h5>Train Speed Test</h5></div></a> </div>
- <div class="col-md-3  p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-bus fa-xl"></i><h5>Bus Speed Test</h5></div></a></div>
+ <!-- <div class="col-md-3  p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-bus fa-xl"></i><h5>Bus Speed Test</h5></div></a></div> -->
 
 </div>
  <!-- Speed Test end-->
 
 <!-- Hero Section -->
 <section class="hero-section shadow-sm p-4 rounded-2">
-   <h1>Free Online Calculators — Easy Calculator for Finance, Math RF, Geolocation & More</h1>
+   <h1>Free Online Calculators — Easy Calculator for Finance, Math, RF, Geolocation & More</h1>
      <p class="lead mb-4">Welcome to EasyCalculator.org, your one-stop platform for free online calculators, conversion tools, and smart utilities. Whether you're calculating a loan EMI, converting currencies, or solving math problems, our tools are accurate, fast, and easy to use—no downloads or sign-ups required.</p>
   <h3 class="mb-3">Popular Calculators</h3>
       <div class="flex-wrap justify-content-center gap-3">
