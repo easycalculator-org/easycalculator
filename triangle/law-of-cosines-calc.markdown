@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Law of Cosines Calculator – Solve Triangle with Cosine Rule
+title: Law of Cosines Calculator – Formula, Examples & Step-by-Step Solution
 permalink: /law-of-cosines-calculator
-description: "Use the Law of Cosines Calculator to calculate triangle sides or angles using the cosine rule."
-last_modified_at: 2026-03-11
+description: "Use our Law of Cosines Calculator to solve any triangle. Includes formula, examples, and step-by-step solutions for fast results."
+image: "/assets/images/og/law-of-cosines.jpg"
+last_modified_at: 2026-04-13
 ---
 
 <style>
@@ -15,7 +16,7 @@ last_modified_at: 2026-03-11
 <div class="row justify-content-center">
 <div class="col-lg-10 col-xl-8">
 
-<div class="card shadow border-0 rounded-2">
+<div class="card shadow border-0 rounded-3 overflow-hidden">
 <div class="bg-primary text-white  text-center py-3">
 <h1>Law of Cosines Calculator</h1>
 <p class="small mb-0 opacity-75">Find a missing side or angle of any triangle using the law of cosines</p>
@@ -132,17 +133,24 @@ last_modified_at: 2026-03-11
 
 <hr class="my-4">
 
-<h2>What is the Law of Cosines?</h2>
+<div class="row align-items-center g-4 mb-4">
+  <div class="col-lg-6">
+    <h2 class="fw-bold mb-3">What is the Law of Cosines?</h2>
+    <p>The <strong>Law of Cosines</strong> is a mathematical formula that relates the three sides of a triangle  to the cosine of one of its angles. It works for <strong>all types of triangles</strong>, including  acute, obtuse, and right triangles.</p>
+    <div class="alert alert-primary text-center fs-5 fw-semibold"> \(c^2 = a^2 + b^2 - 2ab\cos(C)\) </div>
+    <ul class="list-group list-group-flush mb-3">
+      <li class="list-group-item"><strong>a, b, c</strong> = sides of the triangle</li>
+      <li class="list-group-item"><strong>C</strong> = angle opposite side <strong>c</strong></li>
+      <li class="list-group-item"><strong>cos</strong> = cosine trigonometric function</li>
+    </ul>
+  </div>
+  <!-- RIGHT: Image -->
+  <div class="col-lg-6 text-center">
+    <img src="/assets/images/law-of-cosines.svg"   alt="Law of Cosines triangle diagram showing sides a b c and angle C with formula c squared equals a squared plus b squared minus 2ab cos C"
+         class="img-fluid rounded shadow-sm" width="700" height="350" loading="lazy">
+  </div>
+</div>
 
-<p>The <strong>Law of Cosines</strong> is a mathematical formula that relates the three sides of a triangle to the cosine of one of its angles. It works for <strong>all types of triangles</strong>, including acute, obtuse, and right triangles.</p>
-
-<div class="alert alert-primary text-center fs-5">\(c^2 = a^2 + b^2 - 2ab\cos(C)\)</div>
-
-<ul class="list-group list-group-flush mb-4">
-<li class="list-group-item"><strong>a, b, c</strong> = sides of the triangle</li>
-<li class="list-group-item"><strong>C</strong> = angle opposite side <strong>c</strong></li>
-<li class="list-group-item"><strong>cos</strong> = cosine trigonometric function</li>
-</ul>
 
 <hr class="my-4">
 
@@ -161,7 +169,6 @@ last_modified_at: 2026-03-11
 <li class="list-group-item"><strong>c</strong> = side opposite angle <strong>C</strong></li>
 <li class="list-group-item"><strong>C</strong> = the included angle between sides <strong>a</strong> and <strong>b</strong></li>
 </ul>
-
 <p>The formula works by subtracting the value of <strong>2ab cos(C)</strong> from the sum of the squares of sides <strong>a</strong> and <strong>b</strong>. The result gives the square of side <strong>c</strong>. Taking the square root provides the final side length.</p>
 
 <h5 class="mt-4">Alternative Forms of the Law of Cosines</h5>
@@ -402,8 +409,10 @@ last_modified_at: 2026-03-11
         </div>
        </section>
       <!-- Did You Know? -->
-
+{% include triangle.html %}
 </div>
+
+
 
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script defer src="{{ '/assets/js/triangle/law-of-cosines-calc.js' | relative_url }}"></script>
