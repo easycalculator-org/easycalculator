@@ -2,7 +2,7 @@
 layout: default
 title: Law of Cosines Calculator – Formula, Examples & Step-by-Step Solution
 permalink: /law-of-cosines-calculator
-description: "Use our Law of Cosines Calculator to solve any triangle. Includes formula, examples, and step-by-step solutions for fast results."
+description: "Use our Law of Cosines Calculator to solve any triangle instantly. Get the formula, step-by-step examples, and solutions for missing sides and angles."
 image: "/assets/images/og/law-of-cosines.jpg"
 last_modified_at: 2026-04-13
 ---
