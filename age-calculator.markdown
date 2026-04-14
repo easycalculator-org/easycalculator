@@ -1,7 +1,7 @@
 ---
 layout: default
 #title: Age Calculator | Calculate My Age today | find my age
-title:  Age Calculator – Find Your Exact Age in Years, Months & Days
+title:  Age Calculator (DOB) – Calculate Your Exact Age Instantly in Years, Months & Days
 permalink: /age-calculator
 description: "Use our free Age Calculator to find your age from your birth date or see the age difference in days. It's quick and easy to find your age today!"
 image: "/assets/images/og/age-calculator-formula-example.jpg"
@@ -15,6 +15,7 @@ last_modified_at: 2026-04-04
     <div class="card shadow-lg border-0 rounded-4 p-4">
       <div class="text-center mb-4">
         <h1>Age Calculator</h1>
+        <p class="lead text-center text-muted">Calculate your exact age instantly (Years, Months, Days, Hours, Minutes & Seconds)</p>
       </div>
       <div class="row g-3 mb-3">
         <div class="col-md-6">
