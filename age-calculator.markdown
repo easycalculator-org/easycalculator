@@ -9,54 +9,45 @@ last_modified_at: 2026-04-04
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<style>
-   #results { display: none; transition: all 0.4s ease-in-out; }
-   #results.show { display: block; opacity: 1; transform: translateY(0); }
-   #results h3 { font-weight: bold; margin-bottom: 15px; }
-   #results .list-group-item { font-size: 1rem; background: #fff; border: none; margin-bottom: 8px; padding: 15px 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); border-radius: 12px; }
-   .input-group .form-control { border-right: none; }
-   .input-group .input-group-text { background: #fff; border-left: none; }
-</style>
 
-<div class="mt-5">
-    <h1 class="text-center mb-4">Age Calculator</h1>
-    <div class="card shadow p-4">
-      <form id="ageForm">
-        <div class="row mb-4 gap-4 p-3">
-          <div class="col-md-5 mx-auto">
-            <label for="startDate" class="form-label"><strong>Start Date</strong></label>
-            <div class="input-group">
-              <input type="text" id="startDate" class="form-control flatpickr" placeholder="Select start date" required>
-              <span class="input-group-text bg-light"><i class="fa-solid fa-calendar-day text-primary"></i></span>
-            </div>
-          </div>
-          <div class="col-md-5 mx-auto">
-            <label for="endDate" class="form-label"><strong>End Date</strong></label>
-            <div class="input-group">
-              <input type="text" id="endDate" class="form-control flatpickr" placeholder="Select end date" required>
-              <span class="input-group-text bg-light"><i class="fa-solid fa-calendar-day text-primary"></i></span>
-            </div>
-          </div>
-        </div>
-        <div class="text-center p-4">
-          <button type="button" id="calculateBtn" class="btn btn-primary">Calculate Age</button>
-        </div>
-      </form>
-
-<div class="mt-4" id="results">
-        <h3 class="text-center">Your Age Results</h3>
-         <ul class="list-group">
-          <li class="list-group-item fs-5" id="result1"></li>
-          <li class="list-group-item fs-5" id="result2"></li>
-          <li class="list-group-item fs-5" id="result3"></li>
-          <li class="list-group-item fs-5" id="result4"></li>
-          <li class="list-group-item fs-5" id="result5"></li>
-          <li class="list-group-item fs-5" id="result6"></li>
-          <li class="list-group-item fs-5" id="result7"></li>
-        </ul>
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-xl-7">
+    <div class="card shadow-lg border-0 rounded-4 p-4">
+      <div class="text-center mb-4">
+        <h1>Age Calculator</h1>
       </div>
-    </div>
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <label class="form-label fw-semibold">Start Date</label>
+          <div class="input-group">
+              <input type="text" id="startDate" class="form-control flatpickr" placeholder="Select start date" required="" />
+              <span class="input-group-text bg-light"><i class="fa-solid fa-calendar-day text-primary"></i></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label fw-semibold">End Date</label>
+            <div class="input-group">
+              <input type="text" id="endDate" class="form-control flatpickr" placeholder="Select end date" required="" />
+              <span class="input-group-text bg-light"><i class="fa-solid fa-calendar-day text-primary"></i></span>
+            </div>
+        </div>
+      </div>
+   <div id="mainResult" class="text-center p-3 rounded-4 mb-3 d-none"  style="background: linear-gradient(135deg,#0d6efd,#4dabf7); color:white;">
+        <h3 class="mb-0" id="result1">—</h3>
+        <small>Total Age</small>
+      </div>
+  <div id="resultsWrapper" class="row g-3 d-none">
+    <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Total Weeks</small><h5 id="result2">—</h5></div> </div>
+    <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Total Days</small><h5 id="result3">—</h5></div></div>
+    <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Total Months</small><h5 id="result4">—</h5> </div></div>
+    <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"> <small>Total Hours</small> <h5 id="result5">—</h5> </div></div>
+    <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Total Minutes</small><h5 id="result6">—</h5></div></div>
+    <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Weekdays</small> <h5 id="result7">—</h5></div> </div>
+   </div>
   </div>
+  </div>
+</div>
+
 
 
 <!-- Article Content -->
@@ -83,19 +74,19 @@ last_modified_at: 2026-04-04
    <div class="alert alert-info border-0"><p class="mb-0"><strong>Example:</strong> If someone was born on April 10, 2000, and today is April 10, 2025, their chronological age is exactly 25 years.</p></div>
 <div class="card border-light shadow-sm mb-4">
  <div class="card-body">
-   <h2 class="card-title text-primary">Birth Time Options for Precision</h2>
-     <p>Including the exact time of birth can greatly enhance the accuracy of age calculations. While most standard age calculators only require a birth date, adding the birth time allows for a much more precise result—down to the hour, minute, and even second. This level of detail is especially important in areas like astrology, legal documentation, and medical records.</p>
-      <h3 class="mt-4">Examples of Time Calculations</h3>
-          <p>Our Age Calculator formula can provide various results, including:</p>
-              <ul>
+  <h2 class="card-title text-primary">Birth Time Options for Precision</h2>
+   <p>Including the exact time of birth can greatly enhance the accuracy of age calculations. While most standard age calculators only require a birth date, adding the birth time allows for a much more precise result—down to the hour, minute, and even second. This level of detail is especially important in areas like astrology, legal documentation, and medical records.</p>
+    <h3 class="mt-4">Examples of Time Calculations</h3>
+       <p>Our Age Calculator formula can provide various results, including:</p>
+            <ul>
                <li>Age in years and months (e.g., 21 years and 3 months)</li>
                <li>Days since birth (e.g., 7,665 days old)</li>
                <li>Age in weeks (e.g., 1,095 weeks)</li>
                <li>Upcoming milestone birthdays (like turning 18 or 65)</li>
               </ul>
-            <p>These time for calculation examples are help people plan events, meet deadlines, or simply understand how much time has passed.</p>
-                    </div>
-                </div>
+     <p>These time for calculation examples are help people plan events, meet deadlines, or simply understand how much time has passed.</p>
+    </div>
+   </div>
 <div class="card border-light shadow-sm mb-4">
   <div class="card-body">
     <h2 class="card-title text-primary"> Why is Age important?</h2>
@@ -103,8 +94,7 @@ last_modified_at: 2026-04-04
     <div class="row mt-4">
       <!-- LEFT -->
       <div class="col-md-6">
-        <div class="d-flex mb-3">
-          <i class="fa-solid fa-user-check fs-4 text-primary me-3"></i>
+        <div class="d-flex mb-3"><i class="fa-solid fa-user-check fs-4 text-primary me-3"></i>
           <div>
             <h5>Personal Growth</h5>
             <p class="mb-0">Age helps track life stages like childhood, teenage years, adulthood, and senior years.</p>
@@ -151,53 +141,49 @@ last_modified_at: 2026-04-04
       </div>
     </div>
     <div class="alert alert-success border-0 mt-4">
-      <p class="mb-0">
-        <strong>In short, age helps us make sense of life and the world around us! 😊</strong>
-      </p>
+      <p class="mb-0"><strong>In short, age helps us make sense of life and the world around us! 😊</strong></p>
     </div>
 
   </div>
 </div>
 
 <div class="card border-light shadow-sm mb-4">
-    <div class="card-body">
-       <h2 class="card-title text-primary">🗓️ Date of Birth (DOB) Calculator</h2>
-         <p>A Date of Birth Calculator lets you quickly find out how old someone is by simply entering their birth date. It shows:</p>
+  <div class="card-body">
+   <h2 class="card-title text-primary">🗓️ Date of Birth (DOB) Calculator</h2>
+    <p>A Date of Birth Calculator lets you quickly find out how old someone is by simply entering their birth date. It shows:</p>
      <ul>
        <li>Age in years, months, and days</li>
        <li>Day of the week you were born</li>
        <li>Countdown to your next birthday</li>
       </ul>
-    <h3 class="mt-4">Age Difference Calculator</h3>
-    <p>Need to compare ages between two people? Our Age difference calculator helps you find the exact gap in years, months, and days—perfect for family planning, friendships, or legal purposes.</p> 
-   <h3 class="mt-4">Find my age today</h3>
-    <p>To find out your age today, just enter your date of birth in the Start date field and click on calculate to find your age today. Our tool will show you your age in total years and days.</p>
+<h3 class="mt-4">Age Difference Calculator</h3>
+ <p>Need to compare ages between two people? Our Age difference calculator helps you find the exact gap in years, months, and days—perfect for family planning, friendships, or legal purposes.</p> 
+ <h3 class="mt-4">Find my age today</h3>
+ <p>To find out your age today, just enter your date of birth in the Start date field and click on calculate to find your age today. Our tool will show you your age in total years and days.</p>
                        
  <!-- highlight-box-->
 <div class="highlight-box">
  <h5><i class="fas fa-lightbulb text-warning me-2"></i>Example:</h5>
-  <p class="mb-0">A person born in 2003 will turn 21 years old in 2024. You can refer to the image below to determine your age, the month, and the number of weeks since your birth date.</p>
-    </div>
-
+ <p class="mb-0">A person born in 2003 will turn 21 years old in 2024. You can refer to the image below to determine your age, the month, and the number of weeks since your birth date.</p>
+</div>
  </div>
  </div>
 <img class="img-fluid d-flex" alt="Age calculator formula example showing years months and days calculation" src="/assets/images/age-calculator-formula-example.svg" fetchpriority="high" loading="auto" style="object-fit: contain;" title="Age Calculator Formula with Example">
-
  </section>
-      <!-- FAQ Section -->
-      <section class="mb-5">
-        <h2 class="mb-4">FAQ on Age Calculator</h2>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary">1. Why is age important?</div>
-            <p class="mb-0"> Age is important because it helps in personal growth tracking, healthcare decisions, educational placements, legal rights, cultural traditions, historical understanding, and more.</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 2. How do I find my exact age today?</div>
-            <p class="mb-0">Enter your date of birth in the Age Calculator and click "Calculate." The tool will display your exact age in years, months, days, and even hours if needed.</p>
-          </div>
+<!-- FAQ Section -->
+ <section class="mb-5">
+   <h2 class="mb-4">FAQ on Age Calculator</h2>
+    <div class="card mb-3 border-0 bg-light">
+     <div class="card-body ">
+      <div class="fw-bold text-primary">1. Why is age important?</div>
+      <p class="mb-0"> Age is important because it helps in personal growth tracking, healthcare decisions, educational placements, legal rights, cultural traditions, historical understanding, and more.</p>
+       </div>
+      </div>
+     <div class="card mb-3 border-0 bg-light">
+      <div class="card-body ">
+       <div class="fw-bold text-primary"> 2. How do I find my exact age today?</div>
+      <p class="mb-0">Enter your date of birth in the Age Calculator and click "Calculate." The tool will display your exact age in years, months, days, and even hours if needed.</p>
+       </div>
         </div>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
@@ -271,5 +257,6 @@ last_modified_at: 2026-04-04
 </script>
 
 
-<script src="{{ '/assets/js/age-calculator.js' | relative_url }}"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="{{ '/assets/js/age-calculator.js' | relative_url }}"></script>

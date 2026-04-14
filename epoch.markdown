@@ -9,10 +9,10 @@ last_modified_at: 2026-02-03
 <!-- Converter Tool -->
 <div class="converter-container">
   <div class="converter-header">
-    <h1 class="mb-2">Epoch Time Converter</h1>
+  <h1>Epoch Time Converter</h1>
      <p class="text-muted">Real-time conversion between epoch time and human-readable dates</p>
    </div> 
-      <div class="row">
+ <div class="row">
              <!-- Epoch to Human Date -->
                 <div class="col-lg-6 mb-4">
                     <div class="converter-section">

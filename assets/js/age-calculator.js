@@ -1,81 +1,73 @@
-document.addEventListener("DOMContentLoaded", function() {
-    flatpickr(".flatpickr", { dateFormat: "Y-m-d" });
-    document.getElementById('endDate').flatpickr().setDate(new Date());
 
-    document.getElementById('calculateBtn').addEventListener('click', function () {
-      const startDate = new Date(document.getElementById('startDate').value);
-      const endDate = new Date(document.getElementById('endDate').value);
+document.addEventListener("DOMContentLoaded", function () {
 
-      if (!startDate || !endDate || startDate > endDate) {
-        alert('Please select valid dates.');
-        return;
-      }
+  let startDate = null;
+  let endDate = new Date();
 
-      // Make copies of the dates to avoid modifying the originals
-      let start = new Date(startDate);
-      let end = new Date(endDate);
-      
-      // Calculate years
-      let years = end.getFullYear() - start.getFullYear();
-      
-      // Adjust years if end date is before the anniversary
-      if (end.getMonth() < start.getMonth() || 
-          (end.getMonth() === start.getMonth() && end.getDate() < start.getDate())) {
-        years--;
-      }
-      
-      // Calculate months
-      let months = end.getMonth() - start.getMonth();
-      if (months < 0) months += 12;
-      
-      // Adjust months if day of month hasn't been reached
-      if (end.getDate() < start.getDate()) {
-        months--;
-        if (months < 0) months += 12;
-      }
-      
-      // Calculate days
-      let tempDate = new Date(start);
-      tempDate.setFullYear(tempDate.getFullYear() + years);
-      tempDate.setMonth(tempDate.getMonth() + months);
-      
-      // Calculate the difference in days
-      const days = Math.floor((end - tempDate) / (1000 * 60 * 60 * 24));
+  const mainBox = document.getElementById("mainResult");
+  const resultBox = document.getElementById("resultsWrapper");
 
-      // Calculate total values using the original dates
-      const totalDays = Math.floor((endDate - startDate) / (1000 * 60 * 60 * 24));
-      const totalWeeks = Math.floor(totalDays / 7);
-      const totalMonths = years * 12 + months;
+  function calculate() {
+    if (!startDate || !endDate) return;
 
-      // Calculate weekdays (Monday to Friday)
-      let weekdays = 0;
-      let currentDate = new Date(startDate);
-      
-      // Set time to noon to avoid timezone issues
-      currentDate.setHours(12, 0, 0, 0);
-      let endDateTime = new Date(endDate);
-      endDateTime.setHours(12, 0, 0, 0);
-      
-      // Loop through each day and count weekdays (1 = Monday, 5 = Friday)
-      while (currentDate <= endDateTime) {
-        const dayOfWeek = currentDate.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-        if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Monday to Friday
-          weekdays++;
-        }
-        currentDate.setDate(currentDate.getDate() + 1);
-      }
+    if (startDate > endDate) {
+      mainBox.classList.add("d-none");
+      resultBox.classList.add("d-none");
+      return;
+    }
 
-      // Display results
-      document.getElementById('result1').textContent = `Years: ${years}, Months: ${months}, Days: ${days}`;
-      document.getElementById('result2').textContent = `Total Weeks: ${totalWeeks}`;
-      document.getElementById('result3').textContent = `Total Days: ${totalDays}`;
-      document.getElementById('result4').textContent = `Total Months: ${totalMonths}`;
-      document.getElementById('result5').textContent = `Total Hours: ${totalDays * 24}`;
-      document.getElementById('result6').textContent = `Total Minutes: ${totalDays * 24 * 60}`;
-      
-      // Add the new result for weekdays - you'll need an element with id="result7" in your HTML
-      document.getElementById('result7').textContent = `Weekdays (Mon-Fri): ${weekdays}`;
+    const diff = endDate - startDate;
 
-      document.getElementById('results').classList.add('show');
-    });
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const weeks = Math.floor(days / 7);
+    const months = Math.floor(days / 30.44);
+    const years = Math.floor(days / 365.25);
+
+    const hours = days * 24;
+    const minutes = hours * 60;
+
+    // Weekdays
+    let weekdays = 0;
+    let temp = new Date(startDate);
+
+    while (temp <= endDate) {
+      const day = temp.getDay();
+      if (day !== 0 && day !== 6) weekdays++;
+      temp.setDate(temp.getDate() + 1);
+    }
+
+    // MAIN RESULT
+    document.getElementById("result1").innerHTML =
+      `${years} Years ${months % 12} Months ${days % 30} Days`;
+
+    document.getElementById("result2").innerHTML = weeks;
+    document.getElementById("result3").innerHTML = days;
+    document.getElementById("result4").innerHTML = months;
+    document.getElementById("result5").innerHTML = hours.toLocaleString();
+    document.getElementById("result6").innerHTML = minutes.toLocaleString();
+    document.getElementById("result7").innerHTML = weekdays;
+
+    mainBox.classList.remove("d-none");
+    resultBox.classList.remove("d-none");
+  }
+
+  flatpickr("#startDate", {
+    dateFormat: "Y-m-d",
+    maxDate: "today",
+    onChange: function (selectedDates) {
+      startDate = selectedDates[0];
+      calculate();
+    }
   });
+
+  flatpickr("#endDate", {
+    dateFormat: "Y-m-d",
+    defaultDate: "today",
+    maxDate: "today",
+    onChange: function (selectedDates) {
+      endDate = selectedDates[0];
+      calculate();
+    }
+  });
+
+});
