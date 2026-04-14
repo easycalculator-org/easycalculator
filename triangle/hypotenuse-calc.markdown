@@ -153,7 +153,7 @@ So, the hypotenuse is <strong>10</strong>.
       </section>
 
 
-
+ {% include triangle.html%}
 
 
 </div>

@@ -7,13 +7,13 @@ last_modified_at: 2026-02-03
 ---
  <style> :root{--primary:#3b82f6;--secondary:#1e293b;--accent:#10b981;--light:#f8f9fa;--dark:#1e293b}.hero-section{background:linear-gradient(135deg,#4b6cb7 0,#182848 100%);color:#fff;padding:2rem 0;border-radius:0 0 20px 20px;box-shadow:0 4px 15px rgba(0,0,0,.15);margin-bottom:2rem}.converter-section{background:#f8fafc;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;border:1px solid #e2e8f0}.result-box{background-color:#fff;border-radius:8px;padding:1.2rem;margin-top:1.2rem;border:1px solid #e2e8f0;box-shadow:0 2px 8px rgba(0,0,0,.05)}.current-time-card{background:linear-gradient(to right,#3b82f6,#2563eb);color:#fff;border-radius:12px;padding:1.5rem;text-align:center;box-shadow:0 5px 15px rgba(59,130,246,.3)}.btn-convert{background:var(--primary);color:#fff;border:none;padding:.7rem 1.1rem;border-radius:8px;font-weight:600;transition:.3s}.btn-convert:hover{background:#2563eb;transform:translateY(-2px);box-shadow:0 4px 8px rgba(37,99,235,.3)}.btn-utility{background:#fff;color:var(--primary);border:1px solid var(--primary);padding:.5rem 1.2rem;border-radius:8px;transition:.3s}.btn-utility:hover{background:var(--primary);color:#fff}.article-container{background:#fff;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.05);padding:2.5rem;margin-top:2rem;border:1px solid #e2e8f0}.faq-card,.feature-card{background:#f8fafc;border-radius:12px;margin-bottom:1.2rem;padding:1.5rem}.feature-card{transition:transform .3s,box-shadow .3s}.feature-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.08)}.faq-question{font-weight:700;color:#1e293b;margin-bottom:.8rem;font-size:1.1rem}</style>
 <!-- Converter Tool -->
-        <div class="converter-container">
-            <div class="converter-header">
-                <h1 class="mb-2">Epoch Time Converter</h1>
-                <p class="text-muted">Real-time conversion between epoch time and human-readable dates</p>
-            </div> 
-            <div class="row">
-                <!-- Epoch to Human Date -->
+<div class="converter-container">
+  <div class="converter-header">
+    <h1 class="mb-2">Epoch Time Converter</h1>
+     <p class="text-muted">Real-time conversion between epoch time and human-readable dates</p>
+   </div> 
+      <div class="row">
+             <!-- Epoch to Human Date -->
                 <div class="col-lg-6 mb-4">
                     <div class="converter-section">
                         <h3 class="mb-3"><i class="fas fa-arrow-right text-primary me-2"></i>Epoch to Human Date</h3>
@@ -58,32 +58,24 @@ last_modified_at: 2026-02-03
                     </div>
                 </div>
             </div>
-            <!-- Live Epoch Clock -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="current-time-card">
-                        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                            <div class="mb-3 mb-md-0 me-md-4">
-                                <i class="fas fa-stopwatch fa-3x mb-2"></i>
-                                <h3 class="mb-0">Live Epoch Clock</h3>
+   <!-- Live Epoch Clock -->
+<div class="row">
+ <div class="col-12">
+    <div class="current-time-card">
+     <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+        <div class="mb-3 mb-md-0 me-md-4"> <i class="fas fa-stopwatch fa-3x mb-2"></i> <h3 class="mb-0">Live Epoch Clock</h3></div>
+          <div class="text-center">
+                  <div class="small mb-1">CURRENT EPOCH TIME</div>
+                       <div id="epoch-time" class="display-4 fw-bold">1728889200</div>
                             </div>
-                            <div class="text-center">
-                                <div class="small mb-1">CURRENT EPOCH TIME</div>
-                                <div id="epoch-time" class="display-4 fw-bold">1728889200</div>
-                            </div>
-                            <div class="mt-3 mt-md-0 ms-md-4">
-                                <button class="btn-utility me-2" id="copyEpochBtn">
-                                    <i class="fas fa-copy me-1"></i> Copy
-                                </button>
-                                <button class="btn-utility" id="useCurrentBtn">
-                                    <i class="fas fa-history me-1"></i> Use Current
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="mt-3 mt-md-0 ms-md-4">
+              <button class="btn-utility me-2" id="copyEpochBtn"><i class="fas fa-copy me-1"></i> Copy  </button>
+              <button class="btn-utility" id="useCurrentBtn"><i class="fas fa-history me-1"></i> Use Current </button>
+             </div>
             </div>
-
+            </div>
+           </div>
+          </div>
 <!-- Article Content -->
 <div class="article-container">
   <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">

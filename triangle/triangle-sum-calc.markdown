@@ -252,7 +252,7 @@ The triangle sum calculator performs this calculation instantly and displays the
           </div>
         </div>
        </section>
-
+ {% include triangle.html%}
 
 
 <script src="{{ '/assets/js/triangle/triangle-sum-calc.js' | relative_url }}"></script>

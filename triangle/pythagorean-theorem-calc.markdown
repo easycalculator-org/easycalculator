@@ -169,6 +169,8 @@ canvas { display: block; width: 100%; height: auto; background: transparent; }
        <p class="mb-0">The 3-4-5 triangle is the most commonly used example of the Pythagorean theorem.</p>
      </div>
     </div>
+
+     {% include triangle.html%}
  </section>
 
 

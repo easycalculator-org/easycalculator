@@ -149,7 +149,7 @@ svg text {font-size: 15px;font-weight: 600;}
         </div>
       </section>
  <!-- Did You Know? -->
-
+ {% include triangle.html%}
 
 <!-- FAQ Schema -->
 

@@ -20,7 +20,7 @@ last_modified_at: 2026-03-10
 <div class="triangle-grid">
 <div class="triangle-card"><a href="/30-60-90-triangle-calculator"><div class="calc-title">30-60-90 Triangle Calculator</div></a></div>
 <div class="triangle-card"><a href="/45-45-90-triangle-calculator"><div class="calc-title">45-45-90 Triangle Calculator</div></a></div>
-<div class="triangle-card"><a href="/area-of-right-triangle-calculator"><div class="calc-title">Area of a Right Triangle Calculator</div></a></div>
+<!-- <div class="triangle-card"><a href="/area-of-right-triangle-calculator"><div class="calc-title">Area of a Right Triangle Calculator</div></a></div> -->
 <div class="triangle-card"><a href="/circumscribed-circle-calculator"><div class="calc-title">Circumscribed Circle Calculator</div></a></div>
 <div class="triangle-card"><a href="/classifying-triangles-calculator"><div class="calc-title">Classifying Triangles Calculator</div></a></div>
 <div class="triangle-card"><a href="/equilateral-triangle-calculator"><div class="calc-title">Equilateral Triangle Calculator</div></a></div>

@@ -338,6 +338,7 @@ c = \frac{a \cdot \sin(C)}{\sin(A)}
         </div>
       </section>
       <!-- Did You Know? -->
+       {% include triangle.html%}
 </div>
 
 

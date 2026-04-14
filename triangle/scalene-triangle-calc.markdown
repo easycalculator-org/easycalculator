@@ -331,17 +331,12 @@ three side lengths are known. Simply enter the sides <strong>a, b, and c</strong
 </div>
           </div>
         </div>
-      
       </section>
       <!-- Did You Know? -->
 
 
 
-<h5></h5>
-
-
-<h5></h5>
-
+ {% include triangle.html%}
 
 
 
