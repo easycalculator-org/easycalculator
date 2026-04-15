@@ -71,3 +71,10 @@ el.addEventListener('input', calculate);
 calculate();
 
 })();
+
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']]
+  }
+};

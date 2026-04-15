@@ -2,16 +2,18 @@
 layout: default
 title: Hypotenuse Calculator – Find Hypotenuse of a Right Triangle
 permalink: /hypotenuse-calculator
-description: "Calculate the hypotenuse of a right triangle using the Pythagorean theorem. Enter the two legs to instantly compute the longest side."
-image: "/assets/images/hypotenuse-calculator.svg" 
-last_modified_at: 2026-03-11
+description: "A hypotenuse calculator helps you find the longest side (c) of a right triangle using the formula c = √(a² + b²). Enter two sides to calculate instantly."
+image: "/assets/images/og/hypotenuse-calculator.jpg" 
+last_modified_at: 2026-04-15
 ---
 
 <style>
 .card { border-radius: 1.2rem; }
 #triangleSVG { max-width: 260px; }
 </style>
-<div class="pt-4 fw-bold text-primary mb-2 text-center"><h1>📐 Hypotenuse Calculator</h1> <p class="text-muted small text-center mb-4">Formula: c = √(a² + b²)</p></div>
+<div class="pt-4 fw-bold text-primary mb-2 text-center">
+<h1>Hypotenuse Calculator</h1> 
+<p class="text-muted small text-center mb-4">Formula: c = √(a² + b²)</p></div>
  <div class="card shadow-sm border-0 p-4">
   <div class="row g-4 align-items-center">
    <div class="col-md-6">
@@ -23,9 +25,7 @@ last_modified_at: 2026-03-11
  <!-- RIGHT SIDE (SVG) -->
 <div class="col-md-6 text-center">
 <h6 class="fw-semibold mb-3">Triangle Visualization</h6>
-  <svg id="triangleSVG" viewBox="0 0 200 200"
-             class="border rounded bg-light p-2 mx-auto d-block"
-             style="max-width: 240px;">
+  <svg id="triangleSVG" viewBox="0 0 200 200" class="border rounded bg-light p-2 mx-auto d-block" style="max-width: 240px;">
 
  <polygon id="triangleShape"
             fill="#0d6efd15"
@@ -51,20 +51,11 @@ last_modified_at: 2026-03-11
     <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
   </div>
    <!-- Article-->
-   
-<!-- Article START -->
-
 <h2 class="h4 fw-bold text-primary mb-3">📐 What is a Hypotenuse Calculator?</h2>
-
 <p class="fs-6">
-<strong>
-A Hypotenuse Calculator is a tool that helps you quickly find the longest side of a right triangle without manual calculation. You simply enter the two known sides (a and b), and it instantly calculates the hypotenuse (c) using the Pythagorean theorem.
-</strong>
-</p>
+<strong>A Hypotenuse Calculator is a tool that helps you quickly find the longest side of a right triangle without manual calculation. You simply enter the two known sides (a and b), and it instantly calculates the hypotenuse (c) using the Pythagorean theorem.</strong></p>
 
-<p>
-Instead of solving square roots manually, this calculator gives you fast and accurate results, making it useful for students, engineers, and everyday problem-solving.
-</p>
+<p>Instead of solving square roots manually, this calculator gives you fast and accurate results, making it useful for students, engineers, and everyday problem-solving.</p>
 
 <hr>
 <div class="row">
@@ -109,16 +100,11 @@ c = \sqrt{6^2 + 8^2} = \sqrt{36 + 64} = \sqrt{100} = 10
 \]
 </div>
 
-<p class="mt-2">
-So, the hypotenuse is <strong>10</strong>.
-</p>
+<p class="mt-2">So, the hypotenuse is <strong>10</strong>.</p>
 
 <hr>
-
 <h2 class="h5 fw-semibold mt-4">🎯 When Do You Need This Calculator?</h2>
-
 <p>This calculator is useful in many real-life situations:</p>
-
 <ul>
 <li>📏 Measuring diagonal distance between two points</li>
 <li>🏗️ Construction and civil engineering calculations</li>
@@ -130,8 +116,8 @@ So, the hypotenuse is <strong>10</strong>.
 
 
 <!-- FAQ Section -->
- <section class="p-4">
-        <h2 class="mb-4">FAQ on Hypotenuse Calculator</h2>
+<section class="p-4">
+ <h2 class="mb-4">FAQ on Hypotenuse Calculator</h2>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
             <div class="fw-bold text-primary">What is the hypotenuse?</div>
@@ -155,16 +141,7 @@ So, the hypotenuse is <strong>10</strong>.
 
  {% include triangle.html%}
 
-
 </div>
 
  <script src="{{ '/assets/js/triangle/hypotenuse-calc.js' | relative_url }}"></script>
- <script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['\\(', '\\)']],
-    displayMath: [['\\[', '\\]']]
-  }
-};
-</script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
