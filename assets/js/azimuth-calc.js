@@ -259,3 +259,55 @@
     window.MathJax = {
   tex: { inlineMath: [['\\(','\\)'], ['$', '$']] }
 };
+
+// azimuth angle diagram interactivity
+const svg = document.getElementById("compass");
+const line = document.getElementById("azLine");
+const angleText = document.getElementById("angle");
+const arc = document.getElementById("arc");
+
+let dragging = false;
+const cx = 200, cy = 200;
+const radius = 120;
+
+svg.addEventListener("mousedown", () => dragging = true);
+svg.addEventListener("mouseup", () => dragging = false);
+svg.addEventListener("mouseleave", () => dragging = false);
+
+svg.addEventListener("mousemove", (e) => {
+  if (!dragging) return;
+
+  const rect = svg.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  const dx = x - cx;
+  const dy = cy - y;
+
+  let angle = Math.atan2(dx, dy) * (180 / Math.PI);
+  if (angle < 0) angle += 360;
+
+  update(angle);
+});
+
+function update(angle) {
+  angleText.textContent = angle.toFixed(1);
+
+  const rad = angle * Math.PI / 180;
+  const x = cx + radius * Math.sin(rad);
+  const y = cy - radius * Math.cos(rad);
+
+  line.setAttribute("x2", x);
+  line.setAttribute("y2", y);
+
+  // Arc drawing
+  const largeArc = angle > 180 ? 1 : 0;
+  const arcX = cx + 80 * Math.sin(rad);
+  const arcY = cy - 80 * Math.cos(rad);
+
+  const d = `
+    M ${cx} ${cy - 80}
+    A 80 80 0 ${largeArc} 1 ${arcX} ${arcY}
+  `;
+  arc.setAttribute("d", d);
+}

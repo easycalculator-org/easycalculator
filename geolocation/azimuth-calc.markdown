@@ -28,7 +28,7 @@ last_modified_at: 2026-02-28
 
  <div class="col-12 col-xl-11">
   <div class="text-primary">
-   <h1>Azimuth Calculator</h1>
+   <h1>Azimuth Calculator – Calculate Azimuth Angle & Direction (0° to 360°)</h1>
     <div class="row g-4">
     <div class="col-12 col-md-5">
    <div class="row g-3">
@@ -111,17 +111,106 @@ last_modified_at: 2026-02-28
 <section class="container my-4">
 <h2 class="fw-bold">What is Azimuth?</h2>
 <p class="lead"><strong>Azimuth</strong> is the horizontal angle measured clockwise from <strong>true north</strong> to a target direction, expressed from <strong>0° to 360°</strong>. It is widely used in navigation, surveying, GIS mapping, astronomy, and RF antenna alignment to determine precise directional heading between two geographic points.  </p>
- <h2 class="fw-bold mt-4">What is Azimuth Angle?</h2>
- <p>The <strong>azimuth angle</strong> is the numerical representation of  direction expressed in degrees from <strong>0° to 360°</strong>. The measurement always starts from north and increases clockwise, making it the standard directional reference in geolocation and RF engineering. </p>
-    <h3 class="fw-semibold mt-3">Standard Azimuth Reference</h3>
-    <ul>
-      <li><strong>0°</strong> → North</li>
-      <li><strong>90°</strong> → East</li>
-      <li><strong>180°</strong> → South</li>
-      <li><strong>270°</strong> → West</li>
-    </ul>
-    <p class="text-muted"> In azimuth measurement, the angle always increases<strong>clockwise from true north</strong>.</p>
+ 
+ 
+ <div class="row align-items-center g-4">
+
+  <!-- LEFT SIDE (SEO + CONTENT) -->
+  <div class="col-md-6">
+
+    <h2 class="fw-bold mb-3">What is Azimuth Angle?</h2>
+
+    <p class="lead">
+      The <strong>azimuth angle</strong> is a directional measurement expressed in degrees from 
+      <strong>0° to 360°</strong>, used to define the position of an object relative to 
+      <strong>True North</strong>.
+    </p>
+
+    <p>
+      It is widely used in <strong>surveying, navigation, astronomy, and RF engineering</strong> 
+      to determine precise direction. The angle is always measured 
+      <strong class="text-primary">clockwise from North</strong>.
+    </p>
+
+    <!-- Highlight Box -->
+    <div class="p-3 bg-light border rounded-3 mt-3">
+      <h5 class="fw-semibold mb-2">📍 Standard Azimuth Reference</h5>
+      <div class="d-flex flex-wrap gap-2">
+        <span class="badge bg-dark">0° → North</span>
+        <span class="badge bg-dark">90° → East</span>
+        <span class="badge bg-dark">180° → South</span>
+        <span class="badge bg-dark">270° → West</span>
+      </div>
+    </div>
+
+    <!-- Info Note -->
+    <p class="text-muted mt-3 small">
+      💡 Unlike bearing, azimuth provides a full 360° directional system, making it more precise for technical applications.
+    </p>
+
+  </div>
+
+
+  <!-- RIGHT SIDE (CALCULATOR / INTERACTIVE SVG) -->
+  <div class="col-md-6">
+
+    <div class="card shadow border-0 rounded-4">
+      
+      <div class="card-body text-center">
+
+        <h4 class="fw-bold mb-3">Azimuth Angle Calculator</h4>
+
+        <div class="bg-light p-3 rounded-3">
+
+          <svg id="compass" width="100%" height="350" viewBox="0 0 400 400">
+
+            <!-- Center -->
+            <circle cx="200" cy="200" r="5" fill="#000"/>
+
+            <!-- Directions -->
+            <line x1="200" y1="200" x2="200" y2="40" stroke="#000"/>
+            <line x1="200" y1="200" x2="360" y2="200" stroke="#000"/>
+            <line x1="200" y1="200" x2="200" y2="360" stroke="#000"/>
+            <line x1="200" y1="200" x2="40" y2="200" stroke="#000"/>
+
+            <!-- Labels -->
+            <text x="200" y="25" text-anchor="middle" font-size="14">0°</text>
+            <text x="365" y="205" font-size="14">90°</text>
+            <text x="200" y="385" text-anchor="middle" font-size="14">180°</text>
+            <text x="30" y="205" font-size="14">270°</text>
+
+            <!-- Draggable Line -->
+            <line id="azLine" x1="200" y1="200" x2="200" y2="80"
+                  stroke="#dc3545" stroke-width="3" stroke-linecap="round"/>
+
+            <!-- Angle Arc -->
+            <path id="arc" fill="none" stroke="#dc3545" stroke-width="2"/>
+
+          </svg>
+
+          <!-- Result Display -->
+          <div class="mt-3">
+            <div class="fs-5 fw-semibold">
+              Angle: <span id="angle" class="text-danger">0</span>°
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
   </section>
+
+
 
   <!-- Formula Section -->
  <section class="container my-5">
