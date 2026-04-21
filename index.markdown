@@ -82,7 +82,7 @@ last_modified_at: 2026-04-12
 <!-- Date to date -->
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/date-to-date-calculator"><div class="calculator-box text-center"><i class="fa-regular fa-calendar fa-xl"></i><h5>Date to Date Calculator</h5></div></a></div>
 <!-- chacter count -->
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/character-count"><div class="calculator-box text-center"><i class="fa-solid fa-book fa-xl"></i><h5>Character Count</h5></div></a></div>
+<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/character-counter"><div class="calculator-box text-center"><i class="fa-solid fa-book fa-xl"></i><h5>Character Counter</h5></div></a></div>
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/roman-numeral-converter"><div class="calculator-box text-center"><i class="fa-solid fa-diagram-successor fa-2xl"></i><h5>Roman Numeral Converter</h5></div></a></div>
 </div>
 

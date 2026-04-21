@@ -121,10 +121,10 @@
     "content": "celsius to kelvin "
   },
   {
-    "id": "character-count",
-    "title": "Character Count",
-    "url": "/character-count",
-    "content": "character count "
+    "id": "character-counter",
+    "title": "Character Counter",
+    "url": "/character-counter",
+    "content": "character counter "
   },
   {
     "id": "circumscribed-circle-calculator",
