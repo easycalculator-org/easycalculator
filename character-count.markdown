@@ -234,7 +234,7 @@ last_modified_at: 2026-02-03
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
       <div class="fw-bold text-primary">3. What’s the difference between characters with and without spaces?</div>
-      <p class="mb-0"> Characters with spaces include every letter, number, symbol, and space between words. Characters without spaces count only letters, numbers, and symbols, excluding blank spaces. This distinction is important for platforms with strict character limits. </p>
+      <p class="mb-0">Characters with spaces include every letter, number, symbol, and space between words. Characters without spaces count only letters, numbers, and symbols, excluding blank spaces. This distinction is important for platforms with strict character limits. </p>
     </div>
   </div>
   <div class="card mb-3 border-0 bg-light">
