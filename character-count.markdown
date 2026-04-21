@@ -2,7 +2,7 @@
 layout: default
 title: Online Character Counter – Count Words, Characters & Spaces
 permalink: /character-counter
-description: "Use our free Character Counter to instantly count characters, words, letters, and spaces online. Fast, accurate, and perfect for SEO, writing, and social media limits."
+description: "Use our free Character Counter to instantly count characters, words, letters, and spaces online. Fast, accurate, perfect for SEO, writing, & social media limits."
 image: "/assets/images/character-count.jpg"
 last_modified_at: 2026-02-03
 ---
