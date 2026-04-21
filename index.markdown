@@ -1,12 +1,11 @@
 ---
 layout: default
-title: EasyCalculator | Free Online Calculators for Finance, Math & More
+title: Free Online Calculators - Finance, Math & More | EasyCalculator
 description: "Use 200+ free online calculators for EMI, SIP, finance, math, conversion, RF, geolocation, age, percentage and currency & more on EasyCalculator.org"
 image: "/assets/images/apple-touch-icon.png"
 last_modified_at: 2026-04-12
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/calculator.css' | relative_url }}">
 <!-- Calculator start -->
 <div class="calculator">
 <input type="text" id="screen" maxlength="20">
