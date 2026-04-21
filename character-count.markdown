@@ -11,7 +11,7 @@ last_modified_at: 2026-02-03
  </style>
 
 <div class="container-lg p-3">
-<h1>Character Counter – Count Characters, Words, Spaces & Text Length Online</h1>
+<h1>Character Counter – Count Words, Characters, Spaces & Text Length Online</h1>
 
 <p class="lead">
   Use our <strong>Character Counter</strong> to instantly count characters, words, spaces, sentences, and paragraphs in any text. This advanced character counter also provides real-time insights like readability score, reading time, and text analysis. It is widely used for SEO meta descriptions, social media posts, SMS messages, and academic writing where strict character limits apply.
@@ -221,13 +221,13 @@ last_modified_at: 2026-02-03
   <h2 class="mb-4">FAQ on Character Counter</h2>
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
-      <div class="fw-bold text-primary"> 1. Why is a Character Counter important? </div>
+      <div class="fw-bold text-primary">1. Why is a Character Counter important? </div>
       <p class="mb-0"> A Character Counter helps ensure your text stays within platform limits such as social media posts, SMS messages, and SEO meta descriptions. It improves content accuracy, prevents text truncation, and helps maintain professional communication.</p>
     </div>
   </div>
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
-      <div class="fw-bold text-primary"> 2. Does the Character Counter include spaces? </div>
+      <div class="fw-bold text-primary">2. Does the Character Counter include spaces? </div>
       <p class="mb-0">Yes, by default a Character Counter includes spaces along with letters, numbers, and symbols. Since most platforms count spaces as characters, this ensures accurate results. You can also choose to exclude spaces if required.</p>
     </div>
   </div>
