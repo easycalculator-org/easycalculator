@@ -66,3 +66,31 @@ function resetCalculator() {
   document.getElementById("resultCard").classList.add("d-none");
   document.getElementById("result").innerHTML = "";
 }
+
+
+
+
+// Toggle logic
+document.querySelectorAll('.toggle-btn').forEach(btn => {
+  btn.addEventListener('click', function () {
+
+    // remove active
+    document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+
+    // add active
+    this.classList.add('active');
+
+    // update hidden input
+    const type = this.getAttribute('data-value');
+    document.getElementById('conversionType').value = type;
+
+    // change placeholder
+    const input = document.getElementById("inputValue");
+
+    if (type === "dbm-to-watts") {
+      input.placeholder = "Enter dBm value (e.g. 30)";
+    } else {
+      input.placeholder = "Enter Watt value (e.g. 1)";
+    }
+  });
+});

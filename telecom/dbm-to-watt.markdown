@@ -7,39 +7,81 @@ image: "/assets/images/dbm-to-watt-converter-with-formula-and-example.jpg"
 last_modified_at: 2026-03-03
 ---
 
-<div class="container mt-5">
+<style>
+.toggle-switch {
+  display: flex;
+  background: #f1f3f5;
+  border-radius: 50px;
+  padding: 5px;
+  gap: 5px;
+}
+
+.toggle-btn {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  border-radius: 50px;
+  background: transparent;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.toggle-btn.active {
+  background: #0d6efd;
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.toggle-btn:hover {
+  background: #e2e6ea;
+}
+</style>
+
+
+
+<div class="mt-5">
   <h1 class="text-center mb-4 fw-bold">dBm to Watt Converter (Convert dBm to W)</h1>
-  <div class="row justify-content-center">
-    <div class="col-lg-8">
-      <div class="card shadow-lg border-0 rounded-4">
-        <div class="card-body p-4">
-          <form id="calculatorForm">
-            <div class="mb-3">
-              <label for="inputValue" class="form-label fw-semibold">Enter Value</label>
-              <input type="number" id="inputValue" class="form-control form-control-lg" placeholder="Enter dBm or Watts" required>  </div>
-            <div class="mb-3">
-              <label for="conversionType" class="form-label fw-semibold">Conversion Type</label>
-              <select id="conversionType" class="form-select form-select-lg" required>
-                <option value="dbm-to-watts">dBm to Watts</option>
-                <option value="watts-to-dbm">Watts to dBm</option>
-              </select>
+<div class="row justify-content-center">
+  <div class="col-lg-8">
+    <div class="card shadow-lg border-0 rounded-4">
+      <div class="card-body p-4">
+        <form id="calculatorForm">
+          <div class="mb-3">
+            <label for="inputValue" class="form-label fw-semibold">Enter Value</label>
+            <input type="number" id="inputValue" class="form-control form-control-lg" placeholder="Enter dBm value (e.g. 30)" required>
+          </div>
+          <!-- Toggle Switch -->
+          <div class="mb-4">
+            <label class="form-label fw-semibold d-block mb-2">Conversion Type</label>
+            <div class="toggle-switch">
+              <button type="button" class="toggle-btn active" data-value="dbm-to-watts">dBm → Watts</button>
+              <button type="button" class="toggle-btn" data-value="watts-to-dbm">Watts → dBm</button>
             </div>
-            <div class="d-grid gap-2">
-              <button type="button" class="btn btn-primary btn-lg rounded-3" onclick="calculate()">  Calculate  </button>
-              <button type="reset" class="btn btn-outline-secondary rounded-3" onclick="resetCalculator()">  Reset </button>
-            </div>
-          </form>
-          <!-- Result Box -->
-          <div id="resultCard" class="mt-4 d-none">
-            <div class="alert alert-success text-center shadow-sm rounded-3 border-0">
-              <h5 class="mb-2">Conversion Result</h5>
-              <div id="result" class="fs-1 fw-bold"></div>
-            </div>
+            <input type="hidden" id="conversionType" value="dbm-to-watts">
+            <!-- Hint -->
+            <small class="text-muted d-block mt-2"> 30 dBm = 1 Watt • 43 dBm ≈ 20 Watts </small>
+          </div>
+          <!-- Buttons -->
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-primary btn-lg rounded-3" onclick="calculate()">Calculate</button>
+            <button type="reset" class="btn btn-outline-secondary rounded-3" onclick="resetCalculator()">Reset </button>
+          </div>
+        </form>
+        <!-- Result -->
+        <div id="resultCard" class="mt-4 d-none">
+          <div class="alert alert-success text-center shadow-sm rounded-3 border-0">
+            <h5 class="mb-2">Conversion Result</h5>
+            <div id="result" class="fs-1 fw-bold"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+
 </div>
 
 
@@ -376,7 +418,10 @@ last_modified_at: 2026-03-03
   </section>
 <div class="highlight mt-4"><p><strong>Source:</strong> Wikipedia, 3GPP, ETSI and IEEE</p></div>
 
+{% include rf.html %}
+
 {% include about.html %}
+
 </div>
 <script src="{{ '/assets/js/dbm-watt.js' | relative_url }}"></script>
 <script type="application/ld+json">
