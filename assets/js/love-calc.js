@@ -1,6 +1,5 @@
     (function(){
-        // ======================= CONFIGURATION =======================
-        // WebApp base URL for sharing (so friends can click and check the love calculator)
+        //============ CONFIGURATION ====
         const APP_BASE_URL = "https://easycalculator.org/love-calculator";
         
         // DOM elements
@@ -15,7 +14,7 @@
         const shareWhatsAppBtn = document.getElementById('shareWhatsAppBtn');
         const shareEmailBtn = document.getElementById('shareEmailBtn');
         
-        // Store latest result details for sharing
+        // Store latest
         let latestLoveData = {
             percentage: 0,
             name1: '',
@@ -24,7 +23,7 @@
             advice: ''
         };
         
-        // Helper: deterministic + romantic sparkle algorithm (0-100)
+        // Helper
         function computeLovePercentage(name1, name2) {
             if(!name1.trim() || !name2.trim()) return 0;
             const clean1 = name1.trim().toLowerCase();
@@ -94,7 +93,7 @@
             });
         }
         
-        // Build shareable message text that includes the webapp URL so friends can click & check
+        // Build shareable 
         function getShareableMessage(withUrl = true) {
             const pct = latestLoveData.percentage;
             const nameA = latestLoveData.name1.trim() || "Your";
@@ -116,7 +115,7 @@
             return `💕 Love Compatibility: ${nameA} & ${nameB} - ${pct}% Match!`;
         }
         
-        // Share via WhatsApp (includes webapp URL)
+        // Share via WhatsApp
         function shareWhatsApp() {
             if(!latestLoveData.percentage && latestLoveData.percentage !== 0) {
                 alert("💘 Please calculate your love score first before sharing!");
@@ -127,12 +126,11 @@
                 return;
             }
             const text = getShareableMessage(true);
-            // Using WhatsApp share URL with pre-filled text
             const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text)}`;
             window.open(whatsappUrl, '_blank');
         }
         
-        // Share via Email (includes webapp URL + clickable link in most email clients)
+        // Share via Email
         function shareEmail() {
             if(!latestLoveData.percentage && latestLoveData.percentage !== 0) {
                 alert("💖 Please calculate your love score before sharing via email.");
@@ -143,13 +141,12 @@
                 return;
             }
             const subject = getEmailSubject();
-            // Build email body with explicit URL and encouraging message
             const body = getShareableMessage(true) + `\n\n❤️ Click the link above to discover your own destiny! Sent with love from Love Calculator.`;
             const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             window.location.href = mailtoLink;
         }
         
-        // Core calculation + update UI + show share section
+        // Core calculation 
         function performLoveCalculation() {
             let yourName = yourNameInput.value.trim();
             let crushName = crushNameInput.value.trim();
@@ -186,7 +183,7 @@
             const loveMessageHtml = getLoveMessage(lovePercent, yourName, crushName);
             const tipHtml = getExtraTip(lovePercent);
             
-            // Update display with animation
+            // Update display
             percentageDisplay.style.opacity = '0';
             setTimeout(() => {
                 percentageDisplay.innerHTML = `💘 ${lovePercent}% 💘`;
@@ -195,7 +192,7 @@
             messageDisplay.innerHTML = `<i class="fas fa-heart me-1" style="color:#ff6b8b;"></i> ${loveMessageHtml}`;
             extraAdvice.innerHTML = `<i class="fas fa-comment-dots me-1"></i> ${tipHtml}`;
             
-            // Store latest data for sharing (plain text versions)
+            // Store latest data
             const plainMessage = loveMessageHtml.replace(/<[^>]*>/g, '');
             const plainTip = tipHtml.replace(/<[^>]*>/g, '');
             latestLoveData = {
@@ -206,7 +203,7 @@
                 advice: plainTip
             };
             
-            // Show share section with a smooth fade effect
+            // Show share section 
             shareSection.style.display = "block";
             shareSection.style.opacity = "0";
             setTimeout(() => { shareSection.style.opacity = "1"; }, 80);
@@ -217,7 +214,7 @@
             setTimeout(() => { resultDiv.style.transform = 'scale(1)'; }, 200);
         }
         
-        // Reset everything: clear fields, hide share section, reset result
+        // Reset everything:
         function resetCalculator() {
             yourNameInput.value = "";
             crushNameInput.value = "";
@@ -246,6 +243,6 @@
             });
         });
         
-        // Optional: If you want to display a small tooltip or demo, fine.
+        // Optional
         console.log("💖 Love Calculator with webapp URL sharing enabled: " + APP_BASE_URL);
     })();
