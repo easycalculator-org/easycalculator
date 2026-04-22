@@ -1,4 +1,3 @@
-   
     (function(){
         // ======================= CONFIGURATION =======================
         // WebApp base URL for sharing (so friends can click and check the love calculator)

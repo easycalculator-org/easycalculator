@@ -392,9 +392,9 @@ last_modified_at: 2026-04-22
     </div>
   </div>
 </section>
-
-<script src="{{ '/assets/js/love-calc.js' | relative_url }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/less@4.2.0/dist/less.min.js"></script>
+<script src="{{ '/assets/js/love-calc.js' | relative_url }}"></script>
+
 
 
 <script type="application/ld+json">
