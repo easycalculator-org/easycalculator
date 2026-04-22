@@ -1,11 +1,12 @@
 ---
 layout: default
-title: dBm to Watt Converter (Convert dBm to W) – Formula, Chart & Table
+title: dBm to Watt & Watt to dBm Converter (30dBm = 1W, 1W = 30dBm)
 permalink: /dbm-to-watt
-description: "Convert dBm to Watt quickly. 30 dBm = 1W, 43 dBm ≈ 20W. Use our free dBm to W calculator with formula, chart, and full conversion table on EasyCalculator."
+description: "Convert dBm to Watts and Watts to dBm instantly. 30 dBm = 1W, 1W = 30 dBm. Fast, accurate conversion with formula and examples."
 image: "/assets/images/dbm-to-watt-converter-with-formula-and-example.jpg"
-last_modified_at: 2026-03-03
+last_modified_at: 2026-04-22
 ---
+
 
 <style>
 .toggle-switch {
@@ -19,71 +20,60 @@ last_modified_at: 2026-03-03
 .toggle-btn {
   flex: 1;
   border: none;
-  padding: 12px;
+  padding: 10px;
   border-radius: 50px;
-  background: transparent;
   font-weight: 600;
+  background: transparent;
   color: #555;
-  transition: all 0.25s ease;
   cursor: pointer;
+  transition: 0.25s;
 }
 
 .toggle-btn.active {
   background: #0d6efd;
   color: #fff;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
 
 .toggle-btn:hover {
   background: #e2e6ea;
 }
+
+/* RESULT DESIGN */
+.result-text {
+  font-size: 34px;
+  font-weight: 700;
+  padding: 15px;
+  border-radius: 12px;
+  background: #f8f9fa;
+  transition: transform 0.15s ease;
+}
 </style>
-
-
-
 <div class="mt-5">
-  <h1 class="text-center mb-4 fw-bold">dBm to Watt Converter (Convert dBm to W)</h1>
+<h1 class="text-center mb-4 fw-bold">dBm to Watt & Watt to dBm Converter</h1>
 <div class="row justify-content-center">
   <div class="col-lg-8">
     <div class="card shadow-lg border-0 rounded-4">
       <div class="card-body p-4">
-        <form id="calculatorForm">
-          <div class="mb-3">
-            <label for="inputValue" class="form-label fw-semibold">Enter Value</label>
-            <input type="number" id="inputValue" class="form-control form-control-lg" placeholder="Enter dBm value (e.g. 30)" required>
-          </div>
-          <!-- Toggle Switch -->
-          <div class="mb-4">
-            <label class="form-label fw-semibold d-block mb-2">Conversion Type</label>
-            <div class="toggle-switch">
-              <button type="button" class="toggle-btn active" data-value="dbm-to-watts">dBm → Watts</button>
-              <button type="button" class="toggle-btn" data-value="watts-to-dbm">Watts → dBm</button>
-            </div>
-            <input type="hidden" id="conversionType" value="dbm-to-watts">
-            <!-- Hint -->
-            <small class="text-muted d-block mt-2"> 30 dBm = 1 Watt • 43 dBm ≈ 20 Watts </small>
-          </div>
-          <!-- Buttons -->
-          <div class="d-grid gap-2">
-            <button type="button" class="btn btn-primary btn-lg rounded-3" onclick="calculate()">Calculate</button>
-            <button type="reset" class="btn btn-outline-secondary rounded-3" onclick="resetCalculator()">Reset </button>
-          </div>
-        </form>
-        <!-- Result -->
-        <div id="resultCard" class="mt-4 d-none">
-          <div class="alert alert-success text-center shadow-sm rounded-3 border-0">
-            <h5 class="mb-2">Conversion Result</h5>
-            <div id="result" class="fs-1 fw-bold"></div>
-          </div>
+        <div class="mb-3 pt-4">
+          <input type="number" id="inputValue" class="form-control form-control-lg text-center p-3" placeholder="Enter dBm value (e.g. 30)">
         </div>
+        <!-- TOGGLE -->
+        <div class="toggle-switch mb-3">
+          <button type="button" class="toggle-btn active" data-value="dbm-to-watts">dBm → Watts</button>
+          <button type="button" class="toggle-btn" data-value="watts-to-dbm">Watts → dBm</button>
+        </div>
+        <input type="hidden" id="conversionType" value="dbm-to-watts">
+        <!-- RESULT -->
+        <div id="resultBox" class="text-center mt-4">
+          <div id="liveResult" class="result-text">Enter value</div>
+        </div>
+        <!-- Hint -->
+        <div class="text-center small text-muted mt-2"> 30 dBm = 1 Watt • 43 dBm ≈ 20 Watts • 46 dBm ≈ 40 Watts </div>
       </div>
     </div>
   </div>
 </div>
-
-
 </div>
-
 
 
 

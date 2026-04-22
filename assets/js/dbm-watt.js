@@ -1,96 +1,64 @@
-function convertDbmToWatts() {
-    const dbm = parseFloat(document.getElementById("dbmInput").value);
-    if (!isNaN(dbm)) {
-        const watts = Math.pow(10, dbm / 10) / 1000;
-        document.getElementById("wattsOutput").innerText = `${dbm} dBm = ${watts.toFixed(6)} Watts`;
-    } else {
-        document.getElementById("wattsOutput").innerText = "Please enter a valid dBm value.";
-    }
-}
+document.addEventListener("DOMContentLoaded", function () {
 
-// Convert Watts to dBm
-function convertWattsToDbm() {
-    const watts = parseFloat(document.getElementById("wattsInput").value);
-    if (!isNaN(watts) && watts > 0) {
-        const dbm = 10 * Math.log10(watts * 1000);
-        document.getElementById("dbmOutput").innerText = `${watts} Watts = ${dbm.toFixed(2)} dBm`;
-    } else {
-        document.getElementById("dbmOutput").innerText = "Please enter a valid Watts value.";
-    }
-}
+  const input = document.getElementById("inputValue");
+  const resultBox = document.getElementById("liveResult");
+  const conversionType = document.getElementById("conversionType");
 
-function calculate() {
-    const inputValue = parseFloat(document.getElementById("inputValue").value);
-    const conversionType = document.getElementById("conversionType").value;
-    let result = '';
-    
-    if (conversionType === "dbm-to-watts") {
-    result = (10 ** ((inputValue - 30) / 10)).toFixed(6) + " Watts";
-    } else if (conversionType === "watts-to-dbm") {
-    result = (10 * Math.log10(inputValue) + 30).toFixed(2) + " dBm";
-    } else {
-    result = "Invalid Conversion Type";
-    }
-    
-    document.getElementById("result").innerText = result;
-      }
-
-      function calculate() {
-  const inputValue = parseFloat(document.getElementById("inputValue").value);
-  const conversionType = document.getElementById("conversionType").value;
-  const resultDiv = document.getElementById("result");
-  const resultCard = document.getElementById("resultCard");
-
-  if (isNaN(inputValue)) {
-    resultDiv.innerHTML = "Please enter a valid number.";
-    resultCard.classList.remove("d-none");
-    return;
+  function formatNumber(num) {
+    if (!isFinite(num)) return "Invalid";
+    if (num >= 1) return num.toFixed(4);
+    if (num >= 0.001) return num.toFixed(6);
+    return num.toExponential(2);
   }
 
-  let result;
-
-  if (conversionType === "dbm-to-watts") {
-    result = Math.pow(10, (inputValue - 30) / 10);
-    resultDiv.innerHTML = inputValue + " dBm = " + result.toFixed(6) + " Watts";
-  } 
-  else {
-    result = 10 * Math.log10(inputValue) + 30;
-    resultDiv.innerHTML = inputValue + " Watts = " + result.toFixed(2) + " dBm";
-  }
-
-  // Show result smoothly
-  resultCard.classList.remove("d-none");
-}
-
-function resetCalculator() {
-  document.getElementById("resultCard").classList.add("d-none");
-  document.getElementById("result").innerHTML = "";
-}
-
-
-
-
-// Toggle logic
-document.querySelectorAll('.toggle-btn').forEach(btn => {
-  btn.addEventListener('click', function () {
-
-    // remove active
-    document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
-
-    // add active
-    this.classList.add('active');
-
-    // update hidden input
-    const type = this.getAttribute('data-value');
-    document.getElementById('conversionType').value = type;
-
-    // change placeholder
-    const input = document.getElementById("inputValue");
-
+  function convert(value, type) {
     if (type === "dbm-to-watts") {
-      input.placeholder = "Enter dBm value (e.g. 30)";
+      let watts = Math.pow(10, (value - 30) / 10);
+      return `${value} dBm = ${formatNumber(watts)} Watt`;
     } else {
-      input.placeholder = "Enter Watt value (e.g. 1)";
+      if (value <= 0) return "Value must be > 0";
+      let dbm = 10 * Math.log10(value) + 30;
+      return `${value} Watt = ${dbm.toFixed(2)} dBm`;
     }
+  }
+
+  function animateResult() {
+    resultBox.style.transform = "scale(1.05)";
+    setTimeout(() => resultBox.style.transform = "scale(1)", 120);
+  }
+
+  function updateResult() {
+    let val = parseFloat(input.value);
+
+    if (isNaN(val)) {
+      resultBox.innerHTML = "Enter value";
+      return;
+    }
+
+    let type = conversionType.value;
+    resultBox.innerHTML = convert(val, type);
+    animateResult();
+  }
+
+  // Live typing
+  input.addEventListener("input", updateResult);
+
+  // Toggle
+  document.querySelectorAll(".toggle-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+
+      document.querySelectorAll(".toggle-btn").forEach(b => b.classList.remove("active"));
+      this.classList.add("active");
+
+      const type = this.getAttribute("data-value");
+      conversionType.value = type;
+
+      input.placeholder = type === "dbm-to-watts"
+        ? "Enter dBm value (e.g. 30)"
+        : "Enter Watt value (e.g. 1)";
+
+      updateResult();
+    });
   });
+
 });
