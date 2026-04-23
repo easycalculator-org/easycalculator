@@ -55,7 +55,7 @@ last_modified_at: 2026-04-12
 
 <!-- Article -->
 <div class="container py-5">
-    <h3 class="text-center mb-4">Choose Your Calculator</h3>
+    <h2 class="text-center mb-4">Choose Your Calculator</h2>
 <hr>
 <!-- Age Calculator-->
 <div class="row p-3 ">

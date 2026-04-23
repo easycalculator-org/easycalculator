@@ -4,7 +4,7 @@ title: Roman Numeral Converter – Convert Numbers to Roman & Vice Versa
 permalink: /roman-numeral-converter
 description: "Easily convert numbers to Roman numerals and Roman to numbers with our free Roman Numeral Converter. Fast, accurate results with a simple interface."
 image: "/assets/images/roman-number-converter.jpg"
-last_modified_at: 2026-04-03
+last_modified_at: 2026-04-24
 ---
 <style>
 :root{--primary-color:#6c63ff;--secondary-color:#4d44db;--light-color:#f8f9fa;--dark-color:#343a40}
@@ -68,7 +68,7 @@ last_modified_at: 2026-04-03
       {% include naren_create.html %}
       {% include reema_verify.html %}
     </div>
-    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
   </div>
 <!-- Section -->
 <section class="mb-5">
@@ -76,73 +76,72 @@ last_modified_at: 2026-04-03
    <p>A Roman Numeral Converter is a free online tool that instantly converts Arabic numbers (like 1, 50, 100, 2025) into Roman numerals (I, L, C, MMXXV) and vice versa. It simplifies the process of understanding and using Roman numerals, which are widely used in clocks, books, movie titles, academic references, historical timelines, and official documents. Whether you're a student, teacher, historian, or just curious about Roman numbering, this tool provides fast, accurate, and easy conversions between number systems.</p>
   <!-- Information Sections -->
 <section id="learn" class="mb-5">
-            <div class="row g-4">
-                <!-- What Are Roman Numerals -->
-                <div class="col-lg-6">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class=" bg-warning bg-opacity-10 py-3">
-                            <h2 class="h4 mb-0">What Are Roman Numerals?</h2>
-                        </div>
-                        <div class="card-body">
-                            <p>Roman numerals use letters from the Latin alphabet to represent values. They are made of seven core symbols:</p>
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-hover">
-                                    <thead class="table-warning">
-                                        <tr>
-                                            <th>Symbol</th>
-                                            <th>Value</th>
-                                            <th>Example</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr><td>I</td><td>1</td><td>I = 1</td></tr>
-                                        <tr><td>V</td><td>5</td><td>VI = 6</td></tr>
-                                        <tr><td>X</td><td>10</td><td>IV = 4</td></tr>
-                                        <tr><td>L</td><td>50</td><td>XL = 40</td></tr>
-                                        <tr><td>C</td><td>100</td><td>XC = 90</td></tr>
-                                        <tr><td>D</td><td>500</td><td>CD = 400</td></tr>
-                                        <tr><td>M</td><td>1000</td><td>CM = 900</td></tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="alert alert-info mt-3">
-                                The numerals are added or subtracted depending on their order.
-                            <br><ul><li>VI = 6 = 5+1</li><li>IV = 4 = 5-1 </li><li>XL = 40 = 50-10 </li><li>XC = 90 = 100-10</li><li>100 in Roman numerals = C</li></ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Roman Numerals Chart -->
-                <div class="col-lg-6">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class=" bg-info bg-opacity-10 py-3 ">
-                            <h2 class="h4 mb-0">Roman Numerals 1-100 Chart</h2>
-                        </div>
-                        <div class="card-body">
-                            <p>Here's a useful chart to understand patterns between 1 and 100:</p>
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-striped">
-                                    <thead class="table-info">
-                                        <tr>
-                                            <th>Number</th>
-                                            <th>Roman</th>
-                                            <th>Number</th>
-                                            <th>Roman</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr><td>1</td><td>I</td><td>50</td><td>L</td></tr>
-                                        <tr><td>5</td><td>V</td><td>60</td><td>LX</td></tr>
-                                        <tr><td>10</td><td>X</td><td>70</td><td>LXX</td></tr>
-                                        <tr><td>20</td><td>XX</td><td>80</td><td>LXXX</td></tr>
-                                        <tr><td>30</td><td>XXX</td><td>90</td><td>XC</td></tr>
-                                        <tr><td>40</td><td>XL</td><td>100</td><td>C</td></tr>
-                                    </tbody>
-                                </table>
-                            </div>
-           <div class="text-center mt-3">
-            <button class="btn btn-primary btn-lg px-5 py-3 mb-4" data-bs-toggle="modal" data-bs-target="#chartModal">View Full Chart</button> </div>
-          </div>
+ <div class="row g-4">
+  <!-- What Are Roman Numerals -->
+   <div class="col-lg-6">
+    <div class="card h-100 border-0 shadow-sm">
+     <div class=" bg-warning bg-opacity-10 py-3">
+      <h2 class="h4 mb-0">What Are Roman Numerals?</h2>
+     </div>
+  <div class="card-body">
+   <p>Roman numerals use letters from the Latin alphabet to represent values. They are made of seven core symbols:</p>
+   <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead class="table-warning">
+        <tr>
+         <th>Symbol</th>
+          <th>Value</th>
+          <th>Example</th>
+         </tr>
+        </thead>
+       <tbody>
+        <tr><td>I</td><td>1</td><td>I = 1</td></tr>
+        <tr><td>V</td><td>5</td><td>VI = 6</td></tr>
+        <tr><td>X</td><td>10</td><td>IV = 4</td></tr>
+        <tr><td>L</td><td>50</td><td>XL = 40</td></tr>
+        <tr><td>C</td><td>100</td><td>XC = 90</td></tr>
+        <tr><td>D</td><td>500</td><td>CD = 400</td></tr>
+        <tr><td>M</td><td>1000</td><td>CM = 900</td></tr>
+       </tbody>
+      </table>
+     </div>
+       <div class="alert alert-info mt-3">The numerals are added or subtracted depending on their order.
+        <br><ul><li>VI = 6 = 5+1</li><li>IV = 4 = 5-1 </li><li>XL = 40 = 50-10 </li><li>XC = 90 = 100-10</li><li>100 in Roman numerals = C</li></ul>
+        </div>
+        </div>
+        </div>
+       </div>
+  <!-- Roman Numerals Chart -->
+       <div class="col-lg-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class=" bg-info bg-opacity-10 py-3 ">
+               <h2 class="h4 mb-0">Roman Numerals 1-100 Chart</h2>
+              </div>
+     <div class="card-body">
+      <p>Here's a useful chart to understand patterns between 1 and 100:</p>
+       <div class="table-responsive">
+         <table class="table table-bordered table-striped">
+          <thead class="table-info">
+           <tr>
+           <th>Number</th>
+           <th>Roman</th>
+           <th>Number</th>
+           <th>Roman</th>
+          </tr>
+        </thead>
+       <tbody>
+     <tr><td>1</td><td>I</td><td>50</td><td>L</td></tr>
+     <tr><td>5</td><td>V</td><td>60</td><td>LX</td></tr>
+     <tr><td>10</td><td>X</td><td>70</td><td>LXX</td></tr>
+     <tr><td>20</td><td>XX</td><td>80</td><td>LXXX</td></tr>
+     <tr><td>30</td><td>XXX</td><td>90</td><td>XC</td></tr>
+     <tr><td>40</td><td>XL</td><td>100</td><td>C</td></tr>
+     </tbody>
+   </table>
+   </div>
+     <div class="text-center mt-3">
+        <button class="btn btn-primary btn-lg px-5 py-3 mb-4" data-bs-toggle="modal" data-bs-target="#chartModal">View Full Chart</button> </div>
+    </div>
 
 <div class="text-center p-4">
 <p class="mb-2 fw-semibold">📥 Download Roman Numerals 1–100 Chart (PDF)  </p>
