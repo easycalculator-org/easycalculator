@@ -4,7 +4,7 @@ title: Hypotenuse Calculator – Find Hypotenuse of a Right Triangle
 permalink: /hypotenuse-calculator
 description: "A hypotenuse calculator helps you find the longest side (c) of a right triangle using the formula c = √(a² + b²). Enter two sides to calculate instantly."
 image: "/assets/images/og/hypotenuse-calculator.jpg" 
-last_modified_at: 2026-04-15
+last_modified_at: 2026-04-23
 ---
 
 <style>
@@ -84,23 +84,88 @@ c = \sqrt{a^2 + b^2}
 </div>
 </div>
 <hr>
+<div class="row">
 
-<h2 class="h5 fw-semibold mt-4">🧮 Step-by-Step Example</h2>
+  <!-- Example 1  -->
+  <div class="col-md-6">
+    <h2 class="h5 fw-semibold mt-4">🧮 Example 1 (Basic)</h2>
+    <p>Find the hypotenuse when two sides are small numbers:</p>
+    <ul>
+      <li>a = <strong>6</strong></li>
+      <li>b = <strong>8</strong></li>
+    </ul>
+    <div class="bg-light p-3 rounded text-center">
+      \[
+      c = \sqrt{6^2 + 8^2}
+      \]
+      \[
+      c = \sqrt{36 + 64} = \sqrt{100} = 10
+      \]
+      <p class="mt-2">✅ Hypotenuse = <strong>10</strong></p>
+    </div>
+  </div>
 
-<p>Let’s understand how the calculator works:</p>
+  <!-- Example 2-->
+  <div class="col-md-6">
+    <h2 class="h5 fw-semibold mt-4">📘 Example 2 (Common Exam)</h2>
+    <p>This is a popular Pythagorean triple used in exams:</p>
+    <ul>
+      <li>a = <strong>5</strong></li>
+      <li>b = <strong>12</strong></li>
+    </ul>
+    <div class="bg-light p-3 rounded text-center">
+      \[
+      c = \sqrt{5^2 + 12^2}
+      \]
+      \[
+      c = \sqrt{25 + 144} = \sqrt{169} = 13
+      \]
+      <p class="mt-2">✅ Hypotenuse = <strong>13</strong></p>
+    </div>
+  </div>
 
-<ul>
-<li>Enter side <strong>a = 6</strong></li>
-<li>Enter side <strong>b = 8</strong></li>
-</ul>
+  <!-- Example 3  -->
+  <div class="col-md-6">
+    <h2 class="h5 fw-semibold mt-4">🏗️ Example 3 (Real-Life Use)</h2>
+    <p>A ladder is placed against a wall:</p>
+    <ul>
+      <li>Height (a) = <strong>9 m</strong></li>
+      <li>Distance from wall (b) = <strong>12 m</strong></li>
+    </ul>
+    <div class="bg-light p-3 rounded text-center">
+      \[
+      c = \sqrt{9^2 + 12^2}
+      \]
+      \[
+      c = \sqrt{81 + 144} = \sqrt{225} = 15
+      \]
+      <p class="mt-2">📏 Ladder length = <strong>15 m</strong></p>
+    </div>
+  </div>
 
-<div class="bg-light p-3 rounded text-center">
-\[
-c = \sqrt{6^2 + 8^2} = \sqrt{36 + 64} = \sqrt{100} = 10
-\]
+  <!-- Example 4  -->
+  <div class="col-md-6">
+    <h2 class="h5 fw-semibold mt-4">📐 Example 4 (Advanced)</h2>
+    <p>Find the hypotenuse for larger values:</p>
+    <ul>
+      <li>a = <strong>7</strong></li>
+      <li>b = <strong>24</strong></li>
+    </ul>
+    <div class="bg-light p-3 rounded text-center">
+      \[
+      c = \sqrt{7^2 + 24^2}
+      \]
+      \[
+      c = \sqrt{49 + 576} = \sqrt{625} = 25
+      \]
+      <p class="mt-2">✅ Hypotenuse = <strong>25</strong></p>
+    </div>
+  </div>
+
 </div>
 
-<p class="mt-2">So, the hypotenuse is <strong>10</strong>.</p>
+
+
 
 <hr>
 <h2 class="h5 fw-semibold mt-4">🎯 When Do You Need This Calculator?</h2>
