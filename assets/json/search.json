@@ -786,6 +786,14 @@
     "url": "/simplify-fractions-calculator",
     "content": "fraction calculator add subtract multiply divide simplify lcm fractions"
   },
+
+   {
+    "id": "prime-number",
+    "title": "Prime Number Calculator ",
+    "url": "/prime-number",
+    "content": "prime number calculator "
+  },
+
   {
     "id": "sip-calculator",
     "title": "Sip Calculator",
