@@ -11,3 +11,8 @@ function convertToKelvin() {
     resultDiv.innerText = `${celsius} °C = ${kelvin} K`;
     resultDiv.classList.remove("d-none");
   }
+
+  function setCelsius(value){
+  document.getElementById('celsiusInput').value = value;
+  convertToKelvin();
+}

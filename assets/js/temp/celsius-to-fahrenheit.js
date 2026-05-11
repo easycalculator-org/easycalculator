@@ -11,3 +11,8 @@ function convertToFahrenheit() {
     resultDiv.innerText = `${celsius} °C = ${fahrenheit} °F`;
     resultDiv.classList.remove("d-none");
   }
+
+  function setCelsius(value){
+  document.getElementById('celsiusInput').value = value;
+  convertToFahrenheit();
+}

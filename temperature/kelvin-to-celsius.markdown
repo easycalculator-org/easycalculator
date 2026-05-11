@@ -1,30 +1,49 @@
 ---
 layout: default
-title: Kelvin to Celsius Calculator (K → °C) + Formula & Chart
-permalink: /kelvin-to-celsius/
+title: Kelvin to Celsius Calculator (K → °C) + Formula, Chart & Example
+permalink: /kelvin-to-celsius
 description: "Convert Kelvin to Celsius quickly and accurately with our easy-to-use calculator! Perfect for science, weather, and school projects. Get results instantly!"
 image: "/assets/images/kelvin-to-celsius.jpg"
-last_modified_at: 2026-03-16
+last_modified_at: 2026-05-11
 ---
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card shadow-sm">
-        <div class="card-header bg-primary text-white text-center p-4"><h1>Kelvin to Celsius Calculator (K → °C)</h1></div>
-        <div class="card-body">
-          <form id="converter-form">
-            <div class="mb-3">
-              <label for="kelvinInput" class="form-label p-4">Kelvin</label>
-              <input type="number" class="form-control form-control-lg" id="kelvinInput" placeholder="Enter temperature in Kelvin">
-            </div>
-            <div class="mb-4 text-center"><button type="button" class="btn btn-primary" onclick="convertToCelsius()">Convert</button></div>
-            <div class="alert alert-info d-none font-monospace fs-3" id="result"></div>
-          </form>
+
+<style>
+.converter-section{background:#f5f7fb}.converter-wrap{max-width:1050px;display:grid;grid-template-columns:1fr 420px;gap:50px;align-items:center}.converter-content h1{font-size:52px;font-weight:800;line-height:1.1;color:#111827;margin-bottom:22px}.converter-desc{font-size:18px;line-height:1.8;color:#4b5563;margin-bottom:30px}.converter-tag{display:inline-block;background:#dbeafe;color:#2563eb;padding:8px 16px;border-radius:50px;font-size:14px;font-weight:600;margin-bottom:24px}.formula-mini{background:#fff;padding:18px 22px;border-radius:18px;display:inline-block;box-shadow:0 10px 30px #0000000f}.converter-box{background:#fff;border-radius:28px;padding:35px;box-shadow:0 10px 25px #0000000d 0 20px 48px #0000000f}.input-label{display:block;font-size:15px;font-weight:600;margin-bottom:14px;color:#111827}.custom-input-group{display:flex;align-items:center;border:2px solid #e5e7eb;border-radius:18px;overflow:hidden;margin-bottom:24px;transition:.3s}.custom-input-group:focus-within{border-color:#2563eb;box-shadow:0 0 0 5px #2563eb1f}.custom-input-group input{flex:1;border:none;outline:none;padding:22px;font-size:26px;font-weight:700;color:#111827;background:#fff}.custom-input-group span{background:#2563eb;color:#fff;padding:22px 24px;font-weight:700;font-size:20px}.convert-btn{width:100%;border:none;background:#2563eb;color:#fff;font-size:17px;font-weight:700;padding:18px;border-radius:18px;transition:.3s}.convert-btn:hover{background:#1d4ed8;transform:translateY(-2px)}.result-area{margin-top:24px;background:#eff6ff;border:2px solid #bfdbfe;padding:24px;border-radius:20px;text-align:center;font-size:34px;font-weight:800;color:#1e3a8a}.quick-values{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}.quick-values button{border:none;background:#f3f4f6;padding:10px 16px;border-radius:12px;font-size:14px;font-weight:600;transition:.3s}.quick-values button:hover{background:#dbeafe;color:#2563eb}@media(max-width:991px){.converter-wrap{grid-template-columns:1fr;gap:30px}.converter-content{text-align:center}.converter-content h1{font-size:38px}}@media(max-width:576px){.converter-box{padding:24px}.converter-content h1{font-size:32px}.custom-input-group input{font-size:22px;padding:18px}.result-area{font-size:26px}}
+</style>
+
+
+<section class="converter-section py-5">
+ <div class="converter-wrap mx-auto">
+   <!-- Left Content -->
+  <div class="converter-content">
+  <span class="converter-tag">Kelvin → Celsius </span>
+   <h1>Kelvin to Celsius Converter </h1>
+    <p class="converter-desc"> Instantly convert Kelvin (K) to Celsius (°C) using the accurate scientific conversion formula. Perfect for physics, chemistry, weather science, and engineering calculations.</p>
+     <div class="formula-mini">
+       <span class="formula-text">°C = K − 273.15</span>
+      </div>
+     </div>
+    <!-- Converter Box -->
+    <div class="converter-box">
+     <label class="input-label">Enter Kelvin Value</label>
+      <div class="custom-input-group"><input  type="number" id="kelvinInput"  placeholder="Example: 300" ><span>K</span></div>
+        <button type="button" class="convert-btn" onclick="convertToCelsius()">Convert Temperature</button>
+        <div class="result-area d-none" id="result" ></div>
+        <!-- Quick Examples -->
+        <div class="quick-values">
+          <button onclick="setKelvin(273.15)">273.15 K </button>
+          <button onclick="setKelvin(300)">300 K </button>
+          <button onclick="setKelvin(373.15)">373.15 K </button>
         </div>
       </div>
     </div>
-  </div>
-</div>
+</section>
+
+
+
+
+
+
 
 <hr>
 <div class="row justify-content-center">
@@ -92,8 +111,11 @@ last_modified_at: 2026-03-16
       </thead>
       <tbody>
         <tr><td>0 K</td><td>-273.15°C</td></tr>
-        <tr><td>273.15 K</td><td>0°C</td></tr>
+        <tr><td>50 K</td><td>-223.15°C</td></tr>
+        <tr><td>77 K</td><td>-196.15°C</td></tr>
+        <tr><td>273.15 K</td><td>0°C</td></tr>        
         <tr><td>373.15 K</td><td>100°C</td></tr>
+        <tr><td>500 K</td><td>226.85°C</td></tr>
       </tbody>
     </table>
   </div>
@@ -170,7 +192,7 @@ last_modified_at: 2026-03-16
         </div>
       </div>
     </div>
-  <script src="{{ '/assets/js/kelvin-to-celsius.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/temp/kelvin-to-celsius.js' | relative_url }}"></script>
 
   <script type="application/ld+json">
 {

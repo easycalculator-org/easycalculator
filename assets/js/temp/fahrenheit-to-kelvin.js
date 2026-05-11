@@ -11,3 +11,8 @@ function convertToKelvin() {
     resultDiv.innerText = `${fahrenheit} °F = ${kelvin} K`;
     resultDiv.classList.remove("d-none");
   }
+
+  function setFahrenheit(value){
+  document.getElementById('fahrenheitInput').value = value;
+  convertToKelvin();
+}
