@@ -81,7 +81,7 @@ last_modified_at: 2026-04-24
    <div class="col-lg-6">
     <div class="card h-100 border-0 shadow-sm">
      <div class=" bg-warning bg-opacity-10 py-3">
-      <h2 class="h4 mb-0">What Are Roman Numerals?</h2>
+      <h2 class="h4 p-2">What Are Roman Numerals?</h2>
      </div>
   <div class="card-body">
    <p>Roman numerals use letters from the Latin alphabet to represent values. They are made of seven core symbols:</p>
@@ -115,7 +115,7 @@ last_modified_at: 2026-04-24
        <div class="col-lg-6">
           <div class="card h-100 border-0 shadow-sm">
             <div class=" bg-info bg-opacity-10 py-3 ">
-               <h2 class="h4 mb-0">Roman Numerals 1-100 Chart</h2>
+               <h2 class="h4 p-2">Roman Numerals 1-100 Chart</h2>
               </div>
      <div class="card-body">
       <p>Here's a useful chart to understand patterns between 1 and 100:</p>
