@@ -10,20 +10,20 @@ last_modified_at: 2026-05-16
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
 <div class="row justify-content-center">
-  <div class="col-lg-8 col-xl-7">
-    <div class="card shadow-lg border-0 rounded-4 p-4">
-      <div class="text-center mb-4">
-        <h1>Age Calculator</h1>
-        <p class="lead text-center text-muted">Calculate your exact age instantly (Years, Months, Days, Hours, Minutes & Seconds)</p>
-      </div>
-      <div class="row g-3 mb-3">
-        <div class="col-md-6">
-          <label class="form-label fw-semibold">Start Date</label>
-          <div class="input-group">
-              <input type="text" id="startDate" class="form-control flatpickr" placeholder="Select start date" required="" />
-              <span class="input-group-text bg-light"><i class="fa-solid fa-calendar-day text-primary"></i></span>
-            </div>
-        </div>
+ <div class="col-lg-8 col-xl-7">
+ <div class="card shadow-lg border-0 rounded-4 p-4">
+  <div class="text-center mb-4">
+  <h1>Age Calculator</h1>
+  <p class="lead text-center text-muted">Calculate your exact age instantly (Years, Months, Days, Hours, Minutes & Seconds)</p>
+  </div>
+   <div class="row g-3 mb-3">
+    <div class="col-md-6">
+    <label class="form-label fw-semibold">Start Date</label>
+    <div class="input-group">
+    <input type="text" id="startDate" class="form-control flatpickr" placeholder="Select start date" required="" />
+    <span class="input-group-text bg-light"><i class="fa-solid fa-calendar-day text-primary"></i></span>
+   </div>
+  </div>
         <div class="col-md-6">
           <label class="form-label fw-semibold">End Date</label>
             <div class="input-group">
@@ -32,23 +32,21 @@ last_modified_at: 2026-05-16
             </div>
         </div>
       </div>
-   <div id="mainResult" class="text-center p-3 rounded-4 mb-3 d-none"  style="background: linear-gradient(135deg,#0d6efd,#4dabf7); color:white;">
-        <h3 class="mb-0" id="result1">—</h3>
-        <small>Total Age</small>
-      </div>
-  <div id="resultsWrapper" class="row g-3 d-none">
-    <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Total Weeks</small><h5 id="result2">—</h5></div> </div>
-    <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Total Days</small><h5 id="result3">—</h5></div></div>
-    <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Total Months</small><h5 id="result4">—</h5> </div></div>
-    <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"> <small>Total Hours</small> <h5 id="result5">—</h5> </div></div>
-    <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Total Minutes</small><h5 id="result6">—</h5></div></div>
-    <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Weekdays</small> <h5 id="result7">—</h5></div> </div>
-   </div>
-  </div>
-  </div>
+ <div id="mainResult" class="text-center p-3 rounded-4 mb-3 d-none"  style="background: linear-gradient(135deg,#0d6efd,#4dabf7); color:white;">
+    <h3 class="mb-0" id="result1">—</h3>
+    <small>Total Age</small>
 </div>
-
-
+ <div id="resultsWrapper" class="row g-3 d-none">
+   <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Total Weeks</small><h5 id="result2">—</h5></div> </div>
+   <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Total Days</small><h5 id="result3">—</h5></div></div>
+   <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Total Months</small><h5 id="result4">—</h5> </div></div>
+   <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"> <small>Total Hours</small> <h5 id="result5">—</h5> </div></div>
+   <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Total Minutes</small><h5 id="result6">—</h5></div></div>
+   <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Weekdays</small> <h5 id="result7">—</h5></div> </div>
+  </div>
+ </div>
+ </div>
+</div>
 
 <!-- Article Content -->
 <div class="article-container">
@@ -60,7 +58,6 @@ last_modified_at: 2026-05-16
     <!-- Last Updated -->
     <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
   </div>
-
 
 
 <!-- Section -->
@@ -76,14 +73,14 @@ last_modified_at: 2026-05-16
  <div class="card-body">
   <h2 class="card-title text-primary">Birth Time Options for Precision</h2>
    <p>Including the exact time of birth can greatly enhance the accuracy of age calculations. While most standard age calculators only require a birth date, adding the birth time allows for a much more precise result—down to the hour, minute, and even second. This level of detail is especially important in areas like astrology, legal documentation, and medical records.</p>
-    <h3 class="mt-4">Examples of Time Calculations</h3>
-       <p>Our Age Calculator formula can provide various results, including:</p>
-            <ul>
-               <li>Age in years and months (e.g., 21 years and 3 months)</li>
-               <li>Days since birth (e.g., 7,665 days old)</li>
-               <li>Age in weeks (e.g., 1,095 weeks)</li>
-               <li>Upcoming milestone birthdays (like turning 18 or 65)</li>
-              </ul>
+   <h3 class="mt-4">Examples of Time Calculations</h3>
+    <p>Our Age Calculator formula can provide various results, including:</p>
+     <ul>
+      <li>Age in years and months (e.g., 21 years and 3 months)</li>
+      <li>Days since birth (e.g., 7,665 days old)</li>
+      <li>Age in weeks (e.g., 1,095 weeks)</li>
+      <li>Upcoming milestone birthdays (like turning 18 or 65)</li>
+     </ul>
      <p>These time for calculation examples are help people plan events, meet deadlines, or simply understand how much time has passed.</p>
     </div>
    </div>

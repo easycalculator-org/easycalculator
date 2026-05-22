@@ -4,7 +4,7 @@ title: Pro Rata Calculator – Calculate Proportional Payments
 permalink: /pro-rata-calculator
 description: "Use the Pro Rata Calculator to calculate proportional amounts for salary, rent, interest, or fees based on time, quantity, or share instantly."
 image: "/assets/images/og/pro-rata-calculator.jpg"
-last_modified_at: 2026-04-10
+last_modified_at: 2026-05-22
 ---
 
 <div class="row justify-content-center">
@@ -139,31 +139,49 @@ last_modified_at: 2026-04-10
   </div>
 </div>
 <div class="pt-4 ">
-<h3>Common Uses of Pro Rata Calculation</h3>
-<p>Pro rata calculations are widely used in finance, payroll, and billing systems, including:</p>
+<div class="row align-items-center g-4">
+    <!-- Left Content -->
+    <div class="col-md-6"> 
+        <div class="p-4 bg-light rounded shadow-sm h-100">
+            <h2 class="mb-3">Common Uses of Pro Rata Calculation</h2>
+            <p>
+                Pro rata calculations are widely used in finance, payroll, 
+                and billing systems, including:
+            </p>
+            <ul class="mb-4">
+                <li><strong>Salary or wages</strong> for partial work periods</li>
+                <li><strong>Rent payments</strong> when moving in or out mid-month</li>
+                <li><strong>Subscription fees</strong> for partial billing cycles</li>
+                <li><strong>Interest calculations</strong> for partial time periods</li>
+                <li><strong>Dividend distribution</strong> based on share ownership</li>
+            </ul>
+            <h2 class="mb-3">Benefits of Using a Pro Rata Calculator</h2>
+            <ul>
+                <li>Quick and accurate proportional calculations</li>
+                <li>Reduces manual calculation errors</li>
+                <li>Useful for payroll, finance, and billing</li>
+                <li>Works for any time period (days, weeks, months, or custom)</li>
+            </ul>
+            <p class="mt-3 mb-0">
+                Our <strong>Pro Rata Calculator</strong> makes it easy to determine 
+                proportional values instantly by entering the total amount, 
+                full period, and actual portion used.
+            </p>
+        </div>
+    </div>
+    <!-- Right Image -->
+    <div class="col-md-6 text-center">
+        <img src="/assets/images/og/pro-rata-calculator.jpg" 
+            alt="Pro Rata Calculator for salary rent and proportional payments"
+            class="img-fluid rounded shadow-sm"
+            loading="lazy" >
+    </div>
 
-<ul>
-<li><strong>Salary or wages</strong> for partial work periods</li>
-<li><strong>Rent payments</strong> when moving in or out mid-month</li>
-<li><strong>Subscription fees</strong> for partial billing cycles</li>
-<li><strong>Interest calculations</strong> for partial time periods</li>
-<li><strong>Dividend distribution</strong> based on share ownership</li>
-</ul>
 </div>
-<h2>Benefits of Using a Pro Rata Calculator</h2>
-<ul>
-<li>Quick and accurate proportional calculations</li>
-<li>Reduces manual calculation errors</li>
-<li>Useful for payroll, finance, and billing</li>
-<li>Works for any time period (days, weeks, months, or custom)</li>
-</ul>
-<p>Our <strong>Pro Rata Calculator</strong> makes it easy to determine proportional values instantly by entering the total amount, full period, and actual portion used.</p>
-
-
 
 
 <!-- FAQ Section -->
- <section class="mb-5">
+ <section class="p-4">
         <h2 class="mb-4">FAQ on Pro rata Calculator</h2>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
@@ -186,3 +204,63 @@ last_modified_at: 2026-04-10
       </section>
       </div>
 <script src="{{ '/assets/js/pro-rata-calculator.js' | relative_url }}"></script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+   {
+     "@type":"Question",
+     "name":"What is a Pro Rata calculation?",
+     "acceptedAnswer":{
+       "@type":"Answer",
+       "text":"A pro rata calculation distributes a total amount proportionally based on time, quantity, or share."
+     }
+   },
+   {
+     "@type":"Question",
+     "name":"How do you calculate pro rata salary?",
+     "acceptedAnswer":{
+       "@type":"Answer",
+       "text":"Divide the number of days worked by the total days in the pay period and multiply by the full salary."
+     }
+   },
+   {
+     "@type":"Question",
+     "name":"Where is pro rata used?",
+     "acceptedAnswer":{
+       "@type":"Answer",
+       "text":"Pro rata calculations are used for salary payments, rent adjustments, subscription billing, and dividend distribution."
+     }
+   }
+ ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+   {
+     "@type":"ListItem",
+     "position":1,
+     "name":"Home",
+     "item":"https://easycalculator.org/"
+   },
+   {
+     "@type":"ListItem",
+     "position":2,
+     "name":"Finance Calculators",
+     "item":"https://easycalculator.org/finance-calculators"
+   },
+   {
+     "@type":"ListItem",
+     "position":3,
+     "name":"Pro Rata Calculator",
+     "item":"https://easycalculator.org/pro-rata-calculator"
+   }
+ ]
+}
+</script>

@@ -207,25 +207,25 @@ last_modified_at: 2026-04-24
    </div>
  <div class="card mb-3 border-0 bg-light">
  <div class="card-body ">
-  <div class="fw-bold text-primary"> 2. What does L stand for in Roman numerals?</div>
+  <div class="fw-bold text-primary">2. What does L stand for in Roman numerals?</div>
    <p class="mb-0">L equals 50 in Roman numerals. It's one of the seven basic symbols in the system.</p>
   </div>
  </div>
    <div class="card mb-3 border-0 bg-light">
     <div class="card-body ">
-     <div class="fw-bold text-primary"> 3. Is "XCX" a valid Roman numeral? </div>
+     <div class="fw-bold text-primary">3. Is "XCX" a valid Roman numeral? </div>
      <p class="mb-0"> No, "XCX" is not a valid Roman numeral. The correct representation for 100 is simply "C".</p>
     </div>
    </div>
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body ">
-    <div class="fw-bold text-primary"> 4. What is the Roman numeral for 2025?</div>
+    <div class="fw-bold text-primary">4. What is the Roman numeral for 2025?</div>
     <p class="mb-0">2025 = MMXXV (M=1000, X=10, V=5)</p>
    </div>
   </div>
    <div class="card mb-3 border-0 bg-light">
     <div class="card-body ">
-    <div class="fw-bold text-primary"> 5. What is 777 in Roman numerals?</div>
+    <div class="fw-bold text-primary">5. What is 777 in Roman numerals?</div>
    <p class="mb-0"> <strong>777 in Roman numerals is DCCLXXVII.</strong> It is formed by combining 700 (DCC), 70 (LXX), and 7 (VII). <br> Break 777 into Step-by-step <br>  
    <ul class="mb-0 ps-3">
     <li><strong>700</strong> = DCC (500 + 100 + 100)</li>
@@ -235,6 +235,9 @@ last_modified_at: 2026-04-24
    </p>
   </div>
  </div>
+
+
+ 
  </section>
 <!-- Did You Know? -->
 <div class="card border-0 bg-light mb-5 p-3">
