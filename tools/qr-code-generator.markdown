@@ -17,6 +17,7 @@ last_modified_at: 2026-05-27
 <section class="qr-section">
 <div class="row justify-content-center">
 <div class="col-lg-9 col-xl-8">
+<!-- breadcrumb -->
 <div aria-label="breadcrumb" class="p-3">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
