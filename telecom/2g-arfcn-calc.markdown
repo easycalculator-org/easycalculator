@@ -3,13 +3,23 @@ layout: default
 title: ARFCN Calculator – GSM ARFCN to Frequency Converter
 permalink: /arfcn-calculator
 description: "Convert GSM ARFCN to uplink and downlink frequency instantly using our free ARFCN Calculator. Supports GSM 900, 1800, 850 & 1900 bands for RF engineers"
-#image: "/assets/images/age-calc.png"
-last_modified_at: 2026-02-28
+image: "/assets/images/og/arfcn-calculator-example.jpg"
+last_modified_at: 2026-05-28
 ---
 <style>
 .freq-card {background-color: #f8f9fa; border-radius: 0.5rem; }
 .badge-200khz {font-size: 0.7rem; background-color: #e9ecef; color: #1e293b; padding: 0.25rem 0.65rem; border-radius: 20px; display: inline-block;}
 </style>
+
+
+<div aria-label="breadcrumb" class="p-3">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/rf-calculator">RF Calculator</a></li>
+    <li class="breadcrumb-item active" aria-current="page">ARFCN Calculator</li>
+  </ol>
+</div>
+
 <div class="row justify-content-center py-4">
    <div class="col-lg-9">
      <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
@@ -207,28 +217,127 @@ last_modified_at: 2026-02-28
 
 
 <!-- FAQ Section -->
- <section class="mb-5 pt-4">
-        <h2 class="mb-4">FAQ on ARFCN Calculator</h2>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary">1. What does ARFCN stand for?</div>
-            <p class="mb-0">ARFCN stands for <strong>Absolute Radio Frequency Channel Number</strong>.</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 2. What is GSM channel spacing?</div>
-            <p class="mb-0">In GSM, the channel spacing is <strong>200 kHz (0.2 MHz)</strong>.</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 3. Is ARFCN used in LTE and 5G?</div>
-            <p class="mb-0">Yes. LTE uses <strong>EARFCN</strong> and 5G uses <strong>NR-ARFCN</strong>.</p>
-          </div>
-        </div>
-      </section>
+<section class="mb-5 pt-4">
+  <h2 class="mb-4">FAQ on ARFCN Calculator</h2>
+   <div class="card mb-3 border-0 bg-light">
+    <div class="card-body ">
+    <div class="fw-bold text-primary">1. What does ARFCN stand for?</div>
+     <p class="mb-0">ARFCN stands for <strong>Absolute Radio Frequency Channel Number</strong>.</p>
+    </div>
+    </div>
+  <div class="card mb-3 border-0 bg-light">
+    <div class="card-body ">
+     <div class="fw-bold text-primary">2. What is GSM channel spacing?</div>
+     <p class="mb-0">In GSM, the channel spacing is <strong>200 kHz (0.2 MHz)</strong>.</p>
+    </div>
+   </div>
+   <div class="card mb-3 border-0 bg-light">
+    <div class="card-body ">
+    <div class="fw-bold text-primary">3. Is ARFCN used in LTE and 5G?</div>
+     <p class="mb-0">Yes. LTE uses <strong>EARFCN</strong> and 5G uses <strong>NR-ARFCN</strong>.</p>
+    </div>
+   </div>
+   <div class="card mb-3 border-0 bg-light">
+    <div class="card-body ">
+    <div class="fw-bold text-primary">4. How many channels in GSM900?</div>
+     <p class="mb-0">Standard GSM 900 supports <strong>124 radio channels</strong> using ARFCN range <strong>1 to 124</strong>. Each GSM channel uses <strong>200 kHz</strong> spacing. Extended GSM (E-GSM 900) provides additional channels using ARFCN range <strong>975–1023</strong>.</p>
+    </div>
+   </div>
+    <div class="card mb-3 border-0 bg-light">
+    <div class="card-body ">
+     <div class="fw-bold text-primary">5. What is GSM channel number?</div>
+      <p class="mb-0">
+      A <strong>GSM channel number</strong> is called an <strong>ARFCN (Absolute Radio Frequency Channel Number)</strong>. It is a unique number assigned to each GSM radio frequency channel used for communication between the mobile station and base station. Instead of using raw frequency values, GSM networks use ARFCN numbers for frequency planning, channel allocation, and RF optimization.</p>
+     </div>
+    </div>
+   </section>
 
       {% include rf.html %}
  
 <script src="{{ '/assets/js/arfcn-calc.js' | relative_url }}"></script> 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+
+    {
+      "@type": "Question",
+      "name": "What does ARFCN stand for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ARFCN stands for Absolute Radio Frequency Channel Number."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What is GSM channel spacing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In GSM, the channel spacing is 200 kHz (0.2 MHz)."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Is ARFCN used in LTE and 5G?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. LTE uses EARFCN and 5G uses NR-ARFCN."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "How many channels in GSM900?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard GSM 900 supports 124 radio channels using ARFCN range 1 to 124. Each GSM channel uses 200 kHz spacing. Extended GSM (E-GSM 900) provides additional channels using ARFCN range 975–1023."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What is GSM channel number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A GSM channel number is called ARFCN (Absolute Radio Frequency Channel Number). It is a unique number assigned to each GSM radio frequency channel used for communication between the mobile station and base station. GSM networks use ARFCN numbers for frequency planning, channel allocation, and RF optimization."
+      }
+    }
+
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://easycalculator.org/"
+    },
+
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RF Calculator",
+      "item": "https://easycalculator.org/rf-calculator"
+    },
+
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ARFCN Calculator",
+      "item": "https://easycalculator.org/arfcn-calculator"
+    }
+
+  ]
+}
+</script>
