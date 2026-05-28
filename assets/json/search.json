@@ -164,7 +164,7 @@
   },
   {
     "id": "currency",
-    "title": "Currency",
+    "title": "Currency converter",
     "url": "/currency",
     "content": "currency "
   },
@@ -174,13 +174,19 @@
     "url": "/date-to-date-calculator",
     "content": "date to date calculator "
   },
+  {
+    "id": "time-to-decimal-calculator",
+    "title": "Time To Decimal Calculator",
+    "url": "/time-to-decimal-calculator",
+    "content": "time to decimal calculator "
+  },
+ 
  {
     "id": "pdf-unlock",
     "title": "PDF Unlock",
     "url": "/tools/pdf-unlock",
     "content": "pdf unlock "
   },
-
   {
     "id": "dbm-to-watt",
     "title": "Dbm To Watt",

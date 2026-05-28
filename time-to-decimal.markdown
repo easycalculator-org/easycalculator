@@ -333,6 +333,40 @@ last_modified_at: 2026-04-11
     </div>
 
 
+<!-- FAQ Section -->
+<section class="mb-5">
+  <h2 class="mb-4">FAQ on Time to Decimal Calculator</h2>
+   <div class="card mb-3 border-0 bg-light">
+     <div class="card-body ">
+       <div class="fw-bold text-primary">1. What is a Time to Decimal Calculator?</div>
+       <p class="mb-0">A Time to Decimal Calculator converts hours and minutes into decimal format. For example, <strong>2 hours 30 minutes</strong> becomes                    <strong>2.5 hours</strong>. It is commonly used for payroll, billing, project tracking, and timesheets.</p>
+     </div>
+   </div>
+    <div class="card mb-3 border-0 bg-light">
+      <div class="card-body ">
+        <div class="fw-bold text-primary">2. How do you convert time into decimal hours?</div>
+         <p class="mb-0">To convert time into decimal hours: <ol>
+                        <li>Keep the hours the same.</li>
+                        <li>Divide minutes by 60.</li>
+                        <li>Add the result to the hours.</li>
+                    </ol>
+               <strong>Example:</strong><br> 3 hours 45 minutes = 3 + (45 ÷ 60) = <strong>3.75 hours</strong> </p>
+       </div>
+     </div>
+    <div class="card mb-3 border-0 bg-light">
+      <div class="card-body ">
+        <div class="fw-bold text-primary">3. Why are decimal hours used in payroll and billing?</div>
+        <p class="mb-0">Decimal hours simplify calculations for: 
+        <ul>
+         <li>Employee salaries</li>
+         <li>Freelancer billing</li>
+         <li>Project time tracking</li>
+         <li>Overtime calculations</li>
+         </ul> Businesses can directly multiply decimal hours by an hourly rate, making payroll calculations faster and more accurate.</p>
+       </div>
+     </div>
+   </section>
+      <!-- Did You Know? -->
 </div>
 
 
