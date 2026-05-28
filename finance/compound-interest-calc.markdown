@@ -3,7 +3,7 @@ layout: default
 title: Free Compound Interest Calculator – Daily, Monthly, Yearly
 permalink: /compound-interest-calculator
 description: "Plan your future. Use our free compound interest calculator to estimate returns on investments, with principal, rate, and time options"
-last_modified_at: 2026-03-11
+last_modified_at: 2026-05-28
 ---
 
 <style>
@@ -72,19 +72,39 @@ canvas { max-height:180px; }
 <h6>Year-wise Growth</h6>
 <table class="table table-sm table-bordered">
 <thead>
-<tr>
-<th>Year</th>
-<th>Total Amount</th>
-</tr>
+<tr><th>Year</th><th>Total Amount</th></tr>
 </thead>
 <tbody id="yearTable"></tbody>
 </table>
 </div>
+</div>
+</div>
+</div>
 
-</div>
+<!-- Article Content -->
+<div class="article-container">
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+  </div>
+   <!-- Article-->
+   
 </div>
 
-</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script src="{{ '/assets/js/finance/compound-interest-calc.js' | relative_url }}"></script>

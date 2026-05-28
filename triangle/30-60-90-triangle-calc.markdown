@@ -4,8 +4,17 @@ title: 30-60-90 Triangle Calculator | Find Sides, Area, Perimeter & Formula
 permalink: /30-60-90-triangle-calculator
 description: "Use this free 30-60-90 triangle calculator to find sides, hypotenuse, and perimeter instantly. Solve special right triangle problems using formulas and examples."
 image: "/assets/images/og/30-60-90-triangle-calculator.jpg"
-last_modified_at: 2026-04-10
+last_modified_at: 2026-05-28
 ---
+
+<div aria-label="breadcrumb" class="p-3">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/triangle-calculators">Triangle Calculator</a></li>
+    <li class="breadcrumb-item active" aria-current="page">30-60-90 Triangle Calculator</li>
+  </ol>
+</div>
+
 
 <div class="py-4">
 <h1>30-60-90 Triangle Calculator</h1>
@@ -28,7 +37,6 @@ last_modified_at: 2026-04-10
 
 <!-- Triangle Graph -->
 <div class="col-md-7 text-center">
-
 <svg id="triangleSVG" viewBox="0 0 340 260" width="100%" height="260">
 
 <polygon id="triangle" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
@@ -145,7 +153,12 @@ last_modified_at: 2026-04-10
   </div>
 </div>
 
-
+<!-- Step by Step -->
+<div class="bg-light p-4">
+<h2>Step-by-Step Calculation</h2>
+<p>Given short side = 5<br>Long side = 5 × √3 = 8.66<br>Hypotenuse = 2 × 5 = 10<br>Area = ½ × 5 × 8.66 = 21.65</p>
+</div>
+<br>
 <!-- Area and Perimeter -->
 <div class="card shadow-sm mb-4">
 <div class="card-body">
@@ -282,5 +295,32 @@ last_modified_at: 2026-04-10
  "name": "30-60-90 Triangle Calculator",
  "applicationCategory": "Calculator",
  "operatingSystem": "Web"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://easycalculator.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Triangle Calculator",
+      "item": "https://easycalculator.org/triangle-calculators"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "30-60-90 Triangle Calculator",
+      "item": "https://easycalculator.org/30-60-90-triangle-calculator"
+    }
+  ]
 }
 </script>
