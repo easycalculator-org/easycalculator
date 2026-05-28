@@ -17,12 +17,8 @@ last_modified_at: 2026-04-12
           <h3 class="mb-0 fw-semibold">Timesheet Calculator</h3>
         </div>
         <div class="mt-2 mt-sm-0 d-flex gap-2">
-          <button class="btn btn-warning btn-sm auto-time-btn" id="autoTimeBtn" type="button">
-            <i class="fas fa-magic"></i> Auto Fill Time
-          </button>
-          <button class="btn btn-light btn-sm" id="downloadPDFBtn" type="button">
-            <i class="fas fa-file-pdf text-danger"></i> Export PDF
-          </button>
+          <button class="btn btn-warning btn-sm auto-time-btn" id="autoTimeBtn" type="button"><i class="fas fa-magic"></i>Auto Fill Time</button>
+          <button class="btn btn-light btn-sm" id="downloadPDFBtn" type="button"><i class="fas fa-file-pdf text-danger"></i>Export PDF</button>
         </div>
       </div>
     </div>
@@ -52,7 +48,6 @@ last_modified_at: 2026-04-12
       </div>
      <!-- Top Time Summary Bar -->
 <div class="row g-3 mb-4 no-print text-center text-md-start">
-
   <div class="col-6 col-md-4 col-lg text-center">
     <div class="bg-white border rounded p-2 h-100">
       <i class="fas fa-calendar-alt text-primary me-1"></i>
@@ -60,7 +55,6 @@ last_modified_at: 2026-04-12
       <strong id="currentMonthDisplay">—</strong>
     </div>
   </div>
-
   <div class="col-6 col-md-4 col-lg text-center">
     <div class="bg-white border rounded p-2 h-100">
       <i class="fas fa-calendar-check text-success me-1"></i>
@@ -68,7 +62,6 @@ last_modified_at: 2026-04-12
       <strong id="periodRangeDisplay">—</strong>
     </div>
   </div>
-
   <div class="col-6 col-md-4 col-lg text-center">
     <div class="bg-white border rounded p-2 h-100">
       <i class="fas fa-mug-hot text-warning me-1"></i>
@@ -76,7 +69,6 @@ last_modified_at: 2026-04-12
       <strong id="totalBreakDisplay">0 hrs</strong>
     </div>
   </div>
-
   <div class="col-6 col-md-6 col-lg text-center">
     <div class="bg-light border rounded p-2 h-100">
       <i class="fas fa-clock text-primary me-1"></i>
@@ -84,7 +76,6 @@ last_modified_at: 2026-04-12
       <strong id="totalHours">0.00</strong>
     </div>
   </div>
-
   <div class="col-6 col-md-6 col-lg text-center">
     <div class="bg-light border rounded p-2 h-100">
       <i class="fas fa-check-circle text-success me-1"></i>
@@ -92,7 +83,6 @@ last_modified_at: 2026-04-12
       <strong id="totalDays">0</strong>
     </div>
   </div>
-
 </div>
  <!-- Action Buttons -->
       <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 mt-2 no-print">
@@ -254,7 +244,7 @@ last_modified_at: 2026-04-12
 
 <!-- Section -->
 <section class="mb-5">
-<h2 class="pt-2">Time Sheet Calculator – Track Work Hours Easily</h2>
+<h1>Time Sheet Calculator – Track Work Hours Easily</h1>
 <p>A <strong>Time Sheet Calculator</strong> is a simple yet powerful tool used to calculate total working hours based on clock-in and clock-out times. Whether you are an employee, freelancer, or business owner, this tool helps you accurately track daily and weekly work hours, including breaks and overtime.</p>
 <p>Our free online time sheet calculator is designed to make time tracking fast, accurate, and hassle-free.</p>
 

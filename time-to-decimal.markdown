@@ -215,7 +215,7 @@ last_modified_at: 2026-04-11
   </div>
    <!-- Article-->
     <div class="text-center mb-5">
-        <h1 class="fw-bold text-primary">Time to Decimal Calculator – Complete Guide</h1>
+        <h2 class="fw-bold text-primary">Time to Decimal Calculator – Complete Guide</h2>
         <p class="lead text-muted">
             Learn how to convert hours and minutes into decimal format easily for payroll, billing, and time tracking.
         </p>

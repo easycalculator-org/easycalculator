@@ -18,7 +18,7 @@ last_modified_at: 2026-03-08
 <div class="card shadow border-0">
 <div class="card-body p-4">
 
-<h2 class="text-center fw-bold mb-4">Simplify Fractions Calculator</h2>
+<h1 class="text-center fw-bold mb-4">Simplify Fractions Calculator</h1>
 
 
 <!-- FRACTION INPUT -->
