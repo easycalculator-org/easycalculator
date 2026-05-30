@@ -25,16 +25,13 @@ last_modified_at: 2026-05-29
   </ol>
 </div>
 
-
-
-<div class="container-fluid px-2 px-lg-3 py-3">
 <div class="card-glass">
 
 <!-- HEADER -->
 <div class="toolbar-header d-flex flex-wrap justify-content-between align-items-center">
 
 <div>
-<h4 class="mb-1 fw-bold"><i class="fas fa-ruler-combined me-2"></i>Distance Calculator on Map</h4>
+<h1>Distance Calculator on Map</h1>
 <div class="small opacity-75">Measure distance and area accurately using satellite and street maps</div>
 </div>
 
@@ -56,9 +53,7 @@ last_modified_at: 2026-05-29
 <!-- FLOATING INFO -->
 <div class="map-bottom-bar">
 <div class="info-tip"><i class="fas fa-info-circle text-primary"></i>Double click to finish drawing</div>
-
 <div class="info-tip"><i class="fas fa-layer-group"></i>OSM + Satellite Maps</div>
-
 <div class="info-tip"><i class="fas fa-ruler-combined"></i>Geodesic Precision</div>
 </div>
 </div>
@@ -73,16 +68,13 @@ last_modified_at: 2026-05-29
 
 <div class="mb-4">
 <div class="d-flex justify-content-between align-items-center mb-2">
-
 <div class="fw-bold"><i class="fas fa-pen-ruler me-1"></i>Mode</div>
 
 </div>
 
 <div class="mode-selector">
-
 <button id="lineModeBtn" class="mode-btn active"><i class="fas fa-ruler-horizontal"></i>Distance</button>
 <button id="polygonModeBtn" class="mode-btn"><i class="fas fa-draw-polygon"></i>Area</button>
-
 </div>
 
 </div>
@@ -92,7 +84,6 @@ last_modified_at: 2026-05-29
 <div class="mb-4">
 
 <label class="small fw-semibold text-secondary mb-2">Distance Unit</label>
-
 <select id="distanceUnitSelect" class="form-select rounded-pill">
 <option value="meters">Meters</option>
 <option value="kilometers">Kilometers</option>
@@ -105,7 +96,6 @@ last_modified_at: 2026-05-29
 <!-- DISTANCE -->
 
 <div class="section-title">📏 Distance Measurements</div>
-
 <div id="linesListContainer" style="max-height:260px;overflow-y:auto;">
 <div class="text-muted text-center py-4 small">No lines drawn</div>
 </div>
@@ -113,7 +103,6 @@ last_modified_at: 2026-05-29
 <!-- AREA -->
 
 <div class="section-title mt-3">📐 Area Measurements</div>
-
 <div id="polygonsListContainer" style="max-height:240px;overflow-y:auto;">
 <div class="text-muted text-center py-4 small">No polygons drawn</div>
 </div>
@@ -121,7 +110,6 @@ last_modified_at: 2026-05-29
 <!-- TOTAL -->
 <div id="totalAreaSummary" class="total-box p-3 mt-3 d-none">
 <div class="fw-semibold mb-2"><i class="fas fa-chart-pie me-1"></i>Total Area</div>
-
 <div class="row text-center">
 <div class="col-6 border-end">
 <div class="small text-secondary">Square Meter</div>
@@ -139,7 +127,127 @@ last_modified_at: 2026-05-29
 </div>
 </div>
 </div>
+
+
+
+<!-- Article Content -->
+<div class="article-container">
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+  </div>
+   <!-- Article-->
+
+<h2>Distance Calculator on Map: Measure Distance and Area Directly on Interactive Maps</h2>
+<p>Whether you're planning a road trip, measuring a property boundary, estimating a running route, or calculating land area, a Distance Calculator on Map makes the process simple and visual. Instead of manually estimating measurements, users can click directly on the map to calculate accurate distances and areas in seconds.</p>
+<h2>What ss a Distance Calculator on Map?</h2>
+<p>A Distance Calculator on Map is an interactive tool that allows users to measure the distance between multiple points and calculate the area enclosed by those points. By clicking on locations directly on the map, users can create routes, polygons, and boundaries while viewing real-time measurement results.</p>
+<p>The tool is useful for:</p>
+<ul>
+<li>Route planning</li>
+<li>Land and property measurement</li>
+<li>Construction projects</li>
+<li>Agriculture and farming</li>
+<li>Hiking and cycling routes</li>
+<li>GIS and mapping tasks</li>
+<li>Educational purposes</li>
+</ul>
+
+<h2>Key Features</h2>
+<h3>Click-to-Measure Distance</h3>
+<p>Simply click on the map to add points. The tool automatically draws colored lines between locations and calculates:</p>
+<ul>
+<li>Total distance</li>
+<li>Segment distance</li>
+<li>Route length</li>
+<li>Straight-line measurements</li>
+</ul>
+<p>Users can add as many points as needed for complex routes.</p>
+<h3>Area Measurement</h3>
+<p>Need to calculate the size of a plot, field, park, or construction site?</p>
+<p>Switch to Area Mode and click around the boundary. The tool automatically creates a polygon and calculates:</p>
+<ul>
+<li>Square meters (m&sup2;)</li>
+<li>Square kilometers (km&sup2;)</li>
+<li>Acres</li>
+<li>Hectares</li>
+<li>Square feet (ft&sup2;)</li>
+</ul>
+<h3>Visual Color Markers and Shapes</h3>
+<p>The calculator displays colored markers, lines, and polygons, making it easy to identify routes and measured areas. The visual representation helps users understand measurements more effectively than text-based calculations.</p>
+<h3>Interactive Maps</h3>
+<p>Measure directly on detailed maps with zoom and pan controls. Users can accurately place measurement points using satellite and standard map views.</p>
+<h3>Screenshot Sharing</h3>
+<p>One of the most useful features is the ability to capture and share screenshots.</p>
+<p>After creating a route or area measurement, users can:</p>
+<ul>
+<li>Take a screenshot of the map</li>
+<li>Share measurements with colleagues or clients</li>
+<li>Save results for documentation</li>
+<li>Include map images in reports and presentations</li>
+</ul>
+<p>This eliminates the need for manual screenshots or third-party tools.</p>
+<h3>Easy Editing</h3>
+<p>Mistakes happen. The tool allows users to:</p>
+<ul>
+<li>Move points</li>
+<li>Delete points</li>
+<li>Clear measurements</li>
+<li>Start a new calculation instantly</li>
+</ul>
+<h2>How to Use the Distance Calculator on Map</h2>
+<h3>Measure Distance</h3>
+<ol>
+<li>Open the Distance Calculator on Map.</li>
+<li>Click on the first location.</li>
+<li>Continue clicking additional points along the route.</li>
+<li>View the total distance displayed automatically.</li>
+<li>Adjust points if needed.</li>
+</ol>
+<h3>Measure Area</h3>
+<ol>
+<li>Select Area Measurement mode.</li>
+<li>Click around the perimeter of the area.</li>
+<li>Close the polygon by connecting the final point.</li>
+<li>Instantly view the calculated area.</li>
+</ol>
+<h3>Share Results</h3>
+<ol>
+<li>Complete your measurement.</li>
+<li>Use the Screenshot or Share option.</li>
+<li>Save the image or share it with others.</li>
+</ol>
+<h2>Common Uses</h2>
+<h3>Real Estate</h3>
+<p>Measure land plots, property boundaries, and development sites before purchase or construction.</p>
+<h3>Agriculture</h3>
+<p>Calculate farm sizes, crop areas, irrigation zones, and field boundaries.</p>
+<h3>Construction</h3>
+<p>Estimate site dimensions and project areas for planning purposes.</p>
+<h3>Travel and Transportation</h3>
+<p>Measure driving, cycling, and walking routes between destinations.</p>
+<h3>Sports and Fitness</h3>
+<p>Track running routes, cycling paths, and hiking trails.</p>
+<h3>Education</h3>
+<p>Learn about geography, mapping, and measurement concepts through interactive visualization.</p>
+<h2>Benefits of Using an Online Map Distance Calculator</h2>
+<ul>
+<li>No software installation required</li>
+<li>Fast and accurate calculations</li>
+<li>Interactive map interface</li>
+<li>Supports both distance and area measurements</li>
+<li>Works on desktop and mobile devices</li>
+<li>Easy sharing through screenshots</li>
+<li>Useful for personal and professional projects</li>
+</ul>
+
 </div>
+
+
+
 <script src="{{ '/assets/js/geolocation/distance-calc-map.js' | relative_url }}"></script>
 
 
