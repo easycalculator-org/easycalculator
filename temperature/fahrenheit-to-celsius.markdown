@@ -3,7 +3,7 @@ layout: default
 title: Fahrenheit to Celsius Calculator (°F → °C) + Formula, Chart & Example
 permalink: /fahrenheit-to-celsius
 description: "Easily convert Fahrenheit to Celsius with our simple online tool! Get quick and accurate temperature conversions in just a few clicks."
-last_modified_at: 2026-02-03
+last_modified_at: 2026-05-05
 ---
 
 <style>
@@ -70,7 +70,7 @@ last_modified_at: 2026-02-03
   </div>
       <!-- What is Section1 -->
  <section class="mb-5">
-   <h1>🌡️ Fahrenheit to Celsius Converter</h1>
+   <h2>🌡️ Fahrenheit to Celsius Converter</h2>
      <p>The Fahrenheit to Celsius Converter is an essential tool that allows you to quickly convert temperatures from the imperial Fahrenheit scale to the metric Celsius scale. Whether you're tracking the weather, cooking, or studying science, this conversion helps make sense of temperature in a globally understood format.</p>
       <h3 class="p-3">✅ What is Fahrenheit to Celsius Conversion? </h3>
       <p>The Fahrenheit (°F) scale is commonly used in the United States, while the Celsius (°C) scale is used in most other countries and in science.<br>To convert Fahrenheit to Celsius, use this formula: <code>Celsius = (Fahrenheit - 32) × 5/9</code></p>
