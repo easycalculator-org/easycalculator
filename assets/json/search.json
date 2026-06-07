@@ -181,6 +181,29 @@
     "content": "time to decimal calculator "
   },
  
+  {
+    "id": "Elevation Profile Calculator",
+    "title": "Elevation Profile Calculator",
+    "url": "/elevation-profile",
+    "content": "elevation profile calculator "
+  },
+ 
+
+  {
+    "id": "Midpoint Calculator",
+    "title": "Midpoint Calculator",
+    "url": "/midpoint-calculator",
+    "content": "midpoint calculator "
+  },
+
+ {
+    "id": "map-radius",
+    "title": "Map Radius Calculator",
+    "url": "/map-radius",
+    "content": "map radius calculator "
+  },
+ 
+
  {
     "id": "pdf-unlock",
     "title": "PDF Unlock",

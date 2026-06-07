@@ -114,9 +114,6 @@ last_modified_at: 2026-04-12
 <h2>Conversion Tool</h2><p>Convert numbers, units, temperature, and formats with accurate online tools.</p>
 <div class="row p-3 ">
 <div class="col-md-3 p-3  "><a class="text-decoration-none" href="/number-to-word-converter"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-up-a-z fa-xl"></i><h5>Num to Word</h5></div></a> </div>
- <!-- <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-weight-scale fa-xl"></i><h5>Weight Converter</h5></div> </a></div>
- <div class="col-md-3 p-3  "><a class="text-decoration-none" href="#"><div class="calculator-box text-center"><i class="fa-solid fa-shapes fa-xl"></i><h5>Area Converter</h5></div></a></div></div> -->
-
  <!-- conversion-tool end-->
 <!-- Math Calculator -->
 <hr>
@@ -154,6 +151,16 @@ last_modified_at: 2026-04-12
 
 </div>
  <!-- Speed Test end-->
+
+<div class="p-3">
+<h2>New Calculators Added</h2>
+<ul>
+<li><a href="/map-radius">Map Radius Calculator</a></li>
+<li><a href="/elevation-profile">Elevation Profile</a></li>
+<li><a href="/rf-link-budget-calculator">RF Link Budget Calculator</a></li>
+</ul>
+</div>
+
 
 <!-- Hero Section -->
 <section class="hero-section shadow-sm p-4 rounded-2">
