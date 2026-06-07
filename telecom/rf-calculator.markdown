@@ -21,7 +21,7 @@ last_modified_at: 2026-02-10
   <div class="col-md-3 p-3"><a href="/earfcn-calculator"><div class="calculator-box text-center"><h5>eARFCN Calculator</h5></div></a></div>
 <div class="col-md-3 p-3"><a href="/microstrip-line-calculator"><div class="calculator-box text-center"><h5>Microstrip Line Calculator</h5></div></a></div>
 <div class="col-md-3 p-3"><a href="/fresnel-zone-calculator"><div class="calculator-box text-center"><h5>Fresnel Zone Calculator</h5></div></a></div>
-
+<div class="col-md-3 p-3"><a href="/azimuth-calculator"><div class="calculator-box text-center"><h5>Azimuth Calculator</h5></div></a></div>
  </div>
 
 

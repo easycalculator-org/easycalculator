@@ -6,11 +6,11 @@ description: "Generate an elevation profile for any route on a map. View elevati
 #image: "/assets/images/elevation-vs-altitude-diagram.png"
 last_modified_at: 2026-03-03
 ---
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"/>
 <style>
@@ -126,15 +126,13 @@ last_modified_at: 2026-03-03
 </div>
 <!-- <script src="{{ '/assets/js/geolocation/elevation-profile.js' | relative_url }}"></script> -->
 <script>
-
 document.addEventListener("DOMContentLoaded", function() {
-
    // ALL YOUR JAVASCRIPT HERE
-
-
-
-
   // ---------- MAP ----------
+console.log("Leaflet =", typeof L);
+console.log("Draw =", typeof L.Control.Draw);
+console.log("Turf =", typeof turf);
+console.log("Chart =", typeof Chart);
     const map = L.map('map').setView([40.7128, -74.0060], 6);
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
         attribution: 'Tiles &copy; Esri',
