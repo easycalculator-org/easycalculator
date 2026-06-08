@@ -17,7 +17,7 @@ last_modified_at: 2026-06-08
    .conversion-table td{padding:.85rem;text-align:center;border-bottom:1px solid #e0e0e0}
    .conversion-table tr:nth-child(2n){background-color:#f8f9ff}
    .conversion-table tr:last-child td{border-bottom:none}
-   .faq-card{background:#f8fafc;border-radius:12px;padding:1.5rem;margin-bottom:1.2rem;
+   .faq-card{background:#f8fafc;border-radius:12px;padding:1.5rem;margin-bottom:1.2rem;}
    .faq-question{font-weight:700;color:#1e293b;margin-bottom:.8rem;font-size:1.1rem}
   </style>
 
@@ -102,28 +102,28 @@ last_modified_at: 2026-06-08
 
 <!-- FAQ Section -->
 <section class="mb-5">
-   <h2 class="section-title">FAQ on UTM Zone</h2>
+ <h2 class="section-title">FAQ on UTM Zone</h2>
+  <div class="faq-card">
+   <div class="faq-question">1. What is a UTM zone and how is it used?</div>
+    <p class="mb-0">A UTM zone is one of 60 longitudinal strips the Earth is divided into, each 6 degrees wide, under the Universal Transverse Mercator coordinate system. These zones are used to provide highly accurate, meter-based location references for GPS, mapping, and geospatial applications. Each zone has its own coordinate grid to minimize distortion.</p>
+   </div>
     <div class="faq-card">
-      <div class="faq-question">1. What is a UTM zone and how is it used?</div>
-       <p class="mb-0">A UTM zone is one of 60 longitudinal strips the Earth is divided into, each 6 degrees wide, under the Universal Transverse Mercator coordinate system. These zones are used to provide highly accurate, meter-based location references for GPS, mapping, and geospatial applications. Each zone has its own coordinate grid to minimize distortion.</p>
-          </div>
-                <div class="faq-card">
-                    <div class="faq-question">How do I find my UTM zone?</div>
-                    <p class="mb-0">You can find your UTM zone using our app. Simply allow location access, and the map will display your current UTM zone. You can also click anywhere on the map to find the UTM zone for that specific location.</p>
-                </div>
-                <div class="faq-card">
-                    <div class="faq-question">3. Why is the UTM coordinate system better than latitude and longitude for mapping?</div>
-                    <p class="mb-0">Unlike latitude and longitude, which are angular and difficult to calculate distances with, UTM uses a Cartesian coordinate system measured in meters. This makes calculations faster and more accurate—ideal for engineers, surveyors, developers, and anyone working on infrastructure, land use, or GPS-based navigation..</p>
-                </div>
-                <div class="faq-card">
-                    <div class="faq-question">4. How many UTM zones are there and what areas do they cover?</div>
-                    <p class="mb-0">There are 60 UTM zones globally, each covering 6 degrees of longitude and extending from 80°S to 84°N. These zones are further divided by latitude into horizontal bands, forming a global grid. Countries like Russia, the USA, and China span multiple UTM zones, while smaller nations may fall entirely within one.</p>
-                </div>
-                <div class="faq-card">
-                    <div class="faq-question">5. What is the difference between UTM North and UTM South?</div>
-                    <p class="mb-0">UTM zones are labeled with a hemisphere—North (N) or South (S)—to distinguish location. The equator is the dividing line: zones in the Northern Hemisphere are labeled with an "N" (e.g., 43N for India), and those in the Southern Hemisphere with an "S" (e.g., 25S for Brazil). This distinction ensures accurate calculations across the globe.</p>
-                </div>
-            </section>
+      <div class="faq-question">How do I find my UTM zone?</div>
+       <p class="mb-0">You can find your UTM zone using our app. Simply allow location access, and the map will display your current UTM zone. You can also click anywhere on the map to find the UTM zone for that specific location.</p>
+     </div>
+     <div class="faq-card">
+      <div class="faq-question">3. Why is the UTM coordinate system better than latitude and longitude for mapping?</div>
+       <p class="mb-0">Unlike latitude and longitude, which are angular and difficult to calculate distances with, UTM uses a Cartesian coordinate system measured in meters. This makes calculations faster and more accurate—ideal for engineers, surveyors, developers, and anyone working on infrastructure, land use, or GPS-based navigation..</p>
+       </div>
+       <div class="faq-card">
+        <div class="faq-question">4. How many UTM zones are there and what areas do they cover?</div>
+         <p class="mb-0">There are 60 UTM zones globally, each covering 6 degrees of longitude and extending from 80°S to 84°N. These zones are further divided by latitude into horizontal bands, forming a global grid. Countries like Russia, the USA, and China span multiple UTM zones, while smaller nations may fall entirely within one.</p>
+       </div>
+       <div class="faq-card">
+        <div class="faq-question">5. What is the difference between UTM North and UTM South?</div>
+         <p class="mb-0">UTM zones are labeled with a hemisphere—North (N) or South (S)—to distinguish location. The equator is the dividing line: zones in the Northern Hemisphere are labeled with an "N" (e.g., 43N for India), and those in the Southern Hemisphere with an "S" (e.g., 25S for Brazil). This distinction ensures accurate calculations across the globe.</p>
+       </div>
+      </section>
 <!-- Download UTM Grid Map Files Section -->
 <div class="section gap-4 mt-5 border-top pt-1">
 <h3 class="text-center mb-4 pt-4">Download UTM Grid Map Files</h3>

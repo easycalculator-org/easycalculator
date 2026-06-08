@@ -7,27 +7,13 @@ last_modified_at: 2026-02-03
 ---
 
 <style>
-  .converter-container {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-        #map {
-            height: 60vh;
-            border-radius: 10px;
-        }
-        .input-group-text {
-            min-width: 100px;
-        }
-        .error {
-            border: 2px solid #ff4444 !important;
-        }
-    </style>
+.converter-container{background:#ffffffe6;border-radius:15px;box-shadow:0 0 20px #0000001a}#map{height:60vh;border-radius:10px}.input-group-text{min-width:100px}.error{border:2px solid #f44!important}
+</style>
  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
  <div class="row p-4">
-            <div class="col-md-6">
-                <div class="converter-container p-4 mb-4">
-           <h3 class="mb-4 text-center">Geo Coordinate Converter</h3>
+  <div class="col-md-6">
+   <div class="converter-container p-4 mb-4">
+   <h3 class="mb-4 text-center">Geo Coordinate Converter</h3>
                     
   <!-- Decimal to DMS -->
  <div class="mb-4">

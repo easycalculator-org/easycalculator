@@ -91,59 +91,56 @@ body{background:#ffff}#map{height:700px}.card{border:none}
  <p>A Map Radius Calculator is a tool that allows you to draw a circle around any location on a map and measure the distance from the center point to the edge of the circle. It is useful for visualizing coverage areas, delivery zones, travel distances, service regions, emergency response areas, and property boundaries.</p>
  <p>Whether you are a business owner planning delivery routes, a real estate professional analyzing neighborhoods, or simply trying to find locations within a certain distance, a map radius tool provides a quick and accurate solution.</p>
 
-   <div class="card shadow-sm border-0 mb-4">
-        <div class="card-body">
-            <h2 class="h3 mb-3">What Is a Map Radius?</h2>
-            <p>A map radius is the distance from a central point to the outer edge of a circle drawn on a map. The radius can be measured in kilometers, miles, meters, or feet.</p>
-            <ul>
-                <li>A 5 km radius shows all locations within 5 kilometers of the selected point.</li>
-                <li>A 10-mile radius highlights all places located within 10 miles.</li>
-                <li>A 50 km radius can be used to visualize a service coverage area.</li>
-            </ul>
-        </div>
-    </div>
-
-<div class="card shadow-sm border-0 mb-4">
+ <div class="card shadow-sm border-0 mb-4">
   <div class="card-body">
-    <h2 class="h3 mb-3">How to Use the Map Radius Calculator</h2>
-            <ol>
-                <li>Search for a location or use your current location.</li>
-                <li>Click on the map to create a circle.</li>
-                <li>Enter the desired radius distance.</li>
-                <li>Adjust the circle color if needed.</li>
-                <li>View the radius, area, and circumference instantly.</li>
-                <li>Download the map image for reports or sharing.</li>
-            </ol>
-        </div>
-    </div>
+   <h2 class="h3 mb-3">What Is a Map Radius?</h2>
+   <p>A map radius is the distance from a central point to the outer edge of a circle drawn on a map. The radius can be measured in kilometers, miles, meters, or feet.</p>
+   <ul>
+    <li>A 5 km radius shows all locations within 5 kilometers of the selected point.</li>
+    <li>A 10-mile radius highlights all places located within 10 miles.</li>
+    <li>A 50 km radius can be used to visualize a service coverage area.</li>
+   </ul>
+  </div>
+ </div>
 
 <div class="card shadow-sm border-0 mb-4">
-        <div class="card-body">
-            <h2 class="h3 mb-3">Radius Area Formula</h2>
-            <div class="alert alert-primary text-center fs-4">  Area = π × r²</div>
-            <p>Where:</p>
-            <ul>
-                <li><strong>A</strong> = Area</li>
-                <li><strong>r</strong> = Radius</li>
-                <li><strong>π</strong> ≈ 3.14159</li>
-            </ul>
-            <h3 class="h5 mt-4">Example</h3>
-            <p>If the radius is 10 km:</p>
-            <div class="bg-light p-3 rounded">Area = π × 10²<br>   Area = 314.16 km² </div>
-            <p class="mt-3">This means a circle with a radius of 10 kilometers covers approximately 314 square kilometers.</p>
-        </div>
-    </div>
-    <div class="card shadow-sm border-0 mb-4">
-        <div class="card-body">
-            <h2 class="h3 mb-3">Circumference Formula</h2>
-            <div class="alert alert-success text-center fs-4">Circumference = 2 × π × r</div>
-            <h3 class="h5 mt-4">Example</h3>
-            <p>For a radius of 10 km:</p>
-            <div class="bg-light p-3 rounded">
-                Circumference = 2 × π × 10<br>
-                Circumference = 62.83 km
-            </div>
-            <p class="mt-3">The circle boundary is approximately 62.83 kilometers long. </p>
+ <div class="card-body">
+  <h2 class="h3 mb-3">How to Use the Map Radius Calculator</h2>
+    <ol>
+     <li>Search for a location or use your current location.</li>
+     <li>Click on the map to create a circle.</li>
+     <li>Enter the desired radius distance.</li>
+     <li>Adjust the circle color if needed.</li>
+     <li>View the radius, area, and circumference instantly.</li>
+     <li>Download the map image for reports or sharing.</li>
+    </ol>
+   </div>
+  </div>
+
+<div class="card shadow-sm border-0 mb-4">
+   <div class="card-body">
+    <h2 class="h3 mb-3">Radius Area Formula</h2>
+     <div class="alert alert-primary text-center fs-4">  Area = π × r²</div>
+     <p>Where:</p>
+      <ul>
+       <li><strong>A</strong> = Area</li>
+       <li><strong>r</strong> = Radius</li>
+       <li><strong>π</strong> ≈ 3.14159</li>
+       </ul>
+        <h3 class="h5 mt-4">Example</h3>
+        <p>If the radius is 10 km:</p>
+        <div class="bg-light p-3 rounded">Area = π × 10²<br>   Area = 314.16 km² </div>
+        <p class="mt-3">This means a circle with a radius of 10 kilometers covers approximately 314 square kilometers.</p>
+       </div>
+   </div>
+   <div class="card shadow-sm border-0 mb-4">
+       <div class="card-body">
+        <h2 class="h3 mb-3">Circumference Formula</h2>
+        <div class="alert alert-success text-center fs-4">Circumference = 2 × π × r</div>
+        <h3 class="h5 mt-4">Example</h3>
+         <p>For a radius of 10 km:</p>
+         <div class="bg-light p-3 rounded">Circumference = 2 × π × 10<br> Circumference = 62.83 km </div>
+           <p class="mt-3">The circle boundary is approximately 62.83 kilometers long. </p>
         </div>
     </div>
 <div class="card shadow-sm border-0 mb-4">
@@ -170,17 +167,7 @@ body{background:#ffff}#map{height:700px}.card{border:none}
         </div>
         </div>
         </div>
-
-
 </div>
-
-
-
-
-
-
-
-
 
 
 

@@ -6,43 +6,26 @@ description: "Instantly find the nearest airport to you using your current locat
 image: "/assets/images/airport.png"
 last_modified_at: 2026-02-03
 ---
-<style>
-  .hero {
-    background: linear-gradient(to right, #0d6efd, #0a58ca);
-    color: white;
-    padding: 1rem 1rem;
-    text-align: center;
-    border-radius: 1rem;
-  }
-  .card-airport {
-    border-left: 5px solid #0d6efd;
-  }
-  #map {
-    height: 400px;
-    border-radius: 0.5rem;
-    border: 1px solid #dee2e6;
-  }
+<style>.hero{background:linear-gradient(to right,#0d6efd,#0a58ca);color:#fff;padding:1rem;text-align:center;border-radius:1rem}.card-airport{border-left:5px solid #0d6efd}#map{height:400px;border-radius:.5rem;border:1px solid #dee2e6}
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <div class="hero mb-1">
-  <h1 class="display-5 fw-bold">Nearest Airport to Me</h1><p class="lead">Find your closest airport using GPS and view its location on a live map instantly.</p>
+ <h1 class="display-5 fw-bold">Nearest Airport to Me</h1><p class="lead">Find your closest airport using GPS and view its location on a live map instantly.</p>
  </div>
-   <div id="map" class="mb-5"></div>
-  <div id="result">
-   <div class="alert alert-info">Detecting your location and finding nearby airports...</div>
+ <div id="map" class="mb-5"></div>
+ <div id="result">
+ <div class="alert alert-info">Detecting your location and finding nearby airports...</div>
  </div>
 
 <!-- Article Content -->
  <div class="article-container">
-      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-        <div class="d-flex align-items-center">
-          <div class=" p-2 "></div>
-          <div>{% include narendra.html %}</div>
-        </div>
-        <div class="text-muted p-3">
-          <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}
-        </div>
-      </div>
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
+   <div class="d-flex align-items-center">
+    <div class=" p-2 "></div>
+    <div>{% include narendra.html %}</div>
+   </div>
+   <div class="text-muted p-3"> <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+   </div>
 
 <!-- Section -->
  <h2>🛫 Nearest Airport to Me: Find the Closest Airport Instantly</h2>
@@ -51,42 +34,56 @@ last_modified_at: 2026-02-03
 <div class="bg-light p-4 rounded mt-4">
   <h4 class="text-primary">🌍 Why It’s Important to Know the Nearest Airport</h4>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Save Time: Shorter travel times to the airport mean more convenience and less stress.</li>
-     <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Save Money: Choosing a nearby airport may reduce transportation costs (taxi, cab, parking).</li>
-         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i> Emergency Flights: In case of emergencies, locating the nearest airport is crucial.</li>
-         <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Planning Road Trips or Stopovers: Ideal when planning long drives or multi-stop air journeys.</li>
-        </ul>
-     </div>
+   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Save Time: Shorter travel times to the airport mean more convenience and less stress.</li>
+   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Save Money: Choosing a nearby airport may reduce transportation costs (taxi, cab, parking).</li>
+   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i> Emergency Flights: In case of emergencies, locating the nearest airport is crucial.</li>
+   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Planning Road Trips or Stopovers: Ideal when planning long drives or multi-stop air journeys.</li>
+  </ul>
+ </div>
 
 <!-- How It Works -->
 <br>
-<section class="card shadow-sm mb-5 border-info">
-   <div class="card-header bg-info text-white"><h2 class="h4 mb-0"><i class="fa-solid fa-gear"></i> How It Works (Behind the Scenes)</h2></div>
+ <section class="card shadow-sm mb-5 border-info">
+    <div class="card-header bg-info text-white">
+      <h2 class="h4 mb-0"><i class="fa-solid fa-gear"></i> How It Works (Behind the Scenes)</h2>
+    </div>
     <div class="card-body">
       <div class="row g-4">
-          <div class="col-md-6">
-              <div class="d-flex">
-                    <div><h3 class="h5">Browser Location Request</h3><p>Uses HTML5 Geolocation API to get your coordinates</p> </div>
-                   </div>
-                  </div>
-              <div class="col-md-6">
-                 <div class="d-flex">
-                       <div> <h3 class="h5">Data Processing</h3> <p>Lat/Long passed to backend for calculation</p> </div>
-                       </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="d-flex">
-                                    <div><h3 class="h5">Distance Calculation</h3> <p>Haversine formula or MySQL spatial query compares locations</p> </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="d-flex">
-                                    <div> <h3 class="h5">Results Display</h3><p>Nearest airport returned with details and map</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div>
+              <h3 class="h5">Browser Location Request</h3>
+              <p>Uses HTML5 Geolocation API to get your coordinates</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div>
+              <h3 class="h5">Data Processing</h3>
+              <p>Lat/Long passed to backend for calculation</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div>
+              <h3 class="h5">Distance Calculation</h3>
+              <p>Haversine formula or MySQL spatial query compares locations</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div>
+              <h3 class="h5">Results Display</h3>
+              <p>Nearest airport returned with details and map</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
  <!-- Map View -->
  <section class="card shadow-sm mb-5 border-success">

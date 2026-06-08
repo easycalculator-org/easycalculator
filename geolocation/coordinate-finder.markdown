@@ -12,48 +12,7 @@ last_modified_at: 2026-05-28
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
  <style>
-    /* Minimal CSS for map and UI */
-    #map {
-      height: 650px;
-      width: 100%;
-      border-radius: 0.5rem;
-      background: #c8e0f0;
-    }
-    .coord-card {
-      transition: all 0.1s ease;
-    }
-    .coord-value {
-      font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
-      font-size: 1rem;
-      word-break: break-word;
-    }
-    .dms-value {
-      font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
-      font-size: 0.9rem;
-    }
-    .toggle-switch-lg .form-check-input {
-      width: 3rem;
-      height: 1.5rem;
-      cursor: pointer;
-    }
-    .toggle-switch-lg .form-check-input:checked {
-      background-color: #0d6efd;
-      border-color: #0d6efd;
-    }
-    .map-type-btn.active {
-      background-color: #0d6efd !important;
-      color: white !important;
-      border-color: #0d6efd !important;
-    }
-    .btn-download {
-      background: linear-gradient(135deg, #28a745, #20c997);
-      border: none;
-      color: white;
-    }
-    .btn-download:hover {
-      background: linear-gradient(135deg, #218838, #1aa179);
-      color: white;
-    }
+  #map{height:650px;width:100%;border-radius:.5rem;background:#c8e0f0}.coord-card{transition:all .1s ease}.coord-value{font-family:'SF Mono','Monaco','Consolas',monospace;font-size:1rem;word-break:break-word}.dms-value{font-family:'SF Mono','Monaco','Consolas',monospace;font-size:.9rem}.toggle-switch-lg .form-check-input{width:3rem;height:1.5rem;cursor:pointer}.toggle-switch-lg .form-check-input:checked{background-color:#0d6efd;border-color:#0d6efd}.map-type-btn.active{background-color:#0d6efd!important;color:#fff!important;border-color:#0d6efd!important}.btn-download{background:linear-gradient(135deg,#28a745,#20c997);border:none;color:#fff}.btn-download:hover{background:linear-gradient(135deg,#218838,#1aa179);color:#fff}
   </style>
 
 <div aria-label="breadcrumb" class="p-3">
@@ -84,26 +43,28 @@ last_modified_at: 2026-05-28
 </div>
 
 <!-- Decimal Degrees Panel -->
-<div id="decimalPanel" class="row g-3 mb-4">
-            <div class="col-md-6">
-              <div class="card bg-light border-0 shadow-sm h-100 coord-card">
-                <div class="card-body">
-                  <div class="d-flex align-items-center gap-2 mb-2"><span class="text-uppercase small fw-bold text-secondary">Latitude (Decimal)</span></div>
-                  <div class="coord-value fs-3 fw-semibold" id="latDecimal">—</div>
-                  <small class="text-muted">WGS84 • 6 decimal places • -90 to 90</small>
-                </div>
-              </div>
-            </div>
-<div class="col-md-6">
-              <div class="card bg-light border-0 shadow-sm h-100 coord-card">
-                <div class="card-body">
-                  <div class="d-flex align-items-center gap-2 mb-2"><span class="text-uppercase small fw-bold text-secondary">Longitude (Decimal)</span> </div>
-                  <div class="coord-value fs-3 fw-semibold" id="lngDecimal">—</div>
-                  <small class="text-muted">WGS84 • 6 decimal places • -180 to 180</small>
-                </div>
-              </div>
-            </div>
-          </div>
+  <div id="decimalPanel" class="row g-3 mb-4">
+    <div class="col-md-6">
+      <div class="card bg-light border-0 shadow-sm h-100 coord-card">
+        <div class="card-body">
+          <div class="d-flex align-items-center gap-2 mb-2"><span
+              class="text-uppercase small fw-bold text-secondary">Latitude (Decimal)</span></div>
+          <div class="coord-value fs-3 fw-semibold" id="latDecimal">—</div>
+          <small class="text-muted">WGS84 • 6 decimal places • -90 to 90</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card bg-light border-0 shadow-sm h-100 coord-card">
+        <div class="card-body">
+          <div class="d-flex align-items-center gap-2 mb-2"><span
+              class="text-uppercase small fw-bold text-secondary">Longitude (Decimal)</span> </div>
+          <div class="coord-value fs-3 fw-semibold" id="lngDecimal">—</div>
+          <small class="text-muted">WGS84 • 6 decimal places • -180 to 180</small>
+        </div>
+      </div>
+    </div>
+  </div>
           
 <!-- DMS Panel (hidden by default) -->
  <div id="dmsPanel" class="row g-3 mb-4" style="display: none;">
@@ -260,60 +221,38 @@ last_modified_at: 2026-05-28
 
 <!-- Common Uses -->
 <div class="bg-light p-4 rounded mt-4">
-    <h4 class="text-primary">
-        <i class="fas fa-compass me-2"></i>Common Uses of Coordinate Finder
-    </h4>
-
+  <h4 class="text-primary"><i class="fas fa-compass me-2"></i>Common Uses of Coordinate Finder</h4>
     <div class="row g-3 mt-2">
-
         <div class="col-md-6">
-            <div class="border rounded p-3 h-100 bg-white">
-                <i class="fas fa-route text-primary me-2"></i>
-                <strong>GPS Navigation</strong>
+            <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-route text-primary me-2"></i><strong>GPS Navigation</strong>
                 <p class="mb-0 small text-muted">Find exact locations for navigation and route planning.</p>
             </div>
         </div>
-
         <div class="col-md-6">
-            <div class="border rounded p-3 h-100 bg-white">
-                <i class="fas fa-ruler-combined text-success me-2"></i>
-                <strong>Land Surveying</strong>
+            <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-ruler-combined text-success me-2"></i><strong>Land Surveying</strong>
                 <p class="mb-0 small text-muted">Record precise geographic positions for surveying projects.</p>
             </div>
         </div>
-
         <div class="col-md-6">
-            <div class="border rounded p-3 h-100 bg-white">
-                <i class="fas fa-home text-danger me-2"></i>
-                <strong>Real Estate Mapping</strong>
+            <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-home text-danger me-2"></i><strong>Real Estate Mapping</strong>
                 <p class="mb-0 small text-muted">Locate and document properties accurately.</p>
             </div>
         </div>
-
         <div class="col-md-6">
-            <div class="border rounded p-3 h-100 bg-white">
-                <i class="fas fa-hiking text-warning me-2"></i>
-                <strong>Outdoor Activities</strong>
+            <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-hiking text-warning me-2"></i><strong>Outdoor Activities</strong>
                 <p class="mb-0 small text-muted">Perfect for hiking, camping, and adventure trips.</p>
             </div>
         </div>
-
         <div class="col-md-6">
-            <div class="border rounded p-3 h-100 bg-white">
-                <i class="fas fa-treasure-chest text-info me-2"></i>
-                <strong>Geocaching</strong>
+            <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-treasure-chest text-info me-2"></i><strong>Geocaching</strong>
                 <p class="mb-0 small text-muted">Discover and share hidden locations using coordinates.</p>
             </div>
         </div>
-
         <div class="col-md-6">
-            <div class="border rounded p-3 h-100 bg-white">
-                <i class="fas fa-flask text-secondary me-2"></i>
-                <strong>Geographic Research</strong>
+            <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-flask text-secondary me-2"></i><strong>Geographic Research</strong>
                 <p class="mb-0 small text-muted">Collect and analyze location-based data efficiently.</p>
             </div>
         </div>
-
         <div class="col-md-6">
             <div class="border rounded p-3 h-100 bg-white">
                 <i class="fas fa-phone-alt text-success me-2"></i>
@@ -321,7 +260,6 @@ last_modified_at: 2026-05-28
                 <p class="mb-0 small text-muted">Share your exact position during emergencies.</p>
             </div>
         </div>
-
         <div class="col-md-6">
             <div class="border rounded p-3 h-100 bg-white">
                 <i class="fas fa-helicopter text-primary me-2"></i>
@@ -329,29 +267,9 @@ last_modified_at: 2026-05-28
                 <p class="mb-0 small text-muted">Plan flight paths and identify launch locations accurately.</p>
             </div>
         </div>
-
     </div>
 </div>
-
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <script src="{{ '/assets/js/geolocation/coordinate-finder.js' | relative_url }}"></script>
 
