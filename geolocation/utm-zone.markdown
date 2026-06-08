@@ -3,7 +3,8 @@ layout: default
 title: UTM Zone Map – View UTM Coordinate & Grid Maps by Region
 permalink: /utm-zone-map
 description: "Explore detailed UTM zone maps with grid overlays and UTM coordinates. Quickly find your location’s UTM zone and understand how Universal Transverse Mercator mapping works."
-last_modified_at: 2026-03-26
+image: "/assets/images/og/universal-transverse-mercator.jpg"
+last_modified_at: 2026-06-08
 ---
  <!-- Leaflet -->
  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
