@@ -1,25 +1,62 @@
-<footer class="border-top mt-5 py-4" role="contentinfo">
+<footer class="bg-light border-top mt-5 pt-5 pb-3" role="contentinfo">
  <div class="container">
-  <div class="row align-items-center">
-   <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-    <a class="text-decoration-none fw-semibold" href="{{ '/' | relative_url }}" title="EasyCalculator.org – Free Online Calculators for Finance, Math and Conversion"> EasyCalculator.org – Free Online Calculators </a>
-    <p class="small text-muted mt-1 mb-0">  Fast, accurate online calculators for finance, math, conversion, and daily use. </p>
+  <div class="row g-4">
+ <!-- Brand -->
+  <div class="col-lg-4">
+   <a href="{{ '/' | relative_url }}" class="text-decoration-none fw-bold fs-4 text-dark">EasyCalculator.org</a>
+   <p class="text-muted mt-3 small">Free online calculators for finance, mathematics, unit conversions, time calculations, and  everyday problem solving.</p>
+  <div class="d-flex gap-3 mt-3">
+   <a href="https://www.facebook.com/easycalculator.org/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-secondary"><i class="fa-brands fa-facebook fa-xl"></i></a>
+   <a href="https://www.linkedin.com/company/easycalculator-org" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-secondary"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+   <a href="https://www.youtube.com/@easycalculator-org" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="text-secondary"><i class="fa-brands fa-youtube fa-xl"></i></a>
+   <a href="https://www.instagram.com/easy.calculator/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-secondary"><i class="fa-brands fa-instagram fa-xl"></i></a>
+ </div>
+</div>
+ <!-- Categories -->
+   <div class="col-md-4 col-lg-2">
+  <h6>Categories</h6>
+   <ul class="list-unstyled small">
+    <li><a href="/math" class="text-decoration-none text-muted">Math</a></li>
+    <li><a href="/finance-calculators" class="text-decoration-none text-muted">Finance Calculator</a></li>
+    <li><a href="/geolocation-tools" class="text-decoration-none text-muted">Geolocation</a></li>
+   </ul>
+   </div>
+    <!-- Popular Calculators -->
+ <div class="col-md-4 col-lg-2">
+  <h6>Popular Calculators</h6>
+   <ul class="list-unstyled small">
+    <li><a href="/age-calculator" class="text-decoration-none text-muted">Age Calculator</a></li>
+    <li><a href="/percentage-calculator" class="text-decoration-none text-muted">Percentage Calculator</a></li>
+    <li><a href="/roman-numeral-converter" class="text-decoration-none text-muted">Roman Numeral Converter</a></li>
+    <li><a href="/what-is-my-address" class="text-decoration-none text-muted">What Is My Address</a></li>
+   </ul>
    </div>
 
-<nav class="col-md-6 text-center text-md-end" aria-label="Footer navigation">
- <ul class="list-inline mb-0">
-  <li class="list-inline-item"><a class="text-decoration-none" href="{{ '/about' | relative_url }}" title="About EasyCalculator.org">  About Us </a> </li>
-  <li class="list-inline-item"><a class="text-decoration-none" href="{{ '/editorial-policy' | relative_url }}" title="Editorial Policy">Editorial Policy</a> </li>
-  <li class="list-inline-item"><a class="text-decoration-none" href="{{ '/contact' | relative_url }}" title="Contact EasyCalculator Support"> Contact Us </a> </li>
-  <li class="list-inline-item"><a class="text-decoration-none" href="{{ '/term-and-condition' | relative_url }}"  title="Terms of Service and Frequently Asked Questions"> Terms &amp; FAQ </a> </li>
-  <li class="list-inline-item"><a class="text-decoration-none" href="{{ '/privacy-policy' | relative_url }}" title="EasyCalculator Privacy Policy"> Privacy Policy </a> </li>
-  <li class="list-inline-item"><a class="text-decoration-none" href="https://www.facebook.com/easycalculator.org/" target="_blank"  rel="noopener noreferrer" aria-label="EasyCalculator on Facebook"> <i class="fa-brands fa-facebook fa-xl"></i> </a> </li>
-  <li class="list-inline-item"><a class="text-decoration-none" href="https://www.linkedin.com/company/easycalculator-org"  target="_blank" rel="noopener noreferrer" aria-label="EasyCalculator on LinkedIn"> <i class="fa-brands fa-linkedin fa-xl"></i> </a></li>
-  <li class="list-inline-item"><a class="text-decoration-none" href="https://www.youtube.com/@easycalculator-org" target="_blank" rel="noopener noreferrer" aria-label="EasyCalculator on YouTube"> <i class="fa-brands fa-youtube fa-xl"></i> </a></li>
-  <li class="list-inline-item"><a class="text-decoration-none" href="https://www.instagram.com/easy.calculator/" target="_blank" rel="noopener noreferrer" aria-label="EasyCalculator on Instagram"> <i class="fa-brands fa-instagram fa-xl"></i> </a></li>
- 
-</ul>
- </nav>
+ <!-- Company -->
+   <div class="col-md-4 col-lg-2">
+    <h6>Company</h6>
+     <ul class="list-unstyled small">
+      <li><a href="{{ '/about' | relative_url }}" class="text-decoration-none text-muted">About Us</a></li>
+      <li><a href="{{ '/editorial-policy' | relative_url }}" class="text-decoration-none text-muted">Editorial Policy</a></li>
+      <li><a href="{{ '/contact' | relative_url }}" class="text-decoration-none text-muted">Contact Us</a></li>
+     </ul>
+   </div>
+ <!-- Legal -->
+  <div class="col-md-4 col-lg-2">
+   <h6>Legal</h6>
+    <ul class="list-unstyled small">
+     <li><a href="{{ '/privacy-policy' | relative_url }}" class="text-decoration-none text-muted">Privacy Policy</a></li>
+     <li><a href="{{ '/term-and-condition' | relative_url }}" class="text-decoration-none text-muted">Terms & Conditions</a></li>
+     <li><a href="/sitemap.xml" class="text-decoration-none text-muted">XML Sitemap</a></li>
+    </ul>
+   </div>
   </div>
-  </div>
+  <hr class="my-4">
+   <div class="row align-items-center">
+     <div class="col-md-8 text-center text-md-start">
+      <p class="small text-muted mb-0"> © {{ site.time | date: '%Y' }} EasyCalculator.org. All Rights Reserved. </p>
+     </div>
+       <div class="col-md-4 text-center text-md-end mt-2 mt-md-0"><span class="small text-muted">Fast • Accurate • Free</span></div>
+    </div>
+    </div>
 </footer>

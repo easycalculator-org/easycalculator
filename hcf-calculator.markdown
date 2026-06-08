@@ -3,49 +3,13 @@ layout: default
 title: HCF Calculator - Find Highest Common Factor Instantly
 permalink: /hcf-calculator
 description: "Use our free HCF Calculator to quickly find the Highest Common Factor (HCF) of two or more numbers. Fast, accurate, and easy to use—perfect for students."
+image: "/assets/images/og/hcf-calculator-with-example.jpg"
 last_modified_at: 2026-02-03
 ---
 
 <style>
-     .math-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .math-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        .prime-factor {
-            display: inline-block;
-            background-color: #e0f7fa;
-            border-radius: 4px;
-            padding: 3px 8px;
-            margin: 2px;
-            font-weight: 500;
-        }
-        .step-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            background: #4361ee;
-            color: white;
-            border-radius: 50%;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-        .method-icon {
-            font-size: 20px;
-            background: rgba(67, 97, 238, 0.1);
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin-right: 15px;
-        }
-    </style>
+ .math-card{transition:transform .3s ease,box-shadow .3s ease}.math-card:hover{transform:translateY(-5px);box-shadow:0 10px 20px #0000001a}.prime-factor{display:inline-block;background-color:#e0f7fa;border-radius:4px;padding:3px 8px;margin:2px;font-weight:500}.step-number{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:#4361ee;color:#fff;border-radius:50%;font-weight:700;margin-right:10px}.method-icon{font-size:20px;background:#4361ee1a;width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:50%;margin-right:15px} 
+ </style>
 <!-- Icons -->
  <div class="py-5">
     <div class="card mx-auto p-4 shadow-sm" style="max-width: 600px;">
@@ -55,9 +19,7 @@ last_modified_at: 2026-02-03
         <input type="text" id="numbersInput" class="form-control" placeholder="Enter numbers..." />
       </div>
       <div class="d-grid mb-3">
-        <button class="btn btn-success" onclick="calculateHCF()">
-          <i class="fas fa-equals me-1"></i>Calculate HCF
-        </button>
+        <button class="btn btn-success" onclick="calculateHCF()"><i class="fas fa-equals me-1"></i>Calculate HCF </button>
       </div>
       <div id="result" class="text-center fs-1 fw-semibold text-primary"></div>
     </div>
@@ -228,27 +190,22 @@ last_modified_at: 2026-02-03
 <!-- Example of Using the HCF Calculator -->
 <section class="p-4">
  <div class="card shadow-sm border-0">
-                     <div class="d-flex align-items-center p-4">
-                        <div class="bg-primary text-white rounded-circle p-3 me-3">
-                            <i class="fas fa-lightbulb fa-2x"></i>
-                        </div>
-                        <h2 class="mb-0">Example of Using the HCF Calculator</h2>
-                    </div>
-                        <div class="card-body">
-                            <p class="card-text"> Let's say you want to find the HCF of 12, 18, and 24.</p>
-                            <ol>
-                                <li>Enter 12, 18, 24 (separated by a comma or space).</li>
-                                <li>Click Calculate HCF.</li>
-                                <li>The result will show 6 because 6 is the largest number that divides all three numbers evenly.</li>
-                            </ol>
-                            <div class="alert alert-info mt-4">
-                                <i class="fas fa-info-circle me-2"></i>
-                                This video explains how to calculate HCF using our free HCF calculator.
-                                Watch the steps and try it yourself using the tool below.
-                            </div>
-                        </div>
-                    </div>
-                </section>
+    <div class="d-flex align-items-center p-4">
+      <div class="bg-primary text-white rounded-circle p-3 me-3"> <i class="fas fa-lightbulb fa-2x"></i></div>
+         <h2 class="mb-0">Example of Using the HCF Calculator</h2>
+         </div>
+    <div class="card-body">
+     <p class="card-text"> Let's say you want to find the HCF of 12, 18, and 24.</p>
+             <ol>
+               <li>Enter 12, 18, 24 (separated by a comma or space).</li>
+                <li>Click Calculate HCF.</li>
+                <li>The result will show 6 because 6 is the largest number that divides all three numbers evenly.</li>
+               </ol>
+     <div class="alert alert-info mt-4">
+           <i class="fas fa-info-circle me-2"></i> This video explains how to calculate HCF using our free HCF calculator. Watch the steps and try it yourself using the tool below.</div>
+          </div>
+       </div>
+     </section>
 <!-- Why is HCF Important?   -->
 <section class="mb-5 bg-light p-4">
   <h2 class="mb-3"><i class="fas fa-star text-primary me-2"></i> Why is HCF Important?</h2>

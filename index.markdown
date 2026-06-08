@@ -166,15 +166,6 @@ last_modified_at: 2026-06-08
 <section class="hero-section shadow-sm p-4 rounded-2">
    <h1>Free Online Calculators — Easy Calculator for Finance, Math, RF, Geolocation & More</h1>
      <p class="lead mb-4">Welcome to EasyCalculator.org, your one-stop platform for free online calculators, conversion tools, and smart utilities. Whether you're calculating a loan EMI, converting currencies, or solving math problems, our tools are accurate, fast, and easy to use—no downloads or sign-ups required.</p>
-  <h3 class="mb-3">Popular Calculators</h3>
-      <div class="flex-wrap justify-content-center gap-3">
-              <a href="/percentage-calculator" class="btn btn-outline-primary">Percentage Calculator</a>
-              <a href="/currency" class="btn btn-outline-primary">Currency Converter</a>
-              <a href="/number-to-word-converter" class="btn btn-outline-primary">Number to word</a>
-              <a href="/epoch" class="btn btn-outline-primary">Epoch Time Calculator</a>
-              <a href="/age-calculator" class="btn btn-outline-primary">Age Calculator</a>
-              <a href="/world-clock" class="btn btn-outline-primary">World Clock</a>
-             </div>
 
  <div class="text-center mb-5 py-4">
                 <h2 class="section-title display-5 fw-bold">Why Use EasyCalculator.org?</h2>
@@ -357,6 +348,10 @@ last_modified_at: 2026-06-08
 <p>All calculators on EasyCalculator.org are built using verified formulas and reviewed periodically for accuracy. <br>Have a question or found an issue? <a href="/contact">Contact our team</a>. </p>
 </section>
 
+<section class="border rounded p-4 my-4 bg-light">
+<h2>About EasyCalculator.org</h2>
+<p>EasyCalculator.org is maintained by developers and technical professionals who create free educational calculators and conversion tools for students, engineers, finance professionals, researchers and everyday users.</p><a href="/about">Learn More About Our Team →</a>
+</section>
 
 <!-- FAQ Section -->
 <section class="p-4">
