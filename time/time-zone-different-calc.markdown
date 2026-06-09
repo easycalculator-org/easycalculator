@@ -262,6 +262,8 @@ last_modified_at: 2026-06-09
 <p>Whether you're comparing New York and London, Tokyo and Sydney, or any other locations, this tool provides fast and accurate time zone calculations to help you stay synchronized across the globe.</p> 
 </div>
 
+
 <!-- moment & timezone -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-10-year-range.min.js"></script>
+<script src="{{ '/assets/js/time/time-zone-diff-calc.js' | relative_url }}"></script>
