@@ -387,7 +387,7 @@ last_modified_at: 2026-05-22
       "name": "What is the formula for pro rata?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pro Rata Formula: Pro Rata Amount = (Actual Portion ÷ Full Portion) × Total Amount<"
+        "text": "Pro Rata Formula: Pro Rata Amount = (Actual Portion ÷ Full Portion) × Total Amount"
       }
     },
     }
