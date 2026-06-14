@@ -102,19 +102,17 @@ last_modified_at: 2026-05-22
 
 <p>For example, if a monthly salary is $3000 but an employee works only 15 days in a 30-day month, the salary is calculated proportionally using a pro rata formula.</p>
 
+<div class="p-4 mb-4 shadow-sm rounded-4">
 <h2>Pro Rata Formula</h2>
 <p>The basic <strong>Pro Rata formula</strong> is:</p>
-
-<div class="alert alert-light border rounded-3 text-center">
-<strong>Pro Rata Amount = (Actual Portion ÷ Full Portion) × Total Amount</strong>
-</div>
-
+<div class="alert alert-light border rounded-3 text-center"><strong>Pro Rata Amount = (Actual Portion ÷ Full Portion) × Total Amount</strong></div>
 <p>Where:</p>
 <ul>
 <li><strong>Total Amount</strong> = The full value or payment</li>
 <li><strong>Full Portion</strong> = The total period or quantity</li>
 <li><strong>Actual Portion</strong> = The portion used, worked, or owned</li>
 </ul>
+</div>
 
 <h2>Example of Pro Rata Calculation</h2>
 <div class="row g-4">
@@ -137,17 +135,49 @@ last_modified_at: 2026-05-22
       <div class="alert alert-light border rounded-3"> Pro Rata Rent = (10 ÷ 30) × 1200<br> <strong>Pro Rata Rent = $400</strong> </div>
     </div>
   </div>
+  <!-- Example 3 -->
+<div class="col-md-6">
+  <div class="bg-primary-subtle p-4 rounded-4 h-100">
+    <h3>Example 3: Pro Rata Subscription Fee</h3>
+    <p>
+      A yearly subscription costs <strong>$240</strong>, but a customer uses the service for only
+      <strong>90 days out of 365 days</strong>.
+    </p>
+    <p><strong>Calculation:</strong></p>
+    <div class="alert alert-light border rounded-3">
+      Pro Rata Fee = (90 ÷ 365) × 240<br>
+      Pro Rata Fee = 0.2466 × 240<br>
+      <strong>Pro Rata Fee = $59.18</strong>
+    </div>
+  </div>
 </div>
+
+<!-- Example 4 -->
+<div class="col-md-6">
+  <div class="bg-primary-subtle p-4 rounded-4 h-100">
+    <h3>Example 4: Pro Rata Dividend</h3>
+    <p>
+      A company distributes a dividend of <strong>$5,000</strong>. An investor owns
+      <strong>150 shares out of 1,000 total shares</strong>.
+    </p>
+    <p><strong>Calculation:</strong></p>
+    <div class="alert alert-light border rounded-3">
+      Pro Rata Dividend = (150 ÷ 1000) × 5000<br>
+      Pro Rata Dividend = 0.15 × 5000<br>
+      <strong>Pro Rata Dividend = $750</strong>
+    </div>
+  </div>
+</div>
+
+</div>
+
 <div class="pt-4 ">
 <div class="row align-items-center g-4">
     <!-- Left Content -->
     <div class="col-md-6"> 
         <div class="p-4 bg-light rounded shadow-sm h-100">
             <h2 class="mb-3">Common Uses of Pro Rata Calculation</h2>
-            <p>
-                Pro rata calculations are widely used in finance, payroll, 
-                and billing systems, including:
-            </p>
+            <p>Pro rata calculations are widely used in finance, payroll,  and billing systems, including:</p>
             <ul class="mb-4">
                 <li><strong>Salary or wages</strong> for partial work periods</li>
                 <li><strong>Rent payments</strong> when moving in or out mid-month</li>
@@ -170,71 +200,171 @@ last_modified_at: 2026-05-22
         </div>
     </div>
     <!-- Right Image -->
-    <div class="col-md-6 text-center">
-        <img src="/assets/images/og/pro-rata-calculator.jpg" 
-            alt="Pro Rata Calculator for salary rent and proportional payments"
-            class="img-fluid rounded shadow-sm"
-            loading="lazy" >
-    </div>
+  <img src="/assets/images/og/pro-rata-calculator.jpg"
+     alt="Pro Rata Calculator showing salary, rent, subscription and dividend calculations"
+     title="Pro Rata Calculator"
+     class="img-fluid rounded shadow-sm"
+     width="1200"
+     height="630"
+     loading="lazy"
+     decoding="async">
 
 </div>
 
+<!-- How to Calculate -->
+<div class="row g-4 mt-2 mb-4">
+ <div class="col-lg-6">
+   <div class="bg-light p-4 rounded-4 shadow-sm h-100">
+    <h2>How to Calculate Pro Rata Amount</h2>
+     <p>To calculate a pro rata amount, divide the actual portion by the total portion and multiply the result by the full amount.</p>
+      <h3 class="h5 mt-3">Example: Pro Rata Salary Calculation</h3>
+      <ul>
+        <li><strong>Total Salary:</strong> $6,000</li>
+        <li><strong>Days Worked:</strong> 18</li>
+        <li><strong>Total Days in Month:</strong> 30</li>
+      </ul>
+     <p><strong>Step 1:</strong> Calculate the worked proportion.</p>
+     <div class="alert alert-light border">18 ÷ 30 = 0.6</div>
+     <p><strong>Step 2:</strong> Multiply by the total salary.</p>
+     <div class="alert alert-light border">0.6 × 6000 = 3600</div>
+     <p class="mb-0"><strong>Pro Rata Salary = $3,600</strong></p>
+    </div>
+  </div>
+  <!-- Comparison Table -->
+  <div class="col-lg-6">
+   <div class="bg-light p-4 rounded-4 shadow-sm h-100">
+    <h2>Pro Rata vs Full Payment Comparison</h2>
+     <p>The table below shows how a full payment differs from a pro rata payment when only part of a service period, rental period, or work period is used.</p>
+      <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>Scenario</th>
+              <th>Full Amount</th>
+              <th>Pro Rata Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monthly Salary (20 of 30 days)</td>
+              <td>$3,000</td>
+              <td>$2,000</td>
+            </tr>
+            <tr>
+              <td>Monthly Rent (10 of 30 days)</td>
+              <td>$1,200</td>
+              <td>$400</td>
+            </tr>
+            <tr>
+              <td>Subscription (90 of 365 days)</td>
+              <td>$240</td>
+              <td>$59.18</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mb-0">Pro rata calculations ensure fair billing and payment by charging only for the portion actually used or earned.</p>
+    </div>
+  </div>
+</div>
+<!-- Types of Pro Rata Calculations -->
+<div class="p-4 shadow-sm rounded-4 mb-4">
+<h2>Types of Pro Rata Calculations</h2>
+<ul>
+<li>Pro Rata Salary</li>
+<li>Pro Rata Rent</li>
+<li>Pro Rata Subscription Fees</li>
+<li>Pro Rata Insurance Premiums</li>
+<li>Pro Rata Dividends</li>
+<li>Pro Rata Interest</li>
+</ul>
+</div>
 
 <!-- FAQ Section -->
- <section class="p-4">
-        <h2 class="mb-4">FAQ on Pro rata Calculator</h2>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary">1. What is a Pro Rata calculation?</div>
-            <p class="mb-0"> A pro rata calculation distributes a total amount proportionally based on time, quantity, or share</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 2. How do you calculate pro rata salary?</div>
-            <p class="mb-0">Divide the number of days worked by the total days in the pay period and multiply by the full salary.</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 3. Where is pro rata used?</div>
-            <p class="mb-0">Pro rata calculations are used for salary payments, rent adjustments, subscription billing, and dividend distribution.</p>
-          </div>
-        </div>
-      </section>
+<section class="p-4">
+<h2 class="mb-4">FAQ on Pro rata Calculator</h2>
+<div class="card mb-3 border-0 bg-light">
+ <div class="card-body "> 
+ <div class="fw-bold text-primary">1. What is a Pro Rata calculation?</div> 
+  <p class="mb-0"> A pro rata calculation distributes a total amount proportionally based on time, quantity, or share</p>
+  </div> 
+  </div> 
+  <div class="card mb-3 border-0 bg-light"> 
+  <div class="card-body ">
+   <div class="fw-bold text-primary">2. How do you calculate pro rata salary?</div>
+    <p class="mb-0">Divide the number of days worked by the total days in the pay period and multiply by the full salary.</p> 
+    </div>
+     </div> 
+     <div class="card mb-3 border-0 bg-light">
+      <div class="card-body ">
+       <div class="fw-bold text-primary">3. Where is pro rata used?</div> 
+       <p class="mb-0">Pro rata calculations are used for salary payments, rent adjustments, subscription billing, and dividend distribution.</p> 
       </div>
+    </div>
+    <div class="card mb-3 border-0 bg-light"> 
+     <div class="card-body "> 
+      <div class="fw-bold text-primary">4. How do you calculate pro rata rent?</div> 
+       <p class="mb-0">To calculate pro rata rent, divide the number of days the property is occupied by the total number of days in the rental period, then multiply by the full monthly rent.<br><strong>Formula</strong><br>Pro Rata Rent = (Days Occupied ÷ Total Days in Month) × Monthly Rent</p>
+     </div> 
+     </div>
+    <div class="card mb-3 border-0 bg-light"> 
+     <div class="card-body "> 
+      <div class="fw-bold text-primary">5. Can pro rata be used for subscriptions?</div>
+     <p class="mb-0">Yes. Pro rata calculations are commonly used for subscriptions when a customer starts, upgrades, downgrades, or cancels a service before the end of the billing period. Instead of charging the full subscription fee, the amount is adjusted based on the number of days the service was actually used.</p> 
+   </div> 
+  </div> 
+ </section>
+
+
+
 <script src="{{ '/assets/js/pro-rata-calculator.js' | relative_url }}"></script>
 
 <script type="application/ld+json">
 {
- "@context":"https://schema.org",
- "@type":"FAQPage",
- "mainEntity":[
-   {
-     "@type":"Question",
-     "name":"What is a Pro Rata calculation?",
-     "acceptedAnswer":{
-       "@type":"Answer",
-       "text":"A pro rata calculation distributes a total amount proportionally based on time, quantity, or share."
-     }
-   },
-   {
-     "@type":"Question",
-     "name":"How do you calculate pro rata salary?",
-     "acceptedAnswer":{
-       "@type":"Answer",
-       "text":"Divide the number of days worked by the total days in the pay period and multiply by the full salary."
-     }
-   },
-   {
-     "@type":"Question",
-     "name":"Where is pro rata used?",
-     "acceptedAnswer":{
-       "@type":"Answer",
-       "text":"Pro rata calculations are used for salary payments, rent adjustments, subscription billing, and dividend distribution."
-     }
-   }
- ]
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a pro rata calculation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A pro rata calculation distributes a total amount proportionally based on time, quantity, ownership, or share. It ensures that payments or charges are adjusted fairly according to actual usage or entitlement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you calculate pro rata salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the number of days worked by the total number of days in the pay period and multiply the result by the full salary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is pro rata used?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pro rata calculations are commonly used for salary payments, rent adjustments, subscription billing, insurance premiums, interest calculations, and dividend distributions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you calculate pro rata rent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To calculate pro rata rent, divide the number of days occupied by the total number of days in the month and multiply by the monthly rent. Formula: Pro Rata Rent = (Days Occupied ÷ Total Days in Month) × Monthly Rent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can pro rata be used for subscriptions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Pro rata calculations are commonly used for subscriptions when a customer starts, upgrades, downgrades, or cancels a service before the end of the billing cycle. The subscription fee is adjusted according to the number of days the service was actually used."
+      }
+    }
+  ]
 }
 </script>
 
@@ -262,5 +392,19 @@ last_modified_at: 2026-05-22
      "item":"https://easycalculator.org/pro-rata-calculator"
    }
  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"SoftwareApplication",
+ "name":"Pro Rata Calculator",
+ "applicationCategory":"FinanceApplication",
+ "operatingSystem":"Web",
+ "offers":{
+   "@type":"Offer",
+   "price":"0"
+ }
 }
 </script>
