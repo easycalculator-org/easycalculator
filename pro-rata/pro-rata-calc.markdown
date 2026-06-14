@@ -200,6 +200,7 @@ last_modified_at: 2026-05-22
         </div>
     </div>
     <!-- Right Image -->
+    <div class="col-md-6"> 
   <img src="/assets/images/og/pro-rata-calculator.jpg"
      alt="Pro Rata Calculator showing salary, rent, subscription and dividend calculations"
      title="Pro Rata Calculator"
@@ -208,7 +209,7 @@ last_modified_at: 2026-05-22
      height="630"
      loading="lazy"
      decoding="async">
-
+</div>
 </div>
 
 <!-- How to Calculate -->
