@@ -4,7 +4,7 @@ title: Free Azimuth Calculator | Find Azimuth Angle from Coordinates
 permalink: /azimuth-calculator
 description: "Calculate azimuth angle instantly with our free Azimuth Calculator. Find accurate direction between coordinates for navigation, surveying, and RF antenna alignment."
 image: "/assets/images/azimuth-calculator.jpg"
-last_modified_at: 2026-02-28
+last_modified_at: 2026-06-15
 ---
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -19,11 +19,11 @@ last_modified_at: 2026-02-28
 </style>
 
 <div aria-label="breadcrumb" class="p-3">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Azimuth Calculator</li>
-  </ol>
+ <ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Azimuth Calculator</li>
+ </ol>
 </div>
 
  <div class="col-12 col-xl-11">
@@ -33,66 +33,66 @@ last_modified_at: 2026-02-28
     <div class="col-12 col-md-5">
    <div class="row g-3">
  <!-- point A -->
-       <div class="col-12">
-       <div class="border rounded p-3 bg-white">
-       <h3 class="h6 fw-bold mb-2"> Point A</h3>
-        <div class="mb-2"> <input type="number" class="form-control" id="latA" step="any" placeholder="Enter Latitude e.g. 40.7128"> </div>
-        <div class="mb-2"><input type="number" class="form-control" id="lonA" step="any" placeholder="Enter Longitude e.g. -74.0060"></div>
-         <button class="btn btn-sm btn-outline-primary mt-1" id="setAMap">📍 set from map</button>
-        </div>
-       </div>
-  <!-- point B -->
- <div class="col-12">
-      <div class="border rounded p-3 bg-white">
-        <h3 class="h6 fw-bold mb-2">Point B</h3>
-          <div class="mb-2"><input type="number" class="form-control" id="latB" step="any" placeholder="Enter Latitude e.g. 34.0522"></div>
-           <div class="mb-2"><input type="number" class="form-control" id="lonB" step="any" placeholder="Enter Longitude e.g. -118.2437"></div>
-             <button class="btn btn-sm btn-outline-success mt-1" id="setBMap">📍 set from map</button>
-             </div>
-            </div>
-     <!-- action buttons -->
-    <div class="d-flex gap-2 mt-2">
-    <button class="btn btn-primary flex-fill" id="calcBtn">Calculate</button> <button class="btn btn-outline-secondary" id="swapBtn">↔️ swap</button>
+  <div class="col-12">
+   <div class="border rounded p-3 bg-white">
+    <h3 class="h6 fw-bold mb-2"> Point A</h3>
+    <div class="mb-2"> <input type="number" class="form-control" id="latA" step="any" placeholder="Enter Latitude e.g. 40.7128"> </div>
+     <div class="mb-2"><input type="number" class="form-control" id="lonA" step="any" placeholder="Enter Longitude e.g. -74.0060"></div>
+      <button class="btn btn-sm btn-outline-primary mt-1" id="setAMap">📍 set from map</button>
      </div>
     </div>
-  </div>
- <!-- right: map -->
-    <div class="col-12 col-md-7">
-     <div class="border rounded p-2 bg-white">
-     <div id="map" class="rounded"></div>
-     <div class="d-flex justify-content-between align-items-center mt-4 small text-secondary">
-        <span><span class="badge bg-primary">A</span> <span id="mapALabel">—</span></span>
-        <span><span class="badge bg-success">B</span> <span id="mapBLabel">—</span></span>
-        <span><span class="badge bg-dark">azimuth</span> <span id="mapAzimuthLabel">0°</span></span>
+ <!-- point B -->
+ <div class="col-12">
+    <div class="border rounded p-3 bg-white">
+      <h3 class="h6 fw-bold mb-2">Point B</h3>
+       <div class="mb-2"><input type="number" class="form-control" id="latB" step="any" placeholder="Enter Latitude e.g. 34.0522"></div>
+        <div class="mb-2"><input type="number" class="form-control" id="lonB" step="any" placeholder="Enter Longitude e.g. -118.2437"></div>
+         <button class="btn btn-sm btn-outline-success mt-1" id="setBMap">📍 set from map</button>
         </div>
-      </div>
-      </div>
-     </div>
+       </div>
+ <!-- action buttons -->
+ <div class="d-flex gap-2 mt-2">
+  <button class="btn btn-primary flex-fill" id="calcBtn">Calculate</button> <button class="btn btn-outline-secondary" id="swapBtn">↔️ swap</button>
+  </div>
+  </div>
+ </div>
+ <!-- right: map -->
+  <div class="col-12 col-md-7">
+  <div class="border rounded p-2 bg-white">
+   <div id="map" class="rounded"></div>
+   <div class="d-flex justify-content-between align-items-center mt-4 small text-secondary">
+     <span><span class="badge bg-primary">A</span> <span id="mapALabel">—</span></span>
+     <span><span class="badge bg-success">B</span> <span id="mapBLabel">—</span></span>
+     <span><span class="badge bg-dark">azimuth</span> <span id="mapAzimuthLabel">0°</span></span>
+    </div>
+   </div>
+  </div>
+  </div>
 
 
 <!-- results -->
 <br>
 <div class="card border-0 shadow-sm rounded-4 result-card">
-  <div class="card-body p-3 p-md-4">
-    <div class="row align-items-center g-4">
-      <!-- LEFT: Numbers -->
-      <div class="col-12 col-md-5">
-        <!-- Azimuth -->
-        <div class="mb-4">
-          <div class="small text-uppercase text-muted fw-semibold mb-1"> Azimuth (Bearing) </div>
-          <div class="display-5 fw-bold text-primary" id="azimuthResult">  --.--° </div>
-        </div>
-        <!-- Distance -->
-        <div>
-          <div class="small text-uppercase text-muted fw-semibold mb-1">  Distance</div>
-          <div class="fs-2 fw-bold text-primary" id="distanceResult"> ---- km </div>
-        </div>
-      </div>
-      <!-- RIGHT: Compass -->
-      <div class="col-12 col-md-7 text-center">
-        <div class="compass-wrapper"> <canvas id="compassCanvas" width="280" height="280" style="max-width:260px;height:auto;"></canvas></div>
-      </div>
+ <div class="card-body p-3 p-md-4">
+  <div class="row align-items-center g-4">
+ <!-- LEFT: Numbers -->
+  <div class="col-12 col-md-5">
+   <!-- Azimuth -->
+   <div class="mb-4">
+    <div class="small text-uppercase text-muted fw-semibold mb-1"> Azimuth (Bearing) </div>
+     <div class="display-5 fw-bold text-primary" id="azimuthResult">  --.--° </div>
+     </div>
+    <!-- Distance -->
+     <div>
+      <div class="small text-uppercase text-muted fw-semibold mb-1">  Distance</div>
+      <div class="fs-2 fw-bold text-primary" id="distanceResult"> ---- km </div>
+     </div>
     </div>
+   <!-- RIGHT: Compass -->
+   <div class="col-12 col-md-7 text-center">
+    <div class="compass-wrapper"> <canvas id="compassCanvas" width="280" height="280" style="max-width:260px;height:auto;"></canvas></div>
+   </div>
+  </div>
   </div>
 </div>
  </div>
@@ -115,23 +115,11 @@ last_modified_at: 2026-02-28
  
  <div class="row align-items-center g-4">
 
-  <!-- LEFT SIDE (SEO + CONTENT) -->
-  <div class="col-md-6">
-
-    <h2 class="fw-bold mb-3">What is Azimuth Angle?</h2>
-
-    <p class="lead">
-      The <strong>azimuth angle</strong> is a directional measurement expressed in degrees from 
-      <strong>0° to 360°</strong>, used to define the position of an object relative to 
-      <strong>True North</strong>.
-    </p>
-
-    <p>
-      It is widely used in <strong>surveying, navigation, astronomy, and RF engineering</strong> 
-      to determine precise direction. The angle is always measured 
-      <strong class="text-primary">clockwise from North</strong>.
-    </p>
-
+<!-- LEFT SIDE (SEO + CONTENT) -->
+<div class="col-md-6">
+ <h2 class="fw-bold mb-3">What is Azimuth Angle?</h2>
+ <p class="lead">The <strong>azimuth angle</strong> is a directional measurement expressed in degrees from <strong>0° to 360°</strong>, used to define the position of an object relative to <strong>True North</strong>.</p>
+  <p>It is widely used in <strong>surveying, navigation, astronomy, and RF engineering</strong> to determine precise direction. The angle is always measured <strong class="text-primary">clockwise from North</strong>.</p>
     <!-- Highlight Box -->
     <div class="p-3 bg-light border rounded-3 mt-3">
       <h5 class="fw-semibold mb-2">📍 Standard Azimuth Reference</h5>
@@ -142,26 +130,16 @@ last_modified_at: 2026-02-28
         <span class="badge bg-dark">270° → West</span>
       </div>
     </div>
-
-    <!-- Info Note -->
-    <p class="text-muted mt-3 small">
-      💡 Unlike bearing, azimuth provides a full 360° directional system, making it more precise for technical applications.
-    </p>
-
+<!-- Info Note -->
+ <p class="text-muted mt-3 small">💡 Unlike bearing, azimuth provides a full 360° directional system, making it more precise for technical applications.</p>
   </div>
 
-
-  <!-- RIGHT SIDE (CALCULATOR / INTERACTIVE SVG) -->
-  <div class="col-md-6">
-
-    <div class="card shadow border-0 rounded-4">
-      
-      <div class="card-body text-center">
-
-        <h4 class="fw-bold mb-3">Azimuth Angle Calculator</h4>
-
-        <div class="bg-light p-3 rounded-3">
-
+<!-- RIGHT SIDE (CALCULATOR / INTERACTIVE SVG) -->
+<div class="col-md-6">
+ <div class="card shadow border-0 rounded-4">
+  <div class="card-body text-center">
+   <h4 class="fw-bold mb-3">Azimuth Angle Calculator</h4>
+    <div class="bg-light p-3 rounded-3">
           <svg id="compass" width="100%" height="350" viewBox="0 0 400 400">
 
             <!-- Center -->
@@ -187,29 +165,19 @@ last_modified_at: 2026-02-28
             <path id="arc" fill="none" stroke="#dc3545" stroke-width="2"/>
 
           </svg>
-
-          <!-- Result Display -->
-          <div class="mt-3">
-            <div class="fs-5 fw-semibold">
-              Angle: <span id="angle" class="text-danger">0</span>°
-            </div>
-          </div>
-
+ <!-- Result Display -->
+   <div class="mt-3">
+     <div class="fs-5 fw-semibold">Angle: <span id="angle" class="text-danger">0</span>°</div>
+     </div>
         </div>
-
       </div>
     </div>
-
+<p class="text-muted mt-3">🧭 Start at True North (0°) and move the cursor clockwise to any direction. The red line will rotate and display the current azimuth angle, helping you understand how azimuth is measured from 0° to 360°.</p>
   </div>
 
 </div>
 
-
-
-
-
   </section>
-
 
 
   <!-- Formula Section -->
