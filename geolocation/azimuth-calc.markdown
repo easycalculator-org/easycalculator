@@ -176,11 +176,10 @@ last_modified_at: 2026-06-15
   </div>
 
 </div>
+</section>
 
-  </section>
 
-
-  <!-- Formula Section -->
+ <!-- Formula Section -->
  <section class="container my-5">
  <h2 class="fw-bold mb-3">Azimuth Angle Formula</h2>
   <p> The azimuth between two geographic coordinates can be calculated using  the following trigonometric formula: </p>
