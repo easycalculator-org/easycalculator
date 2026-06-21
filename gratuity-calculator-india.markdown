@@ -61,7 +61,7 @@ last_modified_at: 2026-04-01
  <div class="row justify-content-center">
   <div class="col-12 col-md-10 col-lg-8">
    <div class="card shadow-lg border-0 p-4 rounded-4">
-    <h1 class="text-center mb-3 fw-bold">Gratuity Calculator</h1>
+    <h1>Gratuity Calculator</h1>
     <div class="bg-light rounded-3 p-3 mb-4 small text-muted text-center">Formula: <strong>(Salary × 15/26) × Years</strong><br>Eligibility: Minimum 5 years service </div>
     <div class="row g-4 align-items-center">
       <div class="col-md-6">

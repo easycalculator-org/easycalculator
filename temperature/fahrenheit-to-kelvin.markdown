@@ -71,9 +71,9 @@ last_modified_at: 2026-02-03
     </div>
     <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
   </div>
-      <!-- What is Section1 -->
-      <section class="mb-5">
-        <h1>Fahrenheit to Kelvin Converter</h1>
+ <!-- What is Section1 -->
+   <section class="mb-5">
+    <h2>Fahrenheit to Kelvin Converter</h2>
         <p>The Fahrenheit to Kelvin Converter is a quick and reliable tool that helps users convert temperature from Fahrenheit (°F) to Kelvin (K) — the SI unit of temperature. Ideal for students, scientists, engineers, and travelers, this converter ensures accurate results in just seconds.</p>
         <h3>What is Fahrenheit to Kelvin Conversion?</h3>
         <p>The Kelvin scale starts at absolute zero and is widely used in scientific calculations and thermodynamic equations. To convert Fahrenheit to Kelvin, you need to use a two-step formula: <code>Kelvin = (Fahrenheit − 32) × 5/9 + 273.15 </code></p>
