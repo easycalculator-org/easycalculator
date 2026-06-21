@@ -9,70 +9,68 @@ last_modified_at: 2026-02-22
  
 <div class="card border-0 shadow-lg rounded-4 mx-auto p-4" style="max-width:720px;">
  <div class="d-flex justify-content-between align-items-center mb-4">
-   <h3 class="fw-semibold mb-0"><i class="fas fa-chart-line me-2"></i>VSWR Calculator </h3>
-      <span class="bg-primary badge rounded-pill p-2"><i class="far fa-circle-check me-1"></i> Γ · RL · mismatch</span>
-    </div>
+ <h3 class="fw-semibold mb-0"><i class="fas fa-chart-line me-2"></i>VSWR Calculator </h3>
+  <span class="bg-primary badge rounded-pill p-2"><i class="far fa-circle-check me-1"></i> Γ · RL · mismatch</span>
+</div>
  <!-- main input row: VSWR -->
-  <div class="mb-4">
-    <label class="fw-semibold text-secondary mb-2 ms-2"><i class="fas fa-arrow-right-arrow-left me-1"></i>VSWR (≥1)</label>
-     <div class="input-group rounded-pill border shadow-sm overflow-hidden">
+ <div class="mb-4">
+  <label class="fw-semibold text-secondary mb-2 ms-2"><i class="fas fa-arrow-right-arrow-left me-1"></i>VSWR (≥1)</label>
+  <div class="input-group rounded-pill border shadow-sm overflow-hidden">
   <input type="number"  id="vswrInput" class="form-control form-control-lg border-0 text-center fs-5 focus-ring focus-ring-primary" value="2.1" min="1" step="any"  placeholder="2.1"><span class="input-group-text bg-white border-0 fw-semibold"> :1 </span>
 </div>
 </div>
 
 <div class="row g-3">
  <div class="col-sm-6">
-  <div class="bg-primary-subtle rounded-4 p-4 ">
-    <div class="small fw-semibold text-primary text-uppercase"><i class="fas fa-arrow-right-to-bracket me-1"></i>Reflection Γ</div>
-      <div class="fs-2 fw-bold lh-1" id="gammaVal">0.35484</div>
-     </div>
-    </div>
+ <div class="bg-primary-subtle rounded-4 p-4 ">
+  <div class="small fw-semibold text-primary text-uppercase"><i class="fas fa-arrow-right-to-bracket me-1"></i>Reflection Γ</div>
+   <div class="fs-2 fw-bold lh-1" id="gammaVal">0.35484</div>
+  </div>
+ </div>
 <!-- Return loss -->
-  <div class="col-sm-6">
-    <div class="bg-primary-subtle rounded-4 p-4 ">
-    <div class="small fw-semibold text-primary text-uppercase"><i class="fas fa-rotate-left me-1"></i>Return loss</div>
-     <div class="fs-2 fw-bold lh-1" id="returnLossVal">9.0</div><span class="text-secondary small fw-medium">dB</span></div>
+ <div class="col-sm-6">
+ <div class="bg-primary-subtle rounded-4 p-4 ">
+  <div class="small fw-semibold text-primary text-uppercase"><i class="fas fa-rotate-left me-1"></i>Return loss</div>
+   <div class="fs-2 fw-bold lh-1" id="returnLossVal">9.0</div><span class="text-secondary small fw-medium">dB</span></div>
    </div>
 <!-- Reflected power % -->
-  <div class="col-4">
-   <div class="bg-primary-subtle rounded-4 p-4 ">
-      <div class="small fw-semibold text-primary text-uppercase"><i class="fas fa-bolt me-1"></i>Reflected</div>
-      <div class="fs-2 fw-bold lh-1" id="reflPowerVal">12.59</div> <span class="text-secondary small">%</span> </div>
-     </div>
+ <div class="col-4">
+ <div class="bg-primary-subtle rounded-4 p-4 ">
+  <div class="small fw-semibold text-primary text-uppercase"><i class="fas fa-bolt me-1"></i>Reflected</div>
+  <div class="fs-2 fw-bold lh-1" id="reflPowerVal">12.59</div> <span class="text-secondary small">%</span> </div>
+  </div>
 <!-- Through power % -->
-   <div class="col-4">
-     <div class="bg-primary-subtle rounded-4 p-4 ">
-     <div class="small fw-semibold text-primary text-uppercase"><i class="fas fa-chart-line me-1"></i>Through</div>
-     <div class="fs-2 fw-bold lh-1" id="throughPowerVal">87.41</div><span class="text-secondary small">%</span> </div>
-    </div>
+  <div class="col-4">
+  <div class="bg-primary-subtle rounded-4 p-4 ">
+   <div class="small fw-semibold text-primary text-uppercase"><i class="fas fa-chart-line me-1"></i>Through</div>
+   <div class="fs-2 fw-bold lh-1" id="throughPowerVal">87.41</div><span class="text-secondary small">%</span> </div>
+   </div>
  <!-- Mismatch loss dB -->
-   <div class="col-4">
-     <div class="bg-primary-subtle rounded-4 p-4 " >
-      <div class="small fw-semibold text-primary text-uppercase"><i class="fas fa-exclamation-triangle me-1"></i>Mismatch loss</div>
-       <div class="fs-2 fw-bold lh-1" id="mismatchLossVal">0.58</div><span class="text-secondary small">dB</span>
-       </div>
-       </div>
-    </div>
+  <div class="col-4">
+   <div class="bg-primary-subtle rounded-4 p-4 " >
+    <div class="small fw-semibold text-primary text-uppercase"><i class="fas fa-exclamation-triangle me-1"></i>Mismatch loss</div>
+     <div class="fs-2 fw-bold lh-1" id="mismatchLossVal">0.58</div><span class="text-secondary small">dB</span>
+     </div>
+     </div>
+   </div>
 <!-- quick presets + keyword reminder (clean) -->
-    <div class="d-flex flex-wrap align-items-center justify-content-between mt-4 pt-4 border-top">
-        <div class="d-flex gap-2">
-            <span class="text-secondary small">preset:</span>
-            <button class="btn btn-outline-primary rounded-pill px-4 py-1 fw-medium" data-example="1.5">1.5</button>
-            <button class="btn btn-outline-primary rounded-pill px-4 py-1 fw-medium" data-example="2.1">2.1</button>
-            <button class="btn btn-outline-primary rounded-pill px-4 py-1 fw-medium" data-example="3.0">3.0</button>
-            <button class="btn btn-outline-primary rounded-pill px-4 py-1 fw-medium" data-example="5.0">5.0</button>
-        </div>
-        <div class="mt-2 mt-sm-0 ">
-            <span class="bg-success-subtle rounded-4 p-3"><i class="far fa-keyboard"></i> Γ 0.354 · 12.59% · 9dB</span>
-        </div>
+   <div class="d-flex flex-wrap align-items-center justify-content-between mt-4 pt-4 border-top">
+    <div class="d-flex gap-2">
+     <span class="text-secondary small">preset:</span>
+     <button class="btn btn-outline-primary rounded-pill px-4 py-1 fw-medium" data-example="1.5">1.5</button>
+     <button class="btn btn-outline-primary rounded-pill px-4 py-1 fw-medium" data-example="2.1">2.1</button>
+     <button class="btn btn-outline-primary rounded-pill px-4 py-1 fw-medium" data-example="3.0">3.0</button>
+     <button class="btn btn-outline-primary rounded-pill px-4 py-1 fw-medium" data-example="5.0">5.0</button>
     </div>
+    <div class="mt-2 mt-sm-0 "><span class="bg-success-subtle rounded-4 p-3"><i class="far fa-keyboard"></i> Γ 0.354 · 12.59% · 9dB</span></div>
+   </div>
 </div>
 
 
 <!-- Article -->
 <div class="article-container">
-  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
-    <div class="d-flex align-items-center gap-3 flex-wrap">
+ <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+   <div class="d-flex align-items-center gap-3 flex-wrap">
       {% include naren_create.html %}
       {% include bahadur.html %}
     </div>
@@ -85,15 +83,7 @@ last_modified_at: 2026-02-22
 <strong>VSWR (Voltage Standing Wave Ratio)</strong> is an RF measurement that indicates how efficiently power is transmitted from a transmitter through a transmission line to an antenna. It quantifies the amount of signal reflected back due to impedance mismatch. A perfect system has a VSWR of <strong>1:1</strong>, meaning no reflected power, while higher VSWR values indicate greater reflection and reduced transmission efficiency.</p>
 <p>For example, a VSWR of 1.4 reflects about 2.8% of the forward power, while a VSWR of 4 reflects approximately 64% and VSWR of 5 reflect  about to 55%.</p>
 <img  src="/assets/images/vswr-calculation-infographic.jpg"  alt="VSWR calculation infographic showing forward and reflected power"  title="VSWR Calculation Diagram" class="img-fluid p-4" loading="lazy">
-    <!-- <p class="mb-2"><strong>VSWR full form</strong> is <strong>Voltage Standing Wave Ratio</strong>.</p>
-    <p class="lead">VSWR is a key RF parameter that measures how efficiently RF power is transmitted from a transmitter through a transmission line to an antenna. It indicates how much power is reflected back due to impedance mismatch.</p>
-    <p>👉 <strong>Ideal VSWR = 1:1</strong><br>👉 <strong>Higher VSWR = more reflected power (bad)</strong></p>
-    <p>It indicates the level of impedance mismatch in an RF system.</p>
-    <ul>
-      <li><strong>VSWR = 1:1</strong> → Perfect match (ideal condition)</li>
-      <li><strong>VSWR &gt; 1</strong> → Some reflected power due to mismatch</li>
-      <li>Higher VSWR → Greater signal reflection → Power loss</li>
-    </ul> -->
+
 
 <div class="bg-light p-4 rounded">
   <h2 class="h4 fw-semibold mb-1">VSWR Formula</h2>
@@ -212,6 +202,102 @@ last_modified_at: 2026-02-22
     </div>
   </div>
 </div>
+
+
+<!-- VSWR Conversion Table -->
+<section class="my-5">
+  <div class="card border-0 shadow-sm rounded-4">
+    <div class="card-body p-4">
+      <h2 class="h4 fw-bold mb-3">VSWR Conversion Table (VSWR vs Return Loss)</h2>
+
+      <p>
+        The following VSWR chart shows the relationship between
+        <strong>VSWR, Return Loss, and Reflected Power</strong>.
+        This table is commonly used by RF engineers, telecom professionals,
+        and antenna installers to quickly evaluate antenna performance.
+      </p>
+
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover align-middle text-center">
+          <thead class="table-primary">
+            <tr>
+              <th>VSWR</th>
+              <th>Return Loss (dB)</th>
+              <th>Reflected Power (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1.1 : 1</td>
+              <td>26.4</td>
+              <td>0.23%</td>
+            </tr>
+            <tr>
+              <td>1.2 : 1</td>
+              <td>20.8</td>
+              <td>0.83%</td>
+            </tr>
+            <tr>
+              <td>1.5 : 1</td>
+              <td>14.0</td>
+              <td>4.0%</td>
+            </tr>
+            <tr>
+              <td>2.0 : 1</td>
+              <td>9.5</td>
+              <td>11.1%</td>
+            </tr>
+            <tr>
+              <td>3.0 : 1</td>
+              <td>6.0</td>
+              <td>25.0%</td>
+            </tr>
+            <tr>
+              <td>5.0 : 1</td>
+              <td>3.5</td>
+              <td>44.4%</td>
+            </tr>
+            <tr>
+              <td>10 : 1</td>
+              <td>1.7</td>
+              <td>66.9%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="small text-muted mb-0">
+        A lower VSWR and higher return loss indicate a better impedance match
+        between the transmission line and antenna, resulting in more efficient
+        RF power transfer.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Real RF Examples -->
+<section class="my-5">
+<div class="card border-0 bg-light rounded-4 shadow-sm">
+ <div class="card-body p-4">
+ <h2 class="h4 fw-bold mb-4">VSWR Examples in Real RF Systems</h2>
+ <div class="mb-4">
+  <h3 class="h5 text-primary"><i class="fas fa-broadcast-tower me-2"></i>Example 1: Cellular Antenna</h3>
+  <p class="mb-0">A telecom antenna with a <strong>VSWR of 1.4:1</strong> reflects only about <strong>2.8% of the transmitted power</strong>. This is generally  considered a good match and is acceptable for most LTE and 5G base station installations.</p>
+  </div>
+  <hr>
+  <div class="mb-4">
+   <h3 class="h5 text-primary"><i class="fas fa-signal me-2"></i>Example 2: LTE Site Troubleshooting</h3>
+    <p class="mb-0">If the measured <strong>VSWR exceeds 2:1</strong> on an LTE site, engineers typically inspect feeder cables, jumpers, connectors, and antenna ports for damage, water ingress, or impedance mismatch.</p>
+   </div>
+      <hr>
+  <div>
+  <h3 class="h5 text-primary"><i class="fas fa-radio me-2"></i>Example 3: Amateur Radio Station</h3>
+   <p class="mb-0">Most amateur radio operators aim for a <strong>VSWR below 1.5:1</strong> to maximize transmitted power, improve communication range, and reduce stress on radio equipment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- FAQ on VSWR -->
 <br>
