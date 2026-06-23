@@ -307,10 +307,10 @@
     "content": "fraction calculator add subtract multiply divide simplify lcm fractions"
   },
   {
-    "id": "free-space-path-loss-calculator",
-    "title": "Free Space Path Loss Calculator",
+    "id": "free-space-path-loss-calculator FSPL",
+    "title": "Free Space Path Loss Calculator FSPL",
     "url": "/free-space-path-loss-calculator",
-    "content": "free space path loss calculator "
+    "content": "free space path loss calculator FSPL"
   },
   {
     "id": "frequency-to-wavelength-calculator",
