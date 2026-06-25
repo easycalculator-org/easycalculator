@@ -4,94 +4,83 @@ title:  Fresnel Zone Calculator – Calculate RF Line of Sight, Radius & Clearan
 permalink: /fresnel-zone-calculator
 description: "Use our Fresnel Zone Calculator to find RF line-of-sight clearance, radius, and obstruction impact. Ideal for microwave, 4G, 5G & wireless link planning."
 image: "/assets/images/fresnel-zone-calculator.svg"
-last_modified_at: 2026-03-27
+last_modified_at: 2026-06-26
 ---
  <style>
-
-        .card-header {
-            background: #2d86f1;
-            color: white;
-            border-radius: 1rem 1rem 0 0 !important;
-            padding: 1rem 1.25rem;
-        }   
-        .form-label {
-            font-weight: 500;
-        }
-    </style>
-
-   <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10">
-                <div class="card shadow-sm rounded-4">
-                    <div class="card-header">
-                        <h1 class="h4 mb-0 fw-semibold">📡 Fresnel Zone Calculator</h1>
-                        <p class="small mb-0 opacity-75">Calculate Fresnel radius for wireless link clearance</p>
-                    </div>
-                    <div class="card-body p-4">
-                        <!-- Input Form -->
-                        <form id="fresnelForm">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label for="distance" class="form-label">Total Distance <span class="small-note">(d)</span></label>
-                                    <div class="input-group">
-                                        <input type="number" class="form-control" id="distance" value="5" step="any" required>
-                                        <select class="form-select" id="distanceUnit" style="max-width: 85px;">
-                                            <option value="m">m</option>
-                                            <option value="km">km</option>
-                                            <option value="mi">mi</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="frequency" class="form-label">Frequency <span class="small-note">(f)</span></label>
-                                    <div class="input-group">
-                                        <input type="number" class="form-control" id="frequency" value="5800" step="any" required>
-                                        <select class="form-select" id="freqUnit" style="max-width: 85px;">
-                                            <option value="MHz">MHz</option>
-                                            <option value="GHz">GHz</option>
-                                            <option value="kHz">kHz</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="zoneOrder" class="form-label">Fresnel Zone (n)</label>
-                                    <select class="form-select" id="zoneOrder">
-                                        <option value="1">1st Zone (critical)</option>
-                                        <option value="2">2nd Zone</option>
-                                        <option value="3">3rd Zone</option>
-                                        <option value="4">4th Zone</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="obsDistance" class="form-label">Obstacle Distance from TX <span class="small-note">(d1, optional)</span></label>
-                                    <div class="input-group">
-                                        <input type="number" class="form-control" id="obsDistance" placeholder="Midpoint" step="any">
-                                        <select class="form-select" id="obsUnit" style="max-width: 85px;">
-                                            <option value="m">m</option>
-                                            <option value="km">km</option>
-                                            <option value="mi">mi</option>
-                                        </select>
-                                    </div>
-                                    <div class="small-note mt-1">Leave empty to calculate at midpoint</div>
-                                </div>
-                            </div>
-                            <div class="d-flex gap-2 mt-4">
-                                <button type="button" id="calculateBtn" class="btn btn-primary px-4">Calculate Radius</button>
-                                <button type="button" id="resetBtn" class="btn btn-outline-secondary">Reset</button>
-                            </div>
-                        </form>
-                        <hr>
-                        <!-- Results Section -->
-                        <div id="resultsContainer">
-                            <div class="text-center text-secondary py-4">
-                                <p class="mb-0">Enter parameters and click Calculate</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+ .card-header{background: #2d86f1; color: white; border-radius: 1rem 1rem 0 0 !important; padding: 1rem 1.25rem;}   
+ .form-label{font-weight: 500;}
+ </style>
+  <div class="row justify-content-center">
+   <div class="col-lg-8 col-md-10">
+    <div class="card shadow-sm rounded-4">
+     <div class="card-header">
+     <h1 class="h4 mb-0 fw-semibold">📡 Fresnel Zone Calculator</h1>
+     <p class="small mb-0 opacity-75">Calculate Fresnel radius for wireless link clearance</p>
+     </div>
+<div class="card-body p-4">
+ <!-- Input Form -->
+  <form id="fresnelForm">
+  <div class="row g-3">
+  <div class="col-md-6">
+  <label for="distance" class="form-label">Total Distance <span class="small-note">(d)</span></label>
+  <div class="input-group">
+  <input type="number" class="form-control" id="distance" value="5" step="any" required>
+   <select class="form-select" id="distanceUnit" style="max-width: 85px;">
+   <option value="m">m</option>
+   <option value="km">km</option>
+   <option value="mi">mi</option>
+  </select>
+ </div>
+ </div>
+   <div class="col-md-6">
+    <label for="frequency" class="form-label">Frequency <span class="small-note">(f)</span></label>
+    <div class="input-group">
+     <input type="number" class="form-control" id="frequency" value="5800" step="any" required>
+      <select class="form-select" id="freqUnit" style="max-width: 85px;">
+        <option value="MHz">MHz</option>
+        <option value="GHz">GHz</option>
+        <option value="kHz">kHz</option>
+       </select>
+      </div>
+  </div>
+    <div class="col-md-6">
+     <label for="zoneOrder" class="form-label">Fresnel Zone (n)</label>
+      <select class="form-select" id="zoneOrder">
+       <option value="1">1st Zone (critical)</option>
+       <option value="2">2nd Zone</option>
+       <option value="3">3rd Zone</option>
+       <option value="4">4th Zone</option>
+      </select>
     </div>
+   <div class="col-md-6">
+    <label for="obsDistance" class="form-label">Obstacle Distance from TX <span class="small-note">(d1, optional)</span></label>
+    <div class="input-group">
+    <input type="number" class="form-control" id="obsDistance" placeholder="Midpoint" step="any">
+    <select class="form-select" id="obsUnit" style="max-width: 85px;">
+      <option value="m">m</option>
+      <option value="km">km</option>
+      <option value="mi">mi</option>
+    </select>
+  </div>
+     <div class="small-note mt-1">Leave empty to calculate at midpoint</div>
+    </div>
+     </div>
+     <div class="d-flex gap-2 mt-4">
+       <button type="button" id="calculateBtn" class="btn btn-primary px-4">Calculate Radius</button>
+        <button type="button" id="resetBtn" class="btn btn-outline-secondary">Reset</button>
+        </div>
+     </form>
+ <hr>
+   <!-- Results Section -->
+     <div id="resultsContainer">
+      <div class="text-center text-secondary py-4">
+       <p class="mb-0">Enter parameters and click Calculate</p>
+      </div>
+     </div>
+    </div>
+    </div>
+    </div>
+   </div>
 
 <!-- Article Content -->
 <div class="article-container">
@@ -105,8 +94,7 @@ last_modified_at: 2026-03-27
    <!-- Article-->
 
 <h2> What is a Fresnel Zone?</h2>
-<p>The <strong>Fresnel Zone</strong> is an elliptical region between a transmitter and receiver that radio signals spread through during transmission. For reliable communication, at least <strong>60% of the first Fresnel zone must remain clear of obstacles</strong> to avoid signal loss and interference.</p>
-<p>The radius of the Fresnel zone depends on:</p>
+<p>A Fresnel Zone is the three-dimensional elliptical area surrounding the direct radio path between a transmitter and receiver. To maintain reliable wireless communication, at least 60% of the first Fresnel zone should remain clear of obstacles. The Fresnel radius depends on frequency, total path length, and obstacle location.</p>
 <ul>
 <li>Distance between antennas</li>
 <li>Frequency of the signal</li>
@@ -114,78 +102,43 @@ last_modified_at: 2026-03-27
 </ul>
 
 
-  <!-- Image -->
+<!-- Image -->
   <div class="text-center my-4">
-<img src="/assets/images/fresnel-zone-diagram.svg"
-     alt="Fresnel zone diagram showing RF line of sight, transmitter, receiver, and clearance"
-     loading="lazy"
-     width="800"
-     height="320">
+<img src="/assets/images/fresnel-zone-diagram.svg" alt="Fresnel zone diagram showing RF line of sight, transmitter, receiver, and clearance" loading="lazy" width="800" height="320">
   </div>
 
   <!-- Importance -->
-  <h2 class="fw-semibold mt-4">Why Fresnel Zone Matters in RF Communication</h2>
-  <p>
-    In wireless systems like <strong>4G LTE, 5G, microwave links, and WiFi bridges</strong>, having visual line-of-sight is not enough.
-    Obstacles inside the Fresnel zone cause signal diffraction and attenuation, leading to poor performance.
-  </p>
+<h2 class="fw-semibold mt-4">Why Fresnel Zone Matters in RF Communication</h2>
+ <p>In wireless systems like <strong>4G LTE, 5G, microwave links, and WiFi bridges</strong>, having visual line-of-sight is not enough. Obstacles inside the Fresnel zone cause signal diffraction and attenuation, leading to poor performance.</p>
 
   <ul class="list-group list-group-flush mb-4">
     <li class="list-group-item">✔ Signal diffraction due to obstacles</li>
     <li class="list-group-item">✔ Reduced signal strength</li>
     <li class="list-group-item">✔ Link instability or failure</li>
   </ul>
+ <!-- Formula -->
+ <h2 class="fw-semibold">Fresnel Zone Formula</h2>
+ <div class="bg-light p-3 rounded text-center mb-3"> $$ R = \sqrt{\frac{n \cdot \lambda \cdot d_1 \cdot d_2}{d}} $$</div>
+ <p>Where R is radius, λ is wavelength, d₁ and d₂ are distances, and d is total link distance.</p>
 
-  <!-- Formula -->
-  <h2 class="fw-semibold">Fresnel Zone Formula</h2>
-  <div class="bg-light p-3 rounded text-center mb-3">
-      $$ R = \sqrt{\frac{n \cdot \lambda \cdot d_1 \cdot d_2}{d}} $$
-  </div>
-
-  <p>
-    Where R is radius, λ is wavelength, d₁ and d₂ are distances, and d is total link distance.
-  </p>
-
-<div class="bg-light text-center fw-bold p-4">
-  $$ R = 17.31 \times \sqrt{\frac{n \cdot d_1 \cdot d_2}{f \cdot d}} $$
-</div>
-
-
+<div class="bg-light text-center fw-bold p-4"> $$ R = 17.31 \times \sqrt{\frac{n \cdot d_1 \cdot d_2}{f \cdot d}} $$</div>
 
 
 <section class=" my-5">
-
-  <!-- Title -->
-  <h2 class="fw-bold mb-3">Fresnel Zone Clearance Calculation</h2>
-
-  <!-- Intro -->
-  <p>
-    <strong>Fresnel zone:</strong> Let <strong>D</strong> be the distance between the transmitter and receiver.
-    The radius of the first Fresnel zone (n=1) at point P is denoted as <strong>r</strong>.
-    Point P is located at distances $d_1$ and $d_2$ from the transmitter and receiver respectively.
-  </p>
-
+<!-- Title -->
+<h2 class="fw-bold mb-3">Fresnel Zone Clearance Calculation</h2>
+ <!-- Intro -->
+ <p><strong>Fresnel zone:</strong> Let <strong>D</strong> be the distance between the transmitter and receiver. The radius of the first Fresnel zone (n=1) at point P is denoted as <strong>r</strong>. Point P is located at distances $d_1$ and $d_2$ from the transmitter and receiver respectively.  </p>
   <!-- Image Suggestion -->
   <div class="text-center my-4">
     <figure class="text-center my-4">
-  <img src="/assets/images/fresnel-zone-clearance-diagram.png"
-       width="800"
-       height="320"
-       loading="lazy"
-       class="img-fluid rounded shadow-sm"
-       alt="Fresnel zone calculator diagram showing RF line of sight, d1 d2 distances and clearance radius">
-  
-  <figcaption class="small text-muted mt-2">
-    Fresnel zone clearance diagram showing RF line-of-sight, obstacle distances (d1, d2), and radius calculation. ( Image source wikipedia)
-  </figcaption>
+  <img src="/assets/images/fresnel-zone-clearance-diagram.png" width="800"  height="320" loading="lazy" class="img-fluid rounded shadow-sm" alt="Fresnel zone calculator diagram showing RF line of sight, d1 d2 distances and clearance radius">
+  <figcaption class="small text-muted mt-2">Fresnel zone clearance diagram showing RF line-of-sight, obstacle distances (d1, d2), and radius calculation. ( Image source wikipedia)</figcaption>
 </figure>
   </div>
 
   <!-- Explanation -->
-  <p>
-    The concept of Fresnel zone clearance is used to analyze interference caused by obstacles near the path of a radio signal.
-    The first Fresnel zone must be mostly free of obstructions to ensure reliable communication.
-  </p>
+  <p>The concept of Fresnel zone clearance is used to analyze interference caused by obstacles near the path of a radio signal. The first Fresnel zone must be mostly free of obstructions to ensure reliable communication.</p>
 
   <div class="alert alert-warning">
     <strong>Rule of Thumb:</strong><br>
@@ -195,30 +148,18 @@ last_modified_at: 2026-03-27
 
   <!-- RF LOS -->
   <h3 class="fw-semibold mt-4">RF Line of Sight (LoS)</h3>
-  <p>
-    The RF line of sight is the straight path between transmitting and receiving antennas.
-    The Fresnel zone surrounds this path and represents the region where radio waves propagate.
-  </p>
+  <p>The RF line of sight is the straight path between transmitting and receiving antennas. The Fresnel zone surrounds this path and represents the region where radio waves propagate.</p>
 
-  <p>
-    The radius of the Fresnel zone is maximum at the midpoint and decreases toward the antennas.
-  </p>
+  <p>The radius of the Fresnel zone is maximum at the midpoint and decreases toward the antennas. </p>
 
   <!-- Formulation -->
   <h3 class="fw-semibold mt-4">Mathematical Formulation</h3>
-
-  <p>
-    Consider a point P located at distances $d_1$ and $d_2$ from the antennas.
-    The Fresnel zone is defined by the difference between reflected and direct path lengths:
+  <p>Consider a point P located at distances $d_1$ and $d_2$ from the antennas. The Fresnel zone is defined by the difference between reflected and direct path lengths:
   </p>
 
-  <div class="bg-light p-3 rounded text-center">
-    $$ AP + PB - D = n \frac{\lambda}{2} $$
-  </div>
+  <div class="bg-light p-3 rounded text-center">$$ AP + PB - D = n \frac{\lambda}{2} $$</div>
 
-  <p class="mt-3">
-    Where:
-  </p>
+  <p class="mt-3">Where:</p>
   <ul>
     <li>$D = d_1 + d_2$ (total distance)</li>
     <li>$\lambda$ = wavelength</li>
@@ -233,48 +174,21 @@ last_modified_at: 2026-03-27
   <!-- Approximation -->
   <h4 class="fw-semibold mt-4">Approximation</h4>
 
-  <p>
-    Assuming $d_1, d_2 \gg r_n$, using binomial approximation:
-  </p>
+  <p>Assuming $d_1, d_2 \gg r_n$, using binomial approximation:</p>
 
-  <div class="bg-light p-3 rounded text-center">
-    $$ \frac{r_n^2}{2} \left(\frac{1}{d_1} + \frac{1}{d_2}\right) \approx n \frac{\lambda}{2} $$
-  </div>
+  <div class="bg-light p-3 rounded text-center">$$ \frac{r_n^2}{2} \left(\frac{1}{d_1} + \frac{1}{d_2}\right) \approx n \frac{\lambda}{2} $$</div>
 
   <!-- Final Formula -->
   <h4 class="fw-semibold mt-4">Final Fresnel Radius Formula</h4>
 
-  <div class="alert alert-primary text-center fw-bold">
-    $$ r_n \approx \sqrt{ \frac{n \cdot d_1 \cdot d_2}{D} \lambda } $$
-  </div>
-
-  <p class="text-muted text-center">
-    Valid when $d_1, d_2 \gg n\lambda$
-  </p>
-
+  <div class="alert alert-primary text-center fw-bold">$$ r_n \approx \sqrt{ \frac{n \cdot d_1 \cdot d_2}{D} \lambda } $$</div>
+  <p class="text-muted text-center">Valid when $d_1, d_2 \gg n\lambda$</p>
   <!-- Satellite Case -->
   <h4 class="fw-semibold mt-4">Satellite-to-Earth Simplification</h4>
-
-  <div class="alert alert-info text-center fw-bold">
-    $$ r_n \approx \sqrt{ n \cdot d_1 \cdot \lambda } $$
-  </div>
-
-  <p class="text-muted text-center">
-    Where $d_2 \approx D$ and $d_1 \gg n\lambda$
-  </p>
+  <div class="alert alert-info text-center fw-bold"> $$ r_n \approx \sqrt{ n \cdot d_1 \cdot \lambda } $$ </div>
+  <p class="text-muted text-center">Where $d_2 \approx D$ and $d_1 \gg n\lambda$</p>
 
 </section>
-
-
-
-
-
-
-
-
-
-
-
 
 
   <!-- How to Use -->
@@ -378,7 +292,100 @@ last_modified_at: 2026-03-27
       </tbody>
     </table>
   </div>
+<!-- Fresnel Radius Reference Table -->
+<section class="my-5">
+ <h2>Fresnel Radius Reference Table</h2>
+ <p class="text-muted mb-3">The table below shows approximate first Fresnel zone radius values at the midpoint for common wireless link distances and frequencies.</p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover align-middle text-center">
+      <thead class="table-primary">
+        <tr>
+          <th>Distance</th>
+          <th>Frequency</th>
+          <th>Approx. Radius</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1 km</td>
+          <td>2.4 GHz</td>
+          <td>5.6 m</td>
+        </tr>
+        <tr>
+          <td>5 km</td>
+          <td>2.4 GHz</td>
+          <td>12.5 m</td>
+        </tr>
+        <tr>
+          <td>5 km</td>
+          <td>5 GHz</td>
+          <td>8.7 m</td>
+        </tr>
+        <tr>
+          <td>10 km</td>
+          <td>6 GHz</td>
+          <td>11.9 m</td>
+        </tr>
+        <tr>
+          <td>20 km</td>
+          <td>11 GHz</td>
+          <td>16.5 m</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="alert alert-info py-2 mt-3 mb-0"><strong>Note:</strong> Values are approximate for the <strong>1st Fresnel Zone</strong> calculated at the midpoint of the radio path.</div>
+</section>
 
+<!-- Comparison -->
+<section class="my-5">
+  <h2>How Frequency Affects Fresnel Zone Radius</h2>
+  <p>The Fresnel zone radius decreases as the operating frequency increases. Higher-frequency wireless systems require a smaller Fresnel clearance than lower-frequency systems over the same link distance.</p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover text-center align-middle">
+      <thead class="table-primary">
+        <tr>
+          <th>Frequency</th>
+          <th>Relative Fresnel Radius</th>
+          <th>Typical Applications</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>900 MHz</td>
+          <td>Largest</td>
+          <td>Cellular, IoT</td>
+        </tr>
+        <tr>
+          <td>2.4 GHz</td>
+          <td>Medium</td>
+          <td>WiFi, Bluetooth</td>
+        </tr>
+        <tr>
+          <td>5 GHz</td>
+          <td>Smaller</td>
+          <td>WiFi, Wireless Bridge</td>
+        </tr>
+        <tr>
+          <td>6 GHz</td>
+          <td>Smaller</td>
+          <td>WiFi 6E, Microwave</td>
+        </tr>
+        <tr>
+          <td>11 GHz</td>
+          <td>Small</td>
+          <td>Microwave Backhaul</td>
+        </tr>
+        <tr>
+          <td>18 GHz</td>
+          <td>Very Small</td>
+          <td>High-Capacity Microwave Links</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="alert alert-success py-2 mb-0"><strong>Key Takeaway:</strong> Increasing the frequency reduces the Fresnel zone radius, making it easier to maintain clearance. However, higher-frequency links are generally more sensitive to rain fade and atmospheric attenuation.</div>
+</section>
   
 
 <!-- FAQ Section -->
@@ -402,6 +409,13 @@ last_modified_at: 2026-03-27
      <p class="mb-0">Yes, higher frequencies produce smaller Fresnel zones.</p>
     </div>
    </div>
+     <div class="card mb-3 border-0 bg-light">
+   <div class="card-body ">
+    <div class="fw-bold text-primary"> 4. Is Fresnel important for WiFi?</div>
+     <p class="mb-0">Yes. The Fresnel Zone is very important for long-distance WiFi links, especially outdoor point-to-point and point-to-multipoint connections using 2.4 GHz, 5 GHz, or 6 GHz frequencies. Even if the antennas have a clear visual line of sight, obstacles inside the Fresnel Zone can weaken the signal and reduce throughput. Maintaining at least 60% Fresnel Zone clearance helps ensure maximum signal strength, higher data speeds, and a stable wireless connection.</p>
+    </div>
+   </div>
+
   </section>
 <!-- Did You Know? -->
      {% include rf.html %}
