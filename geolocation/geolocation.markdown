@@ -25,6 +25,7 @@ last_modified_at: 2026-06-06
 <div class="col-md-3 p-3"><a href="/map-radius"><div class="calculator-box text-center"><h5>Map Radius</h5></div></a></div>
 <div class="col-md-3 p-3"><a href="/map-area-calculator"><div class="calculator-box text-center"><h5>Map Area Calculator</h5></div></a></div>
 <div class="col-md-3 p-3"><a href="/coordinate-finder"><div class="calculator-box text-center"><h5>Coordinate Finder</h5></div></a></div>
+<div class="col-md-3 p-3"><a href="/bulk-latitude-longitude-distance-calculator"><div class="calculator-box text-center"><h5>Latitude Longitude Distance Calculator</h5></div></a></div>
  </div>
  <!-- geolocation-tool end-->
 
