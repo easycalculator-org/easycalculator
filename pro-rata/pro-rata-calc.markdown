@@ -338,7 +338,6 @@ last_modified_at: 2026-05-22
 
 <script src="{{ '/assets/js/pro-rata-calculator.js' | relative_url }}"></script>
 
-<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -381,19 +380,18 @@ last_modified_at: 2026-05-22
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Yes. Pro rata calculations are commonly used for subscriptions when a customer starts, upgrades, downgrades, or cancels a service before the end of the billing cycle. The subscription fee is adjusted according to the number of days the service was actually used."
-      }      
-      {
+      }
+    },
+    {
       "@type": "Question",
       "name": "What is the formula for pro rata?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Pro Rata Formula: Pro Rata Amount = (Actual Portion ÷ Full Portion) × Total Amount"
       }
-    },
     }
   ]
 }
-</script>
 
 <script type="application/ld+json">
 {
