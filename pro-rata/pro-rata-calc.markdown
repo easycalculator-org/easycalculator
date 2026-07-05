@@ -338,6 +338,7 @@ last_modified_at: 2026-05-22
 
 <script src="{{ '/assets/js/pro-rata-calculator.js' | relative_url }}"></script>
 
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -392,7 +393,7 @@ last_modified_at: 2026-05-22
     }
   ]
 }
-
+</script>
 <script type="application/ld+json">
 {
  "@context":"https://schema.org",
