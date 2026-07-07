@@ -70,6 +70,7 @@ indexnow:
 
 include:
   - ".htaccess"
+  - "ads.txt"
 
   # markdown: kramdown ( github not support this plugin)
 
