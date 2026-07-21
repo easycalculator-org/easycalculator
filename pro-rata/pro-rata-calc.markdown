@@ -2,18 +2,17 @@
 layout: default
 title: Pro Rata Calculator - Formula, Examples & Pro Rata Calculation
 permalink: /pro-rata-calculator
-description: "Use the Pro Rata Calculator to calculate proportional amounts for salary, rent, interest, or fees based on time, quantity, or share instantly."
+description: "Free Pro Rata Calculator for salary, rent, leave, holiday pay, insurance and subscriptions. Includes formula, examples, FAQs and instant calculations."
 image: "/assets/images/og/pro-rata-calculator.jpg"
-last_modified_at: 2026-05-22
+last_modified_at: 2026-07-21
 ---
 
 <div class="row justify-content-center">
- <div class="card shadow border-0 rounded-4 col-md-8 ">
-  <div class="card-body p-4 p-md-5">
-   <h1> Pro Rata Calculator</h1>
+<div class="card shadow border-0 rounded-4 col-md-8 ">
+ <div class="card-body p-4 p-md-5">
+ <h1> Pro Rata Calculator</h1>
 <!-- Calculation Type-->
 <div class="mb-4 d-flex align-items-center gap-2"> <span class="fw-medium text-secondary">Calculation Type:</span><span class="badge bg-primary bg-opacity-10 text-primary fs-6 px-3 py-2 fw-normal"> Salary / Wages </span></div>
-
 
 
 <div class="row mb-3 align-items-center">
@@ -24,66 +23,65 @@ last_modified_at: 2026-05-22
 </div>
 
 <div class="row mb-3 align-items-center">
-    <label class="col-md-4 col-form-label fw-medium text-dark">📅 Full Time Period:</label>
-    <div class="col-md-8">
-        <select id="periodType" class="form-select">
-            <option value="day">Day</option>
-            <option value="week">Week</option>
-            <option value="month">Month</option>
-            <option value="year" selected>Year</option>
-            <option value="custom" >Custom Days</option>
-        </select>
-    </div>
+ <label class="col-md-4 col-form-label fw-medium text-dark">📅 Full Time Period:</label>
+  <div class="col-md-8">
+   <select id="periodType" class="form-select">
+    <option value="day">Day</option>
+    <option value="week">Week</option>
+    <option value="month">Month</option>
+    <option value="year" selected>Year</option>
+    <option value="custom" >Custom Days</option>
+   </select>
+  </div>
 </div>
 
 <div id="customFullPeriodGroup" class="row mb-3 align-items-center">
-    <label class="col-md-4 col-form-label fw-medium text-dark"><i class="fa-solid fa-calendar-days"></i> Custom Period (days):</label>
-    <div class="col-md-8"><input type="number" id="customFullDays" class="form-control" value="500" step="1" min="1"></div>
+ <label class="col-md-4 col-form-label fw-medium text-dark"><i class="fa-solid fa-calendar-days"></i> Custom Period (days):</label>
+ <div class="col-md-8"><input type="number" id="customFullDays" class="form-control" value="500" step="1" min="1"></div>
 </div>
 
 <div class="row mb-3 align-items-center">
-  <label class="col-md-4 col-form-label fw-medium text-dark"><i class="fa-solid fa-calendar"></i> Actual Days Used/Worked:</label>
-  <div class="col-md-8"><input type="number" id="actualDays" class="form-control" value="25" step="1" min="0"></div>
+ <label class="col-md-4 col-form-label fw-medium text-dark"><i class="fa-solid fa-calendar"></i> Actual Days Used/Worked:</label>
+ <div class="col-md-8"><input type="number" id="actualDays" class="form-control" value="25" step="1" min="0"></div>
 </div>
 <!-- calculate & reset -->
- <div class="d-flex gap-3 mt-4">
-   <button id="calculateBtn" class="btn btn-primary flex-fill fw-semibold py-2"><i class="fa-solid fa-calculator"></i> Calculate </button>
-   <button id="resetBtn" class="btn btn-outline-secondary flex-fill fw-semibold py-2"><i class="fa-solid fa-arrow-rotate-left"></i> Reset</button>
-  </div>
+<div class="d-flex gap-3 mt-4">
+ <button id="calculateBtn" class="btn btn-primary flex-fill fw-semibold py-2"><i class="fa-solid fa-calculator"></i> Calculate </button>
+ <button id="resetBtn" class="btn btn-outline-secondary flex-fill fw-semibold py-2"><i class="fa-solid fa-arrow-rotate-left"></i> Reset</button>
+</div>
 
 <!-- results area  -->
- <div class="mt-5 p-4 bg-light bg-opacity-50 rounded-4 border">
-          <div class="row g-3">
-            <div class="col-sm-6">
-              <div class="d-flex justify-content-between border-bottom pb-1">
-                <span class="text-secondary">Pro Rata Amount:</span>
-                <span class="fw-bold font-monospace" id="proRataAmount">$50.00</span>
-              </div>
-              <div class="d-flex justify-content-between border-bottom pb-1 mt-2">
-                <span class="text-secondary">Daily Rate:</span>
-                <span class="fw-bold font-monospace" id="dailyRate">$2.00</span>
-              </div>
-              <div class="d-flex justify-content-between border-bottom pb-1 mt-2">
-                <span class="text-secondary">Percentage Used:</span>
-                <span class="fw-bold font-monospace" id="percentageUsed">5.00%</span>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="d-flex justify-content-between border-bottom pb-1">
-                <span class="text-secondary">Remaining Amount:</span>
-                <span class="fw-bold font-monospace" id="remainingAmount">$950.00</span>
-              </div>
-              <div class="d-flex justify-content-between border-bottom pb-1 mt-2">
-                <span class="text-secondary">Days Remaining:</span>
-                <span class="fw-bold font-monospace" id="daysRemaining">475 days</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="mt-5 p-4 bg-light bg-opacity-50 rounded-4 border">
+ <div class="row g-3">
+  <div class="col-sm-6">
+   <div class="d-flex justify-content-between border-bottom pb-1">
+   <span class="text-secondary">Pro Rata Amount:</span>
+   <span class="fw-bold font-monospace" id="proRataAmount">$50.00</span>
   </div>
-
+   <div class="d-flex justify-content-between border-bottom pb-1 mt-2">
+    <span class="text-secondary">Daily Rate:</span>
+    <span class="fw-bold font-monospace" id="dailyRate">$2.00</span>
+   </div>
+    <div class="d-flex justify-content-between border-bottom pb-1 mt-2">
+     <span class="text-secondary">Percentage Used:</span>
+     <span class="fw-bold font-monospace" id="percentageUsed">5.00%</span>
+    </div>
+   </div>
+ <div class="col-sm-6">
+  <div class="d-flex justify-content-between border-bottom pb-1">
+   <span class="text-secondary">Remaining Amount:</span>
+   <span class="fw-bold font-monospace" id="remainingAmount">$950.00</span>
+  </div>
+  <div class="d-flex justify-content-between border-bottom pb-1 mt-2">
+   <span class="text-secondary">Days Remaining:</span>
+   <span class="fw-bold font-monospace" id="daysRemaining">475 days</span>
+  </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
 <!-- Article Content -->
 <div class="article-container">
   <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
@@ -109,9 +107,6 @@ last_modified_at: 2026-05-22
 <p>The term pro rata comes from Latin and means <em>"in proportion".</em> It is used when an amount must be allocated fairly based on time, quantity, ownership, or usage.</p>
 <p>Common examples include pro rata salary, pro rata rent, pro rata subscription fees, insurance premiums, and dividend payments.</p>
 </div>
-
-
-
 
 
 <div class="p-4 mb-4 shadow-sm rounded-4">
@@ -213,14 +208,8 @@ last_modified_at: 2026-05-22
     </div>
     <!-- Right Image -->
     <div class="col-md-6"> 
-  <img src="/assets/images/og/pro-rata-calculator.jpg"
-     alt="Pro Rata Calculator showing salary, rent, subscription and dividend calculations"
-     title="Pro Rata Calculator"
-     class="img-fluid rounded shadow-sm"
-     width="1200"
-     height="630"
-     loading="lazy"
-     decoding="async">
+  <img src="/assets/images/og/pro-rata-calculator.jpg" alt="Pro Rata Calculator showing salary, rent, subscription and dividend calculations"
+     title="Pro Rata Calculator" class="img-fluid rounded shadow-sm" width="1200" height="630" loading="lazy" decoding="async">
 </div>
 </div>
 
@@ -332,6 +321,22 @@ last_modified_at: 2026-05-22
      <p class="mb-0"><strong>Pro Rata Formula:</strong><br>Pro Rata Amount = (Actual Portion ÷ Full Portion) × Total Amount</p> 
    </div> 
   </div> 
+   <div class="card mb-3 border-0 bg-light">
+  <div class="card-body">
+    <div class="fw-bold text-primary">7. What is pro rata holiday pay?</div>
+    <p class="mb-2">Pro rata holiday pay is the amount an employee receives for annual leave based on the hours or days they actually work. It ensures that part-time, temporary, or new employees receive holiday pay proportional to their working schedule rather than the full-time entitlement.</p>
+    <p class="mb-2"><strong>Example:</strong></p>
+    <ul>
+      <li>Full-time monthly salary: <strong>$2,500</strong></li>
+      <li>Full-time work schedule: <strong>5 days per week</strong></li>
+      <li>Part-time work schedule: <strong>3 days per week</strong></li>
+    </ul>
+    <p class="mb-2"><strong>Calculation:</strong></p>
+    <div class="alert alert-light border rounded-3">Holiday Pay = $2,500 × (3 ÷ 5)<br> Holiday Pay = <strong>$1,500</strong>
+    </div>
+    <p class="mb-0">Therefore, the part-time employee is entitled to <strong>$1,500</strong> in pro rata holiday pay. </p>
+  </div>
+</div>
  </section>
 
 
