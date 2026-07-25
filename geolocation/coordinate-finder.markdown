@@ -175,47 +175,33 @@ last_modified_at: 2026-05-28
 
 <!-- Advanced Features -->
 <div class="bg-light p-4 rounded mt-4">
-    <h4 class="text-primary">
-        <i class="fas fa-star me-2"></i>Advanced Features
-    </h4>
-
+  <h4 class="text-primary"> <i class="fas fa-star me-2"></i>Advanced Features</h4>
     <ul class="list-group list-group-flush">
-
-        <li class="list-group-item bg-light">
-            <i class="fas fa-map-marker-alt text-danger me-2"></i>
-            <strong>Real-Time Coordinate Detection:</strong> Click any location on the map to instantly obtain accurate GPS coordinates.
-        </li>
-
+      <li class="list-group-item bg-light"><i class="fas fa-map-marker-alt text-danger me-2"></i><strong>Real-Time Coordinate Detection:</strong> Click any location on the map to instantly obtain accurate GPS coordinates.</li>
         <li class="list-group-item bg-light">
             <i class="fas fa-sync-alt text-success me-2"></i>
             <strong>Decimal & DMS Format Toggle:</strong> Easily switch between <strong>Decimal Degrees (DD)</strong> and <strong>Degrees, Minutes, Seconds (DMS)</strong> formats. This flexibility makes the tool suitable for both casual users and professionals.
         </li>
-
         <li class="list-group-item bg-light">
             <i class="fas fa-mobile-alt text-primary me-2"></i>
             <strong>Current Location Finder:</strong> Use the <strong>My Current Location</strong> button to detect and display your live GPS position on the map.
         </li>
-
         <li class="list-group-item bg-light">
             <i class="fas fa-satellite text-info me-2"></i>
             <strong>Street & Satellite Maps:</strong> View locations using both <strong>Street Map</strong> and <strong>Satellite Imagery</strong>. Switch between map types for better geographic context.
         </li>
-
         <li class="list-group-item bg-light">
             <i class="fas fa-download text-warning me-2"></i>
             <strong>Download Map Feature:</strong> Save the current map view as an image for project reports, educational purposes, field surveys, and location sharing.
         </li>
-
         <li class="list-group-item bg-light">
             <i class="fas fa-search text-secondary me-2"></i>
             <strong>Search Any Location:</strong> Quickly search cities, landmarks, addresses, and points of interest worldwide.
         </li>
-
         <li class="list-group-item bg-light">
             <i class="fas fa-globe-americas text-success me-2"></i>
             <strong>Global Coverage:</strong> Find coordinates anywhere on Earth with high accuracy and reliability.
         </li>
-
     </ul>
 </div>
 
@@ -268,8 +254,90 @@ last_modified_at: 2026-05-28
             </div>
         </div>
     </div>
+
 </div>
+
+
+<!-- FAQ Section -->
+<section class="p-4">
+  <h2 class="mb-4">Frequently Asked Questions (FAQ)</h2>
+
+  <div class="card mb-3 border-0 bg-light">
+    <div class="card-body">
+      <div class="fw-bold text-primary">What is a Coordinate Finder?</div>
+      <p class="mb-0">A Coordinate Finder is an online mapping tool that helps you find the exact latitude and longitude of any location on Earth. Simply click on the interactive map to view GPS coordinates in both Decimal Degrees (DD) and Degrees, Minutes, and Seconds (DMS) formats.</p>
+    </div>
+  </div>
+
+  <div class="card mb-3 border-0 bg-light">
+    <div class="card-body">
+      <div class="fw-bold text-primary">How do I find latitude and longitude?</div>
+      <p class="mb-0">Open the Coordinate Finder, click on any location on the map, and the tool will instantly display the latitude and longitude. You can also use the "My Current Location" button to find your present GPS coordinates.</p>
+    </div>
+  </div>
+
+  <div class="card mb-3 border-0 bg-light">
+    <div class="card-body">
+      <div class="fw-bold text-primary">Can I find GPS coordinates on a map?</div>
+      <p class="mb-0">Yes. Simply click anywhere on the interactive map to view accurate GPS coordinates. The tool displays the location in both Decimal Degrees (DD) and DMS formats.</p>
+    </div>
+  </div>
+
+  <div class="card mb-3 border-0 bg-light">
+    <div class="card-body">
+      <div class="fw-bold text-primary">What is the difference between DD and DMS?</div>
+      <p class="mb-0">Decimal Degrees (DD) use decimal numbers, such as <strong>28.6139, 77.2090</strong>, while Degrees, Minutes, and Seconds (DMS) use degrees (°), minutes ('), and seconds ("), such as <strong>28°36'50.0"N, 77°12'32.4"E</strong>. Both formats represent the same location.</p>
+    </div>
+  </div>
+
+  <div class="card mb-3 border-0 bg-light">
+    <div class="card-body">
+      <div class="fw-bold text-primary">How accurate are GPS coordinates?</div>
+      <p class="mb-0">GPS accuracy depends on your device and satellite signal quality. Most modern smartphones provide an accuracy of approximately 3 to 10 metres under good outdoor conditions.</p>
+    </div>
+  </div>
+
+  <div class="card mb-3 border-0 bg-light">
+    <div class="card-body">
+      <div class="fw-bold text-primary">Can I copy coordinates?</div>
+      <p class="mb-0">Yes. You can copy the displayed coordinates with a single click using the Copy Decimal or Copy DMS buttons and paste them into GPS devices, Google Maps, reports, or navigation apps.</p>
+    </div>
+  </div>
+
+  <div class="card mb-3 border-0 bg-light">
+    <div class="card-body">
+      <div class="fw-bold text-primary">How do I find my current coordinates?</div>
+      <p class="mb-0">Click the <strong>My Current Location</strong> button and allow your browser to access your location. The tool will automatically detect and display your current latitude and longitude.</p>
+    </div>
+  </div>
+
+  <div class="card mb-3 border-0 bg-light">
+    <div class="card-body">
+      <div class="fw-bold text-primary">Can I download the map?</div>
+      <p class="mb-0">Yes. After selecting a location, click the <strong>Download Map</strong> button to save the current map view as an image. This feature is useful for reports, presentations, and location sharing.</p>
+    </div>
+  </div>
+
+  <div class="card mb-3 border-0 bg-light">
+    <div class="card-body">
+      <div class="fw-bold text-primary">What is WGS84?</div>
+      <p class="mb-0">WGS84 (World Geodetic System 1984) is the global standard coordinate reference system used by GPS, Google Maps, and most modern mapping applications to represent locations accurately.</p>
+    </div>
+  </div>
+  <div class="card mb-3 border-0 bg-light">
+    <div class="card-body">
+      <div class="fw-bold text-primary">Can coordinates be used in Google Maps?</div>
+      <p class="mb-0">
+        Yes. Simply enter the latitude and longitude into the Google Maps search box to locate a place instantly. Google Maps accepts both Decimal Degrees (DD) and Degrees, Minutes, and Seconds (DMS) coordinate formats.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- geolocation internal link -->
+{% include geolocation.html %}
+
 </div>
+
 
 <script src="{{ '/assets/js/geolocation/coordinate-finder.js' | relative_url }}"></script>
 
