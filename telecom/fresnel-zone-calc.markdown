@@ -3,13 +3,22 @@ layout: default
 title:  Fresnel Zone Calculator – Calculate RF Line of Sight, Radius & Clearance
 permalink: /fresnel-zone-calculator
 description: "Use our Fresnel Zone Calculator to find RF line-of-sight clearance, radius, and obstruction impact. Ideal for microwave, 4G, 5G & wireless link planning."
-image: "/assets/images/fresnel-zone-calculator.svg"
+image: "/assets/images/fresnel-zone-clearance-diagram.png"
 last_modified_at: 2026-06-26
 ---
  <style>
  .card-header{background: #2d86f1; color: white; border-radius: 1rem 1rem 0 0 !important; padding: 1rem 1.25rem;}   
  .form-label{font-weight: 500;}
  </style>
+<div aria-label="breadcrumb" class="p-3">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/rf-calculator">RF Calculator</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Fresnel Zone Calculator</li>
+  </ol>
+</div>
+
+
   <div class="row justify-content-center">
    <div class="col-lg-8 col-md-10">
     <div class="card shadow-sm rounded-4">
@@ -399,28 +408,55 @@ last_modified_at: 2026-06-26
    </div>
  <div class="card mb-3 border-0 bg-light">
   <div class="card-body ">
-   <div class="fw-bold text-primary"> 2. Why is 60% clearance required?</div>
+   <div class="fw-bold text-primary">2. Why is 60% clearance required?</div>
     <p class="mb-0">It minimizes diffraction and ensures strong signal performance.</p>
    </div>
   </div>
   <div class="card mb-3 border-0 bg-light">
    <div class="card-body ">
-    <div class="fw-bold text-primary"> 3. Does frequency affect Fresnel zone? </div>
+    <div class="fw-bold text-primary">3. Does frequency affect Fresnel zone? </div>
      <p class="mb-0">Yes, higher frequencies produce smaller Fresnel zones.</p>
     </div>
    </div>
      <div class="card mb-3 border-0 bg-light">
    <div class="card-body ">
-    <div class="fw-bold text-primary"> 4. Is Fresnel important for WiFi?</div>
+    <div class="fw-bold text-primary">4. Is Fresnel important for WiFi?</div>
      <p class="mb-0">Yes. The Fresnel Zone is very important for long-distance WiFi links, especially outdoor point-to-point and point-to-multipoint connections using 2.4 GHz, 5 GHz, or 6 GHz frequencies. Even if the antennas have a clear visual line of sight, obstacles inside the Fresnel Zone can weaken the signal and reduce throughput. Maintaining at least 60% Fresnel Zone clearance helps ensure maximum signal strength, higher data speeds, and a stable wireless connection.</p>
     </div>
    </div>
+<div class="card mb-3 border-0 bg-light">
+  <div class="card-body">
+    <div class="fw-bold text-primary">5. Does 5 GHz require less Fresnel clearance?</div>
+    <p class="mb-0">
+      Yes. A 5 GHz signal has a smaller Fresnel Zone radius than lower frequencies such as 2.4 GHz over the same distance. While the required clearance area is smaller, you should still maintain at least <strong>60% of the first Fresnel Zone</strong> free of obstacles for reliable communication.
+    </p>
+  </div>
+</div>
 
+<div class="card mb-3 border-0 bg-light">
+  <div class="card-body">
+    <div class="fw-bold text-primary">6. Does antenna height affect Fresnel clearance?</div>
+    <p class="mb-0">Yes. Increasing antenna height can improve Fresnel Zone clearance by raising the radio path above trees, buildings, and terrain. Proper antenna height is essential for maintaining the recommended 60% clearance and reducing signal loss caused by diffraction.</p>
+  </div>
+</div>
+
+<div class="card mb-3 border-0 bg-light">
+  <div class="card-body">
+    <div class="fw-bold text-primary">7. How much tree obstruction is acceptable?</div>
+    <p class="mb-0">Trees should ideally not obstruct the first Fresnel Zone. As a general guideline, keep at least <strong>60% of the Fresnel Zone clear</strong>. Dense vegetation inside the Fresnel Zone can absorb and scatter radio waves, reducing signal strength and link reliability, especially at higher frequencies such as 5 GHz and 6 GHz.</p>
+  </div>
+</div>
+
+<div class="card mb-3 border-0 bg-light">
+  <div class="card-body">
+    <div class="fw-bold text-primary">8. What happens if the Fresnel Zone is blocked?</div>
+    <p class="mb-0">When the Fresnel Zone is partially or completely blocked by obstacles such as trees, buildings, or hills, radio waves experience diffraction and attenuation. This can result in lower signal strength, reduced data throughput, higher packet loss, unstable connections, and, in severe cases, complete link failure.</p>
+  </div>
+</div>
   </section>
 <!-- Did You Know? -->
-     {% include rf.html %}
-
-   <script src="{{ '/assets/js/rf/fresnel-zone-calc.js' | relative_url }}"></script>
+{% include rf.html %}
+<script src="{{ '/assets/js/rf/fresnel-zone-calc.js' | relative_url }}"></script>
 
 <!-- MathJax for LaTeX rendering -->
 <script>
@@ -429,3 +465,124 @@ window.MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Fresnel Zone Calculator",
+  "url":"https://easycalculator.org/fresnel-zone-calculator",
+  "applicationCategory":"CalculatorApplication",
+  "applicationSubCategory":"RF Engineering Calculator",
+  "operatingSystem":"Any",
+  "browserRequirements":"Requires JavaScript",
+  "description":"Calculate Fresnel Zone radius, clearance and RF line-of-sight for microwave, WiFi, LTE and 5G wireless links.",
+  "image":"https://easycalculator.org/assets/images/fresnel-zone-calculator.svg",
+  "offers":{
+      "@type":"Offer",
+      "price":"0",
+      "priceCurrency":"USD"
+  },
+  "creator":{
+      "@id":"https://easycalculator.org/#person"
+  },
+  "publisher":{
+      "@id":"https://easycalculator.org/#organization"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"Article",
+ "headline":"Fresnel Zone Calculator – Calculate RF Line of Sight, Radius & Clearance",
+ "description":"Learn how to calculate Fresnel Zone radius, clearance and RF line-of-sight with formulas, examples and calculator.",
+ "image":"https://easycalculator.org/assets/images/fresnel-zone-calculator.svg",
+ "datePublished":"2026-06-26",
+ "dateModified":"2026-07-25",
+ "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://easycalculator.org/fresnel-zone-calculator"
+ },
+ "author":{
+    "@id":"https://easycalculator.org/#person"
+ },
+ "publisher":{
+    "@id":"https://easycalculator.org/#organization"
+ }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the 1st Fresnel Zone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The first Fresnel Zone is the most critical region where radio signals travel. It should remain mostly free of obstacles to minimise diffraction and signal loss. Maintaining at least 60% clearance helps ensure reliable wireless communication."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is 60% Fresnel Zone clearance required?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Maintaining at least 60% clearance of the first Fresnel Zone minimises diffraction losses and helps maintain strong signal strength, higher throughput, and reliable wireless communication."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does frequency affect the Fresnel Zone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Higher frequencies produce smaller Fresnel Zone radii, while lower frequencies require larger clearance for the same transmission distance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Fresnel Zone important for WiFi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Fresnel Zone is essential for long-distance WiFi links, especially outdoor point-to-point and point-to-multipoint connections operating at 2.4 GHz, 5 GHz, and 6 GHz. Even with clear visual line of sight, obstacles inside the Fresnel Zone can reduce signal strength and throughput. Keeping at least 60% of the first Fresnel Zone clear provides the best performance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does 5 GHz require less Fresnel clearance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A 5 GHz signal has a smaller Fresnel Zone radius than a 2.4 GHz signal over the same distance. Although the clearance area is smaller, maintaining at least 60% of the first Fresnel Zone free of obstacles is still recommended."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does antenna height affect Fresnel clearance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Increasing antenna height improves Fresnel Zone clearance by raising the radio path above trees, buildings, and terrain. Proper antenna height helps reduce diffraction losses and improve link reliability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much tree obstruction is acceptable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trees should ideally not obstruct the first Fresnel Zone. As a general guideline, maintain at least 60% Fresnel Zone clearance. Dense vegetation can absorb and scatter radio waves, reducing signal strength and link quality."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if the Fresnel Zone is blocked?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When the Fresnel Zone is blocked by trees, buildings, hills, or other obstacles, radio waves experience diffraction and attenuation. This can reduce signal strength, lower data throughput, increase packet loss, create unstable connections, and in severe cases cause complete link failure."
+      }
+    }
+  ]
+}
+</script>
