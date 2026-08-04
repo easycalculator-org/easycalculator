@@ -1,82 +1,95 @@
 ---
 layout: default
-title: Military Grid Reference System (MGRS) Converter | Convert MGRS Easily
+title: MGRS Converter (Military Grid Reference System) – Convert MGRS to Lat Long
 permalink: /military-grid-reference-system-converter
 description: "Easily convert Military Grid Reference System (MGRS) coordinates to latitude and longitude or vice versa with our powerful and easy online MGRS converter tool."
+image: "/assets/images/og/mgrs-converter.jpg"
 last_modified_at: 2026-02-24
 ---
 <style>
-:root{--primary-color:#4361ee;--secondary-color:#3f37c9;--accent-color:#4cc9f0;--light-bg:#f8f9fa;--dark-bg:#212529}
-.coordinate-display{font-family:'Courier New',monospace;font-size:1.8rem;letter-spacing:.1em;background-color:var(--dark-bg);color:#fff;padding:1.5rem;border-radius:8px;text-align:center;margin:2rem 0;box-shadow:0 4px 6px rgba(0,0,0,.1)}
-.component-card,.earth-grid-section{box-shadow:0 4px 12px rgba(0,0,0,.08)}
-.component-card{border:none;border-radius:10px;overflow:hidden;transition:transform .3s;margin-bottom:1.5rem;height:100%}
-.component-card:hover{transform:translateY(-5px)}
-.component-header{background-color:var(--primary-color);color:#fff;padding:1rem}
-.component-body{padding:1.5rem}.highlight1{color:var(--primary-color);font-weight:600}
-.precision-badge{background-color:var(--accent-color);color:var(--dark-bg);font-weight:500;margin-right:.5rem}
-.earth-grid-section{background-color:#fff;border-radius:10px;padding:2rem;margin-top:2rem}
-.grid-diagram{max-width:100%;height:auto;margin:1rem 0;border-radius:8px}
+:root{--primary-color:#4361ee;--secondary-color:#3f37c9;--accent-color:#4cc9f0;--light-bg:#f8f9fa;--dark-bg:#212529}.coordinate-display{font-family:'Courier New',monospace;font-size:1.8rem;letter-spacing:.1em;background-color:var(--dark-bg);color:#fff;padding:1.5rem;border-radius:8px;text-align:center;margin:2rem 0;box-shadow:0 4px 6px #0000001a}.component-card,.earth-grid-section{box-shadow:0 4px 12px #00000014}.component-card{border:none;border-radius:10px;overflow:hidden;transition:transform .3s;margin-bottom:1.5rem;height:100%}.component-card:hover{transform:translateY(-5px)}.component-header{background-color:var(--primary-color);color:#fff;padding:1rem}.component-body{padding:1.5rem}.highlight1{color:var(--primary-color);font-weight:600}.precision-badge{background-color:var(--accent-color);color:var(--dark-bg);font-weight:500;margin-right:.5rem}.earth-grid-section{background-color:#fff;border-radius:10px;padding:2rem;margin-top:2rem}.grid-diagram{max-width:100%;height:auto;margin:1rem 0;border-radius:8px}.converter-card{border:0;border-radius:20px;overflow:hidden;box-shadow:0 12px 35px #00000014;transition:.3s;background:#fff}.converter-card:hover{transform:translateY(-6px);box-shadow:0 18px 45px #00000026}.converter-header{padding:18px 22px;color:#fff;font-size:1.2rem;font-weight:700}.header-blue{background:linear-gradient(135deg,#2563eb,#3b82f6)}.header-green{background:linear-gradient(135deg,#059669,#10b981)}.input-group-text{background:#f8fafc;border-right:0}.form-control{border-left:0;height:56px;font-size:16px}.form-control:focus{box-shadow:none;border-color:#0d6efd}.example-badge{display:inline-block;background:#eef4ff;color:#2563eb;padding:6px 12px;border-radius:50px;font-size:.85rem;margin-top:8px}.convert-btn{height:58px;border-radius:14px;font-weight:700;font-size:17px}.converter-section{background:#f8fafc;padding:35px;border-radius:24px}
 </style>
- <div class="container my-3">
+<div class="container my-3">
+<div aria-label="breadcrumb" class="p-3">
+ <ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Military Grid Reference System Converter</li>
+ </ol>
+</div>
+
+
 <!-- Page Header -->
 <div class="text-center mb-5">
- <h1 class="fw-bold">MGRS Coordinate Converter</h1>
-  <p class="text-muted mb-0"> Convert between <strong>MGRS</strong> and <strong>Latitude/Longitude</strong> quickly and accurately.</p>
-  </div>
+<h1 class="fw-bold">MGRS Coordinate Converter</h1>
+<p class="text-muted mb-0"> Convert between <strong>MGRS</strong> and <strong>Latitude/Longitude</strong> quickly and accurately.</p>
+</div>
 
+<div class="converter-section">
 <div class="row g-4">
-  <!-- MGRS to Lat/Long Card -->
-      <div class="col-12 col-lg-6">
-        <div class="card border-0 shadow-lg h-100 rounded-4">
-          <div class="card-body p-4">
-            <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-crosshairs"></i> MGRS → Latitude & Longitude </h5>
-            <div class="mb-3">
-              <label for="mgrsInput" class="form-label fw-semibold">Enter MGRS Coordinate</label>
-              <input type="text" class="form-control form-control-lg" id="mgrsInput" placeholder="e.g. 45RTJ5188250831">
-            </div><br>
-            <button class="btn btn-primary w-100 btn-lg rounded-3 shadow-sm pt-4" onclick="convertMGRS()">Convert to Lat/Long </button>
-          </div>
-        </div>
-      </div>
+<!-- MGRS -->
+<div class="col-lg-6">
+<div class="converter-card h-100">
+<div class="converter-header header-blue"><i class="fa-solid fa-crosshairs me-2"></i>MGRS → Latitude & Longitude</div>
 
- <!-- Lat/Long to MGRS Card -->
-<div class="col-12 col-lg-6">
-        <div class="card border-0 shadow-lg h-100 rounded-4">
-          <div class="card-body p-4">
-            <h5 class="fw-bold mb-3 text-success">🌍 Latitude & Longitude → MGRS </h5>
-            <div class="mb-3">
-              <label for="latInput" class="form-label fw-semibold">Enter Latitude</label>
-              <input type="number" step="any" class="form-control form-control-lg"  id="latInput" placeholder="e.g.  50.5123">
-            </div>
-+              <label for="lonInput" class="form-label fw-semibold">Enter Longitude</label>
-              <input type="number"   step="any" class="form-control form-control-lg"  id="lonInput" placeholder="e.g. 21.61104">
-            </div>
-            <button class="btn btn-success w-100 btn-lg rounded-3 shadow-sm" onclick="convertLatLonToMGRS()"> Convert to MGRS  </button>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="card-body p-4">
+<label class="form-label fw-semibold">Military Grid Coordinate</label>
+<div class="input-group mb-2">
+<span class="input-group-text"><i class="fa-solid fa-location-crosshairs text-primary"></i></span>
+<input id="mgrsInput" type="text" class="form-control" placeholder="45RTJ5188250831">
+</div>
+
+<div class="example-badge">Example:<b>33TWN8567932516</b></div>
+
+<button class="btn btn-primary w-100 mt-4 convert-btn" onclick="convertMGRS()"><i class="fa-solid fa-right-left me-2"></i>Convert to Latitude & Longitude</button>
+</div>
+</div>
+</div>
+<!-- Lat Lon -->
+<div class="col-lg-6">
+<div class="converter-card h-100">
+<div class="converter-header header-green"><i class="fa-solid fa-earth-americas me-2"></i>Latitude & Longitude → MGRS</div>
+<div class="card-body p-4">
+<label class="form-label fw-semibold">Latitude</label>
+<div class="input-group mb-3">
+<span class="input-group-text"><i class="fa-solid fa-location-dot text-success"></i></span>
+<input id="latInput" type="number" step="any" class="form-control" placeholder="50.5123">
+</div>
+<label class="form-label fw-semibold">Longitude</label>
+
+<div class="input-group mb-2">
+<span class="input-group-text"><i class="fa-solid fa-globe text-success"></i></span>
+
+<input id="lonInput" type="number" step="any" class="form-control" placeholder="21.61104">
+
+</div>
+<div class="example-badge">Example: <b>50.5123, 21.61104</b></div>
+<button class="btn btn-success w-100 mt-4 convert-btn" onclick="convertLatLonToMGRS()"><i class="fa-solid fa-right-left me-2"></i>Convert to MGRS</button>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
+<div id="result" class="alert alert-info mt-4" style="display: none;">
+  <h5 class="mb-3">Converted Coordinates:</h5>
+  <p><strong>Latitude:</strong> <span id="latitude"></span></p>
+  <p><strong>Longitude:</strong> <span id="longitude"></span></p>
+  <p><strong>MGRS:</strong> <span id="mgrs"></span></p>
+ </div>
 
- <div id="result" class="alert alert-info mt-4" style="display: none;">
-      <h5 class="mb-3">Converted Coordinates:</h5>
-      <p><strong>Latitude:</strong> <span id="latitude"></span></p>
-      <p><strong>Longitude:</strong> <span id="longitude"></span></p>
-      <p><strong>MGRS:</strong> <span id="mgrs"></span></p>
-    </div>
-
- <div id="map" class="mt-4 rounded shadow-sm" style="height: 520px;"></div>
+<div id="map" class="mt-4 rounded shadow-sm" style="height: 520px;"></div>
 
 <!-- Article Part -->
 <div class="article-container">
-   <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
-    <div class="d-flex align-items-center gap-3 flex-wrap">
-      {% include naren_create.html %}
-      {% include reema_verify.html %}
-    </div>
-    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+ <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+  <div class="d-flex align-items-center gap-3 flex-wrap">
+   {% include naren_create.html %}
+   {% include reema_verify.html %}
   </div>
+  <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+ </div>
 <!-- Section -->
 <section>
  <h2>What is MGRS?</h2>
@@ -104,80 +117,78 @@ last_modified_at: 2026-02-24
 
  <div class="bg-light p-3 rounded-2 mb-3 "><p class="mb-1"><strong>Example MGRS Coordinate:</strong></p><code class="d-block p-2 bg-white rounded">33TWN8567932516</code><p class="mt-2 mb-0">This represents a very precise location on Earth, accurate to within 1 meter.</p></div>
 
-  <div class="row justify-content-center">
-    <div class="col-lg-10">
-        <!-- Main Coordinate Display -->
-         <h2>MGRS Coordinate Structure</h2>
-           <div class="coordinate-display">
-              <div class="d-inline-block text-primary">4Q</div>
-               <div class="d-inline-block text-warning">FJ</div>
-               <div class="d-inline-block text-info">12345678</div>
-              </div>
+ <div class="row justify-content-center">
+  <div class="col-lg-10">
+  <!-- Main Coordinate Display -->
+  <h2>MGRS Coordinate Structure</h2>
+  <div class="coordinate-display">
+   <div class="d-inline-block text-primary">4Q</div>
+   <div class="d-inline-block text-warning">FJ</div>
+   <div class="d-inline-block text-info">12345678</div>
+  </div>
                 
  <!-- Key Components -->
  <div class="row g-4">
-   <!-- Grid Zone Designator -->
-       <div class="col-md-4">
-                        <div class="component-card h-100">
-                            <div class="component-header">
-                                <h3 class="h5 mb-0">Grid Zone Designator</h3>
-                                <div class="text-white-50  ">4Q</div>
-                            </div>
-                            <div class="component-body">
-                                <ul class="list-unstyled">
-                                    <li class="mb-2">• <span class="highlight1">Longitudinal zone</span> (1-60)</li>
-                                    <li class="mb-2">• <span class="highlight1">Latitudinal band</span> (C-X)</li>
-                                    <li class="mb-2">• 60 zones × 20 bands</li>
-                                    <li>• Excludes letters I and O</li>
-                                </ul>
-                                <div class="alert alert-light mt-3 mb-0">
-                                    <small>Each zone is 6° wide, each band is 8° high</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  <!-- Grid Zone Designator -->
+   <div class="col-md-4">
+    <div class="component-card h-100">
+    <div class="component-header">
+     <h3 class="h5 mb-0">Grid Zone Designator</h3>
+     <div class="text-white-50  ">4Q</div>
+     </div>
+      <div class="component-body">
+        <ul class="list-unstyled">
+         <li class="mb-2">• <span class="highlight1">Longitudinal zone</span> (1-60)</li>
+         <li class="mb-2">• <span class="highlight1">Latitudinal band</span> (C-X)</li>
+         <li class="mb-2">• 60 zones × 20 bands</li>
+         <li>• Excludes letters I and O</li>
+        </ul>
+        <div class="alert alert-light mt-3 mb-0"><small>Each zone is 6° wide, each band is 8° high</small></div>
+    </div>
+   </div>
+</div>
   <!-- Square Identifier -->
-                    <div class="col-md-4">
-                        <div class="component-card h-100">
-                            <div class="component-header"><h3 class="h5 mb-0">100km Square ID</h3><div class="text-white-50">FJ</div></div>
-                            <div class="component-body">
-                                <ul class="list-unstyled">
-                                    <li class="mb-2">• Identifies <span class="highlight1">100km × 100km</span> square</li>
-                                    <li class="mb-2">• Unique within each GZD</li>
-                                    <li class="mb-2">• Derived from lettering scheme</li>
-                                    <li>• Scheme varies by zone</li>
-                                </ul>
-                                <div class="alert alert-light mt-3 mb-0"><small>Provides local reference within the grid zone</small></div>
-                            </div>
-                        </div>
-                    </div>
-   <!-- Numerical Location -->
-                    <div class="col-md-4">
-                        <div class="component-card h-100">
-                            <div class="component-header"><h3 class="h5 mb-0">Numerical Location</h3>
-                                <div class="text-white-50">12345678</div>
-                            </div>
-                            <div class="component-body">
-                                <div class="mb-3">
-                                    <div><span class="highlight1">1234</span> = Easting (E-W)</div>
-                                    <div><span class="highlight1">5678</span> = Northing (N-S)</div>
-                                </div>
-                                <h6 class="mt-4 mb-2">Precision Levels:</h6>
-                                <div class="d-flex align-items-center precision-item mb-1"><span class="badge precision-badge">2</span><small>Digits → 10 km precision</small></div>
-                                <div class="d-flex align-items-center precision-item mb-1"><span class="badge precision-badge">4</span><small>Digits → 1 km precision</small></div>
-                                <div class="d-flex align-items-center precision-item mb-1"><span class="badge precision-badge">6</span><small>Digits → 100 m precision</small></div>
-                                <div class="d-flex align-items-center precision-item mb-1"><span class="badge precision-badge">8</span><small>Digits → 10 m precision</small> </div>
-                                <div class="d-flex align-items-center precision-item"><span class="badge precision-badge">10</span><small>Digits → 1 m precision</small></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-  <!-- Earth Grid Section -->
-                <div class="earth-grid-section mt-5">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h3 class="h4 mb-3">Earth's Grid Division</h3>
-                            <div class="row">
+  <div class="col-md-4">
+   <div class="component-card h-100">
+    <div class="component-header"><h3 class="h5 mb-0">100km Square ID</h3><div class="text-white-50">FJ</div></div>
+     <div class="component-body">
+      <ul class="list-unstyled">
+       <li class="mb-2">• Identifies <span class="highlight1">100km × 100km</span> square</li>
+       <li class="mb-2">• Unique within each GZD</li>
+       <li class="mb-2">• Derived from lettering scheme</li>
+       <li>• Scheme varies by zone</li>
+      </ul>
+     <div class="alert alert-light mt-3 mb-0"><small>Provides local reference within the grid zone</small></div>
+     </div>
+     </div>
+    </div>
+ <!-- Numerical Location -->
+ <div class="col-md-4">
+  <div class="component-card h-100">
+   <div class="component-header"><h3 class="h5 mb-0">Numerical Location</h3>
+    <div class="text-white-50">12345678</div>
+    </div>
+    <div class="component-body">
+     <div class="mb-3">
+      <div><span class="highlight1">1234</span> = Easting (E-W)</div>
+      <div><span class="highlight1">5678</span> = Northing (N-S)</div>
+     </div>
+    <h6 class="mt-4 mb-2">Precision Levels:</h6>
+     <div class="d-flex align-items-center precision-item mb-1"><span class="badge precision-badge">2</span><small>Digits → 10 km precision</small></div>
+     <div class="d-flex align-items-center precision-item mb-1"><span class="badge precision-badge">4</span><small>Digits → 1 km precision</small></div>
+     <div class="d-flex align-items-center precision-item mb-1"><span class="badge precision-badge">6</span><small>Digits → 100 m precision</small></div>
+     <div class="d-flex align-items-center precision-item mb-1"><span class="badge precision-badge">8</span><small>Digits → 10 m precision</small> </div>
+     <div class="d-flex align-items-center precision-item"><span class="badge precision-badge">10</span><small>Digits → 1 m precision</small></div>
+    </div>
+   </div>
+   </div>
+   </div>
+ <!-- Earth Grid Section -->
+  <div class="earth-grid-section mt-5">
+   <div class="row">
+   <div class="col-md-6">
+    <h3 class="h4 mb-3">Earth's Grid Division</h3>
+     <div class="row">
                                 <div class="col-sm-6">
                                     <div class="card border-0 shadow-sm mb-3">
                                         <div class="card-body">
@@ -196,21 +207,20 @@ last_modified_at: 2026-02-24
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="d-flex flex-column h-100">
-                                <h3 class="h4 mb-3">Visual Representation</h3>
-                                <div class="bg-light p-3 rounded text-center flex-grow-1 d-flex align-items-center justify-content-center">
-                                    <div>
-                                        <svg width="100%" height="auto" viewBox="0 0 200 120" class="grid-diagram"><!-- Simplified grid representation --><rect x="10" y="10" width="180" height="100" fill="none" stroke="#4361ee" stroke-width="2" stroke-dasharray="5,5"/> <!-- Vertical zones --> <line x1="30" y1="10" x2="30" y2="110" stroke="#3a86ff" stroke-width="1.5"/><line x1="50" y1="10" x2="50" y2="110" stroke="#3a86ff" stroke-width="1.5"/><line x1="70" y1="10" x2="70" y2="110" stroke="#3a86ff" stroke-width="1.5"/><line x1="90" y1="10" x2="90" y2="110" stroke="#3a86ff" stroke-width="1.5"/><line x1="110" y1="10" x2="110" y2="110" stroke="#3a86ff" stroke-width="1.5"/> <line x1="130" y1="10" x2="130" y2="110" stroke="#3a86ff" stroke-width="1.5"/><line x1="150" y1="10" x2="150" y2="110" stroke="#3a86ff" stroke-width="1.5"/><line x1="170" y1="10" x2="170" y2="110" stroke="#3a86ff" stroke-width="1.5"/> <!-- Horizontal bands --><line x1="10" y1="30" x2="190" y2="30" stroke="#4cc9f0" stroke-width="1.5"/><line x1="10" y1="50" x2="190" y2="50" stroke="#4cc9f0" stroke-width="1.5"/><line x1="10" y1="70" x2="190" y2="70" stroke="#4cc9f0" stroke-width="1.5"/><line x1="10" y1="90" x2="190" y2="90" stroke="#4cc9f0" stroke-width="1.5"/><!-- Labels --><text x="20" y="20" font-size="8" fill="#4361ee">Zone 1</text><text x="180" y="20" font-size="8" fill="#4361ee">Zone 60</text><text x="5" y="25" font-size="8" fill="#4cc9f0">Band C</text><text x="5" y="105" font-size="8" fill="#4cc9f0">Band X</text></svg>
-                                        <p class="small text-muted mt-2 mb-0">Simplified representation of Earth's MGRS grid</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="col-md-6">
+   <div class="d-flex flex-column h-100">
+    <h3 class="h4 mb-3">Visual Representation</h3>
+    <div class="bg-light p-3 rounded text-center flex-grow-1 d-flex align-items-center justify-content-center">
+    <div><svg width="100%" height="auto" viewBox="0 0 200 120" class="grid-diagram"><!-- Simplified grid representation --><rect x="10" y="10" width="180" height="100" fill="none" stroke="#4361ee" stroke-width="2" stroke-dasharray="5,5"/> <!-- Vertical zones --> <line x1="30" y1="10" x2="30" y2="110" stroke="#3a86ff" stroke-width="1.5"/><line x1="50" y1="10" x2="50" y2="110" stroke="#3a86ff" stroke-width="1.5"/><line x1="70" y1="10" x2="70" y2="110" stroke="#3a86ff" stroke-width="1.5"/><line x1="90" y1="10" x2="90" y2="110" stroke="#3a86ff" stroke-width="1.5"/><line x1="110" y1="10" x2="110" y2="110" stroke="#3a86ff" stroke-width="1.5"/> <line x1="130" y1="10" x2="130" y2="110" stroke="#3a86ff" stroke-width="1.5"/><line x1="150" y1="10" x2="150" y2="110" stroke="#3a86ff" stroke-width="1.5"/><line x1="170" y1="10" x2="170" y2="110" stroke="#3a86ff" stroke-width="1.5"/> <!-- Horizontal bands --><line x1="10" y1="30" x2="190" y2="30" stroke="#4cc9f0" stroke-width="1.5"/><line x1="10" y1="50" x2="190" y2="50" stroke="#4cc9f0" stroke-width="1.5"/><line x1="10" y1="70" x2="190" y2="70" stroke="#4cc9f0" stroke-width="1.5"/><line x1="10" y1="90" x2="190" y2="90" stroke="#4cc9f0" stroke-width="1.5"/><!-- Labels --><text x="20" y="20" font-size="8" fill="#4361ee">Zone 1</text><text x="180" y="20" font-size="8" fill="#4361ee">Zone 60</text><text x="5" y="25" font-size="8" fill="#4cc9f0">Band C</text><text x="5" y="105" font-size="8" fill="#4cc9f0">Band X</text></svg>
+     <p class="small text-muted mt-2 mb-0">Simplified representation of Earth's MGRS grid</p>
+     </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+   </div>
 
 <figure class="text-center p-4"><img src="/assets/images/mgrs-grid-system-world-map.png"  alt="World map with MGRS zones and 100,000 meter grid squares explanation"
     title="World map with MGRS zones and 100,000 meter grid squares explanation" loading="lazy"  decoding="async"  width="100%" height="600" class="img-fluid">  <figcaption class="small text-muted">World map with MGRS zones and 100,000 meter grid squares explanation.</figcaption>
@@ -221,18 +231,18 @@ last_modified_at: 2026-02-24
 <!-- Example Conversion Section -->
 <div class="card border-0 p-4 mb-5 bg-light">
 <h2>Example Conversion</h2>
-      <div class="card-body">
-         <div class="row g-3">
-               <div class="col-md-6">
-                   <div class="bg-light p-3 rounded-2"><h3 class="h6 fw-bold">Input (MGRS)</h3><code class="d-block p-2 bg-white rounded mb-2">33TWN8567932516</code><p class="small mb-0">1-meter precision coordinate</p></div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="bg-light p-3 rounded-2"><h3 class="h6 fw-bold">Output (Lat/Long)</h3><code class="d-block p-2 bg-white rounded mb-2">50.0567°N, 8.6821°E</code><p class="small mb-0">WGS84 datum</p></div>
-                                </div>
-                            </div>
-                            <div class="alert alert-info mt-3"><i class="fas fa-info-circle me-2"></i>This represents a location in Frankfurt, Germany with very high precision.</div>
-                        </div>
-                    </div>
+  <div class="card-body">
+   <div class="row g-3">
+    <div class="col-md-6">
+     <div class="bg-light p-3 rounded-2"><h3 class="h6 fw-bold">Input (MGRS)</h3><code class="d-block p-2 bg-white rounded mb-2">33TWN8567932516</code><p class="small mb-0">1-meter precision coordinate</p></div>
+    </div>
+  <div class="col-md-6">
+  <div class="bg-light p-3 rounded-2"><h3 class="h6 fw-bold">Output (Lat/Long)</h3><code class="d-block p-2 bg-white rounded mb-2">50.0567°N, 8.6821°E</code><p class="small mb-0">WGS84 datum</p></div>
+    </div>
+   </div>
+    <div class="alert alert-info mt-3"><i class="fas fa-info-circle me-2"></i>This represents a location in Frankfurt, Germany with very high precision.</div>
+    </div>
+   </div>
 
 <!-- Use Cases Section -->
 <div class="mb-5">
@@ -302,6 +312,80 @@ last_modified_at: 2026-02-24
   <a href="/assets/files/mgrs/mgrs-shapefile-boundary.zip" class="btn btn-warning btn-lg px-4 shadow-sm" download>Shapefile (~56MB)</a>
   </div>
 </div>
+
+
+<!-- Common MGRS Examples -->
+<section class="my-5">
+ <div class="card border-0 shadow rounded-4 overflow-hidden">
+ <!-- Header -->
+ <div class="card-header bg-primary-subtle text-white py-3">
+  <h2 class="h4 mb-1"><i class="fas fa-map-marker-alt me-2"></i>Common MGRS Coordinate Examples</h2>
+   <p class="mb-0 small opacity-75">Explore famous landmarks around the world and their Military Grid Reference System (MGRS) coordinates.</p>
+  </div>
+ <!-- Table -->
+  <div class="card-body p-0">
+   <div class="table-responsive">
+    <table class="table table-hover align-middle mb-0">
+     <thead class="table-light">
+      <tr><th style="width:55px">#</th><th>Place</th><th>Country</th><th>MGRS Coordinate</th></tr>
+     </thead>
+      <tbody>
+       <tr>
+       <td>1</td>
+       <td><i class="fas fa-landmark text-primary me-2"></i>White House</td>
+       <td> <span class="badge bg-secondary">USA</span></td>
+       <td><code>18SUJ2339407395</code></td>
+       </tr>
+         <tr>
+           <td>2</td>
+           <td><i class="fas fa-tower-observation text-danger me-2"></i>Eiffel Tower</td>
+           <td><span class="badge bg-secondary">France</span></td>
+           <td><code>31UDQ4825111932</code></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><i class="fas fa-gopuram text-success me-2"></i>Taj Mahal</td>
+              <td><span class="badge bg-secondary">India</span></td>
+              <td><code>44RPU2705927957</code></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><i class="fas fa-mountain text-warning me-2"></i>Mount Everest</td>
+              <td><span class="badge bg-secondary">Nepal</span></td>
+              <td><code>45RVM7295206921</code></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td> <i class="fas fa-monument text-info me-2"></i>Statue of Liberty</td>
+              <td><span class="badge bg-secondary">USA</span></td>
+              <td><code>18TWL8073104695</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+<!-- Footer -->
+<div class="card-footer bg-light small text-muted"><i class="fas fa-circle-info text-primary me-1"></i>These examples are provided for educational and demonstration purposes. Actual MGRS coordinates may vary slightly depending on the coordinate precision and reference datum (WGS84).</div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  <!-- FAQ Section -->
 <section class="pt-4">
         <h2 class="mb-4">FAQ on MRGS Converter</h2>
@@ -335,6 +419,32 @@ last_modified_at: 2026-02-24
     <p class="mb-0">Yes. MGRS coordinates can be converted offline using compatible GIS software, GPS devices, military mapping applications, or desktop tools. However, our online MGRS Converter provides a fast, free, and convenient way to convert between MGRS and latitude/longitude without installing any software.</p>
   </div>
 </div>
+<div class="card mb-3 border-0 bg-light">
+  <div class="card-body">
+    <div class="fw-bold text-primary">6. How do you read an MGRS coordinate?</div>
+    <p class="mb-0">
+      An MGRS coordinate is read from left to right. It begins with the <strong>Grid Zone Designator (GZD)</strong>, followed by the <strong>100,000-meter grid square identifier</strong>, and finally the <strong>easting and northing values</strong>. For example, in <code>33TWN8567932516</code>, <strong>33T</strong> is the grid zone, <strong>WN</strong> identifies the 100 km square, and the remaining digits specify the exact location within that square. More digits indicate higher precision, with 10 digits providing approximately 1-meter accuracy.
+    </p>
+  </div>
+</div>
+
+<div class="card mb-3 border-0 bg-light">
+  <div class="card-body">
+    <div class="fw-bold text-primary">7. What is the difference between MGRS and GPS?</div>
+    <p class="mb-0">
+      <strong>MGRS</strong> and <strong>GPS</strong> are not the same. GPS provides a location using latitude and longitude coordinates, while MGRS is a grid-based coordinate system built on the WGS84 datum and commonly used by military organizations, emergency responders, and GIS professionals. GPS devices can display coordinates in MGRS format, making navigation easier in tactical and field operations.
+    </p>
+  </div>
+</div>
+
+<div class="card mb-3 border-0 bg-light">
+  <div class="card-body">
+    <div class="fw-bold text-primary">8. What is the difference between MGRS and UTM?</div>
+    <p class="mb-0">
+      Both <strong>MGRS</strong> and <strong>UTM (Universal Transverse Mercator)</strong> are based on the same map projection system. However, UTM uses numeric easting and northing values, while MGRS replaces part of those numbers with letters to identify 100,000-meter grid squares. This makes MGRS coordinates shorter, easier to communicate, and more suitable for military navigation, search and rescue, and field mapping.
+    </p>
+  </div>
+</div>
 </section>
 <!-- Did You Know? -->
  <div class="card border-0 bg-light mb-2">
@@ -343,6 +453,7 @@ last_modified_at: 2026-02-24
    <p class="mb-2"> 1. MGRS can pinpoint a location on Earth with precision up to 1 meter, making it one of the most accurate and efficient coordinate systems used in global military and emergency operations. </p>
   </div>
   </div>
+  {% include geolocation.html %}
  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.7.5/proj4.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
