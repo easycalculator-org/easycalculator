@@ -105,6 +105,6 @@ last_modified_at: 2026-02-03
 <h2>Contact Us</h2>
 <p>If you have any questions about these Terms and Conditions, You can contact us:</p>
 <ul>
-<li>By email: care@easycalculator.org</li>
+<li>By email: <a href="mailto:contact@easycalculator.org"> contact@easycalculator.org</a></li>
 </ul>
 </div>
