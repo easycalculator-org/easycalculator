@@ -45,8 +45,10 @@ function showResult(message, type) {
 }
 
 function updateCoordinateSummary(lat, lon) {
-    document.getElementById("liveDecimal").textContent = `${lat.toFixed(6)}, ${lon.toFixed(6)}`;
-    document.getElementById("liveDMS").textContent = `${decimalToDMS(lat, true)}, ${decimalToDMS(lon, false)}`;
+    document.getElementById("decimalLatitude").textContent = lat.toFixed(6);
+    document.getElementById("decimalLongitude").textContent = lon.toFixed(6);
+    document.getElementById("dmsLatitude").textContent = decimalToDMS(lat, true);
+    document.getElementById("dmsLongitude").textContent = decimalToDMS(lon, false);
 }
 
 function coordinatePopupContent(lat, lon) {
@@ -139,10 +141,10 @@ function clearAll() {
     const results = document.getElementById("results");
     results.textContent = "";
     results.className = "result-card";
-    document.getElementById("liveDecimal").textContent = "—";
-    document.getElementById("liveDMS").textContent = "—";
-    document.getElementById("liveDecimal").textContent = "Waiting for coordinates";
-    document.getElementById("liveDMS").textContent = "Waiting for coordinates";
+    document.getElementById("decimalLatitude").textContent = "Waiting for coordinates";
+    document.getElementById("decimalLongitude").textContent = "Waiting for coordinates";
+    document.getElementById("dmsLatitude").textContent = "Waiting for coordinates";
+    document.getElementById("dmsLongitude").textContent = "Waiting for coordinates";
     marker.setLatLng(defaultCoordinates);
     marker.closePopup();
     map.flyTo(defaultCoordinates, 5, { animate: true, duration: 1 });
