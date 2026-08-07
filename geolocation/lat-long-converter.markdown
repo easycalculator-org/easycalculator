@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Latitude Longitude Converter | Convert Decimal to DMS Easily and Fast
+title: Latitude Longitude Converter | Lat Long, DD ↔ DMS Converter
 permalink: /latitude-longitude-converter
-description: "Quickly convert latitude and longitude between decimal degrees and DMS (degrees, minutes, seconds) formats. Use our Lat Long Converter easy and powerful tool."
+description: "Convert latitude and longitude between Decimal Degrees (DD) and Degrees Minutes Seconds (DMS). Free Lat Long Converter with GPS map, live location, and accurate coordinate conversion."
 image: "/assets/images/og/lat-long-converter.jpg"
 last_modified_at: 2026-07-08
 ---
@@ -132,11 +132,13 @@ last_modified_at: 2026-07-08
  </div>
 
  <header class="mb-5">
-  <span class="badge text-bg-primary mb-2">Coordinate conversion tool</span>
   <h1 class="display-6 fw-bold">Latitude and Longitude Converter</h1>
   <p class="lead mb-0">Convert map coordinates between decimal degrees (DD) and degrees, minutes, seconds (DMS), then see the same point on the map.</p>
  </header>
-
+<section class="p-4 bg-light ">
+<h2>What is a Lat Long Converter?</h2>
+<p>A <strong>Lat Long Converter</strong> (Latitude Longitude Converter) is a free online tool that converts GPS coordinates between Decimal Degrees (DD) and Degrees Minutes Seconds (DMS). It is widely used in Google Maps, OpenStreetMap, GIS software, surveying, aviation, marine navigation, and GPS devices to accurately represent locations anywhere in the world.</p>
+</section>
  <section class="mb-5" aria-labelledby="what-are-coordinates">
   <h2 id="what-are-coordinates" class="h3">What are latitude and longitude?</h2>
   <p>Latitude and longitude identify a precise point on Earth. Latitude tells you how far north or south a point is from the Equator. Longitude tells you how far east or west it is from the Prime Meridian.</p>
@@ -159,6 +161,42 @@ last_modified_at: 2026-07-08
    <div class="col-md-6"><div class="card h-100 border-success"><div class="card-header bg-success text-white fw-semibold">Degrees, minutes, seconds (DMS)</div><div class="card-body"><p class="mb-1 text-muted small">Same point</p><p class="fs-5 fw-semibold mb-0">40° 44' 55.74&quot; N, 73° 59' 7.54&quot; W</p></div></div></div>
   </div>
  </section>
+ <section class="mb-5">
+
+<h2>DMS to Decimal Degrees (DD) Converter</h2>
+<p>A <strong>DMS to Decimal Degrees (DD) Converter</strong> converts geographic coordinates from the <strong>Degrees, Minutes, Seconds (DMS)</strong> format into <strong>Decimal Degrees (DD)</strong>. This conversion is commonly used when entering GPS coordinates into Google Maps, GIS software, mapping applications, navigation systems, and location-based services.</p>
+
+<p>Simply enter the degrees (°), minutes ('), seconds ("), and the direction (N, S, E, or W). The converter instantly calculates the equivalent <strong>Decimal Degree (DD)</strong> value while preserving coordinate accuracy. </p>
+
+<div class="table-responsive mt-4">
+<table class="table table-bordered">
+<thead class="table-primary">
+<tr>
+<th>DMS Coordinate</th>
+<th>Decimal Degree (DD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>40° 42' 46.08" N</td>
+<td>40.712800°</td>
+</tr>
+<tr>
+<td>74° 00' 21.60" W</td>
+<td>-74.006000°</td>
+</tr>
+<tr>
+<td>28° 36' 50.18" N</td>
+<td>28.613939°</td>
+</tr>
+<tr>
+<td>77° 12' 32.48" E</td>
+<td>77.209021°</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 
  <section class="mb-5" aria-labelledby="how-to-use">
   <h2 id="how-to-use" class="h3">How to use the converter</h2>
@@ -223,8 +261,170 @@ last_modified_at: 2026-07-08
      </div>
    </section>
   <!-- Did You Know? -->
+  {% include geolocation.html %}
 </article>
 
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script src="{{ '/assets/js/geolocation/lat-long-converter.js' | relative_url }}"></script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"How do I convert decimal degrees to DMS?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Enter your latitude and longitude in decimal format and the converter instantly converts them to Degrees, Minutes and Seconds (DMS)."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"How do I convert DMS to decimal degrees?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Enter degrees, minutes, seconds and the direction (N, S, E, W). The converter calculates the decimal degree value automatically."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can I use these coordinates in Google Maps?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. Google Maps supports both Decimal Degrees (DD) and Degrees Minutes Seconds (DMS) coordinate formats."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What is the valid latitude range?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Latitude ranges from -90° to +90°."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What is the valid longitude range?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Longitude ranges from -180° to +180°."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+  {
+   "@type":"ListItem",
+   "position":1,
+   "name":"Home",
+   "item":"https://easycalculator.org/"
+  },
+  {
+   "@type":"ListItem",
+   "position":2,
+   "name":"Geolocation Tools",
+   "item":"https://easycalculator.org/geolocation-tools"
+  },
+  {
+   "@type":"ListItem",
+   "position":3,
+   "name":"Latitude Longitude Converter",
+   "item":"https://easycalculator.org/latitude-longitude-converter"
+  }
+ ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"SoftwareApplication",
+ "name":"Latitude Longitude Converter",
+ "applicationCategory":"UtilitiesApplication",
+ "applicationSubCategory":"Geolocation Tool",
+ "operatingSystem":"Any",
+ "browserRequirements":"Requires JavaScript",
+ "url":"https://easycalculator.org/latitude-longitude-converter",
+ "image":"https://easycalculator.org/assets/images/og/lat-long-converter.jpg",
+ "description":"Free online Latitude Longitude Converter. Convert Decimal Degrees (DD) to Degrees Minutes Seconds (DMS) and DMS to Decimal instantly using an interactive map.",
+ "offers":{
+   "@type":"Offer",
+   "price":"0",
+   "priceCurrency":"USD"
+ },
+ "creator":{
+   "@type":"Organization",
+   "name":"EasyCalculator.org"
+ },
+ "featureList":[
+   "Decimal to DMS",
+   "DMS to Decimal",
+   "Interactive Leaflet Map",
+   "Current GPS Location",
+   "Click Map to Select Coordinates",
+   "Draggable Marker",
+   "Copy Coordinates",
+   "Coordinate Validation"
+ ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"HowTo",
+ "name":"How to Convert Latitude and Longitude",
+ "description":"Convert latitude and longitude between Decimal Degrees and Degrees Minutes Seconds.",
+ "totalTime":"PT1M",
+ "step":[
+   {
+     "@type":"HowToStep",
+     "position":1,
+     "name":"Enter Coordinates",
+     "text":"Enter Decimal Degrees or DMS values."
+   },
+   {
+     "@type":"HowToStep",
+     "position":2,
+     "name":"Click Convert",
+     "text":"Press the Convert button."
+   },
+   {
+     "@type":"HowToStep",
+     "position":3,
+     "name":"View Results",
+     "text":"See both Decimal and DMS coordinates along with the map location."
+   }
+ ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebApplication",
+ "name":"Latitude Longitude Converter",
+ "url":"https://easycalculator.org/latitude-longitude-converter",
+ "applicationCategory":"UtilitiesApplication",
+ "operatingSystem":"Any",
+ "browserRequirements":"Requires JavaScript",
+ "description":"Convert latitude and longitude coordinates between Decimal Degrees (DD) and Degrees Minutes Seconds (DMS) using a free online web application.",
+ "offers":{
+   "@type":"Offer",
+   "price":"0",
+   "priceCurrency":"USD"
+ },
+ "publisher":{
+   "@type":"Organization",
+   "name":"EasyCalculator.org"
+ }
+}
+</script>
