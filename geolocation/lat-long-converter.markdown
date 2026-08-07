@@ -3,17 +3,47 @@ layout: default
 title: Latitude Longitude Converter | Convert Decimal to DMS Easily and Fast
 permalink: /latitude-longitude-converter
 description: "Quickly convert latitude and longitude between decimal degrees and DMS (degrees, minutes, seconds) formats. Use our Lat Long Converter easy and powerful tool."
-last_modified_at: 2026-02-03
+image: "/assets/images/og/lat-long-converter.jpg"
+last_modified_at: 2026-07-08
 ---
 
 <style>
-.converter-container{background:#ffffffe6;border-radius:15px;box-shadow:0 0 20px #0000001a}#map{height:60vh;border-radius:10px}.input-group-text{min-width:100px}.error{border:2px solid #f44!important}
+.converter-container { background: #ffffffe6; border-radius: 15px;  }
+.map-card { height: 100%; min-height: 520px; overflow: hidden; }
+#map { height: 100%; min-height: 470px; }
+.input-group-text { min-width: 100px; }
+.result-card { display: none; margin: 1.5rem 0 0; border: 2px solid #0d6efd; border-radius: 12px; background: #f4f8ff; box-shadow: 0 8px 20px rgba(13, 110, 253, .12); overflow: hidden; }
+.result-card.is-visible { display: block; }
+.result-card__header { padding: .8rem 1rem; color: #fff; background: #0d6efd; font-weight: 700; }
+.result-card__body { padding: 1rem; }
+.result-value { display: block; margin-top: .25rem; font-size: 1.05rem; font-weight: 600; color: #173a6b; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.result-card--danger { border-color: #dc3545; background: #fff5f5; }
+.result-card--danger .result-card__header { background: #dc3545; }
+.result-card--danger .result-value { color: #842029; }
+.coordinate-pin { width: 34px; height: 34px; display: grid; place-items: center; border: 3px solid #fff; border-radius: 50% 50% 50% 0; background: #0d6efd; box-shadow: 0 4px 10px rgba(0, 57, 139, .35); transform: rotate(-45deg); }
+.coordinate-pin::after { width: 8px; height: 8px; content: ""; border-radius: 50%; background: #fff; transform: rotate(45deg); }
+.coordinate-popup .leaflet-popup-content-wrapper { border-radius: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, .18); }
+.coordinate-popup .leaflet-popup-content { min-width: 210px; margin: 14px 16px; font-family: inherit; }
+.map-coordinate-title { margin-bottom: 8px; color: #0d6efd; font-size: .82rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.map-coordinate-value { margin: 0; color: #1f2937; font-size: .95rem; font-variant-numeric: tabular-nums; }
+.map-coordinate-value + .map-coordinate-value { margin-top: 4px; }
+@media (max-width: 991.98px) { .map-card, #map { min-height: 380px; } }
 </style>
+
+<div aria-label="breadcrumb" class="p-3">
+ <ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Latitude Longitude Converter</li>
+ </ol>
+</div>
+
+
  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
  <div class="row p-4">
-  <div class="col-md-6">
-   <div class="converter-container p-4 mb-4">
-   <h3 class="mb-4 text-center">Geo Coordinate Converter</h3>
+  <div class="col-lg-6">
+   <div class="converter-container p-4 mb-4 shadow">
+   <h3 class="mb-4 text-center">Lat Long Converter</h3>
                     
   <!-- Decimal to DMS -->
  <div class="mb-4">
@@ -45,13 +75,29 @@ last_modified_at: 2026-02-03
                 <button onclick="convertDMSToDecimal()" class="btn btn-success w-100">Convert to Decimal</button>
            </div>
 
-   <!-- Results -->
- <div id="results" class="alert alert-info"></div>
-                </div>
-            </div>
-            
-  <div class="col-md-6">
-                <div id="map"></div>
+ <!-- Results -->
+ <div id="results" class="result-card" role="status" aria-live="polite"></div>
+ </div>
+
+<div class="card border-0 shadow mb-3 bg-light">
+<div class="card-body  ">
+<h5>📍 Result</h5>
+<div class="row">
+<div class="col-md-6">
+<b>Decimal</b>
+<div id="liveDecimal">--</div>
+</div>
+<div class="col-md-6">
+<b>DMS</b>
+<div id="liveDMS">--</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+  <div class="col-lg-6">
+   <div class="card border-0 shadow-sm map-card mb-4"><div class="card-header bg-white border-0 pt-3 px-3"><span class="float-end small text-muted"><button class="btn btn-primary" onclick="getCurrentLocation()"><i class="bi bi-geo-alt-fill"></i>Use My Location</button> <button class="btn btn-outline-danger" onclick="clearAll()"> <i class="bi bi-trash"></i>Clear</button></span></div><div id="map" aria-label="Interactive map for selecting latitude and longitude"></div></div>
             </div>
         </div>
 
@@ -402,20 +448,12 @@ last_modified_at: 2026-02-03
                 </div>
 <!-- Link Section: Related Tools -->
 
- <hr>
-<h2>Other Geolocation Tool</h2>
-<div class="row g-4 ">      
- <div class="col-md-3 g-4 p-3"><a class="text-decoration-none" href="/utm-zone-map"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="24" viewBox="0 0 384 512"><path fill="#63E6BE" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg><h5>UTM Zone Map</h5></div> </a></div>
 
- <div class="col-md-3 g-4 p-3"><a class="text-decoration-none" href="/military-grid-reference-system-converter"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512"><path fill="#B197FC" d="M128 136c0-22.1-17.9-40-40-40L40 96C17.9 96 0 113.9 0 136l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48zm0 192c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48zm32-192l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM288 328c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48zm32-192l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM448 328c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40l48 0c22.1 0 40-17.9 40-40l0-48z"/></svg><h5>MGRS Converter</h5></div></a></div>
- <div class="col-md-3 g-4 p-3  "><a class="text-decoration-none" href="/current-elevation"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="40" viewBox="0 0 640 512"><path fill="#5f69ec" d="M560 160A80 80 0 1 0 560 0a80 80 0 1 0 0 160zM55.9 512l325.2 0 75 0 122.8 0c33.8 0 61.1-27.4 61.1-61.1c0-11.2-3.1-22.2-8.9-31.8l-132-216.3C495 196.1 487.8 192 480 192s-15 4.1-19.1 10.7l-48.2 79L286.8 81c-6.6-10.6-18.3-17-30.8-17s-24.1 6.4-30.8 17L8.6 426.4C3 435.3 0 445.6 0 456.1C0 487 25 512 55.9 512z"/></svg><h5>Current Elevation</h5></div></a></div>
- <div class="col-md-3 g-4 p-3"><a class="text-decoration-none" href="/latitude-longitude-to-address"><div class="calculator-box text-center"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="36" viewBox="0 0 576 512"><path fill="#38e5b1" d="M302.8 312C334.9 271.9 408 174.6 408 120C408 53.7 354.3 0 288 0S168 53.7 168 120c0 54.6 73.1 151.9 105.2 192c7.7 9.6 22 9.6 29.6 0zM416 503l144.9-58c9.1-3.6 15.1-12.5 15.1-22.3L576 152c0-17-17.1-28.6-32.9-22.3l-116 46.4c-.5 1.2-1 2.5-1.5 3.7c-2.9 6.8-6.1 13.7-9.6 20.6L416 503zM15.1 187.3C6 191 0 199.8 0 209.6L0 480.4c0 17 17.1 28.6 32.9 22.3L160 451.8l0-251.4c-3.5-6.9-6.7-13.8-9.6-20.6c-5.6-13.2-10.4-27.4-12.8-41.5l-122.6 49zM384 255c-20.5 31.3-42.3 59.6-56.2 77c-20.5 25.6-59.1 25.6-79.6 0c-13.9-17.4-35.7-45.7-56.2-77l0 194.4 192 54.9L384 255z"/></svg><h5>Lat/long to Address</h5></div></a> </div>
 
- </div>
- 
 
- <!-- conversion-tool end-->   
+
+ <!-- conversion-tool end-->
 
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<script src="{{ '/assets/js/lat-long-converter.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/geolocation/lat-long-converter.js' | relative_url }}"></script>

@@ -427,7 +427,6 @@ last_modified_at: 2026-02-24
     </p>
   </div>
 </div>
-
 <div class="card mb-3 border-0 bg-light">
   <div class="card-body">
     <div class="fw-bold text-primary">7. What is the difference between MGRS and GPS?</div>
@@ -436,7 +435,6 @@ last_modified_at: 2026-02-24
     </p>
   </div>
 </div>
-
 <div class="card mb-3 border-0 bg-light">
   <div class="card-body">
     <div class="fw-bold text-primary">8. What is the difference between MGRS and UTM?</div>
