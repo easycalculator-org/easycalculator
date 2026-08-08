@@ -115,8 +115,8 @@ last_modified_at: 2026-07-08
  <div class="card border-0 shadow-sm map-card mb-4">
   <div class="card-header bg-white border-0 pt-3 px-3">
    <span class="float-end small text-muted">
-    <button class="btn btn-outline-primary" onclick="getCurrentLocation()"><i class="bi bi-geo-alt-fill"></i>Use My Location</button>
-    <button class="btn btn-outline-danger" onclick="clearAll()"><i class="bi bi-trash"></i>Clear</button></span></div>
+    <button class="btn btn-outline-primary" onclick="getCurrentLocation()"><i class="fas fa-map-marker-alt"></i>Use My Location</button>
+    <button class="btn btn-outline-danger" onclick="clearAll()"><i class="fa-solid fa-trash"></i>Clear</button></span></div>
     <div id="map" aria-label="Interactive map for selecting latitude and longitude">
     </div>
    </div>

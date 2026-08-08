@@ -107,8 +107,8 @@ togglePassword.addEventListener('click', () => {
 
   togglePassword.innerHTML =
     type === 'password'
-    ? '<i class="bi bi-eye-fill"></i>'
-    : '<i class="bi bi-eye-slash-fill"></i>';
+    ? '<i class="fa-solid fa-eye"></i>'
+    : '<i class="fa-solid fa-eye-slash"></i>';
 
 });
 

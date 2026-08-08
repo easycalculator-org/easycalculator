@@ -91,19 +91,19 @@ last_modified_at: 2026-02-03
 <br>
 <section class="card mb-5 border-0 shadow">
             <div class="card-body p-4">
-                <h2 class="card-title mb-4"><i class="bi bi-question-circle me-2 text-primary"></i>What is a Length Converter?</h2>
+                <h2 class="card-title mb-4">What is a Length Converter?</h2>
                 <p class="card-text lead">A length converter is a tool that allows users to convert one unit of length into another. This helps in different applications where specific measurement systems are required, such as metric and imperial systems.</p>
             </div>
         </section>
 
  <!-- Units Section -->
 <section class="mb-5">
-<h2 class="mb-4 pb-2 border-bottom"><i class="bi bi-list-columns me-2 text-primary"></i>Common Length Conversion Units</h2>
+<h2 class="mb-4 pb-2 border-bottom">Common Length Conversion Units</h2>
   <div class="row">
                 <div class="col-md-6 mb-4">
                     <div class="card h-100 border-primary">
                         <div class="card-header bg-primary text-white">
-                            <h3 class="h5 mb-0"><i class="bi bi-globe-europe-africa me-2"></i>Metric System</h3>
+                            <h3 class="h5 mb-0">Metric System</h3>
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -128,7 +128,7 @@ last_modified_at: 2026-02-03
 <div class="col-md-6 mb-4">
                     <div class="card h-100 border-warning">
                         <div class="card-header bg-warning text-dark">
-                            <h3 class="h5 mb-0"><i class="bi bi-globe-americas me-2"></i>Imperial & US Customary System</h3>
+                            <h3 class="h5 mb-0">Imperial & US Customary System</h3>
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -185,7 +185,7 @@ last_modified_at: 2026-02-03
             <div class="col-lg-6 mb-5">
                 <div class="card h-100 border-success">
                     <div class="card-header bg-success text-white">
-                        <h2 class="h4 mb-0"><i class="bi bi-calculator me-2"></i>Length Conversion Formulas</h2>
+                        <h2 class="h4 mb-0">Length Conversion Formulas</h2>
                     </div>
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
@@ -225,7 +225,7 @@ last_modified_at: 2026-02-03
             <div class="col-lg-6 mb-5">
                 <div class="card h-100 border-info">
                     <div class="card-header bg-info text-white">
-                        <h2 class="h4 mb-0"><i class="bi bi-journal-check me-2"></i>Examples of Length Conversions</h2>
+                        <h2 class="h4 mb-0">Examples of Length Conversions</h2>
                     </div>
                     <div class="card-body">
                         <div class="card mb-3">
@@ -260,27 +260,24 @@ last_modified_at: 2026-02-03
  <!-- Why Use -->
  <section class="card mb-5 border-secondary">
             <div class="card-header bg-secondary text-white">
-                <h2 class="h4 mb-0"><i class="bi bi-lightbulb me-2"></i>Why Use a Length Converter?</h2>
+                <h2 class="h4 mb-0">Why Use a Length Converter?</h2>
             </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-4 mb-3">
                         <div class="text-center p-3">
-                            <i class="bi bi-check-circle-fill text-success display-4 mb-3"></i>
                             <h3 class="h5">Accuracy</h3>
                             <p>Manual conversions can lead to errors; a length converter ensures precision.</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
                         <div class="text-center p-3">
-                            <i class="bi bi-stopwatch-fill text-primary display-4 mb-3"></i>
                             <h3 class="h5">Time-Saving</h3>
                             <p>Quick and effortless conversion between units saves valuable time.</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
                         <div class="text-center p-3">
-                            <i class="bi bi-gear-fill text-info display-4 mb-3"></i>
                             <h3 class="h5">Convenience</h3>
                             <p>Used in various industries including travel, construction, and academia.</p>
                         </div>

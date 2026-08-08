@@ -222,7 +222,7 @@
       successMsg.className = 'alert alert-success alert-dismissible fade show position-fixed bottom-0 end-0 m-3';
       successMsg.style.zIndex = '9999';
       successMsg.innerHTML = `
-        <i class="bi bi-check-circle-fill"></i> Map screenshot saved!
+        <i class="fa-solid fa-circle-check"></i> Map screenshot saved!
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
       `;
       document.body.appendChild(successMsg);
@@ -244,7 +244,7 @@
       try {
         await navigator.clipboard.writeText(decimalText);
         const originalText = copyDecimalBtn.innerHTML;
-        copyDecimalBtn.innerHTML = '<i class="bi bi-check-lg"></i> Copied!';
+        copyDecimalBtn.innerHTML = '<i class="fa-solid fa-check"></i>Copied!';
         setTimeout(() => {
           copyDecimalBtn.innerHTML = originalText;
         }, 1500);
@@ -262,7 +262,7 @@
       try {
         await navigator.clipboard.writeText(dmsText);
         const originalText = copyDMSBtn.innerHTML;
-        copyDMSBtn.innerHTML = '<i class="bi bi-check-lg"></i> Copied!';
+        copyDMSBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
         setTimeout(() => {
           copyDMSBtn.innerHTML = originalText;
         }, 1500);
@@ -279,11 +279,11 @@
     if (formatToggle.checked) {
       decimalPanel.style.display = 'none';
       dmsPanel.style.display = 'flex';
-      toggleLabel.innerHTML = '<i class="bi bi-123"></i> Show Decimal Degrees';
+      toggleLabel.innerHTML = '<i class="fa-solid fa-hashtag"></i> Show Decimal Degrees';
     } else {
       decimalPanel.style.display = 'flex';
       dmsPanel.style.display = 'none';
-      toggleLabel.innerHTML = '<i class="bi bi-globe2"></i> Show DMS (Degrees/Minutes/Seconds)';
+      toggleLabel.innerHTML = '<i class="fa-solid fa-globe"></i> Show DMS (Degrees/Minutes/Seconds)';
     }
   });
   

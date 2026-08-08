@@ -63,15 +63,15 @@
   // update phase label, status message, cycle counter and ring color
   function updatePhaseMetadata() {
     if (currentState === "focus") {
-      phaseLabelEl.innerHTML = '<i class="bi bi-book-half"></i> Focus · Study session';
+      phaseLabelEl.innerHTML = '<i class="fa-solid fa-book-open"></i> Focus · Study session';
       statusMsgEl.innerHTML = '📖 Stay concentrated! Pomodoro in progress';
       progressRing.setAttribute("stroke", "#5b8c5a");
     } else if (currentState === "shortBreak") {
-      phaseLabelEl.innerHTML = '<i class="bi bi-emoji-smile"></i> Short break · relax';
+      phaseLabelEl.innerHTML = '<i class="fa-solid fa-emoji-smile"></i> Short break · relax';
       statusMsgEl.innerHTML = '☕ Stretch, breathe, grab water';
       progressRing.setAttribute("stroke", "#d9a13b");
     } else {
-      phaseLabelEl.innerHTML = '<i class="bi bi-stars"></i> Long break · recharge';
+      phaseLabelEl.innerHTML = '<i class="fa-solid fa-stars"></i> Long break · recharge';
       statusMsgEl.innerHTML = '🌿 Well deserved rest, clear your mind';
       progressRing.setAttribute("stroke", "#6b8c9e");
     }

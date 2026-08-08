@@ -233,7 +233,7 @@ last_modified_at: 2026-06-09
                 <div class="small mt-2 fw-semibold text-primary" id="utcDiffNote"></div>
             </div>
             <!-- Footer -->
-            <div class="text-center text-muted small border-top mt-4 pt-3"> <i class="bi bi-arrow-repeat me-1"></i> Updates every second • DST aware</div>
+            <div class="text-center text-muted small border-top mt-4 pt-3"><i class="fa-solid fa-arrows-rotate me-1"></i> Updates every second • DST aware</div>
         </div>
     </div>
 </div>

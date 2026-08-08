@@ -3,7 +3,7 @@ layout: default
 title: KML Viewer | View kml Files Online on Interactive Map
 permalink: /kml-viewer
 description: "View kml files online with our free kml Viewer. Display GPS tracks, routes, and waypoints on an interactive map, inspect coordinates, elevation, distance, and export data instantly."
-image: "/assets/images/og/kml=viewer.jpg"
+image: "/assets/images/og/kml-viewer.jpg"
 last_modified_at: 2026-07-08
 ---
 
@@ -21,7 +21,7 @@ last_modified_at: 2026-07-08
 </div>
 <!-- Upload Card -->
 <div class="card border-0 shadow-sm p-3 p-md-4 rounded-4">
-<div class="drop-zone" id="dropZone"><i class="bi bi-cloud-upload"></i>
+<div class="drop-zone" id="dropZone"><i class="fa-solid fa-cloud-arrow-up"></i>
  <div class="text-muted small"><strong class="text-dark">Click to upload</strong> or drag &amp; drop a <strong>.kml</strong> file</div>
  <div class="file-name text-dark fw-medium mt-1" id="fileName" style="display:none;"></div>
  <input type="file" id="fileInput" accept=".kml,application/vnd.google-earth.kml+xml" style="display:none;" />
@@ -78,7 +78,7 @@ last_modified_at: 2026-07-08
    </div>
     </div>
      </div>
-          </div>
+    </div>
  <div class="toast-container" id="toastContainer"></div>
 
 

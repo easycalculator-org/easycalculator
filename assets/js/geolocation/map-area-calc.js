@@ -230,7 +230,7 @@ polygonLabel = L.marker(center, {
     const marker = L.marker(latlng, { draggable: true, icon: markerIcon }).addTo(map);
     marker.bindPopup(`
       <div class="text-center" style="min-width:160px;">
-        <strong><i class="bi bi-chat-dots"></i> Map Note</strong><br>
+        <strong><i class="fa-solid fa-comment-dots"></i> Map Note</strong><br>
         <span class="small">${finalNote}</span><br>
         <button class="btn btn-sm btn-outline-primary mt-2 editNoteBtn">✏️ Edit</button>
         <button class="btn btn-sm btn-outline-danger mt-2 ms-1 deleteNoteBtn">🗑 Delete</button>
@@ -256,7 +256,7 @@ polygonLabel = L.marker(center, {
             }));
             marker.setPopupContent(`
               <div class="text-center">
-                <strong><i class="bi bi-chat-dots"></i> Map Note</strong><br>
+                <strong><i class="fa-solid fa-comment-dots"></i> Map Note</strong><br>
                 <span class="small">${newNote.trim()}</span><br>
                 <button class="btn btn-sm btn-outline-primary mt-2 editNoteBtn">✏️ Edit</button>
                 <button class="btn btn-sm btn-outline-danger mt-2 ms-1 deleteNoteBtn">🗑 Delete</button>
@@ -290,7 +290,7 @@ polygonLabel = L.marker(center, {
       const short = item.noteText.length > 35 ? item.noteText.slice(0, 32) + '...' : item.noteText;
       html += `<div class="marker-item d-flex justify-content-between align-items-center">
         <span><i class="fa-solid fa-location-dot text-primary me-1"></i> ${short}</span>
-        <button class="btn btn-sm btn-link text-danger p-0 remove-marker-btn" data-idx="${idx}"><i class="bi bi-x-circle"></i></button>
+        <button class="btn btn-sm btn-link text-danger p-0 remove-marker-btn" data-idx="${idx}"><i class="fa-solid fa-circle-xmark"></i></button>
       </div>`;
     });
     container.innerHTML = html;
