@@ -29,10 +29,13 @@ last_modified_at: 2026-06-06
 <hr>
 <div class="col-md-3 p-3"><a href="/gpx-viewer"><div class="calculator-box text-center"><h5>GPX Viewer</h5></div></a></div>
 <div class="col-md-3 p-3"><a href="/kml-viewer"><div class="calculator-box text-center"><h5>KML Viewer</h5></div></a></div>
+<div class="col-md-3 p-3"><a href="/kmz-viewer"><div class="calculator-box text-center"><h5>KMZ Viewer</h5></div></a></div>
 <div class="col-md-3 p-3"><a href="/geojson-viewer"><div class="calculator-box text-center"><h5>Geojson Viewer</h5></div></a></div>
-<hr>
 
-<!-- <div class="col-md-3 p-3"><a href="/gpx-to-kml-converter"><div class="calculator-box text-center"><h5>GPX to KML</h5></div></a></div>
+
+<!-- 
+<hr>
+<div class="col-md-3 p-3"><a href="/gpx-to-kml-converter"><div class="calculator-box text-center"><h5>GPX to KML</h5></div></a></div>
 <div class="col-md-3 p-3"><a href="/gpx-to-geojson-converter"><div class="calculator-box text-center"><h5>GPX to GeoJSON</h5></div></a></div>
 <div class="col-md-3 p-3"><a href="/geojson-to-gpx-converter"><div class="calculator-box text-center"><h5>GeoJSON to GPX</h5></div></a></div>
 <div class="col-md-3 p-3"><a href="/kml-to-geojson-converter"><div class="calculator-box text-center"><h5>KML to GeoJSON</h5></div></a></div>

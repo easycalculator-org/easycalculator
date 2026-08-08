@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#f8fbff"/>
+    <stop offset="100%" stop-color="#edf5ff"/>
+  </linearGradient>
+  <filter id="shadow">
+    <feDropShadow dx="0" dy="6" stdDeviation="10" flood-opacity=".18"/>
+  </filter>
+</defs>
+
+<!-- Background -->
+<rect width="512" height="512" rx="32" fill="url(#bg)"/>
+
+<!-- Card -->
+<rect x="36" y="36" width="440" height="440" rx="24" fill="#fff" filter="url(#shadow)"/>
+
+<!-- Header -->
+<rect x="36" y="36" width="440" height="64" rx="24" fill="#16a34a"/>
+<text x="256" y="76" font-size="24" font-family="Arial" font-weight="700"
+      fill="#fff" text-anchor="middle">KML Viewer</text>
+
+<!-- Map Grid -->
+<g stroke="#dcfce7" stroke-width="1">
+  <line x1="80" y1="140" x2="432" y2="140"/>
+  <line x1="80" y1="190" x2="432" y2="190"/>
+  <line x1="80" y1="240" x2="432" y2="240"/>
+  <line x1="80" y1="290" x2="432" y2="290"/>
+  <line x1="80" y1="340" x2="432" y2="340"/>
+  <line x1="120" y1="120" x2="120" y2="360"/>
+  <line x1="180" y1="120" x2="180" y2="360"/>
+  <line x1="240" y1="120" x2="240" y2="360"/>
+  <line x1="300" y1="120" x2="300" y2="360"/>
+  <line x1="360" y1="120" x2="360" y2="360"/>
+  <line x1="420" y1="120" x2="420" y2="360"/>
+</g>
+
+<!-- KML polygon / area -->
+<path d="M92 315 L145 205 L225 235 L285 165 L360 205 L425 145 L430 300 L355 335 L280 305 L205 350 Z"
+      fill="#22c55e" opacity=".18" stroke="#16a34a" stroke-width="4"/>
+<path d="M92 315 L145 205 L225 235 L285 165 L360 205 L425 145"
+      fill="none" stroke="#16a34a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+<!-- KML path -->
+<path d="M105 330 C150 280 170 220 225 235 C275 250 300 165 355 205 C380 220 405 175 425 145"
+      fill="none" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
+
+<!-- Start -->
+<circle cx="105" cy="330" r="12" fill="#22c55e"/>
+<circle cx="105" cy="330" r="22" fill="none" stroke="#22c55e" stroke-width="4" opacity=".25"/>
+
+<!-- KML placemarks -->
+<circle cx="170" cy="220" r="7" fill="#f59e0b"/>
+<circle cx="225" cy="235" r="7" fill="#f59e0b"/>
+<circle cx="300" cy="165" r="7" fill="#f59e0b"/>
+
+<!-- Location pin -->
+<path d="M408 165 C408 145 424 130 442 130 C460 130 476 145 476 165
+         C476 194 442 226 442 226 C442 226 408 194 408 165Z"
+      fill="#16a34a"/>
+<circle cx="442" cy="165" r="9" fill="#fff"/>
+
+<!-- Upload Icon -->
+<circle cx="95" cy="415" r="24" fill="#f0fdf4"/>
+<path d="M95 425 V398 M85 408 L95 398 L105 408 M80 425 H110"
+      fill="none" stroke="#16a34a" stroke-width="4"
+      stroke-linecap="round" stroke-linejoin="round"/>
+
+<!-- KML Badge -->
+<rect x="165" y="390" width="182" height="48" rx="24"
+      fill="#f0fdf4" stroke="#bbf7d0"/>
+<text x="256" y="421" font-size="24" font-family="Arial" font-weight="700"
+      fill="#16a34a" text-anchor="middle">.KML</text>
+
+<!-- Map / globe icon -->
+<circle cx="410" cy="415" r="26" fill="#f0fdf4" stroke="#bbf7d0"/>
+<circle cx="410" cy="415" r="14" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+<path d="M396 415 H424 M410 401 C403 408 403 422 410 429 M410 401 C417 408 417 422 410 429"
+      fill="none" stroke="#16a34a" stroke-width="2"/>
+<text x="410" y="450" text-anchor="middle" font-size="11"
+      font-family="Arial" fill="#64748b">MAP</text>
+</svg>
