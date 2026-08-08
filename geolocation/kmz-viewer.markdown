@@ -12,7 +12,13 @@ last_modified_at: 2026-07-08
  .drop-zone{border:2px dashed #d0d7de;border-radius:12px;padding:2rem 1.5rem;text-align:center;cursor:pointer;transition:all .3s;background:#fafbfc}.drop-zone:hover,.drop-zone.dragover{border-color:#2c7be5;background:#f0f7ff}.drop-zone i{font-size:3rem;color:#8b9aab}#map-container{position:relative;border-radius:16px;overflow:hidden;background:#e8ecf1}#map{width:100%;height:480px;background:#e8ecf1}.map-controls{position:absolute;top:16px;right:16px;z-index:1000;display:flex;flex-direction:column;gap:8px}.map-controls .btn-map{background:#ffffffeb;backdrop-filter:blur(4px);border:none;border-radius:10px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#2c3e50;box-shadow:0 2px 10px #0000001a;transition:all .2s}.map-controls .btn-map:hover{background:#fff;transform:scale(1.04)}.empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#8b9aab}.empty-state i{font-size:3.5rem;color:#c8d0d8;margin-bottom:.75rem}.stat-divider{width:1px;background:#e9edf2;margin:0 .5rem}.toast-container{position:fixed;top:80px;right:20px;z-index:9999}.toast-custom{background:#fff;border-radius:12px;border:none;box-shadow:0 8px 32px #0000001f;padding:.75rem 1.25rem;min-width:240px}.toast-custom .toast-body{display:flex;align-items:center;gap:10px;font-size:.9rem;color:#1a2a3a}.toast-custom .toast-body i{font-size:1.3rem}.toast-custom.toast-success .toast-body i{color:#28a745}.toast-custom.toast-error .toast-body i{color:#dc3545}.feature-table-wrap{max-height:240px;overflow-y:auto}.feature-table-wrap table{margin-bottom:0}.feature-row{cursor:pointer;transition:background .15s}.feature-row:hover{background:#f0f7ff}.feature-row.active{background:#cfe2ff}@media (max-width: 768px){#map{height:360px}.drop-zone{padding:1.5rem 1rem}.drop-zone i{font-size:2.2rem}.map-controls .btn-map{width:38px;height:38px;font-size:1rem}.stat-divider{display:none}}@media (max-width: 576px){#map{height:280px}}
 </style>
 
-
+<div aria-label="breadcrumb" class="p-3">
+ <ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li>
+  <li class="breadcrumb-item active" aria-current="page">KMZ Viewer</li>
+ </ol>
+</div>
 
 <!-- Upload Card -->
 <div class="card border-0 shadow-sm p-3 p-md-4 rounded-4">

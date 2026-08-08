@@ -2,7 +2,7 @@
 layout: default
 title: Geojson Viewer | View Geojson Files Online on Interactive Map
 permalink: /geojson-viewer
-description: "View Geojson files online with our free Geojson Viewer. Display GPS tracks, routes, and waypoints on an interactive map, inspect coordinates, elevation, distance, and export data instantly."
+description: "View GeoJSON files online with an interactive map. Upload and explore points, lines, polygons, coordinates, and geographic features."
 image: "/assets/images/og/geojson-viewer.jpg"
 last_modified_at: 2026-07-08
 ---
