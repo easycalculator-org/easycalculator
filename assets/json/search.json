@@ -306,6 +306,32 @@
     "url": "/fraction-to-decimal-calculator",
     "content": "fraction calculator add subtract multiply divide simplify lcm fractions"
   },
+
+   {
+    "id": "kml-viewer",
+    "title": "KML Viewer",
+    "url": "/kml-viewer",
+    "content": "kml viewer "
+  },
+   {
+    "id": "KMZ Viewer",
+    "title": "KMZ Viewer",
+    "url": "/kmz-viewer",
+    "content": "kmz viewer "
+  },
+   {
+    "id": "GPX Viewer",
+    "title": "GPX Viewer",
+    "url": "/gpx-viewer",
+    "content": "gpx viewer "
+  },
+   {
+    "id": "geojson-viewer",
+    "title": "GeoJSON Viewer",
+    "url": "/geojson-viewer",
+    "content": "geojson viewer "
+  },
+
    {
     "id": "Military Grid Reference System Converter MGRS",
     "title": "Military Grid Reference System Converter MGRS",
