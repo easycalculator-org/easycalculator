@@ -206,3 +206,49 @@
                 });
             }
         });
+
+
+        document.getElementById("resetCagr").addEventListener("click", function () {
+
+    // Reset form
+    document.getElementById("cagrForm").reset();
+
+    // Reset sliders
+    document.getElementById("initialValueSlider").value = 0;
+    document.getElementById("finalValueSlider").value = 0;
+    document.getElementById("yearsSlider").value = 1;
+
+    // Reset slider labels
+    document.getElementById("initialValueDisplay").textContent = "₹0";
+    document.getElementById("finalValueDisplay").textContent = "₹0";
+    document.getElementById("yearsDisplay").textContent = "1 year";
+
+    // Hide result
+    document.getElementById("resultSection").style.display = "none";
+
+    // Clear yearly table
+    document.getElementById("growthTableBody").innerHTML = "";
+
+    // Reset result metrics if available
+    const initialResult = document.getElementById("resultInitialValue");
+    const finalResult = document.getElementById("resultFinalValue");
+    const growthResult = document.getElementById("resultGrowth");
+
+    if (initialResult) initialResult.textContent = "₹0";
+    if (finalResult) finalResult.textContent = "₹0";
+    if (growthResult) growthResult.textContent = "0%";
+
+    // Reset CAGR
+    document.getElementById("cagrResult").textContent = "0.00%";
+
+    document.getElementById("investmentSummary").textContent =
+        "Your investment grew from ₹0 to ₹0 over 0 years.";
+
+    // Destroy existing chart if your JS exposes it globally
+    if (typeof growthChart !== "undefined" && growthChart) {
+        try {
+            growthChart.destroy();
+        } catch (e) {}
+    }
+
+});
