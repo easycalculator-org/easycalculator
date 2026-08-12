@@ -27,7 +27,6 @@ last_modified_at: 2026-02-03
             <canvas id="breakdownChart"></canvas>  
         </div>
           </div>
-
           <div class="row mb-3 py-4">
             <div class="col-md-4">
                 <h4>Monthly EMI: <span id="monthlyEMI" class="text-primary"></span></h4>
@@ -39,10 +38,6 @@ last_modified_at: 2026-02-03
                 <h4>Total Payment: <span id="totalPayment" class="text-primary"></span></h4>
             </div>
         </div>
-
-
-   
-
     <h4>Amortization Schedule</h4>
     <table class="table table-striped bordered">
         <thead>

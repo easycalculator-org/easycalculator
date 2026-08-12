@@ -6,37 +6,8 @@ description: "Free online Loan EMI Calculator with chart and amortization table.
 last_modified_at: 2026-02-03
 ---
 <style>
- .calculator-container {
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        .payment-breakdown {
-            max-height: 400px;
-            overflow-y: auto;
-            margin-bottom: 20px;
-        }
-        .table thead th {
-            position: sticky;
-            top: 0;
-            background-color: #e9ecef;
-        }
-        .term-option {
-            display: flex;
-            align-items: center;
-        }
-        .term-option input[type="radio"] {
-            margin-right: 5px;
-        }
-        #chartPlaceholder {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
+ .calculator-container{background-color:#f8f9fa;border-radius:10px;padding:20px;box-shadow:0 0 15px #0000001a;margin-bottom:20px}.payment-breakdown{max-height:400px;overflow-y:auto;margin-bottom:20px}.table thead th{position:sticky;top:0;background-color:#e9ecef}.term-option{display:flex;align-items:center}.term-option input[type="radio"]{margin-right:5px}#chartPlaceholder{height:100%;display:flex;justify-content:center;align-items:center}
+</style>
 <!-- Loan input -->
 <div class="row">
 <h1 class="text-center">Loan Calculator</h1>

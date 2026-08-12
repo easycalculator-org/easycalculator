@@ -7,23 +7,8 @@ description: "Use our SIP calculator to estimate your mutual fund returns with e
 last_modified_at: 2026-02-03
 ---
  <style>
-        .form-range::-webkit-slider-thumb {
-            background: #0d6efd;
-        }
-        .form-range::-moz-range-thumb {
-            background: #0d6efd;
-        }
-        .card-header {
-            border-radius: 0.375rem 0.375rem 0 0 !important;
-        }
-        .input-group-text {
-            min-width: 40px;
-            justify-content: center;
-        }
-        .table-hover tbody tr:hover {
-            background-color: rgba(13, 110, 253, 0.1);
-        }
-    </style>
+  .form-range::-webkit-slider-thumb{background:#0d6efd}.form-range::-moz-range-thumb{background:#0d6efd}.card-header{border-radius:.375rem .375rem 0 0!important}.input-group-text{min-width:40px;justify-content:center}.table-hover tbody tr:hover{background-color:#0d6efd1a}    
+  </style>
 <div class="row justify-content-center">
  <div class="col-lg-9">
    <div class="card shadow border-0">

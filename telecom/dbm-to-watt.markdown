@@ -9,44 +9,7 @@ last_modified_at: 2026-04-22
 
 
 <style>
-.toggle-switch {
-  display: flex;
-  background: #f1f3f5;
-  border-radius: 50px;
-  padding: 5px;
-  gap: 5px;
-}
-
-.toggle-btn {
-  flex: 1;
-  border: none;
-  padding: 10px;
-  border-radius: 50px;
-  font-weight: 600;
-  background: transparent;
-  color: #555;
-  cursor: pointer;
-  transition: 0.25s;
-}
-
-.toggle-btn.active {
-  background: #0d6efd;
-  color: #fff;
-}
-
-.toggle-btn:hover {
-  background: #e2e6ea;
-}
-
-/* RESULT DESIGN */
-.result-text {
-  font-size: 34px;
-  font-weight: 700;
-  padding: 15px;
-  border-radius: 12px;
-  background: #f8f9fa;
-  transition: transform 0.15s ease;
-}
+.toggle-switch{display:flex;background:#f1f3f5;border-radius:50px;padding:5px;gap:5px}.toggle-btn{flex:1;border:none;padding:10px;border-radius:50px;font-weight:600;background:transparent;color:#555;cursor:pointer;transition:.25s}.toggle-btn.active{background:#0d6efd;color:#fff}.toggle-btn:hover{background:#e2e6ea}.result-text{font-size:34px;font-weight:700;padding:15px;border-radius:12px;background:#f8f9fa;transition:transform .15s ease}
 </style>
 <div class="mt-5">
 <h1 class="text-center mb-4 fw-bold">dBm to Watt & Watt to dBm Converter</h1>

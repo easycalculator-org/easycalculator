@@ -15,73 +15,8 @@ last_modified_at: 2026-05-24
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
   <style>
- 
-    .offcanvas { border-right: 1px solid #e2e8f0; }
-    .chart-container {
-      position: relative;
-      width: 100%;
-      height: 70vh;
-      min-height: 350px;
-      max-height: 800px;
-      border-radius: 20px;
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      overflow: visible;   /* keep outside labels visible */
-    }
-    canvas { display: block; }
-    .sidebar-inner {
-      padding: 1.2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-    .section-title {
-      font-weight: 700;
-      color: #1e293b;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 1rem;
-    }
-    .section-title::before {
-      content: '';
-      width: 4px;
-      height: 18px;
-      background: #2563eb;
-      border-radius: 4px;
-    }
-    .table-wrapper {
-      max-height: 300px;
-      overflow: auto;
-      border-radius: 14px;
-      border: 1px solid #dee2e6;
-    }
-    .table th { font-size: 0.8rem; font-weight: 700; background: #f8f9fa; }
-    .table td { vertical-align: middle; font-size: 0.85rem; }
-    td[contenteditable="true"] {
-      outline: none;
-      border-radius: 6px;
-      padding: 0.4rem 0.6rem;
-    }
-    td[contenteditable="true"]:focus {
-      background: #e6f0ff;
-      box-shadow: inset 0 0 0 2px #3b82f6;
-    }
-    .color-picker {
-      width: 40px;
-      height: 28px;
-      border: none;
-      background: none;
-      cursor: pointer;
-      border-radius: 6px;
-    }
-    .live-badge {
-      font-size: 0.8rem;
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-    }
-    .form-label.small { font-size: 0.75rem; margin-bottom: 2px; }
-  </style>
+ .offcanvas{border-right:1px solid #e2e8f0}.chart-container{position:relative;width:100%;height:70vh;min-height:350px;max-height:800px;border-radius:20px;background:#fff;border:1px solid #e2e8f0;overflow:visible}canvas{display:block}.sidebar-inner{padding:1.2rem;display:flex;flex-direction:column;gap:1.2rem}.section-title{font-weight:700;color:#1e293b;display:flex;align-items:center;gap:.5rem;font-size:1rem}.section-title::before{content:'';width:4px;height:18px;background:#2563eb;border-radius:4px}.table-wrapper{max-height:300px;overflow:auto;border-radius:14px;border:1px solid #dee2e6}.table th{font-size:.8rem;font-weight:700;background:#f8f9fa}.table td{vertical-align:middle;font-size:.85rem}td[contenteditable="true"]{outline:none;border-radius:6px;padding:.4rem .6rem}td[contenteditable="true"]:focus{background:#e6f0ff;box-shadow:inset 0 0 0 2px #3b82f6}.color-picker{width:40px;height:28px;border:none;background:none;cursor:pointer;border-radius:6px}.live-badge{font-size:.8rem;padding:.3rem .8rem;border-radius:20px}.form-label.small{font-size:.75rem;margin-bottom:2px}
+ </style>
 
 
   

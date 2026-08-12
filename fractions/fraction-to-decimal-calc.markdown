@@ -7,40 +7,7 @@ last_modified_at: 2026-03-08
 ---
 
 <style>
-
-.fraction{
-display:inline-flex;
-flex-direction:column;
-align-items:center;
-width:70px
-}
-
-.fraction input{
-text-align:center;
-border:0;
-border-bottom:1px solid #ccc;
-font-weight:600
-}
-
-.fraction-bar{
-width:100%;
-border-top:2px solid #000;
-margin:3px 0
-}
-
-.result-box{
-background:#fff;
-padding:20px;
-border-radius:12px;
-box-shadow:0 4px 12px rgba(0,0,0,0.05);
-text-align:center
-}
-
-.result-fraction{
-font-size:28px;
-font-weight:bold
-}
-
+.fraction{display:inline-flex;flex-direction:column;align-items:center;width:70px}.fraction input{text-align:center;border:0;border-bottom:1px solid #ccc;font-weight:600}.fraction-bar{width:100%;border-top:2px solid #000;margin:3px 0}.result-box{background:#fff;padding:20px;border-radius:12px;box-shadow:0 4px 12px #0000000d;text-align:center}.result-fraction{font-size:28px;font-weight:700}
 </style>
 
 

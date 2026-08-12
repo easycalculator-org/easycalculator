@@ -8,62 +8,8 @@ last_modified_at: 2026-03-25
 ---
 
  <style>
-          .card-custom {
-            border: none;
-            border-radius: 2rem;
-            background: rgba(255,255,255,0.75);
-            backdrop-filter: blur(8px);
-            box-shadow: 0 30px 50px rgba(0,20,40,0.2), 0 10px 20px rgba(0,10,20,0.1);
-        }
-        .input-group-text {
-            background-color: white;
-            border-right: 0;
-        }
-        .form-control, .form-select {
-            border-left: 0;
-        }
-        .form-control:focus, .form-select:focus {
-            box-shadow: 0 0 0 0.2rem rgba(13,110,253,0.15);
-            border-color: #86b7fe;
-        }
-        .result-badge {
-            font-size: 1.1rem;
-            font-weight: 500;
-            background: #1e2b3f;
-            color: #c7e0ff;
-            padding: 0.9rem 1.8rem;
-            border-radius: 60px;
-            letter-spacing: 0.3px;
-        }
-        .eirp-value {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #0d6efd;
-            margin-left: 10px;
-        }
-        .unit-toggle {
-            cursor: default;
-            background-color: #f0f4fa;
-        }
-        .btn-primary-custom {
-            background: #0d6efd;
-            border: none;
-            border-radius: 40px;
-            padding: 12px 28px;
-            font-weight: 600;
-            transition: all 0.2s;
-        }
-        .btn-primary-custom:hover {
-            background: #0b5ed7;
-            transform: scale(1.02);
-            box-shadow: 0 8px 18px rgba(13,110,253,0.3);
-        }
-         #eirpWatt {
-            transition: background-color 0.2s ease, padding 0.1s;
-            padding: 0.2rem 0.5rem;
-            border-radius: 30px;
-        }
-    </style>
+ .card-custom{border:none;border-radius:2rem;background:#ffffffbf;backdrop-filter:blur(8px);box-shadow:0 30px 50px #00142833 0 10px 20px #000a141a}.input-group-text{background-color:#fff;border-right:0}.form-control,.form-select{border-left:0}.form-control:focus,.form-select:focus{box-shadow:0 0 0 .2rem #0d6efd26;border-color:#86b7fe}.result-badge{font-size:1.1rem;font-weight:500;background:#1e2b3f;color:#c7e0ff;padding:.9rem 1.8rem;border-radius:60px;letter-spacing:.3px}.eirp-value{font-size:2.2rem;font-weight:700;color:#0d6efd;margin-left:10px}.unit-toggle{cursor:default;background-color:#f0f4fa}.btn-primary-custom{background:#0d6efd;border:none;border-radius:40px;padding:12px 28px;font-weight:600;transition:all .2s}.btn-primary-custom:hover{background:#0b5ed7;transform:scale(1.02);box-shadow:0 8px 18px #0d6efd4d}#eirpWatt{transition:background-color .2s ease,padding .1s;padding:.2rem .5rem;border-radius:30px}
+  </style>
 <div class="container py-4">
    <div class="card card-custom p-4 p-xl-5">
     <div class="card-body">

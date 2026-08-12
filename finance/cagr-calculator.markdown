@@ -7,91 +7,15 @@ image: "/assets/images/cagr-calculator.png"
 last_modified_at: 2026-02-03
 ---
 <style>
-        .calculator-card {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            border-radius: 15px;
-            border: none;
-            overflow: hidden;
-        }
-        .card-header {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
-            padding: 20px;
-        }
-        .result-display {
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
-            color: white;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            margin-top: 20px;
-            display: none;
-        }
-        .form-label {
-            font-weight: 500;
-            color: #2c3e50;
-        }
-        .input-group-text {
-            background-color: #f8f9fa;
-        }
-        .slider-value {
-            font-weight: 600;
-            color: #3498db;
-            min-width: 50px;
-            text-align: center;
-        }
-        .btn-calculate {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            border: none;
-            padding: 12px 24px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        .btn-calculate:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        .cagr-formula {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 15px;
-            font-family: monospace;
-        }
-        .growth-table {
-            font-size: 0.9rem;
-        }
-        .growth-table th {
-            background-color: #6a11cb;
-            color: white;
-        }
-        .table-responsive {
-            max-height: 300px;
-            overflow-y: auto;
-        }
-        .chart-container {
-            position: relative;
-            height: 300px;
-            margin-top: 30px;
-        }
-        .tab-content {
-            padding: 20px 0;
-        }
-        .nav-tabs .nav-link {
-            color: #495057;
-            font-weight: 500;
-        }
-        .nav-tabs .nav-link.active {
-            color: #6a11cb;
-            font-weight: 600;
-        }
-    </style>
+ .calculator-card{box-shadow:0 10px 30px #00000026;border-radius:15px;border:none;overflow:hidden}.card-header{background:linear-gradient(135deg,#6a11cb 0%,#2575fc 100%);color:#fff;padding:20px}.result-display{background:linear-gradient(135deg,#2ecc71 0%,#27ae60 100%);color:#fff;border-radius:12px;padding:20px;text-align:center;margin-top:20px;display:none}.form-label{font-weight:500;color:#2c3e50}.input-group-text{background-color:#f8f9fa}.slider-value{font-weight:600;color:#3498db;min-width:50px;text-align:center}.btn-calculate{background:linear-gradient(135deg,#6a11cb 0%,#2575fc 100%);border:none;padding:12px 24px;font-weight:600;transition:all .3s}.btn-calculate:hover{transform:translateY(-2px);box-shadow:0 5px 15px #0000001a}.cagr-formula{background-color:#f8f9fa;border-radius:8px;padding:15px;font-family:monospace}.growth-table{font-size:.9rem}.growth-table th{background-color:#6a11cb;color:#fff}.table-responsive{max-height:300px;overflow-y:auto}.chart-container{position:relative;height:300px;margin-top:30px}.tab-content{padding:20px 0}.nav-tabs .nav-link{color:#495057;font-weight:500}.nav-tabs .nav-link.active{color:#6a11cb;font-weight:600}     
+</style>
  <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10 col-md-12">
-                <div class="calculator-card card">
-                    <div class="card-header">
-                        <h2 class="text-center mb-0"><i class="fas fa-chart-line me-2"></i>Advanced CAGR Calculator</h2>
-                    </div>
+   <div class="row justify-content-center">
+     <div class="col-lg-10 col-md-12">
+       <div class="calculator-card card">
+         <div class="card-header">
+           <h2 class="text-center mb-0"><i class="fas fa-chart-line me-2"></i>Advanced CAGR Calculator</h2>
+            </div>
                     <div class="card-body p-4">
                         <p class="text-muted text-center">Calculate the Compound Annual Growth Rate of your investments</p>
                         <form id="cagrForm" class="mt-4">
@@ -143,9 +67,7 @@ last_modified_at: 2026-02-03
                                 </div>
                             </div>
                             <div class="text-center mt-4">
-                                <button type="submit" class="btn btn-primary btn-lg ">
-                                    <i class="fas fa-calculator me-2"></i>Calculate CAGR
-                                </button>
+                              <button type="submit" class="btn btn-primary btn-lg "><i class="fas fa-calculator me-2"></i>Calculate CAGR</button>
                             </div>
                         </form>
                         <div class="result-display" id="resultSection">
@@ -153,30 +75,18 @@ last_modified_at: 2026-02-03
                             <h1 id="cagrResult" class="display-4 fw-bold my-3">0.00%</h1>
                             <p id="investmentSummary" class="mb-0">Your investment grew from $0 to $0 over 0 years</p>
                         </div>
-                        <!-- Tabs for additional information -->
-                        <ul class="nav nav-tabs mt-5" id="cagrTabs" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="growth-tab" data-bs-toggle="tab" data-bs-target="#growth" type="button" role="tab" aria-controls="growth" aria-selected="true">
-                                    <i class="fas fa-table me-2"></i>Yearly Growth
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="chart-tab" data-bs-toggle="tab" data-bs-target="#chart" type="button" role="tab" aria-controls="chart" aria-selected="false">
-                                    <i class="fas fa-chart-bar me-2"></i>Growth Chart
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="formula-tab" data-bs-toggle="tab" data-bs-target="#formula" type="button" role="tab" aria-controls="formula" aria-selected="false">
-                                    <i class="fas fa-info-circle me-2"></i>About CAGR
-                                </button>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="cagrTabContent">
-                            <div class="tab-pane fade show active" id="growth" role="tabpanel" aria-labelledby="growth-tab">
-                                <div class="table-responsive">
-                                    <table class="table table-striped table-hover growth-table">
-                                        <thead>
-                                            <tr>
+ <!-- Tabs for additional information -->
+   <ul class="nav nav-tabs mt-5" id="cagrTabs" role="tablist">
+     <li class="nav-item" role="presentation"><button class="nav-link active" id="growth-tab" data-bs-toggle="tab" data-bs-target="#growth" type="button" role="tab" aria-controls="growth" aria-selected="true"> <i class="fas fa-table me-2"></i>Yearly Growth</button></li>
+      <li class="nav-item" role="presentation"><button class="nav-link" id="chart-tab" data-bs-toggle="tab" data-bs-target="#chart" type="button" role="tab" aria-controls="chart" aria-selected="false"><i class="fas fa-chart-bar me-2"></i>Growth Chart</button></li>
+       <li class="nav-item" role="presentation"><button class="nav-link" id="formula-tab" data-bs-toggle="tab" data-bs-target="#formula" type="button" role="tab" aria-controls="formula" aria-selected="false"><i class="fas fa-info-circle me-2"></i>About CAGR</button></li>
+     </ul>
+ <div class="tab-content" id="cagrTabContent">
+     <div class="tab-pane fade show active" id="growth" role="tabpanel" aria-labelledby="growth-tab">
+           <div class="table-responsive">
+               <table class="table table-striped table-hover growth-table">
+                    <thead>
+                            <tr>
                                                 <th>Year</th>
                                                 <th>Starting Value</th>
                                                 <th>Ending Value</th>
@@ -203,11 +113,11 @@ last_modified_at: 2026-02-03
                                     CAGR = (Final Value / Initial Value)<sup>(1 / Number of Years)</sup> - 1
                                 </div>
                                 <h5 class="mt-3">Why use CAGR?</h5>
-                                <ul>
-                                    <li>It provides a smoothed annual rate of growth</li>
-                                    <li>Eliminates the effect of volatility and periodic returns</li>
-                                    <li>Allows for easy comparison between different investments</li>
-                                </ul>
+          <ul>
+           <li>It provides a smoothed annual rate of growth</li>
+           <li>Eliminates the effect of volatility and periodic returns</li>
+           <li>Allows for easy comparison between different investments</li>
+          </ul>
                             </div>
                         </div>
                     </div>
@@ -241,18 +151,20 @@ last_modified_at: 2026-02-03
 
 
 <!-- Formula Section -->
- <section class="mb-5 bg-light p-4" >
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <h2 class="text-primary mb-4">CAGR Formula and How to Calculate</h2>
-                    <p class="mb-4">The CAGR formula is:</p>
-                    <div class="card bg-light">
-                        <div class="card-body text-center bg-info-subtle"><h3 class="text-success">CAGR = (FV/PV)<sup>1/n</sup> - 1</h3></div>
-                    </div>
-                    <div class="mt-4"> <h5 class="text-primary">Where:</h5><ul class="list-group"><li class="list-group-item"><strong>FV</strong> = Final Value of investment</li><li class="list-group-item"><strong>PV</strong> = Initial Value of investment</li> <li class="list-group-item"><strong>n</strong> = Number of years</li></ul></div>
-                </div>
-            </div>
-    </section>
+<section class="mb-5 bg-light p-4" >
+ <div class="row">
+  <div class="col-lg-10 mx-auto">
+   <h2 class="text-primary mb-4">CAGR Formula and How to Calculate</h2>
+   <p class="mb-4">The CAGR formula is:</p>
+   <div class="card bg-light">
+   <div class="card-body text-center bg-info-subtle"><h3 class="text-success">CAGR = (FV/PV)<sup>1/n</sup> - 1</h3></div>
+   </div>
+   <div class="mt-4">
+   <h5 class="text-primary">Where:</h5>
+   <ul class="list-group"><li class="list-group-item"><strong>FV</strong> = Final Value of investment</li><li class="list-group-item"><strong>PV</strong> = Initial Value of investment</li> <li class="list-group-item"><strong>n</strong> = Number of years</li></ul></div>
+   </div>
+   </div>
+  </section>
 
  <!-- Examples Section -->
 <section class="mb-5">
@@ -316,8 +228,8 @@ last_modified_at: 2026-02-03
 
 
 <div class="card border-light shadow-sm mb-4 p-4">
-    <div class="card-body">
-    <h2>CAGR vs Other Growth Metrics</h2>
+  <div class="card-body">
+   <h2>CAGR vs Other Growth Metrics</h2>
 <p>CAGR is powerful, but how does it compare with other metrics?</p>
 <ul>
 <li><p><strong>ROI (Return on Investment):</strong> Simple percentage gain, but doesn&rsquo;t reflect time.</p></li>
@@ -385,73 +297,44 @@ last_modified_at: 2026-02-03
                                 </div>
                             </div>
                         </div>
-                        <!-- Scenario 4 -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100">
-                                <div class="card-header bg-success text-white">
-                                    <h5 class="mb-0">4. Real Estate Investments</h5>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">
-                                        Property value appreciation is best evaluated with the <strong>compound annual growth calculator</strong> instead of raw price increase.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Step-by-Step Section -->
-        <section class="mb-5">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="text-primary mb-4">Step-by-Step: How to Calculate CAGR</h2>
-                    <div class="card">
-                        <div class="card-body">
-                            <ol class="list-group list-group-numbered">
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
-                                    <div class="ms-2 me-auto">
-                                        <div class="fw-bold">Identify your Initial Investment (PV)</div>
-                                        The starting value of your investment
-                                    </div>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
-                                    <div class="ms-2 me-auto">
-                                        <div class="fw-bold">Check the Final Value (FV) after the chosen time</div>
-                                        The ending value of your investment
-                                    </div>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
-                                    <div class="ms-2 me-auto">
-                                        <div class="fw-bold">Note the number of years (n)</div>
-                                        The investment period in years
-                                    </div>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
-                                    <div class="ms-2 me-auto">
-                                        <div class="fw-bold">Apply the CAGR formula or use a CAGR calculation Excel sheet</div>
-                                        Use the formula: CAGR = (FV/PV)<sup>1/n</sup> - 1
-                                    </div>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
-                                    <div class="ms-2 me-auto">
-                                        <div class="fw-bold">Or simply enter values in an online CAGR calculator for quick results</div>
-                                        Use online tools for faster calculation
-                                    </div>
-                                </li>
-                            </ol>
-                            <div class="alert alert-warning mt-4">
-                                <h5 class="alert-heading">👉 Pro Tip</h5>
-                                <p class="mb-0">
-                                    If you are an Excel user, try the <strong>CAGR formula Excel function</strong> to analyze multiple investments at once.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- Scenario 4 -->
+     <div class="col-md-6 mb-4">
+       <div class="card h-100">
+       <div class="card-header bg-success text-white">
+         <h5 class="mb-0">4. Real Estate Investments</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Property value appreciation is best evaluated with the <strong>compound annual growth calculator</strong> instead of raw price increase. </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    </section>
+<!-- Step-by-Step Section -->
+<section class="mb-5">
+ <div class="row">
+ <div class="col-lg-8 mx-auto">
+  <h2 class="text-primary mb-4">Step-by-Step: How to Calculate CAGR</h2>
+  <div class="card">
+   <div class="card-body">
+   <ol class="list-group list-group-numbered">
+    <li class="list-group-item d-flex justify-content-between align-items-start"><div class="ms-2 me-auto"><div class="fw-bold">Identify your Initial Investment (PV)</div>The starting value of your investment</div></li>
+    <li class="list-group-item d-flex justify-content-between align-items-start"><div class="ms-2 me-auto"> <div class="fw-bold">Check the Final Value (FV) after the chosen time</div>  The ending value of your investment </div> </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start"><div class="ms-2 me-auto"><div class="fw-bold">Note the number of years (n)</div>The investment period in years </div> </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start"><div class="ms-2 me-auto"> <div class="fw-bold">Apply the CAGR formula or use a CAGR calculation Excel sheet</div>  Use the formula: CAGR = (FV/PV)<sup>1/n</sup> - 1</div> </li>
+   <li class="list-group-item d-flex justify-content-between align-items-start"><div class="ms-2 me-auto"><div class="fw-bold">Or simply enter values in an online CAGR calculator for quick results</div>Use online tools for faster calculation</div></li>
+ </ol>
+   <div class="alert alert-warning mt-4">
+    <h5 class="alert-heading">👉 Pro Tip</h5>
+      <p class="mb-0">If you are an Excel user, try the <strong>CAGR formula Excel function</strong> to analyze multiple investments at once.</p>
+     </div>
+     </div>
+     </div>
+     </div>
+    </div>
+  </section>
 
  
 

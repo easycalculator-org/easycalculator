@@ -8,64 +8,7 @@ last_modified_at: 2026-04-02
 
 
 <style>
-*{font-family:'Inter',sans-serif}
-
-.card-custom{
-  background:rgba(255,255,255,0.7);
-  backdrop-filter:blur(12px);
-  border-radius:24px;
-  border:1px solid rgba(255,255,255,0.4);
-  box-shadow:0 20px 40px rgba(0,0,0,0.1);
-}
-
-.distance-badge{
-  background:linear-gradient(135deg,#2563eb,#1e3a8a);
-  color:#fff;
-  border-radius:50px;
-  padding:8px 18px;
-  font-weight:600;
-  animation:pulse 2s infinite;
-}
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(37,99,235,.5)}
-  70%{box-shadow:0 0 0 12px rgba(37,99,235,0)}
-}
-
-/* Inputs */
-.coord-input{
-  border-radius:14px;
-  height:42px;
-}
-.coord-input:focus{
-  transform:scale(1.05);
-}
-
-.btn-custom{
-  border-radius:30px;
-  font-weight:600;
-}
-.btn-custom:hover{
-  transform:translateY(-2px);
-}
-
-/* Canvas */
-canvas{
-  background:linear-gradient(#fff,#f1f5f9);
-  border-radius:20px;
-  box-shadow:0 15px 30px rgba(0,0,0,0.1);
-  cursor:crosshair;
-}
-
-.stat-box{
-  background:#fff;
-  border-radius:14px;
-  padding:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.05);
-}
-
-@media(max-width:576px){
-  .btn-custom{font-size:12px}
-}
+.card-custom{background:#ffffffb3;backdrop-filter:blur(12px);border-radius:24px;border:1px solid #fff6;box-shadow:0 20px 40px #0000001a}.distance-badge{background:linear-gradient(135deg,#2563eb,#1e3a8a);color:#fff;border-radius:50px;padding:8px 18px;font-weight:600;animation:pulse 2s infinite}@keyframes pulse{0%{box-shadow:0 0 0 0 #2563eb80}70%{box-shadow:0 0 0 12px #2563eb00}}.coord-input{border-radius:14px;height:42px}.coord-input:focus{transform:scale(1.05)}.btn-custom{border-radius:30px;font-weight:600}.btn-custom:hover{transform:translateY(-2px)}canvas{background:linear-gradient(#fff,#f1f5f9);border-radius:20px;box-shadow:0 15px 30px #0000001a;cursor:crosshair}.stat-box{background:#fff;border-radius:14px;padding:10px;box-shadow:0 5px 15px #0000000d}@media(max-width:576px){.btn-custom{font-size:12px}}
 </style>
 
 

@@ -6,54 +6,7 @@ description: "Use our free Gratuity Calculator India to calculate your gratuity 
 last_modified_at: 2026-04-01
 ---
 <style>
-.formula-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 20px;
-  border: 1px solid #e5eaf2;
-  transition: 0.2s ease;
-}
-.formula-card:hover {
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-.formula-box {
-  background: #f1f5ff;
-  padding: 12px;
-  border-radius: 10px;
-  font-weight: 600;
-  color: #1e3a8a;
-  text-align: center;
-}
-.section-title {
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.example-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 20px;
-  border: 1px solid #e5eaf2;
-  transition: 0.2s;
-}
-.example-card:hover {
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-.example-result {
-  background: #ecfdf5;
-  padding: 10px 14px;
-  border-radius: 8px;
-  font-weight: 600;
-  color: #065f46;
-}
-.example-title {
-  font-weight: 600;
-}
-.note-box {
-  background: #fff7ed;
-  padding: 12px;
-  border-radius: 8px;
-  font-size: 14px;
-}
+.formula-card{background:#fff;border-radius:16px;padding:20px;border:1px solid #e5eaf2;transition:.2s ease}.formula-card:hover{box-shadow:0 10px 25px #00000014}.formula-box{background:#f1f5ff;padding:12px;border-radius:10px;font-weight:600;color:#1e3a8a;text-align:center}.section-title{font-weight:700;margin-bottom:20px}.example-card{background:#fff;border-radius:16px;padding:20px;border:1px solid #e5eaf2;transition:.2s}.example-card:hover{box-shadow:0 10px 25px #00000014}.example-result{background:#ecfdf5;padding:10px 14px;border-radius:8px;font-weight:600;color:#065f46}.example-title{font-weight:600}.note-box{background:#fff7ed;padding:12px;border-radius:8px;font-size:14px}
 </style>
 
 

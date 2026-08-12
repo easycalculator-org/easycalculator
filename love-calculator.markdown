@@ -9,152 +9,16 @@ last_modified_at: 2026-04-22
 
 
 <style type="text/less">
- @primary-rose: #ff6b8b;
- @secondary-heart: #ff9eb5;
- @dark-romantic: #2d1e2f;
- @light-bg: #fff0f3;
- @shadow-sm: 0 8px 20px rgba(0,0,0,0.05);
- @border-radius-card: 2rem;
- @whatsapp-green: #25D366;
- @email-blue: #5D9CEC;
- .glass-card() {
-            background: rgba(255, 255, 255, 0.94);
-            backdrop-filter: blur(3px);
-            border-radius: @border-radius-card;
-            box-shadow: @shadow-sm;
-            border: 1px solid rgba(255, 255, 255, 0.6);
-        }
-  .love-card {
-            max-width: 680px;
-            width: 100%;
-            margin: 0 auto;
-            .glass-card();
-            padding: 2rem 1.8rem 2.5rem;
-            transition: transform 0.3s ease;
-            &:hover {
-                transform: scale(1.01);
-            }
-        }
-
-.subhead{color:#b35f7a;font-weight:400;font-size:.95rem;border-bottom:2px dashed #ffb7c7;display:inline-block;padding-bottom:4px}
-.result-area{margin-top:2rem;padding:1rem .5rem;text-align:center;border-radius:2rem;transition:all .3s ease}
-.love-percentage{font-size:3.8rem;font-weight:800;background:linear-gradient(135deg,#c43a5f,@primary-rose);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1.2}
-.message-box{background:#ffebf0b3;border-radius:60px;padding:.6rem 1.2rem;margin-top:1rem;font-weight:500;color:#ad4b6e}
-.heart-animation{font-size:2rem;animation:pulseHeart 1.2s infinite ease;display:inline-block}
-        .input-group-custom {
-            margin-bottom: 1.8rem;
-            label {
-                font-weight: 600;
-                color: #5e3a4a;
-                margin-bottom: 0.5rem;
-                display: flex;
-                align-items: center;
-                gap: 0.6rem;
-                i {
-                    color: @primary-rose;
-                    font-size: 1.3rem;
-                }
-            }
-            input {
-                border-radius: 60px !important;
-                border: 1.5px solid #ffe0e7;
-                background: white;
-                padding: 0.8rem 1.2rem;
-                font-weight: 500;
-                transition: all 0.2s;
-                &:focus {
-                    border-color: @primary-rose;
-                    box-shadow: 0 0 0 4px rgba(255, 107, 139, 0.2);
-                }
-            }
-        }
-
-        .btn-calculate {
-            background: linear-gradient(95deg, @primary-rose, #ff8aa8);
-            border: none;
-            padding: 12px 28px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.2rem;
-            letter-spacing: 1px;
-            color: white;
-            transition: all 0.2s;
-            box-shadow: 0 4px 12px rgba(255, 107, 139, 0.4);
-            &:hover {
-                transform: translateY(-3px);
-                background: linear-gradient(95deg, #ff5a7c, #ff7b9c);
-                box-shadow: 0 10px 20px rgba(255, 107, 139, 0.5);
-            }
-        }
-
-        /* Share  */
-        .share-section {
-            margin-top: 1.8rem;
-            padding-top: 0.8rem;
-            border-top: 1px dashed rgba(255, 107, 139, 0.3);
-            transition: all 0.2s;
-        }
-        .share-btn {
-            border-radius: 50px;
-            padding: 8px 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: 0.2s;
-            border: none;
-            &:hover {
-                transform: translateY(-2px);
-                filter: brightness(0.96);
-            }
-            i {
-                margin-right: 8px;
-                font-size: 1.1rem;
-            }
-        }
-        .btn-whatsapp {
-            background-color: @whatsapp-green;
-            color: white;
-            box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
-        }
-        .btn-email {
-            background-color: @email-blue;
-            color: white;
-            box-shadow: 0 2px 8px rgba(93, 156, 236, 0.3);
-        }
-        .share-note {
-            font-size: 0.7rem;
-            color: #b37b8f;
-            margin-top: 0.7rem;
-        }
-
-        
-
-
-        .footer-note {
-            font-size: 0.75rem;
-            color: #c4849a;
-            margin-top: 1rem;
-            text-align: center;
-        }
-
-        .reset-icon {
-            cursor: pointer;
-            transition: all 0.2s;
-            background: transparent;
-            border: 1.5px solid #ffb7c7;
-            &:hover {
-                background: #ffe3ea;
-                color: @primary-rose;
-                transform: rotate(5deg);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .love-card { padding: 1.5rem; }
-            .love-percentage { font-size: 2.8rem; }
-            h1 { font-size: 1.8rem; }
-            .share-btn { padding: 6px 14px; font-size: 0.8rem; }
-        }
-  </style>
+@primary-rose: #ff6b8b
+@secondary-heart: #ff9eb5;
+@dark-romantic: #2d1e2f;
+@light-bg: #fff0f3;
+@shadow-sm: 0 8px 20px rgba(0,0,0,0.05);
+@border-radius-card: 2rem;
+@whatsapp-green: #25D366;
+@email-blue: #5D9CEC;
+.glass-card(){background:#fffffff0;backdrop-filter:blur(3px);border-radius:@border-radius-card;box-shadow:@shadow-sm;border:1px solid #fff9}.love-card{max-width:680px;width:100%;margin:0 auto;padding:2rem 1.8rem 2.5rem;transition:transform .3s ease;&:hover {;transform:scale(1.01)}.subhead{color:#b35f7a;font-weight:400;font-size:.95rem;border-bottom:2px dashed #ffb7c7;display:inline-block;padding-bottom:4px}.result-area{margin-top:2rem;padding:1rem .5rem;text-align:center;border-radius:2rem;transition:all .3s ease}.love-percentage{font-size:3.8rem;font-weight:800;background:linear-gradient(135deg,#c43a5f,@primary-rose);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1.2}.message-box{background:#ffebf0b3;border-radius:60px;padding:.6rem 1.2rem;margin-top:1rem;font-weight:500;color:#ad4b6e}.heart-animation{font-size:2rem;animation:pulseHeart 1.2s infinite ease;display:inline-block}.input-group-custom{margin-bottom:1.8rem;labelfont-weight:600;color:#5e3a4a;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem;icolor:@primary-rose;font-size:1.3rem}input{border-radius:60px!important;border:1.5px solid #ffe0e7;background:#fff;padding:.8rem 1.2rem;font-weight:500;transition:all .2s;&:focus {;border-color:@primary-rose;box-shadow:0 0 0 4px #ff6b8b33}.btn-calculate{background:linear-gradient(95deg,@primary-rose,#ff8aa8);border:none;padding:12px 28px;border-radius:50px;font-weight:700;font-size:1.2rem;letter-spacing:1px;color:#fff;transition:all .2s;box-shadow:0 4px 12px #ff6b8b66;&:hover {;transform:translateY(-3px);background:linear-gradient(95deg,#ff5a7c,#ff7b9c);box-shadow:0 10px 20px #ff6b8b80}.share-section{margin-top:1.8rem;padding-top:.8rem;border-top:1px dashed #ff6b8b4d;transition:all .2s}.share-btn{border-radius:50px;padding:8px 20px;font-weight:600;font-size:.9rem;transition:.2s;border:none;&:hover {;transform:translateY(-2px);filter:brightness(0.96)}i{margin-right:8px;font-size:1.1rem}.btn-whatsapp{background-color:@whatsapp-green;color:#fff;box-shadow:0 2px 8px #25d3664d}.btn-email{background-color:@email-blue;color:#fff;box-shadow:0 2px 8px #5d9cec4d}.share-note{font-size:.7rem;color:#b37b8f;margin-top:.7rem}.footer-note{font-size:.75rem;color:#c4849a;margin-top:1rem;text-align:center}.reset-icon{cursor:pointer;transition:all .2s;background:transparent;border:1.5px solid #ffb7c7;&:hover {;background:#ffe3ea;color:@primary-rose;transform:rotate(5deg)}@media (max-width: 480px){.love-card{padding:1.5rem}.love-percentage{font-size:2.8rem}h1{font-size:1.8rem}.share-btn{padding:6px 14px;font-size:.8rem}}
+</style>
 
 
 <div class="container d-flex justify-content-center">

@@ -8,20 +8,8 @@ last_modified_at: 2026-04-15
 ---
 <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet">
 <style>
-#map {
-      height: 500px;
-      width: 100%;
-      border-radius: 12px;
-    }
-    .card {
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .list-group-item strong {
-      width: 100px;
-      display: inline-block;
-    }
-  </style>
+#map{height:500px;width:100%;border-radius:12px}.card{border-radius:10px;box-shadow:0 4px 12px #00000014}.list-group-item strong{width:100px;display:inline-block}
+</style>
   <div class="container mt-4">
   <div class="row g-4">
     <!-- Left side: IP details -->

@@ -7,14 +7,13 @@ last_modified_at: 2026-03-11
 ---
 <style>
  .card { border-radius: 1.5rem; }
-  canvas { width: 100%; height: auto; max-height: 280px;display: block; background: linear-gradient(145deg, #f8faff 0%, #f0f5ff 100%);border-radius: 1rem; border: 1px solid #e0e7ff;box-shadow: 0 4px 12px rgba(0,20,50,0.05);}
-    input[type=number]::-webkit-inner-spin-button,
-    input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
-    input[type=number] { -moz-appearance: textfield; }
-    .h-130 { min-height: 320px; }
-    .placeholder-graph {display: flex;align-items: center;justify-content: center;height: 280px;width: 100%;background: linear-gradient(145deg, #f8faff 0%, #f0f5ff 100%);
+ canvas { width: 100%; height: auto; max-height: 280px;display: block; background: linear-gradient(145deg, #f8faff 0%, #f0f5ff 100%);border-radius: 1rem; border: 1px solid #e0e7ff;box-shadow: 0 4px 12px rgba(0,20,50,0.05);}
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+  input[type=number] { -moz-appearance: textfield; }
+  .h-130 { min-height: 320px; }
+   .placeholder-graph {display: flex;align-items: center;justify-content: center;height: 280px;width: 100%;background: linear-gradient(145deg, #f8faff 0%, #f0f5ff 100%);
       border-radius: 1rem; border: 1px solid #e0e7ff; color: #6c757d;font-style: italic;}
-    
     .side-card {background: linear-gradient(145deg, #ffffff 0%, #f8faff 100%);      border: 1px solid #e0e7ff;      transition: transform 0.2s;    }
     .side-card:hover {transform: translateY(-2px);      box-shadow: 0 6px 16px rgba(102,126,234,0.1);    }
   </style>
