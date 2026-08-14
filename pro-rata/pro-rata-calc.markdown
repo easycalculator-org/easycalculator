@@ -4,13 +4,14 @@ title: Pro Rata Calculator - Formula, Examples & Pro Rata Calculation
 permalink: /pro-rata-calculator
 description: "Free Pro Rata Calculator for salary, rent, leave, holiday pay, insurance and subscriptions. Includes formula, examples, FAQs and instant calculations."
 image: "/assets/images/og/pro-rata-calculator.jpg"
-last_modified_at: 2026-07-21
+last_modified_at: 2026-08-13
 ---
 
 <div class="row justify-content-center">
 <div class="card shadow border-0 rounded-4 col-md-8 ">
  <div class="card-body p-4 p-md-5">
  <h1> Pro Rata Calculator</h1>
+ <p>Calculate prorated salary, rent, subscriptions, bonuses and other partial-period amounts instantly.</p>
 <!-- Calculation Type-->
 <div class="mb-4 d-flex align-items-center gap-2"> <span class="fw-medium text-secondary">Calculation Type:</span><span class="badge bg-primary bg-opacity-10 text-primary fs-6 px-3 py-2 fw-normal"> Salary / Wages </span></div>
 
@@ -93,7 +94,8 @@ last_modified_at: 2026-07-21
   </div>
 <!-- Article-->
 <h2>Pro Rata Calculator (Calculate Proportional Amount Instantly) </h2>
-<p>A <strong>Pro Rata Calculator</strong> helps calculate proportional values when a full amount needs to be adjusted based on time, quantity, or share. It is commonly used for <strong>salary, rent, subscription fees, interest, and dividends</strong>.</p>
+<p>A Pro Rata Calculator calculates the proportional amount of a salary, rent, subscription, bonus, payment, or other amount when only part of a period or share is used. Enter the full amount and the portion used to instantly calculate the pro rata amount, percentage, daily rate, and remaining amount. <br> Pro Rata Amount = Full Amount × (Actual Portion ÷ Full Portion)</p>
+
 
 <h2>What is Pro Rata?</h2>
 <p>Pro rata means distributing an amount in proportion to time, quantity, ownership, or usage. A pro rata calculation ensures that a person pays or receives only their fair share of a total amount.</p>
@@ -282,62 +284,78 @@ last_modified_at: 2026-07-21
 </ul>
 </div>
 
-<!-- FAQ Section -->
-<section class="p-4">
-<h2 class="mb-4">FAQ on Pro rata Calculator</h2>
-<div class="card mb-3 border-0 bg-light">
- <div class="card-body "> 
- <div class="fw-bold text-primary">1. What is a Pro Rata calculation?</div> 
-  <p class="mb-0"> A pro rata calculation distributes a total amount proportionally based on time, quantity, or share</p>
-  </div> 
-  </div> 
-  <div class="card mb-3 border-0 bg-light"> 
-  <div class="card-body ">
-   <div class="fw-bold text-primary">2. How do you calculate pro rata salary?</div>
-    <p class="mb-0">Divide the number of days worked by the total days in the pay period and multiply by the full salary.</p> 
-    </div>
-     </div> 
-     <div class="card mb-3 border-0 bg-light">
-      <div class="card-body ">
-       <div class="fw-bold text-primary">3. Where is pro rata used?</div> 
-       <p class="mb-0">Pro rata calculations are used for salary payments, rent adjustments, subscription billing, and dividend distribution.</p> 
-      </div>
-    </div>
-    <div class="card mb-3 border-0 bg-light"> 
-     <div class="card-body "> 
-      <div class="fw-bold text-primary">4. How do you calculate pro rata rent?</div> 
-       <p class="mb-0">To calculate pro rata rent, divide the number of days the property is occupied by the total number of days in the rental period, then multiply by the full monthly rent.<br><strong>Formula</strong><br>Pro Rata Rent = (Days Occupied ÷ Total Days in Month) × Monthly Rent</p>
-     </div> 
-     </div>
-    <div class="card mb-3 border-0 bg-light"> 
-     <div class="card-body "> 
-      <div class="fw-bold text-primary">5. Can pro rata be used for subscriptions?</div>
-     <p class="mb-0">Yes. Pro rata calculations are commonly used for subscriptions when a customer starts, upgrades, downgrades, or cancels a service before the end of the billing period. Instead of charging the full subscription fee, the amount is adjusted based on the number of days the service was actually used.</p> 
-   </div> 
-  </div> 
-  <div class="card mb-3 border-0 bg-light"> 
-     <div class="card-body "> 
-      <div class="fw-bold text-primary">6. What is the formula for pro rata?</div>
-     <p class="mb-0"><strong>Pro Rata Formula:</strong><br>Pro Rata Amount = (Actual Portion ÷ Full Portion) × Total Amount</p> 
-   </div> 
-  </div> 
-   <div class="card mb-3 border-0 bg-light">
-  <div class="card-body">
-    <div class="fw-bold text-primary">7. What is pro rata holiday pay?</div>
-    <p class="mb-2">Pro rata holiday pay is the amount an employee receives for annual leave based on the hours or days they actually work. It ensures that part-time, temporary, or new employees receive holiday pay proportional to their working schedule rather than the full-time entitlement.</p>
-    <p class="mb-2"><strong>Example:</strong></p>
-    <ul>
-      <li>Full-time monthly salary: <strong>$2,500</strong></li>
-      <li>Full-time work schedule: <strong>5 days per week</strong></li>
-      <li>Part-time work schedule: <strong>3 days per week</strong></li>
-    </ul>
-    <p class="mb-2"><strong>Calculation:</strong></p>
-    <div class="alert alert-light border rounded-3">Holiday Pay = $2,500 × (3 ÷ 5)<br> Holiday Pay = <strong>$1,500</strong>
-    </div>
-    <p class="mb-0">Therefore, the part-time employee is entitled to <strong>$1,500</strong> in pro rata holiday pay. </p>
-  </div>
-</div>
- </section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a Pro Rata calculation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A pro rata calculation distributes a total amount proportionally based on time, quantity, or share."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you calculate pro rata salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the number of days worked by the total days in the pay period and multiply by the full salary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is pro rata used?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pro rata calculations are used for salary payments, rent adjustments, subscription billing, and dividend distribution."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you calculate pro rata rent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To calculate pro rata rent, divide the number of days the property is occupied by the total number of days in the rental period, then multiply by the full monthly rent. Formula: Pro Rata Rent = (Days Occupied ÷ Total Days in Month) × Monthly Rent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can pro rata be used for subscriptions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Pro rata calculations are commonly used for subscriptions when a customer starts, upgrades, downgrades, or cancels a service before the end of the billing period. Instead of charging the full subscription fee, the amount is adjusted based on the number of days the service was actually used."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the formula for pro rata?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pro Rata Formula: Pro Rata Amount = (Actual Portion ÷ Full Portion) × Total Amount."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is pro rata holiday pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pro rata holiday pay is the amount an employee receives for annual leave based on the hours or days they actually work. It ensures that part-time, temporary, or new employees receive holiday pay proportional to their working schedule rather than the full-time entitlement. For example, if a full-time monthly salary is $2,500 for a 5-day work schedule and a part-time employee works 3 days per week, the pro rata amount is $2,500 × (3 ÷ 5) = $1,500."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate pro rata using dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can calculate pro rata using dates by dividing the number of days used by the total number of days in the full period, then multiplying by the full amount. For example, if a $1,500 monthly fee applies for 30 days and you use it for 10 days, the pro rata amount is ($1,500 ÷ 30) × 10 = $500."
+      }
+    }
+  ]
+}
+</script>
 
 
 
