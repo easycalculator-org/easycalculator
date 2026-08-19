@@ -56,34 +56,34 @@ last_modified_at: 2026-06-24
   </div>
  <!-- antenna gains row -->
  <div class="row mt-2 g-4">
+  <div class="col-md-6">
+  <label class="form-label fw-semibold"><i class="fa-regular fa-circle-up"></i>TX antenna gain (dBi)</label>
+    <input type="number" id="txGain" class="form-control form-control-lg" step="any" value="2.0">
+   </div>
    <div class="col-md-6">
-   <label class="form-label fw-semibold"><i class="fa-regular fa-circle-up"></i>TX antenna gain (dBi)</label>
-              <input type="number" id="txGain" class="form-control form-control-lg" step="any" value="2.0">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label fw-semibold"><i class="fa-regular fa-circle-down"></i> RX antenna gain (dBi)</label>
-              <input type="number" id="rxGain" class="form-control form-control-lg" step="any" value="2.0">
-            </div>
-          </div>
-          <div class="d-grid mt-4"><button class="btn btn-primary btn-lg" id="calcFsplBtn">Calculate FSPL</button></div>
+    <label class="form-label fw-semibold"><i class="fa-regular fa-circle-down"></i> RX antenna gain (dBi)</label>
+    <input type="number" id="rxGain" class="form-control form-control-lg" step="any" value="2.0">
+   </div>
+  </div>
+  <div class="d-grid mt-4"><button class="btn btn-primary btn-lg" id="calcFsplBtn">Calculate FSPL</button></div>
   <!-- results part: FSPL and receive power panel -->
-          <div class="row mt-2 g-4">
-            <div class="col-md-6">
-              <div class="p-3 bg-light rounded-3 border text-center h-100 d-flex flex-column justify-content-center">
-                <span class="text-secondary small text-uppercase">free‑space path loss</span>
-                <span class="fspl-big-number" id="fsplDisplay">—</span>
-                <span class="badge bg-primary mt-2 mx-auto">dB</span>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class=" p-3 bg-primary-subtle rounded-3 border text-center h-100 d-flex flex-column justify-content-center">
-                <span class="text-secondary small text-uppercase">received power (0 dBm Tx)</span>
-                <span class="fspl-big-number" id="rxPowerDisplay">—</span>
-                <span class="badge bg-success mt-2 mx-auto">dBm</span>
-              </div>
-            </div>
-          </div>
-          <br>
+  <div class="row mt-2 g-4">
+   <div class="col-md-6">
+    <div class="p-3 bg-light rounded-3 border text-center h-100 d-flex flex-column justify-content-center">
+     <span class="text-secondary small text-uppercase">free‑space path loss</span>
+     <span class="fspl-big-number" id="fsplDisplay">—</span>
+     <span class="badge bg-primary mt-2 mx-auto">dB</span>
+    </div>
+   </div>
+   <div class="col-md-6">
+    <div class=" p-3 bg-primary-subtle rounded-3 border text-center h-100 d-flex flex-column justify-content-center">
+     <span class="text-secondary small text-uppercase">received power (0 dBm Tx)</span>
+     <span class="fspl-big-number" id="rxPowerDisplay">—</span>
+     <span class="badge bg-success mt-2 mx-auto">dBm</span>
+    </div>
+   </div>
+  </div>
+  <br>
  <!-- fspl formula -->
 <div class="alert alert-light border mb-4" role="alert">
  <p class="mb-2"> <strong>Quick Answer:</strong> Free Space Path Loss (FSPL) is calculated using:</p>
@@ -91,9 +91,9 @@ last_modified_at: 2026-06-24
  <p class="mb-2"><strong>Rx Power (dBm)</strong> = Tx Power + TX Antenna Gain + RX Antenna Gain − FSPL </p>
  <p class="mb-0">Where <strong>d</strong> is the distance in kilometers (km) and <strong>f</strong> is the frequency in megahertz (MHz). FSPL increases as either distance or frequency increases.</p>
 </div>
-     </div> 
-      </div> 
-    </div> 
+  </div> 
+   </div> 
+  </div> 
   </div> 
 <!-- Article Content -->
 <div class="article-container">
@@ -169,7 +169,7 @@ last_modified_at: 2026-06-24
 
 <div class="shadow-sm p-4">
 <h2>Why Does Path Loss Increase With Frequency?</h2>
-<p>Higher frequencies experience greater free-space path loss because the wavelength becomes shorter as frequency increases.</p>
+<p>For the same distance and isotropic antenna gains, FSPL increases by approximately 6 dB when frequency doubles. In practical wireless systems, however, antenna gain, aperture, propagation environment, atmospheric absorption and other losses also affect received signal strength.</p>
 <p>For example:</p>
 <ul>
 <li>900 MHz experiences less path loss than 1800 MHz.</li>
@@ -183,43 +183,93 @@ last_modified_at: 2026-06-24
   <h2 class="mb-4">Free Space Path Loss (FSPL) Reference Table</h2>
   <p>The table below shows approximate Free Space Path Loss (FSPL) values for common wireless frequencies and transmission distances. Use it as a quick reference for Wi-Fi, LTE, 5G, microwave, and RF link planning.</p>
   <div class="table-responsive">
-    <table class="table table-bordered table-striped table-hover align-middle">
-      <thead class="table-primary">
-        <tr>
-          <th>Distance</th>
-          <th>900 MHz</th>
-          <th>1800 MHz</th>
-          <th>2400 MHz</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>1 km</strong></td>
-          <td>91.5 dB</td>
-          <td>97.5 dB</td>
-          <td>100.0 dB</td>
-        </tr>
-        <tr>
-          <td><strong>5 km</strong></td>
-          <td>105.5 dB</td>
-          <td>111.5 dB</td>
-          <td>114.0 dB</td>
-        </tr>
-        <tr>
-          <td><strong>10 km</strong></td>
-          <td>111.5 dB</td>
-          <td>117.5 dB</td>
-          <td>120.0 dB</td>
-        </tr>
-        <tr>
-          <td><strong>20 km</strong></td>
-          <td>117.5 dB</td>
-          <td>123.5 dB</td>
-          <td>126.0 dB</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <table class="table table-bordered table-striped table-hover align-middle">
+    <thead class="table-primary">
+      <tr>
+        <th>Distance</th>
+        <th>700 MHz</th>
+        <th>900 MHz</th>
+        <th>1800 MHz</th>
+        <th>2100 MHz</th>
+        <th>2400 MHz</th>
+        <th>2500 MHz</th>
+        <th>3500 MHz</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>100 m</strong></td>
+        <td>69.34 dB</td>
+        <td>71.52 dB</td>
+        <td>77.55 dB</td>
+        <td>78.88 dB</td>
+        <td>80.04 dB</td>
+        <td>80.40 dB</td>
+        <td>83.32 dB</td>
+      </tr>
+      <tr>
+        <td><strong>200 m</strong></td>
+        <td>75.36 dB</td>
+        <td>77.55 dB</td>
+        <td>83.57 dB</td>
+        <td>84.90 dB</td>
+        <td>86.06 dB</td>
+        <td>86.42 dB</td>
+        <td>89.34 dB</td>
+      </tr>
+      <tr>
+        <td><strong>500 m</strong></td>
+        <td>83.32 dB</td>
+        <td>85.50 dB</td>
+        <td>91.52 dB</td>
+        <td>92.86 dB</td>
+        <td>94.02 dB</td>
+        <td>94.38 dB</td>
+        <td>97.30 dB</td>
+      </tr>
+      <tr>
+        <td><strong>1 km</strong></td>
+        <td>89.34 dB</td>
+        <td>91.52 dB</td>
+        <td>97.55 dB</td>
+        <td>98.88 dB</td>
+        <td>100.04 dB</td>
+        <td>100.40 dB</td>
+        <td>103.32 dB</td>
+      </tr>
+      <tr>
+        <td><strong>5 km</strong></td>
+        <td>103.32 dB</td>
+        <td>105.50 dB</td>
+        <td>111.52 dB</td>
+        <td>112.86 dB</td>
+        <td>114.02 dB</td>
+        <td>114.38 dB</td>
+        <td>117.30 dB</td>
+      </tr>
+      <tr>
+        <td><strong>10 km</strong></td>
+        <td>109.34 dB</td>
+        <td>111.52 dB</td>
+        <td>117.55 dB</td>
+        <td>118.88 dB</td>
+        <td>120.04 dB</td>
+        <td>120.40 dB</td>
+        <td>123.32 dB</td>
+      </tr>
+      <tr>
+        <td><strong>20 km</strong></td>
+        <td>115.36 dB</td>
+        <td>117.55 dB</td>
+        <td>123.57 dB</td>
+        <td>124.90 dB</td>
+        <td>126.06 dB</td>
+        <td>126.42 dB</td>
+        <td>129.34 dB</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
  <div class="alert alert-info mt-3"><strong>Note:</strong> FSPL increases with both distance and frequency. Higher-frequency signals such as 2.4 GHz experience greater path loss than lower-frequency signals like 900 MHz over the same distance.
   </div>
 </section>
@@ -389,18 +439,25 @@ last_modified_at: 2026-06-24
    </div>
     <div class="card mb-3 border-0 bg-light">
      <div class="card-body ">
-      <div class="fw-bold text-primary"> 3.Does FSPL depend on antenna gain?</div>
+      <div class="fw-bold text-primary">3.Does FSPL depend on antenna gain?</div>
        <p class="mb-0">No. FSPL depends only on distance and frequency. Antenna gains are included separately in link budget calculations.</p>
       </div>
      </div>
    <div class="card mb-3 border-0 bg-light">
     <div class="card-body ">
-     <div class="fw-bold text-primary"> 4. Is FSPL higher at higher frequencies?</div>
+     <div class="fw-bold text-primary">4. Is FSPL higher at higher frequencies?</div>
       <p class="mb-0">Yes. Path loss increases as frequency increases.</p>
      </div>
    </div>
+   <div class="card mb-3 border-0 bg-light">
+  <div class="card-body">
+    <div class="fw-bold text-primary">5. What is the FSPL formula?</div>
+    <p class="mb-0">The standard FSPL formula is <strong>FSPL (dB) = 20 log₁₀(d) + 20 log₁₀(f) + 32.44</strong>,  where <strong>d</strong> is the distance in kilometers (km) and
+      <strong>f</strong> is the frequency in megahertz (MHz). </p>
+  </div>
+</div>
     {% include rf.html %}
-  </section>
+</section>
 
 
 <script src="{{ '/assets/js/free-spac-calc.js' | relative_url }}"></script>
@@ -431,6 +488,15 @@ last_modified_at: 2026-06-24
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "In the standard formula, distance should be in kilometers and frequency in MHz. If using meters or GHz, the constant value in the equation changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the FSPL formula?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The standard FSPL formula is FSPL (dB) = 20 log₁₀(d) + 20 log₁₀(f) + 32.44,  where d is the distance in kilometers (km) and
+      f is the frequency in megahertz (MHz)."
       }
     },
     {
