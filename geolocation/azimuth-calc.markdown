@@ -166,18 +166,16 @@ last_modified_at: 2026-06-15
 
           </svg>
  <!-- Result Display -->
-   <div class="mt-3">
-     <div class="fs-5 fw-semibold">Angle: <span id="angle" class="text-danger">0</span>°</div>
-     </div>
-        </div>
-      </div>
-    </div>
-<p class="text-muted mt-3">🧭 Start at True North (0°) and move the cursor clockwise to any direction. The red line will rotate and display the current azimuth angle, helping you understand how azimuth is measured from 0° to 360°.</p>
+ <div class="mt-3">
+  <div class="fs-5 fw-semibold">Angle: <span id="angle" class="text-danger">0</span>°</div>
   </div>
-
+  </div>
+  </div>
+  </div>
+<p class="text-muted mt-3">🧭 Start at True North (0°) and move the cursor clockwise to any direction. The red line will rotate and display the current azimuth angle, helping you understand how azimuth is measured from 0° to 360°.</p>
+ </div>
 </div>
 </section>
-
 
  <!-- Formula Section -->
  <section class="container my-5">
@@ -266,25 +264,25 @@ last_modified_at: 2026-06-15
    </div>
     <div class="card mb-3 border-0 bg-light">
       <div class="card-body ">
-        <div class="fw-bold text-primary"> 2. How is azimuth calculated?</div>
+        <div class="fw-bold text-primary">2. How is azimuth calculated?</div>
          <p class="mb-0">Azimuth is calculated using the latitude and longitude of two points. The formula uses trigonometric functions like sine, cosine, and arctangent to determine the direction from Point A to Point B.</p>
        </div>
      </div>
     <div class="card mb-3 border-0 bg-light">
       <div class="card-body ">
-        <div class="fw-bold text-primary"> 3. Does azimuth always measure clockwise?</div>
+        <div class="fw-bold text-primary">3. Does azimuth always measure clockwise?</div>
         <p class="mb-0">Yes. Azimuth is always measured clockwise from true north, which makes it a consistent 360° directional system.</p>
        </div>
      </div>
    <div class="card mb-3 border-0 bg-light">
      <div class="card-body ">
-       <div class="fw-bold text-primary"> 4. What does 0°, 90°, 180°, and 270° mean in azimuth?</div>
+       <div class="fw-bold text-primary">4. What does 0°, 90°, 180°, and 270° mean in azimuth?</div>
         <p class="mb-0">0° → North | 90° → East | 180° → South | 270° → West</p>
        </div>
      </div>
    <div class="card mb-3 border-0 bg-light">
      <div class="card-body ">
-       <div class="fw-bold text-primary"> 5. Is azimuth 0 360?</div>
+       <div class="fw-bold text-primary">5. Is azimuth 0 360?</div>
         <p class="mb-0">Yes — azimuth is measured from 0° to 360° clockwise from north, where 0° and 360° both represent north.</p>
        </div>
      </div>
