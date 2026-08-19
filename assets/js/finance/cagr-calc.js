@@ -1036,9 +1036,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         );
 
-        /* =====================================
-           DOWNLOAD
-           ===================================== */
 
         const filename =
             'CAGR-Calculator-' +
