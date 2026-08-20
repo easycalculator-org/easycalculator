@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">What Is My ZIP Code?</title>
+<desc id="desc">Simple high contrast illustration showing a GPS location, map pin, ZIP code and address.</desc>
+<rect width="1200" height="630" fill="#fff"/>
+
+<!-- Title -->
+<text x="60" y="75" font-family="Arial,sans-serif" font-size="40" font-weight="700" fill="#172033">What Is My ZIP Code?</text>
+<text x="60" y="108" font-family="Arial,sans-serif" font-size="20" fill="#526174">Find your ZIP or postal code using your current location.</text>
+
+<!-- Phone -->
+<rect x="70" y="160" width="285" height="310" rx="30" fill="#172033"/>
+<rect x="84" y="177" width="257" height="275" rx="20" fill="#f4f8fc"/>
+<path d="M105 245 L320 205 M105 315 L320 275 M145 180 L190 450 M245 180 L285 450" stroke="#c8d8e8" stroke-width="16"/>
+<circle cx="215" cy="285" r="62" fill="#dceeff"/>
+<path d="M215 225c-35 0-60 27-60 60 0 45 60 91 60 91s60-46 60-91c0-33-25-60-60-60z" fill="#e53935"/>
+<circle cx="215" cy="285" r="20" fill="#fff"/>
+<text x="215" y="420" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#172033">Your Location</text>
+
+<!-- Arrow -->
+<path d="M380 310 H470" stroke="#1677e8" stroke-width="8"/>
+<path d="M450 288 L475 310 L450 332" fill="none" stroke="#1677e8" stroke-width="8"/>
+
+<!-- ZIP card -->
+<rect x="490" y="165" width="300" height="300" rx="24" fill="#fff" stroke="#d6e2ef" stroke-width="3"/>
+<circle cx="640" cy="230" r="48" fill="#e9f4ff"/>
+<path d="M640 195c-22 0-39 17-39 39 0 29 39 58 39 58s39-29 39-58c0-22-17-39-39-39z" fill="#1677e8"/>
+<circle cx="640" cy="234" r="12" fill="#fff"/>
+<text x="640" y="330" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#172033">ZIP Code</text>
+<rect x="545" y="355" width="190" height="62" rx="12" fill="#1677e8"/>
+<text x="640" y="398" text-anchor="middle" font-family="Arial,sans-serif" font-size="39" font-weight="800" fill="#fff">10001</text>
+
+<!-- Address -->
+<rect x="835" y="165" width="305" height="300" rx="24" fill="#fff" stroke="#d6e2ef" stroke-width="3"/>
+<circle cx="890" cy="225" r="30" fill="#e9f4ff"/>
+<path d="M874 216h32v22h-32z M878 211h24v7h-24z" fill="#1677e8"/>
+<text x="940" y="233" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#172033">Address</text>
+<text x="875" y="290" font-family="Arial,sans-serif" font-size="19" fill="#334155">123 5th Avenue</text>
+<text x="875" y="325" font-family="Arial,sans-serif" font-size="19" fill="#334155">New York, NY 10001</text>
+<text x="875" y="360" font-family="Arial,sans-serif" font-size="19" fill="#334155">United States</text>
+<line x1="875" y1="395" x2="1100" y2="395" stroke="#d6e2ef" stroke-width="2"/>
+<text x="875" y="430" font-family="Arial,sans-serif" font-size="17" fill="#1677e8">GPS → ZIP → Address</text>
+
+<!-- Steps -->
+<circle cx="155" cy="525" r="27" fill="#1677e8"/>
+<text x="155" y="534" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#fff">1</text>
+<text x="200" y="520" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#172033">Get Location</text>
+<text x="200" y="548" font-family="Arial,sans-serif" font-size="16" fill="#526174">Allow GPS access</text>
+
+<circle cx="540" cy="525" r="27" fill="#1677e8"/>
+<text x="540" y="534" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#fff">2</text>
+<text x="585" y="520" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#172033">Find ZIP Code</text>
+<text x="585" y="548" font-family="Arial,sans-serif" font-size="16" fill="#526174">Match your location</text>
+
+<circle cx="920" cy="525" r="27" fill="#1677e8"/>
+<text x="920" y="534" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#fff">3</text>
+<text x="965" y="520" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#172033">View Result</text>
+<text x="965" y="548" font-family="Arial,sans-serif" font-size="16" fill="#526174">See ZIP and address</text>
+</svg>

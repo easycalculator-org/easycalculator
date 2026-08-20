@@ -147,29 +147,14 @@ last_modified_at: 2026-05-28
 </div>
 
 <div class="bg-light p-4 rounded mt-4">
-  <h4 class="text-primary"><i class="fas fa-map-marker-alt me-2"></i>How to Use the Coordinate Finder </h4>
-   <ul class="list-group list-group-flush">
-     <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Open the Map:</strong> Launch the Coordinate Finder and access the interactive map interface.</li>
-        <li class="list-group-item bg-light">
-            <i class="fas fa-check-circle text-success me-2"></i>
-            <strong>Search or Zoom:</strong> Enter an address, city, or landmark, or zoom manually to the desired location.
-        </li>
-        <li class="list-group-item bg-light">
-            <i class="fas fa-check-circle text-success me-2"></i>
-            <strong>Click Any Location:</strong> Select any point on the map to instantly identify its coordinates.
-        </li>
-        <li class="list-group-item bg-light">
-            <i class="fas fa-check-circle text-success me-2"></i>
-            <strong>View Coordinates:</strong> Instantly see the latitude and longitude of the selected location.
-        </li>
-        <li class="list-group-item bg-light">
-            <i class="fas fa-check-circle text-success me-2"></i>
-            <strong>Switch Coordinate Formats:</strong> Toggle between <strong>Decimal Degrees (DD)</strong> and <strong>Degrees, Minutes, Seconds (DMS)</strong>.
-        </li>
-        <li class="list-group-item bg-light">
-            <i class="fas fa-check-circle text-success me-2"></i>
-            <strong>Download the Map:</strong> Save the current map view as an image for reports, documentation, presentations, or sharing.
-        </li>
+ <h4 class="text-primary"><i class="fas fa-map-marker-alt me-2"></i>How to Use the Coordinate Finder </h4>
+ <ul class="list-group list-group-flush">
+  <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Open the Map:</strong> Launch the Coordinate Finder and access the interactive map interface.</li>
+  <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Search or Zoom:</strong> Enter an address, city, or landmark, or zoom manually to the desired location.</li>
+   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Click Any Location:</strong> Select any point on the map to instantly identify its coordinates.</li>
+   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>View Coordinates:</strong> Instantly see the latitude and longitude of the selected location.</li>
+   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Switch Coordinate Formats:</strong> Toggle between <strong>Decimal Degrees (DD)</strong> and <strong>Degrees, Minutes, Seconds (DMS)</strong>.</li>
+    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Download the Map:</strong> Save the current map view as an image for reports, documentation, presentations, or sharing.</li>
     </ul>
 </div>
 
@@ -177,31 +162,19 @@ last_modified_at: 2026-05-28
 <div class="bg-light p-4 rounded mt-4">
   <h4 class="text-primary"> <i class="fas fa-star me-2"></i>Advanced Features</h4>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item bg-light"><i class="fas fa-map-marker-alt text-danger me-2"></i><strong>Real-Time Coordinate Detection:</strong> Click any location on the map to instantly obtain accurate GPS coordinates.</li>
-        <li class="list-group-item bg-light">
-            <i class="fas fa-sync-alt text-success me-2"></i>
-            <strong>Decimal & DMS Format Toggle:</strong> Easily switch between <strong>Decimal Degrees (DD)</strong> and <strong>Degrees, Minutes, Seconds (DMS)</strong> formats. This flexibility makes the tool suitable for both casual users and professionals.
-        </li>
-        <li class="list-group-item bg-light">
-            <i class="fas fa-mobile-alt text-primary me-2"></i>
-            <strong>Current Location Finder:</strong> Use the <strong>My Current Location</strong> button to detect and display your live GPS position on the map.
-        </li>
-        <li class="list-group-item bg-light">
-            <i class="fas fa-satellite text-info me-2"></i>
-            <strong>Street & Satellite Maps:</strong> View locations using both <strong>Street Map</strong> and <strong>Satellite Imagery</strong>. Switch between map types for better geographic context.
-        </li>
-        <li class="list-group-item bg-light">
-            <i class="fas fa-download text-warning me-2"></i>
-            <strong>Download Map Feature:</strong> Save the current map view as an image for project reports, educational purposes, field surveys, and location sharing.
-        </li>
-        <li class="list-group-item bg-light">
-            <i class="fas fa-search text-secondary me-2"></i>
-            <strong>Search Any Location:</strong> Quickly search cities, landmarks, addresses, and points of interest worldwide.
-        </li>
-        <li class="list-group-item bg-light">
-            <i class="fas fa-globe-americas text-success me-2"></i>
-            <strong>Global Coverage:</strong> Find coordinates anywhere on Earth with high accuracy and reliability.
-        </li>
+     <li class="list-group-item bg-light"><i class="fas fa-map-marker-alt text-danger me-2"></i><strong>Real-Time Coordinate Detection:</strong> Click any location on the map to instantly obtain accurate GPS coordinates.</li>
+     <li class="list-group-item bg-light"><i class="fas fa-sync-alt text-success me-2"></i>
+       <strong>Decimal & DMS Format Toggle:</strong> Easily switch between <strong>Decimal Degrees (DD)</strong> and <strong>Degrees, Minutes, Seconds (DMS)</strong> formats. This flexibility makes the tool suitable for both casual users and professionals.</li>
+      <li class="list-group-item bg-light"><i class="fas fa-mobile-alt text-primary me-2"></i>
+        <strong>Current Location Finder:</strong> Use the <strong>My Current Location</strong> button to detect and display your live GPS position on the map.</li>
+        <li class="list-group-item bg-light"><i class="fas fa-satellite text-info me-2"></i>
+         <strong>Street & Satellite Maps:</strong> View locations using both <strong>Street Map</strong> and <strong>Satellite Imagery</strong>. Switch between map types for better geographic context.</li>
+        <li class="list-group-item bg-light"> <i class="fas fa-download text-warning me-2"></i>
+          <strong>Download Map Feature:</strong> Save the current map view as an image for project reports, educational purposes, field surveys, and location sharing.</li>
+        <li class="list-group-item bg-light"> <i class="fas fa-search text-secondary me-2"></i>
+           <strong>Search Any Location:</strong> Quickly search cities, landmarks, addresses, and points of interest worldwide.</li>
+        <li class="list-group-item bg-light"><i class="fas fa-globe-americas text-success me-2"></i>
+           <strong>Global Coverage:</strong> Find coordinates anywhere on Earth with high accuracy and reliability.</li>
     </ul>
 </div>
 
