@@ -87,34 +87,35 @@ last_modified_at: 2026-02-03
 
  <!-- Map View -->
  <section class="card shadow-sm mb-5 border-success">
-   <div class="card-header bg-success text-white"> <h2 class="h4 mb-0 gap-3"><i class="fa-solid fa-map-location-dot"></i> Interactive Map View</h2></div>
-     <div class="card-body">
-      <div class="bg-light p-4 rounded text-center mb-3"><i class="fa-solid fa-map-location-dot fa-2xl" style="color: #74C0FC;"></i><p class="mt-2">[Interactive map would appear here]</p> </div>
-         <p>Once location permission is granted, you'll see:</p>
-           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><i class="fa-solid fa-circle-dot"></i> Your Live Location (blue dot)</li>
-            <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> Nearby Airports with pins</li>
-            <li class="list-group-item"><i class="fa-solid fa-circle-info"></i> Click markers for airport details</li>
-            <li class="list-group-item"><i class="fa-solid fa-mobile"></i> Mobile-Friendly with zoom and directions</li>
-          </ul>
-        </div>
-   </section>
-      <!-- FAQ Section -->
-      <section class="mb-5">
-        <h2 class="mb-4">FAQ on Nearest Airport</h2>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary">1. How does this tool detect my location?</div>
-            <p class="mb-0"> It uses your browser's geolocation API (with your permission). On mobile, it may use GPS; on desktop, it may use IP or WiFi networks.</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 2. What kind of airports are included?</div>
-            <p class="mb-0">All types: International Airports (e.g., JFK, LAX), Regional Airports, Heliports, and Private/Charter terminals.</p>
-          </div>
-        </div>
-         </section>
+  <div class="card-header bg-success text-white"> <h2 class="h4 mb-0 gap-3"><i class="fa-solid fa-map-location-dot"></i> Interactive Map View</h2></div>
+   <div class="card-body">
+    <div class="bg-light p-4 rounded text-center mb-3"><i class="fa-solid fa-map-location-dot fa-2xl" style="color: #74C0FC;"></i>
+      <p class="mt-2">[Interactive map would appear here]</p> </div>
+       <p>Once location permission is granted, you'll see:</p>
+        <ul class="list-group list-group-flush">
+         <li class="list-group-item"><i class="fa-solid fa-circle-dot"></i> Your Live Location (blue dot)</li>
+         <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> Nearby Airports with pins</li>
+         <li class="list-group-item"><i class="fa-solid fa-circle-info"></i> Click markers for airport details</li>
+         <li class="list-group-item"><i class="fa-solid fa-mobile"></i> Mobile-Friendly with zoom and directions</li>
+        </ul>
+      </div>
+  </section>
+ <!-- FAQ Section -->
+  <section class="mb-5">
+   <h2 class="mb-4">FAQ on Nearest Airport</h2>
+   <div class="card mb-3 border-0 bg-light">
+     <div class="card-body ">
+     <div class="fw-bold text-primary">1. How does this tool detect my location?</div>
+     <p class="mb-0"> It uses your browser's geolocation API (with your permission). On mobile, it may use GPS; on desktop, it may use IP or WiFi networks.</p>
+    </div>
+    </div>
+   <div class="card mb-3 border-0 bg-light">
+    <div class="card-body ">
+     <div class="fw-bold text-primary"> 2. What kind of airports are included?</div>
+     <p class="mb-0">All types: International Airports (e.g., JFK, LAX), Regional Airports, Heliports, and Private/Charter terminals.</p>
+    </div>
+    </div>
+  </section>
 
  <!-- highlight-box-->
  <div class="highlight-box">
