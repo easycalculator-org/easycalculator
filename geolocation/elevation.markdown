@@ -4,13 +4,23 @@ title: What Is My Elevation? | Check Current Elevation Right Now (Free Altitude 
 permalink: /current-elevation
 description: "Find your current elevation and view an interactive elevation map for any location worldwide. Instantly check your altitude using GPS—accurate, fast, and free."
 image: "/assets/images/elevation-vs-altitude-diagram.png"
-last_modified_at: 2026-03-03
+last_modified_at: 2026-08-23
 ---
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome@6.4.0/css/all.min.css">
 <style>
    :root{--primary:#6366f1;--secondary:#10b981;--glass:rgba(255, 255, 255, 0.9)}#map{height:75vh;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.1);border:3px solid rgba(255,255,255,.5);z-index:1}.glass-panel{background:var(--glass);backdrop-filter:blur(12px);border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,.1);border:1px solid rgba(255,255,255,.3);padding:1.5rem}.control-btn{background:var(--primary);color:#fff;transition:.3s;padding:12px 20px;border-radius:12px;display:flex;align-items:center;gap:8px}.control-btn:hover{transform:translateY(-2px);box-shadow:0 5px 15px rgba(99,102,241,.3)}.elevation-marker{font-weight:600;padding:6px 12px;border-radius:20px;box-shadow:0 4px 6px rgba(0,0,0,.1)}.recent-list{max-height:300px;overflow-y:auto}.loading-spinner{animation:3s linear infinite spin}@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.gradient-text{background:linear-gradient(45deg,var(--primary),var(--secondary));-webkit-background-clip:text;background-clip:text;color:transparent}
  </style>
+
+<div aria-label="breadcrumb" class="p-3">
+ <ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Current Elevation</li>
+ </ol>
+</div>
+
+
 
  <!-- Header -->
  <div class="p-4"> <h1 class="gradient-text display-4 fw-bold mb-3">What Is My Current Elevation?</h1>

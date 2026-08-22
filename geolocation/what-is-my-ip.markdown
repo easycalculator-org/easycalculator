@@ -4,12 +4,21 @@ title: What Is My IP Address – Instant IP Lookup & Location Info
 permalink: /what-is-my-ip
 description: "Find your public IP address instantly along with location details like country, city, ISP, latitude, and longitude. Fast, accurate, and free IP lookup tool."
 image: "/assets/images/og/what-is-ip-address.jpg"
-last_modified_at: 2026-04-15
+last_modified_at: 2026-08-23
 ---
 <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet">
 <style>
 #map{height:500px;width:100%;border-radius:12px}.card{border-radius:10px;box-shadow:0 4px 12px #00000014}.list-group-item strong{width:100px;display:inline-block}
 </style>
+
+<div aria-label="breadcrumb" class="p-3">
+ <ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li>
+  <li class="breadcrumb-item active" aria-current="page">What Is My IP Address</li>
+ </ol>
+</div>
+
   <div class="container mt-4">
   <div class="row g-4">
     <!-- Left side: IP details -->

@@ -4,7 +4,7 @@ title: Bulk Latitude Longitude Distance Calculator (CSV & Excel)
 permalink: /bulk-latitude-longitude-distance-calculator
 description: "Calculate distances between multiple latitude and longitude coordinates in seconds. Upload CSV or Excel files, use the Haversine formula, and export results for free."
 image: "/assets/images/og/bulk-latitude-longitude-distance-calculator.jpg"
-last_modified_at: 2026-06-26
+last_modified_at: 2026-08-23
 ---
 
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,6 +15,14 @@ last_modified_at: 2026-06-26
 <style>
  :root{--primary-gradient:linear-gradient(145deg,#0b2b5e,#1a4a8b);--card-shadow:0 20px 40px -12px #00142840;--border-radius-lg:1.25rem}.app-wrapper{max-width:1440px;margin:0 auto}.brand-header{background:linear-gradient(135deg,#0B2B5E,#2563EB);padding:2rem;border-radius:20px 20px 0 0;color:#fff}.brand-header h1{font-size:2rem;font-weight:700;line-height:1.25;margin:0}.brand-header .subhead{font-size:1rem;opacity:.92;max-width:720px;margin-top:.5rem}.brand-header .badge{font-size:.85rem;font-weight:600}.file-drop-zone{border:2px dashed #cfddee;background:#f8fcff;border-radius:1rem;padding:2.2rem 1.5rem;text-align:center;cursor:pointer;transition:.2s}.file-drop-zone:hover{border-color:#1a4a8b;background:#f0f7ff}.file-drop-zone i{font-size:2.8rem;color:#2a5f9e;background:#e5edf8;padding:.8rem;border-radius:60px}.file-drop-zone .accepted-formats{font-size:.75rem;color:#5e6f88;margin-top:.25rem}.select-pair-group{background:#f8fafd;padding:1rem 1.2rem;border-radius:1rem;border-left:4px solid #1a4a8b}.select-pair-group label{font-weight:500;font-size:.85rem;text-transform:uppercase;letter-spacing:.03em;color:#1d3a6b}.select-pair-group select{border-radius:.6rem;border:1px solid #d9e2ef;background:#fff;font-size:.9rem}.btn-primary-pro{background:var(--primary-gradient);border:none;border-radius:.8rem;font-weight:500;padding:.6rem 1.6rem;box-shadow:0 4px 10px #14469640;transition:.15s;color:#fff}.btn-primary-pro:hover{transform:translateY(-2px);box-shadow:0 8px 18px #1446964d;color:#fff}.btn-outline-pro{border:1px solid #1a4a8b;color:#1a4a8b;border-radius:.8rem;font-weight:500;transition:.15s}.btn-outline-pro:hover{background:#1a4a8b;color:#fff}.stats-badge{background:#eef4fc;padding:.3rem 1rem;border-radius:2rem;font-size:.8rem;color:#0b2b5e;font-weight:500}.preview-scroll{max-height:280px;overflow-y:auto;border-radius:.8rem;border:1px solid #e6edf6}.preview-scroll table{font-size:.85rem;margin-bottom:0}.preview-scroll thead th{background:#f2f6fd;position:sticky;top:0;z-index:2;border-bottom:2px solid #d2def0;color:#1d3a6b;font-weight:600}.map-wrapper{border-radius:1rem;overflow:hidden;background:#dce3ed;height:300px;box-shadow:inset 0 2px 6px #00000008}.map-wrapper .leaflet-control-zoom{border:none}.marker-count{background:#eef4fc;padding:.2rem 1rem;border-radius:30px;font-weight:500;font-size:.8rem;color:#1a4a8b}.footer-note{font-size:.8rem;color:#5e6f88}.distance-unit{font-weight:600;color:#0b2b5e}.file-info-badge{background:#e7f0fe;color:#0b2b5e;padding:.2rem 1rem;border-radius:30px;font-size:.75rem;font-weight:500}@media (max-width: 768px){.brand-header{padding:1rem 1.2rem}.card-pro .card-body{padding:1.25rem}}
  </style>
+
+<div aria-label="breadcrumb" class="p-3">
+ <ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Bulk Latitude Longitude Distance Calculator</li>
+ </ol>
+</div>
 
 <div class="app-wrapper">
   <!-- header -->
