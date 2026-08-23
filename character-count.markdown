@@ -1,21 +1,18 @@
 ---
 layout: default
-title: Online Character Counter – Count Words, Characters & Spaces
+title: Character Counter – Count Characters, Words & Spaces Online
 permalink: /character-counter
-description: "Use our free Character Counter to instantly count characters, words, letters, and spaces online. Fast, accurate, perfect for SEO, writing, & social media limits."
+description: "Free character counter to count characters, words, letters, spaces and sentences online. Check text length instantly for SEO, social media, essays and more."
 image: "/assets/images/character-count.jpg"
-last_modified_at: 2026-04-22
+last_modified_at: 2026-08-23
 ---
 <style>
  .card{border-radius:28px;border:none;background:#fffffffa;box-shadow:0 12px 28px #00000014}.stat-card{border-radius:24px;background:#fff;box-shadow:0 2px 8px #00000008;height:100%;transition:all .2s}.stat-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px #0000000f}textarea{border-radius:20px!important;font-size:1rem;line-height:1.6;border:1px solid #d4dce6;padding:1rem 1.25rem;resize:vertical;font-family:'SF Mono','Fira Code',monospace}textarea:focus{box-shadow:0 0 0 3px #0d6efd26;border-color:#0d6efd}.badge-counter{font-size:.75rem;background:#eef2f5;border-radius:30px;padding:.25rem .75rem}.freq-table-container{background:#f9fbfd;border-radius:20px;padding:1rem;border:1px solid #e9edf2;max-height:280px;overflow-y:auto}.freq-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:8px}.freq-item{background:#fff;border-radius:14px;padding:6px 8px;display:flex;align-items:center;justify-content:space-between;border:1px solid #e2e8f0;transition:all .15s;cursor:pointer}.freq-item:hover{transform:scale(1.02);background:#f8fafc;border-color:#cbd5e1}.freq-letter{font-weight:700;font-size:1rem;background:#eef2ff;width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;font-family:monospace}.freq-count{font-weight:700;font-size:.9rem;color:#1e293b}.freq-bar{height:4px;background:#3b82f6;border-radius:4px;margin-top:4px;transition:width .1s ease}.metric-icon{width:32px;font-size:1.2rem;color:#3b82f6;display:inline-block}.btn-icon{border-radius:40px;padding:.5rem 1.2rem;font-weight:500}hr{opacity:.2;margin:1rem 0}.readability-tag{font-size:.7rem;background:#eef2ff;border-radius:30px;padding:.2rem .7rem;display:inline-block;font-weight:500}@media (max-width: 768px){.freq-grid{grid-template-columns:repeat(auto-fill,minmax(75px,1fr))}.stat-card{margin-bottom:.5rem}}
  </style>
 
 <div class="container-lg p-3">
-<h1>Character Counter – Count Words, Characters, Spaces & Text Length Online</h1>
-
-<p class="lead">
-  Use our <strong>Character Counter</strong> to instantly count characters, words, spaces, sentences, and paragraphs in any text. This advanced character counter also provides real-time insights like readability score, reading time, and text analysis. It is widely used for SEO meta descriptions, social media posts, SMS messages, and academic writing where strict character limits apply.
-</p>
+<h1>Character Counter – Count Characters, Words & Spaces Online</h1>
+<p class="lead"><strong>Count characters, words and spaces instantly with our free online Character Counter.</strong> Paste or type your text to see the total character count, word count, sentences, paragraphs and other useful text statistics in real time. The tool works on mobile and desktop without requiring registration.</p>
 <div class="card shadow p-4 p-xl-5">
  <label for="textInput" class="form-label fw-semibold mb-2"><i class="fa-regular fa-keyboard me-1"></i> Text Editor</label>
   <textarea id="textInput" class="form-control" rows="8" placeholder="Paste or type your text here" aria-label="Text input for analysis"></textarea>
@@ -56,59 +53,46 @@ last_modified_at: 2026-04-22
      <li class="mb-2"><strong>Character Density:</strong><span id="charDensity">0%</span></li>
      <li><strong>Readability Score (Flesch):</strong><span id="fleschScore" class="fw-semibold">—</span><span id="readabilityLabel" class="badge bg-secondary ms-2"></span>     </li>
    </ul>
-        <!-- Ratio Bar -->
-        <div class="mt-3">
-          <div class="d-flex justify-content-between small">
-            <span>Letter vs Space Ratio</span><span id="densityRatioText">0% letters</span>
-          </div>
-          <div class="progress mt-1" style="height: 8px;">
-            <div id="densityProgress" class="progress-bar bg-success" style="width: 0%"></div>
-            <div id="spaceProgress" class="progress-bar bg-secondary" style="width: 0%"></div>
-          </div>
-        </div>
-      </div>
+  <!-- Ratio Bar -->
+   <div class="mt-3">
+    <div class="d-flex justify-content-between small">
+     <span>Letter vs Space Ratio</span><span id="densityRatioText">0% letters</span>
     </div>
+    <div class="progress mt-1" style="height: 8px;">
+     <div id="densityProgress" class="progress-bar bg-success" style="width: 0%"></div>
+     <div id="spaceProgress" class="progress-bar bg-secondary" style="width: 0%"></div>
+    </div>
+   </div>
+  </div>
+ </div>
   </div>
 </section>
-        <!-- Letter Frequency Box (A-Z count: A=10, B=20, C=2, D=3 style) -->
-        <div class="row mt-4">
-          <div class="col-12">
-            <div class="border-0 bg-transparent">
-              <div class="d-flex align-items-center justify-content-between mb-2 flex-wrap">
-                <h5 class="mb-2 fw-semibold"><i class="fa-solid fa-table-list me-2 text-primary"></i> Letter Frequency (A–Z)</h5>
-                <small class="text-muted"><i class="fa-regular fa-chart-bar"></i> Click any letter to see count | Case-insensitive</small>
-              </div>
-              <div class="freq-table-container" id="freqContainer">
-                <div id="frequencyGrid" class="freq-grid">
-                  <div class="text-center text-muted p-3">Loading letters...</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Action buttons -->
-        <div class="mt-4 d-flex gap-3 flex-wrap justify-content-between align-items-center">
-          <div class="d-flex gap-2">
-            <button class="btn btn-primary btn-icon" onclick="copyText()"><i class="fa-solid fa-copy"></i> Copy Text</button>
-            <button class="btn btn-outline-danger btn-icon" onclick="clearText()"><i class="fa-solid fa-eraser"></i> Clear</button>
-            <button class="btn btn-outline-secondary btn-icon" onclick="trimExtraSpaces()"><i class="fa-solid fa-text-slash"></i> Trim Spaces</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+ <!-- Letter Frequency Box (A-Z count: A=10, B=20, C=2, D=3 style) -->
+  <div class="row mt-4">
+  <div class="col-12">
+  <div class="border-0 bg-transparent">
+  <div class="d-flex align-items-center justify-content-between mb-2 flex-wrap">
+    <h5 class="mb-2 fw-semibold"><i class="fa-solid fa-table-list me-2 text-primary"></i> Letter Frequency (A–Z)</h5>
+    <small class="text-muted"><i class="fa-regular fa-chart-bar"></i> Click any letter to see count | Case-insensitive</small>
+   </div>
+   <div class="freq-table-container" id="freqContainer">
+    <div id="frequencyGrid" class="freq-grid">
+    <div class="text-center text-muted p-3">Loading letters...</div>
+   </div>
+   </div>
+   </div>
+  </div>
+  </div>
+  <!-- Action buttons -->
+  <div class="mt-4 d-flex gap-3 flex-wrap justify-content-between align-items-center">
+   <div class="d-flex gap-2">
+    <button class="btn btn-primary btn-icon" onclick="copyText()"><i class="fa-solid fa-copy"></i> Copy Text</button>
+    <button class="btn btn-outline-danger btn-icon" onclick="clearText()"><i class="fa-solid fa-eraser"></i> Clear</button>
+    <button class="btn btn-outline-secondary btn-icon" onclick="trimExtraSpaces()"><i class="fa-solid fa-text-slash"></i> Trim Spaces</button>
+   </div>
+   </div>
+   </div>
+  </div>
 
 <!-- Article Content -->
 <div class="article-container">
@@ -122,9 +106,7 @@ last_modified_at: 2026-04-22
 <!-- What is Section -->
 <section class="mb-5">
   <h2 class="h3 fw-bold mb-3 pb-2">What is a Character Counter?</h2>
-
-  <p class="lead">
-    A <strong>Character Counter</strong> is a free online tool that helps you instantly count the number of characters, words, spaces, sentences, and paragraphs in any text. This character counter is widely used for SEO meta descriptions, social media posts, SMS messages, and academic writing where strict character limits apply. It provides real-time results, helping you optimize your content quickly and accurately.
+  <p class="lead">A <strong>Character Counter</strong> is a free online tool that helps you instantly count the number of characters, words, spaces, sentences, and paragraphs in any text. This character counter is widely used for SEO meta descriptions, social media posts, SMS messages, and academic writing where strict character limits apply. It provides real-time results, helping you optimize your content quickly and accurately.
   </p>
 
   <div class="alert alert-info mt-4">
@@ -195,8 +177,6 @@ last_modified_at: 2026-04-22
   </div>
 </section>
 
-
-
 <!-- How to Use -->
 <section id="usage" class="mb-5">
   <h2 class="h3 fw-bold mb-4 border-bottom pb-2">How to Use the Character Counter</h2>
@@ -211,10 +191,6 @@ last_modified_at: 2026-04-22
 
   <div class="alert alert-warning mt-3"><strong>Pro Tip:</strong> Bookmark this Character Counter for quick access whenever you need to check text length instantly. </div>
 </section>
-
-
-
-
 
 <!-- FAQ Section -->
 <section class="mb-5">
@@ -316,3 +292,19 @@ last_modified_at: 2026-04-22
   ]
 }
 </script>
+
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Character Counter",
+  "url": "https://easycalculator.org/character-counter",
+  "description": "Free online character counter for counting characters, words, spaces, sentences and paragraphs.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript-enabled web browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
