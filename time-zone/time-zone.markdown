@@ -151,7 +151,7 @@ last_modified_at: 2026-08-02
 }
 </style>   
 
-<h1>Time Zone Converter</h1>
+
 <main>
 
 <!-- =========================
