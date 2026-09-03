@@ -4,6 +4,88 @@ title: MST to CST Converter – Mountain Time to Central Time
 permalink: /mst-to-cst
 description: "Convert MST to CST quickly with our free time zone converter. Find the time difference between Mountain Time and Central Time and easily convert dates and times."
 #image: "/assets/images/time-zone-converter.jpg"
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-03
 ---
+
+<style>
+.tz-widget{width:100%;background:#fff;border:1px solid #e2e7eb;border-radius:12px;box-shadow:0 4px 18px #1e32460f;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#263238}.tz-toolbar{min-height:54px;padding:9px 15px;background:#fff;border-bottom:1px solid #e8edf1}.tz-toolbar-title{display:flex;align-items:center;font-size:14px;font-weight:600;color:#35424d}.tz-toolbar-title i{color:#6a98b9}.tz-toolbar-right{display:flex;align-items:center;gap:5px}.tz-btn{min-height:31px;padding:5px 10px;border:1px solid #dce3e8;border-radius:6px;background:#fff;color:#59656f;font-size:12px;font-weight:500;cursor:pointer;transition:.15s ease}.tz-btn:hover{background:#f5f8fa;border-color:#cbd7df;color:#315f84}.tz-btn:active{background:#edf4f8}.tz-nav-btn{width:32px;padding:4px 0}.tz-today-btn{min-width:86px}.tz-selected-clocks{display:grid;grid-template-columns:1fr 1fr;background:#fafcfd;border-bottom:1px solid #e7ecf0}.tz-selected-clock{padding:16px 20px;text-align:center}.tz-selected-clock + .tz-selected-clock{border-left:1px solid #e7ecf0}.tz-selected-zone{font-size:11px;font-weight:700;letter-spacing:.7px;color:#71808b;text-transform:uppercase}.tz-selected-time{margin-top:5px;font-size:31px;line-height:1.15;font-weight:650;color:#263238;letter-spacing:.2px;font-variant-numeric:tabular-nums;white-space:nowrap}.tz-selected-date{margin-top:5px;font-size:11px;color:#89949d}.tz-selected-status{margin-top:6px;font-size:9px;color:#9aa4ac;letter-spacing:.4px;text-transform:uppercase}.tz-scroll{width:100%;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:#cbd5dd transparent}.tz-scroll::-webkit-scrollbar{height:7px}.tz-scroll::-webkit-scrollbar-track{background:#f8fafb}.tz-scroll::-webkit-scrollbar-thumb{background:#cbd5dd;border-radius:20px}.tz-timeline{min-width:1180px;background:#fff}.tz-row{display:grid;grid-template-columns:245px 1fr;min-height:136px;border-bottom:1px solid #edf0f3}.tz-info{padding:17px 18px;background:#fff;border-right:1px solid #edf0f3}.tz-code{font-size:20px;line-height:1;font-weight:700;color:#263238}.tz-name{margin-top:6px;font-size:12px;color:#6f7b85}.tz-location{margin-top:2px;font-size:11px;color:#9aa3aa}.tz-clock{margin-top:13px;font-size:24px;line-height:1;font-weight:650;color:#34414a;font-variant-numeric:tabular-nums;white-space:nowrap}.tz-clock-date{margin-top:5px;font-size:10px;color:#929ca4}.tz-live{display:flex;align-items:center;gap:5px;margin-top:6px;font-size:9px;color:#89949d}.tz-live-dot{width:6px;height:6px;flex:0 0 6px;border-radius:50%;background:#68a77c;box-shadow:0 0 0 2px #edf7f0}.tz-hours-area{position:relative;padding:12px 14px 15px;background:#fff}.tz-date-header{display:flex;align-items:center;height:19px;margin-bottom:7px;padding-left:3px;font-size:10px;font-weight:650;color:#87919a;text-transform:uppercase;letter-spacing:.5px}.tz-hours{display:grid;grid-template-columns:repeat(24,minmax(42px,1fr));gap:6px;height:70px}.tz-hour-card{position:relative;min-width:42px;height:70px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:7px 3px;border:1px solid #e5eaee;border-radius:8px;cursor:pointer;user-select:none;transition:transform .12s ease,background .12s ease,border-color .12s ease,box-shadow .12s ease}.tz-hour-card.am{background:#f7fafc;border-color:#e1e9ef}.tz-hour-card.am:hover{background:#edf5f9;border-color:#c9dce8;transform:translateY(-2px);box-shadow:0 3px 8px #466e8717}.tz-hour-card.pm{background:#fdfaf7;border-color:#eee5da}.tz-hour-card.pm:hover{background:#f8f0e7;border-color:#ddcdbb;transform:translateY(-2px);box-shadow:0 3px 8px #87644114}.tz-hour-number{font-size:12px;line-height:1;font-weight:650;color:#4c5963;text-align:center;white-space:nowrap}.tz-hour-period{margin-top:5px;font-size:8px;line-height:1;font-weight:700;letter-spacing:.3px}.tz-hour-card.am .tz-hour-period{color:#7192a8}.tz-hour-card.pm .tz-hour-period{color:#a17b56}.tz-hour-card.selected{background:#72a7ce!important;border-color:#4f88b5!important;box-shadow:0 3px 9px #4678a033;transform:translateY(-2px)}.tz-hour-card.selected
+.tz-hour-number,.tz-hour-card.selected
+.tz-hour-period{color:#fff!important}.tz-now-marker{position:absolute;top:36px;bottom:15px;width:2px;background:#566773;border-radius:2px;z-index:20;pointer-events:none}.tz-now-label{position:absolute;top:25px;transform:translateX(-50%);padding:3px 6px;border-radius:4px;background:#566773;color:#fff;font-size:8px;line-height:1;white-space:nowrap;z-index:21;pointer-events:none}.tz-result{min-height:58px;display:flex;align-items:center;justify-content:center;gap:10px;padding:10px 16px;background:#f8fafc;border-bottom:1px solid #e6eaee;font-size:14px}.tz-result-time{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}.mst-result{color:#466f8c}.central-result{color:#866a4d}.tz-result-gap{display:inline-flex;align-items:center;justify-content:center;min-height:24px;padding:4px 9px;border-radius:20px;background:#eaf2f7;border:1px solid #d5e3eb;color:#58778d;font-size:9px;font-weight:700;letter-spacing:.4px;white-space:nowrap}.tz-result-arrow{color:#8b969e;font-size:16px;font-weight:500}.tz-result-date{margin-left:3px;font-size:10px;color:#89949d;white-space:nowrap}@media (max-width: 600px){.tz-result{justify-content:flex-start;overflow-x:auto;white-space:nowrap;gap:7px}.tz-result-time{font-size:13px}.tz-result-gap{font-size:8px;padding:3px 7px}.tz-result-arrow{font-size:14px}}.tz-date-change{display:inline-flex;align-items:center;margin-left:7px;padding:2px 6px;border-radius:4px;background:#fff4e8;color:#a56f39;font-size:9px;font-weight:600}.tz-hour-card:focus-visible{outline:2px solid #8eb8d4;outline-offset:2px}@media (max-width: 900px){.tz-timeline{min-width:1080px}.tz-row{grid-template-columns:220px 1fr}.tz-info{padding-left:14px;padding-right:14px}.tz-selected-time{font-size:27px}}@media (max-width: 768px){.tz-toolbar{padding:9px 10px}.tz-toolbar-title{font-size:13px}.tz-btn{padding:4px 7px;font-size:11px}.tz-nav-btn{width:29px}.tz-today-btn{min-width:76px}.tz-selected-clock{padding:13px 8px}.tz-selected-time{font-size:23px}.tz-timeline{min-width:1000px}.tz-row{grid-template-columns:190px 1fr;min-height:132px}.tz-info{padding:14px 11px}.tz-code{font-size:18px}.tz-name{font-size:11px}.tz-location{font-size:10px}.tz-clock{font-size:21px}.tz-hours{gap:5px}.tz-hour-card{min-width:38px}.tz-result{justify-content:flex-start;overflow-x:auto;white-space:nowrap;padding:9px 12px}}@media (max-width: 480px){.tz-toolbar-title i{display:none}.tz-toolbar-title{font-size:12px}.tz-selected-clock{padding:11px 4px}.tz-selected-time{font-size:19px}.tz-selected-zone{font-size:9px}.tz-selected-date{font-size:9px}.tz-timeline{min-width:950px}.tz-row{grid-template-columns:175px 1fr}.tz-code{font-size:17px}.tz-clock{font-size:19px}}
+.tz-dst-info{display:flex;align-items:center;gap:12px;padding:10px 16px;background:#f8fbfd;border-bottom:1px solid #e6edf1;color:#60717c;font-size:11px;line-height:1.4}.tz-dst-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;flex:0 0 30px;border-radius:50%;background:#edf5f9;color:#638ba5;font-size:13px}.tz-dst-content{min-width:0}.tz-dst-title{font-size:11px;font-weight:700;color:#42535e}.tz-dst-description{margin-top:2px;color:#7d8991}.tz-dst-current{display:inline-block;margin-left:4px;padding:2px 6px;border-radius:4px;background:#eaf2f7;color:#587b92;font-size:9px;font-weight:700}.tz-dst-date{color:#657781;font-weight:600}@media (max-width: 600px){.tz-dst-info{align-items:flex-start;padding:9px 12px;gap:9px;font-size:10px}.tz-dst-icon{width:27px;height:27px;flex-basis:27px;font-size:11px}.tz-dst-title{font-size:10px}}
+
+</style>
+
+<div aria-label="breadcrumb" class="p-3">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/time-zone-converter">Time Zone</a></li>
+    <li class="breadcrumb-item active" aria-current="page">MST to CST / CDT Time Converter</li>
+  </ol>
+</div>
+
+<div class="tz-widget">
+<div class="tz-toolbar">
+ <div class="d-flex justify-content-between align-items-center">
+  <div class="tz-toolbar-title"><i class="fa-solid fa-clock me-1"></i>MST to CST / CDT Time Converter</div>
+  <div class="tz-toolbar-right">
+    <button type="button" class="tz-btn tz-nav-btn" onclick="tzPreviousDay()" aria-label="Previous day"><i class="fa-solid fa-chevron-left"></i></button>
+    <button type="button" class="tz-btn tz-today-btn" onclick="tzToday()">Today · Now </button>
+    <button type="button" class="tz-btn tz-nav-btn" onclick="tzNextDay()" aria-label="Next day"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+</div>
+</div>
+<div class="tz-selected-clocks">
+ <div class="tz-selected-clock">
+  <div id="tzSelectedMstZone" class="tz-selected-zone">MST </div>
+  <div id="tzSelectedMstLive" class="tz-selected-time">-- </div>
+  <div id="tzSelectedMstDate" class="tz-selected-date">-- </div>
+  <div class="tz-selected-status">Selected Time </div>
+</div>
+  <div class="tz-selected-clock">
+    <div id="tzSelectedCentralZone" class="tz-selected-zone">CST </div>
+    <div id="tzSelectedCentralLive" class="tz-selected-time">-- </div>
+    <div id="tzSelectedCentralDate" class="tz-selected-date">-- </div>
+    <div class="tz-selected-status">Converted Time </div>
+</div>
+</div>
+<div id="tzDstInfo" class="tz-dst-info"></div>
+<div class="tz-scroll">
+  <div class="tz-timeline">
+   <div class="tz-row">
+     <div class="tz-info">
+       <div class="tz-code">MST </div>
+       <div class="tz-name">Mountain Standard Time </div>
+       <div class="tz-location">Phoenix, Arizona </div>
+       <div id="tzMstClock" class="tz-clock">-- </div>
+       <div id="tzMstClockDate" class="tz-clock-date">-- </div>
+       <div class="tz-live"><span class="tz-live-dot"></span>Live time </div>
+      </div>
+    <div class="tz-hours-area"><div id="tzMstDate" class="tz-date-header">-- </div>
+    <div id="tzMstHours" class="tz-hours"></div><div id="tzMstNowMarker" class="tz-now-marker"></div>
+    <div id="tzMstNowLabel" class="tz-now-label"></div>
+   </div>
+  </div>
+  <div class="tz-row">
+    <div class="tz-info">
+     <div id="tzCentralCode" class="tz-code">CST </div>
+     <div id="tzCentralName" class="tz-name">Central Standard Time </div>
+     <div class="tz-location">Chicago, Illinois </div>
+     <div id="tzCentralClock" class="tz-clock">-- </div>
+     <div id="tzCentralClockDate" class="tz-clock-date">-- </div>
+     <div class="tz-live"><span class="tz-live-dot"></span>Live time </div>
+     </div>
+  <div class="tz-hours-area">
+    <div id="tzCentralDate" class="tz-date-header">-- </div>
+    <div id="tzCentralHours" class="tz-hours"></div>
+    <div id="tzCentralNowMarker" class="tz-now-marker"></div>
+    <div id="tzCentralNowLabel" class="tz-now-label"></div>
+   </div>
+  </div>
+</div>
+</div>
+<div class="tz-result">
+    <span id="tzSelectedMst" class="tz-result-time mst-result">MST -- </span><span class="tz-result-gap">+2 HOURS </span><span class="tz-result-arrow">→ </span><span id="tzSelectedCentral" class="tz-result-time central-result">CDT -- </span><span id="tzSelectedDate" class="tz-result-date">-- </span>
+</div>
+</div>
+<script src="{{ '/assets/js/time/mst-to-cst.js' | relative_url }}"></script>
 
