@@ -7,7 +7,6 @@ last_modified_at: 2026-09-04
 ---
 
 <style>
-
 .tz-widget{width:100%;background:#fff;border:1px solid #e2e7eb;border-radius:12px;box-shadow:0 4px 18px #1e32460f;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#263238}.tz-toolbar{min-height:54px;padding:9px 15px;background:#fff;border-bottom:1px solid #e8edf1}.tz-toolbar-title{display:flex;align-items:center;font-size:14px;font-weight:600;color:#35424d}.tz-toolbar-title i{color:#6a98b9}
 .tz-toolbar-right{display:flex;align-items:center;gap:5px}.tz-btn{min-height:31px;padding:5px 10px;border:1px solid #dce3e8;border-radius:6px;background:#fff;color:#59656f;font-size:12px;font-weight:500;cursor:pointer;transition:.15s ease}.tz-btn:hover{background:#f5f8fa;border-color:#cbd7df;color:#315f84}
 .tz-btn:active{background:#edf4f8}.tz-nav-btn{width:32px;padding:4px 0}.tz-today-btn{min-width:86px}.tz-selected-clocks{display:grid;grid-template-columns:1fr 1fr;background:#fafcfd;border-bottom:1px solid #e7ecf0}.tz-selected-clock{padding:16px 20px;text-align:center}.tz-selected-clock + .tz-selected-clock{border-left:1px solid #e7ecf0}.tz-selected-zone{font-size:11px;font-weight:700;letter-spacing:.7px;color:#71808b;text-transform:uppercase}.tz-selected-time{margin-top:5px;font-size:31px;line-height:1.15;font-weight:650;color:#263238;letter-spacing:.2px;font-variant-numeric:tabular-nums;white-space:nowrap}.tz-selected-date{margin-top:5px;font-size:11px;color:#89949d}.tz-selected-status{margin-top:6px;font-size:9px;color:#9aa4ac;letter-spacing:.4px;text-transform:uppercase}.tz-dst-info{display:flex;align-items:center;gap:12px;padding:10px 16px;background:#f8fbfd;border-bottom:1px solid #e6edf1;color:#60717c;font-size:11px;line-height:1.4}.tz-dst-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;flex:0 0 30px;border-radius:50%;background:#edf5f9;color:#638ba5;font-size:13px}.tz-dst-content{min-width:0}.tz-dst-title{font-size:11px;font-weight:700;color:#42535e}.tz-dst-description{margin-top:2px;color:#7d8991}.tz-dst-current{display:inline-block;margin-left:4px;padding:2px 6px;border-radius:4px;background:#eaf2f7;color:#587b92;font-size:9px;font-weight:700}.tz-dst-date{margin-left:5px;color:#657781;font-weight:600}.tz-scroll{width:100%;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:#cbd5dd transparent}.tz-scroll::-webkit-scrollbar{height:7px}
@@ -15,9 +14,7 @@ last_modified_at: 2026-09-04
 </style>
 
 
-
 <div aria-label="breadcrumb" class="p-3"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item"><a href="/time-zone-converter">Time Zone </a></li><li class="breadcrumb-item active" aria-current="page">CST to EST Time Converter </li></ol></div>
-
 
 
 <div class="tz-widget">
