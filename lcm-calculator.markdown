@@ -46,7 +46,7 @@ last_modified_at: 2026-02-03
                                 <button type="reset" id="customReset" class="btn btn-outline-secondary"><i class="fas fa-undo me-2"></i>Reset</button>
                             </div>
                         </form>
-                        <div id="result" class="mt-4" style="display: none;">
+                        <div id="result" class="mt-4 d-none">
                             <hr>
                             <h3 class="text-success text-center"><i class="fas fa-check-circle me-2"></i>Result</h3>
                             <div class="alert alert-success">

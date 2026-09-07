@@ -32,7 +32,7 @@ last_modified_at: 2026-05-16
             </div>
         </div>
       </div>
- <div id="mainResult" class="text-center p-3 rounded-4 mb-3 d-none"  style="background: linear-gradient(135deg,#0d6efd,#4dabf7); color:white;">
+  <div id="mainResult" class="text-center p-3 rounded-4 mb-3 d-none bg-primary bg-opacity-50 text-white">
     <h3 class="mb-0" id="result1">—</h3>
     <small>Total Age</small>
 </div>
@@ -165,7 +165,7 @@ last_modified_at: 2026-05-16
 </div>
  </div>
  </div>
-<img class="img-fluid d-flex" alt="Age calculator formula example showing years months and days calculation" src="/assets/images/age-calculator-formula-example.svg" fetchpriority="high" loading="auto" style="object-fit: contain;" title="Age Calculator Formula with Example">
+<img class="img-fluid d-flex p-4"  alt="Age calculator formula example showing years months and days calculation"  src="/assets/images/age-calculator-formula-example.svg"   fetchpriority="high"   loading="auto"  title="Age Calculator Formula with Example">
  </section>
 <!-- FAQ Section -->
  <section class="mb-5">

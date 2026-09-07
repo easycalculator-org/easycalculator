@@ -38,7 +38,7 @@ last_modified_at: 2026-02-03
                             <div class="bmi-value" id="bmiValue">--</div>
                             <div class="bmi-category" id="bmiCategory">--</div>
                             <div class="progress">
-                                <div class="progress-bar" id="bmiProgress" role="progressbar" style="width: 0%;"></div>
+                               <div class="progress-bar" id="bmiProgress" role="progressbar"></div>
                             </div>
                             <div class="bmi-scale">
                                 <span>Underweight (<18.5)</span>

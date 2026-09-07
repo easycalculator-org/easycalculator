@@ -183,8 +183,8 @@
     const totalAlphaSpace = lettersCount + spacesCount;
     const lettersPercent = totalAlphaSpace === 0 ? 0 : (lettersCount / totalAlphaSpace) * 100;
     const spacesPercent = 100 - lettersPercent;
-    const densityProgress = document.getElementById('densityProgress');
-    const spaceProgressDiv = document.getElementById('spaceProgress');
+    const densityProgress = document.getElementById("densityProgress").style.width = densityPercentage + "%";
+    const spaceProgressDiv = document.getElementById("spaceProgress").style.width = spacePercentage + "%";
     if (densityProgress && spaceProgressDiv) {
       densityProgress.style.width = `${lettersPercent}%`;
       spaceProgressDiv.style.width = `${spacesPercent}%`;

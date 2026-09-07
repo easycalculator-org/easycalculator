@@ -29,7 +29,7 @@ last_modified_at: 2026-02-04
          <!-- Timer Display -->
            <div class="text-center mb-5"><div id="timerDisplay" class="timer-display display-1 fw-bold">00:00</div></div>
          <!-- Progress Bar -->
-           <div class="progress mb-5"> <div id="progressBar" class="progress-bar" role="progressbar" style="width: 100%"></div></div>
+           <div class="progress mb-5"> <div id="progressBar" class="progress-bar w-100" role="progressbar"></div></div>
          <!-- Preset Buttons -->
            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
              <button class="btn btn-outline-primary preset-btn btn-custom px-3" data-seconds="30"><i class="fas fa-bolt me-1"></i> 30s </button>
@@ -56,7 +56,9 @@ last_modified_at: 2026-02-04
          </div>
        </div>
 <!-- Fullscreen Timer -->
-<div id="fullscreenTimer" class="position-fixed top-0 start-0 w-100 h-100 fullscreen-timer d-none align-items-center justify-content-center" style="z-index: 9999;">
+<div id="fullscreenTimer"
+     class="position-fixed top-0 start-0 w-100 h-100 fullscreen-timer d-none align-items-center justify-content-center z-3">
+     
 <div class="text-center">
  <div id="fsTimerDisplay" class="timer-display display-1 fw-bold mb-4">00:00</div>
    <button id="exitFullscreenBtn" class="btn btn-primary btn-lg px-4 btn-custom"><i class="fas fa-compress me-1"></i> Exit Fullscreen</button>

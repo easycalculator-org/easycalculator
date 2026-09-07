@@ -169,7 +169,7 @@ last_modified_at: 2026-08-23
 
  <div class="text-center mb-5 py-4">
                 <h2 class="section-title display-5 fw-bold">Why Use EasyCalculator.org?</h2>
-                <p class="lead mx-auto" style="max-width: 700px;">Discover why thousands of users trust our platform for their daily calculation needs</p>
+                <p class="lead mx-auto">Discover why thousands of users trust our platform for their daily calculation needs</p>
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
@@ -208,7 +208,7 @@ last_modified_at: 2026-08-23
    <div class="container">
         <div class="text-center mb-5">
                 <h2 class="section-title display-5 fw-bold">Explore Our Calculator Categories</h2>
-                <p class="lead mx-auto" style="max-width: 700px;">Discover tools for every need across multiple categories</p>
+                <p class="lead mx-auto">Discover tools for every need across multiple categories</p>
             </div>
             <div class="row g-4">
                 <!-- Financial Calculators -->
@@ -325,7 +325,7 @@ last_modified_at: 2026-08-23
   <div class="col-lg-10">
     <div class="bg-white p-4 p-md-5 rounded-3 shadow-sm">
        <h2 class="section-title display-5 fw-bold text-center">Source Transparency</h2>
-         <p class="lead mx-auto" style="max-width: 800px;">At EasyCalculator.org, we believe in transparency and accuracy. Our calculators are built using reliable sources and standards</p>
+         <p class="lead mx-auto">At EasyCalculator.org, we believe in transparency and accuracy. Our calculators are built using reliable sources and standards</p>
           <p class="text-center mb-4">Each calculator is developed with care and rigorously tested. Found a bug or error? We welcome your feedback!</p>
        <div class="mt-4">
          <h4 class="mb-4 text-center">Our Primary Reference Sources:</h4>
