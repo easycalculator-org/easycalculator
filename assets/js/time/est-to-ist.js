@@ -1,18 +1,25 @@
 /* =========================================================
    EASY CALCULATOR
-   UTC → IST
+   EST → IST
 
-   UTC:
-   Coordinated Universal Time
+   Eastern Time:
+   America/New_York
 
-   IST:
-   India Standard Time
+   India Standard Time:
+   Asia/Kolkata
 
-   IST is permanently UTC+5:30.
-   No daylight saving time.
+   EST = UTC-5
+   EDT = UTC-4
+
+   IST = UTC+5:30
+
+   EST → IST = +10:30
+   EDT → IST = +9:30
+
+   Automatically handles DST and date rollover.
 ========================================================= */
 
-const TZ_FROM = "UTC";
+const TZ_FROM = "America/New_York";
 const TZ_TO   = "Asia/Kolkata";
 
 let tzSelectedInstant = new Date();
@@ -50,10 +57,6 @@ function tzParts(date, timezone) {
 ========================================================= */
 
 function tzAbbreviation(date, timezone) {
-
-    if (timezone === "UTC") {
-        return "UTC";
-    }
 
     if (timezone === "Asia/Kolkata") {
         return "IST";
@@ -118,18 +121,10 @@ function tzFormatDate(date, timezone) {
 
 
 /* =========================================================
-   UTC OFFSET
+   GET UTC OFFSET
 ========================================================= */
 
 function tzGetOffset(date, timezone) {
-
-    if (timezone === "UTC") {
-        return 0;
-    }
-
-    if (timezone === "Asia/Kolkata") {
-        return 330;
-    }
 
     const parts = new Intl.DateTimeFormat(
         "en-US",
@@ -276,7 +271,7 @@ function tzSameHour(
 
 
 /* =========================================================
-   CREATE 24 HOURS
+   CREATE 24 HOUR TIMELINE
 ========================================================= */
 
 function tzCreateHours(
@@ -410,7 +405,6 @@ function tzUpdateSelected() {
             true
         );
 
-
     const toTime =
         tzFormatTime(
             tzSelectedInstant,
@@ -418,13 +412,11 @@ function tzUpdateSelected() {
             true
         );
 
-
     const fromDate =
         tzFormatDate(
             tzSelectedInstant,
             TZ_FROM
         );
-
 
     const toDate =
         tzFormatDate(
@@ -432,11 +424,17 @@ function tzUpdateSelected() {
             TZ_TO
         );
 
+    const fromZone =
+        tzAbbreviation(
+            tzSelectedInstant,
+            TZ_FROM
+        );
+
 
     document.getElementById(
         "tzSelectedFromZone"
     ).textContent =
-        "UTC";
+        fromZone;
 
 
     document.getElementById(
@@ -472,7 +470,7 @@ function tzUpdateSelected() {
     document.getElementById(
         "tzSelectedFrom"
     ).textContent =
-        `UTC ${tzFormatTime(
+        `${fromZone} ${tzFormatTime(
             tzSelectedInstant,
             TZ_FROM
         )}`;
@@ -510,10 +508,17 @@ function tzUpdateSelected() {
 
 function tzUpdateNames() {
 
+    const fromZone =
+        tzAbbreviation(
+            tzSelectedInstant,
+            TZ_FROM
+        );
+
+
     document.getElementById(
         "tzFromCode"
     ).textContent =
-        "UTC";
+        fromZone;
 
 
     document.getElementById(
@@ -525,7 +530,9 @@ function tzUpdateNames() {
     document.getElementById(
         "tzFromName"
     ).textContent =
-        "Coordinated Universal Time";
+        fromZone === "EDT"
+            ? "Eastern Daylight Time"
+            : "Eastern Standard Time";
 
 
     document.getElementById(
@@ -713,7 +720,7 @@ function tzUpdateNowMarker(
 
 
 /* =========================================================
-   TIMEZONE INFORMATION
+   DST INFORMATION
 ========================================================= */
 
 function tzUpdateDST() {
@@ -726,41 +733,110 @@ function tzUpdateDST() {
     if (!element) return;
 
 
-    element.innerHTML = `
+    const now =
+        new Date();
 
-        <div class="tz-dst-icon">
-            <i class="fa-solid fa-globe"></i>
-        </div>
 
-        <div>
+    const fromZone =
+        tzAbbreviation(
+            now,
+            TZ_FROM
+        );
 
-            <div class="tz-dst-title">
+    const difference =
+        tzGetDifference(
+            now
+        );
 
-                UTC → IST
 
-                <span class="tz-dst-current">
-                    +5:30 HOURS
-                </span>
+    if (fromZone === "EDT") {
+
+        element.innerHTML = `
+
+            <div class="tz-dst-icon">
+                <i class="fa-solid fa-sun"></i>
+            </div>
+
+            <div>
+
+                <div class="tz-dst-title">
+
+                    Daylight Saving Time
+
+                    <span class="tz-dst-current">
+                        EDT → IST
+                    </span>
+
+                </div>
+
+                <div class="tz-dst-description">
+
+                    Eastern Time is currently
+                    <strong>EDT</strong>.
+
+                    Daylight Saving Time is active,
+                    making Eastern Time
+                    <strong>
+                        4 hours behind UTC
+                    </strong>.
+
+                    India remains on IST year-round.
+
+                    Current difference:
+                    <strong>
+                        ${difference}
+                    </strong>.
+
+                </div>
 
             </div>
 
-            <div class="tz-dst-description">
+        `;
 
-                India Standard Time
-                <strong>IST</strong>
-                is UTC+5:30 and does not
-                observe Daylight Saving Time.
+    } else {
 
-                The difference is always
-                <strong>
-                    +5 HOURS 30 MIN
-                </strong>.
+        element.innerHTML = `
+
+            <div class="tz-dst-icon">
+                <i class="fa-regular fa-clock"></i>
+            </div>
+
+            <div>
+
+                <div class="tz-dst-title">
+
+                    Standard Time
+
+                    <span class="tz-dst-current">
+                        EST → IST
+                    </span>
+
+                </div>
+
+                <div class="tz-dst-description">
+
+                    Eastern Time is currently
+                    <strong>EST</strong>.
+
+                    Standard Time is active,
+                    making Eastern Time
+                    <strong>
+                        5 hours behind UTC
+                    </strong>.
+
+                    India remains on IST year-round.
+
+                    Current difference:
+                    <strong>
+                        ${difference}
+                    </strong>.
+
+                </div>
 
             </div>
 
-        </div>
-
-    `;
+        `;
+    }
 }
 
 
@@ -855,14 +931,12 @@ tzToday();
 
 
 /* =========================================================
-   LIVE UPDATE — EVERY SECOND
+   LIVE CLOCK — EVERY SECOND
 ========================================================= */
 
 setInterval(
     () => {
-
         tzUpdateLive();
-
     },
     1000
 );

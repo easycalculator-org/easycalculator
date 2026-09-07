@@ -1,18 +1,26 @@
 /* =========================================================
    EASY CALCULATOR
-   UTC → IST
+   PST → IST
 
-   UTC:
-   Coordinated Universal Time
+   Pacific Time:
+   America/Los_Angeles
 
-   IST:
-   India Standard Time
+   India Standard Time:
+   Asia/Kolkata
 
-   IST is permanently UTC+5:30.
-   No daylight saving time.
+   PST = UTC-8
+   PDT = UTC-7
+
+   IST = UTC+5:30
+
+   Difference:
+   PST → IST  = +13:30
+   PDT → IST  = +12:30
+
+   Automatically handles DST and date changes.
 ========================================================= */
 
-const TZ_FROM = "UTC";
+const TZ_FROM = "America/Los_Angeles";
 const TZ_TO   = "Asia/Kolkata";
 
 let tzSelectedInstant = new Date();
@@ -50,10 +58,6 @@ function tzParts(date, timezone) {
 ========================================================= */
 
 function tzAbbreviation(date, timezone) {
-
-    if (timezone === "UTC") {
-        return "UTC";
-    }
 
     if (timezone === "Asia/Kolkata") {
         return "IST";
@@ -118,18 +122,10 @@ function tzFormatDate(date, timezone) {
 
 
 /* =========================================================
-   UTC OFFSET
+   GET OFFSET
 ========================================================= */
 
 function tzGetOffset(date, timezone) {
-
-    if (timezone === "UTC") {
-        return 0;
-    }
-
-    if (timezone === "Asia/Kolkata") {
-        return 330;
-    }
 
     const parts = new Intl.DateTimeFormat(
         "en-US",
@@ -276,7 +272,7 @@ function tzSameHour(
 
 
 /* =========================================================
-   CREATE 24 HOURS
+   CREATE 24 HOUR TIMELINE
 ========================================================= */
 
 function tzCreateHours(
@@ -410,7 +406,6 @@ function tzUpdateSelected() {
             true
         );
 
-
     const toTime =
         tzFormatTime(
             tzSelectedInstant,
@@ -418,13 +413,11 @@ function tzUpdateSelected() {
             true
         );
 
-
     const fromDate =
         tzFormatDate(
             tzSelectedInstant,
             TZ_FROM
         );
-
 
     const toDate =
         tzFormatDate(
@@ -432,11 +425,17 @@ function tzUpdateSelected() {
             TZ_TO
         );
 
+    const fromZone =
+        tzAbbreviation(
+            tzSelectedInstant,
+            TZ_FROM
+        );
+
 
     document.getElementById(
         "tzSelectedFromZone"
     ).textContent =
-        "UTC";
+        fromZone;
 
 
     document.getElementById(
@@ -472,7 +471,7 @@ function tzUpdateSelected() {
     document.getElementById(
         "tzSelectedFrom"
     ).textContent =
-        `UTC ${tzFormatTime(
+        `${fromZone} ${tzFormatTime(
             tzSelectedInstant,
             TZ_FROM
         )}`;
@@ -510,10 +509,17 @@ function tzUpdateSelected() {
 
 function tzUpdateNames() {
 
+    const fromZone =
+        tzAbbreviation(
+            tzSelectedInstant,
+            TZ_FROM
+        );
+
+
     document.getElementById(
         "tzFromCode"
     ).textContent =
-        "UTC";
+        fromZone;
 
 
     document.getElementById(
@@ -525,7 +531,9 @@ function tzUpdateNames() {
     document.getElementById(
         "tzFromName"
     ).textContent =
-        "Coordinated Universal Time";
+        fromZone === "PDT"
+            ? "Pacific Daylight Time"
+            : "Pacific Standard Time";
 
 
     document.getElementById(
@@ -713,7 +721,7 @@ function tzUpdateNowMarker(
 
 
 /* =========================================================
-   TIMEZONE INFORMATION
+   DST INFORMATION
 ========================================================= */
 
 function tzUpdateDST() {
@@ -726,41 +734,111 @@ function tzUpdateDST() {
     if (!element) return;
 
 
-    element.innerHTML = `
+    const now =
+        new Date();
 
-        <div class="tz-dst-icon">
-            <i class="fa-solid fa-globe"></i>
-        </div>
 
-        <div>
+    const fromZone =
+        tzAbbreviation(
+            now,
+            TZ_FROM
+        );
 
-            <div class="tz-dst-title">
 
-                UTC → IST
+    const difference =
+        tzGetDifference(
+            now
+        );
 
-                <span class="tz-dst-current">
-                    +5:30 HOURS
-                </span>
+
+    if (fromZone === "PDT") {
+
+        element.innerHTML = `
+
+            <div class="tz-dst-icon">
+                <i class="fa-solid fa-sun"></i>
+            </div>
+
+            <div>
+
+                <div class="tz-dst-title">
+
+                    Daylight Saving Time
+
+                    <span class="tz-dst-current">
+                        PDT → IST
+                    </span>
+
+                </div>
+
+                <div class="tz-dst-description">
+
+                    Pacific Time is currently
+                    <strong>PDT</strong>.
+
+                    Daylight Saving Time is active,
+                    making Pacific Time
+                    <strong>
+                        7 hours behind UTC
+                    </strong>.
+
+                    India remains on IST year-round.
+
+                    Current difference:
+                    <strong>
+                        ${difference}
+                    </strong>.
+
+                </div>
 
             </div>
 
-            <div class="tz-dst-description">
+        `;
 
-                India Standard Time
-                <strong>IST</strong>
-                is UTC+5:30 and does not
-                observe Daylight Saving Time.
+    } else {
 
-                The difference is always
-                <strong>
-                    +5 HOURS 30 MIN
-                </strong>.
+        element.innerHTML = `
+
+            <div class="tz-dst-icon">
+                <i class="fa-regular fa-clock"></i>
+            </div>
+
+            <div>
+
+                <div class="tz-dst-title">
+
+                    Standard Time
+
+                    <span class="tz-dst-current">
+                        PST → IST
+                    </span>
+
+                </div>
+
+                <div class="tz-dst-description">
+
+                    Pacific Time is currently
+                    <strong>PST</strong>.
+
+                    Standard Time is active,
+                    making Pacific Time
+                    <strong>
+                        8 hours behind UTC
+                    </strong>.
+
+                    India remains on IST year-round.
+
+                    Current difference:
+                    <strong>
+                        ${difference}
+                    </strong>.
+
+                </div>
 
             </div>
 
-        </div>
-
-    `;
+        `;
+    }
 }
 
 
@@ -855,7 +933,7 @@ tzToday();
 
 
 /* =========================================================
-   LIVE UPDATE — EVERY SECOND
+   LIVE CLOCK — EVERY SECOND
 ========================================================= */
 
 setInterval(

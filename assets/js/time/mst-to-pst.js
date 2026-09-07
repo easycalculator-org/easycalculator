@@ -1,19 +1,27 @@
 /* =========================================================
    EASY CALCULATOR
-   UTC → IST
+   MST → PST
 
-   UTC:
-   Coordinated Universal Time
+   Mountain Time:
+   America/Denver
 
-   IST:
-   India Standard Time
+   Pacific Time:
+   America/Los_Angeles
 
-   IST is permanently UTC+5:30.
-   No daylight saving time.
+   MST = UTC-7
+   MDT = UTC-6
+
+   PST = UTC-8
+   PDT = UTC-7
+
+   Normal difference:
+   Mountain → Pacific = -1 HOUR
+
+   Automatically handles DST.
 ========================================================= */
 
-const TZ_FROM = "UTC";
-const TZ_TO   = "Asia/Kolkata";
+const TZ_FROM = "America/Denver";
+const TZ_TO   = "America/Los_Angeles";
 
 let tzSelectedInstant = new Date();
 let tzTimelineStart;
@@ -50,14 +58,6 @@ function tzParts(date, timezone) {
 ========================================================= */
 
 function tzAbbreviation(date, timezone) {
-
-    if (timezone === "UTC") {
-        return "UTC";
-    }
-
-    if (timezone === "Asia/Kolkata") {
-        return "IST";
-    }
 
     const parts = new Intl.DateTimeFormat(
         "en-US",
@@ -118,18 +118,10 @@ function tzFormatDate(date, timezone) {
 
 
 /* =========================================================
-   UTC OFFSET
+   GET OFFSET
 ========================================================= */
 
 function tzGetOffset(date, timezone) {
-
-    if (timezone === "UTC") {
-        return 0;
-    }
-
-    if (timezone === "Asia/Kolkata") {
-        return 330;
-    }
 
     const parts = new Intl.DateTimeFormat(
         "en-US",
@@ -276,7 +268,7 @@ function tzSameHour(
 
 
 /* =========================================================
-   CREATE 24 HOURS
+   CREATE 24 HOUR TIMELINE
 ========================================================= */
 
 function tzCreateHours(
@@ -410,7 +402,6 @@ function tzUpdateSelected() {
             true
         );
 
-
     const toTime =
         tzFormatTime(
             tzSelectedInstant,
@@ -418,16 +409,26 @@ function tzUpdateSelected() {
             true
         );
 
-
     const fromDate =
         tzFormatDate(
             tzSelectedInstant,
             TZ_FROM
         );
 
-
     const toDate =
         tzFormatDate(
+            tzSelectedInstant,
+            TZ_TO
+        );
+
+    const fromZone =
+        tzAbbreviation(
+            tzSelectedInstant,
+            TZ_FROM
+        );
+
+    const toZone =
+        tzAbbreviation(
             tzSelectedInstant,
             TZ_TO
         );
@@ -436,13 +437,13 @@ function tzUpdateSelected() {
     document.getElementById(
         "tzSelectedFromZone"
     ).textContent =
-        "UTC";
+        fromZone;
 
 
     document.getElementById(
         "tzSelectedToZone"
     ).textContent =
-        "IST";
+        toZone;
 
 
     document.getElementById(
@@ -472,7 +473,7 @@ function tzUpdateSelected() {
     document.getElementById(
         "tzSelectedFrom"
     ).textContent =
-        `UTC ${tzFormatTime(
+        `${fromZone} ${tzFormatTime(
             tzSelectedInstant,
             TZ_FROM
         )}`;
@@ -481,7 +482,7 @@ function tzUpdateSelected() {
     document.getElementById(
         "tzSelectedTo"
     ).textContent =
-        `IST ${tzFormatTime(
+        `${toZone} ${tzFormatTime(
             tzSelectedInstant,
             TZ_TO
         )}`;
@@ -510,28 +511,45 @@ function tzUpdateSelected() {
 
 function tzUpdateNames() {
 
+    const fromZone =
+        tzAbbreviation(
+            tzSelectedInstant,
+            TZ_FROM
+        );
+
+    const toZone =
+        tzAbbreviation(
+            tzSelectedInstant,
+            TZ_TO
+        );
+
+
     document.getElementById(
         "tzFromCode"
     ).textContent =
-        "UTC";
+        fromZone;
 
 
     document.getElementById(
         "tzToCode"
     ).textContent =
-        "IST";
+        toZone;
 
 
     document.getElementById(
         "tzFromName"
     ).textContent =
-        "Coordinated Universal Time";
+        fromZone === "MDT"
+            ? "Mountain Daylight Time"
+            : "Mountain Standard Time";
 
 
     document.getElementById(
         "tzToName"
     ).textContent =
-        "India Standard Time";
+        toZone === "PDT"
+            ? "Pacific Daylight Time"
+            : "Pacific Standard Time";
 }
 
 
@@ -713,7 +731,7 @@ function tzUpdateNowMarker(
 
 
 /* =========================================================
-   TIMEZONE INFORMATION
+   DST INFORMATION
 ========================================================= */
 
 function tzUpdateDST() {
@@ -726,34 +744,85 @@ function tzUpdateDST() {
     if (!element) return;
 
 
+    const now =
+        new Date();
+
+
+    const fromZone =
+        tzAbbreviation(
+            now,
+            TZ_FROM
+        );
+
+    const toZone =
+        tzAbbreviation(
+            now,
+            TZ_TO
+        );
+
+    const difference =
+        tzGetDifference(
+            now
+        );
+
+
+    let status = "";
+
+
+    if (
+        fromZone === "MDT" &&
+        toZone === "PDT"
+    ) {
+
+        status = `
+            Both Mountain and Pacific Time
+            are currently observing Daylight Saving Time.
+        `;
+
+    } else if (
+        fromZone === "MST" &&
+        toZone === "PST"
+    ) {
+
+        status = `
+            Both Mountain and Pacific Time
+            are currently observing Standard Time.
+        `;
+
+    } else {
+
+        status = `
+            Mountain and Pacific Time are currently
+            using different daylight-saving rules.
+        `;
+    }
+
+
     element.innerHTML = `
 
         <div class="tz-dst-icon">
-            <i class="fa-solid fa-globe"></i>
+            <i class="fa-solid fa-clock"></i>
         </div>
 
         <div>
 
             <div class="tz-dst-title">
 
-                UTC → IST
+                Mountain → Pacific
 
                 <span class="tz-dst-current">
-                    +5:30 HOURS
+                    ${fromZone} → ${toZone}
                 </span>
 
             </div>
 
             <div class="tz-dst-description">
 
-                India Standard Time
-                <strong>IST</strong>
-                is UTC+5:30 and does not
-                observe Daylight Saving Time.
+                ${status}
 
-                The difference is always
+                Current difference:
                 <strong>
-                    +5 HOURS 30 MIN
+                    ${difference}
                 </strong>.
 
             </div>
@@ -855,14 +924,12 @@ tzToday();
 
 
 /* =========================================================
-   LIVE UPDATE — EVERY SECOND
+   LIVE CLOCK — EVERY SECOND
 ========================================================= */
 
 setInterval(
     () => {
-
         tzUpdateLive();
-
     },
     1000
 );

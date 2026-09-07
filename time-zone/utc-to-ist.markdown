@@ -12,3 +12,269 @@ last_modified_at: 2026-09-04
 </style>
 
 <div aria-label="breadcrumb" class="p-3"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item"><a href="/time-zone-converter">Time Zone </a></li><li class="breadcrumb-item active" aria-current="page">UTC to IST Time Converter </li></ol></div>
+
+
+
+<div class="tz-widget">
+
+    <!-- TOOLBAR -->
+    <div class="tz-toolbar">
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div class="tz-toolbar-title">
+                <i class="fa-solid fa-clock me-1"></i>
+                UTC to IST Time Converter
+            </div>
+
+            <div class="tz-toolbar-right">
+
+                <button type="button"
+                        class="tz-btn tz-nav-btn"
+                        onclick="tzPreviousDay()"
+                        aria-label="Previous day">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button type="button"
+                        class="tz-btn tz-today-btn"
+                        onclick="tzToday()">
+                    Today · Now
+                </button>
+
+                <button type="button"
+                        class="tz-btn tz-nav-btn"
+                        onclick="tzNextDay()"
+                        aria-label="Next day">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SELECTED CLOCKS -->
+    <div class="tz-selected-clocks">
+
+        <div class="tz-selected-clock">
+
+            <div id="tzSelectedFromZone"
+                 class="tz-selected-zone">
+                UTC
+            </div>
+
+            <div id="tzSelectedFromLive"
+                 class="tz-selected-time">
+                --
+            </div>
+
+            <div id="tzSelectedFromDate"
+                 class="tz-selected-date">
+                --
+            </div>
+
+            <div class="tz-selected-status">
+                Selected Time
+            </div>
+
+        </div>
+
+
+        <div class="tz-selected-clock">
+
+            <div id="tzSelectedToZone"
+                 class="tz-selected-zone">
+                IST
+            </div>
+
+            <div id="tzSelectedToLive"
+                 class="tz-selected-time">
+                --
+            </div>
+
+            <div id="tzSelectedToDate"
+                 class="tz-selected-date">
+                --
+            </div>
+
+            <div class="tz-selected-status">
+                Converted Time
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TIMEZONE INFORMATION -->
+    <div id="tzDstInfo"
+         class="tz-dst-info">
+    </div>
+
+
+    <!-- 24 HOUR TIMELINE -->
+    <div class="tz-scroll">
+
+        <div class="tz-timeline">
+
+
+            <!-- UTC -->
+
+            <div class="tz-row">
+
+                <div class="tz-info">
+
+                    <div id="tzFromCode"
+                         class="tz-code">
+                        UTC
+                    </div>
+
+                    <div id="tzFromName"
+                         class="tz-name">
+                        Coordinated Universal Time
+                    </div>
+
+                    <div class="tz-location">
+                        UTC
+                    </div>
+
+                    <div id="tzFromClock"
+                         class="tz-clock">
+                        --
+                    </div>
+
+                    <div id="tzFromClockDate"
+                         class="tz-clock-date">
+                        --
+                    </div>
+
+                    <div class="tz-live">
+                        <span class="tz-live-dot"></span>
+                        Live time
+                    </div>
+
+                </div>
+
+
+                <div class="tz-hours-area">
+
+                    <div id="tzFromDate"
+                         class="tz-date-header">
+                        --
+                    </div>
+
+                    <div id="tzFromHours"
+                         class="tz-hours">
+                    </div>
+
+                    <div id="tzFromNowMarker"
+                         class="tz-now-marker">
+                    </div>
+
+                    <div id="tzFromNowLabel"
+                         class="tz-now-label">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- INDIA -->
+
+            <div class="tz-row">
+
+                <div class="tz-info">
+
+                    <div id="tzToCode"
+                         class="tz-code">
+                        IST
+                    </div>
+
+                    <div id="tzToName"
+                         class="tz-name">
+                        India Standard Time
+                    </div>
+
+                    <div class="tz-location">
+                        New Delhi, India
+                    </div>
+
+                    <div id="tzToClock"
+                         class="tz-clock">
+                        --
+                    </div>
+
+                    <div id="tzToClockDate"
+                         class="tz-clock-date">
+                        --
+                    </div>
+
+                    <div class="tz-live">
+                        <span class="tz-live-dot"></span>
+                        Live time
+                    </div>
+
+                </div>
+
+
+                <div class="tz-hours-area">
+
+                    <div id="tzToDate"
+                         class="tz-date-header">
+                        --
+                    </div>
+
+                    <div id="tzToHours"
+                         class="tz-hours">
+                    </div>
+
+                    <div id="tzToNowMarker"
+                         class="tz-now-marker">
+                    </div>
+
+                    <div id="tzToNowLabel"
+                         class="tz-now-label">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RESULT -->
+    <div class="tz-result">
+
+        <span id="tzSelectedFrom"
+              class="tz-result-time utc-result">
+            UTC --
+        </span>
+
+        <span class="tz-result-gap">
+            +5 HOURS 30 MIN
+        </span>
+
+        <span class="tz-result-arrow">
+            →
+        </span>
+
+        <span id="tzSelectedTo"
+              class="tz-result-time ist-result">
+            IST --
+        </span>
+
+        <span id="tzSelectedDate"
+              class="tz-result-date">
+            --
+        </span>
+
+    </div>
+
+</div>
+
+
+<script src="{{ '/assets/js/time/utc-to-ist.js' | relative_url }}"></script>

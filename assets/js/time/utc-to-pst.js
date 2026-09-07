@@ -1,19 +1,10 @@
 /* =========================================================
    EASY CALCULATOR
-   UTC → IST
-
-   UTC:
-   Coordinated Universal Time
-
-   IST:
-   India Standard Time
-
-   IST is permanently UTC+5:30.
-   No daylight saving time.
+   UTC → PST / PDT
 ========================================================= */
 
 const TZ_FROM = "UTC";
-const TZ_TO   = "Asia/Kolkata";
+const TZ_TO   = "America/Los_Angeles";
 
 let tzSelectedInstant = new Date();
 let tzTimelineStart;
@@ -50,14 +41,6 @@ function tzParts(date, timezone) {
 ========================================================= */
 
 function tzAbbreviation(date, timezone) {
-
-    if (timezone === "UTC") {
-        return "UTC";
-    }
-
-    if (timezone === "Asia/Kolkata") {
-        return "IST";
-    }
 
     const parts = new Intl.DateTimeFormat(
         "en-US",
@@ -125,10 +108,6 @@ function tzGetOffset(date, timezone) {
 
     if (timezone === "UTC") {
         return 0;
-    }
-
-    if (timezone === "Asia/Kolkata") {
-        return 330;
     }
 
     const parts = new Intl.DateTimeFormat(
@@ -223,7 +202,7 @@ function tzGetDifference(date) {
 
 
 /* =========================================================
-   TIMELINE START
+   TIMELINE
 ========================================================= */
 
 function tzCalculateTimeline() {
@@ -403,6 +382,17 @@ function tzCreateHours(
 
 function tzUpdateSelected() {
 
+    const fromZone =
+        "UTC";
+
+
+    const toZone =
+        tzAbbreviation(
+            tzSelectedInstant,
+            TZ_TO
+        );
+
+
     const fromTime =
         tzFormatTime(
             tzSelectedInstant,
@@ -436,13 +426,13 @@ function tzUpdateSelected() {
     document.getElementById(
         "tzSelectedFromZone"
     ).textContent =
-        "UTC";
+        fromZone;
 
 
     document.getElementById(
         "tzSelectedToZone"
     ).textContent =
-        "IST";
+        toZone;
 
 
     document.getElementById(
@@ -472,19 +462,23 @@ function tzUpdateSelected() {
     document.getElementById(
         "tzSelectedFrom"
     ).textContent =
-        `UTC ${tzFormatTime(
-            tzSelectedInstant,
-            TZ_FROM
-        )}`;
+        `UTC ${
+            tzFormatTime(
+                tzSelectedInstant,
+                TZ_FROM
+            )
+        }`;
 
 
     document.getElementById(
         "tzSelectedTo"
     ).textContent =
-        `IST ${tzFormatTime(
-            tzSelectedInstant,
-            TZ_TO
-        )}`;
+        `${toZone} ${
+            tzFormatTime(
+                tzSelectedInstant,
+                TZ_TO
+            )
+        }`;
 
 
     document.getElementById(
@@ -510,6 +504,13 @@ function tzUpdateSelected() {
 
 function tzUpdateNames() {
 
+    const toZone =
+        tzAbbreviation(
+            tzSelectedInstant,
+            TZ_TO
+        );
+
+
     document.getElementById(
         "tzFromCode"
     ).textContent =
@@ -519,7 +520,7 @@ function tzUpdateNames() {
     document.getElementById(
         "tzToCode"
     ).textContent =
-        "IST";
+        toZone;
 
 
     document.getElementById(
@@ -531,7 +532,9 @@ function tzUpdateNames() {
     document.getElementById(
         "tzToName"
     ).textContent =
-        "India Standard Time";
+        toZone === "PDT"
+            ? "Pacific Daylight Time"
+            : "Pacific Standard Time";
 }
 
 
@@ -713,7 +716,7 @@ function tzUpdateNowMarker(
 
 
 /* =========================================================
-   TIMEZONE INFORMATION
+   DST INFORMATION
 ========================================================= */
 
 function tzUpdateDST() {
@@ -726,41 +729,103 @@ function tzUpdateDST() {
     if (!element) return;
 
 
-    element.innerHTML = `
+    const now =
+        new Date();
 
-        <div class="tz-dst-icon">
-            <i class="fa-solid fa-globe"></i>
-        </div>
 
-        <div>
+    const toZone =
+        tzAbbreviation(
+            now,
+            TZ_TO
+        );
 
-            <div class="tz-dst-title">
 
-                UTC → IST
+    const difference =
+        tzGetDifference(
+            now
+        );
 
-                <span class="tz-dst-current">
-                    +5:30 HOURS
-                </span>
+
+    if (
+        toZone === "PDT"
+    ) {
+
+        element.innerHTML = `
+
+            <div class="tz-dst-icon">
+                <i class="fa-solid fa-sun"></i>
+            </div>
+
+            <div>
+
+                <div class="tz-dst-title">
+
+                    Daylight Saving Time
+
+                    <span class="tz-dst-current">
+                        UTC → PDT
+                    </span>
+
+                </div>
+
+                <div class="tz-dst-description">
+
+                    UTC remains unchanged
+                    throughout the year.
+
+                    Pacific Time is currently
+                    <strong>PDT</strong>.
+
+                    The current difference is
+                    <strong>
+                        ${difference}
+                    </strong>.
+
+                </div>
 
             </div>
 
-            <div class="tz-dst-description">
+        `;
 
-                India Standard Time
-                <strong>IST</strong>
-                is UTC+5:30 and does not
-                observe Daylight Saving Time.
+    } else {
 
-                The difference is always
-                <strong>
-                    +5 HOURS 30 MIN
-                </strong>.
+        element.innerHTML = `
+
+            <div class="tz-dst-icon">
+                <i class="fa-regular fa-clock"></i>
+            </div>
+
+            <div>
+
+                <div class="tz-dst-title">
+
+                    Standard Time
+
+                    <span class="tz-dst-current">
+                        UTC → PST
+                    </span>
+
+                </div>
+
+                <div class="tz-dst-description">
+
+                    UTC remains unchanged
+                    throughout the year.
+
+                    Pacific Time is currently
+                    <strong>PST</strong>.
+
+                    The current difference is
+                    <strong>
+                        ${difference}
+                    </strong>.
+
+                </div>
 
             </div>
 
-        </div>
-
-    `;
+        `;
+    }
 }
 
 

@@ -1,18 +1,19 @@
+
 /* =========================================================
    EASY CALCULATOR
-   UTC → IST
+   CST → IST
+   Central Time → India Standard Time
 
-   UTC:
-   Coordinated Universal Time
+   Uses IANA timezone:
+   America/Chicago
+   Asia/Kolkata
 
-   IST:
-   India Standard Time
-
-   IST is permanently UTC+5:30.
-   No daylight saving time.
+   Automatically handles:
+   CST / CDT
+   IST
 ========================================================= */
 
-const TZ_FROM = "UTC";
+const TZ_FROM = "America/Chicago";
 const TZ_TO   = "Asia/Kolkata";
 
 let tzSelectedInstant = new Date();
@@ -50,14 +51,6 @@ function tzParts(date, timezone) {
 ========================================================= */
 
 function tzAbbreviation(date, timezone) {
-
-    if (timezone === "UTC") {
-        return "UTC";
-    }
-
-    if (timezone === "Asia/Kolkata") {
-        return "IST";
-    }
 
     const parts = new Intl.DateTimeFormat(
         "en-US",
@@ -122,14 +115,6 @@ function tzFormatDate(date, timezone) {
 ========================================================= */
 
 function tzGetOffset(date, timezone) {
-
-    if (timezone === "UTC") {
-        return 0;
-    }
-
-    if (timezone === "Asia/Kolkata") {
-        return 330;
-    }
 
     const parts = new Intl.DateTimeFormat(
         "en-US",
@@ -276,7 +261,7 @@ function tzSameHour(
 
 
 /* =========================================================
-   CREATE 24 HOURS
+   CREATE 24-HOUR TIMELINE
 ========================================================= */
 
 function tzCreateHours(
@@ -403,6 +388,17 @@ function tzCreateHours(
 
 function tzUpdateSelected() {
 
+    const fromZone =
+        tzAbbreviation(
+            tzSelectedInstant,
+            TZ_FROM
+        );
+
+
+    const toZone =
+        "IST";
+
+
     const fromTime =
         tzFormatTime(
             tzSelectedInstant,
@@ -436,13 +432,13 @@ function tzUpdateSelected() {
     document.getElementById(
         "tzSelectedFromZone"
     ).textContent =
-        "UTC";
+        fromZone;
 
 
     document.getElementById(
         "tzSelectedToZone"
     ).textContent =
-        "IST";
+        toZone;
 
 
     document.getElementById(
@@ -472,19 +468,23 @@ function tzUpdateSelected() {
     document.getElementById(
         "tzSelectedFrom"
     ).textContent =
-        `UTC ${tzFormatTime(
-            tzSelectedInstant,
-            TZ_FROM
-        )}`;
+        `${fromZone} ${
+            tzFormatTime(
+                tzSelectedInstant,
+                TZ_FROM
+            )
+        }`;
 
 
     document.getElementById(
         "tzSelectedTo"
     ).textContent =
-        `IST ${tzFormatTime(
-            tzSelectedInstant,
-            TZ_TO
-        )}`;
+        `${toZone} ${
+            tzFormatTime(
+                tzSelectedInstant,
+                TZ_TO
+            )
+        }`;
 
 
     document.getElementById(
@@ -510,10 +510,17 @@ function tzUpdateSelected() {
 
 function tzUpdateNames() {
 
+    const fromZone =
+        tzAbbreviation(
+            tzSelectedInstant,
+            TZ_FROM
+        );
+
+
     document.getElementById(
         "tzFromCode"
     ).textContent =
-        "UTC";
+        fromZone;
 
 
     document.getElementById(
@@ -525,7 +532,9 @@ function tzUpdateNames() {
     document.getElementById(
         "tzFromName"
     ).textContent =
-        "Coordinated Universal Time";
+        fromZone === "CDT"
+            ? "Central Daylight Time"
+            : "Central Standard Time";
 
 
     document.getElementById(
@@ -713,7 +722,7 @@ function tzUpdateNowMarker(
 
 
 /* =========================================================
-   TIMEZONE INFORMATION
+   DST INFORMATION
 ========================================================= */
 
 function tzUpdateDST() {
@@ -726,41 +735,105 @@ function tzUpdateDST() {
     if (!element) return;
 
 
-    element.innerHTML = `
+    const now =
+        new Date();
 
-        <div class="tz-dst-icon">
-            <i class="fa-solid fa-globe"></i>
-        </div>
 
-        <div>
+    const fromZone =
+        tzAbbreviation(
+            now,
+            TZ_FROM
+        );
 
-            <div class="tz-dst-title">
 
-                UTC → IST
+    const difference =
+        tzGetDifference(
+            now
+        );
 
-                <span class="tz-dst-current">
-                    +5:30 HOURS
-                </span>
+
+    if (
+        fromZone === "CDT"
+    ) {
+
+        element.innerHTML = `
+
+            <div class="tz-dst-icon">
+                <i class="fa-solid fa-sun"></i>
+            </div>
+
+            <div>
+
+                <div class="tz-dst-title">
+
+                    Daylight Saving Time
+
+                    <span class="tz-dst-current">
+                        CDT → IST
+                    </span>
+
+                </div>
+
+                <div class="tz-dst-description">
+
+                    Central Time is currently
+                    <strong>CDT</strong>.
+
+                    India remains on
+                    <strong>IST</strong>
+                    throughout the year.
+
+                    The current difference is
+                    <strong>
+                        ${difference}
+                    </strong>.
+
+                </div>
 
             </div>
 
-            <div class="tz-dst-description">
+        `;
 
-                India Standard Time
-                <strong>IST</strong>
-                is UTC+5:30 and does not
-                observe Daylight Saving Time.
+    } else {
 
-                The difference is always
-                <strong>
-                    +5 HOURS 30 MIN
-                </strong>.
+        element.innerHTML = `
+
+            <div class="tz-dst-icon">
+                <i class="fa-regular fa-clock"></i>
+            </div>
+
+            <div>
+
+                <div class="tz-dst-title">
+
+                    Standard Time
+
+                    <span class="tz-dst-current">
+                        CST → IST
+                    </span>
+
+                </div>
+
+                <div class="tz-dst-description">
+
+                    Central Time is currently
+                    <strong>CST</strong>.
+
+                    India remains on
+                    <strong>IST</strong>
+                    throughout the year.
+
+                    The current difference is
+                    <strong>
+                        ${difference}
+                    </strong>.
+
+                </div>
 
             </div>
 
-        </div>
-
-    `;
+        `;
+    }
 }
 
 
