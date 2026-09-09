@@ -64,3 +64,15 @@ a:hover {text-decoration: none;}
 footer a {transition: all .2s ease;}
 footer a:hover {    color: #0d6efd !important;}
 footer .fa-brands:hover {    transform: translateY(-2px);}
+
+/* Homepage calculator Category */
+.ec-category-section{background:#f7f8fc;padding:55px 0 65px}
+.ec-category-grid{background:#fff;border-radius:20px;padding:24px;display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.ec-category-card{min-height:176px;border:1px solid #c9d1df;border-radius:10px;background:#fbfcfe;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px 12px;text-decoration:none!important;color:#101828;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease}
+.ec-category-card:hover{transform:translateY(-2px);border-color:#8aa8ff;background:#fff;box-shadow:0 8px 22px #1f293714}
+.ec-category-icon{width:44px;height:44px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;color:#4169ff;font-size:28px}
+.ec-category-card h3{margin:0 0 10px;font-size:16px;line-height:1.25;font-weight:700;color:#101010}
+.ec-category-card p{margin:0;max-width:175px;font-size:12px;line-height:1.45;color:#667085}
+.ec-category-special{background:#fff}
+.ec-category-special .ec-category-icon{background:#eef3ff;border-radius:10px}@media (max-width: 1199px){.ec-category-grid{grid-template-columns:repeat(4,1fr)}}@media (max-width: 767px){.ec-category-section{padding:35px 0 45px}.ec-category-grid{grid-template-columns:repeat(2,1fr);gap:12px;padding:14px;border-radius:16px}.ec-category-card{min-height:155px;padding:16px 8px}.ec-category-icon{font-size:25px;margin-bottom:10px}
+.ec-category-card h3{font-size:14px}.ec-category-card p{font-size:11px}}@media (max-width: 380px){.ec-category-grid{grid-template-columns:1fr 1fr;gap:8px;padding:10px}.ec-category-card{min-height:145px}}
