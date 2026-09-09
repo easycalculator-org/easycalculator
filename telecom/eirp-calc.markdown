@@ -1,94 +1,55 @@
 ---
 layout: default
-title: EIRP Calculator Online – Effective Isotropic Radiated Power (dBm & Watts)
+title: EIRP Calculator – Effective Isotropic Radiated Power (dBm & Watts)
 permalink: /eirp-calculator
-description: "Calculate Effective Isotropic Radiated Power (EIRP) instantly using our free online EIRP Calculator. Convert transmitter power, antenna gain, and cable loss into  EIRP values in dBm"
-image: "/assets/images/eirp-calculator.svg"
-last_modified_at: 2026-03-25
+description: "Calculate EIRP instantly with our free online EIRP Calculator. Convert transmitter power, antenna gain, and cable loss into EIRP values in dBm"
+image: "/assets/images/og/eirp-calculator.jpg"
+last_modified_at: 2026-09-09
 ---
+<div aria-label="breadcrumb" class="p-3">
+  <ol class="breadcrumb mb-0">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/rf-calculator">RF Calculator</a></li>
+    <li class="breadcrumb-item active" aria-current="page">EIRP Calculator - Effective Isotropic Radiated Power </li>
+  </ol>
+</div>
 
- <style>
- .card-custom{border:none;border-radius:2rem;background:#ffffffbf;backdrop-filter:blur(8px);box-shadow:0 30px 50px #00142833 0 10px 20px #000a141a}.input-group-text{background-color:#fff;border-right:0}.form-control,.form-select{border-left:0}.form-control:focus,.form-select:focus{box-shadow:0 0 0 .2rem #0d6efd26;border-color:#86b7fe}.result-badge{font-size:1.1rem;font-weight:500;background:#1e2b3f;color:#c7e0ff;padding:.9rem 1.8rem;border-radius:60px;letter-spacing:.3px}.eirp-value{font-size:2.2rem;font-weight:700;color:#0d6efd;margin-left:10px}.unit-toggle{cursor:default;background-color:#f0f4fa}.btn-primary-custom{background:#0d6efd;border:none;border-radius:40px;padding:12px 28px;font-weight:600;transition:all .2s}.btn-primary-custom:hover{background:#0b5ed7;transform:scale(1.02);box-shadow:0 8px 18px #0d6efd4d}#eirpWatt{transition:background-color .2s ease,padding .1s;padding:.2rem .5rem;border-radius:30px}
-  </style>
-<div class="container py-4">
-   <div class="card card-custom p-4 p-xl-5">
-    <div class="card-body">
-      <h2 class="mb-4 fw-light d-flex align-items-center gap-2"> <i class="fas fa-broadcast-tower fa-lg text-primary"></i> <span>RF EIRP Calculator</span> <span class="badge bg-primary rounded-pill fs-6 ms-2">dBm / W</span></h2>
-        <p class="text-secondary-emphasis mb-4 small"><i class="fas fa-calculator me-1"></i> EIRP (dBm) = Tx power (dBm) + Antenna gain (dBi) – cable loss (dB) </p>
-      <div class="row g-4">
-                    <div class="col-md-6">
-                        <label class="form-label fw-semibold"><i class="far fa-bolt me-1"></i>Transmitter power</label>
-                        <div class="input-group">
-                            <span class="input-group-text bg-white"><i class="fas fa-wave-square"></i></span>
-                            <input type="number" id="txPower" class="form-control form-control-lg" step="any" value="30.0" placeholder="value">
-                            <select id="txUnit" class="form-select form-select-lg" style="max-width: 90px;">
-                                <option value="dBm" selected>dBm</option>
-                                <option value="W">W</option>
-                                <option value="mW">mW</option>
-                            </select>
-                        </div>
-                        <small class="form-text ms-1">e.g., 30 dBm (1 W)</small>
-                    </div>
+<div class="card border shadow-sm rounded-4">
+<div class="card-body p-4 ">
+<div class="d-flex align-items-center gap-3 mb-2">
+<div class="text-primary fs-3"><i class="fas fa-broadcast-tower"></i></div>
+<div>
+<h2 class="h4 fw-bold mb-1">RF EIRP Calculator</h2>
+<p class="text-secondary small mb-0">Calculate Effective Isotropic Radiated Power </p>
+</div>
+<span class="badge bg-primary rounded-pill ms-auto">dBm / W </span>
+</div>
+<hr class="my-4">
+<div class="row g-4">
+<div class="col-md-6"><label for="txPower" class="form-label fw-semibold"><i class="fas fa-bolt text-primary me-2"></i>Transmitter Power </label>
+<div class="input-group input-group-lg"><span class="input-group-text bg-light"><i class="fas fa-wave-square"></i></span>
+<input type="number" id="txPower" class="form-control" step="any" value="30.0" placeholder="Enter value" ><select id="txUnit" class="form-select" style="max-width: 100px;" ><option value="dBm" selected>dBm</option><option value="W">W</option><option value="mW">mW</option></select></div><div class="form-text">Example: 30 dBm=1 W </div></div><div class="col-md-6"><label for="antGain" class="form-label fw-semibold"><i class="fas fa-satellite-dish text-primary me-2"></i>Antenna Gain </label><div class="input-group input-group-lg"><span class="input-group-text bg-light"><i class="fas fa-broadcast-tower"></i></span><input type="number" id="antGain" class="form-control" step="any" value="6.0" placeholder="Enter gain" ><span class="input-group-text bg-light">dBi </span></div><div class="form-text">Antenna gain relative to an isotropic radiator </div></div><div class="col-md-6"><label for="cableLoss" class="form-label fw-semibold"><i class="fas fa-plug text-primary me-2"></i>Cable / Feeder Loss </label><div class="input-group input-group-lg"><span class="input-group-text bg-light"><i class="fas fa-minus-circle"></i></span><input type="number" id="cableLoss" class="form-control" step="any" value="2.0" placeholder="Enter loss" ><span class="input-group-text bg-light">dB </span></div><div class="form-text">Enter insertion loss as a positive value </div></div><div class="col-md-6"><label for="extraLoss" class="form-label fw-semibold"><i class="fas fa-sliders-h text-primary me-2"></i>Other Losses <span class="text-secondary fw-normal">(Optional)</span></label><div class="input-group input-group-lg"><span class="input-group-text bg-light"><i class="fas fa-minus-circle"></i></span><input type="number" id="extraLoss" class="form-control" step="any" value="0.0" placeholder="Enter loss" ><span class="input-group-text bg-light">dB </span></div><div class="form-text">Additional system or miscellaneous losses </div></div></div><div class="bg-light border rounded-4 p-4 mt-5"><div class="row align-items-center g-3"><div class="col-md-6"><div class="text-secondary small mb-1"><i class="fas fa-bullseye me-2"></i>Calculated EIRP </div><div class="d-flex align-items-baseline gap-2"><span id="eirpDisplay" class="display-6 fw-bold text-primary" >38.00 </span><span id="eirpUnit" class="fs-5 text-secondary" >dBm </span></div><div class="small text-secondary mt-2">EIRP (linear): <strong id="eirpWatt" class="text-dark">6.31 W </strong></div></div>
+<div class="col-md-6">
+<div class="d-flex flex-wrap justify-content-md-end gap-2">
+<button id="resetBtn" class="btn btn-outline-secondary rounded-pill px-4" type="button" ><i class="fas fa-undo-alt me-1"></i>Reset </button>
+<button id="convertToWattBtn" class="btn btn-primary rounded-pill px-4" type="button" ><i class="fas fa-exchange-alt me-1"></i>Show Watt </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-  <!-- Antenna gain -->
- <div class="col-md-6">
-        <label class="form-label fw-semibold"><i class="fas fa-satellite-dish me-1"></i>Antenna gain</label>
-                        <div class="input-group">
-                            <span class="input-group-text bg-white"><i class="fas fa-ruler"></i></span>
-                            <input type="number" id="antGain" class="form-control form-control-lg" step="any" value="6.0" placeholder="dBi">
-                            <span class="input-group-text unit-toggle">dBi</span>
-                        </div>
-                        <small class="form-text ms-1">dBi (isotropic)</small>
-                    </div>
 
-  <!-- Cable loss -->
-  <div class="col-md-6">
-                        <label class="form-label fw-semibold"><i class="fas fa-cable-car me-1"></i>Cable / feeder loss</label>
-                        <div class="input-group">
-                            <span class="input-group-text bg-white"><i class="fas fa-minus-circle"></i></span>
-                            <input type="number" id="cableLoss" class="form-control form-control-lg" step="any" value="2.0" placeholder="dB">
-                            <span class="input-group-text unit-toggle">dB</span>
-                        </div>
-                        <small class="form-text ms-1">insertion loss (positive dB)</small>
-                    </div>
- <!-- Additional loss-->
-                    <div class="col-md-6">
-                        <label class="form-label fw-semibold"><i class="fas fa-cloud-rain me-1"></i>Other losses (optional)</label>
-                        <div class="input-group">
-                            <span class="input-group-text bg-white"><i class="fas fa-shield"></i></span>
-                            <input type="number" id="extraLoss" class="form-control form-control-lg" step="any" value="0.0" placeholder="dB">
-                            <span class="input-group-text unit-toggle">dB</span>
-                        </div>
-                        <small class="form-text ms-1">misc. loss / margin</small>
-                    </div>
-                </div>
-      <!-- EIRP result display -->
-<div class="d-flex flex-wrap align-items-center justify-content-between mt-5 pt-2">
-                    <div class="d-flex align-items-center mb-2 mb-sm-0">
-                        <span class="result-badge"> <i class="fas fa-bullseye me-2"></i> EIRP  <span class="eirp-value" id="eirpDisplay">38.00</span>  <span id="eirpUnit" class="fs-5 fw-normal">dBm</span> </span>
-                    </div>
-                    <div class="btn-group shadow-sm gap-3" role="group">
-                        <button id="resetBtn" class="btn btn-outline-secondary rounded-pill px-4" type="button">  <i class="fas fa-undo-alt me-1"></i> Reset </button>
-                        <button id="convertToWattBtn" class="btn btn-outline-primary rounded-pill px-4" type="button">   <i class="fas fa-exchange-alt me-1"></i> show Watt  </button>
-                    </div>
-                </div>
- <div class="mt-3 text-end text-secondary" style="font-size:0.95rem"><span><i class="far fa-clock me-1"></i>EIRP (linear): </span> <strong id="eirpWatt" class="text-primary">6.31 W</strong></div>
-  <hr class="my-4 opacity-50">
-    <div class="small text-secondary d-flex justify-content-between align-items-center flex-wrap">
-        <span><i class="fas fa-info-circle me-1"></i> EIRP [dBm] = Ptx[dBm] + G[dBi] – L[dB]  (losses include cable + other)</span>
-         <span class="badge bg-light text-dark px-3 py-2 mt-2 mt-sm-0">  <i class="fas fa-calculator me-1"></i> 1 W = 30 dBm </span>
-        </div>
-       </div> 
-        </div> 
-    </div>
 <!-- Article Content -->
 <div class="article-container">
-  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
-    <div class="d-flex align-items-center gap-3 flex-wrap">
+ <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+  <div class="d-flex align-items-center gap-3 flex-wrap">
       {% include naren_create.html %}
+      {% include bahadur.html %}
       <!-- {% include reema_verify.html %} -->
-    </div>
-    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+   </div>
+  <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
   </div>
    <!-- Article-->
 <h1>EIRP Calculator – Effective Isotropic Radiated Power</h1> 
@@ -101,6 +62,7 @@ last_modified_at: 2026-03-25
 <li>Transmitter output power</li>
 <li>Antenna gain</li>
 <li>Cable/connector losses</li>
+<li>Other system losses</li>
 </ul>
 <p>EIRP tells us how strong the signal effectively radiates into space.</p>
 
@@ -110,13 +72,13 @@ last_modified_at: 2026-03-25
   <div class="card-body text-center p-4">
     <h2 class="fw-bold text-primary mb-4">EIRP Formula</h2>
      <!-- dBm Formula -->
-      <div class="mb-4"><p class="fs-5">$$    \text{EIRP (dBm)} = \text{Tx Power (dBm)} + \text{Antenna Gain (dBi)} - \text{Cable Loss (dB)}   $$  </p></div>
+      <div class="mb-4"><p class="fs-5">$$    \text{EIRP (dBm)} = \text{Tx Power (dBm)} + \text{Antenna Gain (dBi)} - \text{Cable Loss (dB)} - Other Losses (dB)  $$  </p></div>
       <div><p class="fs-5">$$ \text{EIRP (W)} = 10^{\frac{\text{EIRP(dBm)} - 30}{10}}    $$  </p></div>
      </div>
     </div>
 </section>
 <div class="my-5 text-center">
-<img src="/assets/images/eirp-calculator.svg" alt="EIRP formula diagram with transmitter power antenna gain and cable loss explanation" class="img-fluid rounded shadow">
+<img src="/assets/images/eirp-calculator.svg" alt="EIRP formula diagram showing transmitter power, antenna gain, cable loss, other losses and EIRP result" class="img-fluid rounded shadow">
 </div>
 <p class="visually-hidden">EIRP (dBm) = Tx Power (dBm) + Antenna Gain (dBi) - Cable Loss (dB)</p>
 
@@ -165,14 +127,14 @@ last_modified_at: 2026-03-25
    </div>
     <div class="card mb-3 border-0 bg-light">
      <div class="card-body ">
-      <div class="fw-bold text-primary"></div>
+      <div class="fw-bold text-primary">What is EIRP in dBm?</div>
       <p class="mb-0">EIRP in dBm represents the effective radiated power in logarithmic scale, combining transmitter power, antenna gain, and losses.</p>
       </div>
       </div>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
             <div class="fw-bold text-primary">How do you calculate EIRP?</div>
-            <p class="mb-0">EIRP = Transmitter Power (dBm) + Antenna Gain (dBi) − Cable Loss (dB)</p>
+            <p class="mb-0">EIRP = Transmitter Power (dBm) + Antenna Gain (dBi) − Cable Loss (dB) − Other Losses (dB).</p>
           </div>
         </div>
         <div class="card mb-3 border-0 bg-light">
@@ -207,33 +169,49 @@ window.MathJax = {
 
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [
-  {
-   "@type": "Question",
-   "name": "What is EIRP?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "EIRP (Effective Isotropic Radiated Power) is the total radiated power of an antenna system considering transmitter power, antenna gain, and losses."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "How to calculate EIRP?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "EIRP = Tx Power (dBm) + Antenna Gain (dBi) − Cable Loss (dB)."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "What is 30 dBm in watts?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "30 dBm is equal to 1 Watt."
-   }
-  }
- ]
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a good EIRP value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A good EIRP depends on the application and applicable regulations. For Wi-Fi, EIRP should remain within the permitted regulatory limits, while telecom networks may use higher EIRP values for wider coverage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is EIRP in dBm?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EIRP in dBm represents Effective Isotropic Radiated Power on a logarithmic scale. It combines transmitter power, antenna gain, cable loss, and other system losses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you calculate EIRP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EIRP (dBm) = Transmitter Power (dBm) + Antenna Gain (dBi) − Cable Loss (dB) − Other Losses (dB)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is antenna gain added in EIRP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Antenna gain focuses RF energy in a particular direction, increasing the effective radiated power compared with an isotropic antenna."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between ERP and EIRP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EIRP is referenced to an ideal isotropic antenna, while ERP is referenced to a half-wave dipole antenna. ERP is approximately 2.15 dB lower than EIRP for the same system."
+      }
+    }
+  ]
 }
 </script>
