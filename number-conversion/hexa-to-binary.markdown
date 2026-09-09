@@ -4,9 +4,15 @@ title: Hexadecimal to Binary Converter (Hex to Bin) | EasyCalculator
 permalink: /hex-to-binary
 description: "Easily convert hexadecimal (base-16) numbers to binary (base-2) with our Hex to Binary calculator. Free, accurate, and works on all devices."
 image: "/assets/images/hexa-to-binary-conversion-table.jpg"
-last_modified_at: 2026-02-08
+last_modified_at: 2026-09-08
 ---
-
+<div aria-label="breadcrumb" class="p-3">
+  <ol class="breadcrumb mb-0">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/number-conversion">Number Conversion</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Hexadecimal to Binary</li>
+  </ol>
+</div>
 <div class="row p-4">
     <h1 class="text-primary p-4">Hexadecimal to Binary Converter</h1>
     <div class="col-md-6">
@@ -240,6 +246,18 @@ last_modified_at: 2026-02-08
         "text": "The easiest way is using a direct hexadecimal to binary table and converting each digit into its 4-bit binary form."
       }
     }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://easycalculator.org/"},
+    {"@type":"ListItem","position":2,"name":"Number Conversion","item":"https://easycalculator.org/number-conversion"},
+    {"@type":"ListItem","position":3,"name":"Hexadecimal to Binary","item":"https://easycalculator.org/hex-to-binary"}
   ]
 }
 </script>

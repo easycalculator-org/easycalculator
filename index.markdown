@@ -62,12 +62,12 @@ last_modified_at: 2026-09-09
         <h3>Business</h3>
         <p>Business, finance and productivity tools</p>
       </a>
-      <!-- Statistics -->
-      <a href="/math" class="ec-category-card">
-        <div class="ec-category-icon"><i class="fa-solid fa-chart-column"></i></div>
-        <h3>Statistics</h3>
-        <p>Statistical and numerical calculations</p>
-      </a>
+      <!-- Number Conversion -->
+     <a href="/number-conversion" class="ec-category-card">
+  <div class="ec-category-icon"><i class="fa-solid fa-right-left"></i></div>
+  <h3>Number Conversion</h3>
+  <p>Binary, decimal, octal and hexadecimal conversions</p>
+</a>
       <!-- Other -->
       <a href="/tools" class="ec-category-card">
         <div class="ec-category-icon"><i class="fa-solid fa-ellipsis"></i></div>

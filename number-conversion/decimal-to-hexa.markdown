@@ -4,9 +4,15 @@ title: Decimal to Hexadecimal Converter (Base-10 to Base-16) | EasyCalculator
 permalink: /decimal-to-hex
 description: "Convert decimal (base-10) values to hexadecimal (base-16) instantly. Free Decimal to Hexadecimal calculator for programmers and students."
 image: "/assets/images/decimal-to-hexa-conversion-table.jpg"
-last_modified_at: 2026-02-07
+last_modified_at: 2026-09-09
 ---
-
+<div aria-label="breadcrumb" class="p-3">
+  <ol class="breadcrumb mb-0">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/number-conversion">Number Conversion</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Decimal to Hexadecimal</li>
+  </ol>
+</div>
 <div class="row p-4">
     <h1 class="text-primary p-4">Decimal to Hexadecimal Converter</h1>
     <div class="col-md-6">
@@ -210,6 +216,17 @@ last_modified_at: 2026-02-07
         "text": "Divide the decimal number by 16 repeatedly and convert remainders above 9 into letters A–F."
       }
     }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://easycalculator.org/"},
+    {"@type":"ListItem","position":2,"name":"Number Conversion","item":"https://easycalculator.org/number-conversion"},
+    {"@type":"ListItem","position":3,"name":"Decimal to Hexadecimal","item":"https://easycalculator.org/decimal-to-hex"}
   ]
 }
 </script>

@@ -4,9 +4,15 @@ title: Hexadecimal to Decimal Converter (Hex to Dec) | EasyCalculator
 permalink: /hex-to-decimal
 description: "Easily convert Hexadecimal to Decimal online. Supports large hex values with step-by-step explanation. Fast, free, and accurate calculator."
 image: "/assets/images/hexa-to-decimal-conversion-table.jpg"
-last_modified_at: 2026-02-08
+last_modified_at: 2026-09-09
 ---
-
+<div aria-label="breadcrumb" class="p-3">
+  <ol class="breadcrumb mb-0">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/number-conversion">Number Conversion</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Hexadecimal to Decimal</li>
+  </ol>
+</div>
 <div class="row p-4">
    <h1 class="text-primary p-4">Hexadecimal to Decimal Converter</h1>
      <div class="col-md-6">
@@ -226,6 +232,17 @@ last_modified_at: 2026-02-08
         "text": "The easiest way is replacing hexadecimal letters with their decimal values, multiplying each digit by its power of 16, and adding the results."
       }
     }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://easycalculator.org/"},
+    {"@type":"ListItem","position":2,"name":"Number Conversion","item":"https://easycalculator.org/number-conversion"},
+    {"@type":"ListItem","position":3,"name":"Hexadecimal to Decimal","item":"https://easycalculator.org/hex-to-decimal"}
   ]
 }
 </script>

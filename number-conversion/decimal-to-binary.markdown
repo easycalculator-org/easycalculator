@@ -4,9 +4,15 @@ title: Decimal to Binary Converter (Base-10 to Base-2) | EasyCalculator
 permalink: /decimal-to-binary
 description: "Convert decimal (base-10) numbers to binary (base-2) instantly with our fast and accurate Decimal to Binary calculator. Free & mobile-friendly."
 image: "/assets/images/decimal-to-binary-conversion-table.jpg"
-last_modified_at: 2026-02-07
+last_modified_at: 2026-09-09
 ---
-
+<div aria-label="breadcrumb" class="p-3">
+  <ol class="breadcrumb mb-0">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/number-conversion">Number Conversion</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Decimal to Binary</li>
+  </ol>
+</div>
 <div class="row p-4">
     <h1 class="text-primary p-4">Decimal to Binary Converter</h1>
     <div class="col-md-6">
@@ -196,5 +202,32 @@ last_modified_at: 2026-02-07
     "price": "0",
     "priceCurrency": "USD"
   }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://easycalculator.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Number Conversion",
+      "item": "https://easycalculator.org/number-conversion"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Decimal to Binary",
+      "item": "https://easycalculator.org/decimal-to-binary"
+    }
+  ]
 }
 </script>

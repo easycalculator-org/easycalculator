@@ -4,9 +4,15 @@ title: Binary to Octal Converter (Base-2 to Base-8) | EasyCalculator
 permalink: /binary-to-octal
 description: "Convert binary numbers to octal (base-8) quickly with our Binary to Octal calculator. Accurate, simple, and easy to use."
 image: "/assets/images/binary-to-octal-conversion-table.jpg"
-last_modified_at: 2026-02-08
+last_modified_at: 2026-09-08
 ---
-
+<div aria-label="breadcrumb" class="p-3">
+  <ol class="breadcrumb mb-0">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/number-conversion">Number Conversion</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Binary to Octal</li>
+  </ol>
+</div>
 <div class="row p-4">
     <h1 class="text-primary p-4">Binary to Octal Converter</h1>
     <div class="col-md-6">
@@ -273,6 +279,17 @@ last_modified_at: 2026-02-08
         "text": "The easiest way is grouping the binary digits into sets of three and converting each group into its octal equivalent."
       }
     }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://easycalculator.org/"},
+    {"@type":"ListItem","position":2,"name":"Number Conversion","item":"https://easycalculator.org/number-conversion"},
+    {"@type":"ListItem","position":3,"name":"Binary to Octal","item":"https://easycalculator.org/binary-to-octal"}
   ]
 }
 </script>

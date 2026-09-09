@@ -4,8 +4,17 @@ title: Binary to Decimal Converter | EasyCalculator
 permalink: /binary-to-decimal
 description: "Convert binary numbers to decimal (base-10) instantly using our Binary to Decimal calculator. Fast, accurate, and mobile-friendly."
 image: "/assets/images/binary-to-decimal-conversion-table.jpg"
-last_modified_at: 2026-02-08
+last_modified_at: 2026-09-08
 ---
+<div aria-label="breadcrumb" class="p-3">
+  <ol class="breadcrumb mb-0">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/number-conversion">Number Conversion</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Binary to Decimal</li>
+  </ol>
+</div>
+
+
 
 <div class="row p-4">
     <h1 class="text-primary p-4">Binary to Decimal Converter</h1>
@@ -256,6 +265,18 @@ last_modified_at: 2026-02-08
         "text": "The easiest way is to multiply each binary digit by its corresponding power of 2 and add all the values."
       }
     }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://easycalculator.org/"},
+    {"@type":"ListItem","position":2,"name":"Number Conversion","item":"https://easycalculator.org/number-conversion"},
+    {"@type":"ListItem","position":3,"name":"Binary to Decimal","item":"https://easycalculator.org/binary-to-decimal"}
   ]
 }
 </script>
