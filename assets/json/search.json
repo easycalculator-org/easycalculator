@@ -211,6 +211,94 @@
  
 
  {
+    "id": "Annuity Calculator",
+    "title": "Annuity Calculator",
+    "url": "/annuity-calculator",
+    "content": "annuity calculator "
+  },
+ 
+ {
+    "id": "Bulk Latitude Longitude Distance Calculator",
+    "title": "Bulk Latitude Longitude Distance Calculator",
+    "url": "/bulk-latitude-longitude-distance-calculator",
+    "content": "bulk latitude longitude distance calculator "
+  },
+
+
+ {
+    "id": "How Many Days Till Christmas",
+    "title": "How Many Days Till Christmas",
+    "url": "/how-many-days-till-christmas",
+    "content": "how many days till christmas "
+  },
+   {
+    "id": "Click Per Second Test",
+    "title": "Click Per Second Test",
+    "url": "/click-per-second-test",
+    "content": "click per second test "
+  },
+   {
+    "id": "compound-interest-calculator",
+    "title": "Compound Interest Calculator",
+    "url": "/compound-interest-calculator",
+    "content": "compound interest calculator "
+  },
+   {
+    "id": "Annuity Calculator",
+    "title": "Annuity Calculator",
+    "url": "/annuity-calculator",
+    "content": "annuity calculator "
+  },
+   {
+    "id": "Daily Interest Calculator",
+    "title": "Daily Interest Calculator",
+    "url": "/daily-interest-calculator",
+    "content": "daily interest calculator "
+  },
+   {
+    "id": "Distance Calculator On Map",
+    "title": "Distance Calculator On Map",
+    "url": "/distance-calculator-on-map",
+    "content": "distance calculator on map "
+  },
+   {
+    "id": "Euclidean Distance Calculator",
+    "title": "Euclidean Distance Calculator",
+    "url": "/euclidean-distance-calculator",
+    "content": "euclidean distance calculator "
+  },
+   {
+    "id": "Gratuity Calculator India",
+    "title": "Gratuity Calculator India",
+    "url": "/gratuity-calculator-india",
+    "content": "gratuity calculator india "
+  },
+    {
+    "id": "Map area Calculator",
+    "title": "Map area Calculator",
+    "url": "/map-area-calculator",
+    "content": "map area calculator "
+  },
+    {
+    "id": "Pomodoro Timer",
+    "title": "Pomodoro Timer",
+    "url": "/pomodoro-timer",
+    "content": "pomodoro timer "
+  },
+    {
+    "id": "Time Sheet Calculator",
+    "title": "Time Sheet Calculator",
+    "url": "/time-sheet-calculator",
+    "content": "time sheet calculator "
+  },
+    {
+    "id": "Time Zone Converter",
+    "title": "Time Zone Converter",
+    "url": "/time-zone-converter",
+    "content": "time zone converter "
+  },
+
+ {
     "id": "pdf-unlock",
     "title": "PDF Unlock",
     "url": "/tools/pdf-unlock",
@@ -500,12 +588,7 @@
     "url": "/utc-to-pst",
     "content": "UTC to PST time zone converter"
   },
-  {
-    "id": "kml-viewer",
-    "title": "KML Viewer",
-    "url": "/kml-viewer",
-    "content": "kml viewer"
-  },
+ 
 
    {
     "id": "kml-viewer",

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Easy Calculator - Free Online Calculators 
+title: Easy Calculator - Free Online Calculators for Everyone
 description: "Free online calculators for math, finance, loans, EMI, SIP, percentages, conversions, time zones, RF engineering, geolocation and everyday calculations."
 image: "/assets/images/apple-touch-icon.png"
 last_modified_at: 2026-09-09
