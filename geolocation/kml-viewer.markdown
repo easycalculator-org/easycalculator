@@ -2,7 +2,7 @@
 layout: default
 title: KML Viewer | View KML Files Online on Interactive Map
 permalink: /kml-viewer
-description: "View KML files online with our free kml Viewer. Display GPS tracks, routes, and waypoints on an interactive map, inspect coordinates, elevation, distance, and export data instantly."
+description: "View KML files online with our free kml Viewer. Display GPS tracks, routes, and waypoints on an interactive map, inspect coordinates, and export data instantly."
 image: "/assets/images/og/kml-viewer.jpg"
 last_modified_at: 2026-07-08
 ---
