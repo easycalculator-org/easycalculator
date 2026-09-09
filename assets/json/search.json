@@ -258,6 +258,14 @@
     "url": "/dividing-fractions-calculator",
     "content": "fraction calculator add subtract multiply divide simplify lcm fractions"
   },
+
+{
+    "id": "coordinate-finder",
+    "title": "Coordinate Finder",
+    "url": "/coordinate-finder",
+    "content": "coordinate finder "
+  },
+
   {
     "id": "eirp-calculator",
     "title": "Eirp Calculator",

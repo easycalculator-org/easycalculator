@@ -4,7 +4,7 @@ title: Coordinate Finder – Find Latitude & Longitude Coordinates on Map
 permalink: /coordinate-finder
 description: "Find precise latitude and longitude coordinates instantly with our Coordinate Finder. Supports Decimal Degrees (DD), DMS format, current location detection, satellite maps, and map download."
 image: "/assets/images/og/coordinate-finder.jpg"
-last_modified_at: 2026-05-28
+last_modified_at: 2026-09-09
 ---
 
 <!-- Leaflet CSS & JS -->
@@ -14,12 +14,11 @@ last_modified_at: 2026-05-28
  <style>
   #map{height:650px;width:100%;border-radius:.5rem;background:#c8e0f0}.coord-card{transition:all .1s ease}.coord-value{font-family:'SF Mono','Monaco','Consolas',monospace;font-size:1rem;word-break:break-word}.dms-value{font-family:'SF Mono','Monaco','Consolas',monospace;font-size:.9rem}.toggle-switch-lg .form-check-input{width:3rem;height:1.5rem;cursor:pointer}.toggle-switch-lg .form-check-input:checked{background-color:#0d6efd;border-color:#0d6efd}.map-type-btn.active{background-color:#0d6efd!important;color:#fff!important;border-color:#0d6efd!important}.btn-download{background:linear-gradient(135deg,#28a745,#20c997);border:none;color:#fff}.btn-download:hover{background:linear-gradient(135deg,#218838,#1aa179);color:#fff}
   </style>
-
 <div aria-label="breadcrumb" class="p-3">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
     <li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Coordinate Finder </li>
+    <li class="breadcrumb-item active" aria-current="page">Coordinate Finder</li>
   </ol>
 </div>
 <!-- Main Card -->
@@ -36,12 +35,9 @@ last_modified_at: 2026-05-28
     <button class="btn btn-download" id="downloadMapBtn">Download Map</button>
     <div class="form-check form-switch toggle-switch-lg ms-md-auto">
         <input class="form-check-input" type="checkbox" id="formatToggle" role="switch">
-        <label class="form-check-label fw-medium" for="formatToggle" id="toggleLabel">
-            Show DMS (Degrees/Minutes/Seconds)
-        </label>
+        <label class="form-check-label fw-medium" for="formatToggle" id="toggleLabel">Show DMS (Degrees/Minutes/Seconds)</label>
     </div>
 </div>
-
 <!-- Decimal Degrees Panel -->
   <div id="decimalPanel" class="row g-3 mb-4">
     <div class="col-md-6">
@@ -64,8 +60,7 @@ last_modified_at: 2026-05-28
         </div>
       </div>
     </div>
-  </div>
-          
+  </div>       
 <!-- DMS Panel (hidden by default) -->
  <div id="dmsPanel" class="row g-3 mb-4" style="display: none;">
     <div class="col-md-6">
@@ -82,14 +77,12 @@ last_modified_at: 2026-05-28
           <div class="dms-value fs-5 fw-semibold" id="lngDMS">—</div> <small class="text-muted">Degrees ° Minutes ' Seconds "</small></div>
          </div>
         </div>
-       </div>
-          
+       </div>    
 <!-- Map Container -->
 <div class="mb-3" id="mapContainer">
   <div id="map"></div>
   <div class="mt-2 text-center"><small class="text-muted">Click anywhere on the map to get coordinates</small> </div>
- </div>
-          
+ </div>     
 <!-- Current Location Info & Copy Buttons -->
 <div class="row g-3 mt-2">
 <div class="col-md-7">
@@ -104,8 +97,6 @@ last_modified_at: 2026-05-28
    </div>
   </div>
  </div>
-
-
 <!-- Article Content -->
 <div class="article-container">
  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
@@ -180,117 +171,103 @@ last_modified_at: 2026-05-28
 
 <!-- Common Uses -->
 <div class="bg-light p-4 rounded mt-4">
-  <h4 class="text-primary"><i class="fas fa-compass me-2"></i>Common Uses of Coordinate Finder</h4>
-    <div class="row g-3 mt-2">
-        <div class="col-md-6">
-            <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-route text-primary me-2"></i><strong>GPS Navigation</strong>
-                <p class="mb-0 small text-muted">Find exact locations for navigation and route planning.</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-ruler-combined text-success me-2"></i><strong>Land Surveying</strong>
-                <p class="mb-0 small text-muted">Record precise geographic positions for surveying projects.</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-home text-danger me-2"></i><strong>Real Estate Mapping</strong>
-                <p class="mb-0 small text-muted">Locate and document properties accurately.</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-hiking text-warning me-2"></i><strong>Outdoor Activities</strong>
-                <p class="mb-0 small text-muted">Perfect for hiking, camping, and adventure trips.</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-treasure-chest text-info me-2"></i><strong>Geocaching</strong>
-                <p class="mb-0 small text-muted">Discover and share hidden locations using coordinates.</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-flask text-secondary me-2"></i><strong>Geographic Research</strong>
-                <p class="mb-0 small text-muted">Collect and analyze location-based data efficiently.</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="border rounded p-3 h-100 bg-white">
-                <i class="fas fa-phone-alt text-success me-2"></i>
-                <strong>Emergency Location Sharing</strong>
-                <p class="mb-0 small text-muted">Share your exact position during emergencies.</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="border rounded p-3 h-100 bg-white">
-                <i class="fas fa-helicopter text-primary me-2"></i>
-                <strong>Drone Flight Planning</strong>
-                <p class="mb-0 small text-muted">Plan flight paths and identify launch locations accurately.</p>
-            </div>
-        </div>
+ <h4 class="text-primary"><i class="fas fa-compass me-2"></i>Common Uses of Coordinate Finder</h4>
+ <div class="row g-3 mt-2">
+  <div class="col-md-6">
+    <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-route text-primary me-2"></i><strong>GPS Navigation</strong>
+     <p class="mb-0 small text-muted">Find exact locations for navigation and route planning.</p>
     </div>
-
+   </div>
+  <div class="col-md-6">
+   <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-ruler-combined text-success me-2"></i><strong>Land Surveying</strong>
+    <p class="mb-0 small text-muted">Record precise geographic positions for surveying projects.</p>
+    </div>
+   </div>
+   <div class="col-md-6">
+    <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-home text-danger me-2"></i><strong>Real Estate Mapping</strong>
+     <p class="mb-0 small text-muted">Locate and document properties accurately.</p>
+    </div>
+   </div>
+   <div class="col-md-6">
+    <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-hiking text-warning me-2"></i><strong>Outdoor Activities</strong>
+     <p class="mb-0 small text-muted">Perfect for hiking, camping, and adventure trips.</p>
+    </div>
+   </div>
+   <div class="col-md-6">
+    <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-treasure-chest text-info me-2"></i><strong>Geocaching</strong>
+     <p class="mb-0 small text-muted">Discover and share hidden locations using coordinates.</p>
+    </div>
+   </div>
+   <div class="col-md-6">
+    <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-flask text-secondary me-2"></i><strong>Geographic Research</strong>
+     <p class="mb-0 small text-muted">Collect and analyze location-based data efficiently.</p>
+    </div>
+    </div>
+    <div class="col-md-6">
+     <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-phone-alt text-success me-2"></i><strong>Emergency Location Sharing</strong>
+      <p class="mb-0 small text-muted">Share your exact position during emergencies.</p>
+     </div>
+    </div>
+   <div class="col-md-6">
+     <div class="border rounded p-3 h-100 bg-white"><i class="fas fa-helicopter text-primary me-2"></i><strong>Drone Flight Planning</strong>
+      <p class="mb-0 small text-muted">Plan flight paths and identify launch locations accurately.</p>
+      </div>
+     </div>
+    </div>
 </div>
 
 
 <!-- FAQ Section -->
 <section class="p-4">
   <h2 class="mb-4">Frequently Asked Questions (FAQ)</h2>
-
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
       <div class="fw-bold text-primary">What is a Coordinate Finder?</div>
       <p class="mb-0">A Coordinate Finder is an online mapping tool that helps you find the exact latitude and longitude of any location on Earth. Simply click on the interactive map to view GPS coordinates in both Decimal Degrees (DD) and Degrees, Minutes, and Seconds (DMS) formats.</p>
     </div>
   </div>
-
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
       <div class="fw-bold text-primary">How do I find latitude and longitude?</div>
       <p class="mb-0">Open the Coordinate Finder, click on any location on the map, and the tool will instantly display the latitude and longitude. You can also use the "My Current Location" button to find your present GPS coordinates.</p>
     </div>
   </div>
-
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
       <div class="fw-bold text-primary">Can I find GPS coordinates on a map?</div>
       <p class="mb-0">Yes. Simply click anywhere on the interactive map to view accurate GPS coordinates. The tool displays the location in both Decimal Degrees (DD) and DMS formats.</p>
     </div>
   </div>
-
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
       <div class="fw-bold text-primary">What is the difference between DD and DMS?</div>
       <p class="mb-0">Decimal Degrees (DD) use decimal numbers, such as <strong>28.6139, 77.2090</strong>, while Degrees, Minutes, and Seconds (DMS) use degrees (°), minutes ('), and seconds ("), such as <strong>28°36'50.0"N, 77°12'32.4"E</strong>. Both formats represent the same location.</p>
     </div>
   </div>
-
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
       <div class="fw-bold text-primary">How accurate are GPS coordinates?</div>
       <p class="mb-0">GPS accuracy depends on your device and satellite signal quality. Most modern smartphones provide an accuracy of approximately 3 to 10 metres under good outdoor conditions.</p>
     </div>
   </div>
-
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
       <div class="fw-bold text-primary">Can I copy coordinates?</div>
       <p class="mb-0">Yes. You can copy the displayed coordinates with a single click using the Copy Decimal or Copy DMS buttons and paste them into GPS devices, Google Maps, reports, or navigation apps.</p>
     </div>
   </div>
-
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
       <div class="fw-bold text-primary">How do I find my current coordinates?</div>
       <p class="mb-0">Click the <strong>My Current Location</strong> button and allow your browser to access your location. The tool will automatically detect and display your current latitude and longitude.</p>
     </div>
   </div>
-
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
       <div class="fw-bold text-primary">Can I download the map?</div>
       <p class="mb-0">Yes. After selecting a location, click the <strong>Download Map</strong> button to save the current map view as an image. This feature is useful for reports, presentations, and location sharing.</p>
     </div>
   </div>
-
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
       <div class="fw-bold text-primary">What is WGS84?</div>
@@ -308,9 +285,33 @@ last_modified_at: 2026-05-28
 </section>
 <!-- geolocation internal link -->
 {% include geolocation.html %}
-
 </div>
-
 
 <script src="{{ '/assets/js/geolocation/coordinate-finder.js' | relative_url }}"></script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://easycalculator.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Geolocation Tools",
+      "item": "https://easycalculator.org/geolocation-tools"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Coordinate Finder",
+      "item": "https://easycalculator.org/coordinate-finder"
+    }
+  ]
+}
+</script>
