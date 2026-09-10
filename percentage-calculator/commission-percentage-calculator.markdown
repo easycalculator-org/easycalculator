@@ -1,1 +1,15 @@
-ECHO is on.
+---
+layout: default
+title: "Commission Percentage Calculator"
+permalink: /commission-percentage-calculator
+description: "Calculate commission percentage, commission amount, or sales amount quickly and accurately with our free Commission Percentage Calculator."
+last_modified_at: 2026-09-10
+---
+<!-- Commission Percentage Calculator -->
+<div class="my-4">
+<div class="row justify-content-center">
+<div class="col-lg-8"><div class="card shadow border-0 rounded-4"><div class="card-body p-4 p-md-5"><div class="text-center mb-4"><h2 class="h4 fw-bold mb-2">Commission Percentage Calculator</h2><p class="text-muted mb-0">Calculate commission percentage, commission amount, or sales amount. </p></div><div class="mb-4"><label class="form-label fw-semibold d-block">What do you want to calculate? </label><div class="d-flex flex-wrap gap-2" role="group" aria-label="Commission calculation type"><button type="button" class="btn btn-primary rounded-pill px-3 calc-type active" data-type="rate">Commission % </button><button type="button" class="btn btn-outline-primary rounded-pill px-3 calc-type" data-type="commission">Commission Amount </button><button type="button" class="btn btn-outline-primary rounded-pill px-3 calc-type" data-type="sales">Sales Amount </button></div></div><div class="mb-3" id="salesAmountGroup"><label for="salesAmount" class="form-label fw-semibold">Sales Amount </label><div class="input-group input-group-lg"><span class="input-group-text">$</span><input type="text" id="salesAmount" class="form-control" placeholder="Example: 10,000" inputmode="decimal" autocomplete="off"></div></div><div class="mb-3" id="commissionAmountGroup"><label for="commissionAmount" class="form-label fw-semibold">Commission Amount </label><div class="input-group input-group-lg"><span class="input-group-text">$</span><input type="text" id="commissionAmount" class="form-control" placeholder="Example: 500" inputmode="decimal" autocomplete="off"></div></div><div class="mb-4" id="commissionRateGroup"><label for="commissionRate" class="form-label fw-semibold">Commission Rate </label><div class="input-group input-group-lg"><input type="text" id="commissionRate" class="form-control" placeholder="Example: 5" inputmode="decimal" autocomplete="off"><span class="input-group-text">%</span></div></div><div class="mb-4"><span class="small text-muted me-2">Try an example:</span><button type="button" class="btn btn-sm btn-outline-secondary rounded-pill me-1 mb-1" id="exampleBtn">10,000 / 500 </button></div><div class="d-flex gap-2 justify-content-center mb-4"><button type="button" id="calculateBtn" class="btn btn-primary btn-lg rounded-pill px-4">Calculate </button><button type="button" id="resetBtn" class="btn btn-outline-secondary btn-lg rounded-pill px-4">Reset </button></div><div id="result" class="alert alert-success text-center rounded-4 mb-0" style="display:none;" role="status" aria-live="polite"><div class="small text-muted mb-1" id="resultLabel">Commission Percentage </div><div id="mainResult" class="display-6 fw-bold">0% </div><div id="calculationDetails" class="small text-muted mt-2"></div></div><div id="error" class="alert alert-danger rounded-3 mt-3 mb-0" style="display:none;" role="alert"></div></div></div></div>
+</div>
+</div>
+
+<script src="{{ '/assets/js/percentage/average-percentage-calc.js' | relative_url }}"></script>
