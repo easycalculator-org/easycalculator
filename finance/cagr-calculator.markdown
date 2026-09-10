@@ -380,18 +380,12 @@ last_modified_at: 2026-08-13
             </p>
         </div>
     </div>
-    <div class="card mb-3 border-0 bg-light">
-        <div class="card-body">
-            <div class="fw-bold text-primary">
-                6. What is the difference between CAGR and absolute return?
-            </div>
-            <p class="mb-0">
-                Absolute return measures the total percentage gain or loss,
-                while CAGR converts the growth between the starting and
-                ending values into an annual compounded growth rate.
-            </p>
-        </div>
-    </div>
+ <div class="card mb-3 border-0 bg-light">
+  <div class="card-body">
+   <div class="fw-bold text-primary">6. What is the difference between CAGR and absolute return?</div>
+    <p class="mb-0">Absolute return measures the total percentage gain or loss, while CAGR converts the growth between the starting and ending values into an annual compounded growth rate.</p>
+   </div>
+   </div>
 </section>    
 
 
