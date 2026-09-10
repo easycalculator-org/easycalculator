@@ -292,7 +292,7 @@ last_modified_at: 2026-06-15
 {% include geolocation.html %}
 
 </section>
-<script src="{{ '/assets/js/azimuth-calc.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/rf/azimuth-calc.js' | relative_url }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <script type="application/ld+json">

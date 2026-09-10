@@ -254,7 +254,7 @@ last_modified_at: 2026-05-28
 
       {% include rf.html %}
  
-<script src="{{ '/assets/js/arfcn-calc.js' | relative_url }}"></script> 
+<script src="{{ '/assets/js/rf/arfcn-calc.js' | relative_url }}"></script> 
 
 <script type="application/ld+json">
 {
