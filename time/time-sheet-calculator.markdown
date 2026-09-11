@@ -314,24 +314,8 @@ last_modified_at: 2026-04-12
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
 <script src="{{ '/assets/js/time-sheet-calc.js' | relative_url }}"></script>

@@ -24,7 +24,8 @@ last_modified_at: 2026-09-11
  </div>
  </div>
  </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="{{ '/assets/js/percentage/exam-percentage-calc.js' | relative_url }}"></script>
 
 
   <!-- ============================================
@@ -128,6 +129,5 @@ last_modified_at: 2026-09-11
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="{{ '/assets/js/percentage/exam-percentage-calc.js' | relative_url }}"></script>
+
 
