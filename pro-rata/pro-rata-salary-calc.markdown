@@ -58,7 +58,6 @@ last_modified_at: 2026-09-11
 
 
 
-
 <!-- FAQ Section -->
 <section class="mb-5">
   <h2 class="mb-4">FAQ on Pro Rata Salary Calculator</h2>
@@ -100,8 +99,5 @@ last_modified_at: 2026-09-11
      </div>
    </section>
       <!-- Did You Know? -->
-
-
-
-
 <script src="{{ '/assets/js/other/pro-rata-salary-calc.js' | relative_url }}"></script>
+
