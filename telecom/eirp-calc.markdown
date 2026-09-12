@@ -19,7 +19,7 @@ last_modified_at: 2026-09-09
 <div class="d-flex align-items-center gap-3 mb-2">
 <div class="text-primary fs-3"><i class="fas fa-broadcast-tower"></i></div>
 <div>
-<h2 class="h4 fw-bold mb-1">RF EIRP Calculator</h2>
+<h2 class="h4 fw-bold mb-1">EIRP Calculator</h2>
 <p class="text-secondary small mb-0">Calculate Effective Isotropic Radiated Power </p>
 </div>
 <span class="badge bg-primary rounded-pill ms-auto">dBm / W </span>

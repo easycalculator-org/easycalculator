@@ -61,8 +61,8 @@ last_modified_at: 2026-02-03
  200 Top Finance Calculators
 1. Loan & EMI Calculators (1–40)
 
-EMI Calculator
-Loan EMI Calculator
+EMI Calculator - Done
+Loan EMI Calculator - Done
 Home Loan EMI Calculator
 Personal Loan EMI Calculator
 Car Loan EMI Calculator

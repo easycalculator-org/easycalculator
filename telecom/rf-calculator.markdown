@@ -11,10 +11,11 @@ last_modified_at: 2026-02-10
  <h2>List of RF Calculator</h2>
  <p>An RF Calculator helps engineers and telecom professionals perform essential radio frequency calculations like dBm to Watt conversion, EIRP/ERP, VSWR, FSPL, Link Budget, and Frequency-Wavelength conversion. Use this free online RF calculator for accurate wireless network planning and RF system analysis.</p>
   <div class="col-md-3 p-3"><a href="/dbm-to-watt"><div class="calculator-box text-center"><h5>dBm to Watt Converter</h5></div></a> </div>
+  <div class="col-md-3 p-3"><a href="/watt-to-dbm"><div class="calculator-box text-center"><h5>Watt to dBm Converter</h5></div></a> </div>
   <div class="col-md-3 p-3"><a href="/eirp-calculator"><div class="calculator-box text-center"><h5>EIRP Calculator</h5></div> </a></div>
   <div class="col-md-3 p-3"><a href="/vswr-calculator"><div class="calculator-box text-center"><h5>VSWR Calculator</h5></div></a></div>
   <div class="col-md-3 p-3"><a href="/rf-link-budget-calculator"><div class="calculator-box text-center"><h5>Link Budget Calculator</h5></div></a> </div>
-  <div class="col-md-3 p-3"><a href="/free-space-path-loss-calculator"><div class="calculator-box text-center"><h5>Free Space Path Loss (FSPL) Calculator</h5></div> </a></div>
+  <div class="col-md-3 p-3"><a href="/free-space-path-loss-calculator"><div class="calculator-box text-center"><h5>Free Space Path Loss (FSPL) Calculator</h5></div></a></div>
   <div class="col-md-3 p-3"><a  href="/frequency-to-wavelength-calculator"><div class="calculator-box text-center"><h5>Frequency to Wavelength Calculator</h5></div></a></div>
   <div class="col-md-3 p-3"><a  href="/wavelength-to-frequency-calculator"><div class="calculator-box text-center"><h5>Wavelength to Frequency Calculator</h5></div></a></div>
   <div class="col-md-3 p-3"><a href="/arfcn-calculator"><div class="calculator-box text-center"><h5>ARFCN Calculator</h5></div></a></div>
