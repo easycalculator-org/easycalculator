@@ -4,7 +4,7 @@ title: ARFCN Calculator – GSM ARFCN to Frequency Converter
 permalink: /arfcn-calculator
 description: "Convert GSM ARFCN to uplink and downlink frequency instantly using our free ARFCN Calculator. Supports GSM 900, 1800, 850 & 1900 bands for RF engineers"
 image: "/assets/images/og/arfcn-calculator-example.jpg"
-last_modified_at: 2026-05-28
+last_modified_at: 2026-09-13
 ---
 <style>
 .freq-card {background-color: #f8f9fa; border-radius: 0.5rem; }

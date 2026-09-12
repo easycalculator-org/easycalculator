@@ -4,7 +4,7 @@ title: EIRP Calculator – Effective Isotropic Radiated Power (dBm & Watts)
 permalink: /eirp-calculator
 description: "Calculate EIRP instantly with our free online EIRP Calculator. Convert transmitter power, antenna gain, and cable loss into EIRP values in dBm"
 image: "/assets/images/og/eirp-calculator.jpg"
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-13
 ---
 <div aria-label="breadcrumb" class="p-3">
   <ol class="breadcrumb mb-0">

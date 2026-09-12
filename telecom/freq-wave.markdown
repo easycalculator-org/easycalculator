@@ -4,7 +4,7 @@ title: Frequency to Wavelength Calculator (Hz, MHz, GHz)
 permalink: /frequency-to-wavelength-calculator
 description: "Calculate wavelength from frequency instantly using our free Frequency to Wavelength Calculator. Supports Hz, kHz, MHz, GHz with accurate RF formula."
 #image: "/assets/images/dbm-to-watt-converter-with-formula-and-example.jpg"
-last_modified_at: 2026-02-15
+last_modified_at: 2026-09-13
 ---
 <div class="row pt-4 justify-content-center">
  <div class="col-md-8 card shadow border-0 rounded-4 ">

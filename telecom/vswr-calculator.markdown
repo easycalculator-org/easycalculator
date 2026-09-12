@@ -4,7 +4,7 @@ title: VSWR Calculator - Formula, Return Loss & Reflection Coefficient
 permalink: /vswr-calculator
 description: "Use our free VSWR Calculator to calculate Voltage Standing Wave Ratio from VSWR, return loss, or reflection coefficient. Get reflected power, mismatch loss, formulas, and RF examples."
 image: "/assets/images/vswr-calculation-infographic.jpg"
-last_modified_at: 2026-02-22
+last_modified_at: 2026-09-13
 ---
  
 <div class="card border-0 shadow-lg rounded-4 mx-auto p-4" style="max-width:720px;">

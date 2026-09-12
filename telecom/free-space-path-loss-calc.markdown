@@ -4,7 +4,7 @@ title: Free Space Path Loss Calculator (FSPL) | Formula & Example
 permalink: /free-space-path-loss-calculator
 description: "Calculate Free Space Path Loss (FSPL) in dB using frequency and distance. Includes formula, example, and RF planning guide for telecom networks."
 image: "/assets/images/og/free-space-path-loss-calculator.jpg"
-last_modified_at: 2026-06-24
+last_modified_at: 2026-09-13
 ---
 <style> 
 .fspl-big-number {font-size: 3rem; font-weight: 600; line-height: 1.2; }

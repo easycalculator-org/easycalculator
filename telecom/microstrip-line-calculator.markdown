@@ -4,7 +4,7 @@ title: Microstrip Line Calculator (Z0, εeff, Wavelength & Length)
 permalink: /microstrip-line-calculator
 description: "Free microstrip line calculator to compute characteristic impedance (Z0), effective dielectric constant, guided wavelength, and physical length for RF PCB transmission lines."
 image: "/assets/images/microstrip-line-structure.jpg"
-last_modified_at: 2026-06-17
+last_modified_at: 2026-09-13
 ---
 <style>
 .microstrip-card{border:none;border-radius:20px;box-shadow:0 4px 20px #0000000f;overflow:hidden}.calculator-panel{background:#fff;padding:30px}.results-panel{background:#f8fafc;padding:30px;border-left:1px solid #e9ecef}.form-label{font-weight:600;font-size:.9rem;margin-bottom:6px}.form-control{border-radius:12px;border:1px solid #dee2e6;padding:12px 14px}.form-control:focus{box-shadow:none;border-color:#0d6efd}.btn-calc{border-radius:12px;padding:12px;font-weight:600}.result-item{background:#fff;border-radius:14px;padding:18px;margin-bottom:15px;border:1px solid #edf2f7}.result-label{color:#6c757d;font-size:.85rem}.result-value{font-size:1.8rem;font-weight:700;color:#212529}.result-unit{font-size:.8rem;color:#6c757d}

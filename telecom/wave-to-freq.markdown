@@ -4,7 +4,7 @@ title: Wavelength to Frequency Calculator – Convert λ to Hz Online Instantly
 permalink: /wavelength-to-frequency-calculator
 description: "Convert wavelength (meters, cm, nm) to frequency (Hz, kHz, MHz, GHz) instantly using our free Wavelength to Frequency Calculator. Based on the speed of light formula, accurate and easy to use."
 #image: "/assets/images/dbm-to-watt-converter-with-formula-and-example.jpg"
-last_modified_at: 2026-02-15
+last_modified_at: 2026-09-13
 ---
 <div class="row pt-4 justify-content-center">
  <div class="col-md-8 card shadow border-0 rounded-4 ">

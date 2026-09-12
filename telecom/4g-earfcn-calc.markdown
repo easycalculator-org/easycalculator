@@ -4,7 +4,7 @@ title: EARFCN Calculator LTE – 4G Frequency Converter & Band Table
 permalink: /earfcn-calculator
 description: "Instantly convert LTE EARFCN to frequency using our free calculator. Includes LTE band list, formulas, and examples for RF engineers."
 #image: "/assets/images/age-calc.png"
-last_modified_at: 2026-02-28
+last_modified_at: 2026-09-13
 ---
  <style>
  .band-chip { background: #f2f5f9; border-radius: 40px; padding: 0.4rem 1rem; font-weight: 500; border: 1px solid #dee2e6; cursor: pointer; transition: 0.1s; margin: 0.2rem; display: inline-block; }

@@ -4,7 +4,7 @@ title:  Fresnel Zone Calculator – Calculate RF Line of Sight, Radius & Clearan
 permalink: /fresnel-zone-calculator
 description: "Use our Fresnel Zone Calculator to find RF line-of-sight clearance, radius, and obstruction impact. Ideal for microwave, 4G, 5G & wireless link planning."
 image: "/assets/images/fresnel-zone-clearance-diagram.png"
-last_modified_at: 2026-06-26
+last_modified_at: 2026-09-13
 ---
  <style>
  .card-header{background: #2d86f1; color: white; border-radius: 1rem 1rem 0 0 !important; padding: 1rem 1.25rem;}   

@@ -4,7 +4,7 @@ title: RF Calculator Online – dBm to Watt, FSPL, VSWR, ERP & Link Budget
 permalink: /rf-calculator
 description: "Use our RF Calculator to calculate dBm to Watt, Free Space Path Loss (FSPL), VSWR, ERP/EIRP, Link Budget, Frequency to Wavelength, and Wavelength to Frequency. Fast, accurate, and free for telecom engineers."
 image: "/assets/images/rf-calculator.jpg"
-last_modified_at: 2026-02-10
+last_modified_at: 2026-09-13
 ---
 <!-- RF Calculator -->
 <div class="row p-4">
