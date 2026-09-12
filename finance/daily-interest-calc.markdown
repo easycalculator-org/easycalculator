@@ -7,9 +7,19 @@ image: "/assets/images/og/daily-interest-calculator.jpg"
 last_modified_at: 2026-04-04
 ---
 
+
 <style>
 .calculator-card{border:none;border-radius:20px;box-shadow:0 10px 30px #00000014}.toggle-wrapper{display:flex;background:#e9ecef;border-radius:50px;padding:5px;position:relative}.toggle-btn{flex:1;text-align:center;padding:10px;border-radius:50px;cursor:pointer;z-index:2;font-weight:500;transition:.3s}.toggle-active{color:#fff}.toggle-slider{position:absolute;top:5px;left:5px;width:50%;height:calc(100% - 10px);background:linear-gradient(135deg,#0d6efd,#4f46e5);border-radius:50px;transition:.3s}.form-control{border-radius:12px;padding:12px}.result-box{background:#f1f5f9;border-radius:12px;padding:15px}.result-box h5{margin:0;font-weight:600}.article-container img {margin-top: 10px;}
 </style>
+
+<div aria-label="breadcrumb" class="p-3">
+ <ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/finance-calculators">Finance Calculators</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Daily Interest Calculator</li>
+ </ol>
+</div>
+
 
 <div class="row justify-content-center pt-4">
 <div class="col-md-7">
