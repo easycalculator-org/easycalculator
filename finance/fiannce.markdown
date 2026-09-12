@@ -12,26 +12,47 @@ last_modified_at: 2026-02-03
 <p>Our <strong>free finance calculators</strong> are simple, fast, and easy to use for financial planning.</p>
 <p>Whether you want to calculate <strong>loan EMI, savings growth, investment returns, or retirement funds</strong>, these tools help you make better financial decisions.</p>
 </div>
-<!-- Finance Calculator -->
-<div class="row p-3 ">
-<div class="col-md-3  p-3  "><a class="text-decoration-none" href="/tvm-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-chart-line fa-xl"></i><h5>TVM Calculator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/investment-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-bill-trend-up fa-xl"></i><h5>Investment Calculator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/currency"><div class="calculator-box text-center"><i class="fa-solid fa-coins fa-xl"></i><h5>Currency Converter</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/loan-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl"></i><h5>Loan Calculator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/sip-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-bill-wheat fa-xl"></i><h5>SIP Calculator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/systematic-withdrawal-plan-calculator-with-inflation"><div class="calculator-box text-center"><i class="fa-solid fa-plant-wilt fa-xl"></i><h5>SWP Calculator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/mortgage-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-money-check-dollar fa-xl"></i><h5>Mortgage Calculator (USA)</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/debt-avalanche-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-scale-unbalanced-flip fa-xl"></i><h5>Debt Avalanche Calculator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/loan-comparison-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-code-compare fa-xl"></i><h5>Loan Comparison Calculator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/credit-card-validator"><div class="calculator-box text-center"><i class="fa-solid fa-credit-card fa-xl"></i><h5>Credit Card Validator</h5></div></a></div>
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/car-loan-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-car fa-xl"></i><h5>Car Loan Calculator</h5></div></a></div>  
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/cagr-calculator"><div class="calculator-box text-center"><i class="fa-solid fa-arrow-up-right-dots fa-xl"></i><h5>CAGR Calculator</h5></div></a></div>  
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/pro-rata-calculator"><div class="calculator-box text-center"><h5>Pro rata Calculator</h5></div></a></div>  
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/daily-interest-calculator"><div class="calculator-box text-center"><h5>Daily Interest Calculator</h5></div></a></div> 
-<div class="col-md-3 p-3  "><a class="text-decoration-none" href="/compound-interest-calculator"><div class="calculator-box text-center"><h5>Compound Interest Calculator</h5></div></a></div>  
+<!-- Investment Calculators -->
+<h2 class="fw-bold mb-3">Investment Calculators</h2>
+<div class="row g-3 mb-5">
+ <div class="col-12 col-md-3"><a href="/investment-calculator"><div class="calculator-box text-center"><h5>Investment Calculator</h5></div></a></div>
+ <div class="col-12 col-md-3"><a href="/tvm-calculator"><div class="calculator-box text-center"><h5>TVM Calculator</h5></div></a></div>
+ <div class="col-12 col-md-3"><a href="/cagr-calculator"><div class="calculator-box text-center"><h5>CAGR Calculator</h5></div></a></div>
+ <div class="col-12 col-md-3"><a href="/sip-calculator"><div class="calculator-box text-center"><h5>SIP Calculator</h5></div></a></div>
+ <div class="col-12 col-md-3"><a href="/systematic-withdrawal-plan-calculator-with-inflation"><div class="calculator-box text-center"><h5>SWP Calculator</h5></div></a></div>
+</div>
 
- </div>
+<!-- Loan Calculators -->
+<h2 class="fw-bold mb-3">Loan Calculators</h2>
+<div class="row g-3 mb-5">
+ <div class="col-12 col-md-3"><a  href="/loan-calculator"><div class="calculator-box text-center"><h5>Loan Calculator</h5></div></a></div>
+ <div class="col-12 col-md-3"><a  href="/emi-calculator"><div class="calculator-box text-center"><h5>EMI Calculator</h5></div></a></div>
+ <div class="col-12 col-md-3"><a  href="/loan-comparison-calculator"><div class="calculator-box text-center"><h5>Loan Comparison Calculator</h5></div></a></div>
+ <div class="col-12 col-md-3"><a  href="/car-loan-calculator"><div class="calculator-box text-center"><h5>Car Loan Calculator</h5></div></a></div>
+ <div class="col-12 col-md-3"><a  href="/mortgage-calculator"><div class="calculator-box text-center"><h5>Mortgage Calculator (USA)</h5></div></a></div>
+ 
+</div>
 
+<!-- Debt Calculators -->
+<h2 class="fw-bold mb-3">Debt Calculators</h2>
+<div class="row g-3 mb-5">
+ <div class="col-12 col-md-3"><a  href="/debt-avalanche-calculator"><div class="calculator-box text-center"><h5>Debt Avalanche Calculator</h5></div></a></div>
+</div>
+
+<!-- Interest Calculators -->
+<h2 class="fw-bold mb-3">Interest Calculators</h2>
+<div class="row g-3 mb-5">
+ <div class="col-12 col-md-3"><a href="/daily-interest-calculator"><div class="calculator-box text-center"><h5>Daily Interest Calculator</h5></div></a></div>
+ <div class="col-12 col-md-3"><a href="/compound-interest-calculator"><div class="calculator-box text-center"><h5>Compound Interest Calculator</h5>   </div></a></div>
+</div>
+
+<!-- Other Finance Calculators -->
+<h2 class="fw-bold mb-3">Other Finance Calculators</h2>
+<div class="row g-3 mb-5">
+<div class="col-12 col-md-3"><a href="/currency"><div class="calculator-box text-center"><h5>Currency Converter</h5></div></a></div>
+<div class="col-12 col-md-3"><a href="/credit-card-validator"><div class="calculator-box text-center"><h5>Credit Card Validator</h5></div></a></div>
+<div class="col-12 col-md-3"><a href="/pro-rata-calculator"><div class="calculator-box text-center"><h5>Pro Rata Calculator</h5></div></a></div>
+</div>
 
 
 
