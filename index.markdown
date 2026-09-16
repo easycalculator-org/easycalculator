@@ -17,32 +17,25 @@ last_modified_at: 2026-09-09
       <!-- Finance -->
       <a href="/finance-calculators" class="ec-category-card">
         <div class="ec-category-icon"><i class="fa-solid fa-dollar-sign"></i></div>
-        <h3>Finance</h3>
-        <p>Loan, SIP, investment &amp; finance calculators</p>
+        <h3>Finance</h3><p>Loan, SIP, investment &amp; finance calculators</p>
       </a>
       <!-- Math -->
       <a href="/math" class="ec-category-card">
         <div class="ec-category-icon"><i class="fa-solid fa-square-root-variable"></i></div>
-        <h3>Math</h3>
-        <p>Percentage, fraction, LCM, HCF &amp; more</p>
+        <h3>Math</h3><p>Percentage, fraction, LCM, HCF &amp; more</p>
       </a>
-      <!-- Conversion -->
-      <a href="/tools" class="ec-category-card">
-        <div class="ec-category-icon"><i class="fa-solid fa-right-left"></i></div>
-        <h3>Conversion</h3>
-        <p>Unit, number, temperature &amp; speed converters</p>
-      </a>
+      <!-- Triangle Calculators -->
+<a href="/triangle-calculators" class="ec-category-card">
+  <div class="ec-category-icon"> <i class="fa-solid fa-caret-up"></i></div>
+  <h3>Triangle Calculators</h3><p>Triangle area, angles, sides, and geometry calculators</p></a>
       <!-- Time -->
       <a href="/time-zone-converter" class="ec-category-card">
         <div class="ec-category-icon"><i class="fa-regular fa-clock"></i></div>
-        <h3>Time &amp; Date</h3>
-        <p>Time zones, world clock, countdown &amp; dates</p>
-      </a>
+        <h3>Time &amp; Date</h3><p>Time zones, world clock, countdown &amp; dates</p></a>
       <!-- Geolocation -->
       <a href="/geolocation-tools" class="ec-category-card">
         <div class="ec-category-icon"><i class="fa-solid fa-location-dot"></i></div>
-        <h3>Geolocation</h3>
-        <p>Coordinates, IP, UTM, MGRS &amp; distance tools</p>
+        <h3>Geolocation</h3><p>Coordinates, IP, UTM, MGRS &amp; distance tools</p>
       </a>
       <!-- RF -->
       <a href="/rf-calculator" class="ec-category-card">
@@ -53,32 +46,27 @@ last_modified_at: 2026-09-09
     <!-- Timer -->
 <a href="/timer-calculator" class="ec-category-card">
   <div class="ec-category-icon"><i class="fa-solid fa-stopwatch"></i></div>
-  <h3>Timer</h3>
-  <p>Countdown, stopwatch, timer and time tools</p>
+  <h3>Timer</h3><p>Countdown, stopwatch, timer and time tools</p>
 </a>
-      <!-- Business -->
-      <a href="/tools" class="ec-category-card">
-        <div class="ec-category-icon"><i class="fa-solid fa-briefcase"></i></div>
-        <h3>Business</h3>
-        <p>Business, finance and productivity tools</p>
-      </a>
+      <!-- Weight -->
+<a href="/weight-calculator" class="ec-category-card">
+  <div class="ec-category-icon"><i class="fa-solid fa-weight-scale"></i></div>
+  <h3>Weight</h3><p>Weight conversion and calculation tools</p>
+</a>
       <!-- Number Conversion -->
      <a href="/number-conversion" class="ec-category-card">
   <div class="ec-category-icon"><i class="fa-solid fa-right-left"></i></div>
-  <h3>Number Conversion</h3>
-  <p>Binary, decimal, octal and hexadecimal conversions</p>
+  <h3>Number Conversion</h3><p>Binary, decimal, octal and hexadecimal conversions</p>
 </a>
       <!-- Other -->
       <a href="/tools" class="ec-category-card">
         <div class="ec-category-icon"><i class="fa-solid fa-ellipsis"></i></div>
-        <h3>Other Tools</h3>
-        <p>Useful calculators and online utilities</p>
+        <h3>Other Tools</h3><p>Useful calculators and online utilities</p>
       </a>
       <!-- New -->
       <a href="/tools" class="ec-category-card">
         <div class="ec-category-icon"><i class="fa-solid fa-star"></i></div>
-        <h3>New Calculators</h3>
-        <p>Recently added calculators and tools</p>
+        <h3>New Calculators</h3><p>Recently added calculators and tools</p>
       </a>
       <!-- Suggest -->
       <a href="/contact" class="ec-category-card ec-category-special">
