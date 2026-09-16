@@ -21,7 +21,7 @@ last_modified_at: 2026-03-11
 
 
 <!-- FAQ Section -->
-<section class="mb-5">
+<section class="p-4">
   <h2 class="mb-4">FAQ on Calculator</h2>
    <div class="card mb-3 border-0 bg-light">
      <div class="card-body ">

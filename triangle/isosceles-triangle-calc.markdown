@@ -210,7 +210,7 @@ last_modified_at: 2026-03-15
 
 <!-- FAQ Section -->
 <section class="mb-5">
-        <h2 class="mb-4">FAQ on Calculator</h2>
+        <h2 class="mb-4">FAQ on Isosceles Triangle Calculator</h2>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
             <div class="fw-bold text-primary">What is an isosceles triangle?</div>

@@ -355,7 +355,7 @@ L \approx 16.75\,mm
 
 <!-- FAQ Section -->
 <section class="mb-5">
- <h2 class="mb-4">FAQ on Calculator</h2>
+ <h2 class="mb-4">FAQ on Microstrip Line Calculator</h2>
   <div class="p-4 border-0 bg-light">
    <div class="card-body ">
     <div class="fw-bold text-primary">What is a microstrip line?</div>

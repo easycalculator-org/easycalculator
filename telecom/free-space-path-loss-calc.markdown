@@ -424,7 +424,7 @@ last_modified_at: 2026-09-13
 
 <!-- FAQ Section -->
 <section class="mb-5 pt-4">
-  <h2 class="mb-4">FAQ on Calculator</h2>
+  <h2 class="mb-4">FAQ on FSPL Calculator</h2>
    <div class="card mb-3 border-0 bg-light">
      <div class="card-body ">
       <div class="fw-bold text-primary">1. What is FSPL?</div>

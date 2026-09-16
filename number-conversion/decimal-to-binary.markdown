@@ -124,7 +124,7 @@ last_modified_at: 2026-09-09
   </div>
 <!-- FAQ Section -->
  <section class="mb-5 p-4">
-        <h2 class="mb-4">FAQ on Calculator</h2>
+        <h2 class="mb-4">FAQ on Decimal to Binary Converter </h2>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
             <div class="fw-bold text-primary">1. What is decimal to binary conversion?</div>
