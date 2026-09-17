@@ -211,7 +211,7 @@ last_modified_at: 2026-09-09
       <div class="text-center p-4 bg-white rounded-3 shadow-sm h-100">
       <div class="feature-icon"><i class="fas fa-bullseye"></i> </div>
       <h4 class="mb-3">Accurate Results</h4>
-      <p>Our calculators are designed with precision algorithms to ensure top-notch accuracy.</p>
+      <p>Our calculators use verified formulas and industry-standard methods to provide accurate and reliable results.</p>
       </div>
      </div>
    <div class="col-md-6 col-lg-3">
@@ -260,7 +260,7 @@ last_modified_at: 2026-09-09
   <h4 class="mb-4 text-center">Our Primary Reference Sources:</h4>
   <ul class="list-group list-group-flush">
    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Wikipedia</strong>: for foundational mathematical and scientific concepts.</li>
-   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>NIST.gov</strong>:for unit standards and measurement conversions</li>
+   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>NIST.gov</strong>: for unit standards and measurement conversions</li>
    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>IRS.gov</strong>: for U.S. tax-related calculators</li>
    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>USGS.gov</strong>: U.S. Geological Survey for geographical data</li>
    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Open-source algorithms</strong>: verified by our developer community</li>
@@ -300,15 +300,9 @@ last_modified_at: 2026-09-09
         <p class="mb-0"> Our calculators use verified formulas and industry-standard algorithms to ensure high accuracy.</p>
        </div>
      </div>
-   <div class="card mb-3 border-0 bg-light">
+      <div class="card mb-3 border-0 bg-light">
      <div class="card-body ">
-       <div class="fw-bold text-primary">4. Which calculators are available on EasyCalculator.org?</div>
-        <p class="mb-0">Popular calculators include EMI, SIP, loan, investment, percentage, age, currency, unit conversion, time zone, geolocation and RF calculators.</p>
-       </div>
-     </div>
-   <div class="card mb-3 border-0 bg-light">
-     <div class="card-body ">
-       <div class="fw-bold text-primary">5.  Can I use these calculators on mobile?</div>
+       <div class="fw-bold text-primary">4.  Can I use these calculators on mobile?</div>
         <p class="mb-0">Yes, EasyCalculator.org is fully responsive and works on mobile, tablet, and desktop devices.</p>
        </div>
      </div>

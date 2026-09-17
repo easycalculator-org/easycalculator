@@ -250,7 +250,7 @@ last_modified_at: 2026-08-23
 
  <!-- Scripts -->
  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
- <script src="{{ '/assets/js/rf/elevation.js' | relative_url }}"></script>  
+ <script src="{{ '/assets/js/geolocation/elevation.js' | relative_url }}"></script>  
  <script type="application/ld+json">
 {
   "@context": "https://schema.org",

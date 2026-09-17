@@ -211,6 +211,6 @@ last_modified_at: 2026-08-23
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-<script src="{{ '/assets/js/lat-long-address.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/geolocation/lat-long-address.js' | relative_url }}"></script>
 
 

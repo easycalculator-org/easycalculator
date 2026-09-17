@@ -131,7 +131,7 @@ Whether you're calculating the <strong>distance between geographic coordinates</
 
 <!-- Article  -->
 
-<script src="{{ '/assets/js/lat-long-distance-calc.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/geolocation/lat-long-distance-calc.js' | relative_url }}"></script>
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <!-- Turf.js for distance calculations -->

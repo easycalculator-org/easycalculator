@@ -134,5 +134,5 @@ last_modified_at: 2026-09-17
 
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="/assets/js/airport-finder.js"></script>
+<script src="/assets/js/geolocation/airport-finder.js"></script>
 

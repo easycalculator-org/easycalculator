@@ -190,6 +190,6 @@ last_modified_at: 2026-02-03
         </section>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="{{ '/assets/js/investment.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/finance/investment.js' | relative_url }}"></script>
 
   

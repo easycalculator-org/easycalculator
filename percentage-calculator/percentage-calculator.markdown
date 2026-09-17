@@ -140,7 +140,7 @@ last_modified_at: 2026-02-03
 </div>
 
 </div>
-<script src="{{ '/assets/js/percentage-calc.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/percentage/percentage-calc.js' | relative_url }}"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

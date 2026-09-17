@@ -6,67 +6,14 @@ description: "Calculate haversine distance between two coordinates instantly. Fr
 image: "/assets/images/og/haversine-distance-calculator-formula.jpg"
 last_modified_at: 2026-04-01
 ---
- <style> 
- .formula{font-family:'Courier New',Courier,monospace;background-color:#f8f9fa;padding:1.5rem;border-radius:10px;margin:1.5rem 0;border:1px solid #eee;font-size:1.1rem;color:var(--secondary-color)}.calculator-container{max-width:600px;margin:0 auto;background-color:#fff;padding:30px;border-radius:10px;box-shadow:0 0 15px #0000001a}.result-box{background-color:#e9ecef;padding:15px;border-radius:5px;margin-top:20px}.form-label{font-weight:500}
- </style>
+<style> 
+.formula{font-family:'Courier New',Courier,monospace;background-color:#f8f9fa;padding:1.5rem;border-radius:10px;margin:1.5rem 0;border:1px solid #eee;font-size:1.1rem;color:var(--secondary-color)}.calculator-container{max-width:600px;margin:0 auto;background-color:#fff;padding:30px;border-radius:10px;box-shadow:0 0 15px #0000001a}.result-box{background-color:#e9ecef;padding:15px;border-radius:5px;margin-top:20px}.form-label{font-weight:500}
+.haversine-calculator{ max-width: 900px; margin: 0 auto; padding: clamp(20px, 4vw, 32px); background: #fff; border: 1px solid #e5e7eb; border-radius: 20px; box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);} .haversine-calculator .point-card{ height: 100%; min-width: 0; padding: 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px;} .haversine-calculator .point-badge{ display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex-shrink: 0; border-radius: 50%; background: #0d6efd; color: #fff; font-size: 15px; font-weight: 700;} .haversine-calculator .point-badge-b{ background: #198754;} .haversine-calculator .form-control, .haversine-calculator .form-select{ min-height: 46px; border-radius: 10px;} .haversine-calculator .calculate-btn{ min-height: 46px; border-radius: 10px; white-space: normal;} .haversine-calculator .result-box{ margin-top: 24px; padding: 24px 16px; background: #eef6ff; border: 1px solid #cfe2ff; border-radius: 14px;} .haversine-calculator #distanceResult{ font-size: clamp(1.8rem, 5vw, 2.6rem); font-weight: 700; color: #0b5ed7; overflow-wrap: anywhere; font-variant-numeric: tabular-nums;}
+</style>
+<div aria-label="breadcrumb" class="mb-3 p-3"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li><li class="breadcrumb-item active" aria-current="page">Haversine Distance Calculator</li></ol></div>
 
-<div aria-label="breadcrumb" class="mb-3 p-3">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Haversine Distance Calculator</li>
-  </ol>
-</div>
-
-
- <div class="calculator-container">
-   <h1 class="text-center mb-1">Haversine Distance Calculator</h1>
-    <p class="text-muted text-center mb-4">Calculate the great-circle distance between two points on Earth</p>
-     <form id="haversineForm">
-        <div class="row mb-3">
-          <div class="col-md-6">
-             <h5>Point A</h5>
-                    <div class="mb-3">
-                        <label for="lat1" class="form-label">Latitude</label>
-                        <input type="number" class="form-control" id="lat1" step="any" placeholder="e.g. 40.7128" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="lon1" class="form-label">Longitude</label>
-                        <input type="number" class="form-control" id="lon1" step="any" placeholder="e.g. -74.0060" required>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h5>Point B</h5>
-                    <div class="mb-3">
-                        <label for="lat2" class="form-label">Latitude</label>
-                        <input type="number" class="form-control" id="lat2" step="any" placeholder="e.g. 34.0522" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="lon2" class="form-label">Longitude</label>
-                        <input type="number" class="form-control" id="lon2" step="any" placeholder="e.g. -118.2437" required>
-                    </div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="unit" class="form-label">Unit of Measurement</label>
-                <select class="form-select" id="unit">
-                    <option value="km">Kilometers</option>
-                    <option value="m">Meters</option>
-                    <option value="mi">Miles</option>
-                    <option value="nmi">Nautical Miles</option>
-                </select>
-            </div>
-            <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary">Calculate Haversine Distance</button>
-            </div>
-        </form>
-        <div id="result" class="result-box text-center" style="display: none;">
-            <h4>Result</h4>
-            <p>The distance between the two points is:</p>
-            <p class="display-6" id="distanceResult">0 km</p>
-        </div>
-    </div>        
-
+<div class="calculator-container haversine-calculator"><div class="text-center mb-4"><h1 class="h2 fw-bold mb-2">Haversine Distance Calculator</h1><p class="text-muted mb-0">Calculate the great-circle distance between two coordinates on Earth. </p></div><form id="haversineForm"><div class="row g-3"><div class="col-md-6"><fieldset class="point-card"><legend class="float-none w-auto fs-6 fw-semibold mb-3"><span class="point-badge me-2" aria-hidden="true">A</span>Point A · Starting location </legend><div class="mb-3"><label for="lat1" class="form-label fw-semibold">Latitude </label><input type="number" class="form-control" id="lat1" name="lat1" placeholder="e.g. 40.7128" min="-90" max="90" step="any" required aria-describedby="lat1Help" ><div id="lat1Help" class="form-text">From −90° to 90°. </div></div><div><label for="lon1" class="form-label fw-semibold">Longitude </label><input type="number" class="form-control" id="lon1" name="lon1" placeholder="e.g. -74.0060" min="-180" max="180" step="any" required aria-describedby="lon1Help" ><div id="lon1Help" class="form-text">From −180° to 180°. </div></div></fieldset></div><div class="col-md-6"><fieldset class="point-card"><legend class="float-none w-auto fs-6 fw-semibold mb-3"><span class="point-badge point-badge-b me-2" aria-hidden="true" >B</span>Point B · Destination </legend><div class="mb-3"><label for="lat2" class="form-label fw-semibold">Latitude </label><input type="number" class="form-control" id="lat2" name="lat2" placeholder="e.g. 34.0522" min="-90" max="90" step="any" required aria-describedby="lat2Help" ><div id="lat2Help" class="form-text">From −90° to 90°. </div></div><div><label for="lon2" class="form-label fw-semibold">Longitude </label><input type="number" class="form-control" id="lon2" name="lon2" placeholder="e.g. -118.2437" min="-180" max="180" step="any" required aria-describedby="lon2Help" ><div id="lon2Help" class="form-text">From −180° to 180°. </div></div></fieldset></div></div><p class="small text-muted mt-3 mb-0">Enter decimal degrees. Use negative values for south latitude and west longitude. </p><div class="row g-3 align-items-end mt-1"><div class="col-md-4"><label for="unit" class="form-label fw-semibold">Distance unit </label><select class="form-select" id="unit" name="unit"><option value="km">Kilometers (km)</option><option value="m">Meters (m)</option><option value="mi">Miles (mi)</option><option value="nmi">Nautical miles (nmi)</option></select></div><div class="col-md-8"><button type="submit" class="btn btn-primary calculate-btn w-100 fw-semibold" >Calculate Distance </button></div></div></form><div id="result" class="result-box text-center" role="status" aria-live="polite" aria-atomic="true" style="display: none;" ><h2 class="h6 fw-semibold text-muted mb-2">Great-circle distance </h2><p id="distanceResult" class="mb-2">0 km</p><p class="small text-muted mb-0">Approximate shortest surface distance using a spherical Earth model. This is not a driving distance. </p></div></div>
+     
 <!-- Article Content -->
 <div class="article-container">
     <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
@@ -130,14 +77,8 @@ last_modified_at: 2026-04-01
 
  <!-- Image Section -->
 <div class="col-md-6 text-center">
-<!-- <img  src="/assets/images/haversine-distance-calculator-formula.svg" alt="Haversine formula diagram showing great-circle distance between two geographic coordinates on Earth"   class="img-fluid rounded shadow-sm"    loading="lazy"   decoding="async"   width="100%" height="auto"> -->
 <img  src="/assets/images/haversine-distance-calculator-formula.svg"
-  alt="Haversine formula diagram: a = sin²(Δφ/2) + cos(φ₁)·cos(φ₂)·sin²(Δλ/2), c = 2·atan2(√a, √(1−a)), d = R·c — showing great-circle distance between two points on Earth"
-  class="img-fluid rounded shadow-sm"
-  loading="lazy"
-  decoding="async"
-  width="100%"
-  height="auto" >
+  alt="Haversine formula diagram: a = sin²(Δφ/2) + cos(φ₁)·cos(φ₂)·sin²(Δλ/2), c = 2·atan2(√a, √(1−a)), d = R·c — showing great-circle distance between two points on Earth"   class="img-fluid rounded shadow-sm"  loading="lazy"  decoding="async"  width="100%"  height="auto" >
   </div>
 
 </div>
@@ -326,12 +267,6 @@ print("Output saved as output.csv")</code></pre></div>
             <p class="mb-0">For most applications, the Haversine formula provides accurate results within a small margin of error. However, for high-precision needs (e.g., aviation, military), ellipsoidal models like Vincenty's may be preferred.</p>
           </div>
         </div>
-          <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary">4. What is the difference between Haversine distance and driving distance? </div>
-            <p class="mb-0">Haversine distance is the straight-line distance between two points on Earth, while driving distance depends on roads, terrain, and routes.</p>
-          </div>
-        </div>
       </section>
 
 
@@ -340,6 +275,9 @@ print("Output saved as output.csv")</code></pre></div>
  <p class="mb-0">📏 The term "Haversine" comes from "half versed sine", a trigonometric function used in spherical geometry and navigation since the 19th century. <br>🗺️ The Haversine formula is widely used in GPS devices, geofencing applications, and fitness tracking apps like Strava or Runkeeper.</p>
    </div>
 </section>
+<!-- Links -->
+{% include geolocation.html %}
+
 <script src="{{ '/assets/js/geolocation/haversine.js' | relative_url }}"></script>
 <script type="application/ld+json">
 {

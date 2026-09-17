@@ -254,7 +254,7 @@ last_modified_at: 2026-08-23
 
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="{{ '/assets/js/what-is-my-zipcode.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/geolocation/what-is-my-zipcode.js' | relative_url }}"></script>
 
 <script type="application/ld+json">
 {
