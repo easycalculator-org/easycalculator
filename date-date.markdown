@@ -6,87 +6,98 @@ description: "Calculate the exact number of days between two dates with our free
 image: "/assets/images/date-to-date-calculator.jpg"
 last_modified_at: 2026-08-19
 ---
-
 <style>
-  .btn-calculate,.result-label{text-transform:uppercase;letter-spacing:1px}:root{--primary:#4361ee;--secondary:#3f37c9;--accent:#4895ef;--light:#f8f9fa;--dark:#212529;--success:#4cc9f0;--warning:#f72585}.calculator-card{background:#fff;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:transform .3s,box-shadow .3s;overflow:hidden;border:none;margin-top:-50px;position:relative;z-index:10}.btn-calculate,.card-header{background:linear-gradient(120deg,var(--accent),var(--primary));font-weight:600}.card-header{color:#fff;padding:1.5rem;font-size:1.5rem;border:none}.input-container{margin-bottom:1.5rem;position:relative}.input-icon{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--primary);z-index:10}.date-input{padding-left:45px;height:50px;border:1px solid #e1e5eb;border-radius:10px;font-size:1rem;width:100%;transition:.3s}.date-input:focus{box-shadow:0 0 0 .25rem rgba(67,97,238,.25);border-color:var(--primary);outline:0}.btn-calculate{border:none;padding:12px 30px;font-size:1.1rem;border-radius:10px;transition:.3s;width:100%;margin:1rem 0;position:relative;overflow:hidden}.btn-calculate::after{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(rgba(255,255,255,.1),transparent);transform:rotate(30deg);transition:.5s}.btn-calculate:hover{background:linear-gradient(120deg,var(--primary),var(--secondary));transform:translateY(-2px);box-shadow:0 7px 15px rgba(67,97,238,.3)}.btn-calculate:hover::after{transform:rotate(30deg) translate(20%,20%)}.result-card{background:linear-gradient(135deg,#e3f2fd 0,#bbdefb 100%);border-radius:15px;padding:2rem;text-align:center;margin:2rem 0;border:none;box-shadow:inset 0 0 20px rgba(0,0,0,.05)}.result-value{font-size:2.5rem;font-weight:700;color:var(--primary);margin:10px 0;text-shadow:0 2px 4px rgba(0,0,0,.1)}.result-label{font-size:1.1rem;color:var(--dark);font-weight:500}.overall-result{background:#fff;padding:20px;border-radius:12px;margin-top:20px;box-shadow:0 4px 10px rgba(0,0,0,.05);border-left:4px solid var(--primary)}.benefit-item{display:flex;align-items:flex-start;margin-bottom:1.2rem;padding:15px;border-radius:10px;background:rgba(255,255,255,.7);transition:.3s}.benefit-item:hover{background:#fff;transform:translateX(5px);box-shadow:0 5px 15px rgba(0,0,0,.05)}.benefit-icon{background:linear-gradient(135deg,var(--accent),var(--primary));color:#fff;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-right:15px;box-shadow:0 3px 8px rgba(67,97,238,.3)}.flatpickr-calendar{border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,.15)}.flatpickr-day.selected{background:var(--primary);border-color:var(--primary)}
-  .result-box { background: rgba(255, 255, 255, 0.85);  border-radius: 12px; padding: 15px 10px; height: 100%; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);}.result-box .result-value { margin: 0 0 5px;}.result-label {font-size: 0.95rem; font-weight: 600;}
- </style>
-
+#ec-date-calculator{--ec-blue:#2454d6;--ec-ink:#172b4d;--ec-muted:#52627a;color:var(--ec-ink);margin:24px auto;max-width:1100px;font-family:inherit}
+#ec-date-calculator *{box-sizing:border-box}
+#ec-date-calculator .ec-date-card{background:#fff;border:1px solid #e0e7f1;border-radius:18px;overflow:hidden;box-shadow:0 8px 28px #172b4d0a}
+#ec-date-calculator .ec-date-header{padding:24px;background:linear-gradient(120deg,#eff6ff,#f4f9ff);border-bottom:1px solid #e0e7f1}
+#ec-date-calculator h1{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.25;margin:0 0 8px}
+#ec-date-calculator p{margin:0 0 12px}
+#ec-date-calculator .ec-muted{color:var(--ec-muted);line-height:1.6}
+#ec-date-calculator .ec-date-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
+#ec-date-calculator .ec-date-inputs,#ec-date-calculator .ec-date-results{padding:24px;min-width:0}
+#ec-date-calculator .ec-date-results{background:#f8faff;border-left:1px solid #e0e7f1}
+#ec-date-calculator .ec-date-label{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+#ec-date-calculator label{font-weight:600}
+#ec-date-calculator .ec-date-field{margin-bottom:18px}
+#ec-date-calculator input[type=date]{display:block;width:100%;min-width:0;min-height:48px;padding:10px 12px;border:1px solid #b9c7da;border-radius:9px;background:#fff;color:var(--ec-ink);font:inherit;color-scheme:light}
+#ec-date-calculator input[aria-invalid=true]{border-color:#b42318}
+#ec-date-calculator button{font:inherit;cursor:pointer}
+#ec-date-calculator .ec-today{border:0;background:transparent;color:var(--ec-blue);font-weight:600;padding:6px 8px;border-radius:5px}
+#ec-date-calculator .ec-date-option{display:flex;align-items:flex-start;gap:10px;margin:4px 0 18px;padding:12px;background:#f3f6fb;border-radius:9px}
+#ec-date-calculator .ec-date-option input{margin-top:5px;width:17px;height:17px;accent-color:var(--ec-blue);flex-shrink:0}
+#ec-date-calculator .ec-date-option label{font-size:.95rem}
+#ec-date-calculator small{font-size:.82rem;display:block;line-height:1.5;font-weight:400;color:var(--ec-muted)}
+#ec-date-calculator .ec-actions{display:flex;gap:8px;flex-wrap:wrap}
+#ec-date-calculator .ec-primary,#ec-date-calculator .ec-secondary{min-height:44px;border-radius:9px;padding:10px 16px;font-weight:600}
+#ec-date-calculator .ec-primary{background:var(--ec-blue);color:#fff;border:1px solid var(--ec-blue);flex:1}
+#ec-date-calculator .ec-primary:hover{background:#1c43ad}
+#ec-date-calculator .ec-secondary{background:#fff;border:1px solid #b9c7da;color:var(--ec-ink)}
+#ec-date-calculator .ec-secondary:hover{background:#edf3ff}
+#ec-date-calculator :is(button,input):focus-visible{outline:3px solid #5686ed;outline-offset:3px}
+#ec-date-calculator h2{font-size:1rem;font-weight:600;margin:0 0 8px;color:var(--ec-muted)}
+#ec-date-calculator .ec-days{font-size:clamp(2.5rem,6vw,3.5rem);line-height:1.1;font-weight:750;color:var(--ec-blue);overflow-wrap:anywhere}
+#ec-date-calculator .ec-day-label{color:var(--ec-muted);margin:5px 0 16px}
+#ec-date-calculator .ec-result-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#ec-date-calculator .ec-result-box{border:1px solid #e0e7f1;background:#fff;border-radius:10px;padding:12px}
+#ec-date-calculator .ec-result-value{font-size:1.2rem;font-weight:700;line-height:1.5;overflow-wrap:anywhere}
+#ec-date-calculator .ec-result-label{font-size:.83rem;color:var(--ec-muted);margin-bottom:3px}
+#ec-date-calculator .ec-summary{margin-top:16px;padding-top:14px;border-top:1px solid #dce5f2;font-size:.9rem;line-height:1.6}
+#ec-date-calculator .ec-error{color:#a32117;background:#fff1ef;padding:10px 12px;border-radius:8px;margin-top:14px;font-size:.9rem}
+#ec-date-calculator .ec-note{font-size:.82rem;line-height:1.6;color:var(--ec-muted);margin-top:14px}
+#ec-date-calculator [hidden]{display:none!important}
+@media(max-width:767px){#ec-date-calculator .ec-date-layout{grid-template-columns:1fr}#ec-date-calculator .ec-date-results{border-left:0;border-top:1px solid #e0e7f1}#ec-date-calculator .ec-date-header,#ec-date-calculator .ec-date-inputs,#ec-date-calculator .ec-date-results{padding:18px}}
+</style>
 <!-- Flatpickr CSS -->
 <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
-<!-- Calculator Section -->
-<section class="p-4 p-md-5">
- <div class="row justify-content-center">
-  <div class="col-lg-10">
-   <div class="calculator-card">
-    <!-- Calculator Header -->
-   <div class="card-header text-center">
-    <h1>Date to Date Calculator</h1>
-    <p class="mb-0 mt-2 small opacity-75">Calculate days, weeks, months, business days and weekends between two dates</p>
-   </div>
- <div class="card-body p-3 p-md-4">
-   <div class="row g-3">
-    <div class="col-md-6">
-      <label for="startDate" class="form-label fw-semibold"><i class="fas fa-play-circle me-2 text-primary"></i>Start Date</label>
-      <div class="input-container"><i class="input-icon fas fa-calendar-day"></i>
-        <input type="text"  class="date-input"  id="startDate"  placeholder="Select start date"  aria-label="Start date">
-       </div>
-      </div>
-   <div class="col-md-6">
-    <label for="endDate" class="form-label fw-semibold"><i class="fas fa-flag-checkered me-2 text-primary"></i>End Date</label>
-     <div class="input-container"><i class="input-icon fas fa-calendar-day"></i>
-     <input type="text" class="date-input"  id="endDate"  placeholder="Select end date" aria-label="End date">
-     </div>
-     </div>
-     </div>
-     <button type="button" class="btn btn-calculate btn-lg"  id="calculateBtn"><i class="fas fa-calculator me-2"></i>Calculate Date Difference</button>
-     <div class="result-card">
-     <h2 class="h4 mb-4"><i class="fas fa-chart-bar me-2"></i> Date Difference Result</h2>
-   <!-- Main Results -->
-    <div class="row g-3">
-    <!-- Total Days -->
-   <div class="col-6 col-md-4">
-    <div class="result-box">
-     <div class="result-value" id="daysResult">0</div>
-     <div class="result-label">Total Days</div>
-    </div>
-    </div>
- <!-- Weeks -->
-   <div class="col-6 col-md-4">
-     <div class="result-box">
-      <div class="result-value" id="weeksResult">0</div>
-      <div class="result-label">Weeks</div>
-      </div>
-      </div>
- <!-- Months -->
-   <div class="col-6 col-md-4">
-     <div class="result-box">
-     <div class="result-value" id="monthsResult">0</div>
-     <div class="result-label">Months</div>
-    </div>
-   </div>
-    <!-- Business Days -->
-     <div class="col-6 col-md-6">
-       <div class="result-box">
-       <div class="result-value" id="businessDaysResult">0</div>
-       <div class="result-label"><i class="fas fa-briefcase me-1"></i>Business Days</div>
-       </div>
-       </div>
-   <!-- Weekend Days -->
-       <div class="col-6 col-md-6">
-       <div class="result-box weekend-result">
-       <div class="result-value" id="weekendDaysResult">0</div>
-       <div class="result-label"><i class="fas fa-calendar-week me-1"></i> Weekend Days</div>
-       </div>
-       </div>
-       </div>
-   <!-- Overall Calculation -->
-     <div class="overall-result mt-4">
-      <h3 class="h5 d-flex align-items-center mb-3"><i class="fas fa-list-alt me-2 text-primary"></i>Overall Calculation</h3>
-      <div class="mb-0" id="fullResult" aria-live="polite">Select dates to calculate difference</div>
-       </div>
-       </div>
-       </div>
+
+<section id="ec-date-calculator" aria-labelledby="ec-date-title">
+  <div class="ec-date-card">
+    <header class="ec-date-header">
+      <h1 id="ec-date-title">Date to Date Calculator</h1>
+      <p class="ec-muted" style="margin-bottom:0">Find days, weeks, calendar months and working days between two dates.</p>
+    </header>
+    <div class="ec-date-layout">
+      <form id="dateDifferenceForm" class="ec-date-inputs" novalidate>
+        <div class="ec-date-field">
+          <div class="ec-date-label">
+            <label for="startDate">Start date</label>
+            <button class="ec-today" type="button" id="startToday" aria-label="Set start date to today">Today</button>
+          </div>
+          <input type="date" id="startDate" min="0001-01-01" max="9999-12-31" required aria-describedby="dateError">
+        </div>
+        <div class="ec-date-field">
+          <div class="ec-date-label">
+            <label for="endDate">End date</label>
+            <button class="ec-today" type="button" id="endToday" aria-label="Set end date to today">Today</button>
+          </div>
+          <input type="date" id="endDate" min="0001-01-01" max="9999-12-31" required aria-describedby="dateError">
+        </div>
+        <div class="ec-date-option">
+          <input type="checkbox" id="includeEndDate">
+          <label for="includeEndDate">Include the end date<small>Count both dates by adding one calendar day.</small></label>
+        </div>
+        <div class="ec-actions">
+          <button type="submit" class="ec-primary" id="calculateBtn">Calculate difference</button>
+          <button type="button" class="ec-secondary" id="swapDates">Swap dates</button>
+          <button type="button" class="ec-secondary" id="resetDates">Reset</button>
+        </div>
+        <div id="dateError" class="ec-error" role="alert" hidden></div>
+        <p class="ec-note">By default, the start date is counted and the end date is excluded. Earlier end dates are automatically reordered for a positive duration.</p>
+        <noscript><p class="ec-error">Enable JavaScript to calculate the date difference.</p></noscript>
+      </form>
+      <div class="ec-date-results" aria-live="polite" aria-atomic="true">
+        <h2>Date difference</h2>
+        <div class="ec-days" id="daysResult">—</div>
+        <div class="ec-day-label" id="dayLabel">total days</div>
+        <div class="ec-result-grid">
+          <div class="ec-result-box"><div class="ec-result-label">Weeks and days</div><div class="ec-result-value" id="weeksResult">—</div></div>
+          <div class="ec-result-box"><div class="ec-result-label">Calendar months and days</div><div class="ec-result-value" id="monthsResult">—</div></div>
+          <div class="ec-result-box"><div class="ec-result-label">Business days · Mon–Fri</div><div class="ec-result-value" id="businessDaysResult">—</div></div>
+          <div class="ec-result-box"><div class="ec-result-label">Weekend days · Sat–Sun</div><div class="ec-result-value" id="weekendDaysResult">—</div></div>
+        </div>
+        <div id="fullResult" class="ec-summary">Choose two dates to see your result.</div>
+        <p class="ec-note">Public holidays are not excluded. Calendar months use the matching day of the month, or its last day when that day does not exist. Inclusive results use the day after the end date as the calculation boundary.</p>
       </div>
     </div>
   </div>
