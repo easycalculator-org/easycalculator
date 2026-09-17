@@ -237,5 +237,5 @@ last_modified_at: 2026-02-04
       <!-- Did You Know? -->
  </div>        
     
-<script src="{{ '/assets/js/tvm-calc.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/finance/tvm-calc.js' | relative_url }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

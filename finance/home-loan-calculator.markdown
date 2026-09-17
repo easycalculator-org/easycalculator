@@ -53,5 +53,5 @@ last_modified_at: 2026-02-03
 
 </div>  
 
-<script src="{{ '/assets/js/home-loan.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/finance/home-loan.js' | relative_url }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

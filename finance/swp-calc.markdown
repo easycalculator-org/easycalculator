@@ -356,6 +356,6 @@ last_modified_at: 2026-02-03
 
  <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="{{ '/assets/js/swp-calc.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/finance/swp-calc.js' | relative_url }}"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

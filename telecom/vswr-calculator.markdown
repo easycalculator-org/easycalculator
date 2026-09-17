@@ -328,7 +328,7 @@ last_modified_at: 2026-09-13
     </div>
 
 
-<script src="{{ '/assets/js/vswr-calc.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/rf/vswr-calc.js' | relative_url }}"></script>
 <!-- MathJax -->
 <script>
 window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };

@@ -332,4 +332,4 @@ Typical PMI Rate: Around 0.5% of the loan amount per year</p>
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="{{ '/assets/js/mortgage-loan.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/finance/mortgage-loan.js' | relative_url }}"></script>

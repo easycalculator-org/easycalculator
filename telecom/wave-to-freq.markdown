@@ -166,7 +166,7 @@ last_modified_at: 2026-09-13
 </div>
 
 
- <script src="{{ '/assets/js/wave-to-freq.js' | relative_url }}"></script> 
+ <script src="{{ '/assets/js/rf/wave-to-freq.js' | relative_url }}"></script> 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.7.0/math.min.js"></script>
 
  <script type="application/ld+json">

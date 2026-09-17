@@ -346,8 +346,8 @@ That’s where the USA Car Loan Calculator on EasyCalculator.org becomes essenti
  </div>
 
 
-
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ '/assets/js/finance/car-loan-usa.js' | relative_url }}"></script>
 
 
 <script type="application/ld+json">
@@ -424,8 +424,7 @@ That’s where the USA Car Loan Calculator on EasyCalculator.org becomes essenti
 </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="{{ '/assets/js/car-loan-usa.js' | relative_url }}"></script>
+
 
 
 

@@ -460,7 +460,7 @@ last_modified_at: 2026-09-13
 </section>
 
 
-<script src="{{ '/assets/js/free-spac-calc.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/rf/free-spac-calc.js' | relative_url }}"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

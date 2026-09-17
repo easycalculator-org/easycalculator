@@ -226,6 +226,6 @@ last_modified_at: 2026-02-03
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
-<script src="{{ '/assets/js/debt-avalanche.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/finance/debt-avalanche.js' | relative_url }}"></script>
 
 

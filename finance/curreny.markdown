@@ -257,7 +257,7 @@ last_modified_at: 2026-02-03
 
 
 
-<script src="{{ '/assets/js/currency.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/finance/currency.js' | relative_url }}"></script>
 <!-- jQuery -->
 
 

@@ -169,4 +169,4 @@ last_modified_at: 2026-09-13
 
 
 
- <script src="{{ '/assets/js/freq-to-wave.js' | relative_url }}"></script>  
+ <script src="{{ '/assets/js/rf/freq-to-wave.js' | relative_url }}"></script>  

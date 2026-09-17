@@ -409,4 +409,4 @@ last_modified_at: 2026-02-03
         </div>
     </div>
 
-<script src="{{ '/assets/js/loan-comparision.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/finance/loan-comparision.js' | relative_url }}"></script>

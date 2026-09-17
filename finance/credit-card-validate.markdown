@@ -155,7 +155,7 @@ last_modified_at: 2026-02-03
 
 
 
-<script src="/assets/js/credit-card-validate.js"></script>
+<script src="/assets/js/finance/credit-card-validate.js"></script>
 
 
 

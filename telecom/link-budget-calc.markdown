@@ -353,4 +353,4 @@ last_modified_at: 2026-09-13
     </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="{{ '/assets/js/link-budget.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/rf/link-budget.js' | relative_url }}"></script>

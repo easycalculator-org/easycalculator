@@ -155,7 +155,7 @@ last_modified_at: 2026-09-13
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-<script src="{{ '/assets/js/eirp-calculator.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/rf/eirp-calculator.js' | relative_url }}"></script>
 <script>
 window.MathJax = {
   tex: {
