@@ -1,106 +1,34 @@
 ---
 layout: default
-title: Geojson Viewer | View Geojson Files Online on Interactive Map
+title: GeoJSON Viewer – Online Map, Satellite & Feature Inspector
 permalink: /geojson-viewer
-description: "View GeoJSON files online with an interactive map. Upload and explore points, lines, polygons, coordinates, and geographic features."
+description: "View GeoJSON files online on map and satellite layers. Explore points, lines, polygons and properties. Paste JSON and export GeoJSON, KML or CSV"
 image: "/assets/images/og/geojson-viewer.jpg"
-last_modified_at: 2026-07-08
+last_modified_at: 2026-09-18
 ---
-<link href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" />
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
 <style>
-.drop-zone{border:2px dashed #d0d7de;border-radius:12px;padding:2rem 1.5rem;text-align:center;cursor:pointer;transition:all .3s;background:#fafbfc}.drop-zone:hover,.drop-zone.dragover{border-color:#2c7be5;background:#f0f7ff}.drop-zone i{font-size:3rem;color:#8b9aab}#map-container{position:relative;border-radius:16px;overflow:hidden;background:#e8ecf1}#map{width:100%;height:480px;background:#e8ecf1}.map-controls{position:absolute;top:16px;right:16px;z-index:1000;display:flex;flex-direction:column;gap:8px}.map-controls .btn-map{background:#ffffffeb;backdrop-filter:blur(4px);border:none;border-radius:10px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#2c3e50;box-shadow:0 2px 10px #0000001a;transition:all .2s}.map-controls .btn-map:hover{background:#fff;transform:scale(1.04)}.empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#8b9aab}.empty-state i{font-size:3.5rem;color:#c8d0d8;margin-bottom:.75rem}.stat-divider{width:1px;background:#e9edf2;margin:0 .5rem}.toast-container{position:fixed;top:80px;right:20px;z-index:9999}.toast-custom{background:#fff;border-radius:12px;border:none;box-shadow:0 8px 32px #0000001f;padding:.75rem 1.25rem;min-width:240px}.toast-custom .toast-body{display:flex;align-items:center;gap:10px;font-size:.9rem;color:#1a2a3a}.toast-custom .toast-body i{font-size:1.3rem}.toast-custom.toast-success .toast-body i{color:#28a745}.toast-custom.toast-error .toast-body i{color:#dc3545}.feature-table-wrap{max-height:240px;overflow-y:auto}.feature-table-wrap table{margin-bottom:0}.feature-row{cursor:pointer;transition:background .15s}.feature-row:hover{background:#f0f7ff}.feature-row.active{background:#cfe2ff}@media (max-width: 768px){#map{height:360px}.drop-zone{padding:1.5rem 1rem}.drop-zone i{font-size:2.2rem}.map-controls .btn-map{width:38px;height:38px;font-size:1rem}.stat-divider{display:none}}@media (max-width: 576px){#map{height:280px}}
-</style>
-<div aria-label="breadcrumb" class="p-3">
- <ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="/">Home</a></li>
-  <li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li>
-  <li class="breadcrumb-item active" aria-current="page">Geojson Viewer</li>
- </ol>
+#ec-geojson{--gj-blue:#2563eb;--gj-ink:#172b4d;--gj-muted:#52657d;color:var(--gj-ink);font-family:inherit;margin:24px auto;max-width:1600px}#ec-geojson *{box-sizing:border-box}#ec-geojson button,#ec-geojson select,#ec-geojson input{font:inherit}#ec-geojson button,#ec-geojson select{border:1px solid #cbd5e1;border-radius:9px;background:#fff;color:var(--gj-ink);padding:9px 13px;min-height:42px;cursor:pointer}#ec-geojson button:hover{background:#eff6ff;border-color:#2563eb}#ec-geojson button:disabled{opacity:.45;cursor:not-allowed}#ec-geojson :focus-visible{outline:3px solid #f59e0b;outline-offset:3px}#ec-geojson .gj-primary{background:#2563eb;color:white;border-color:#2563eb}#ec-geojson .gj-primary:hover{background:#1d4ed8}#ec-geojson .gj-hero{background:linear-gradient(120deg,#eff6ff,#f0fdfa);border:1px solid #dbeafe;border-radius:18px;padding:26px;margin-bottom:18px}#ec-geojson h1{font-size:clamp(1.8rem,3vw,2.6rem);margin:0 0 8px}#ec-geojson h2{font-size:1.1rem;margin:0 0 12px}#ec-geojson p{margin:8px 0}#ec-geojson .gj-muted{color:var(--gj-muted);font-size:.88rem}#ec-geojson .gj-badge{display:inline-block;padding:5px 10px;background:white;border:1px solid #dbeafe;border-radius:20px;font-size:.78rem;margin:8px 5px 0 0}#ec-geojson .gj-upload{border:2px dashed #93b4eb;border-radius:14px;background:#f8fbff;padding:18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}#ec-geojson .gj-upload.gj-drag{background:#dbeafe;border-color:#2563eb}#ec-geojson .gj-toolbar{display:flex;flex-wrap:wrap;gap:9px;align-items:center;padding:12px;background:#fff;border:1px solid #dde5ef;border-radius:14px 14px 0 0}#ec-geojson .gj-toolbar label{display:flex;align-items:center;gap:6px;font-size:.85rem;margin:0}#ec-geojson .gj-spacer{flex:1}#ec-geojson .gj-map-shell{position:relative;background:#e9eef5;border:1px solid #dbe3ee;border-top:0;border-radius:0 0 14px 14px;overflow:hidden}#ec-geojson #gj-map{height:clamp(600px,76vh,900px);width:100%;z-index:1}#ec-geojson .gj-map-shell:fullscreen{width:100vw;height:100vh;border-radius:0}#ec-geojson .gj-map-shell:fullscreen #gj-map{height:100vh}#ec-geojson:has(.gj-expanded){transform:none;position:static;width:auto}#ec-geojson .gj-map-shell.gj-expanded{position:fixed;inset:0;z-index:10000;border-radius:0}#ec-geojson .gj-map-shell.gj-expanded #gj-map{height:100dvh}#ec-geojson .gj-map-tools{position:absolute;top:12px;right:12px;z-index:500;display:flex;gap:6px;flex-wrap:wrap;max-width:calc(100% - 65px)}#ec-geojson .gj-map-tools button,#ec-geojson .gj-map-tools select{box-shadow:0 2px 8px #0002}#ec-geojson .gj-coords{position:absolute;bottom:28px;left:10px;z-index:500;background:#fffffff0;border-radius:7px;padding:5px 9px;font-size:12px;pointer-events:none}#ec-geojson .gj-status{padding:9px 2px;min-height:38px;color:#345477;font-size:.9rem}#ec-geojson .gj-status.gj-error{color:#b42318}#ec-geojson .gj-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}#ec-geojson .gj-stat{background:#fff;border:1px solid #e0e7ef;border-radius:12px;padding:15px}#ec-geojson .gj-stat strong{display:block;font-size:1.35rem;line-height:1.5}#ec-geojson .gj-stat span{font-size:.8rem;color:var(--gj-muted)}#ec-geojson .gj-panels{display:grid;grid-template-columns:minmax(240px,1fr) minmax(0,2fr);gap:14px}#ec-geojson .gj-panel{border:1px solid #e0e7ef;border-radius:14px;background:white;padding:18px;min-width:0}#ec-geojson #gj-files{max-height:350px;overflow:auto}#ec-geojson .gj-file{display:flex;gap:8px;align-items:center;border-bottom:1px solid #edf1f6;padding:10px 0}#ec-geojson .gj-file label{flex:1;min-width:0;overflow-wrap:anywhere;margin:0}#ec-geojson .gj-file small{display:block;color:var(--gj-muted)}#ec-geojson .gj-file input[type=color]{width:30px;height:32px;padding:0;border:0;background:none;flex-shrink:0}#ec-geojson .gj-file button{padding:4px 8px;font-size:.8rem}#ec-geojson #gj-profile{display:block;width:100%;height:210px;touch-action:pan-y}#ec-geojson .gj-playback{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px}#ec-geojson #gj-scrub{flex:1;min-width:110px}#ec-geojson .gj-table-wrap{max-height:330px;overflow:auto;margin-top:12px}#ec-geojson table{width:100%;border-collapse:collapse;font-size:.85rem}#ec-geojson th,#ec-geojson td{text-align:left;padding:9px;border-bottom:1px solid #e2e8f0;white-space:nowrap}#ec-geojson th{background:#f1f5f9;position:sticky;top:0}#ec-geojson .gj-detail{background:#f8fafc;padding:10px;border-radius:8px;min-height:42px;font-size:.85rem}#ec-geojson .gj-exports{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}#ec-geojson .gj-marker{background:#2563eb;border:2px solid white;color:white;border-radius:50%;text-align:center;font-weight:bold;line-height:22px;box-shadow:0 1px 5px #0006}#ec-geojson input[type=checkbox]{width:17px;height:17px;accent-color:#2563eb}#ec-geojson .leaflet-control-attribution{font-size:10px}#ec-geojson .gj-method{margin:12px 0;font-size:.83rem;color:var(--gj-muted)}@media(min-width:1200px){#ec-geojson{width:min(1560px,calc(100vw - 48px));position:relative;left:50%;transform:translateX(-50%)}}@media(max-width:767px){#ec-geojson #gj-map{height:65vh;min-height:430px;max-height:700px}#ec-geojson .gj-stats{grid-template-columns:repeat(2,1fr)}#ec-geojson .gj-panels{grid-template-columns:1fr}#ec-geojson .gj-hero{padding:19px}#ec-geojson .gj-toolbar{gap:8px}#ec-geojson .gj-map-tools{max-width:calc(100% - 65px)}#ec-geojson .gj-map-tools button,#ec-geojson .gj-map-tools select{font-size:12px;padding:6px 8px}#ec-geojson .gj-stat strong{font-size:1.15rem}}@media print{#ec-geojson .gj-upload,#ec-geojson .gj-toolbar,#ec-geojson .gj-exports,#ec-geojson .gj-map-tools{display:none}#ec-geojson{transform:none;left:auto;width:100%}}
+#ec-geojson #gj-files{max-height:420px;overflow:auto}#ec-geojson #gj-detail{max-height:420px;overflow:auto;overflow-wrap:anywhere}#ec-geojson #gj-detail h3{font-size:1.1rem}#ec-geojson #gj-detail dl{display:grid;grid-template-columns:minmax(90px,1fr) minmax(0,2fr);gap:7px 12px;margin:12px 0}#ec-geojson #gj-detail dt{font-weight:600}#ec-geojson #gj-detail dd{margin:0}#ec-geojson summary{cursor:pointer;padding:8px 0}#ec-geojson .gj-file{flex-wrap:wrap}#ec-geojson .gj-file label{min-width:90px}</style>
+<div id="ec-geojson">
+<nav aria-label="Breadcrumb"><p class="gj-muted"><a href="/">Home</a> / <a href="/geolocation-tools">Geolocation Tools</a> / GeoJSON Viewer</p></nav>
+<header class="gj-hero"><h1>GeoJSON Viewer</h1><p>Open GeoJSON files on a large interactive map. Explore points, lines and polygons, inspect properties, and export your geographic data.</p><span class="gj-badge">Map &amp; satellite</span><span class="gj-badge">Points, lines &amp; polygons</span><span class="gj-badge">Properties &amp; styles</span><span class="gj-badge">Local file processing</span></header>
+<div class="gj-upload" id="gj-drop"><div><strong>Drop your GeoJSON files here</strong><p class="gj-muted">Up to 10 files • 10 MB per file • 100,000 coordinates and 5,000 geometry parts in total.</p></div><div><input id="gj-input" type="file" accept=".geojson,.json,application/geo+json,application/json" multiple hidden><button type="button" class="gj-primary" id="gj-upload">Open GeoJSON files</button> <button type="button" id="gj-demo">Try demo</button></div></div>
+<p class="gj-muted">File contents stay in your browser. External map providers receive your IP address and requested map areas. Data URLs and images referenced in properties are not fetched.</p>
+<details class="gj-panel" style="margin-bottom:12px"><summary><strong>Paste GeoJSON instead</strong></summary><label for="gj-paste">GeoJSON text</label><textarea id="gj-paste" rows="8" spellcheck="false" placeholder='{"type":"Point","coordinates":[77.391,28.535]}' style="width:100%;display:block;border:1px solid #cbd5e1;border-radius:10px;padding:12px;font-family:monospace;margin:8px 0;resize:vertical"></textarea><button type="button" id="gj-paste-load" class="gj-primary">Load pasted GeoJSON</button> <button type="button" id="gj-paste-format">Format JSON</button></details>
+<div id="gj-status" class="gj-status" role="status" aria-live="polite">Open a GeoJSON file, paste JSON, or try the demo.</div>
+<div class="gj-toolbar"><label><input type="checkbox" id="gj-points" checked> Points</label><label><input type="checkbox" id="gj-lines" checked> Lines</label><label><input type="checkbox" id="gj-polygons" checked> Polygons</label><label><input type="checkbox" id="gj-styles" checked> Property colors</label><label><input type="checkbox" id="gj-labels"> Labels</label><span class="gj-spacer"></span><label>Units <select id="gj-units"><option value="metric">km / km²</option><option value="imperial">mi / mi²</option></select></label><button type="button" id="gj-clear">Clear all</button></div>
+<div class="gj-map-shell" id="gj-map-shell"><div id="gj-map" aria-label="Interactive KML map"></div><div class="gj-map-tools"><select id="gj-basemap" aria-label="Map background"><option value="street">Map</option><option value="satellite">Satellite</option></select><button type="button" id="gj-fit">Fit features</button><button type="button" id="gj-locate">My location</button><button type="button" id="gj-fullscreen">Full screen</button></div><div class="gj-coords" id="gj-coords">Click the map to inspect coordinates</div></div>
+<div class="gj-stats" id="gj-stats"></div>
+<p class="gj-method">Statistics reflect visible geometry parts. Length and polygon area are spherical estimates, not surveying measurements. Polygon holes are subtracted; overlapping polygons are counted separately. Altitudes are preserved as supplied; the map is a 2D view.</p>
+<div class="gj-panels"><section class="gj-panel"><h2>Loaded files</h2><p class="gj-muted">Toggle files or individual geometry parts. Turn off “Property colors” to use each file’s color.</p><div id="gj-files"></div></section><section class="gj-panel"><h2>Feature inspector</h2><div id="gj-detail" class="gj-detail">Click a feature on the map or select View in the table below.</div></section></div>
+<section class="gj-panel" style="margin-top:14px"><div class="gj-toolbar" style="border:0;padding:0"><h2>Feature explorer</h2><span class="gj-spacer"></span><label>Search <input id="gj-search" type="search" placeholder="Name, type or file" style="max-width:190px;padding:8px;border:1px solid #cbd5e1;border-radius:8px"></label></div><p class="gj-muted">Search filters the table only. Use the checkboxes to change the map and exports.</p><div class="gj-table-wrap"><table><thead><tr><th>Show</th><th>Name</th><th>Geometry</th><th>Source type</th><th>Coordinates</th><th>Map</th></tr></thead><tbody id="gj-table"></tbody></table></div><p class="gj-muted" id="gj-page-info"></p><button type="button" id="gj-prev">Previous</button> <button type="button" id="gj-next">Next</button></section>
+<div class="gj-exports"><button type="button" id="gj-export-json" class="gj-primary">Download GeoJSON</button><button type="button" id="gj-export-kml">Export KML</button><button type="button" id="gj-export-csv">Export coordinates CSV</button><button type="button" id="gj-export-png">Geometry PNG</button></div>
+<p class="gj-muted">Exports include visible geometry parts. GeoJSON export keeps original properties and IDs on each visible part, including nested property values. Multipart geometries and GeometryCollections become individual Point, LineString or Polygon features. Null and empty geometries, bounding boxes and foreign members are omitted. KML export uses separate placemarks and serializes complex properties as text. PNG contains geometry only, without background imagery.</p>
+<details class="gj-panel" style="margin-top:14px"><summary><strong>Supported GeoJSON and limits</strong></summary><p>Import a FeatureCollection, one Feature, or a geometry object. Supported geometry types: Point, MultiPoint, LineString, MultiLineString, Polygon, MultiPolygon and GeometryCollection. Polygon holes are retained.</p><p>Use WGS84 coordinates ordered as longitude, latitude, optional altitude. Legacy CRS declarations and projected coordinates are rejected. Polygon rings must be closed. Positions must have two or three numeric values. Null and empty geometries have no map representation.</p><p>The viewer checks structure and coordinate ranges, not complete RFC compliance or polygon topology. Self-intersections and areas larger than a hemisphere can produce unreliable measurements. Dateline-crossing shapes should be split at the antimeridian before import. Input styling recognizes six-digit hex stroke, fill and marker-color properties, plus numeric stroke-width, stroke-opacity and fill-opacity.</p></details>
+<noscript><p>Enable JavaScript to use the KML viewer.</p></noscript>
 </div>
 
-<!-- Upload Card -->
-<div class="card border-0 shadow-sm p-3 p-md-4 rounded-4">
- <div class="drop-zone" id="dropZone"><i class="fa-solid fa-cloud-arrow-up"></i>
- <div class="text-muted small"><strong class="text-dark">Click to upload</strong> or drag &amp; drop a <strong>.geojson</strong> file</div>
- <div class="file-name text-dark fw-medium mt-1" id="fileName" style="display:none;"></div>
- <input type="file" id="fileInput" accept=".geojson,application/json" style="display:none;" />
-</div>
-</div>
-
-<!-- Map + Info -->
- <div id="map-container" class="shadow-sm">
- <div id="map"></div>
-<!-- Map controls -->
-<div class="map-controls">
- <button class="btn-map" id="btnZoomIn" title="Zoom in"><i class="fa-solid fa-plus"></i></button>
- <button class="btn-map" id="btnZoomOut" title="Zoom out"><i class="fa-solid fa-minus"></i></button>
- <button class="btn-map" id="btnFitBounds" title="Fit all"><i class="fa-solid fa-vector-square"></i></button>
- </div>
-<!-- Empty state -->
- <div class="empty-state" id="emptyState"><i class="fa-solid fa-location-dot"></i> <p class="mb-0">Upload a GeoJSON file to visualize your data</p></div>
-</div>
-<!-- Info Panel & Feature List -->
-<div class="row g-3 mt-2">
-      <div class="col-12">
-        <div class="card border-0 shadow-sm rounded-4 p-3 p-md-4">
-          <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
-            <!-- Stats -->
-            <div class="d-flex flex-wrap align-items-center gap-2 gap-md-4" id="statsContainer">
-              <div class="text-center">
-                <div class="fs-5 fw-bold" id="statFeatures">—</div>
-                <div class="text-uppercase small text-secondary fw-semibold">Features</div>
-              </div>
-              <div class="stat-divider"></div>
-              <div class="text-center">
-                <div class="fs-5 fw-bold" id="statLength">—</div>
-                <div class="text-uppercase small text-secondary fw-semibold">Total Length</div>
-              </div>
-              <div class="stat-divider"></div>
-              <div class="text-center">
-                <div class="fs-5 fw-bold" id="statArea">—</div>
-                <div class="text-uppercase small text-secondary fw-semibold">Total Area</div>
-              </div>
-              <div class="stat-divider"></div>
-              <div class="text-center">
-                <div class="fs-5 fw-bold" id="statCoords">—</div>
-                <div class="text-uppercase small text-secondary fw-semibold">Coordinates</div>
-              </div>
-            </div>
-<!-- Actions -->
-  <div class="d-flex flex-wrap gap-2">
-   <button class="btn btn-primary rounded-pill px-4" id="btnDownloadPng"><i class="fa-solid fa-download me-1"></i>Download PNG</button>
-   <button class="btn btn-outline-secondary rounded-pill px-4" id="btnClearTrack"><i class="fa-solid fa-circle-xmark me-1"></i>Clear</button>
-   </div>
-   </div>
-   </div>
-   </div>
-
-<!-- Feature List (advanced) -->
- <div class="card border-0 shadow-sm rounded-4 p-3 p-md-4">
-          <div class="d-flex justify-content-between align-items-center">
-            <h6 class="mb-0 fw-semibold"><i class="fa-solid fa-list me-2"></i>Feature Properties</h6>
-            <span class="badge bg-secondary" id="featureCountBadge">0</span>
-          </div>
-   <hr class="my-2" />
- <div id="featureListContainer" class="feature-table-wrap">
-            <table class="table table-sm table-hover mb-0" id="featureTable">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Properties</th>
-                  <th>Geometry</th>
-                </tr>
-              </thead>
-              <tbody id="featureTableBody">
-                <tr><td colspan="3" class="text-center text-muted">No features loaded</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-  <div class="toast-container" id="toastContainer"></div>
 
 
 <!-- Article Content -->
@@ -515,5 +443,4 @@ last_modified_at: 2026-07-08
 
 
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <script src="{{ '/assets/js/geolocation/geojson-viewer.js' | relative_url }}"></script>
