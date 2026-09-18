@@ -6,6 +6,10 @@ description: "Description !"
 last_modified_at: 2026-03-11
 ---
 
+
+<nav aria-label="Breadcrumb"><p class="gp-muted"><a href="/">Home</a> / <a href="/geolocation-tools">Geolocation Tools</a> / GPX Viewer</p></nav>
+
+
 <!-- Article Content -->
 <div class="article-container">
  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
