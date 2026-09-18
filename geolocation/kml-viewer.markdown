@@ -1,85 +1,33 @@
 ---
 layout: default
-title: KML Viewer | View KML Files Online on Interactive Map
+title: KML Viewer – Open KML Files on Map & Satellite Online
 permalink: /kml-viewer
-description: "View KML files online with our free kml Viewer. Display GPS tracks, routes, and waypoints on an interactive map, inspect coordinates, and export data instantly."
+description: "Open KML files online with map and satellite views. Explore placemarks, lines, polygons and folders, inspect attributes, and export KML, GeoJSON or CSV."
 image: "/assets/images/og/kml-viewer.jpg"
-last_modified_at: 2026-07-08
+last_modified_at: 2026-09-18
 ---
 
 <link href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" />
-
 <style>
-.drop-zone{border:2px dashed #d0d7de;border-radius:12px;padding:2rem 1.5rem;text-align:center;cursor:pointer;transition:all .3s;background:#fafbfc}.drop-zone:hover,.drop-zone.dragover{border-color:#2c7be5;background:#f0f7ff}.drop-zone i{font-size:3rem;color:#8b9aab}#map-container{position:relative;border-radius:16px;overflow:hidden;background:#e8ecf1}#map{width:100%;height:520px;background:#e8ecf1}.map-controls{position:absolute;top:16px;right:16px;z-index:1000;display:flex;flex-direction:column;gap:8px}.map-controls .btn-map{background:#ffffffeb;backdrop-filter:blur(4px);border:none;border-radius:10px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#2c3e50;box-shadow:0 2px 10px #0000001a;transition:all .2s}.map-controls .btn-map:hover{background:#fff;transform:scale(1.04)}.empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#8b9aab}.empty-state i{font-size:3.5rem;color:#c8d0d8;margin-bottom:.75rem}.stat-divider{width:1px;background:#e9edf2;margin:0 .5rem}.toast-container{position:fixed;top:80px;right:20px;z-index:9999}.toast-custom{background:#fff;border-radius:12px;border:none;box-shadow:0 8px 32px #0000001f;padding:.75rem 1.25rem;min-width:240px}.toast-custom .toast-body{display:flex;align-items:center;gap:10px;font-size:.9rem;color:#1a2a3a}.toast-custom .toast-body i{font-size:1.3rem}.toast-custom.toast-success .toast-body i{color:#28a745}.toast-custom.toast-error .toast-body i{color:#dc3545}@media (max-width: 768px){#map{height:360px}.drop-zone{padding:1.5rem 1rem}.drop-zone i{font-size:2.2rem}.map-controls .btn-map{width:38px;height:38px;font-size:1rem}}@media (max-width: 576px){#map{height:280px}.stat-divider{display:none}}
-</style>
-<div aria-label="breadcrumb" class="p-3">
- <ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="/">Home</a></li>
-  <li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li>
-  <li class="breadcrumb-item active" aria-current="page">KML Viewer</li>
- </ol>
+#ec-kml{--kv-blue:#2563eb;--kv-ink:#172b4d;--kv-muted:#52657d;color:var(--kv-ink);font-family:inherit;margin:24px auto;max-width:1600px}#ec-kml *{box-sizing:border-box}#ec-kml button,#ec-kml select,#ec-kml input{font:inherit}#ec-kml button,#ec-kml select{border:1px solid #cbd5e1;border-radius:9px;background:#fff;color:var(--kv-ink);padding:9px 13px;min-height:42px;cursor:pointer}#ec-kml button:hover{background:#eff6ff;border-color:#2563eb}#ec-kml button:disabled{opacity:.45;cursor:not-allowed}#ec-kml :focus-visible{outline:3px solid #f59e0b;outline-offset:3px}#ec-kml .kv-primary{background:#2563eb;color:white;border-color:#2563eb}#ec-kml .kv-primary:hover{background:#1d4ed8}#ec-kml .kv-hero{background:linear-gradient(120deg,#eff6ff,#f0fdfa);border:1px solid #dbeafe;border-radius:18px;padding:26px;margin-bottom:18px}#ec-kml h1{font-size:clamp(1.8rem,3vw,2.6rem);margin:0 0 8px}#ec-kml h2{font-size:1.1rem;margin:0 0 12px}#ec-kml p{margin:8px 0}#ec-kml .kv-muted{color:var(--kv-muted);font-size:.88rem}#ec-kml .kv-badge{display:inline-block;padding:5px 10px;background:white;border:1px solid #dbeafe;border-radius:20px;font-size:.78rem;margin:8px 5px 0 0}#ec-kml .kv-upload{border:2px dashed #93b4eb;border-radius:14px;background:#f8fbff;padding:18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}#ec-kml .kv-upload.kv-drag{background:#dbeafe;border-color:#2563eb}#ec-kml .kv-toolbar{display:flex;flex-wrap:wrap;gap:9px;align-items:center;padding:12px;background:#fff;border:1px solid #dde5ef;border-radius:14px 14px 0 0}#ec-kml .kv-toolbar label{display:flex;align-items:center;gap:6px;font-size:.85rem;margin:0}#ec-kml .kv-spacer{flex:1}#ec-kml .kv-map-shell{position:relative;background:#e9eef5;border:1px solid #dbe3ee;border-top:0;border-radius:0 0 14px 14px;overflow:hidden}#ec-kml #kv-map{height:clamp(600px,76vh,900px);width:100%;z-index:1}#ec-kml .kv-map-shell:fullscreen{width:100vw;height:100vh;border-radius:0}#ec-kml .kv-map-shell:fullscreen #kv-map{height:100vh}#ec-kml:has(.kv-expanded){transform:none;position:static;width:auto}#ec-kml .kv-map-shell.kv-expanded{position:fixed;inset:0;z-index:10000;border-radius:0}#ec-kml .kv-map-shell.kv-expanded #kv-map{height:100dvh}#ec-kml .kv-map-tools{position:absolute;top:12px;right:12px;z-index:500;display:flex;gap:6px;flex-wrap:wrap;max-width:calc(100% - 65px)}#ec-kml .kv-map-tools button,#ec-kml .kv-map-tools select{box-shadow:0 2px 8px #0002}#ec-kml .kv-coords{position:absolute;bottom:28px;left:10px;z-index:500;background:#fffffff0;border-radius:7px;padding:5px 9px;font-size:12px;pointer-events:none}#ec-kml .kv-status{padding:9px 2px;min-height:38px;color:#345477;font-size:.9rem}#ec-kml .kv-status.kv-error{color:#b42318}#ec-kml .kv-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}#ec-kml .kv-stat{background:#fff;border:1px solid #e0e7ef;border-radius:12px;padding:15px}#ec-kml .kv-stat strong{display:block;font-size:1.35rem;line-height:1.5}#ec-kml .kv-stat span{font-size:.8rem;color:var(--kv-muted)}#ec-kml .kv-panels{display:grid;grid-template-columns:minmax(240px,1fr) minmax(0,2fr);gap:14px}#ec-kml .kv-panel{border:1px solid #e0e7ef;border-radius:14px;background:white;padding:18px;min-width:0}#ec-kml #kv-files{max-height:350px;overflow:auto}#ec-kml .kv-file{display:flex;gap:8px;align-items:center;border-bottom:1px solid #edf1f6;padding:10px 0}#ec-kml .kv-file label{flex:1;min-width:0;overflow-wrap:anywhere;margin:0}#ec-kml .kv-file small{display:block;color:var(--kv-muted)}#ec-kml .kv-file input[type=color]{width:30px;height:32px;padding:0;border:0;background:none;flex-shrink:0}#ec-kml .kv-file button{padding:4px 8px;font-size:.8rem}#ec-kml #kv-profile{display:block;width:100%;height:210px;touch-action:pan-y}#ec-kml .kv-playback{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px}#ec-kml #kv-scrub{flex:1;min-width:110px}#ec-kml .kv-table-wrap{max-height:330px;overflow:auto;margin-top:12px}#ec-kml table{width:100%;border-collapse:collapse;font-size:.85rem}#ec-kml th,#ec-kml td{text-align:left;padding:9px;border-bottom:1px solid #e2e8f0;white-space:nowrap}#ec-kml th{background:#f1f5f9;position:sticky;top:0}#ec-kml .kv-detail{background:#f8fafc;padding:10px;border-radius:8px;min-height:42px;font-size:.85rem}#ec-kml .kv-exports{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}#ec-kml .kv-marker{background:#2563eb;border:2px solid white;color:white;border-radius:50%;text-align:center;font-weight:bold;line-height:22px;box-shadow:0 1px 5px #0006}#ec-kml input[type=checkbox]{width:17px;height:17px;accent-color:#2563eb}#ec-kml .leaflet-control-attribution{font-size:10px}#ec-kml .kv-method{margin:12px 0;font-size:.83rem;color:var(--kv-muted)}@media(min-width:1200px){#ec-kml{width:min(1560px,calc(100vw - 48px));position:relative;left:50%;transform:translateX(-50%)}}@media(max-width:767px){#ec-kml #kv-map{height:65vh;min-height:430px;max-height:700px}#ec-kml .kv-stats{grid-template-columns:repeat(2,1fr)}#ec-kml .kv-panels{grid-template-columns:1fr}#ec-kml .kv-hero{padding:19px}#ec-kml .kv-toolbar{gap:8px}#ec-kml .kv-map-tools{max-width:calc(100% - 65px)}#ec-kml .kv-map-tools button,#ec-kml .kv-map-tools select{font-size:12px;padding:6px 8px}#ec-kml .kv-stat strong{font-size:1.15rem}}@media print{#ec-kml .kv-upload,#ec-kml .kv-toolbar,#ec-kml .kv-exports,#ec-kml .kv-map-tools{display:none}#ec-kml{transform:none;left:auto;width:100%}}
+#ec-kml #kv-files{max-height:420px;overflow:auto}#ec-kml #kv-detail{max-height:420px;overflow:auto;overflow-wrap:anywhere}#ec-kml #kv-detail h3{font-size:1.1rem}#ec-kml #kv-detail dl{display:grid;grid-template-columns:minmax(90px,1fr) minmax(0,2fr);gap:7px 12px;margin:12px 0}#ec-kml #kv-detail dt{font-weight:600}#ec-kml #kv-detail dd{margin:0}#ec-kml summary{cursor:pointer;padding:8px 0}#ec-kml .kv-file{flex-wrap:wrap}#ec-kml .kv-file label{min-width:90px}</style>
+<div id="ec-kml">
+<nav aria-label="Breadcrumb"><p class="kv-muted"><a href="/">Home</a> / <a href="/geolocation-tools">Geolocation Tools</a> / KML Viewer</p></nav>
+<header class="kv-hero"><h1>KML Viewer</h1><p>Open KML files on a large interactive map. Explore placemarks, routes and boundaries, inspect attributes, and export your geographic data.</p><span class="kv-badge">Map &amp; satellite</span><span class="kv-badge">Points, lines &amp; polygons</span><span class="kv-badge">Folders &amp; styles</span><span class="kv-badge">Local file processing</span></header>
+<div class="kv-upload" id="kv-drop"><div><strong>Drop your KML files here</strong><p class="kv-muted">Up to 10 files • 10 MB per file • 100,000 coordinates and 5,000 geometry parts in total.</p></div><div><input id="kv-input" type="file" accept=".kml,application/vnd.google-earth.kml+xml" multiple hidden><button type="button" class="kv-primary" id="kv-upload">Open KML files</button> <button type="button" id="kv-demo">Try demo</button></div></div>
+<p class="kv-muted">File contents stay in your browser. External map providers receive your IP address and requested map areas. Remote KML links and images are not fetched.</p>
+<div id="kv-status" class="kv-status" role="status" aria-live="polite">Open a KML file or try the demo.</div>
+<div class="kv-toolbar"><label><input type="checkbox" id="kv-points" checked> Points</label><label><input type="checkbox" id="kv-lines" checked> Lines</label><label><input type="checkbox" id="kv-polygons" checked> Polygons</label><label><input type="checkbox" id="kv-styles" checked> KML styles</label><label><input type="checkbox" id="kv-labels"> Labels</label><span class="kv-spacer"></span><label>Units <select id="kv-units"><option value="metric">km / km²</option><option value="imperial">mi / mi²</option></select></label><button type="button" id="kv-clear">Clear all</button></div>
+<div class="kv-map-shell" id="kv-map-shell"><div id="kv-map" aria-label="Interactive KML map"></div><div class="kv-map-tools"><select id="kv-basemap" aria-label="Map background"><option value="street">Map</option><option value="satellite">Satellite</option></select><button type="button" id="kv-fit">Fit features</button><button type="button" id="kv-locate">My location</button><button type="button" id="kv-fullscreen">Full screen</button></div><div class="kv-coords" id="kv-coords">Click the map to inspect coordinates</div></div>
+<div class="kv-stats" id="kv-stats"></div>
+<p class="kv-method">Statistics reflect visible geometry parts. Length and polygon area are spherical estimates, not surveying measurements. Polygon holes are subtracted; overlapping polygons are counted separately. Altitudes are preserved as supplied; the map is a 2D view.</p>
+<div class="kv-panels"><section class="kv-panel"><h2>Files &amp; folders</h2><p class="kv-muted">Toggle folders or individual features. Turn off “KML styles” to use each file’s color.</p><div id="kv-files"></div></section><section class="kv-panel"><h2>Feature inspector</h2><div id="kv-detail" class="kv-detail">Click a feature on the map or select View in the table below.</div></section></div>
+<section class="kv-panel" style="margin-top:14px"><div class="kv-toolbar" style="border:0;padding:0"><h2>Feature explorer</h2><span class="kv-spacer"></span><label>Search <input id="kv-search" type="search" placeholder="Name or folder" style="max-width:190px;padding:8px;border:1px solid #cbd5e1;border-radius:8px"></label></div><p class="kv-muted">Search filters the table only. Use the checkboxes to change the map and exports.</p><div class="kv-table-wrap"><table><thead><tr><th>Show</th><th>Name</th><th>Geometry</th><th>Folder</th><th>Coordinates</th><th>Map</th></tr></thead><tbody id="kv-table"></tbody></table></div><p class="kv-muted" id="kv-page-info"></p><button type="button" id="kv-prev">Previous</button> <button type="button" id="kv-next">Next</button></section>
+<div class="kv-exports"><button type="button" id="kv-export-kml">Download KML</button><button type="button" id="kv-export-json">Export GeoJSON</button><button type="button" id="kv-export-csv">Export coordinates CSV</button><button type="button" id="kv-export-png">Geometry PNG</button></div>
+<p class="kv-muted">Exports include visible geometry parts. KML export preserves names, plain-text descriptions, folders, basic styles, altitude modes and attributes. MultiGeometry is split into separate placemarks; gx:Track becomes a line. Tours, overlays, models, time animation and vendor extensions are not preserved. PNG contains geometry only, without background imagery.</p>
+<details class="kv-panel" style="margin-top:14px"><summary><strong>Supported KML features and limits</strong></summary><p>Supported: Point, LineString, Polygon with inner holes, MultiGeometry, Folder, Document, local Style / normal StyleMap, ExtendedData, and gx:Track / gx:MultiTrack as lines. Original visibility flags are applied when loading.</p><p>NetworkLink, GroundOverlay, ScreenOverlay, PhotoOverlay, Model, Tour, external style files and external icons are not rendered. Unsupported elements are reported after import. Self-intersecting polygons and areas spanning more than a hemisphere can give unreliable area results. KMZ and GeoJSON imports belong in their separate viewers.</p></details>
+<noscript><p>Enable JavaScript to use the KML viewer.</p></noscript>
 </div>
-<!-- Upload Card -->
-<div class="card border-0 shadow-sm p-3 p-md-4 rounded-4">
-<div class="drop-zone" id="dropZone"><i class="fa-solid fa-cloud-arrow-up"></i>
- <div class="text-muted small"><strong class="text-dark">Click to upload</strong> or drag &amp; drop a <strong>.kml</strong> file</div>
- <div class="file-name text-dark fw-medium mt-1" id="fileName" style="display:none;"></div>
- <input type="file" id="fileInput" accept=".kml,application/vnd.google-earth.kml+xml" style="display:none;" />
- </div>
- </div>
-<!-- Map + Info -->
-<div class="row g-3">
- <div class="col-12">
-  <div id="map-container" class="shadow-sm">
-    <div id="map"></div>
-  <!-- Map controls -->
-<div class="map-controls">
-  <button class="btn-map" id="btnZoomIn" title="Zoom in"><i class="fa-solid fa-plus"></i></button>
-  <button class="btn-map" id="btnZoomOut" title="Zoom out"><i class="fa-solid fa-minus"></i></button>
-  <button class="btn-map" id="btnFitBounds" title="Fit track"><i class="fa-solid fa-vector-square"></i></button>
- </div>
-<!-- Empty state -->
-<div class="empty-state" id="emptyState"><i class="fa-solid fa-location-dot"></i><p class="mb-0">Upload a KML file to see your placemarks or paths</p></div>
- </div>
- </div>
- </div>
-<!-- Info Panel -->
-<div class="row g-3 mt-2">
-   <div class="col-12">
-                <div class="card border-0 shadow-sm rounded-4 p-3 p-md-4">
-                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
-                        <!-- Stats -->
-                        <div class="d-flex flex-wrap align-items-center gap-2 gap-md-4" id="statsContainer">
-                            <div class="text-center">
-                                <div class="fs-5 fw-bold" id="statDistance">—</div>
-                                <div class="text-uppercase small text-secondary fw-semibold">Distance</div>
-                            </div>
-                            <div class="stat-divider"></div>
-                            <div class="text-center">
-                                <div class="fs-5 fw-bold" id="statElevation">—</div>
-                                <div class="text-uppercase small text-secondary fw-semibold">Elevation Δ</div>
-                            </div>
-                            <div class="stat-divider"></div>
-                            <div class="text-center">
-                                <div class="fs-5 fw-bold" id="statTime">—</div>
-                                <div class="text-uppercase small text-secondary fw-semibold">Time</div>
-                            </div>
-                            <div class="stat-divider"></div>
-                            <div class="text-center">
-                                <div class="fs-5 fw-bold" id="statPoints">—</div>
-                                <div class="text-uppercase small text-secondary fw-semibold">Features</div>
-                            </div>
-                        </div>
-                        <!-- Actions -->
-   <div class="d-flex flex-wrap gap-2">
-    <button class="btn btn-primary rounded-pill px-4" id="btnDownloadPng"><i class="fa-solid fa-download me-1"></i>Download PNG</button>
-    <button class="btn btn-outline-secondary rounded-pill px-4" id="btnClearTrack"><i class="fa-solid fa-circle-xmark me-1"></i>Clear</button>
-    </div>
-   </div>
-    </div>
-     </div>
-    </div>
- <div class="toast-container" id="toastContainer"></div>
 
 <!-- Article Content -->
 <div class="article-container">
@@ -196,7 +144,7 @@ last_modified_at: 2026-07-08
 
 
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@mapbox/togeojson@0.2.0/dist/togeojson.umd.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/@mapbox/togeojson@0.2.0/dist/togeojson.umd.min.js"></script>
 <script src="https://unpkg.com/@tmcw/togeojson@6.0.0/dist/togeojson.umd.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>  
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>   -->
 <script src="{{ '/assets/js/geolocation/kml-viewer.js' | relative_url }}"></script>
