@@ -144,7 +144,4 @@ last_modified_at: 2026-09-18
 
 
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/@mapbox/togeojson@0.2.0/dist/togeojson.umd.min.js"></script>
-<script src="https://unpkg.com/@tmcw/togeojson@6.0.0/dist/togeojson.umd.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>   -->
 <script src="{{ '/assets/js/geolocation/kml-viewer.js' | relative_url }}"></script>

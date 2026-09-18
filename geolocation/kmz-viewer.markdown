@@ -1,109 +1,34 @@
 ---
 layout: default
-title: KMZ Viewer | View KMZ Files Online on Interactive Map
+title: KMZ Viewer – Open KMZ Files on Map & Satellite Online
 permalink: /kmz-viewer
-description: "View KMZ files online with our free KMZ Viewer. Display GPS tracks, routes, and waypoints on an interactive map, inspect coordinates, elevation, distance, and export data instantly."
+description: "Open KMZ files online with map and satellite views. Explore points, lines, polygons and folders, inspect attributes, and export KMZ, KML, GeoJSON or CSV."
 image: "/assets/images/og/kmz-viewer.jpg"
-last_modified_at: 2026-07-08
+last_modified_at: 2026-09-18
 ---
-
 <link href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" />
 <style>
- .drop-zone{border:2px dashed #d0d7de;border-radius:12px;padding:2rem 1.5rem;text-align:center;cursor:pointer;transition:all .3s;background:#fafbfc}.drop-zone:hover,.drop-zone.dragover{border-color:#2c7be5;background:#f0f7ff}.drop-zone i{font-size:3rem;color:#8b9aab}#map-container{position:relative;border-radius:16px;overflow:hidden;background:#e8ecf1}#map{width:100%;height:480px;background:#e8ecf1}.map-controls{position:absolute;top:16px;right:16px;z-index:1000;display:flex;flex-direction:column;gap:8px}.map-controls .btn-map{background:#ffffffeb;backdrop-filter:blur(4px);border:none;border-radius:10px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#2c3e50;box-shadow:0 2px 10px #0000001a;transition:all .2s}.map-controls .btn-map:hover{background:#fff;transform:scale(1.04)}.empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#8b9aab}.empty-state i{font-size:3.5rem;color:#c8d0d8;margin-bottom:.75rem}.stat-divider{width:1px;background:#e9edf2;margin:0 .5rem}.toast-container{position:fixed;top:80px;right:20px;z-index:9999}.toast-custom{background:#fff;border-radius:12px;border:none;box-shadow:0 8px 32px #0000001f;padding:.75rem 1.25rem;min-width:240px}.toast-custom .toast-body{display:flex;align-items:center;gap:10px;font-size:.9rem;color:#1a2a3a}.toast-custom .toast-body i{font-size:1.3rem}.toast-custom.toast-success .toast-body i{color:#28a745}.toast-custom.toast-error .toast-body i{color:#dc3545}.feature-table-wrap{max-height:240px;overflow-y:auto}.feature-table-wrap table{margin-bottom:0}.feature-row{cursor:pointer;transition:background .15s}.feature-row:hover{background:#f0f7ff}.feature-row.active{background:#cfe2ff}@media (max-width: 768px){#map{height:460px}.drop-zone{padding:1.5rem 1rem}.drop-zone i{font-size:2.2rem}.map-controls .btn-map{width:38px;height:38px;font-size:1rem}.stat-divider{display:none}}@media (max-width: 576px){#map{height:280px}}
+#ec-kmz{--mz-blue:#2563eb;--mz-ink:#172b4d;--mz-muted:#52657d;color:var(--mz-ink);font-family:inherit;margin:24px auto;max-width:1600px}#ec-kmz *{box-sizing:border-box}#ec-kmz button,#ec-kmz select,#ec-kmz input{font:inherit}#ec-kmz button,#ec-kmz select{border:1px solid #cbd5e1;border-radius:9px;background:#fff;color:var(--mz-ink);padding:9px 13px;min-height:42px;cursor:pointer}#ec-kmz button:hover{background:#eff6ff;border-color:#2563eb}#ec-kmz button:disabled{opacity:.45;cursor:not-allowed}#ec-kmz :focus-visible{outline:3px solid #f59e0b;outline-offset:3px}#ec-kmz .mz-primary{background:#2563eb;color:white;border-color:#2563eb}#ec-kmz .mz-primary:hover{background:#1d4ed8}#ec-kmz .mz-hero{background:linear-gradient(120deg,#eff6ff,#f0fdfa);border:1px solid #dbeafe;border-radius:18px;padding:26px;margin-bottom:18px}#ec-kmz h1{font-size:clamp(1.8rem,3vw,2.6rem);margin:0 0 8px}#ec-kmz h2{font-size:1.1rem;margin:0 0 12px}#ec-kmz p{margin:8px 0}#ec-kmz .mz-muted{color:var(--mz-muted);font-size:.88rem}#ec-kmz .mz-badge{display:inline-block;padding:5px 10px;background:white;border:1px solid #dbeafe;border-radius:20px;font-size:.78rem;margin:8px 5px 0 0}#ec-kmz .mz-upload{border:2px dashed #93b4eb;border-radius:14px;background:#f8fbff;padding:18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}#ec-kmz .mz-upload.mz-drag{background:#dbeafe;border-color:#2563eb}#ec-kmz .mz-toolbar{display:flex;flex-wrap:wrap;gap:9px;align-items:center;padding:12px;background:#fff;border:1px solid #dde5ef;border-radius:14px 14px 0 0}#ec-kmz .mz-toolbar label{display:flex;align-items:center;gap:6px;font-size:.85rem;margin:0}#ec-kmz .mz-spacer{flex:1}#ec-kmz .mz-map-shell{position:relative;background:#e9eef5;border:1px solid #dbe3ee;border-top:0;border-radius:0 0 14px 14px;overflow:hidden}#ec-kmz #mz-map{height:clamp(600px,76vh,900px);width:100%;z-index:1}#ec-kmz .mz-map-shell:fullscreen{width:100vw;height:100vh;border-radius:0}#ec-kmz .mz-map-shell:fullscreen #mz-map{height:100vh}#ec-kmz:has(.mz-expanded){transform:none;position:static;width:auto}#ec-kmz .mz-map-shell.mz-expanded{position:fixed;inset:0;z-index:10000;border-radius:0}#ec-kmz .mz-map-shell.mz-expanded #mz-map{height:100dvh}#ec-kmz .mz-map-tools{position:absolute;top:12px;right:12px;z-index:500;display:flex;gap:6px;flex-wrap:wrap;max-width:calc(100% - 65px)}#ec-kmz .mz-map-tools button,#ec-kmz .mz-map-tools select{box-shadow:0 2px 8px #0002}#ec-kmz .mz-coords{position:absolute;bottom:28px;left:10px;z-index:500;background:#fffffff0;border-radius:7px;padding:5px 9px;font-size:12px;pointer-events:none}#ec-kmz .mz-status{padding:9px 2px;min-height:38px;color:#345477;font-size:.9rem}#ec-kmz .mz-status.mz-error{color:#b42318}#ec-kmz .mz-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}#ec-kmz .mz-stat{background:#fff;border:1px solid #e0e7ef;border-radius:12px;padding:15px}#ec-kmz .mz-stat strong{display:block;font-size:1.35rem;line-height:1.5}#ec-kmz .mz-stat span{font-size:.8rem;color:var(--mz-muted)}#ec-kmz .mz-panels{display:grid;grid-template-columns:minmax(240px,1fr) minmax(0,2fr);gap:14px}#ec-kmz .mz-panel{border:1px solid #e0e7ef;border-radius:14px;background:white;padding:18px;min-width:0}#ec-kmz #mz-files{max-height:350px;overflow:auto}#ec-kmz .mz-file{display:flex;gap:8px;align-items:center;border-bottom:1px solid #edf1f6;padding:10px 0}#ec-kmz .mz-file label{flex:1;min-width:0;overflow-wrap:anywhere;margin:0}#ec-kmz .mz-file small{display:block;color:var(--mz-muted)}#ec-kmz .mz-file input[type=color]{width:30px;height:32px;padding:0;border:0;background:none;flex-shrink:0}#ec-kmz .mz-file button{padding:4px 8px;font-size:.8rem}#ec-kmz #mz-profile{display:block;width:100%;height:210px;touch-action:pan-y}#ec-kmz .mz-playback{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px}#ec-kmz #mz-scrub{flex:1;min-width:110px}#ec-kmz .mz-table-wrap{max-height:330px;overflow:auto;margin-top:12px}#ec-kmz table{width:100%;border-collapse:collapse;font-size:.85rem}#ec-kmz th,#ec-kmz td{text-align:left;padding:9px;border-bottom:1px solid #e2e8f0;white-space:nowrap}#ec-kmz th{background:#f1f5f9;position:sticky;top:0}#ec-kmz .mz-detail{background:#f8fafc;padding:10px;border-radius:8px;min-height:42px;font-size:.85rem}#ec-kmz .mz-exports{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}#ec-kmz .mz-marker{background:#2563eb;border:2px solid white;color:white;border-radius:50%;text-align:center;font-weight:bold;line-height:22px;box-shadow:0 1px 5px #0006}#ec-kmz input[type=checkbox]{width:17px;height:17px;accent-color:#2563eb}#ec-kmz .leaflet-control-attribution{font-size:10px}#ec-kmz .mz-method{margin:12px 0;font-size:.83rem;color:var(--mz-muted)}@media(min-width:1200px){#ec-kmz{width:min(1560px,calc(100vw - 48px));position:relative;left:50%;transform:translateX(-50%)}}@media(max-width:767px){#ec-kmz #mz-map{height:65vh;min-height:430px;max-height:700px}#ec-kmz .mz-stats{grid-template-columns:repeat(2,1fr)}#ec-kmz .mz-panels{grid-template-columns:1fr}#ec-kmz .mz-hero{padding:19px}#ec-kmz .mz-toolbar{gap:8px}#ec-kmz .mz-map-tools{max-width:calc(100% - 65px)}#ec-kmz .mz-map-tools button,#ec-kmz .mz-map-tools select{font-size:12px;padding:6px 8px}#ec-kmz .mz-stat strong{font-size:1.15rem}}@media print{#ec-kmz .mz-upload,#ec-kmz .mz-toolbar,#ec-kmz .mz-exports,#ec-kmz .mz-map-tools{display:none}#ec-kmz{transform:none;left:auto;width:100%}}
+#ec-kmz #mz-files{max-height:420px;overflow:auto}#ec-kmz #mz-detail{max-height:420px;overflow:auto;overflow-wrap:anywhere}#ec-kmz #mz-detail h3{font-size:1.1rem}#ec-kmz #mz-detail dl{display:grid;grid-template-columns:minmax(90px,1fr) minmax(0,2fr);gap:7px 12px;margin:12px 0}#ec-kmz #mz-detail dt{font-weight:600}#ec-kmz #mz-detail dd{margin:0}#ec-kmz summary{cursor:pointer;padding:8px 0}#ec-kmz .mz-file{flex-wrap:wrap}#ec-kmz .mz-file label{min-width:90px}
 </style>
 
-<div aria-label="breadcrumb" class="p-3">
- <ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="/">Home</a></li>
-  <li class="breadcrumb-item"><a href="/geolocation-tools">Geolocation Tools</a></li>
-  <li class="breadcrumb-item active" aria-current="page">KMZ Viewer</li>
- </ol>
+<div id="ec-kmz">
+<nav aria-label="Breadcrumb"><p class="mz-muted"><a href="/">Home</a> / <a href="/geolocation-tools">Geolocation Tools</a> / KMZ Viewer</p></nav>
+<header class="mz-hero"><h1>KMZ Viewer</h1><p>Open KMZ files on a large interactive map. Explore placemarks, routes and boundaries, inspect attributes, and export your geographic data.</p><span class="mz-badge">Map &amp; satellite</span><span class="mz-badge">Points, lines &amp; polygons</span><span class="mz-badge">Folders &amp; styles</span><span class="mz-badge">Local file processing</span></header>
+<div class="mz-upload" id="mz-drop"><div><strong>Drop your KMZ files here</strong><p class="mz-muted">20 MB per archive • Up to 10 extracted KML documents • 100,000 coordinates / 5,000 geometry parts per session.</p></div><div><input id="mz-input" type="file" accept=".kmz,application/vnd.google-earth.kmz" multiple hidden><button type="button" class="mz-primary" id="mz-upload">Open KMZ files</button> <button type="button" id="mz-demo">Try demo</button></div></div>
+<p class="mz-muted">Archive contents are extracted in your browser. Each contained KML is loaded as a separate document, with doc.kml first. External map providers receive your IP address and requested map areas. Remote KML links and images are not fetched.</p>
+<div id="mz-status" class="mz-status" role="status" aria-live="polite">Open a KMZ archive or try the demo.</div>
+<div class="mz-toolbar"><label><input type="checkbox" id="mz-points" checked> Points</label><label><input type="checkbox" id="mz-lines" checked> Lines</label><label><input type="checkbox" id="mz-polygons" checked> Polygons</label><label><input type="checkbox" id="mz-styles" checked> KML styles</label><label><input type="checkbox" id="mz-labels"> Labels</label><span class="mz-spacer"></span><label>Units <select id="mz-units"><option value="metric">km / km²</option><option value="imperial">mi / mi²</option></select></label><button type="button" id="mz-clear">Clear all</button></div>
+<div class="mz-map-shell" id="mz-map-shell"><div id="mz-map" aria-label="Interactive KML map"></div><div class="mz-map-tools"><select id="mz-basemap" aria-label="Map background"><option value="street">Map</option><option value="satellite">Satellite</option></select><button type="button" id="mz-fit">Fit features</button><button type="button" id="mz-locate">My location</button><button type="button" id="mz-fullscreen">Full screen</button></div><div class="mz-coords" id="mz-coords">Click the map to inspect coordinates</div></div>
+<div class="mz-stats" id="mz-stats"></div>
+<p class="mz-method">Statistics reflect visible geometry parts. Length and polygon area are spherical estimates, not surveying measurements. Polygon holes are subtracted; overlapping polygons are counted separately. Altitudes are preserved as supplied; the map is a 2D view.</p>
+<div class="mz-panels"><section class="mz-panel"><h2>Files &amp; folders</h2><p class="mz-muted">Toggle folders or individual features. Turn off “KML styles” to use each file’s color.</p><div id="mz-files"></div></section><section class="mz-panel"><h2>Feature inspector</h2><div id="mz-detail" class="mz-detail">Click a feature on the map or select View in the table below.</div></section></div>
+<section class="mz-panel" style="margin-top:14px"><div class="mz-toolbar" style="border:0;padding:0"><h2>Feature explorer</h2><span class="mz-spacer"></span><label>Search <input id="mz-search" type="search" placeholder="Name or folder" style="max-width:190px;padding:8px;border:1px solid #cbd5e1;border-radius:8px"></label></div><p class="mz-muted">Search filters the table only. Use the checkboxes to change the map and exports.</p><div class="mz-table-wrap"><table><thead><tr><th>Show</th><th>Name</th><th>Geometry</th><th>Folder</th><th>Coordinates</th><th>Map</th></tr></thead><tbody id="mz-table"></tbody></table></div><p class="mz-muted" id="mz-page-info"></p><button type="button" id="mz-prev">Previous</button> <button type="button" id="mz-next">Next</button></section>
+<div class="mz-exports"><button type="button" id="mz-export-kmz" class="mz-primary">Download KMZ</button><button type="button" id="mz-export-kml">Download KML</button><button type="button" id="mz-export-json">Export GeoJSON</button><button type="button" id="mz-export-csv">Export coordinates CSV</button><button type="button" id="mz-export-png">Geometry PNG</button></div>
+<p class="mz-muted">Exports include visible geometry parts. KMZ export contains one generated doc.kml and does not include original bundled assets. KML export preserves names, plain-text descriptions, folders, basic styles, altitude modes and attributes. MultiGeometry is split into separate placemarks; gx:Track becomes a line. Tours, overlays, models, time animation and vendor extensions are not preserved. PNG contains geometry only, without background imagery.</p>
+<details class="mz-panel" style="margin-top:14px"><summary><strong>Supported KMZ content and limits</strong></summary><p>Supported: Point, LineString, Polygon with inner holes, MultiGeometry, Folder, Document, local Style / normal StyleMap, ExtendedData, and gx:Track / gx:MultiTrack as lines. Original visibility flags are applied when loading.</p><p>NetworkLink, GroundOverlay, ScreenOverlay, PhotoOverlay, Model, Tour, external style files and external icons are not rendered. Unsupported elements are reported after import. Self-intersecting polygons and areas spanning more than a hemisphere can give unreliable area results. Plain KML and GeoJSON imports belong in their separate viewers. Bundled images and icons are not rendered. Password-protected, split and ZIP64 archives are unsupported. Extraction limits: 1,000 archive entries, 100 MB declared uncompressed size, 10 MB per KML document and 40 MB combined KML content.</p></details>
+<noscript><p>Enable JavaScript to use the KML viewer.</p></noscript>
 </div>
-
-<!-- Upload Card -->
-<div class="card border-0 shadow-sm p-3 p-md-4 rounded-4">
-<div class="drop-zone" id="dropZone"><i class="fa-solid fa-cloud-arrow-up"></i>
-  <div class="text-muted small"> <strong class="text-dark">Click to upload</strong> or drag &amp; drop a <strong>.kmz</strong> file/div>
-  <div class="file-name text-dark fw-medium mt-1" id="fileName" style="display:none;"></div>
-  <input type="file" id="fileInput" accept=".kmz,application/vnd.google-earth.kmz" style="display:none;" />
-  </div>
- </div>
-  </div>
-  .
-<!-- Map + Info -->
-<div id="map-container" class="shadow-sm">
-   <div id="map"></div>
-    <div class="map-controls">
-    <button class="btn-map" id="btnZoomIn" title="Zoom in"><i class="fa-solid fa-plus"></i></button>
-    <button class="btn-map" id="btnZoomOut" title="Zoom out"><i class="fa-solid fa-minus"></i></button>
-    <button class="btn-map" id="btnFitBounds" title="Fit all"><i class="fa-solid fa-vector-square"></i></button>
-    </div>
-<!-- Empty state -->
-  <div class="empty-state" id="emptyState"><i class="fa-solid fa-location-dot"></i><p class="mb-0">Upload a KMZ file to visualize its contents</p></div>
-  </div>
- <!-- Info Panel & Feature List -->
-<div class="row g-3 mt-2">
-     <!-- Stats & Actions -->
-  <div class="col-12">
-     <div class="card border-0 shadow-sm rounded-4 p-3 p-md-4">
-       <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
-         <!-- Stats -->
-          <div class="d-flex flex-wrap align-items-center gap-2 gap-md-4" id="statsContainer">
-             <div class="text-center">
-               <div class="fs-5 fw-bold" id="statFeatures">—</div>
-               <div class="text-uppercase small text-secondary fw-semibold">Features</div>
-             </div>
-             <div class="stat-divider"></div>
-             <div class="text-center">
-               <div class="fs-5 fw-bold" id="statLength">—</div>
-               <div class="text-uppercase small text-secondary fw-semibold">Total Length</div>
-             </div>
-             <div class="stat-divider"></div>
-             <div class="text-center">
-               <div class="fs-5 fw-bold" id="statArea">—</div>
-               <div class="text-uppercase small text-secondary fw-semibold">Total Area</div>
-             </div>
-             <div class="stat-divider"></div>
-             <div class="text-center">
-              <div class="fs-5 fw-bold" id="statCoords">—</div>
-              <div class="text-uppercase small text-secondary fw-semibold">Coordinates</div>
-             </div>
-           </div>
-<!-- Actions -->
-<div class="d-flex flex-wrap gap-2">
-  <button class="btn btn-primary rounded-pill px-4" id="btnDownloadPng"><i class="fa-solid fa-download me-1"></i> PNG</button>
-  <button class="btn btn-outline-secondary rounded-pill px-4" id="btnClearTrack"><i class="fa-solid fa-circle-xmark me-1"></i> Clear</button>
- </div>
- </div>
- </div>
-</div>
- <!-- Feature List -->
-<div class="col-12">
-        <div class="card border-0 shadow-sm rounded-4 p-3 p-md-4">
-          <div class="d-flex justify-content-between align-items-center">
-            <h6 class="mb-0 fw-semibold"><i class="bi bi-list-ul me-2"></i>Feature Properties</h6>
-            <span class="badge bg-secondary" id="featureCountBadge">0</span>
-          </div>
-          <hr class="my-2" />
-          <div id="featureListContainer" class="feature-table-wrap">
-            <table class="table table-sm table-hover mb-0" id="featureTable">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Properties</th>
-                  <th>Geometry</th>
-                </tr>
-              </thead>
-              <tbody id="featureTableBody">
-                <tr><td colspan="3" class="text-center text-muted">No features loaded</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  <div class="toast-container" id="toastContainer"></div>
-
 
 <!-- Article Content -->
 <div class="article-container">
@@ -156,9 +81,6 @@ last_modified_at: 2026-07-08
         <p><strong>KML</strong> is normally an XML-based geographic data file, while <strong>KMZ</strong> is a compressed package that can contain a KML file and related resources.</p>
         <div class="alert alert-light border my-4"> <strong>In simple terms:</strong><br>  KMZ = Compressed KML + supporting files</div>
 
-
-
-
 <!-- FAQ Section -->
 <section class="mb-5">
   <h2 class="mb-4">FAQ on KMZ Viewer</h2>
@@ -194,20 +116,8 @@ last_modified_at: 2026-07-08
      </div>
    </section>
       <!-- Did You Know? -->
-
-
-
-
 </div>
 
-
-
-
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@mapbox/togeojson@0.2.2/dist/togeojson.umd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script src="{{ '/assets/js/geolocation/kmz-viewer.js' | relative_url }}"></script>
