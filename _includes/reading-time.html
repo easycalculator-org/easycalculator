@@ -1,0 +1,1 @@
+{% assign words = content | strip_html | number_of_words %}{% assign minutes = words | divided_by: 180 %} {% if minutes == 0 or minutes == 1 %} <span>1 min read</span>{% else %} <span>{{ minutes }} mins read</span>{% endif %}

@@ -10,6 +10,14 @@ last_modified_at: 2026-03-11
 <nav aria-label="Breadcrumb"><p class="gp-muted"><a href="/">Home</a> / <a href="/geolocation-tools">Geolocation Tools</a> / GPX Viewer</p></nav>
 
 
+
+<div class="post-meta">
+  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+  • {% include reading-time.html %}
+</div>
+
+
+
 <!-- Article Content -->
 <div class="article-container">
   <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
@@ -19,7 +27,7 @@ last_modified_at: 2026-03-11
     </div>
     <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
       <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%m-%Y" }}</span>
-      <span> <i class="fas fa-clock me-1" aria-hidden="true"></i>  5 min read </span>
+      <span> <i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
     </div>
   </div>
 <!-- Article-->
