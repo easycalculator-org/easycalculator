@@ -23,7 +23,7 @@ last_modified_at: 2026-09-19
  </div>
  <div id="map" class="mb-5"></div>
  <div id="result">
- <div class="alert alert-info">Detecting your location and finding nearby airports...</div>
+ <div class="alert alert-info">Detecting your location and finding nearby airports.</div>
  </div>
 
 <!-- Article Content -->

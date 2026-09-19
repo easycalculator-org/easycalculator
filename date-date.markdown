@@ -153,7 +153,7 @@ last_modified_at: 2026-08-19
 </section>
 <div class="p-4">
 <h2>Calculate Business Days Between Two Dates</h2>
-<p>You can also calculate working days between two dates by excluding weekends (Saturday and Sunday). This is especially useful for project planning, payroll calculation, and business deadlines...</p>
+<p>You can also calculate working days between two dates by excluding weekends (Saturday and Sunday). This is especially useful for project planning, payroll calculation, and business deadlines.</p>
 
 </div>
 <div class="p-4 mb-2">

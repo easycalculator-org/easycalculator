@@ -113,7 +113,7 @@ last_modified_at: 2026-06-08
      </div>
      <div class="faq-card">
       <div class="faq-question">3. Why is the UTM coordinate system better than latitude and longitude for mapping?</div>
-       <p class="mb-0">Unlike latitude and longitude, which are angular and difficult to calculate distances with, UTM uses a Cartesian coordinate system measured in meters. This makes calculations faster and more accurate—ideal for engineers, surveyors, developers, and anyone working on infrastructure, land use, or GPS-based navigation..</p>
+       <p class="mb-0">Unlike latitude and longitude, which are angular and difficult to calculate distances with, UTM uses a Cartesian coordinate system measured in meters. This makes calculations faster and more accurate—ideal for engineers, surveyors, developers, and anyone working on infrastructure, land use, or GPS-based navigation.</p>
        </div>
        <div class="faq-card">
         <div class="faq-question">4. How many UTM zones are there and what areas do they cover?</div>

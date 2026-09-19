@@ -193,7 +193,7 @@ last_modified_at: 2026-02-03
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
             <div class="fw-bold text-primary"> 2. What is the maximum tenure for a SIP?</div>
-            <p class="mb-0">There’s no fixed limit. You can choose any tenure—3 year, 5 years, 10 years, or more—based on your financial goals..</p>
+            <p class="mb-0">There’s no fixed limit. You can choose any tenure—3 year, 5 years, 10 years, or more—based on your financial goals.</p>
           </div>
         </div>
         <div class="card mb-3 border-0 bg-light">
