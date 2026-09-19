@@ -86,7 +86,7 @@ body{background:#ffff}#map{height:700px}.card{border:none}
     </div>
     <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
       <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
-      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>2 min read</span>
     </div>
   </div>
 <!-- Article-->
