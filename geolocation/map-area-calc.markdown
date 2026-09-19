@@ -4,7 +4,7 @@ title: Map Area Calculator – Measure Land, Property & Field Area on a Map
 permalink: /map-area-calculator
 description: "Free Map Area Calculator to measure land and property boundaries. Draw on the map and calculate area in acres, hectares, sq ft, sq m, and km²."
 image: "/assets/images/map-area-calculator.jpg"
-last_modified_at: 2026-06-06
+last_modified_at: 2026-09-19
 ---
 
 <div aria-label="breadcrumb" class="p-2">
@@ -111,9 +111,12 @@ last_modified_at: 2026-06-06
       {% include naren_create.html %}
       {% include reema_verify.html %}
     </div>
-    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
   </div>
-   <!-- Article-->
+<!-- Article-->
 <h1>Map Area Calculator &ndash; Measure Land, Property, Farms, and Fields Online</h1>
 <p>Knowing the exact size of a property, agricultural field, construction site, or plot of land is essential for planning, purchasing, surveying, and development projects. A Map Area Calculator makes this process simple by allowing you to draw directly on an interactive map and instantly calculate the area and perimeter of any location.</p>
 <p>Unlike traditional land measurement methods that require physical surveying equipment, a modern Map Area Calculator provides fast and accurate measurements using satellite imagery and interactive mapping technology. Whether you are a farmer, real estate professional, civil engineer, surveyor, architect, or homeowner, this tool helps you determine land dimensions within seconds.</p>

@@ -4,7 +4,7 @@ title:  Map Radius Calculator – Draw Radius Circles on a Map
 permalink: /map-radius
 description: "Draw a radius on a map and instantly calculate area, circumference, and distance. Use satellite or street maps, customize circle size, and download map images."
 image: "/assets/images/og/map-radius-calculator.jpg"
-last_modified_at: 2026-05-16
+last_modified_at: 2026-09-19
 ---
 <style>
 body{background:#ffff}#map{height:700px}.card{border:none}
@@ -84,7 +84,10 @@ body{background:#ffff}#map{height:700px}.card{border:none}
       {% include naren_create.html %}
       {% include reema_verify.html %}
     </div>
-    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
   </div>
 <!-- Article-->
 <h1>Map Radius Calculator – Draw Radius Circles on a Map</h1>

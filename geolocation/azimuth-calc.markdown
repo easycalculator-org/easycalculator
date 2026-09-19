@@ -4,7 +4,7 @@ title: Free Azimuth Calculator | Find Azimuth Angle from Coordinates
 permalink: /azimuth-calculator
 description: "Calculate azimuth angle instantly with our free Azimuth Calculator. Find accurate direction between coordinates for navigation, surveying, and RF antenna alignment."
 image: "/assets/images/azimuth-calculator.jpg"
-last_modified_at: 2026-06-15
+last_modified_at: 2026-09-19
 ---
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -97,14 +97,17 @@ last_modified_at: 2026-06-15
 </div>
  </div>
 
- <!-- Article Content -->
+<!-- Article Content -->
 <div class="article-container">
   <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
     <div class="d-flex align-items-center gap-3 flex-wrap">
       {% include naren_create.html %}
       {% include reema_verify.html %}
     </div>
-    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span> <i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
   </div>
 
   <!-- Article -->

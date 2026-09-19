@@ -4,7 +4,7 @@ title: Latitude Longitude Converter | Lat Long, DD ↔ DMS Converter
 permalink: /latitude-longitude-converter
 description: "Convert latitude and longitude between Decimal Degrees (DD) and Degrees Minutes Seconds (DMS). Free Lat Long Converter with GPS map, live location, and accurate coordinate conversion."
 image: "/assets/images/og/lat-long-converter.jpg"
-last_modified_at: 2026-07-08
+last_modified_at: 2026-09-18
 ---
 
 <style>
@@ -124,16 +124,20 @@ last_modified_at: 2026-07-08
   </div>
 
 <!-- Article -->
-
 <article class="article-container mt-4">
- <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-  <div class="d-flex align-items-center gap-3 flex-wrap">{% include naren_create.html %}{% include reema_verify.html %}</div>
-  <div class="text-muted small mt-3 mt-md-0"><i class="fas fa-calendar me-1"></i>Last updated: {{ site.time | date: "%d %B %Y" }}</div>
- </div>
-
- <header class="mb-5">
-  <h1 class="display-6 fw-bold">Latitude and Longitude Converter</h1>
-  <p class="lead mb-0">Convert map coordinates between decimal degrees (DD) and degrees, minutes, seconds (DMS), then see the same point on the map.</p>
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
+  </div>
+<header class="mb-5">
+<h1 class="display-6 fw-bold">Latitude and Longitude Converter</h1>
+ <p class="lead mb-0">Convert map coordinates between decimal degrees (DD) and degrees, minutes, seconds (DMS), then see the same point on the map.</p>
  </header>
 <section class="p-4 bg-light ">
 <h2>What is a Lat Long Converter?</h2>

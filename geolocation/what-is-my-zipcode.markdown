@@ -4,7 +4,7 @@ title: What Is My ZIP Code Right Now? Find Your Postal Code Instantly
 permalink: /what-is-my-zip-code
 description: "What Is My ZIP Code? Find your 5-digit or 9-digit ZIP code using GPS or Google Maps. Search postal code by location, address, or city anywhere in the world"
 image: "/assets/images/og/what-is-my-zipcode.jpg"
-last_modified_at: 2026-08-23
+last_modified_at: 2026-09-19
 ---
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <style>
@@ -67,16 +67,16 @@ last_modified_at: 2026-08-23
 
 <!-- Article Content -->
 <div class="article-container">
-   <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-     <div class="d-flex align-items-center">
-     {% include naren_create.html %}
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
       {% include reema_verify.html %}
-        </div>
-        <div class="text-muted p-3">
-          <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}
-        </div>
-      </div>
-
+    </div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
+  </div>
 <!-- Section -->
 <section class="mb-5">
  <h1>What Is My ZIP Code Right Now? Find Your Postal Code Instantly</h1>

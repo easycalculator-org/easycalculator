@@ -4,7 +4,7 @@ title: Distance Calculator on Map – Measure Distance & Area Online
 permalink: /geolocation-tools/distance-calculator-on-map
 description: "Free Distance Calculator on Map to measure distance, routes, and land area online using satellite and street maps. Draw lines or polygons for accurate geodesic calculations."
 image: "/assets/images/og/distance-calculator-on-map.jpg"
-last_modified_at: 2026-05-29
+last_modified_at: 2026-09-19
 ---
 <style>
 *{box-sizing:border-box}.card-glass{border-radius:30px;background:#ffffffeb;backdrop-filter:blur(16px);overflow:hidden;border:1px solid #ffffffb3;box-shadow:0 10px 40px #0f172a14 0 2px 10px #0f172a0a}.toolbar-header{background:linear-gradient(135deg,#0f172a 0%,#111827 45%,#1e293b 100%);color:#fff;padding:18px 26px}.map-wrapper{position:relative}#map{height:82vh;min-height:700px;width:100%;background:#cbdde6}#map::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,#0000000a,transparent 20%,transparent 80%,#0000000a)}.results-panel{background:#fffffff2;border-radius:26px;height:100%;display:flex;flex-direction:column;backdrop-filter:blur(12px);border:1px solid #ffffffb3;box-shadow:0 8px 30px #0f172a14;position:sticky;top:12px}.section-title{font-weight:700;font-size:1rem;margin-bottom:14px;border-left:4px solid #2563eb;padding-left:12px}.mode-selector{background:#f1f5f9;border-radius:60px;padding:5px;display:flex;gap:8px}.mode-btn{border-radius:40px;padding:10px 22px;font-weight:600;border:none;background:transparent;transition:.25s ease;color:#334155;font-size:.92rem}.mode-btn.active{background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;box-shadow:0 8px 18px #2563eb47}.shape-card{background:#fff;border-radius:18px;padding:14px 16px;margin-bottom:12px;border:1px solid #e5e7eb;transition:all .22s ease;box-shadow:0 2px 8px #0f172a0a}.shape-card:hover{transform:translateY(-2px);box-shadow:0 10px 25px #0f172a14;border-color:#bfdbfe}.unit-badge{background:#eff6ff;color:#1d4ed8;padding:5px 12px;border-radius:30px;font-size:.75rem;font-weight:600}.delete-shape{background:none;border:none;color:#94a3b8;transition:.2s}.delete-shape:hover{color:#dc2626;transform:scale(1.1)}.clear-all{border-radius:40px;background:#fff;border:none;font-weight:600}.clear-all:hover{background:#fee2e2}.map-bottom-bar{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);z-index:999;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}.info-tip{background:#ffffffeb;backdrop-filter:blur(10px);padding:10px 16px;border-radius:40px;box-shadow:0 5px 18px #00000014;font-size:.8rem;font-weight:500}.total-box{background:#eff6ff;border-radius:20px}.leaflet-top.leaflet-left{margin-top:18px;margin-left:18px}.leaflet-control-draw{border-radius:18px!important;overflow:hidden;border:none!important;box-shadow:0 10px 30px #0000001f!important}.leaflet-bar a{width:42px!important;height:42px!important;line-height:42px!important}@media(max-width:768px){#map{height:72vh;min-height:500px}.mode-selector{width:100%}.mode-btn{flex:1;font-size:.8rem;padding:10px 8px}.map-bottom-bar{width:95%}}
@@ -137,7 +137,10 @@ last_modified_at: 2026-05-29
       {% include naren_create.html %}
       {% include reema_verify.html %}
     </div>
-    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
   </div>
    <!-- Article-->
 

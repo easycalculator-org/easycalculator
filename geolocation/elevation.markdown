@@ -4,7 +4,7 @@ title: "Current Elevation – What Is My Elevation in Feet & Meters?"
 permalink: /current-elevation
 description: "Find your current elevation above sea level in feet and meters. Use your location or select a point on the interactive map to check its elevation."
 image: "/assets/images/elevation-vs-altitude-diagram.png"
-last_modified_at: 2026-09-18
+last_modified_at: 2026-09-19
 ---
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
@@ -20,12 +20,15 @@ last_modified_at: 2026-09-18
 <section class="ec-elevation" aria-labelledby="elevationTitle"><header class="ec-elevation-header"><h1 id="elevationTitle">What Is My Current Elevation?</h1><p>Find your elevation above sea level in meters and feet. Use your current location or select a point on the map. </p></header><div class="ec-elevation-layout"><div class="ec-elevation-sidebar"><div class="ec-elevation-card ec-location-card"><div class="ec-card-heading"><span class="ec-heading-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span><div><h2>Find your elevation</h2><p>Start with your current location</p></div></div><button type="button" class="ec-find-button" onclick="getCurrentLocation()" aria-describedby="elevationLocationHelp" ><i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i>Find My Elevation </button><p id="elevationLocationHelp" class="ec-location-help"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>Allow location access when prompted, or select a location on the map. </span></p><div class="ec-result-panel"><h3 class="ec-result-label">Location &amp; elevation</h3><div id="currentLocationInfo" role="status" aria-live="polite" aria-atomic="true" ><div class="ec-result-placeholder"><i class="fas fa-sync loading-spinner" style="display: none;" aria-hidden="true" ></i><strong aria-hidden="true">—</strong><span>Select a location to see its elevation.</span></div></div></div></div><div class="ec-elevation-card ec-recent-card"><h2 class="ec-recent-title"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i>Recent locations </h2><div id="recentLocations" class="recent-list"></div></div></div><div class="ec-elevation-card ec-map-card"><div class="ec-map-heading"><h2 id="elevationMapTitle"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>Elevation map </h2><span class="ec-map-unit">Meters &amp; feet</span></div><div id="map" aria-labelledby="elevationMapTitle"></div><p class="ec-map-tip"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>Click or tap the map to check another location. Zoom in to select a more precise point. </span></p></div></div></section>
 <!-- Article Content -->
 <div class="article-container">
- <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
-  <div class="d-flex align-items-center gap-3 flex-wrap">
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
       {% include naren_create.html %}
       {% include reema_verify.html %}
     </div>
-    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
   </div>
 <!-- What is Section1 -->
 <section class="mb-5">

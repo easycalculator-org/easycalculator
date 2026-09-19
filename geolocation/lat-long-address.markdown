@@ -4,7 +4,7 @@ title: Latitude and Longitude to Address Converter – Free Reverse Geocoding To
 permalink: /latitude-longitude-to-address
 description: "Convert latitude and longitude to full addresses instantly with our free reverse geocoding tool. Includes interactive map view and CSV download. Fast, accurate, and easy to use worldwide"
 image: "/assets/images/lat-long-to-address.webp"
-last_modified_at: 2026-08-23
+last_modified_at: 2026-09-19
 ---
 <style>
   #map { height: 350px; width: 100%; margin-top: 15px; }
@@ -56,14 +56,17 @@ last_modified_at: 2026-08-23
 </div>
 
 
-<!-- Article Part -->
+<!-- Article Content -->
 <div class="article-container">
   <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
     <div class="d-flex align-items-center gap-3 flex-wrap">
       {% include naren_create.html %}
       {% include reema_verify.html %}
     </div>
-    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
   </div>
   <h2 class="fw-bold mb-3">Latitude and Longitude to Address Converter</h2>
   <p> The <strong>Latitude and Longitude to Address Converter</strong> allows you to instantly convert GPS coordinates into complete human-readable addresses. This process, known as <strong>reverse geocoding</strong>, transforms numeric latitude and longitude values into street address, city, state, and country details.</p>

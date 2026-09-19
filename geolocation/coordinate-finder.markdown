@@ -4,7 +4,7 @@ title: Coordinate Finder – Find Latitude & Longitude Coordinates on Map
 permalink: /coordinate-finder
 description: "Find precise latitude and longitude coordinates instantly with our Coordinate Finder. Supports Decimal Degrees (DD), DMS format, current location detection, satellite maps, and map download."
 image: "/assets/images/og/coordinate-finder.jpg"
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-19
 ---
 
 <!-- Leaflet CSS & JS -->
@@ -99,13 +99,16 @@ last_modified_at: 2026-09-09
  </div>
 <!-- Article Content -->
 <div class="article-container">
- <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
-  <div class="d-flex align-items-center gap-3 flex-wrap">
-   {% include naren_create.html %}
-   {% include reema_verify.html %}
-   </div>
-   <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
- </div>
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
+  </div>
 <!-- Article-->
 <h2>Coordinate Finder – Find Latitude and Longitude Instantly</h2>
 <p>A Coordinate Finder is a powerful mapping tool that helps you discover the exact latitude and longitude of any location on Earth. Whether you're planning a trip, sharing a precise location, conducting field surveys, or working with GPS navigation, Coordinate Finder makes it easy to identify coordinates with a single click on the map.</p>

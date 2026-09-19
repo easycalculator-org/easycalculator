@@ -23,15 +23,19 @@ last_modified_at: 2026-09-18
 <noscript><p class="alert alert-warning">Enable JavaScript to use the converter and map. The instructions below remain available.</p></noscript>
 
 
-<!-- Article Part -->
+<!-- Article Content -->
 <div class="article-container">
- <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
-  <div class="d-flex align-items-center gap-3 flex-wrap">
-   {% include naren_create.html %}
-   {% include reema_verify.html %}
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
   </div>
-  <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
- </div>
+<!-- Article-->
  <h2>What is MGRS?</h2>
  <p>The <strong>Military Grid Reference System (MGRS)</strong>is a standard coordinate system used by NATO military forces to find and share locations anywhere on Earth. It is based on the <strong><a href="/utm-zone-map" title="Universal Transverse Mercator (UTM)">Universal Transverse Mercator (UTM)</a></strong>and <strong>Universal Polar Stereographic (UPS)</strong> systems and divides the world into numbered zones and lettered latitude bands.</p>
  <p>MGRS was designed to make location reporting fast and easy for soldiers and marines. Instead of using long UTM coordinates, MGRS converts them into a shorter and more readable format while still maintaining high accuracy.</p><h2>How the MGRS System Works</h2><p>The MGRS coordinate starts with a <strong>Grid Zone Designator (GZD)</strong>. The Earth is divided into:</p><ul><li><strong>60 vertical longitudinal zones</strong></li><li ><strong>Latitude bands usually 8&deg; high</strong></li><li ><strong >Band X is 12&deg; high</strong></li></ul><p>The latitude bands are labeled from <strong >C (80&deg; South)</strong>to <strong >X (84&deg; North)</strong>. The letters <strong >I</strong>and <strong>O</strong>are not used to avoid confusion with numbers.</p><div class="p-4"><h3>100,000-Meter Grid Squares</h3><p>Each grid zone is further divided into <strong >100,000-meter squares</strong>. Every square is identified using <strong>two letters</strong>:</p><ul><li ><p >The <strong >first letter</strong>shows the easting direction (west &rarr; east)</p></li><li ><p>The <strong >second letter</strong>shows the northing direction (south &rarr; north)</p></li></ul><p>These letters replace some digits of UTM coordinates, making MGRS coordinates shorter and easier to use in the field.</p><img src="/assets/images/mgrs-grid-zone-designations-map.png" alt="Grid Zone Designations of the MGRS coordinate system showing global UTM zones" title="MGRS Grid Zone Designations World Map" loading="lazy" decoding="async" width="100%" height="600" class="img-fluid p-4"></div><div class="row justify-content-center"><div class="col-lg-10">

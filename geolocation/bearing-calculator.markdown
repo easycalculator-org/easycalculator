@@ -3,6 +3,7 @@ layout: default
 title: "Bearing Calculator – Bearing Between Two Coordinates"
 permalink: /bearing-calculator
 description: "Bearing Calculator to calculate initial bearing, final bearing, reverse bearing, compass direction, and distance between two latitude and longitude coordinates."
+last_modified_at: 2026-09-19
 ---
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
@@ -23,13 +24,16 @@ description: "Bearing Calculator to calculate initial bearing, final bearing, re
 
 <!-- Article Content -->
 <div class="article-container">
- <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
-  <div class="d-flex align-items-center gap-3 flex-wrap">
-   {% include naren_create.html %}
-   {% include reema_verify.html %}
-   </div>
-   <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
- </div>
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span> <i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
+  </div>
 <!-- Article-->
  <h1>Bearing Calculator</h1> 
  <p> A <strong>Bearing Calculator</strong> calculates the direction or angle from one geographic coordinate to another using latitude and longitude. Enter the starting point and destination coordinates to calculate the <strong>initial bearing, final bearing, reverse bearing, compass direction, and distance</strong> between two locations. </p>

@@ -4,7 +4,7 @@ title: What Is My IP Address – Instant IP Lookup & Location Info
 permalink: /what-is-my-ip
 description: "Find your public IP address instantly along with location details like country, city, ISP, latitude, and longitude. Fast, accurate, and free IP lookup tool."
 image: "/assets/images/og/what-is-ip-address.jpg"
-last_modified_at: 2026-08-23
+last_modified_at: 2026-09-19
 ---
 <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet">
 <style>
@@ -53,13 +53,16 @@ last_modified_at: 2026-08-23
 
 <!-- Article Content -->
 <div class="article-container">
- <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
-  <div class="d-flex align-items-center gap-3 flex-wrap">
-    {% include naren_create.html %}
-    {% include reema_verify.html %}
-   </div>
-   <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
- </div>
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
+  </div>
 <!-- Article-->
 <h1 class="mb-3">What Is My IP Address? (Complete Guide)</h1>
  <p>Your <strong>IP address (Internet Protocol address)</strong> is a unique number assigned to your device when you connect to the internet. It acts like your digital identity, allowing websites, apps, and servers to communicate with your device.</p>

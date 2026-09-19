@@ -4,7 +4,7 @@ title: Haversine Distance Calculator | Haversine Formula & Example
 permalink: /haversine-distance
 description: "Calculate haversine distance between two coordinates instantly. Free online haversine Formula calculator with example, and step-by-step explanation (km, miles)."
 image: "/assets/images/og/haversine-distance-calculator-formula.jpg"
-last_modified_at: 2026-04-01
+last_modified_at: 2026-09-19
 ---
 <style> 
 .formula{font-family:'Courier New',Courier,monospace;background-color:#f8f9fa;padding:1.5rem;border-radius:10px;margin:1.5rem 0;border:1px solid #eee;font-size:1.1rem;color:var(--secondary-color)}.calculator-container{max-width:600px;margin:0 auto;background-color:#fff;padding:30px;border-radius:10px;box-shadow:0 0 15px #0000001a}.result-box{background-color:#e9ecef;padding:15px;border-radius:5px;margin-top:20px}.form-label{font-weight:500}
@@ -16,15 +16,17 @@ last_modified_at: 2026-04-01
      
 <!-- Article Content -->
 <div class="article-container">
-    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
     <div class="d-flex align-items-center gap-3 flex-wrap">
       {% include naren_create.html %}
       {% include reema_verify.html %}
     </div>
-    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
   </div>
   <!-- What is Section1 -->
-
 <div class="card shadow-sm border-0 mb-4">
   <div class="card-body">
     <h5 class="fw-bold mb-3">📑 Table of Contents</h5>

@@ -4,7 +4,7 @@ title: Nearest Airport to Me | Find Closest Airports Instantly
 permalink: /nearest-airport-to-me
 description: "Instantly find the nearest airport to you using your current location. View airport name, distance, and location on map with this fast and accurate tool"
 image: "/assets/images/airport.png"
-last_modified_at: 2026-09-17
+last_modified_at: 2026-09-19
 ---
 <style>.hero{background:linear-gradient(to right,#0d6efd,#0a58ca);color:#fff;padding:1rem;text-align:center;border-radius:1rem}.card-airport{border-left:5px solid #0d6efd}#map{height:400px;border-radius:.5rem;border:1px solid #dee2e6}
 </style>
@@ -27,14 +27,17 @@ last_modified_at: 2026-09-17
  </div>
 
 <!-- Article Content -->
- <div class="article-container">
-  <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-   <div class="d-flex align-items-center">
-    <div class=" p-2 "></div>
-    <div>{% include narendra.html %}</div>
-   </div>
-   <div class="text-muted p-3"> <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
-   </div>
+<div class="article-container">
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include bahadur.html %}
+    </div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span> <i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
+  </div>
 
 <!-- Section -->
  <h2>🛫 Nearest Airport to Me: Find the Closest Airport Instantly</h2>

@@ -3,7 +3,7 @@ layout: default
 title: Calculate Distance from Latitude and Longitude – Easy & Accurate Tool
 permalink: /calculate-distance-from-latitude-longitude
 description: "Use this free online tool to calculate the distance between two locations using latitude and longitude coordinates. Accurate, fast, and ideal for mapping, travel, or geolocation analysis."
-last_modified_at: 2026-08-23
+last_modified_at: 2026-09-19
 ---
 <!-- Leaflet CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -68,13 +68,17 @@ last_modified_at: 2026-08-23
   </div>
 <!-- Article Content -->
 <div class="article-container">
-  <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-   <div class="d-flex align-items-center">
-    {% include naren_create.html %}
-    {% include reema_verify.html %}
-   </div>
-  <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
- </div>
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
+  </div>
+<!-- Article-->
  <!-- What is Section1 -->
 <section class="mb-5">
 

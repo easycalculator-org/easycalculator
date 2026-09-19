@@ -4,7 +4,7 @@ title: GPX Viewer | View GPX Files Online on Interactive Map
 permalink: /gpx-viewer
 description: "Open GPX files online with map and satellite views. Explore tracks, routes, waypoints, elevation profiles and playback. Export GPX, GeoJSON and CSV."
 image: "/assets/images/og/gpx=viewer.jpg"
-last_modified_at: 2026-09-18
+last_modified_at: 2026-09-19
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
 <style>
@@ -29,13 +29,16 @@ last_modified_at: 2026-09-18
 
 <!-- Article Content -->
 <div class="article-container">
- <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
-  <div class="d-flex align-items-center gap-3 flex-wrap">
-   {% include naren_create.html %}
-   {% include reema_verify.html %}
-   </div>
-   <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
- </div>
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
+  </div>
 <!-- Article-->
 <h2 class="mb-4">What is a GPX File?</h2>
 <p>A <strong>GPX (GPS Exchange Format)</strong> file is an XML-based file format used to store GPS data such as <strong>tracks</strong>, <strong>routes</strong>, and <strong>waypoints</strong>. GPX files are widely supported by GPS devices, fitness watches, smartphones, mapping applications, and outdoor navigation software. They allow users to record, share, and visualize geographic information with high accuracy.<br> Whether you're hiking, cycling, running, driving, surveying, or geocaching, GPX files make it easy to exchange GPS routes between different devices and applications.</p>

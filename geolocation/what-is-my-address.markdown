@@ -4,7 +4,7 @@ title: What Is My Address? Instantly Find Your Current Location and Address
 permalink: /what-is-my-address
 description: "Instantly find your current address using GPS. Get your street, city, ZIP code, and coordinates in seconds — free and private."
 image: "/assets/images/og/what-is-my-address.jpg"
-last_modified_at: 2026-08-23
+last_modified_at: 2026-09-19
 ---
 <style>.card-modern{border:none;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.07);background:#fff}#map{width:100%;height:100%;min-height:400px;border-radius:16px}.spinner-border{width:3rem;height:3rem}.list-group-item{border:none;padding:.75rem 0}.section-title{font-weight:700;font-size:1.5rem}
   </style>
@@ -63,7 +63,10 @@ last_modified_at: 2026-08-23
       {% include naren_create.html %}
       {% include reema_verify.html %}
     </div>
-    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+    </div>
   </div>
 <!-- Article-->
 <h1 class="pt-4">What Is My Address Right Now? Find Your Current Location Instantly</h1>
