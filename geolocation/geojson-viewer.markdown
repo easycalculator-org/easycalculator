@@ -291,13 +291,10 @@ last_modified_at: 2026-09-18
 
                 </div>
             </section>
-
             <!-- GeoJSON vs JSON -->
             <section class="card border-0 shadow-sm mb-4">
                 <div class="card-body p-4 p-md-5">
-
                     <h2 class="mb-3">Is GeoJSON the Same as JSON?</h2>
-
                     <p>
                         GeoJSON is based on JSON, but it is specifically designed
                         for geographic data.
@@ -308,10 +305,8 @@ last_modified_at: 2026-09-18
                         while GeoJSON follows a defined structure for geographic
                         features such as points, lines, and polygons.
                     </p>
-
                 </div>
             </section>
-
             <!-- Installation -->
             <section class="card border-0 shadow-sm mb-4">
                 <div class="card-body p-4 p-md-5">
@@ -438,7 +433,6 @@ last_modified_at: 2026-09-18
      </div>
    </section>
       <!-- Did You Know? -->
-
 </div>
 
 
