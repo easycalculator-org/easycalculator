@@ -12,7 +12,7 @@ last_modified_at: 2026-04-15
  </style>
 
   
-<div class="container d-flex justify-content-center align-items-center" style="max-width: 720px;">
+<div class="d-flex justify-content-center align-items-center" style="max-width: 720px;">
   <div class="timer-card shadow p-4 p-md-5 w-100">
     <!-- header  -->
     <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">

@@ -77,7 +77,7 @@ last_modified_at: 2026-09-09
     </div>
 </section>
 <!-- Article -->
-<div class="container py-5">
+<div class="py-5">
   <h2 class="text-center mb-2">Popular Calculators</h2>
 <hr>
 <!-- Age Calculator-->

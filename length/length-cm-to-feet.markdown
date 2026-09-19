@@ -7,7 +7,7 @@ last_modified_at: 2026-01-03
 ---
 
 <!-- cm to feet -->
-<div class="container p-4">
+<div class="p-4">
     <div class="card shadow-lg p-4 col-12 col-sm-8 col-md-6">
         <h2 class="text-center mb-4">CM to Feet Converter</h2>
         <div class="mb-3"> <input type="number" id="inputValue" class="form-control shadow" placeholder="Enter value in cm"> </div>

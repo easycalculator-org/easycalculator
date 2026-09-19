@@ -13,7 +13,7 @@ last_modified_at: 2026-02-03
 </style>
 
 
-<div class="container py-5">
+<div class="py-5">
  <div class="card converter-card p-4">
   <h2 class="text-center mb-3">🚀 KM/H to MPH Converter</h2>
         <div class="mb-3">

@@ -69,7 +69,7 @@ last_modified_at: 2026-08-21
    </div>
 
 
-<div class="container py-5">
+<div class="py-5">
   <div class="row align-items-center bg-white rounded-4 shadow-sm p-4 p-md-5">
     <!-- Left side: Content -->
     <div class="col-md-6">

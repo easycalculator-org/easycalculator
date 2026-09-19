@@ -5,7 +5,7 @@ permalink: /loan-comparison-calculator
 description: "Quickly compare multiple loan options side by side with our free Loan Comparison Calculator. Analyze interest rates, monthly payments, and total costs to choose the best loan for your needs."
 last_modified_at: 2026-02-03
 ---
-<div class="container py-4">
+<div class="py-4">
    <div class="text-center mb-4"><h1>Advanced Loan Comparison Calculator</h1></div>
 <div class="row g-3 mb-4">
    <!-- Calculator 1 -->

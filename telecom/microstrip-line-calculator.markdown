@@ -103,11 +103,14 @@ last_modified_at: 2026-09-13
   {% include naren_create.html %}
   {% include reema_verify.html %}
   </div>
- <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+ <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>6 min read</span>
+    </div>
 </div>
 <!-- Article-->
 
-<div class="container my-5">
+<div class="my-5">
 <h2 class="mb-3">Microstrip Line Calculator</h2>
 <p> A <strong>Microstrip Line Calculator</strong> helps engineers determine important electrical parameters of a microstrip transmission line used in RF and microwave PCB designs. It calculates values such as <strong>characteristic impedance (Z₀)</strong>, <strong>effective dielectric constant</strong>, <strong>guided wavelength</strong>, and <strong>physical length</strong> based on the dimensions of the substrate and conductor.</p>
 

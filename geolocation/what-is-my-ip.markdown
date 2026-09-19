@@ -19,7 +19,7 @@ last_modified_at: 2026-09-19
  </ol>
 </div>
 
-  <div class="container mt-4">
+  <div class="mt-4">
   <div class="row g-4">
     <!-- Left side: IP details -->
     <div class="col-md-6">

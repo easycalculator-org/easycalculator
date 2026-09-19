@@ -15,7 +15,7 @@ last_modified_at: 2026-09-13
 </style>
 
  
-<div class="container py-4">
+<div class="py-4">
  <!-- header -->
  <div class="d-flex align-items-center gap-3 mb-4"> <h1>LTE EARFCN Calculator</h1></div>
    <div class="mb-4">
@@ -116,7 +116,10 @@ last_modified_at: 2026-09-13
       {% include naren_create.html %}
       {% include reema_verify.html %}
     </div>
-    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>5 min read</span>
+    </div>
   </div>
    <!-- Article-->
 <!-- What is EARFCN -->

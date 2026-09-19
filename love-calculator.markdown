@@ -1,66 +1,30 @@
 ---
 layout: default
-title: Love Calculator | Your Love Percentage Today!
+title: "Love Calculator – Free Love Tester by Name"
 permalink: /love-calculator
-description: "Use our free Love Calculator to check your love percentage instantly. Enter your name and your partner’s name to see compatibility and relationship score"
+description: "Try our free love calculator and love tester by name. Enter two names, get a fun love percentage, and share your score. For entertainment only."
 image: "/assets/images/love-calculator-1.jpg"
-last_modified_at: 2026-04-22
+last_modified_at: 2026-09-20
 ---
-
-
-<style type="text/less">
-@primary-rose: #ff6b8b
-@secondary-heart: #ff9eb5;
-@dark-romantic: #2d1e2f;
-@light-bg: #fff0f3;
-@shadow-sm: 0 8px 20px rgba(0,0,0,0.05);
-@border-radius-card: 2rem;
-@whatsapp-green: #25D366;
-@email-blue: #5D9CEC;
-.glass-card(){background:#fffffff0;backdrop-filter:blur(3px);border-radius:@border-radius-card;box-shadow:@shadow-sm;border:1px solid #fff9}.love-card{max-width:680px;width:100%;margin:0 auto;padding:2rem 1.8rem 2.5rem;transition:transform .3s ease;&:hover {;transform:scale(1.01)}.subhead{color:#b35f7a;font-weight:400;font-size:.95rem;border-bottom:2px dashed #ffb7c7;display:inline-block;padding-bottom:4px}.result-area{margin-top:2rem;padding:1rem .5rem;text-align:center;border-radius:2rem;transition:all .3s ease}.love-percentage{font-size:3.8rem;font-weight:800;background:linear-gradient(135deg,#c43a5f,@primary-rose);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1.2}.message-box{background:#ffebf0b3;border-radius:60px;padding:.6rem 1.2rem;margin-top:1rem;font-weight:500;color:#ad4b6e}.heart-animation{font-size:2rem;animation:pulseHeart 1.2s infinite ease;display:inline-block}.input-group-custom{margin-bottom:1.8rem;labelfont-weight:600;color:#5e3a4a;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem;icolor:@primary-rose;font-size:1.3rem}input{border-radius:60px!important;border:1.5px solid #ffe0e7;background:#fff;padding:.8rem 1.2rem;font-weight:500;transition:all .2s;&:focus {;border-color:@primary-rose;box-shadow:0 0 0 4px #ff6b8b33}.btn-calculate{background:linear-gradient(95deg,@primary-rose,#ff8aa8);border:none;padding:12px 28px;border-radius:50px;font-weight:700;font-size:1.2rem;letter-spacing:1px;color:#fff;transition:all .2s;box-shadow:0 4px 12px #ff6b8b66;&:hover {;transform:translateY(-3px);background:linear-gradient(95deg,#ff5a7c,#ff7b9c);box-shadow:0 10px 20px #ff6b8b80}.share-section{margin-top:1.8rem;padding-top:.8rem;border-top:1px dashed #ff6b8b4d;transition:all .2s}.share-btn{border-radius:50px;padding:8px 20px;font-weight:600;font-size:.9rem;transition:.2s;border:none;&:hover {;transform:translateY(-2px);filter:brightness(0.96)}i{margin-right:8px;font-size:1.1rem}.btn-whatsapp{background-color:@whatsapp-green;color:#fff;box-shadow:0 2px 8px #25d3664d}.btn-email{background-color:@email-blue;color:#fff;box-shadow:0 2px 8px #5d9cec4d}.share-note{font-size:.7rem;color:#b37b8f;margin-top:.7rem}.footer-note{font-size:.75rem;color:#c4849a;margin-top:1rem;text-align:center}.reset-icon{cursor:pointer;transition:all .2s;background:transparent;border:1.5px solid #ffb7c7;&:hover {;background:#ffe3ea;color:@primary-rose;transform:rotate(5deg)}@media (max-width: 480px){.love-card{padding:1.5rem}.love-percentage{font-size:2.8rem}h1{font-size:1.8rem}.share-btn{padding:6px 14px;font-size:.8rem}}.text-reset-custom {  color: #c95a7a;}
+<style>
+.ec-love{--rose:#b72252;--ink:#392333;--muted:#705b68;max-width:960px;margin:24px auto 40px;padding:0 16px;color:var(--ink)}
+.ec-love *{box-sizing:border-box}.ec-love [hidden]{display:none!important}
+.ec-love .lc-panel{background:linear-gradient(145deg,#fff3f6,#fff);border:1px solid #efd5de;border-radius:24px;padding:clamp(20px,4vw,40px);box-shadow:0 12px 35px #66334b0d}
+.ec-love .lc-heading{text-align:center;max-width:650px;margin:0 auto 26px}.ec-love .lc-kicker{font-size:.76rem;letter-spacing:.14em;font-weight:700;color:var(--rose);text-transform:uppercase;margin-bottom:10px}
+.ec-love h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.2;margin:0 0 12px}.ec-love .lc-intro{color:var(--muted);line-height:1.65;margin:0}
+.ec-love .lc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}.ec-love label{display:block;font-weight:700;margin:0 0 8px}.ec-love .lc-field{margin-bottom:18px}
+.ec-love input{width:100%;font:inherit;color:var(--ink);background:white;border:1px solid #cdb5bf;border-radius:12px;padding:13px 14px;min-height:48px}
+.ec-love input:focus{outline:3px solid #edb2c4;outline-offset:2px;border-color:var(--rose)}.ec-love button,.ec-love .lc-share a{font:inherit;cursor:pointer;border-radius:12px;padding:11px 16px;min-height:44px;font-weight:700;text-decoration:none}
+.ec-love button:focus-visible,.ec-love a:focus-visible{outline:3px solid #832145;outline-offset:3px}.ec-love .lc-actions{display:flex;flex-wrap:wrap;gap:10px}.ec-love .lc-primary{background:var(--rose);color:white;border:1px solid var(--rose);flex:1}.ec-love .lc-primary:hover{background:#95163f}
+.ec-love .lc-secondary,.ec-love .lc-share a{background:white;color:#8d2346;border:1px solid #d9b5c3}.ec-love .lc-note{font-size:.83rem;line-height:1.6;color:var(--muted);margin:14px 0 0}
+.ec-love .lc-result{background:white;border:1px solid #edd9e1;border-radius:18px;padding:24px;text-align:center;min-width:0}.ec-love .lc-heart{color:var(--rose);font-size:2rem;line-height:1}.ec-love .lc-pair{font-weight:700;overflow-wrap:anywhere;margin:12px 0 6px}.ec-love .lc-score{font-size:clamp(2.8rem,6vw,4rem);font-weight:800;line-height:1.1;color:var(--rose);margin:8px 0}
+.ec-love .lc-meter{height:9px;background:#f6e6ed;border-radius:20px;overflow:hidden;margin:16px 0}.ec-love .lc-meter span{display:block;height:100%;width:0;background:linear-gradient(90deg,#e88ca9,#b72252);border-radius:inherit}.ec-love .lc-message{margin:0;font-weight:600}.ec-love .lc-share{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:18px}.ec-love .lc-share a,.ec-love .lc-share button{font-size:.85rem}
+.ec-love .lc-error{color:#9d1737;font-weight:600;margin:0 0 12px}.ec-love .lc-status{font-size:.85rem;color:var(--muted);margin:10px 0 0}.ec-love .lc-status:empty{display:none}
+.ec-love-article{max-width:960px;margin:0 auto 40px;padding:0 16px;line-height:1.75;color:#392333}.ec-love-article h2{font-size:1.5rem;margin:30px 0 12px}.ec-love-article h3{font-size:1.08rem}.ec-love-article .lc-meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-bottom:16px;border-bottom:1px solid #eadde2;color:#705b68;font-size:.875rem}.ec-love-article .lc-callout{padding:20px;background:#fff3f6;border-left:4px solid #b72252;border-radius:8px;margin:24px 0}
+@media(max-width:640px){.ec-love .lc-grid{grid-template-columns:1fr;gap:20px}.ec-love .lc-result{padding:20px}.ec-love .lc-heading{margin-bottom:22px}}
 </style>
-
-
-<div class="container d-flex justify-content-center">
-   <div class="love-card">
-     <div class="text-center mb-3">
-        <div class="text-danger">
-         <h1><i class="fas fa-heart text-danger fs-3 "></i> Love Calculator</h1>
-        </div>
-            <div class="subhead mt-2">Discover & Share your romantic destiny</div>
-        </div>
-        <!-- Input Fields -->
-        <div class="input-group-custom">
-            <label for="yourName"><i class="fas fa-user-astronaut"></i>Your Name</label>
-            <input type="text" id="yourName" class="form-control" placeholder="e.g., Emma, James, Sofia..." value="Romeo">
-        </div>
-        <div class="input-group-custom">
-            <label for="crushName"><i class="fas fa-star-of-life"></i>Crush / Partner Name</label>
-            <input type="text" id="crushName" class="form-control" placeholder="e.g., Juliet, Leo, Mia..." value="Juliet">
-        </div>
-        <div class="d-flex flex-wrap justify-content-center gap-3 mt-2">
-            <button id="calculateBtn" class="btn btn-calculate px-5 py-2"><i class="fas fa-calculator me-2"></i>Calculate Love</button>
-            <button id="resetBtn" class="btn reset-icon rounded-pill px-4 text-reset-custom"><i class="fas fa-undo-alt me-1"></i>Reset</button>
-        </div>
-        <!-- Result -->
-        <div id="resultContainer" class="result-area">
-            <div id="percentageDisplay" class="love-percentage">✨ ? % ✨</div>
-            <div id="messageDisplay" class="message-box"><i class="fas fa-heartbeat me-1"></i>Enter names & press calculate</div>
-            <div id="extraAdvice" class="mt-3 small fst-italic text-secondary"></div>
-        </div>
-        <!-- SHARE SECTION -->
-        <div id="shareSection" class="share-section text-center" style="display: none;">
-            <div class="d-flex flex-wrap justify-content-center gap-3">
-                <button id="shareWhatsAppBtn" class="share-btn btn-whatsapp"><i class="fab fa-whatsapp"></i>WhatsApp</button>
-                <button id="shareEmailBtn" class="share-btn btn-email"><i class="fas fa-envelope"></i>Email</button>
-            </div>
-            <div class="share-note"><i class="fas fa-share-alt"></i>Share your love score with your special one! 🌟 </div>
-        </div>
-        <div class="footer-note"><i class="fas fa-smile-wink"></i> Just for fun — love is beyond numbers!</div>
-    </div>
-</div>
-
-
+<div class="ec-love" id="love-tool"><div class="lc-panel"><header class="lc-heading"><p class="lc-kicker">Two names. One playful score.</p><h1>Love Calculator</h1><p class="lc-intro">Try our free <strong>love tester by name</strong>. Enter your name and your crush or partner’s name to discover a fun love percentage.</p></header><div class="lc-grid"><form id="lc-form" novalidate><div class="lc-field"><label for="lc-first">Your name</label><input id="lc-first" type="text" placeholder="e.g., Romeo" maxlength="80" required autocomplete="off" aria-describedby="lc-error lc-privacy"></div><div class="lc-field"><label for="lc-second">Partner or crush’s name</label><input id="lc-second" type="text" placeholder="e.g., Juliet" maxlength="80" required autocomplete="off" aria-describedby="lc-error lc-privacy"></div><p id="lc-error" class="lc-error" role="alert" hidden></p><div class="lc-actions"><button type="submit" class="lc-primary">Calculate love ♥</button><button type="reset" class="lc-secondary">Reset</button></div><p class="lc-note" id="lc-privacy">This tool calculates in your browser. Its script does not upload or save names. Sharing includes the names and score.</p></form><section class="lc-result" aria-label="Love test result"><div aria-hidden="true" class="lc-heart">♥</div><div role="status" aria-live="polite" aria-atomic="true"><p class="lc-pair" id="lc-pair">Your love percentage</p><p class="lc-score" id="lc-score">—%</p><p class="lc-message" id="lc-message">Enter two names to start.</p></div><div class="lc-meter" aria-hidden="true"><span id="lc-fill"></span></div><p class="lc-note">Just for fun. A name cannot measure love or predict a relationship.</p><div class="lc-share" id="lc-share" hidden><a id="lc-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a><a id="lc-email">Email</a><button type="button" class="lc-secondary" id="lc-copy">Copy result</button></div><p id="lc-copy-status" class="lc-status" role="status"></p></section></div><noscript><p>Enable JavaScript to calculate a score. You can still read how the love tester works below.</p></noscript></div></div>
+<!-- Article Content -->
 
 <!-- Article Content -->
 <div class="article-container">
@@ -68,229 +32,152 @@ last_modified_at: 2026-04-22
     <div class="d-flex align-items-center gap-3 flex-wrap">
       {% include reema_verify.html %}
     </div>
-    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
-  </div>
-   <!-- Article-->
-
- <div class="row py-4">
-
- <h2 class="pt-4">What is Love Calculator</h2>
- <p>A <strong>Love Calculator</strong> is a fun online tool that estimates the <strong>compatibility percentage between two people</strong> based on their names or simple inputs. It generates a <strong>love score (0%–100%)</strong> to show how well two individuals might connect emotionally.</p>
-<p>While a love calculator is not scientifically proven, it is widely used for <strong>entertainment, curiosity, and relationship fun</strong>.</p>
-<p>👉 Example: Enter <em>Rahul</em> and <em>Priya</em> → Get a love percentage like <strong>78% compatibility</strong></p>
-<div class="p-4">
- <h2 class="mt-4">How Does a Love Calculator Work?</h2>
-  <p>A love calculator uses a mathematical or algorithm-based formula to calculate compatibility.</p>
-  <ul class="list-group list-group-flush mb-3">
-   <li class="list-group-item">Name-based algorithms (letter values, patterns)</li>
-   <li class="list-group-item">Randomized logic with consistency (same names = same result)</li>
-   <li class="list-group-item">Compatibility scoring models</li>
-  </ul>
-   <p>The result is displayed as:</p>
-   <ul>
-    <li>❤️ Love Percentage (e.g., 85%)</li>
-    <li>💬 Relationship message (e.g., “Strong connection”)</li>
-    </ul>
-</div>
-
-   <div class="row g-3 p-3">
-
-  <h2 class="mb-3">Why People Use Love Calculators</h2>
-
-  <!-- Card 1 -->
-  <div class="col-md-6 col-sm-12">
-    <div class="p-3 border rounded-3 h-100 bg-light">
-      <h6 class="fw-bold mb-1">❤️ Fun & Entertainment</h6>
-      <p class="mb-0 small">It’s a light-hearted way to check compatibility with your crush or partner.</p>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>5 min read</span>
     </div>
   </div>
-
-  <!-- Card 2 -->
-  <div class="col-md-6 col-sm-12">
-    <div class="p-3 border rounded-3 h-100 bg-light">
-      <h6 class="fw-bold mb-1">❤️ Curiosity</h6>
-      <p class="mb-0 small">People naturally want to know: “Are we a perfect match?”</p>
-    </div>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="col-md-6 col-sm-12">
-    <div class="p-3 border rounded-3 h-100 bg-light">
-      <h6 class="fw-bold mb-1">❤️ Social Sharing</h6>
-      <p class="mb-0 small">Users often share results on WhatsApp, Instagram, and Facebook.</p>
-    </div>
-  </div>
-
-  <!-- Card 4 -->
-  <div class="col-md-6 col-sm-12">
-    <div class="p-3 border rounded-3 h-100 bg-light">
-      <h6 class="fw-bold mb-1">❤️ Relationship Engagement</h6>
-      <p class="mb-0 small">Couples use it for fun bonding activities.</p>
-    </div>
-  </div>
-
-</div>
-
-<div class="row justify-content-center my-4">
- <div class="p-4 border rounded-4 bg-light">
-  <h2 class="mb-3">Is Love Calculator Accurate?</h2>
-  <p class="mb-3"> A love calculator is <strong>not scientifically accurate</strong>, but that’s not the point. It is designed to provide a fun and engaging experience for users.</p>
-      <!-- Key Points -->
-      <div class="row g-2 mb-3">
-        <div class="col-4">
-          <div class="text-center p-2 border rounded-3 bg-white small fw-semibold"> ✔ Fun </div>
-        </div>
-        <div class="col-4">
-          <div class="text-center p-2 border rounded-3 bg-white small fw-semibold"> ✔ Entertainment </div>
-        </div>
-        <div class="col-4">
-          <div class="text-center p-2 border rounded-3 bg-white small fw-semibold"> ✔ Engagement</div>
-        </div>
-      </div>
-      <p class="mb-0 text-muted small">Real relationships depend on <strong>communication, trust, and understanding</strong> — not just a percentage score.</p>
-    </div>
-</div>
-      <!-- Section -->
-      <h2 class="mt-4">Features of Our Love Calculator Tool</h2>
-      <ul class="list-group mb-3">
-        <li class="list-group-item">✔ Instant love percentage result</li>
-        <li class="list-group-item">✔ Smart compatibility algorithm</li>
-        <li class="list-group-item">✔ Clean and fast UI</li>
-        <li class="list-group-item">✔ Mobile-friendly design</li>
-        <li class="list-group-item">✔ Shareable results (WhatsApp, Email)</li>
-      </ul>
-      <!-- Section -->
-      <h2 class="mt-4">How to Use the Love Calculator</h2>
-      <ol class="list-group list-group-numbered mb-3">
-        <li class="list-group-item">Enter your name</li>
-        <li class="list-group-item">Enter your partner’s name</li>
-        <li class="list-group-item">Click “Calculate Love”</li>
-        <li class="list-group-item">View your compatibility score</li>
-      </ol>
-      
-
-<div class="row g-3 p-4">
-<h2 class="mt-4 mb-3">Love Calculator Example</h2>
-  <!-- Example 1 -->
-  <div class="col-md-6">
-    <div class="p-3 border rounded-3 bg-light h-100">
-      <p class="mb-1"><strong>Name 1:</strong> Romeo</p>
-      <p class="mb-1"><strong>Name 2:</strong> Juliet</p>
-      <p class="mb-1"><strong>Result:</strong> 69% ❤️</p>
-      <p class="mb-0 small text-muted">
-        <strong>Message:</strong> Strong connection! You both share great chemistry.
-      </p>
-    </div>
-  </div>
-
-  <!-- Example 2 -->
-  <div class="col-md-6">
-    <div class="p-3 border rounded-3 bg-light h-100">
-      <p class="mb-1"><strong>Name 1:</strong> Ethan Ray</p>
-      <p class="mb-1"><strong>Name 2:</strong> Olivia Le</p>
-      <p class="mb-1"><strong>Result:</strong> 95% ❤️</p>
-      <p class="mb-0 small text-muted">
-        <strong>Message:</strong> Good compatibility! With effort, this can grow stronger.
-      </p>
-    </div>
-  </div>
-
-</div>
-
-
+<!-- Article-->
+ <h2>What is a love calculator?</h2>
+ <p>A <strong>love calculator</strong> is an online name game that gives two people a playful score between 0% and 100%. You can try it with a partner, a crush, or fictional characters. The percentage is generated from the names you enter; it is not a measurement of emotional compatibility.</p>
+ <p>This <strong>love tester</strong> needs only two names. There is no signup, birth date, or questionnaire. Use it as a conversation starter or share a light-hearted result with someone you know.</p>  
+<h2>How to use the love tester</h2>
+ <ol><li>Enter your name in the first box.</li><li>Enter your partner or crush’s name in the second box.</li><li>Select <strong>Calculate love</strong> to see your percentage and a playful message.</li><li>Choose WhatsApp, Email, or Copy result to share. Use Reset to start again.</li></ol>
+ <p>For example, try <strong>Romeo</strong> and <strong>Juliet</strong>, then swap their names. You will get the same score. Changing a name to a nickname may produce a different percentage.</p>
+ <h2>How is the love percentage calculated?</h2>
+ <p>The calculator removes extra spaces, ignores capitalization, and puts the names in a consistent order. It then applies a fixed numerical rule, called a hash, to the combined text and maps the result to an integer from 0 to 100.</p>
+ <p>This means the same pair of names produces the same result with this version of the tool. It does not use astrology, personal records, relationship research, or a new random score on every click. Different love calculators may use different rules and show different results.</p>
+ <div class="lc-callout"><h2 style="margin-top:0">What does your love score mean?</h2><p>A high score is a fun result, not proof that you are a perfect match. A low score says nothing about your worth or your relationship. Even 0% and 100% are simply possible outputs of the name game.</p><p style="margin-bottom:0">Real connections grow through kindness, mutual respect, communication, and time together. Let the score start a smile, not decide your relationship.</p></div>
+ <h2>Fun ways to try a name compatibility test</h2>
+ <ul><li><strong>Fictional couples:</strong> test characters from a favorite story.</li><li><strong>Nicknames:</strong> compare a nickname with your usual name.</li><li><strong>Couple game:</strong> share a result, then tell each other one thing you appreciate.</li></ul>
+ <p>Prefer not to share real names? Use fictional names. When you choose a sharing option, the message includes exactly the displayed names and score, plus a link to this page.</p>
 <div class="row align-items-center g-4 my-4">
-
-  <!-- LEFT: Quote -->
-  <div class="col-md-6">
-    <figure class="p-4 border rounded-4 bg-light h-100 shadow-sm">
-      <blockquote class="blockquote mb-3">
-        <p class="fs-5 fst-italic text-dark">
-          “I saw that you were perfect, and so I loved you. Then I saw that you were not perfect and I loved you even more.”
-        </p>
-      </blockquote>
-      <figcaption class="blockquote-footer mb-0 text-muted small">
-        Angelita Lim <cite title="Source">Wikipedia</cite>
-      </figcaption>
+ <!-- LEFT: Quote -->
+ <div class="col-md-6">
+   <figure class="p-4 border rounded-4 bg-light h-100 shadow-sm">
+    <blockquote class="blockquote mb-3">
+     <p class="fs-5 fst-italic text-dark">“I saw that you were perfect, and so I loved you. Then I saw that you were not perfect and I loved you even more.” </p>
+     </blockquote>
+      <figcaption class="blockquote-footer mb-0 text-muted small">Angelita Lim <cite title="Source">Wikipedia</cite></figcaption>
     </figure>
   </div>
-
-  <!-- RIGHT: Image -->
-  <div class="col-md-6 text-center">
-   <img src="/assets/images/love-calculator.jpg"  alt="Love calculator couple compatibility test showing romantic connection"  class="img-fluid rounded-4 shadow-sm" loading="lazy">
+ <!-- RIGHT: Image -->
+ <div class="col-md-6 text-center">
+  <img src="/assets/images/love-calculator.jpg"  alt="Love calculator couple compatibility test showing romantic connection"  class="img-fluid rounded-4 shadow-sm" loading="lazy">
   </div>
-
 </div>
-
 
 <!-- FAQ Section -->
 <section class="p-4">
   <h2 class="mb-4">FAQ on Love Calculator</h2>
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
-      <div class="fw-bold text-primary">1. Is love calculator real or fake?</div>
-      <p class="mb-0">Love calculators are not scientifically proven. They are created for fun and entertainment.</p>
+      <div class="fw-bold text-primary">Is this love calculator accurate?</div>
+      <p class="mb-0">No. This love calculator is a name-based game for entertainment. Its percentage does not measure feelings, compatibility, or the chance of a successful relationship.</p>
     </div>
   </div>
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
-      <div class="fw-bold text-primary">2. How is love percentage calculated?</div>
-      <p class="mb-0">It is calculated using algorithms based on names, patterns, or predefined logic.</p>
+      <div class="fw-bold text-primary">How is the love percentage calculated?</div>
+      <p class="mb-0">The tool normalizes both names, sorts them into a consistent order, and converts the combined text into a number using a fixed hash. The number is mapped to a score from 0 to 100.</p>
     </div>
   </div>
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
-      <div class="fw-bold text-primary">3. Can love calculators predict relationships?</div>
-      <p class="mb-0">No, they cannot predict real relationships. They are only for fun.</p>
+      <div class="fw-bold text-primary">Is a love tester different from a love calculator?</div>
+      <p class="mb-0">On this page, love tester and love calculator mean the same tool: a playful name-based test that displays a percentage.</p>
+    </div>
+  </div>
+   <div class="card mb-3 border-0 bg-light">
+    <div class="card-body">
+      <div class="fw-bold text-primary">Why do the same names give the same result?</div>
+      <p class="mb-0">The calculation uses a fixed rule rather than a new random number each time. Capitalization, extra spaces, and swapping the two names do not change the score. Different spellings can change it.</p>
     </div>
   </div>
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
-      <div class="fw-bold text-primary">4. Is this love calculator free to use?</div>
-      <p class="mb-0">Yes, our love calculator is completely free to use online. You can check unlimited love compatibility without any cost.</p>
+      <div class="fw-bold text-primary">Does 100% mean we are a perfect match?</div>
+      <p class="mb-0">No. Even a 100% score is only a game result. A low score is not a reason to doubt a relationship, and a high score does not predict its future.</p>
     </div>
   </div>
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
-      <div class="fw-bold text-primary">5. Why do I get the same result for the same names?</div>
-      <p class="mb-0">The calculator uses a consistent algorithm, so entering the same names will always generate the same love percentage for accuracy and reliability.</p>
+      <div class="fw-bold text-primary">Can I use nicknames or names in other languages?</div>
+      <p class="mb-0">Yes. You can enter nicknames and names in other scripts. A nickname may produce a different result from a full name because the text is different.</p>
+    </div>
+  </div>
+  <div class="card mb-3 border-0 bg-light">
+    <div class="card-body">
+      <div class="fw-bold text-primary">Is the love tester free, and how does sharing work?</div>
+      <p class="mb-0">The tool is free and calculates in your browser. Its script does not send names to a server or save them. Sharing passes the displayed names and score to the service you choose; you decide whether to send the message.</p>
     </div>
   </div>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/less@4.2.0/dist/less.min.js"></script>
+</div>
+
 <script src="{{ '/assets/js/love-calc.js' | relative_url }}"></script>
-
-
-
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [
-  {
-   "@type": "Question",
-   "name": "Is love calculator real or fake?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "Love calculators are not scientifically proven and are meant for fun and entertainment."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "How is love percentage calculated?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "It is calculated using algorithms based on names, patterns, or predefined logic."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Is this love calculator free?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "Yes, it is completely free to use online."
-   }
-  }
- ]
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this love calculator accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This love calculator is a name-based game for entertainment. Its percentage does not measure feelings, compatibility, or the chance of a successful relationship."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the love percentage calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tool normalizes both names, sorts them into a consistent order, and converts the combined text into a number using a fixed hash. The number is mapped to a score from 0 to 100."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a love tester different from a love calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On this page, love tester and love calculator mean the same tool: a playful name-based test that displays a percentage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do the same names give the same result?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculation uses a fixed rule rather than a new random number each time. Capitalization, extra spaces, and swapping the two names do not change the score. Different spellings can change it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does 100% mean we are a perfect match?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Even a 100% score is only a game result. A low score is not a reason to doubt a relationship, and a high score does not predict its future."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use nicknames or names in other languages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can enter nicknames and names in other scripts. A nickname may produce a different result from a full name because the text is different."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the love tester free, and how does sharing work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tool is free and calculates in your browser. Its script does not send names to a server or save them. Sharing passes the displayed names and score to the service you choose; you decide whether to send the message."
+      }
+    }
+  ]
 }
 </script>
 

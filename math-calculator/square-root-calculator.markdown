@@ -37,7 +37,7 @@ last_modified_at: 2026-02-03
  
  <!-- Article Part -->
  
-<div class="container py-5">
+<div class="py-5">
 <section class="mb-5">
 <h2 class="section-title">What is square root calculator?</h2>
 <p>A <strong>square root calculator</strong> is a mathematical tool designed to determine the square root of a given number. The square root of a number is a value that, when multiplied by itself, gives the original number. Mathematically, it is represented as:</p>

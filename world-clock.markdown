@@ -6,7 +6,7 @@ description: "Easily track time across cities with our customizable world clock.
 last_modified_at: 2026-02-03
 ---
 
-<div class="container mt-4">
+<div class="mt-4">
 <div class="d-flex justify-content-between align-items-center mb-4"><h1 class="mb-0">World Clock</h1><button class="btn btn-light" onclick="goFullscreen()">Fullscreen</button></div>
 <div class="digital-clock bg-white" id="digital-clock"></div> 
  <div class="clock-container bg-white d-flex justify-content-center align-items-center" id="clock-container"></div>

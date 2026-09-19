@@ -7,7 +7,7 @@ image: "/assets/images/pregnancy-calculator.jpg"
 last_modified_at: 2026-02-03
 ---
 
-<div class="container py-2">
+<div class="py-2">
     <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10">
                 <div class="card shadow-lg">

@@ -19,15 +19,14 @@ last_modified_at: 2026-09-11
       {% include naren_create.html %}
       {% include reema_verify.html %}
     </div>
-
-    <div class="text-muted small mt-3 mt-md-0">
-      <i class="fas fa-calendar me-1"></i>
-      Last Updated: {{ site.time | date: "%d-%m-%Y" }}
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>7 min read</span>
     </div>
   </div>
 
 
- <h1 class="fw-bold mb-3">Pro Rata Salary Calculator </h1>
+ <h2 class="fw-bold mb-3">Pro Rata Salary Calculator </h2>
  <p class="lead">A <strong>Pro Rata Salary Calculator</strong>helps you find how much salary you should get when you work only part of a pay period. It can be useful when you start or leave a job during the month, take unpaid leave, or work part-time. </p>
  <p>Enter your salary and the days or hours you worked to quickly calculate your estimated pro rata salary. </p>
  <section class="mt-5"><h2 class="fw-bold mb-3">What Does Pro Rata Salary Mean? </h2><p><strong>Pro rata</strong>means "in proportion." A pro rata salary is the part of your full salary that you earn for the time you actually work. </p><p>For example, if your monthly salary is <strong>$4,000</strong>, there are <strong>20 working days</strong>in the month, and you work <strong>15 days</strong>, you work 75% of the month. </p><div class="bg-light rounded-3 p-3 my-4">
@@ -55,49 +54,8 @@ last_modified_at: 2026-09-11
  <section class="mt-5">
  <h2>Important Things to Remember </h2>
  <ul><li class="mb-2">Use the correct number of <strong>working days</strong>for the pay period. </li><li class="mb-2">Working days and calendar days are not always the same. </li><li class="mb-2">Enter unpaid leave days correctly when using the unpaid leave method. </li><li class="mb-2">Use the correct total working hours for hourly calculations. </li><li class="mb-2">The calculator gives an estimate and may not include payroll deductions. </li><li>Your employer may use a different payroll formula. </li></ul></section>
-
-
-
 <!-- FAQ Section -->
-<section class="mb-5">
-  <h2 class="mb-4">FAQ on Pro Rata Salary Calculator</h2>
-   <div class="card mb-3 border-0 bg-light">
-     <div class="card-body ">
-       <div class="fw-bold text-primary">1. What is a pro rata salary?</div>
-       <p class="mb-0">A pro rata salary is part of your full salary based on the amount of time or work you completed during a pay period.</p>
-     </div>
-   </div>
-    <div class="card mb-3 border-0 bg-light">
-      <div class="card-body ">
-        <div class="fw-bold text-primary">2. How do I calculate pro rata salary?</div>
-         <p class="mb-0">Use this basic formula: <div class="bg-light rounded-3 p-3 my-3"> Pro Rata Salary = Full Salary × (Amount Worked ÷ Total Amount)</div> You can use working days or working hours as the amount worked.</p>
-       </div>
-     </div>
-    <div class="card mb-3 border-0 bg-light">
-      <div class="card-body ">
-        <div class="fw-bold text-primary">3. Can I calculate salary after unpaid leave?</div>
-        <p class="mb-0">Yes. Subtract the unpaid leave days from the total working days to find the paid days, then calculate the salary based on those paid days.</p>
-       </div>
-     </div>
-   <div class="card mb-3 border-0 bg-light">
-     <div class="card-body ">
-       <div class="fw-bold text-primary">4. Can I use an annual salary?</div>
-        <p class="mb-0">Yes. You can enter either a monthly salary or an annual salary in the calculator.</p>
-       </div>
-     </div>
-   <div class="card mb-3 border-0 bg-light">
-     <div class="card-body ">
-       <div class="fw-bold text-primary">5. Is pro rata salary the same as hourly pay?</div>
-        <p class="mb-0">No. Pro rata salary is a part of a full salary. Hourly pay is based on an hourly rate. However, working hours can be used to calculate a pro rata salary.</p>
-       </div>
-     </div>
-     <div class="card mb-3 border-0 bg-light">
-     <div class="card-body ">
-       <div class="fw-bold text-primary">6. Is the result my exact take-home pay?</div>
-        <p class="mb-0">Not always. The calculator gives an estimated gross pro rata salary. Taxes and other payroll deductions may change the final amount you receive.</p>
-       </div>
-     </div>
-   </section>
-      <!-- Did You Know? -->
+<section class="mb-5"><h2 class="mb-4">FAQ on Pro Rata Salary Calculator</h2><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">1. What is a pro rata salary?</div><p class="mb-0">A pro rata salary is part of your full salary based on the amount of time or work you completed during a pay period.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">2. How do I calculate pro rata salary?</div><p class="mb-0">Use this basic formula: <div class="bg-light rounded-3 p-3 my-3">Pro Rata Salary=Full Salary × (Amount Worked ÷ Total Amount)</div>You can use working days or working hours as the amount worked.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">3. Can I calculate salary after unpaid leave?</div><p class="mb-0">Yes. Subtract the unpaid leave days from the total working days to find the paid days, then calculate the salary based on those paid days.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">4. Can I use an annual salary?</div><p class="mb-0">Yes. You can enter either a monthly salary or an annual salary in the calculator.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">5. Is pro rata salary the same as hourly pay?</div><p class="mb-0">No. Pro rata salary is a part of a full salary. Hourly pay is based on an hourly rate. However, working hours can be used to calculate a pro rata salary.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">6. Is the result my exact take-home pay?</div><p class="mb-0">Not always. The calculator gives an estimated gross pro rata salary. Taxes and other payroll deductions may change the final amount you receive.</p></div></div></section>
+
 <script src="{{ '/assets/js/other/pro-rata-salary-calc.js' | relative_url }}"></script>
 

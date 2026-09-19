@@ -7,7 +7,7 @@ last_modified_at: 2026-02-03
 ---
 
 <!-- Article Part -->
-<div class="container py-5">
+<div class="py-5">
 <h1>Terms and Conditions | EasyCalculator</h1>
 <p class="last-updated pt-4">  Last updated on: {{ site.time | date: "%d-%m-%Y" }}</p>
 <p>Please read these terms and conditions carefully before using EasyCalculator.</p>

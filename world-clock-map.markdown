@@ -8,13 +8,13 @@ last_modified_at: 2026-02-04
 ---
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 <link rel="stylesheet" href="/assets/css/world-clock-map.css">
-<div class="container mt-4">
+<div class="mt-4">
 <div class="text-center text-primary p-4"><h1>World Clock Map</h1></div>
 <div class="rounded-4" id="map"></div>
 
 <div class="alert alert-info mt-3 text-center" id="time-display"> Click on the map to see the time.</div>
 <!-- Clock Display -->
- <div class="clock-container mt-3">
+ <div class="clock-mt-3">
         <div class="analog-clock">
             <div class="hand hour-hand" id="hour-hand"></div>
             <div class="hand minute-hand" id="minute-hand"></div>

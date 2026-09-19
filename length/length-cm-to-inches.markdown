@@ -70,7 +70,7 @@ last_modified_at: 2026-01-03
         }
     </style>
 <!-- Main Content -->
-<div class="container py-5">
+<div class="py-5">
         <div class="row g-4">
             <!-- Converter Section - Left Column -->
             <div class="col-lg-4">

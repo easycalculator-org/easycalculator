@@ -9,7 +9,7 @@ last_modified_at: 2026-02-03
 <style>
  :root{--secondary:#2b7cf5ff;--accent:#3498db;--light:#ecf0f1;--dark:#2c3e50}.calculator-container{background:linear-gradient(135deg,#fff 0%,#f5f7fa 100%);border-radius:15px;box-shadow:0 10px 30px #0000001a;overflow:hidden;margin-top:2rem;margin-bottom:2rem}.calculator-body{padding:2rem}.input-group-text{background-color:var(--light);border:1px solid #ced4da}.form-range::-webkit-slider-thumb{background:var(--secondary)}.form-range::-moz-range-thumb{background:var(--secondary)}.result-card{background:var(--light);border-radius:10px;padding:1.5rem;margin-top:1.5rem;box-shadow:0 5px 15px #0000000d}.payment-amount{font-size:2.5rem;font-weight:700;color:var(--secondary)}.chart-container{height:200px;margin-top:2rem}.slider-label{display:flex;justify-content:space-between;margin-top:.5rem}.summary-item{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid #dee2e6}.summary-item:last-child{border-bottom:none}.form-control:focus,.form-select:focus{border-color:var(--accent);box-shadow:0 0 0 .25rem #3498db40}.tooltip-icon{color:var(--accent);cursor:pointer;margin-left:.5rem}    
   </style>
-<div class="container calculator-container">
+<div class="calculator-container">
  <div class="text-center text-primary p-4">
    <h1><i class="fa-solid fa-calculator"></i> USA Car Loan Calculator</h1>
    <p><strong>USA Car Loan Calculator</strong> helps you estimate your monthly auto loan payment, total interest, and overall loan cost based on vehicle price, down payment, interest rate (APR), loan term, and sales tax.</p>

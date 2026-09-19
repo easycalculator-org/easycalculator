@@ -26,7 +26,10 @@ last_modified_at: 2026-09-13
   {% include naren_create.html %}
   {% include reema_verify.html %}
  </div>
- <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+ <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>11 min read</span>
+    </div>
  </div>
  <h2>dBm to Watt Conversion: Formula, Examples &amp; Table</h2>
  <p><strong>dBm to Watt</strong>conversion changes RF power from decibel-milliwatts (dBm) to Watts (W). Use this free <strong>dBm to Watt Calculator</strong>to convert dBm values into Watts, milliwatts (mW), microwatts (µW), and nanowatts (nW). </p><p>Watt (W) is the SI unit of power, while dBm is a logarithmic unit referenced to 1 milliwatt. dBm is widely used in RF engineering, wireless communication, LTE and 5G networks, Wi-Fi, microwave systems, and fiber-optic communication. </p>

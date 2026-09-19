@@ -6,7 +6,7 @@ description: "Use our online stopwatch, Accurate and user-friendly. Track lap ti
 last_modified_at: 2026-02-03
 ---
 
-<div class="container d-flex flex-column justify-content-center align-items-center min-vh-20"><h1>Stopwatch</h1>
+<div class="d-flex flex-column justify-content-center align-items-center min-vh-20"><h1>Stopwatch</h1>
 <div class="card bg-black bg-opacity-50 p-4 rounded-4 shadow-lg" style="width: 100%; max-width: 650px;">
     <div class="d-flex justify-content-end mb-2"><button class="btn btn-sm btn-outline-light" id="fullscreenBtn" title="Toggle Fullscreen"><i class="fa-solid fa-expand"></i></button></div>
       <div class="card-body text-center">

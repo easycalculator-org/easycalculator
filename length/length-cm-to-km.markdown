@@ -6,7 +6,7 @@ description: "Easily convert centimeters to kilometers with our accurate and qui
 last_modified_at: 2026-01-03
 ---
 
-<div class="container p-4">
+<div class="p-4">
     <div class="card shadow-lg p-4 col-12 col-sm-8 col-md-6">
         <h2 class="text-center mb-4">CM to KM Converter</h2>
         <div class="mb-3">
