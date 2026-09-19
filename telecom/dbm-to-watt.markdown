@@ -3,7 +3,7 @@ layout: default
 title: dBm to Watt Calculator - Formula & Conversion Table
 permalink: /dbm-to-watt
 description: "Convert dBm to Watts instantly with our dBm to Watt Calculator. Convert dBm to W, mW, µW, and nW using the formula, examples, and conversion table."
-image: "/assets/images/dbm-to-watt-converter-with-formula-and-example.jpg"
+image: "/assets/images/og/dbm-to-watt-formula.jpg"
 last_modified_at: 2026-09-13
 ---
 
