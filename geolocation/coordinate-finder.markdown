@@ -106,7 +106,7 @@ last_modified_at: 2026-09-19
     </div>
     <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
       <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
-      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>{% include reading-time.html %}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>4 min read</span>
     </div>
   </div>
 <!-- Article-->
@@ -143,8 +143,7 @@ last_modified_at: 2026-09-19
 <div class="bg-light p-4 rounded mt-4">
  <h4 class="text-primary"><i class="fas fa-map-marker-alt me-2"></i>How to Use the Coordinate Finder </h4>
  <ul class="list-group list-group-flush">
-  <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Open the Map:</strong> Launch the Coordinate Finder and access the interactive map interface.</li>
-  <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Search or Zoom:</strong> Enter an address, city, or landmark, or zoom manually to the desired location.</li>
+ <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Open the Map:</strong> Launch the Coordinate Finder and access the interactive map interface.</li>
    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Click Any Location:</strong> Select any point on the map to instantly identify its coordinates.</li>
    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>View Coordinates:</strong> Instantly see the latitude and longitude of the selected location.</li>
    <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i><strong>Switch Coordinate Formats:</strong> Toggle between <strong>Decimal Degrees (DD)</strong> and <strong>Degrees, Minutes, Seconds (DMS)</strong>.</li>
@@ -165,8 +164,6 @@ last_modified_at: 2026-09-19
          <strong>Street & Satellite Maps:</strong> View locations using both <strong>Street Map</strong> and <strong>Satellite Imagery</strong>. Switch between map types for better geographic context.</li>
         <li class="list-group-item bg-light"> <i class="fas fa-download text-warning me-2"></i>
           <strong>Download Map Feature:</strong> Save the current map view as an image for project reports, educational purposes, field surveys, and location sharing.</li>
-        <li class="list-group-item bg-light"> <i class="fas fa-search text-secondary me-2"></i>
-           <strong>Search Any Location:</strong> Quickly search cities, landmarks, addresses, and points of interest worldwide.</li>
         <li class="list-group-item bg-light"><i class="fas fa-globe-americas text-success me-2"></i>
            <strong>Global Coverage:</strong> Find coordinates anywhere on Earth with high accuracy and reliability.</li>
     </ul>
