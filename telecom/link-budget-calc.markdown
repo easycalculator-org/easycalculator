@@ -1,359 +1,95 @@
 ---
 layout: default
-title: RF Link Budget Calculator | LTE, 5G, EIRP & Path Loss Formula
+title: RF Link Budget Calculator – Received Power & Fade Margin
 permalink: /rf-link-budget-calculator
 description: "Calculate RF link budget including transmit power, antenna gain, cable loss and free space path loss. Accurate LTE & 5G link budget calculator with EIRP and received power formula."
 image: "/assets/images/og/rf-link-budget-calculator.jpg"
-last_modified_at: 2026-09-13
+last_modified_at: 2026-09-20
 ---
- <style>
-  .card{background:#fff;border:1px solid #dde7f0;box-shadow:0 8px 20px #0028500a;border-radius:12px;margin-top:24px;color:#1e3b5a}.card-header{background:#0165E1;border-bottom:1px solid #d2e2f0;border-radius:12px 12px 0 0!important;padding:1rem 1.8rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;font-size:.95rem;color:#f0f1f3}.form-label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.3px;color:#069;margin-bottom:.2rem}.input-group-text{background-color:#f0f7fc;border:1px solid #c2d6e6;color:#004b7a;font-weight:500}.form-control,.form-select{background-color:#fff;border:1px solid #c2d6e6;color:#0a3142;transition:all .2s}.form-control:focus,.form-select:focus{background-color:#fff;border-color:#39f;box-shadow:0 0 0 .25rem #0077cc26;color:#003153}.form-control::placeholder{color:#99b8cc}.badge-dbm{background:#e1f0fa;padding:6px 14px;border-radius:50px;font-size:.9rem;font-weight:600}.result-card{background:#f3faff;border-radius:20px;padding:24px 20px;border:1px solid #cde1f0;box-shadow:inset 0 1px 4px #003c6408}.progress-bar-custom{background:linear-gradient(90deg,#1c8ad9,#39acff);height:10px;border-radius:20px}.progress{background-color:#e3ecf2}.link-margin-badge{font-size:1.8rem;font-weight:700;font-family:'Courier New',monospace}.chart-container{position:relative;height:120px;width:100%}.unit-hz{font-size:.75rem;color:#4f758b}.btn-outline-accent{border:1px solid #99c2d9;color:#069}.btn-outline-accent:hover{background:#e6f0fa;border-color:#39c;color:#003f66}.formula-card{background:#fff;border-radius:20px;padding:1.8rem 1.5rem;margin-top:30px;box-shadow:0 6px 20px #003c6e0f;border:1px solid #cce0f0;color:#00375c}.variable-def{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:.7rem 1.8rem;background:#f9fdff;padding:1.3rem 1.8rem;border-radius:18px;margin-top:.8rem;color:#0a3b5a;border:1px solid #cce0f0}.variable-item{display:flex;align-items:baseline;gap:8px}.var-symbol{font-weight:800;font-family:monospace;color:#06a;background:#e6f2ff;padding:.2rem .6rem;border-radius:30px;font-size:.9rem}.var-desc{font-size:.92rem;color:#1e4762}.text-secondary{color:#3c627a!important}    
- </style>
-<div class="py-4">
-  <div class="d-flex align-items-center mt-3 mb-2"> <i class="fas fa-broadcast-tower fs-1 me-3 text-primary"></i><h1>RF Link Budget Calculator</h1> </div>
-        <div class="row g-4">
-            <div class="col-lg-7">
-                <div class="card">
-                    <div class="card-header"><i class="fas fa-sliders-h"></i> Link parameters — transmitter → receiver</div>
-                    <div class="card-body p-4">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label class="form-label"><i class="fas fa-waveform"></i> Frequency (MHz)</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="fas fa-radio"></i></span>
-                                    <input type="number" id="freq" class="form-control" value="3500" step="0.1" placeholder="MHz">
-                                    <span class="input-group-text">MHz</span>
-                                </div>
-                                <div class="unit-hz mt-1">(3.5 GHz typical for 5G)</div>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label"> Distance (km)</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="fas fa-route"></i></span>
-                                    <input type="number" id="distance" class="form-control" value="5.0" step="0.1" placeholder="km">
-                                    <span class="input-group-text">km</span>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">TX power (dBm)</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="fas fa-arrow-up"></i></span>
-                                    <input type="number" id="txPower" class="form-control" value="33.0" step="0.1" placeholder="dBm">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label"> TX antenna gain (dBi)</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="fas fa-antenna"></i></span>
-                                    <input type="number" id="txGain" class="form-control" value="18.0" step="0.1">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label"> RX antenna gain (dBi)</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="fas fa-antenna"></i></span>
-                                    <input type="number" id="rxGain" class="form-control" value="21.0" step="0.1">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label"> LNA gain / preamp (dB)</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="fas fa-plus-circle"></i></span>
-                                    <input type="number" id="lnaGain" class="form-control" value="2.0" step="0.1" placeholder="dB">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <label class="form-label"> TX cable loss (dB)</label>
-                                <input type="number" id="txCable" class="form-control" value="1.5" step="0.1">
-                            </div>
-                            <div class="col-md-4">
-                                <label class="form-label"> RX cable loss (dB)</label>
-                                <input type="number" id="rxCable" class="form-control" value="1.2" step="0.1">
-                            </div>
-                            <div class="col-md-4">
-                                <label class="form-label"> Rain / atmos loss (dB)</label>
-                                <input type="number" id="rainLoss" class="form-control" value="0.8" step="0.1">
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label"> Polarization mismatch (dB)</label>
-                                <input type="number" id="polLoss" class="form-control" value="0.5" step="0.1">
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label"> Misc. losses (dB)</label>
-                                <input type="number" id="miscLoss" class="form-control" value="0.0" step="0.1">
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label"> Noise figure (dB)</label>
-                                <div class="input-group">
-                                    <input type="number" id="nf" class="form-control" value="4.5" step="0.1">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label"> Bandwidth (kHz)</label>
-                                <div class="input-group">
-                                    <input type="number" id="bw" class="form-control" value="20000" step="100" placeholder="kHz">
-                                    <span class="input-group-text">kHz</span>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label"> Required SNR (dB)</label>
-                                <input type="number" id="snrReq" class="form-control" value="12.0" step="0.1">
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label"> Fade margin target (dB)</label>
-                                <input type="number" id="fadeTarget" class="form-control" value="15.0" step="0.1">
-                            </div>
-                        </div> <!-- row -->
-                        <div class="mt-3 fw-normal small"> Free-space path loss (ITU) · Rx power includes all gains/losses · Sensitivity = -174dBm/Hz + NF + 10log(BW) + SNR</div>
-                    </div>
-                </div>
-            </div> <!-- col -->
-<!-- right column:  margin -->
-  <div class="col-lg-5">
-     <div class="card h-100">
-                    <div class="card-header"><i class="fas fa-chart-line"></i> Real‑time link budget & margin</div>
-                    <div class="card-body d-flex flex-column">
-                        <!-- main result card: Rx power & margin -->
-                        <div class="result-card mb-3">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="fs-6 fw-semibold">RX POWER @ LNA OUTPUT</span>
-                                <span class="badge-dbm"><span id="rxPowerVal" class="fw-bold fs-5">-74.3</span> dBm</span>
-                            </div>
-                            <div class="mt-3 d-flex justify-content-between align-items-baseline">
-                                <span class="fs-6 fw-semibold">LINK MARGIN</span>
-                                <span class="display-5 fw-bold text-success" id="marginVal">11.6</span>
-                                <span class="fs-5 text-secondary">dB</span>
-                            </div>
-                            <!-- progress bar for margin relative to target fade margin -->
-                            <div class="mt-2 small d-flex justify-content-between">
-                                <span>Margin vs target:</span>
-                                <span id="marginStatus" class="fw-semibold" style="color: #cc5c00;">-3.4 dB below target</span>
-                            </div>
-                            <div class="progress mt-1">
-                                <div id="marginProgress" class="progress-bar progress-bar-custom" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
- <!-- small chart: path loss & receiver sensitivity visualization -->
-<div class="chart-container mt-2 mb-2"> <canvas id="gainChart"></canvas></div>
-  <div class="row g-2 mt-1">
-   <div class="col-6">
-     <div class="p-2 bg-light bg-opacity-75 rounded-4 border border-info">
-       <span class="d-block text-nowrap  text-primary"><a href="/free-space-path-loss-calculator" class="text-decoration-none" >FS Path Loss</a></span>
-       <span class="fs-5 fw-semibold" id="pathLossVal" >129.1</span> <small>dB</small>
-      </div>
-      </div>
-        <div class="col-6">
-          <div class="p-2 bg-light bg-opacity-75 rounded-4 border border-info" >
-           <span class="d-block small text-uppercase text-primary">Rx Sensitivity</span><span class="fs-5 fw-semibold" id="sensVal" >-98.2</span> <small >dBm</small> </div>
-         </div>
-    <div class="col-6 mt-2">
-       <div class="p-2 bg-light bg-opacity-75 rounded-4 border border-info" >
-        <a href="/eirp-calculator" class="text-decoration-none"><span class="d-block text-primary">EIRP</span></a>
-         <!-- <span class="d-block small text-uppercase text-primary">EIRP</span> -->
-         <span class="fs-5 fw-semibold" id="eirpVal" >49.5</span> <small>dBm</small>
-         </div>
-         </div>
-    <div class="col-6 mt-2">
-      <div class="p-2 bg-light bg-opacity-75 rounded-4 border border-info">
-        <span class="d-block small text-uppercase text-primary">Noise Power</span>
-        <span class="fs-5 fw-semibold" id="noisePowVal" >-110.2</span> <small>dBm</small>
-        </div>
-        </div>
-       </div>
- <!-- reset/default hint -->
-    <div class="mt-auto small text-secondary pt-3">
-      <i class="fas fa-arrows-rotate me-1"></i> All parameters update live — click <span class="badge bg-secondary text-white" id="resetDefaults">⟲ reset to 5G example</span>
-       </div>
-      </div>
-     </div>
-   </div>
-  </div> 
-        <!-- second row: more details or description -->
-<div class="row mt-4">
-  <div class="col-12">
-   <div class="card">
-     <div class="card-header"><i class="fas fa-list-ul"></i> Link budget breakdown</div>
-       <div class="card-body px-4">
-        <div class="row text-center d-flex justify-content-around">
-          <div class="col-md-2 col-4 mb-2"><span class="small text-secondary">TX power</span><br><span id="detailTxp" class="fw-bold">33.0 dBm</span></div>
-               <div class="col-md-2 col-4 mb-2"><span class="small text-secondary">- TX cable</span><br><span id="detailTxc" class="fw-bold">1.5 dB</span></div>
-               <div class="col-md-2 col-4 mb-2"><span class="small text-secondary">+ TX ant</span><br><span id="detailTxg" class="fw-bold">18.0 dBi</span></div>
-               <div class="col-md-2 col-4 mb-2"><span class="small text-secondary">- FSPL</span><br><span id="detailFspl" class="fw-bold">129.1 dB</span></div>
-               <div class="col-md-2 col-4 mb-2"><span class="small text-secondary">- misc/rain</span><br><span id="detailMisc" class="fw-bold">1.3 dB</span></div>
-               <div class="col-md-2 col-4 mb-2"><span class="small text-secondary">+ RX ant</span><br><span id="detailRxg" class="fw-bold" >21.0 dBi</span></div>
-                <div class="col-md-2 col-4 mb-2"><span class="small text-secondary">- RX cable</span><br><span id="detailRxc" class="fw-bold">1.2 dB</span></div>
-                <div class="col-md-2 col-4 mb-2"><span class="small text-secondary">+ LNA</span><br><span id="detailLna" class="fw-bold">2.0 dB</span></div>
-                <div class="col-md-2 col-4 mb-2"><span class="small text-secondary">= Rx power</span><br><span id="detailRx" class="fw-bold">-74.3 dBm</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<style>
+.ec-lb{--lb-blue:#2454bc;--lb-ink:#172b4d;--lb-muted:#52657d;--lb-line:#dce5f0;max-width:1120px;margin:24px auto 48px;padding:0 16px;color:var(--lb-ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+.ec-lb *{box-sizing:border-box}.ec-lb [hidden]{display:none!important}.ec-lb a{color:#204ea5;text-underline-offset:3px}.ec-lb h1{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.2;margin:12px 0}.ec-lb h2{font-size:1.45rem;margin:0 0 14px;line-height:1.35}.ec-lb h3{font-size:1.05rem;line-height:1.4}.ec-lb p{margin:0 0 16px}.ec-lb .lb-muted,.ec-lb small{color:var(--lb-muted)}.ec-lb .lb-crumb{font-size:.85rem;margin-bottom:20px}.ec-lb .lb-hero{border:1px solid #d4e3f6;border-radius:22px;background:linear-gradient(125deg,#edf4ff,#f9fcff);padding:clamp(20px,4vw,34px);margin-bottom:24px}.ec-lb .lb-eyebrow{font-weight:750;letter-spacing:.1em;font-size:.75rem;text-transform:uppercase;color:#2454bc}.ec-lb .lb-hero p{max-width:760px}.ec-lb .lb-links{display:flex;gap:10px;flex-wrap:wrap}.ec-lb .lb-links a{background:#fff;border:1px solid var(--lb-line);border-radius:999px;padding:6px 14px;text-decoration:none;font-size:.9rem}.ec-lb .lb-workspace{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:22px;align-items:start}.ec-lb .lb-panel{border:1px solid var(--lb-line);border-radius:18px;background:#fff;padding:22px;box-shadow:0 6px 22px #172b4d06;min-width:0}.ec-lb fieldset{border:0;margin:0 0 22px;padding:0;min-width:0}.ec-lb legend{float:none;width:100%;font-size:1.03rem;font-weight:750;border-bottom:1px solid var(--lb-line);margin:0 0 14px;padding:0 0 10px}.ec-lb .lb-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.ec-lb .lb-field{min-width:0}.ec-lb label{display:block;font-weight:650;font-size:.86rem;margin-bottom:6px}.ec-lb input,.ec-lb select{display:block;width:100%;min-height:44px;border:1px solid #aebfd5;border-radius:9px;background:#fff;color:var(--lb-ink);padding:9px 10px;font:inherit;line-height:1.25}.ec-lb small{display:block;font-size:.78rem;margin-top:4px}.ec-lb :is(input,select,button,a,summary):focus-visible{outline:3px solid #5287e9;outline-offset:3px}.ec-lb [aria-invalid=true]{border:2px solid #b52828}.ec-lb .lb-actions{display:flex;gap:10px;flex-wrap:wrap}.ec-lb button{font:inherit;font-size:.9rem;cursor:pointer;border:1px solid #b5c7df;border-radius:9px;padding:10px 15px;min-height:44px;color:#204ea5;background:#fff;font-weight:650}.ec-lb button[type=submit]{background:var(--lb-blue);color:#fff;border-color:var(--lb-blue)}.ec-lb button:disabled{opacity:.5;cursor:not-allowed}.ec-lb .lb-result{position:sticky;top:20px}.ec-lb .lb-main-result{border-radius:14px;padding:20px;background:#102c54;color:#fff;margin-bottom:16px}.ec-lb .lb-main-result p{margin:0;font-size:.85rem;color:#d5e4fc}.ec-lb .lb-value{font-size:2.3rem;line-height:1.3;font-weight:750;font-variant-numeric:tabular-nums;margin:5px 0 15px}.ec-lb .lb-value span{font-size:.95rem;font-weight:500}.ec-lb .lb-status{border-radius:9px;padding:10px 12px;font-weight:650;font-size:.88rem;background:#edf3fb;color:#254b80}.ec-lb .lb-status[data-state=good]{background:#dcf7e9;color:#145737}.ec-lb .lb-status[data-state=warn]{background:#fff0cd;color:#775000}.ec-lb .lb-status[data-state=bad]{background:#ffebeb;color:#982626}.ec-lb .lb-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 16px}.ec-lb .lb-stat{background:#f4f7fb;border:1px solid #e4ebf4;border-radius:10px;padding:12px;min-width:0}.ec-lb .lb-stat dt{font-size:.78rem;color:var(--lb-muted)}.ec-lb .lb-stat dd{margin:4px 0 0;font-size:1.1rem;font-weight:700;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.ec-lb .lb-note{background:#f0f5fc;border-left:3px solid #4477cc;border-radius:5px;padding:12px 15px;font-size:.9rem;margin:16px 0}.ec-lb .lb-error{color:#982626;background:#fff0f0;border-radius:8px;padding:12px;margin-bottom:12px}.ec-lb .lb-table-wrap{overflow-x:auto}.ec-lb table{width:100%;border-collapse:collapse;font-size:.9rem}.ec-lb caption{text-align:left;color:var(--lb-muted);font-size:.85rem;padding:0 0 12px}.ec-lb th,.ec-lb td{text-align:left;border-bottom:1px solid var(--lb-line);padding:10px 12px;vertical-align:top}.ec-lb thead{background:#f0f5fc}.ec-lb .lb-section{margin-top:26px}.ec-lb .lb-meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--lb-line);padding-bottom:14px;margin-bottom:24px;font-size:.85rem;color:var(--lb-muted)}.ec-lb .lb-article>section{margin-top:30px}.ec-lb .lb-formula{border:1px solid #d9e4f5;background:#f3f7fd;border-radius:10px;padding:14px 16px;overflow-wrap:anywhere;font-family:ui-monospace,monospace;margin:12px 0}.ec-lb details{border:1px solid var(--lb-line);border-radius:10px;margin:10px 0;padding:14px 16px}.ec-lb summary{cursor:pointer;font-weight:700}.ec-lb details p{margin:10px 0 0}.ec-lb .lb-related{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.ec-lb .lb-related a{border:1px solid var(--lb-line);border-radius:10px;padding:14px;background:#f8fbff;text-decoration:none;font-weight:600}.ec-lb .lb-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+@media(max-width:800px){.ec-lb .lb-workspace{grid-template-columns:1fr}.ec-lb .lb-result{position:static}.ec-lb .lb-related{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.ec-lb{padding:0 10px}.ec-lb .lb-panel{padding:16px}.ec-lb .lb-grid{gap:12px}.ec-lb .lb-related{grid-template-columns:1fr}.ec-lb label{font-size:.8rem}}
+</style>
+<div class="ec-lb" id="ec-link-budget">
+<nav class="lb-crumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/rf-calculator">RF calculators</a> / <span aria-current="page">Link budget</span></nav>
+<header class="lb-hero"><span class="lb-eyebrow">RF planning &amp; wireless design</span><h1>RF Link Budget Calculator</h1><p>Estimate received signal power, EIRP, receiver sensitivity and link margin. Check whether your wireless link meets its fade margin target, with a clear breakdown of every gain and loss.</p><div class="lb-links"><a href="#lb-tool">Calculate link budget</a><a href="#lb-formulas">Formulas</a><a href="#lb-example">Worked example</a><a href="#lb-faq">FAQs</a></div></header>
+<div class="lb-workspace" id="lb-tool">
+<form class="lb-panel" id="lb-form" novalidate><h2>Link parameters</h2><p class="lb-muted">Start with the illustrative 3.5 GHz example. Results update as you edit.</p>
+<fieldset><legend>1. Frequency &amp; propagation</legend><div class="lb-grid">
+<div class="lb-field"><label for="lb-freq">Frequency</label><input id="lb-freq" name="freq" type="number" value="3500" step="any" min="0.000001" required><small id="lb-freq-help"></small></div><div class="lb-field"><label for="lb-freqUnit">Frequency unit</label><select id="lb-freqUnit" name="freqUnit"><option value="1">MHz</option><option value="1000">GHz</option></select></div><div class="lb-field"><label for="lb-distance">Distance</label><input id="lb-distance" name="distance" type="number" value="5" step="any" min="0.000001" required><small id="lb-distance-help"></small></div><div class="lb-field"><label for="lb-distanceUnit">Distance unit</label><select id="lb-distanceUnit" name="distanceUnit"><option value="1">km</option><option value="0.001">m</option><option value="1.609344">mi</option></select></div></div><div class="lb-section"><div class="lb-field"><label for="lb-pathMode">Path loss method</label><select id="lb-pathMode" name="pathMode"><option value="free">Calculate free-space path loss</option><option value="manual">Enter a modeled / measured path loss</option></select></div></div><div id="lb-path-fields" class="lb-section" hidden><div class="lb-field"><label for="lb-manualLoss">Entered path loss (dB)</label><input id="lb-manualLoss" name="manualLoss" type="number" value="117.31" step="any" min="0" aria-describedby="lb-manualLoss-help" required><small id="lb-manualLoss-help">Exclude antenna gains and feeder losses. Avoid duplicating additional losses below.</small></div></div></fieldset><fieldset><legend>2. Transmitter &amp; antennas</legend><div class="lb-grid"><div class="lb-field"><label for="lb-txPower">TX output power (dBm)</label><input id="lb-txPower" name="txPower" type="number" value="33" step="any" required><small id="lb-txPower-help"></small></div><div class="lb-field"><label for="lb-txGain">TX antenna gain (dBi)</label><input id="lb-txGain" name="txGain" type="number" value="18" step="any" required><small id="lb-txGain-help"></small></div><div class="lb-field"><label for="lb-txCable">TX feeder loss (dB)</label><input id="lb-txCable" name="txCable" type="number" value="1.5" step="any" min="0" required><small id="lb-txCable-help"></small></div><div class="lb-field"><label for="lb-rxGain">RX antenna gain (dBi)</label><input id="lb-rxGain" name="rxGain" type="number" value="21" step="any" required><small id="lb-rxGain-help"></small></div></div></fieldset><fieldset><legend>3. Receiver &amp; extra losses</legend><div class="lb-grid"><div class="lb-field"><label for="lb-rxCable">RX feeder loss (dB)</label><input id="lb-rxCable" name="rxCable" type="number" value="1.2" step="any" min="0" required><small id="lb-rxCable-help"></small></div><div class="lb-field"><label for="lb-rainLoss">Rain / atmosphere (dB)</label><input id="lb-rainLoss" name="rainLoss" type="number" value="0.8" step="any" min="0" required><small id="lb-rainLoss-help"></small></div><div class="lb-field"><label for="lb-polLoss">Polarization loss (dB)</label><input id="lb-polLoss" name="polLoss" type="number" value="0.5" step="any" min="0" required><small id="lb-polLoss-help"></small></div><div class="lb-field"><label for="lb-miscLoss">Other path losses (dB)</label><input id="lb-miscLoss" name="miscLoss" type="number" value="0" step="any" min="0" required><small id="lb-miscLoss-help"></small></div></div></fieldset><fieldset><legend>4. Sensitivity &amp; fade reserve</legend><div class="lb-field"><label for="lb-sensMode">Receiver sensitivity method</label><select id="lb-sensMode" name="sensMode"><option value="estimate">Estimate from noise figure and SNR</option><option value="manual">Enter datasheet sensitivity</option></select></div><div id="lb-estimate-fields" class="lb-grid lb-section"><div class="lb-field"><label for="lb-nf">System noise figure (dB)</label><input id="lb-nf" name="nf" type="number" value="4.5" step="any" min="0" required><small id="lb-nf-help"></small></div><div class="lb-field"><label for="lb-snrReq">Required SNR (dB)</label><input id="lb-snrReq" name="snrReq" type="number" value="12" step="any" required><small id="lb-snrReq-help"></small></div><div class="lb-field"><label for="lb-bw">Noise bandwidth</label><input id="lb-bw" name="bw" type="number" value="20" step="any" min="0.000001" required><small id="lb-bw-help"></small></div><div class="lb-field"><label for="lb-bwUnit">Bandwidth unit</label><select id="lb-bwUnit" name="bwUnit"><option value="1000000">MHz</option><option value="1000">kHz</option><option value="1">Hz</option></select></div></div><div id="lb-sensitivity-fields" class="lb-section" hidden><div class="lb-field"><label for="lb-manualSens">Receiver sensitivity (dBm)</label><input id="lb-manualSens" name="manualSens" type="number" value="-84.49" step="any" required><small id="lb-manualSens-help"></small></div></div><div class="lb-grid lb-section"><div class="lb-field"><label for="lb-fadeTarget">Fade margin target (dB)</label><input id="lb-fadeTarget" name="fadeTarget" type="number" value="15" step="any" min="0" required><small id="lb-fadeTarget-help"></small></div><div class="lb-field"><label for="lb-lnaGain">Optional LNA gain (dB)</label><input id="lb-lnaGain" name="lnaGain" type="number" value="2" step="any" min="0" aria-describedby="lb-lnaGain-help" required><small id="lb-lnaGain-help">Output power display only; does not directly increase link margin.</small></div></div><p class="lb-note">Sensitivity and received power are referenced to the receiver input <strong>after the RX feeder, before the optional LNA</strong>. Noise figure must describe the complete downstream receiver chain at that input.</p></fieldset><div id="lb-error" class="lb-error" role="alert" hidden></div><div class="lb-actions"><button type="submit">Calculate</button><button type="button" id="lb-reset">Reset example</button><button type="button" id="lb-download" disabled>Download CSV</button></div><noscript><p class="lb-note">Enable JavaScript to calculate. The formulas and worked example below remain available.</p></noscript></form>
+<section class="lb-panel lb-result" aria-labelledby="lb-results-heading"><h2 id="lb-results-heading">Your link budget</h2><div class="lb-main-result"><p>Received power · receiver input</p><div class="lb-value"><output id="lb-rx">—</output> <span>dBm</span></div><p>Available link margin</p><div class="lb-value"><output id="lb-margin">—</output> <span>dB</span></div><div class="lb-status" id="lb-status">Enter valid parameters to calculate.</div></div>
+<dl class="lb-stats"><div class="lb-stat"><dt>EIRP</dt><dd id="lb-eirp">—</dd></div><div class="lb-stat"><dt>Path loss</dt><dd id="lb-path">—</dd></div><div class="lb-stat"><dt>RX sensitivity</dt><dd id="lb-sensitivity">—</dd></div><div class="lb-stat"><dt>Input-referred noise</dt><dd id="lb-noise">—</dd></div><div class="lb-stat"><dt>Headroom after reserve</dt><dd id="lb-headroom">—</dd></div><div class="lb-stat"><dt>Signal at LNA output</dt><dd id="lb-lna">—</dd></div></dl><p class="lb-muted" id="lb-model-note">Free-space model; added losses are entered separately.</p><p class="lb-note">A positive margin alone does not establish coverage or availability. Check the chosen fade reserve, interference, terrain and Fresnel clearance.</p><p class="lb-muted">All power calculations run in your browser.</p><div id="lb-announcement" class="lb-sr" role="status" aria-live="polite" aria-atomic="true"></div></section></div>
+<section class="lb-panel lb-section"><h2>Link budget breakdown</h2><div class="lb-table-wrap"><table><caption>Signed contributions and running power from transmitter to receiver.</caption><thead><tr><th scope="col">Stage</th><th scope="col">Contribution</th><th scope="col">Running level</th></tr></thead><tbody id="lb-breakdown"><tr><td colspan="3">Calculate to see each gain and loss.</td></tr></tbody></table></div></section>
 
-
-<!-- Article Content -->
-<div class="article-container">
-  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+<article class="lb-panel lb-section lb-article">
+<div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
     <div class="d-flex align-items-center gap-3 flex-wrap">
       {% include naren_create.html %}
-      <!-- {% include reema_verify.html %} -->
+      {% include bahadur.html %}
     </div>
     <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
       <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
-      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>6 min read</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>8 min read</span>
     </div>
   </div>
-<!-- Article-->
-<h2>What Is Link Budget?</h2>
-<p class="lead">A link budget is a systematic calculation of all gains and losses that a communication signal experiences from the transmitter to the receiver, used to determine the received signal power and ensure reliable communication with sufficient signal-to-noise ratio (SNR).</p>
-<p>It accounts for transmitter power, antenna gains, cable losses, free-space path loss, atmospheric attenuation, and receiver characteristics. Engineers use the link budget to verify that the received signal exceeds the receiver sensitivity by an adequate <strong>link margin</strong>, ensuring stable performance under real-world conditions such as fading and interference.</p>
- <!-- Basic Definition -->
-      <div class="card shadow-sm border-0 p-4">
-        <div class="card-body">
-          <h2 class="h4 fw-semibold mb-3">Basic Link Budget Equation</h2>
-          <p>The simplified equation in logarithmic (dB) form:</p>
-          <div class="bg-success-subtle p-3 rounded text-center fs-5">
-            \[
-            \text{Received Power (dBm)} = \text{Transmitted Power (dBm)} + \text{Gains (dB)} - \text{Losses (dB)}
-            \]
-          </div>
-          <p class="mt-3">
-            Because decibels are logarithmic units, adding gains and subtracting losses is equivalent to multiplying actual power ratios.
-          </p>
-        </div>
-      </div>
+<section><h2>What is a link budget?</h2><p>A link budget tracks the power of a radio signal from a transmitter to a receiver. Transmit power and antenna gains increase the available signal level, while feeder losses and propagation losses reduce it. The result is an estimate of received power in dBm.</p><p>Compare received power with the receiver sensitivity for your selected operating mode. Their difference is the link margin. If the available margin is smaller than your required fade reserve, the design does not meet that reserve even when the signal is above sensitivity.</p></section>
+
+<section class="bg-light p-4"><h2>How to use this RF link budget calculator</h2><ol><li>Enter the frequency and distance, or supply a modeled path loss.</li><li>Enter transmitter output power, antenna gains and feeder losses.</li><li>Add atmospheric, polarization and other losses that are not already included in the path loss.</li><li>Estimate sensitivity using noise bandwidth, system noise figure and required SNR, or enter a datasheet sensitivity.</li><li>Choose a fade margin target and inspect received power, available margin and remaining headroom. Download the inputs and results as CSV for your planning notes.</li></ol><p>Use matching reference points throughout. A receiver sensitivity specified at an antenna connector must be compared with signal power at that same connector. Do not mix a downstream LNA output level with input-referred sensitivity.</p></section>
+<section id="lb-formulas"><h2>RF link budget formulas</h2><div class="p-4"><div class="text-center"><div class="d-inline-block mb-4 px-4 py-3 rounded-4 fw-semibold lh-lg bg-light fs-2">P<sub>RX</sub>=P<sub>TX</sub>+ G<sub>TX</sub>– L<sub>TX</sub>– L<sub>FS</sub>– L<sub>M</sub>+ G<sub>RX</sub>– L<sub>RX</sub></div></div><div class="table-responsive mt-4"><table class="table table-bordered align-middle"><thead class="table-light"><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td><strong>P<sub>RX</sub></strong></td><td>Received Power (dBm)</td></tr><tr><td><strong>P<sub>TX</sub></strong></td><td>Transmitter Output Power (dBm)</td></tr><tr><td><strong>G<sub>TX</sub></strong></td><td>Transmitter Antenna Gain (dBi)</td></tr><tr><td><strong>L<sub>TX</sub></strong></td><td>Transmitter Cable/Connector Loss (dB)</td></tr><tr><td><strong>L<sub>FS</sub></strong></td><td>Free-Space Path Loss (dB)</td></tr><tr><td><strong>L<sub>M</sub></strong></td><td>Additional losses (polarization, rain and other path losses; excludes fade margin target)</td></tr><tr><td><strong>G<sub>RX</sub></strong></td><td>Receiver Antenna Gain (dBi)</td></tr><tr><td><strong>L<sub>RX</sub></strong></td><td>Receiver Cable/Connector Loss (dB)</td></tr></tbody></table></div>
+</div><!-- /.p-4 formula overview --> 
+<h3>1. EIRP</h3><div class="lb-formula">EIRP = P<sub>TX</sub> + G<sub>TX</sub> − L<sub>TX</sub></div><p>Transmitter output power is in dBm, antenna gain is in dBi and feeder loss is in dB. The resulting equivalent isotropically radiated power is in dBm.</p><h3>2. Free-space path loss</h3><div class="lb-formula">FSPL = 32.45 + 20 log<sub>10</sub>(f<sub>MHz</sub>) + 20 log<sub>10</sub>(d<sub>km</sub>)</div><p>The calculator uses the rounded 32.45 constant with frequency in MHz and distance in km. This is a far-field, unobstructed free-space model. Consult <a href="https://www.itu.int/rec/R-REC-P.525/en">ITU-R P.525: Calculation of free-space attenuation</a> for the propagation basis.</p><h3>3. Received power at receiver input</h3><div class="lb-formula">P<sub>RX</sub> = EIRP − L<sub>path</sub> − L<sub>extra</sub> + G<sub>RX</sub> − L<sub>RX</sub></div><p>Extra losses are the sum of rain/atmospheric, polarization and miscellaneous losses. The receiver input is after the receive feeder and before the optional LNA.</p><h3>4. Noise floor and sensitivity</h3><div class="lb-formula">N = −174 + 10 log<sub>10</sub>(B<sub>Hz</sub>) + NF<br>Sensitivity = N + SNR<sub>required</sub></div><p>The −174 dBm/Hz approximation assumes thermal noise near 290 K. Bandwidth is the relevant noise bandwidth in Hz; NF is the complete receiver-chain noise figure referred to the selected receiver input. Datasheet sensitivity may be preferable when the operating mode and error-rate criteria are known.</p><h3>5. Margin and remaining headroom</h3><div class="lb-formula">Link margin = P<sub>RX</sub> − Sensitivity<br>Headroom = Link margin − Fade margin target</div><p>Headroom of zero or more meets the entered reserve in this model. Fade reserve is a design requirement, not an additional loss to subtract twice.</p></section>
+<section id="lb-example"><h2>Worked example: 3.5 GHz link over 5 km</h2><p>Use 33 dBm TX power, 18 dBi TX gain, 21 dBi RX gain, 1.5 dB TX feeder loss and 1.2 dB RX feeder loss. Add 0.8 dB atmospheric loss and 0.5 dB polarization loss. Set system NF to 4.5 dB, bandwidth to 20 MHz, required SNR to 12 dB and fade reserve to 15 dB.</p><div class="lb-table-wrap"><table><caption>Illustrative results using the default input values.</caption><thead><tr><th scope="col">Quantity</th><th scope="col">Calculation</th><th scope="col">Result</th></tr></thead><tbody><tr><td>EIRP</td><td>33 + 18 − 1.5</td><td>49.50 dBm</td></tr><tr><td>Free-space loss</td><td>32.45 + 20 log₁₀(3500) + 20 log₁₀(5)</td><td>117.31 dB</td></tr><tr><td>Received power</td><td>49.50 − 117.31 − 1.30 + 21 − 1.20</td><td>−49.31 dBm</td></tr><tr><td>Noise floor</td><td>−174 + 10 log₁₀(20,000,000) + 4.5</td><td>−96.49 dBm</td></tr><tr><td>Sensitivity</td><td>−96.49 + 12</td><td>−84.49 dBm</td></tr><tr><td>Link margin</td><td>−49.31 − (−84.49)</td><td>35.18 dB</td></tr><tr><td>Headroom after reserve</td><td>35.18 − 15</td><td>20.18 dB</td></tr></tbody></table></div><p class="lb-note">The example meets its 15 dB reserve under the entered assumptions. The optional 2 dB LNA gain gives an output signal level of −47.31 dBm; it is not added to the input-referred margin.</p></section>
+<section><h2>Using link budgets for LTE, 5G, Wi-Fi and microwave</h2><p>The power accounting is useful across radio systems, but the assumptions must match the technology and operating mode. For LTE and 5G, keep transmit power, resource allocation, bandwidth and receiver sensitivity consistent. Total wideband received power is not automatically RSRP, and this thermal-noise calculation does not predict SINR in an interference-limited network.</p><p>For Wi-Fi, use sensitivity for the selected channel width and modulation/coding rate. For microwave links, consider rain attenuation, antenna alignment, Fresnel clearance and the required availability. For cellular or obstructed routes, enter a suitable modeled path loss instead of relying on free-space loss alone.</p><h3>Common mistakes to avoid</h3><ul><li>Entering watts in a dBm field: first use the <a href="/watt-to-dbm">watt to dBm converter</a>.</li><li>Using antenna gain in dBd as if it were dBi: add approximately 2.15 dB to convert dBd to dBi.</li><li>Counting feeder or atmospheric losses twice when a model already includes them.</li><li>Adding LNA gain directly to a margin calculated from input-referred sensitivity.</li><li>Treating a positive margin as proof of coverage or a guaranteed uptime percentage.</li></ul></section>
+<!-- FAQ Section -->
+<section class="p-4" id="lb-faq"><h2 class="mb-4">FAQ on Link Budget Calculator</h2><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">What is an RF link budget?</div><p class="mb-0">An RF link budget adds transmitter power and antenna gains, then subtracts cable and propagation losses to estimate received power. Comparing that power with receiver sensitivity gives the available link margin.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">What is the difference between link margin and fade margin?</div><p class="mb-0">Link margin is received power minus receiver sensitivity. The fade margin target is the reserve you choose for changing conditions. Headroom is link margin minus that target. Do not also enter the same fade reserve as a propagation loss.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Can I use this calculator for LTE, 5G or Wi-Fi?</div><p class="mb-0">Yes, for a simplified power budget. Use consistent signal power, bandwidth and sensitivity for the same channel and operating mode. Cellular coverage planning also needs appropriate propagation, interference, antenna, resource allocation and reliability assumptions; this tool does not calculate RSRP or SINR.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Does an LNA increase the link margin by its gain?</div><p class="mb-0">Not automatically. An LNA amplifies signal and noise. It can improve the receiver chain noise figure, depending on its position and the other stages. Here, optional LNA gain changes only the displayed output signal power; enter the complete chain noise figure referred to the receiver input for margin calculations.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">What fade margin should I use?</div><p class="mb-0">There is no single correct value for every link. Choose the reserve from the frequency, terrain, climate, propagation model and availability requirement. The 15 dB example is illustrative and is not an availability guarantee.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Why does bandwidth affect receiver sensitivity?</div><p class="mb-0">Thermal noise power increases with bandwidth. With noise figure and required SNR unchanged, doubling bandwidth raises the noise floor and required received power by approximately 3.01 dB.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Does free-space path loss include buildings or rain?</div><p class="mb-0">No. Free-space path loss represents ideal unobstructed propagation. Add suitable extra losses or enter a path loss from a more appropriate model. Avoid counting losses again if they are already included in your entered path loss.</p></div></div>
+</section><!-- /#lb-faq -->
+
+{% include rf.html %}
+</article>
+</div><!-- /#ec-link-budget -->
 
 
-<div class="p-4">
-  <div class="fw-bold fs-2 mb-3 d-inline-block"><i class="fas fa-square-root-alt me-2"></i> RF Link Budget Formula</div>
-<div class="text-center">
- <div class="d-inline-block mb-4 px-4 py-3 rounded-4 fw-semibold lh-lg bg-light fs-2"> P<sub>RX</sub> = P<sub>TX</sub> + G<sub>TX</sub> – L<sub>TX</sub> – L<sub>FS</sub> – L<sub>M</sub> + G<sub>RX</sub> – L<sub>RX</sub> </div>
-  </div>
-          
-<div class="table-responsive mt-4">
-            <table class="table table-bordered align-middle">
-              <thead class="table-light">
-                <tr>
-                  <th>Parameter</th>
-                  <th>Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>P<sub>RX</sub></strong></td>
-                  <td>Received Power (dBm)</td>
-                </tr>
-                <tr>
-                  <td><strong>P<sub>TX</sub></strong></td>
-                  <td>Transmitter Output Power (dBm)</td>
-                </tr>
-                <tr>
-                  <td><strong>G<sub>TX</sub></strong></td>
-                  <td>Transmitter Antenna Gain (dBi)</td>
-                </tr>
-                <tr>
-                  <td><strong>L<sub>TX</sub></strong></td>
-                  <td>Transmitter Cable/Connector Loss (dB)</td>
-                </tr>
-                <tr>
-                  <td><strong>L<sub>FS</sub></strong></td>
-                  <td>Free-Space Path Loss (dB)</td>
-                </tr>
-                <tr>
-                  <td><strong>L<sub>M</sub></strong></td>
-                  <td>Miscellaneous Losses (fade margin, polarization, rain)</td>
-                </tr>
-                <tr>
-                  <td><strong>G<sub>RX</sub></strong></td>
-                  <td>Receiver Antenna Gain (dBi)</td>
-                </tr>
-                <tr>
-                  <td><strong>L<sub>RX</sub></strong></td>
-                  <td>Receiver Cable/Connector Loss (dB)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>          
-     
-
-
-<!-- Free Space Path Loss -->
-  <div class="row mb-5 p-4">
-        <div class="card-body">
-          <h2 class="h4 fw-semibold mb-3">Free Space Path Loss</h2>
-          <p>The path loss is the loss due to propagation between the transmitting and receiving antennas and is usually the most significant contributor to the losses, and also the largest unknown. When transmitting through, it can be expressed in a dimensionless form by normalizing the distance to the wavelength:</p>
-          <p>General wavelength-based form:</p>
-          <div class="bg-light p-3 rounded text-center fs-5">
-            \[
-            L_{FS}(dB) = 20 \log_{10} \left( 4\pi \frac{d}{\lambda} \right)
-            \]
-          </div>
-          <p class="mt-4">Engineering form (MHz & km):</p>
-          <div class="bg-light p-3 rounded text-center fs-5">
-            \[
-            L_{FS}(dB) \approx 32.45 + 20\log_{10}(f_{MHz}) + 20\log_{10}(d_{km})
-            \]
-          </div>
-        </div>
-    </div>
-
-  <!-- Link Margin -->
-  <div class="row mb-5">
-        <div class="card-body">
-          <h2 class="h4 fw-semibold mb-3">Link Margin</h2>
-          <div class="bg-light p-3 rounded text-center fs-5">
-            \[
-            \text{Link Margin} = P_{RX} - \text{Receiver Sensitivity}
-            \]
-          </div>
-          <p class="mt-3">
-            Link margin provides a safety buffer to ensure reliable communication under fading, atmospheric loss, and environmental variations.
-          </p>
-        </div>
-  </div>
-
-  <!-- Optical Link Budget -->
-  <div class="row mb-5">
-      <div class="card shadow-sm border-0">
-        <div class="card-body">
-          <h2 class="h4 fw-semibold mb-3">Optical Link Budget (Fiber Systems)</h2>
-          <div class="bg-light p-3 rounded text-center fs-5"> \[  L_T = \alpha L + L_c + L_s \] </div>
-          <ul class="mt-3">
-            <li><strong>L<sub>T</sub></strong> – Total Loss</li>
-            <li><strong>α</strong> – Fiber Attenuation (dB/km)</li>
-            <li><strong>L</strong> – Fiber Length</li>
-            <li><strong>L<sub>c</sub></strong> – Connector Loss</li>
-            <li><strong>L<sub>s</sub></strong> – Splice Loss</li>
-          </ul>
-        </div>
-      </div>
-  </div>
-
-
-<h2>Why Link Budget Is Important</h2>
-<p>Link budget calculations are essential in:</p>
-<ul>
-<li>5G NR and LTE network planning</li>
-<li>Microwave backhaul design</li>
-<li> Satellite communication</li>
-<li>WiFi coverage planning</li>
-<li>Deep space communication</li>
-<li>Fiber optic systems</li>
-</ul>
-<p>Without a proper link budget, networks may suffer from:</p>
-<ul >
-<li>Poor coverage</li>
-<li>Frequent call drops</li>
-<li>Low throughput</li>
-<li>High packet loss</li>
-<li>Unstable links in rain or fading conditions</li>
-</ul>
-<p >A well-designed link budget ensures predictable and stable performance.</p>
-
-   </div>
-
-        {% include rf.html %}
-    </div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="{{ '/assets/js/rf/link-budget.js' | relative_url }}"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://easycalculator.org/rf-link-budget-calculator#calculator",
+      "name": "RF Link Budget Calculator",
+      "url": "https://easycalculator.org/rf-link-budget-calculator",
+      "description": "Calculate received power, EIRP, path loss, receiver sensitivity and link margin for a wireless link.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript for calculations.",
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://easycalculator.org/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "RF calculators",
+          "item": "https://easycalculator.org/rf-calculator"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Link budget",
+          "item": "https://easycalculator.org/rf-link-budget-calculator"
+        }
+      ]
+    }
+  ]
+}
+</script>
