@@ -1,69 +1,29 @@
- (function() {
-            // speed of light in m/s
-            const C = 299792458;   // exact
-
-            // DOM elements
-            const freqInput = document.getElementById('freqInput');
-            const unitSelect = document.getElementById('unitSelect');
-            const wavelengthSpan = document.getElementById('wavelengthValue');
-
-            // conversion factors to Hz
-            const toHz = {
-                'Hz': 1,
-                'kHz': 1e3,
-                'MHz': 1e6,
-                'GHz': 1e9
-            };
-
-            function updateWavelength() {
-                // get frequency value (use 0 if empty or invalid)
-                let freqValue = parseFloat(freqInput.value);
-                if (isNaN(freqValue) || freqValue <= 0) {
-                    wavelengthSpan.textContent = '—';
-                    return;
-                }
-
-                const unit = unitSelect.value;
-                const freqHz = freqValue * toHz[unit];
-
-                // wavelength in metres
-                const wavelengthMetres = C / freqHz;
-
-                // format nicely (avoid scientific for common ranges, but keep reasonable length)
-                let displayValue;
-                if (wavelengthMetres >= 1e9) {
-                    displayValue = wavelengthMetres.toExponential(4);
-                } else if (wavelengthMetres >= 1000) {
-                    displayValue = wavelengthMetres.toFixed(2) + '';   // km range? but keep as metres
-                } else if (wavelengthMetres >= 1) {
-                    displayValue = wavelengthMetres.toFixed(4);
-                } else if (wavelengthMetres >= 0.001) {
-                    displayValue = wavelengthMetres.toFixed(6);
-                } else if (wavelengthMetres > 0) {
-                    displayValue = wavelengthMetres.toExponential(4);
-                } else {
-                    displayValue = '0';
-                }
-                // Use a more polished presentation: if it contains '.' and many decimals, we can trim.
-                if (typeof displayValue === 'string' && displayValue.includes('.') && !displayValue.includes('e')) {
-                    // remove trailing zeros after decimal, but keep at least one decimal if needed.
-                    displayValue = displayValue.replace(/(\.\d*?[1-9])0+$/, '$1')
-                                               .replace(/\.0+$/, '');   // if all zeros, remove decimal point
-                }
-
-                wavelengthSpan.textContent = displayValue;
-            }
-
-            freqInput.addEventListener('input', updateWavelength);
-            unitSelect.addEventListener('change', updateWavelength);
-
-            updateWavelength();
-            freqInput.addEventListener('blur', function() {
-                let val = parseFloat(freqInput.value);
-                if (val <= 0) {
-                    freqInput.value = 1;   
-                    updateWavelength();
-                }
-            });
-
-        })();
+(() => {
+'use strict';
+const root=document.getElementById('frequency-calculator');
+const $=id=>root.querySelector('#'+id);
+const form=$('fw-form'),freq=$('fw-frequency'),unit=$('fw-unit'),output=$('fw-output'),error=$('fw-error'),copy=$('fw-copy');
+const symbols=['m','cm','mm','in'];
+let resultText='';
+function fmt(n){return Number(n.toPrecision(6)).toString();}
+function calculate(){
+ $('fw-copy-status').textContent='';
+ const n=Number(freq.value),hz=n*Number(unit.value),meters=299792458/hz,factor=Number(output.value);
+ const valid=freq.value.trim()!=='' && n>0 && Number.isFinite(hz) && hz>0 && Number.isFinite(meters) && meters>0 && Number.isFinite(meters*1000) && meters/4>0;
+ error.hidden=valid;freq.setAttribute('aria-invalid',String(!valid));copy.disabled=!valid;
+ if(!valid){error.textContent='Enter a positive, finite frequency within the supported numeric range.';['fw-full','fw-half','fw-quarter'].forEach(id=>$(id).textContent='—');$('fw-equivalents').textContent='';$('fw-calculation').textContent='A valid frequency is required.';resultText='';return;}
+ const symbol=symbols[output.selectedIndex];
+ $('fw-full').textContent=fmt(meters*factor)+' '+symbol;
+ $('fw-half').textContent=fmt(meters*factor/2)+' '+symbol;
+ $('fw-quarter').textContent=fmt(meters*factor/4)+' '+symbol;
+ $('fw-equivalents').textContent=[1,100,1000,1/0.0254].map((v,i)=>fmt(meters*v)+' '+symbols[i]).join(' · ');
+ $('fw-calculation').textContent='λ = 299,792,458 ÷ '+fmt(hz)+' ≈ '+fmt(meters)+' m';
+ resultText='Frequency: '+freq.value+' '+unit.options[unit.selectedIndex].text+'\nFull wavelength: '+$('fw-full').textContent+'\nHalf wavelength: '+$('fw-half').textContent+'\nQuarter wavelength: '+$('fw-quarter').textContent+'\nFree-space calculation using c = 299,792,458 m/s.';
+}
+form.addEventListener('submit',e=>{e.preventDefault();calculate();});
+[freq,unit,output].forEach(el=>el.addEventListener('input',calculate));
+form.addEventListener('reset',()=>setTimeout(calculate,0));
+root.querySelectorAll('[data-frequency]').forEach(button=>button.addEventListener('click',()=>{freq.value=button.dataset.frequency;unit.value=button.dataset.unit;calculate();}));
+copy.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(resultText);$('fw-copy-status').textContent='Result copied.';}catch(e){$('fw-copy-status').textContent='Copy is unavailable here. Select and copy the displayed result.';}});
+calculate();
+})();
