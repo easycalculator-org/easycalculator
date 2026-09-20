@@ -3,198 +3,75 @@ layout: default
 title: Wavelength to Frequency Calculator – Convert λ to Hz Online Instantly
 permalink: /wavelength-to-frequency-calculator
 description: "Convert wavelength (meters, cm, nm) to frequency (Hz, kHz, MHz, GHz) instantly using our free Wavelength to Frequency Calculator. Based on the speed of light formula, accurate and easy to use."
-#image: "/assets/images/dbm-to-watt-converter-with-formula-and-example.jpg"
-last_modified_at: 2026-09-13
+image: "/assets/images/og/wavelength-to-frequency-formula-example.jpg"
+last_modified_at: 2026-09-20
 ---
-<div class="row pt-4 justify-content-center">
- <div class="col-md-8 card shadow border-0 rounded-4 ">
-     <div class="card-body p-4 p-md-5">
-<h2 class="card-title text-center mb-4 fw-semibold text-secondary"> wavelength → frequency </h2>
- <!-- wavelength input row (identical structure) -->
-    <div class="row g-3 align-items-end mb-4">
-         <div class="col-md-7">
-                        <label for="wavelengthInput" class="form-label fw-medium">wavelength value</label>
-                        <input type="number" id="wavelengthInput" class="form-control form-control-lg" value="1" step="any" placeholder="e.g. 1">
-                    </div>
-                    <div class="col-md-5">
-                        <label for="lengthUnitSelect" class="form-label fw-medium">length unit</label>
-                        <select id="lengthUnitSelect" class="form-select form-select-lg">
-                            <option value="m" selected>metres (m)</option>
-                            <option value="cm">centimetres (cm)</option>
-                            <option value="mm">millimetres (mm)</option>
-                            <option value="um">micrometres (µm)</option>
-                            <option value="nm">nanometres (nm)</option>
-                            <option value="km">kilometres (km)</option>
-                        </select>
-                    </div>
-                </div>
-<!-- result -->
- <div class="row g-2 align-items-center mb-4">
-    <div class="col-12">
-         <div class="bg-dark text-white p-4 rounded-4 d-flex justify-content-between align-items-center flex-wrap">
-             <span class="fs-5 fw-light">frequency f</span>
-             <span id="frequencyValue" class="display-6 fw-semibold font-monospace">299.7925</span>
-             <span id="freqUnitDisplay" class="fs-5 text-secondary">MHz</span>
-          </div>
-       <div class="form-text text-end mt-1" id="frequencyUnitNote">result in hertz (Hz) · metric prefix adapts</div>
-      </div>
-    </div>
- <!-- speed of light -->
-  <div class="alert alert-info border-0 bg-info bg-opacity-10 d-flex align-items-center gap-2 p-3 rounded-3" role="alert">
-   <span class="small"><strong>c</strong> = 299 792 458 m/s  (exact)</span>
-  </div>
-  <p class="text-muted text-center small mb-0">f = c / λ  —  wavelength in metres</p>
-     </div>
-    </div>
-   </div>
+<style>
+.ec-wave{--fw-blue:#2454bc;--fw-ink:#182d49;--fw-muted:#53647b;max-width:auto;margin:24px auto 40px;padding:0 16px;color:var(--fw-ink);line-height:1.65}
+.ec-wave *{box-sizing:border-box}.ec-wave [hidden]{display:none!important}.ec-wave h1{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.2;margin:10px 0 16px}.ec-wave h2{font-size:1.55rem;margin:0 0 16px}.ec-wave h3{font-size:1.1rem;margin:0 0 10px}.ec-wave a{color:#214fab;text-underline-offset:3px}.ec-wave p{margin:0 0 16px}.ec-wave .fw-muted{color:var(--fw-muted)}
+.ec-wave .fw-panel{padding:clamp(18px,3vw,30px);border:1px solid #d7e4f4;border-radius:22px;background:linear-gradient(135deg,#eef5ff,#fff);box-shadow:0 10px 32px #142a4810}
+.ec-wave .fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.ec-wave .fw-fields{display:grid;grid-template-columns:1.4fr 1fr;gap:12px}.ec-wave label{display:block;font-weight:600;margin-bottom:6px}.ec-wave input,.ec-wave select{width:100%;min-height:48px;border:1px solid #9daec4;border-radius:9px;background:#fff;color:var(--fw-ink);padding:10px;font:inherit;min-width:0}
+.ec-wave button{font:inherit;cursor:pointer;border:1px solid #a6bad7;border-radius:9px;padding:9px 14px;min-height:44px;background:white;color:#214fab}.ec-wave button:disabled{opacity:.6;cursor:default}.ec-wave :is(a,button,input,select):focus-visible{outline:3px solid #b25d00;outline-offset:3px}.ec-wave .fw-primary{background:var(--fw-blue);border-color:var(--fw-blue);color:white;font-weight:600}
+.ec-wave .fw-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.ec-wave .fw-presets{margin:18px 0}.ec-wave .fw-result{background:#132c50;color:#fff;border-radius:16px;padding:22px;overflow-wrap:anywhere}.ec-wave .fw-result h2{font-size:1rem;color:#d6e6ff;margin:0}.ec-wave .fw-big{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;line-height:1.3;margin:8px 0}.ec-wave .fw-result p{color:#e0ebfa;font-size:.9rem}.ec-wave .fw-result dl{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 0}.ec-wave .fw-result dd{margin:0;font-weight:600}.ec-wave .fw-result dt{font-size:.85rem;font-weight:400;color:#d6e6ff}
+.ec-wave .fw-error{color:#a21c2c;margin-top:12px}.ec-wave .fw-note{font-size:.9rem;margin:16px 0 0}.ec-wave article>section{margin-top:34px}.ec-wave .fw-meta{display:flex;gap:14px;flex-wrap:wrap;border-bottom:1px solid #dce3ec;padding:24px 0 16px;font-size:.9rem}.ec-wave .fw-box{padding:20px;border:1px solid #dce3ec;border-radius:12px;background:#f7f9fc}.ec-wave .fw-scroll{overflow-x:auto}.ec-wave table{width:100%;border-collapse:collapse;font-size:.95rem}.ec-wave th,.ec-wave td{padding:12px;text-align:left;border-bottom:1px solid #dce3ec;white-space:nowrap}.ec-wave th{background:#edf3fc}.ec-wave caption{caption-side:bottom;text-align:left;color:var(--fw-muted);padding:12px 0}.ec-wave details{border:1px solid #dce3ec;border-radius:10px;padding:14px 18px;margin:10px 0}.ec-wave summary{cursor:pointer;font-weight:600}.ec-wave details p{margin:12px 0 0}.ec-wave .fw-links{display:flex;gap:12px;flex-wrap:wrap}.ec-wave .fw-links a{padding:8px 12px;border:1px solid #dce3ec;border-radius:8px}
+@media(max-width:700px){.ec-wave .fw-grid{grid-template-columns:1fr}.ec-wave .fw-fields{grid-template-columns:1.2fr 1fr}.ec-wave{padding:0 8px}.ec-wave .fw-result{padding:18px}}
+</style>
 
-
+<div class="ec-wave" id="wavelength-calculator">
+<nav aria-label="Breadcrumb" class="fw-muted"><a href="/">Home</a> / <a href="/rf-calculator">RF calculators</a> / Wavelength to frequency</nav>
+<header><h1>Wavelength to Frequency Calculator</h1><p class="fw-muted">Convert electromagnetic wavelength to frequency in Hz, kHz, MHz, GHz or THz. Enter a wavelength in meters, centimeters, millimeters, micrometers, nanometers or inches.</p></header>
+<section class="fw-panel" aria-label="Wavelength to frequency converter">
+<div class="fw-grid">
+<form id="wf-form" novalidate>
+<div class="fw-fields"><div><label for="wf-wavelength">Wavelength (λ)</label><input id="wf-wavelength" type="number" value="1" step="any" min="0" required inputmode="decimal" aria-describedby="wf-error"></div><div><label for="wf-unit">Wavelength unit</label><select id="wf-unit"><option value="1" selected>Meters (m)</option><option value="0.01">Centimeters (cm)</option><option value="0.001">Millimeters (mm)</option><option value="0.000001">Micrometers (µm)</option><option value="0.000000001">Nanometers (nm)</option><option value="0.0254">Inches (in)</option></select></div></div>
+<div style="margin-top:16px"><label for="wf-output">Frequency unit</label><select id="wf-output"><option value="auto" selected>Auto — best unit</option><option value="1">Hertz (Hz)</option><option value="1000">Kilohertz (kHz)</option><option value="1000000">Megahertz (MHz)</option><option value="1000000000">Gigahertz (GHz)</option><option value="1000000000000">Terahertz (THz)</option></select></div>
+<div class="fw-actions"><button class="fw-primary" type="submit">Calculate frequency</button><button type="reset">Reset</button><button id="wf-copy" type="button">Copy result</button></div>
+<p id="wf-error" class="fw-error" role="alert" hidden></p><p id="wf-copy-status" role="status" class="fw-note"></p>
+<div class="fw-presets"><span class="fw-muted">Try a wavelength</span><div class="fw-actions"><button type="button" data-wavelength="2" data-unit="1">2 m</button><button type="button" data-wavelength="1" data-unit="1">1 m</button><button type="button" data-wavelength="12.5" data-unit="0.01">12.5 cm</button><button type="button" data-wavelength="5" data-unit="0.001">5 mm</button><button type="button" data-wavelength="550" data-unit="0.000000001">550 nm</button></div></div>
+<a href="/frequency-to-wavelength-calculator">Convert frequency to wavelength →</a>
+</form>
+<div class="fw-result" aria-live="polite" aria-atomic="true"><h2>Frequency · f</h2><div id="wf-frequency" class="fw-big">299.792 MHz</div><p id="wf-equivalents">299792000 Hz · 0.299792 GHz · 0.000299792 THz</p><dl><div><dt>Input wavelength</dt><dd id="wf-meters">1 m</dd></div><div><dt>Wave period · T = 1/f</dt><dd id="wf-period">3.33564 ns</dd></div></dl><p id="wf-calculation" style="margin-top:20px">f = 299,792,458 ÷ 1 ≈ 299792000 Hz</p></div>
+</div><p class="fw-note fw-muted">Uses c = 299,792,458 m/s in vacuum. Results are rounded to six significant figures. Enter the full wavelength, not an antenna's physical length.</p>
+<noscript><p>Enable JavaScript to calculate. The formulas, examples and reference table below remain available.</p></noscript>
+</section>
 <!-- Article Content -->
-<div class="my-5 article-container">
-
-  <!-- Header Section -->
-  <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-    <div class="d-flex align-items-center gap-3 flex-wrap">
-      {% include naren_create.html %}
-      {% include reema_verify.html %}
-    </div>
-    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
-      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
-      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>3 min read</span>
-    </div>
+<div class="article-container">
+ <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+  <div class="d-flex align-items-center gap-3 flex-wrap">
+   {% include naren_create.html %}
+   {% include reema_verify.html %}
   </div>
-
-  <!-- Main Title -->
-  <h1>Wavelength to Frequency Calculator</h1>
-  <p class="lead">The wavelength to frequency calculator converts electromagnetic wavelength (in meters) into frequency (in Hz) using the formula <strong>f = c / λ</strong>, where c is the speed of light (3 × 10⁸ m/s). This conversion is essential in RF engineering, antenna design, telecommunications, and wireless communication systems.</p>
-
- 
-  <!-- Formula Section -->
-  <div class="mt-5">
-    <h2 class="h4 fw-bold">Formula Used</h2>
-    <div class="bg-light p-3 rounded border">
-      <div class="fs-5 fw-semibold text-center">f = c / λ</div>
-      <hr>
-      <p class="mb-1"><strong>f</strong> = Frequency (Hz)</p>
-      <p class="mb-1"><strong>c</strong> = 3 × 10⁸ m/s (Speed of Light)</p>
-      <p class="mb-0"><strong>λ</strong> = Wavelength (meters)</p>
-    </div>
-  </div>
-
- <!-- Example Section -->
-
-  <div class="row pt-4">
-    <h2 class="h4 fw-bold">Example Calculations</h2>
-    <!-- Example 1 -->
-    <div class="col-lg-6">
-      <div class="card border-0 shadow-sm rounded-4 h-100">
-        <div class="card-body p-4">
-          <h3 class="h6 fw-semibold text-primary mb-3"> Example 1: λ = 2 meters</h3>
-          <div class="bg-light p-3 rounded border mb-3">
-            <div><strong>Formula:</strong> f = c / λ</div>
-            <div>c = 3 × 10⁸ m/s</div>
-          </div>
-          <div class="alert alert-primary py-2"> f = 3 × 10⁸ / 2 </div>
-          <div class="alert alert-success py-2 mb-0">f = 1.5 × 10⁸ Hz = <strong>150 MHz</strong> </div>
-        </div>
-      </div>
-    </div>
-    <!-- Example 2 -->
-    <div class="col-lg-6">
-      <div class="card border-0 shadow-sm rounded-4 h-100">
-        <div class="card-body p-4">
-          <h3 class="h6 fw-semibold text-primary mb-3">  Example 2: λ = 0.5 meters </h3>
-          <div class="bg-light p-3 rounded border mb-3">
-            <div><strong>Formula:</strong> f = c / λ</div>
-            <div>c = 3 × 10⁸ m/s</div>
-          </div>
-          <div class="alert alert-primary py-2"> f = 3 × 10⁸ / 0.5</div>
-          <div class="alert alert-success py-2 mb-0"> f = 6 × 10⁸ Hz = <strong>600 MHz</strong> </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <!-- Chart Section -->
-  <div class="mt-5">
-    <h2 class="h4 fw-bold">Wavelength to Frequency Reference Chart</h2>
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped align-middle text-center">
-        <thead class="table-primary">
-          <tr>
-            <th>Wavelength (m)</th>
-            <th>Frequency (Hz)</th>
-            <th>Frequency (MHz)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>10</td><td>3 × 10⁷</td><td>30</td></tr>
-          <tr><td>2</td><td>1.5 × 10⁸</td><td>150</td></tr>
-          <tr><td>1</td><td>3 × 10⁸</td><td>300</td></tr>
-          <tr><td>0.5</td><td>6 × 10⁸</td><td>600</td></tr>
-          <tr><td>0.1</td><td>3 × 10⁹</td><td>3000</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
- <div class="my-5">
-  <h2 class="mb-4">FAQ</h2>
- <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary">1. What is the formula to convert wavelength to frequency?</div>
-            <p class="mb-0">The formula is f = c / λ, where c = 3 × 10⁸ m/s.</p>
-          </div>
-        </div>
-
-   <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary">2. Why are wavelength and frequency inversely related?</div>
-            <p class="mb-0">Because the speed of light is constant in free space. If wavelength increases, frequency must decrease to maintain the same propagation speed.</p>
-          </div>
-        </div>
- <div class="card mb-3 border-0 bg-light">
-  <div class="card-body ">
-    <div class="fw-bold text-primary">3.  Can this be used for radio waves?</div>
-     <p class="mb-0">Yes. This formula applies to all electromagnetic waves including radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, and gamma rays.</p>
-     </div>
+ <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+  <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+  <span><i class="fas fa-clock me-1" aria-hidden="true"></i>8 min read</span>
   </div>
 </div>
-     {% include rf.html %}
+<!-- Article-->
+<h2>Wavelength to Frequency Calculator</h2>
+<p class="lead">The wavelength to frequency calculator converts electromagnetic wavelength (in meters) into frequency (in Hz) using the formula <strong>f = c / λ</strong>, where c is the speed of light (3 × 10⁸ m/s). This conversion is essential in RF engineering, antenna design, telecommunications, and wireless communication systems.</p>
+<section><h2>How to convert wavelength to frequency</h2><ol><li>Enter a positive wavelength and choose its unit.</li><li>Select an output frequency unit, or let Auto choose a suitable unit.</li><li>Select Calculate frequency to see frequency, equivalent units and wave period.</li></ol><p>Wavelength is the distance between matching points on consecutive wave cycles, such as crest to crest. Frequency counts the number of cycles per second. One hertz means one cycle per second. For waves traveling at a fixed speed, a shorter wavelength means a higher frequency.</p></section>
+<section><h2>Wavelength to frequency formula</h2><div class="fw-box"><p><strong>f = c / λ</strong></p><p>f is frequency in hertz, λ is wavelength in meters, and c = 299,792,458 m/s is the exact speed of light in vacuum.</p><p><strong>Meters to MHz:</strong> f (MHz) = 299.792458 / λ (m)<br><strong>Centimeters to GHz:</strong> f (GHz) = 29.9792458 / λ (cm)<br><strong>Millimeters to GHz:</strong> f (GHz) = 299.792458 / λ (mm)<br><strong>Nanometers to THz:</strong> f (THz) = 299792.458 / λ (nm)</p></div><p class="fw-note">The shortcut 300 / λ (m) estimates frequency in MHz. The calculator uses the exact constant documented by <a href="https://physics.nist.gov/cgi-bin/cuu/Value?c">NIST</a>, then rounds the displayed result.</p>
+<figure style="margin:24px 0 0"><img src="/assets/images/wavelength-to-frequency-formula-example.svg" alt="Wavelength to frequency formula f equals c divided by lambda, with a 1 meter example equal to 299.792458 MHz" width="1200" height="820" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px"><figcaption class="fw-note fw-muted">A 1 m free-space wavelength corresponds to 299.792458 MHz.</figcaption></figure>
+</section>
+<section><h2>Wavelength to frequency examples</h2><div class="fw-grid"><div class="fw-box"><h3>1 meter to frequency</h3><p>f = 299,792,458 / 1<br>= 299,792,458 Hz<br>= <strong>299.792458 MHz</strong>.</p><p>The calculator displays 299.792 MHz after rounding to six significant figures. The corresponding period is approximately 3.33564 ns.</p></div><div class="fw-box"><h3>12.5 cm to frequency</h3><p>First convert 12.5 cm to 0.125 m.</p><p>f = 299,792,458 / 0.125<br>= 2,398,339,664 Hz<br>≈ <strong>2.39834 GHz</strong>.</p><p>This is close to 2.4 GHz; the difference comes from using the exact speed of light rather than 300,000,000 m/s.</p></div></div><div class="fw-box" style="margin-top:16px"><h3>550 nm to frequency of light</h3><p>550 nm = 0.00000055 m. Dividing 299,792,458 by this wavelength gives approximately <strong>5.45077 × 10¹⁴ Hz</strong>, or <strong>545.077 THz</strong>. Use the vacuum wavelength for this calculation.</p></div></section>
+<section class="p-4"><h2>Wavelength to frequency conversion table</h2><div class="fw-scroll" tabindex="0" role="region" aria-label="Wavelength and frequency reference table"><table><caption>Free-space values calculated with c = 299,792,458 m/s; rounded to six significant figures.</caption><thead><tr><th scope="col">Wavelength</th><th scope="col">Wavelength (m)</th><th scope="col">Frequency</th></tr></thead><tbody>
+<tr><th scope="row">100 m</th><td>100</td><td>2.99792 MHz</td></tr>
+<tr><th scope="row">10 m</th><td>10</td><td>29.9792 MHz</td></tr>
+<tr><th scope="row">2 m</th><td>2</td><td>149.896 MHz</td></tr>
+<tr><th scope="row">1 m</th><td>1</td><td>299.792 MHz</td></tr>
+<tr><th scope="row">50 cm</th><td>0.5</td><td>599.585 MHz</td></tr>
+<tr><th scope="row">30 cm</th><td>0.3</td><td>999.308 MHz</td></tr>
+<tr><th scope="row">12.5 cm</th><td>0.125</td><td>2.39834 GHz</td></tr>
+<tr><th scope="row">10 cm</th><td>0.1</td><td>2.99792 GHz</td></tr>
+<tr><th scope="row">5 cm</th><td>0.05</td><td>5.99585 GHz</td></tr>
+<tr><th scope="row">10 mm</th><td>0.01</td><td>29.9792 GHz</td></tr>
+<tr><th scope="row">5 mm</th><td>0.005</td><td>59.9585 GHz</td></tr>
+<tr><th scope="row">1 mm</th><td>0.001</td><td>299.792 GHz</td></tr>
+<tr><th scope="row">550 nm</th><td>5.5e-07</td><td>545.077 THz</td></tr>
+</tbody></table></div></section>
+<section><h2>Wavelength is not the same as antenna length</h2><p>A full wavelength is the distance occupied by one complete wave cycle. A theoretical half-wave dipole has a total length near λ/2; a quarter-wave monopole has a radiating element near λ/4.</p><p>For example, a theoretical 0.5 m half-wave dipole corresponds to a full wavelength of 1 m, giving approximately 299.792 MHz. Entering 0.5 m directly would instead calculate the frequency of a full 0.5 m wave. Practical antenna lengths also depend on geometry, end effects, insulation and surroundings.</p><p>Use the <a href="/frequency-to-wavelength-calculator">frequency to wavelength calculator</a> for theoretical full, half and quarter wavelengths. Check propagation with the <a href="/free-space-path-loss-calculator">free space path loss calculator</a> and mismatch with the <a href="/vswr-calculator">VSWR calculator</a>.</p></section>
+<section><h2>Wavelength in air, cables and other media</h2><p>The general equation is <strong>f = v / λ</strong>, where v is the phase speed in the medium. This calculator uses the speed of light in vacuum, a common approximation for RF propagation in air. For a wavelength measured inside a cable, use the cable's phase speed instead.</p><p>For example, with a cable velocity factor of 0.66 and a wavelength of 1 m inside that cable, f = 299,792,458 × 0.66 / 1 ≈ 197.863 MHz. The same frequency has a longer wavelength in free space. Sound waves require the speed of sound in their medium and are outside this tool's scope.</p></section>
+<!-- FAQ Section -->
+<section class="p-4"><h2 class="mb-4">FAQ on Wavelength to frequency Calculator</h2><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">How do I convert wavelength in meters to MHz?</div><p class="mb-0">Divide 299.792458 by the wavelength in meters. A 2 m free-space wavelength corresponds to approximately 149.896 MHz.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">How do I convert nanometers to hertz?</div><p class="mb-0">Convert nanometers to meters by multiplying by 10⁻⁹, then divide 299,792,458 by that value. A 550 nm vacuum wavelength corresponds to approximately 5.45077 × 10¹⁴ Hz.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">What frequency is a 1 meter wavelength? </div><p class="mb-0">In vacuum, a wavelength of 1 meter corresponds to exactly 299,792,458 Hz, or 299.792458 MHz. The calculator displays a rounded result.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Does a shorter wavelength mean a higher frequency?</div><p class="mb-0">Yes, when wave speed is fixed. Frequency and wavelength are inversely proportional, so halving the wavelength doubles the frequency.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Can I enter an antenna length into this calculator?</div><p class="mb-0">Enter the full wavelength. For an ideal half-wave antenna, double its total length to estimate the wavelength; for an ideal quarter-wave element, multiply its length by four. Real antennas require corrections and tuning.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">What does wave period mean?</div><p class="mb-0">Period is the time for one complete cycle. It equals 1 divided by frequency in hertz and is measured in seconds. For high RF frequencies, nanoseconds or picoseconds are often more convenient.</p></div></div></section>{% include rf.html %}
 </div>
-
-
- <script src="{{ '/assets/js/rf/wave-to-freq.js' | relative_url }}"></script> 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.7.0/math.min.js"></script>
-
- <script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [{
-   "@type": "Question",
-   "name": "What is the formula to convert wavelength to frequency?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "The formula is f = c / λ, where c = 3 × 10⁸ m/s."
-   }
- },{
-   "@type": "Question",
-   "name": "Why are wavelength and frequency inversely related?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "Because the speed of light is constant, increasing wavelength decreases frequency."
-   }
- },{
-   "@type": "Question",
-   "name": "Can this be used for radio waves?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "Yes. The formula applies to all electromagnetic waves."
-   }
- }]
-}
-</script>
+<script src="{{ '/assets/js/rf/wave-to-freq.js' | relative_url }}"></script> 
