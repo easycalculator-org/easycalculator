@@ -1,243 +1,106 @@
-  const textarea = document.getElementById('textInput');
-  const freqGrid = document.getElementById('frequencyGrid');
-  
-  function getLetterFrequency(text) {
-    const freq = {};
-    for (let i = 65; i <= 90; i++) {
-      freq[String.fromCharCode(i)] = 0;
-    }
-    for (let ch of text) {
-      const upper = ch.toUpperCase();
-      if (upper >= 'A' && upper <= 'Z') {
-        freq[upper] = (freq[upper] || 0) + 1;
-      }
-    }
-    return freq;
+(() => {
+  'use strict';
+  const root = document.getElementById('ec-character-counter');
+  if (!root) return;
+  const el = id => root.querySelector('#cc-' + id);
+  const editor = el('text');
+  const nf = new Intl.NumberFormat(document.documentElement.lang || 'en');
+  let wordSegmenter;
+  try { if (Intl.Segmenter) wordSegmenter = new Intl.Segmenter(undefined, {granularity:'word'}); } catch (_) {}
+  let previousAction = null;
+  let frame = 0;
+  let stats = {characters:0, compact:0};
+  let detailedText = null;
+  const duration = seconds => seconds < 60 ? seconds + ' sec' : Math.floor(seconds / 60) + ' min' + (seconds % 60 ? ' ' + seconds % 60 + ' sec' : '');
+  const put = (id, value) => { el(id).textContent = typeof value === 'number' ? nf.format(value) : value; };
+  const wordsOf = text => {
+    if (!wordSegmenter) return text.match(/[\p{L}\p{N}\p{M}]+(?:['’][\p{L}\p{N}\p{M}]+)*/gu) || [];
+    const words = [];
+    for (const item of wordSegmenter.segment(text)) if (item.isWordLike) words.push(item.segment);
+    return words;
+  };
+  function analyze(text) {
+    text = text.replace(/\r\n?/g, '\n');
+    let characters = 0, compact = 0;
+    for (const char of text) { characters++; if (!/\s/u.test(char)) compact++; }
+    return {characters, compact, words:wordsOf(text), text};
   }
-  
-  // Render
-  function renderFrequencyGrid(freqMap) {
-    const letters = Object.keys(freqMap).sort();
-    const maxCount = Math.max(...Object.values(freqMap), 1);
-    
-    let html = '';
-    for (let letter of letters) {
-      const count = freqMap[letter];
-      const percentWidth = maxCount > 0 ? (count / maxCount) * 100 : 0;
-      html += `
-        <div class="freq-item" data-letter="${letter}" onclick="highlightLetterInText('${letter}')">
-          <div class="d-flex align-items-center gap-2">
-            <span class="freq-letter">${letter}</span>
-            <span class="freq-count fw-bold">${count}</span>
-          </div>
-          <div style="flex:1; margin-left: 6px;">
-            <div class="freq-bar" style="width: ${percentWidth}%;"></div>
-          </div>
-        </div>
-      `;
-    }
-    freqGrid.innerHTML = html;
+  function updateGoal() {
+    const input = el('limit');
+    const value = input.value;
+    const limit = Number(value);
+    const invalid = input.validity.badInput || (value !== '' && (!Number.isInteger(limit) || limit < 1 || limit > 1000000000));
+    input.setAttribute('aria-invalid', String(invalid));
+    el('limit-error').hidden = !invalid;
+    el('goal').classList.remove('over');
+    el('progress').hidden = value === '' || invalid;
+    if (invalid) { put('remaining', 'Check your character limit'); return; }
+    if (value === '') { put('remaining', 'No limit set'); return; }
+    const used = el('mode').value === 'all' ? stats.characters : stats.compact;
+    const remaining = limit - used;
+    el('progress').max = limit;
+    el('progress').value = Math.min(used, limit);
+    el('goal').classList.toggle('over', remaining < 0);
+    put('remaining', nf.format(Math.abs(remaining)) + (remaining < 0 ? ' characters over limit' : remaining === 0 ? ' characters remaining — limit reached' : ' characters remaining'));
   }
-  
-  window.scrollToTopLetter = function() {
-    const items = document.querySelectorAll('.freq-item');
-    if (!items.length) return;
-    let maxItem = null;
-    let maxCount = -1;
-    items.forEach(item => {
-      const countSpan = item.querySelector('.freq-count');
-      if (countSpan) {
-        const count = parseInt(countSpan.innerText, 10);
-        if (count > maxCount) {
-          maxCount = count;
-          maxItem = item;
-        }
-      }
-    });
-    if (maxItem) {
-      maxItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      maxItem.style.transition = '0.2s';
-      maxItem.style.backgroundColor = '#fff3cd';
-      setTimeout(() => { maxItem.style.backgroundColor = ''; }, 800);
-    }
-  };
-  
-  // highlight letter 
-  window.highlightLetterInText = function(letter) {
-    const text = textarea.value;
-    if (!text) return;
-    const regex = new RegExp(letter, 'gi');
-    const matches = text.match(regex);
-    const occ = matches ? matches.length : 0;
-    
-    // flash the clicked freq item
-    const targetDiv = document.querySelector(`.freq-item[data-letter="${letter}"]`);
-    if (targetDiv) {
-      targetDiv.style.transform = 'scale(1.02)';
-      targetDiv.style.backgroundColor = '#dbeafe';
-      setTimeout(() => {
-        targetDiv.style.transform = '';
-        targetDiv.style.backgroundColor = '';
-      }, 250);
-    }
-    
-    // notification
-    const toastMsg = document.createElement('div');
-    toastMsg.innerText = `🔤 Letter ${letter} appears ${occ} time${occ !== 1 ? 's' : ''}`;
-    toastMsg.style.position = 'fixed';
-    toastMsg.style.bottom = '24px';
-    toastMsg.style.right = '24px';
-    toastMsg.style.backgroundColor = '#1e293b';
-    toastMsg.style.color = 'white';
-    toastMsg.style.padding = '8px 18px';
-    toastMsg.style.borderRadius = '40px';
-    toastMsg.style.fontSize = '0.85rem';
-    toastMsg.style.zIndex = '1000';
-    toastMsg.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
-    toastMsg.style.fontWeight = '500';
-    document.body.appendChild(toastMsg);
-    setTimeout(() => { toastMsg.remove(); }, 1500);
-  };
-  
-  // Advanced stats calculation
-  function getAdvancedStats(text) {
-    const wordsRaw = text.trim().split(/\s+/).filter(w => w.length > 0);
-    const words = wordsRaw;
-    const wordCount = words.length;
-    const uniqueSet = new Set(words);
-    const uniqueWords = uniqueSet.size;
-    const lexicalDensityVal = wordCount === 0 ? 0 : (uniqueWords / wordCount) * 100;
-    const sentences = text.split(/[.!?]+(?:\s|$)/).filter(s => s.trim().length > 0);
-    const sentenceCount = sentences.length;
-    const paragraphs = text.split(/\n+/).filter(p => p.trim().length > 0);
-    const paragraphCount = paragraphs.length;
-    const lineCount = (text.match(/\n/g) || []).length;
-    const spaceCount = (text.match(/ /g) || []).length;
-    const charCount = text.length;
-    const totalLettersOnly = (text.match(/[A-Za-z]/g) || []).length;
-    const avgWordLength = wordCount === 0 ? 0 : (totalLettersOnly / wordCount).toFixed(1);
-    const readingMin = Math.floor(wordCount / 200);
-    const readingSecs = wordCount === 0 ? 0 : Math.floor((wordCount % 200) / (200 / 60));
-    const speakingTime = Math.ceil(wordCount / 130);
-    const charDensityVal = charCount === 0 ? 0 : (wordCount / charCount) * 100;
-    const charDensityPercent = charDensityVal.toFixed(1) + '%';
-    
-    let fleschScore = 0, readabilityLabel = '';
-    if (sentenceCount > 0 && wordCount > 0) {
-      const avgWordsPerSentence = wordCount / sentenceCount;
-      let totalSyllables = 0;
-      for (let w of words) {
-        let syl = w.toLowerCase().replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '').match(/[aeiouy]{1,2}/g)?.length || 1;
-        syl = Math.max(1, syl);
-        totalSyllables += syl;
-      }
-      const avgSyllablesPerWord = totalSyllables / wordCount;
-      fleschScore = 206.835 - (1.015 * avgWordsPerSentence) - (84.6 * avgSyllablesPerWord);
-      fleschScore = Math.min(100, Math.max(0, fleschScore));
-      if (fleschScore >= 90) readabilityLabel = 'Very Easy';
-      else if (fleschScore >= 70) readabilityLabel = 'Easy';
-      else if (fleschScore >= 50) readabilityLabel = 'Moderate';
-      else if (fleschScore >= 30) readabilityLabel = 'Difficult';
-      else readabilityLabel = 'Very Hard';
-    } else {
-      fleschScore = 0;
-      readabilityLabel = 'No text';
-    }
-    
-    return {
-      wordCount, sentenceCount, paragraphCount, lineCount, spaceCount, charCount,
-      avgWordLength: parseFloat(avgWordLength), readingMin, readingSecs, speakingTime,
-      charDensityPercent, lexicalDensity: lexicalDensityVal.toFixed(1),
-      fleschScore: fleschScore.toFixed(0), readabilityLabel, totalLettersAlpha: totalLettersOnly,
-      uniqueWordsCount: uniqueWords
-    };
+  function updateDetails() {
+    if (!el('details').open || detailedText === stats.text) return;
+    detailedText = stats.text;
+    const text = stats.text;
+    const words = stats.words;
+    const unique = new Set(words.map(word => word.normalize('NFC').toLocaleLowerCase())).size;
+    put('spaces', (text.match(/ /g) || []).length);
+    put('sentences', text.split(/[.!?。！？]+/u).filter(part => /[\p{L}\p{N}]/u.test(part)).length);
+    put('paragraphs', text.trim() ? text.trim().split(/\n[\t ]*\n(?:[\t ]*\n)*/).length : 0);
+    put('lines', (text.match(/\n/g) || []).length);
+    put('letters-total', (text.match(/\p{L}/gu) || []).length);
+    put('unique', unique);
+    put('ratio', words.length ? (100 * unique / words.length).toFixed(1) + '%' : '0%');
+    put('speaking', duration(Math.ceil(words.length / 130 * 60)));
+    const counts = Array(26).fill(0);
+    for (const ch of text.toLowerCase()) { const i = ch.charCodeAt(0) - 97; if (i >= 0 && i < 26) counts[i]++; }
+    el('frequency').replaceChildren(...counts.map((count, i) => {
+      const cell = document.createElement('span'); cell.className = 'cc-letter';
+      const letter = document.createElement('b'); letter.textContent = String.fromCharCode(65 + i);
+      cell.append(letter, document.createTextNode(nf.format(count))); return cell;
+    }));
   }
-  
-  function updateStats() {
-    const text = textarea.value;
-    const stats = getAdvancedStats(text);
-    
-    // Update basic 
-    document.getElementById('charCount').textContent = stats.charCount;
-    document.getElementById('wordCount').textContent = stats.wordCount;
-    document.getElementById('spaceCount').textContent = stats.spaceCount;
-    document.getElementById('sentenceCount').textContent = stats.sentenceCount;
-    document.getElementById('paragraphCount').textContent = stats.paragraphCount;
-    document.getElementById('lineCount').textContent = stats.lineCount;
-    document.getElementById('readingTime').textContent = stats.readingMin;
-    document.getElementById('readingSecs').textContent = `${stats.readingSecs} sec`;
-    document.getElementById('speakingTime').textContent = stats.speakingTime;
-    document.getElementById('avgWordLength').textContent = stats.avgWordLength;
-    document.getElementById('charDensity').textContent = stats.charDensityPercent;
-    document.getElementById('fleschScore').textContent = stats.fleschScore;
-    document.getElementById('readabilityLabel').textContent = stats.readabilityLabel;
-    document.getElementById('lexicalDensity').innerHTML = `${stats.lexicalDensity}% <small>(unique/${stats.uniqueWordsCount})</small>`;
-    
-    const lexProgress = document.getElementById('lexicalProgress');
-    if (lexProgress) lexProgress.style.width = `${Math.min(100, parseFloat(stats.lexicalDensity))}%`;
-    document.getElementById('totalLettersCount').textContent = stats.totalLettersAlpha;
-    
-    // letter vs space ratio bar
-    const lettersCount = stats.totalLettersAlpha;
-    const spacesCount = stats.spaceCount;
-    const totalAlphaSpace = lettersCount + spacesCount;
-    const lettersPercent = totalAlphaSpace === 0 ? 0 : (lettersCount / totalAlphaSpace) * 100;
-    const spacesPercent = 100 - lettersPercent;
-    const densityProgress = document.getElementById("densityProgress").style.width = densityPercentage + "%";
-    const spaceProgressDiv = document.getElementById("spaceProgress").style.width = spacePercentage + "%";
-    if (densityProgress && spaceProgressDiv) {
-      densityProgress.style.width = `${lettersPercent}%`;
-      spaceProgressDiv.style.width = `${spacesPercent}%`;
-    }
-    document.getElementById('densityRatioText').innerHTML = `${lettersPercent.toFixed(1)}% letters`;
-    
-    // render letter frequency grid (A-Z counts)
-    const freqMap = getLetterFrequency(text);
-    renderFrequencyGrid(freqMap);
-    
-    localStorage.setItem('textBackupFreq', text);
+  function update() {
+    stats = analyze(editor.value);
+    put('chars', stats.characters); put('no-spaces', stats.compact); put('words', stats.words.length);
+    put('reading', duration(Math.ceil(stats.words.length / 200 * 60)));
+    ['copy','download','trim','clear'].forEach(id => { el(id).disabled = editor.value.length === 0; });
+    el('undo').disabled = previousAction === null;
+    updateGoal(); updateDetails();
   }
-  
-  const trimExtraSpaces = () => {
-    let current = textarea.value;
-    let trimmed = current.replace(/\s+/g, ' ').trim();
-    textarea.value = trimmed;
-    updateStats();
-  };
-  
-  const copyText = () => {
-    const text = textarea.value;
-    if (!text) { alert('Nothing to copy!'); return; }
-    navigator.clipboard.writeText(text).then(() => {
-      const copyBtn = document.querySelector('button[onclick="copyText()"]');
-      const originalHtml = copyBtn.innerHTML;
-      copyBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
-      setTimeout(() => { copyBtn.innerHTML = originalHtml; }, 1500);
-    }).catch(() => alert('Failed to copy'));
-  };
-  
-  const clearText = () => {
-    textarea.value = '';
-    updateStats();
-    localStorage.removeItem('textBackupFreq');
-  };
-  
-  const loadBackup = () => {
-    const saved = localStorage.getItem('textBackupFreq');
-    if (saved) {
-      textarea.value = saved;
-      updateStats();
-    } else {
-      updateStats();
-    }
-  };
-  
-  // Event listeners
-  textarea.addEventListener('input', updateStats);
-  window.copyText = copyText;
-  window.clearText = clearText;
-  window.trimExtraSpaces = trimExtraSpaces;
-  window.highlightLetterInText = highlightLetterInText;
-  window.scrollToTopLetter = scrollToTopLetter;
-  
-  loadBackup();
+  function applyAction(text, message) {
+    previousAction = editor.value; editor.value = text; update(); put('status', message); editor.focus();
+  }
+  editor.addEventListener('input', () => {
+    put('status', ''); cancelAnimationFrame(frame); frame = requestAnimationFrame(update);
+  });
+  el('limit').addEventListener('input', updateGoal);
+  el('mode').addEventListener('change', updateGoal);
+  el('details').addEventListener('toggle', updateDetails);
+  el('clear').addEventListener('click', () => applyAction('', 'Text cleared. Use Undo action to restore it.'));
+  el('trim').addEventListener('click', () => {
+    const trimmed = editor.value.split('\n').map(line => line.replace(/[\t ]+/g, ' ').trim()).join('\n').trim();
+    if (trimmed === editor.value) { put('status', 'No extra spaces to remove.'); return; }
+    applyAction(trimmed, 'Extra spaces removed. Use Undo action to restore them.');
+  });
+  el('undo').addEventListener('click', () => {
+    if (previousAction === null) return;
+    editor.value = previousAction; previousAction = null; update(); put('status', 'Previous text restored.'); editor.focus();
+  });
+  el('copy').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(editor.value); put('status', 'Text copied.'); }
+    catch (_) { editor.focus(); editor.select(); put('status', 'Text selected. Use Ctrl+C, Command+C or your device’s Copy command.'); }
+  });
+  el('download').addEventListener('click', () => {
+    const url = URL.createObjectURL(new Blob([editor.value], {type:'text/plain;charset=utf-8'}));
+    const a = document.createElement('a'); a.href = url; a.download = 'my-text.txt';
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+    put('status', 'Text file prepared for download.');
+  });
+  update();
+})();

@@ -4,239 +4,152 @@ title: Character Counter – Count Characters, Words & Spaces Online
 permalink: /character-counter
 description: "Free character counter to count characters, words, letters, spaces and sentences online. Check text length instantly for SEO, social media, essays and more."
 image: "/assets/images/character-count.jpg"
-last_modified_at: 2026-08-23
+last_modified_at: 2026-09-20
 ---
 <style>
- .card{border-radius:28px;border:none;background:#fffffffa;box-shadow:0 12px 28px #00000014}.stat-card{border-radius:24px;background:#fff;box-shadow:0 2px 8px #00000008;height:100%;transition:all .2s}.stat-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px #0000000f}textarea{border-radius:20px!important;font-size:1rem;line-height:1.6;border:1px solid #d4dce6;padding:1rem 1.25rem;resize:vertical;font-family:'SF Mono','Fira Code',monospace}textarea:focus{box-shadow:0 0 0 3px #0d6efd26;border-color:#0d6efd}.badge-counter{font-size:.75rem;background:#eef2f5;border-radius:30px;padding:.25rem .75rem}.freq-table-container{background:#f9fbfd;border-radius:20px;padding:1rem;border:1px solid #e9edf2;max-height:280px;overflow-y:auto}.freq-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:8px}.freq-item{background:#fff;border-radius:14px;padding:6px 8px;display:flex;align-items:center;justify-content:space-between;border:1px solid #e2e8f0;transition:all .15s;cursor:pointer}.freq-item:hover{transform:scale(1.02);background:#f8fafc;border-color:#cbd5e1}.freq-letter{font-weight:700;font-size:1rem;background:#eef2ff;width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;font-family:monospace}.freq-count{font-weight:700;font-size:.9rem;color:#1e293b}.freq-bar{height:4px;background:#3b82f6;border-radius:4px;margin-top:4px;transition:width .1s ease}.metric-icon{width:32px;font-size:1.2rem;color:#3b82f6;display:inline-block}.btn-icon{border-radius:40px;padding:.5rem 1.2rem;font-weight:500}hr{opacity:.2;margin:1rem 0}.readability-tag{font-size:.7rem;background:#eef2ff;border-radius:30px;padding:.2rem .7rem;display:inline-block;font-weight:500}@media (max-width: 768px){.freq-grid{grid-template-columns:repeat(auto-fill,minmax(75px,1fr))}.stat-card{margin-bottom:.5rem}}
- .progress-8 {  height: 8px;}
- </style>
+.ec-counter{--cc-blue:#2454bc;--cc-ink:#192d48;--cc-muted:#53647b;--cc-line:#dbe4ef;max-width:auto;margin:28px auto 48px;padding:0 16px;color:var(--cc-ink);line-height:1.6}
+.ec-counter *{box-sizing:border-box}.ec-counter [hidden]{display:none!important}.ec-counter button,.ec-counter input,.ec-counter select,.ec-counter textarea{font:inherit}.ec-counter button{cursor:pointer}.ec-counter button:disabled{opacity:.5;cursor:default}.ec-counter :is(button,input,select,textarea,summary,a):focus-visible{outline:3px solid #2267d8;outline-offset:3px}
+.ec-counter .cc-heading{text-align:center;margin:0 auto 25px;max-width:740px}.ec-counter h1{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:750;line-height:1.2;margin:0 0 12px}.ec-counter .cc-heading p{margin:0;color:var(--cc-muted)}.ec-counter .cc-kicker{display:block;color:var(--cc-blue);font-size:.78rem;letter-spacing:.12em;font-weight:700;text-transform:uppercase;margin-bottom:10px}
+.ec-counter .cc-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0 0 18px}.ec-counter .cc-stat{padding:17px 18px;border:1px solid var(--cc-line);border-radius:14px;background:#fff}.ec-counter .cc-stat:first-child{background:#edf4ff;border-color:#bcd1f3}.ec-counter .cc-stat dt{font-size:.85rem;font-weight:600;color:var(--cc-muted)}.ec-counter .cc-stat dd{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.3;font-weight:750;margin:5px 0 0;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}.ec-counter .cc-stat small{font-size:.75rem;color:var(--cc-muted)}
+.ec-counter .cc-workspace{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:18px;align-items:start}.ec-counter .cc-editor,.ec-counter .cc-goal{border:1px solid var(--cc-line);border-radius:16px;background:#fff;overflow:hidden;box-shadow:0 6px 24px #192d4806}.ec-counter .cc-toolbar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:14px 18px;background:#f7faff;border-bottom:1px solid var(--cc-line)}.ec-counter .cc-toolbar label{margin:0;font-weight:700}.ec-counter .cc-muted{color:var(--cc-muted);font-size:.85rem}.ec-counter textarea{display:block;width:100%;min-height:335px;resize:vertical;padding:20px;border:0;background:#fff;color:var(--cc-ink);font-size:1rem;line-height:1.8;border-radius:0}.ec-counter textarea:focus{outline:2px solid var(--cc-blue);outline-offset:-3px}.ec-counter textarea::placeholder{color:#6b7d91}
+.ec-counter .cc-actions{display:flex;gap:8px;flex-wrap:wrap;padding:14px 16px;border-top:1px solid var(--cc-line)}.ec-counter .cc-btn{border:1px solid #c9d5e5;border-radius:8px;padding:8px 12px;min-height:42px;background:#fff;color:var(--cc-ink);font-size:.87rem;font-weight:600}.ec-counter .cc-btn:hover:not(:disabled){background:#edf4ff;border-color:#8baee5}.ec-counter .cc-primary{background:var(--cc-blue);border-color:var(--cc-blue);color:#fff}.ec-counter .cc-primary:hover:not(:disabled){background:#1a4093;color:#fff}.ec-counter .cc-danger{color:#a92a35}.ec-counter .cc-status{margin:0;padding:0 18px 12px;min-height:32px;font-size:.83rem;color:var(--cc-muted)}
+.ec-counter .cc-goal{padding:20px}.ec-counter h2{font-size:1.35rem;font-weight:700;line-height:1.35;margin:0 0 14px}.ec-counter .cc-goal h2{font-size:1.05rem;margin-bottom:6px}.ec-counter .cc-goal p{margin:0 0 16px}.ec-counter .cc-field{display:block;font-size:.85rem;font-weight:600;margin:15px 0 6px}.ec-counter :is(input,select){width:100%;min-height:44px;border:1px solid #bccbdd;border-radius:8px;padding:8px 10px;background:#fff;color:var(--cc-ink)}.ec-counter progress{display:block;width:100%;height:10px;margin:18px 0 10px;accent-color:var(--cc-blue)}.ec-counter .cc-goal.over progress{accent-color:#b32939}.ec-counter .cc-goal.over #cc-remaining{color:#b32939}.ec-counter #cc-remaining{font-size:.95rem;font-weight:700;overflow-wrap:anywhere}.ec-counter #cc-limit-error{font-size:.8rem;color:#a92a35;margin-top:6px}
+.ec-counter .cc-note{font-size:.8rem;color:var(--cc-muted);margin:13px 0 22px}.ec-counter .cc-details{border:1px solid var(--cc-line);border-radius:12px;margin-top:18px;background:#f9fbfe}.ec-counter summary{cursor:pointer;font-weight:650;padding:16px 18px}.ec-counter .cc-details-body{padding:0 18px 18px}.ec-counter .cc-secondary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:5px 0 18px}.ec-counter .cc-secondary dt{color:var(--cc-muted);font-size:.82rem}.ec-counter .cc-secondary dd{font-size:1.1rem;font-weight:700;margin:3px 0;overflow-wrap:anywhere}.ec-counter .cc-letters{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));gap:6px}.ec-counter .cc-letter{text-align:center;border:1px solid var(--cc-line);background:#fff;border-radius:6px;padding:6px 2px;font-size:.8rem}.ec-counter .cc-letter b{display:block;color:var(--cc-blue)}.ec-counter h3{font-size:1.05rem;margin:20px 0 10px;font-weight:700}
+.ec-counter .cc-article{margin-top:34px;padding-top:26px;border-top:1px solid var(--cc-line)}.ec-counter .cc-article p,.ec-counter .cc-article li{color:#43556d}.ec-counter .cc-guide{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:25px 0}.ec-counter .cc-guide section{padding:22px;background:#f7faff;border-radius:14px}.ec-counter .cc-guide ol{padding-left:20px;margin-bottom:0}.ec-counter .cc-faq{border-bottom:1px solid var(--cc-line)}.ec-counter .cc-faq summary{padding-left:0}.ec-counter .cc-faq p{padding:0 0 16px;margin:0}.ec-counter .cc-example{padding:16px;background:#edf4ff;border-radius:10px}.ec-counter .cc-example code{color:#193d80}
+@media(max-width:800px){.ec-counter .cc-workspace{grid-template-columns:1fr}.ec-counter .cc-goal{box-shadow:none}.ec-counter textarea{min-height:290px}.ec-counter .cc-guide{grid-template-columns:1fr;gap:14px}}
+@media(max-width:520px){.ec-counter{padding:0 12px;margin-top:22px}.ec-counter .cc-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.ec-counter .cc-stat{padding:12px}.ec-counter .cc-secondary{grid-template-columns:repeat(2,minmax(0,1fr))}.ec-counter .cc-letters{grid-template-columns:repeat(7,minmax(0,1fr))}.ec-counter .cc-actions .cc-btn{flex:1 1 auto}.ec-counter textarea{padding:15px}}
+</style>
 
-<div class="container-lg p-3">
-<h1>Character Counter – Count Characters, Words & Spaces Online</h1>
-<p class="lead"><strong>Count characters, words and spaces instantly with our free online Character Counter.</strong> Paste or type your text to see the total character count, word count, sentences, paragraphs and other useful text statistics in real time. The tool works on mobile and desktop without requiring registration.</p>
-<div class="card shadow p-4 p-xl-5">
- <label for="textInput" class="form-label fw-semibold mb-2"><i class="fa-regular fa-keyboard me-1"></i> Text Editor</label>
-  <textarea id="textInput" class="form-control" rows="8" placeholder="Paste or type your text here" aria-label="Text input for analysis"></textarea>
- <section class="mt-4" aria-label="Character Counter Statistics">
-  <div class="row g-4 mt-1">
-    <!-- LEFT CARD -->
-    <div class="col-md-6">
-      <div class="stat-card card border-0 rounded-4 p-3 p-lg-4 shadow-sm h-100">
-        <h3 class="h5 fw-bold mb-3 text-primary"><i class="fa-solid fa-chart-simple me-2"></i> Character Counter Core Stats </h3>
-        <div class="row gy-3 text-center">
-          <div class="col-6"><div class="small text-muted">Characters</div><div id="charCount" class="fs-2 fw-bold text-dark">0</div></div>
-          <div class="col-6"><div class="small text-muted">Words</div><div id="wordCount" class="fs-2 fw-bold text-dark">0</div></div>
-          <div class="col-6"><div class="small text-muted">Spaces</div><div id="spaceCount" class="fw-semibold fs-5">0</div></div>
-          <div class="col-6"><div class="small text-muted">Sentences</div><div id="sentenceCount" class="fw-semibold fs-5">0</div></div>
-          <div class="col-6"><div class="small text-muted">Paragraphs</div><div id="paragraphCount" class="fw-semibold fs-5">0</div></div>
-          <div class="col-6"><div class="small text-muted">Line Breaks</div><div id="lineCount" class="fw-semibold fs-5">0</div></div>
-        </div>
-        <hr>
-        <!-- Lexical Density -->
-        <div>
-          <div class="d-flex justify-content-between align-items-center"><strong>Lexical Density</strong><span id="lexicalDensity" class="badge bg-info text-dark">0%</span></div>
-          <div class="progress mt-2">
-            <div id="lexicalProgress" class="progress-bar bg-info"></div>
-          </div>
-          <small class="text-muted">Measures unique words vs total words (content richness indicator)</small>
-        </div>
-        <div class="mt-3 pt-2 border-top d-flex justify-content-between"><span>Total Letters (A–Z)</span><strong id="totalLettersCount">0</strong></div>
+<div class="ec-counter" id="ec-character-counter">
+  <header class="cc-heading">
+    <span class="cc-kicker">Free online text tool</span>
+    <h1>Character Counter</h1>
+    <p>Count characters with and without spaces as you type. Check your word count, estimate reading time and keep your text within a custom limit.</p>
+  </header>
+  <noscript><p>Please enable JavaScript to use the live character counter.</p></noscript>
+  <dl class="cc-stats" aria-label="Text statistics">
+    <div class="cc-stat"><dt>Characters</dt><dd id="cc-chars">0</dd><small>Including spaces &amp; line breaks</small></div>
+    <div class="cc-stat"><dt>Without spaces</dt><dd id="cc-no-spaces">0</dd><small>Excluding all whitespace</small></div>
+    <div class="cc-stat"><dt>Words</dt><dd id="cc-words">0</dd><small>Updates as you type</small></div>
+    <div class="cc-stat"><dt>Reading time</dt><dd id="cc-reading">0 sec</dd><small>Estimated at 200 words/min</small></div>
+  </dl>
+  <div class="cc-workspace">
+    <section class="cc-editor" aria-label="Text editor">
+      <div class="cc-toolbar"><label for="cc-text">Your text</label><span class="cc-muted">Live counts · No submit button</span></div>
+      <textarea id="cc-text" placeholder="Type or paste your text here…" aria-describedby="cc-count-note" spellcheck="true"></textarea>
+      <div class="cc-actions">
+        <button type="button" class="cc-btn cc-primary" id="cc-copy" disabled>Copy text</button>
+        <button type="button" class="cc-btn" id="cc-download" disabled>Download .txt</button>
+        <button type="button" class="cc-btn" id="cc-trim" disabled>Trim spaces</button>
+        <button type="button" class="cc-btn" id="cc-undo" disabled>Undo action</button>
+        <button type="button" class="cc-btn cc-danger" id="cc-clear" disabled>Clear</button>
       </div>
+      <p class="cc-status" id="cc-status" role="status" aria-live="polite"></p>
+    </section>
+    <aside class="cc-goal" id="cc-goal" aria-labelledby="cc-goal-title">
+      <h2 id="cc-goal-title">Stay within your limit</h2>
+      <p class="cc-muted">Set a target for your caption, assignment or form field.</p>
+      <label class="cc-field" for="cc-limit">Character limit (optional)</label>
+      <input type="number" id="cc-limit" min="1" max="1000000000" step="1" inputmode="numeric" placeholder="e.g. 160" aria-describedby="cc-limit-error">
+      <p id="cc-limit-error" hidden>Enter a whole number from 1 to 1,000,000,000.</p>
+      <label class="cc-field" for="cc-mode">Count toward limit</label>
+      <select id="cc-mode"><option value="all">Including spaces</option><option value="compact">Without whitespace</option></select>
+      <progress id="cc-progress" value="0" max="100" aria-label="Character limit used" hidden></progress>
+      <p id="cc-remaining" style="margin-top:16px">No limit set</p>
+      <span class="cc-muted">Your text stays editable even when you go over the limit.</span>
+    </aside>
+  </div>
+  <p class="cc-note" id="cc-count-note">Counts update in your browser. This counter does not upload or save your text. Characters use Unicode code points; platforms may count emoji and links differently.</p>
+  <details class="cc-details" id="cc-details">
+    <summary>More text statistics</summary>
+    <div class="cc-details-body">
+      <dl class="cc-secondary">
+        <div><dt>Spaces</dt><dd id="cc-spaces">0</dd></div>
+        <div><dt>Sentences (estimated)</dt><dd id="cc-sentences">0</dd></div>
+        <div><dt>Paragraphs</dt><dd id="cc-paragraphs">0</dd></div>
+        <div><dt>Line breaks</dt><dd id="cc-lines">0</dd></div>
+        <div><dt>Letters (all scripts)</dt><dd id="cc-letters-total">0</dd></div>
+        <div><dt>Unique words</dt><dd id="cc-unique">0</dd></div>
+        <div><dt>Unique-word ratio</dt><dd id="cc-ratio">0%</dd></div>
+        <div><dt>Speaking time</dt><dd id="cc-speaking">0 sec</dd></div>
+      </dl>
+      <p class="cc-muted">Paragraphs are separated by blank lines. Unique words ignore case. The unique-word ratio is not a readability or writing-quality score. Speaking time assumes 130 words per minute.</p>
+      <h3>Letter frequency (A–Z)</h3>
+      <div class="cc-letters" id="cc-frequency" aria-label="Letter counts, ignoring case"></div>
     </div>
-    <!-- RIGHT CARD -->
-<div class="col-md-6">
-  <div class="stat-card card border-0 rounded-4 p-3 p-lg-4 shadow-sm h-100">
-    <h3 class="h5 fw-bold mb-3 text-primary"><i class="fa-solid fa-chart-line me-2"></i> Readability & Reading Time </h3>
-    <ul class="list-unstyled mb-3 small">
-     <li class="mb-2"><strong>Reading Time:</strong><span id="readingTime" class="fw-bold">0</span> min<span id="readingSecs" class="text-muted">(0 sec)</span></li>
-     <li class="mb-2"><strong>Speaking Time:</strong> <span id="speakingTime" class="fw-bold">0</span> min</li>
-     <li class="mb-2"><strong>Average Word Length:</strong><span id="avgWordLength">0</span> chars </li>
-     <li class="mb-2"><strong>Character Density:</strong><span id="charDensity">0%</span></li>
-     <li><strong>Readability Score (Flesch):</strong><span id="fleschScore" class="fw-semibold">—</span><span id="readabilityLabel" class="badge bg-secondary ms-2"></span>     </li>
-   </ul>
-  <!-- Ratio Bar -->
-   <div class="mt-3">
-    <div class="d-flex justify-content-between small">
-     <span>Letter vs Space Ratio</span><span id="densityRatioText">0% letters</span>
-    </div>
-    <div class="progress mt-1 progress-8">
-     <div id="densityProgress" class="progress-bar bg-success"></div>
-     <div id="spaceProgress" class="progress-bar bg-secondary"></div>
-    </div>
-   </div>
-  </div>
- </div>
-  </div>
-</section>
- <!-- Letter Frequency Box (A-Z count: A=10, B=20, C=2, D=3 style) -->
-  <div class="row mt-4">
-  <div class="col-12">
-  <div class="border-0 bg-transparent">
-  <div class="d-flex align-items-center justify-content-between mb-2 flex-wrap">
-    <h5 class="mb-2 fw-semibold"><i class="fa-solid fa-table-list me-2 text-primary"></i> Letter Frequency (A–Z)</h5>
-    <small class="text-muted"><i class="fa-regular fa-chart-bar"></i> Click any letter to see count | Case-insensitive</small>
-   </div>
-   <div class="freq-table-container" id="freqContainer">
-    <div id="frequencyGrid" class="freq-grid">
-    <div class="text-center text-muted p-3">Loading letters...</div>
-   </div>
-   </div>
-   </div>
-  </div>
-  </div>
-  <!-- Action buttons -->
-  <div class="mt-4 d-flex gap-3 flex-wrap justify-content-between align-items-center">
-   <div class="d-flex gap-2">
-    <button class="btn btn-primary btn-icon" onclick="copyText()"><i class="fa-solid fa-copy"></i> Copy Text</button>
-    <button class="btn btn-outline-danger btn-icon" onclick="clearText()"><i class="fa-solid fa-eraser"></i> Clear</button>
-    <button class="btn btn-outline-secondary btn-icon" onclick="trimExtraSpaces()"><i class="fa-solid fa-text-slash"></i> Trim Spaces</button>
-   </div>
-   </div>
-   </div>
-  </div>
+  </details>
 
 <!-- Article Content -->
 <div class="article-container">
-       <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
     <div class="d-flex align-items-center gap-3 flex-wrap">
       {% include naren_create.html %}
       {% include reema_verify.html %}
     </div>
-    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
-  </div>
-<!-- What is Section -->
-<section class="mb-5">
-  <h2 class="h3 fw-bold mb-3 pb-2">What is a Character Counter?</h2>
-  <p class="lead">A <strong>Character Counter</strong> is a free online tool that helps you instantly count the number of characters, words, spaces, sentences, and paragraphs in any text. This character counter is widely used for SEO meta descriptions, social media posts, SMS messages, and academic writing where strict character limits apply. It provides real-time results, helping you optimize your content quickly and accurately.
-  </p>
-
-  <div class="alert alert-info mt-4">
-    Our Character Counter is completely free, requires no sign-up, and works seamlessly on both desktop and mobile devices.
-  </div>
-</section>
-<!-- Advanced Section -->
-<div class="bg-light p-4 rounded mt-4">
-   <h2 class="text-primary"><i class="fas fa-star me-2"></i>What Makes This Character Counter Advanced?</h2>
-    <p>Unlike basic tools, this <strong>Character Counter</strong> offers detailed analytics powered by real-time processing. It not only counts characters and words but also provides deeper insights like lexical density, readability score, and letter frequency analysis.</p>
-    <ul class="list-group list-group-flush">
-     <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Real-time character, word, and sentence counting</li>
-     <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Letter frequency analyzer (A–Z tracking)</li>
-     <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Reading and speaking time estimation</li>
-     <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Flesch readability score calculation</li>
-     <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Lexical density (unique words ratio)</li>
-     <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i>Character vs space ratio visualization</li>
-    </ul>
-   </div>
-<!-- Why Use Section -->
-<section id="benefits" class="p-4">
-  <h2 class="h3 fw-bold mb-4 border-bottom pb-2">Why Use a Character Counter?</h2>
-  <p class="lead"> A Character Counter is essential for ensuring your content fits platform-specific limits such as Twitter (280 characters), Google meta descriptions (~160 characters), and SMS (160 characters). It helps you stay precise, professional, and within limits.</p>
-
-  <h3 class="h4 mt-5 mb-3 fw-bold">Who Should Use This Tool?</h3>
-  <div class="row mt-4">
-    <div class="col-md-6 mb-4">
-      <h4 class="h5 fw-bold">✍️ Content Creators</h4>
-      <p>Optimize social media posts, ad copy, and emails while staying within character limits.</p>
-    </div>
-    <div class="col-md-6 mb-4">
-      <h4 class="h5 fw-bold">🎓 Students & Academics</h4>
-      <p>Meet essay, thesis, and research submission requirements with accurate character counts.</p>
-    </div>
-    <div class="col-md-6 mb-4">
-      <h4 class="h5 fw-bold">💼 Professionals</h4>
-      <p>Create concise resumes, reports, and presentations with proper length control.</p>
-    </div>
-    <div class="col-md-6 mb-4">
-      <h4 class="h5 fw-bold">💻 Developers</h4>
-      <p>Validate input length for forms, APIs, and databases to avoid overflow issues.</p>
-    </div>
-
-  </div>
-</section>
-
-<section class="mb-5">
-  <h2 class="h3 fw-bold mb-3">Character Counter, Word Counter & Text Analyzer</h2>
-  <p class="lead"> Our <strong>Character Counter</strong> is not just a basic counting tool—it also works as a powerful <strong>word counter</strong>, <strong>letter counter</strong>, and complete <strong>text analyzer</strong>. It helps you understand your content in detail and optimize it for different platforms.  </p>
-  <p> This advanced <strong>character count tool</strong> provides accurate results for characters, words, spaces, and text structure in real time. Whether you're writing SEO content, social media posts, or academic documents, this tool ensures your text meets the required limits and quality standards. </p>
-  <div class="row mt-4">
-    <div class="col-md-6 mb-3">
-      <h3 class="h5 fw-bold">📝 Word Counter</h3>
-      <p>Quickly count the total number of words in your text for blogs, essays, and professional writing.</p>
-    </div>
-    <div class="col-md-6 mb-3">
-      <h3 class="h5 fw-bold">🔤 Letter Counter</h3>
-      <p>Track individual letter usage with A–Z analysis to improve writing patterns and keyword usage.</p>
-    </div>
-    <div class="col-md-6 mb-3">
-      <h3 class="h5 fw-bold">📊 Character Count Tool</h3>
-      <p>Measure exact text length including spaces and symbols for SEO and platform-specific limits.</p>
-    </div>
-    <div class="col-md-6 mb-3">
-      <h3 class="h5 fw-bold">📈 Text Analyzer</h3>
-      <p>Analyze readability, lexical density, and writing quality to create more effective content.</p>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>3 min read</span>
     </div>
   </div>
-</section>
-
-<!-- How to Use -->
-<section id="usage" class="mb-5">
-  <h2 class="h3 fw-bold mb-4 border-bottom pb-2">How to Use the Character Counter</h2>
-  <p class="lead">Using our Character Counter is quick and simple:</p>
-  <ol>
-    <li><strong>Open the tool</strong> – No sign-up required.</li>
-    <li><strong>Paste or type your text</strong> into the editor.</li>
-    <li><strong>View instant results</strong> for characters, words, and more.</li>
-  </ol>
- <h2>Character Counter vs Word Counter</h2>
-  <p>A Character Counter counts every letter, number, and space, while a word counter counts only words. For SEO and social media, character count is more important because platforms limit characters, not words.</p>
-
-  <div class="alert alert-warning mt-3"><strong>Pro Tip:</strong> Bookmark this Character Counter for quick access whenever you need to check text length instantly. </div>
-</section>
-
+<!-- Article-->
+ <h2 class="h3 fw-bold mb-3 pb-2">What is a Character Counter?</h2>
+  <p class="lead">A <strong>Character Counter</strong> is a free online tool that helps you instantly count the number of characters, words, spaces, sentences, and paragraphs in any text. This character counter is widely used for SEO meta descriptions, social media posts, SMS messages, and academic writing where strict character limits apply. It provides real-time results, helping you optimize your content quickly and accurately.</p>
+ <h2>Count characters with and without spaces</h2>
+ <p>A character counter measures the length of your text, including letters, numbers, punctuation and symbols. Use the total character count when a field includes spaces in its limit, or the count without whitespace when your instructions exclude spaces.</p>
+ <p class="cc-example"><strong>Example:</strong> <code>Hello world!</code> contains <strong>12 characters</strong>, <strong>11 characters without spaces</strong> and <strong>2 words</strong>.</p>
+    <div class="cc-guide">
+      <section><h2>How to use the counter</h2><ol><li>Type or paste your text into the editor.</li><li>Read the live character and word counts above it.</li><li>Enter an optional character limit to see your remaining allowance.</li><li>Copy your finished text or download it as a text file.</li></ol></section>
+      <section><h2>Useful editing controls</h2><p><strong>Trim spaces</strong> removes outer whitespace and repeated spaces or tabs inside each line while preserving internal line breaks.</p><p><strong>Undo action</strong> restores the text from before your most recent Trim spaces or Clear action. Use your keyboard’s undo shortcut for regular typing.</p></section>
+    </div>
+    <h2>What do the counts mean?</h2>
+    <p><strong>Characters</strong> includes spaces, punctuation, tabs and line breaks. Each Unicode code point counts once; a combined emoji can contain several code points. <strong>Without spaces</strong> excludes all whitespace, including tabs and line breaks. <strong>Spaces</strong> in the detailed panel counts ordinary space characters only.</p>
+    <p><strong>Word counts</strong> use your browser’s word segmentation when available, with a letter-and-number-based fallback. Counts may differ from a word processor, especially for hyphenated text and languages without spaces. Reading and speaking times are estimates, not timers.</p>
+    <h2>Character limits for writing</h2>
+    <p>Use a custom target for short descriptions, captions, application forms or assignments. For SEO titles and descriptions, character counts are a drafting guide: a search preview may display a different amount of text depending on screen width and the query. For messaging and social platforms, verify the final count in the destination app because encoding, emoji and URLs can affect its limit.</p>
+    
 <!-- FAQ Section -->
 <section class="mb-5">
   <h2 class="mb-4">FAQ on Character Counter</h2>
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
-      <div class="fw-bold text-primary">1. Why is a Character Counter important? </div>
-      <p class="mb-0"> A Character Counter helps ensure your text stays within platform limits such as social media posts, SMS messages, and SEO meta descriptions. It improves content accuracy, prevents text truncation, and helps maintain professional communication.</p>
+      <div class="fw-bold text-primary">Does this character counter include spaces?</div>
+      <p class="mb-0">Yes. The main Characters count includes spaces, tabs and line breaks. The Without spaces count excludes all whitespace.</p>
     </div>
   </div>
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
-      <div class="fw-bold text-primary">2. Does the Character Counter include spaces? </div>
-      <p class="mb-0">Yes, by default a Character Counter includes spaces along with letters, numbers, and symbols. Since most platforms count spaces as characters, this ensures accurate results. You can also choose to exclude spaces if required.</p>
+      <div class="fw-bold text-primary">Why can an emoji count as more than one character?</div>
+      <p class="mb-0">This tool counts Unicode code points. Some emoji combine multiple code points, so a single visible symbol can add more than one to the count. Other apps may use different counting rules.</p>
     </div>
   </div>
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
-      <div class="fw-bold text-primary">3. What’s the difference between characters with and without spaces?</div>
-      <p class="mb-0">Characters with spaces include every letter, number, symbol, and space between words. Characters without spaces count only letters, numbers, and symbols, excluding blank spaces. This distinction is important for platforms with strict character limits. </p>
+      <div class="fw-bold text-primary">What happens when I exceed my character limit?</div>
+      <p class="mb-0">The limit indicator shows how many characters you are over. Your text is not cut off, and you can continue editing or choose a different limit.</p>
     </div>
   </div>
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
-      <div class="fw-bold text-primary">4. Is this Character Counter tool free to use? </div>
-      <p class="mb-0">Yes, our Character Counter is completely free to use with no sign-up required. You can access it anytime to count characters, words, and spaces instantly.</p>
+      <div class="fw-bold text-primary">Is my text saved?</div>
+      <p class="mb-0">The counter processes text in your browser and does not upload it or store it in local storage. Copy or download your text before leaving the page.</p>
     </div>
   </div>
   <div class="card mb-3 border-0 bg-light">
     <div class="card-body">
-      <div class="fw-bold text-primary">5. Who can use a Character Counter?</div>
-      <p class="mb-0">A Character Counter is useful for writers, students, marketers, and developers. It helps optimize content for SEO, social media, academic writing, and technical applications where text length matters. </p>
+      <div class="fw-bold text-primary">How is reading time calculated?</div>
+      <p class="mb-0">Reading time is estimated at 200 words per minute. Speaking time is estimated at 130 words per minute. Actual times depend on the reader, language and text.</p>
     </div>
   </div>
-
 </section>
-
-
 <!-- Did You Know? -->
 <div class="card border-0 bg-light">
-  <div class="card-body">
-    <h5 class="d-flex align-items-center"><i class="fas fa-info-circle me-3 text-primary"></i>Did You Know? </h5>
-     <p class="mb-0">A standard SMS message is limited to 160 characters, making every word matter. Google search titles get cut off after around 60 characters, and Twitter/X posts are capped at 280 characters. Whether you're writing for SEO, social media, or mobile — tracking your character count ensures your message fits and performs better.</p>
-    </div>
-  </div>
+ <div class="card-body">
+ <h5 class="d-flex align-items-center"><i class="fas fa-info-circle me-3 text-primary"></i>Did You Know? </h5>
+ <p class="mb-0">A standard SMS message is limited to 160 characters, making every word matter. Google search titles get cut off after around 60 characters, and Twitter/X posts are capped at 280 characters. Whether you're writing for SEO, social media, or mobile — tracking your character count ensures your message fits and performs better.</p>
+ </div>
+</div>
+ 
+
 
 <script src="{{ '/assets/js/character-count.js' | relative_url }}"></script>
 <script type="application/ld+json">
@@ -294,18 +207,6 @@ last_modified_at: 2026-08-23
 }
 </script>
 
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Character Counter",
-  "url": "https://easycalculator.org/character-counter",
-  "description": "Free online character counter for counting characters, words, spaces, sentences and paragraphs.",
-  "applicationCategory": "UtilitiesApplication",
-  "operatingSystem": "Any",
-  "browserRequirements": "Requires JavaScript-enabled web browser",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
-}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Character Counter","url":"https://easycalculator.org/character-counter","description":"Count characters with and without spaces, words, sentences and paragraphs. Set a custom character limit and download your text.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
