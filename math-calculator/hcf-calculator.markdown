@@ -4,25 +4,28 @@ title: HCF Calculator - Find Highest Common Factor Instantly
 permalink: /hcf-calculator
 description: "Use our free HCF Calculator to quickly find the Highest Common Factor (HCF) of two or more numbers. Fast, accurate, and easy to use—perfect for students."
 image: "/assets/images/og/hcf-calculator-with-example.jpg"
-last_modified_at: 2026-02-03
+last_modified_at: 2026-09-20
 ---
 
 <style>
- .math-card{transition:transform .3s ease,box-shadow .3s ease}.math-card:hover{transform:translateY(-5px);box-shadow:0 10px 20px #0000001a}.prime-factor{display:inline-block;background-color:#e0f7fa;border-radius:4px;padding:3px 8px;margin:2px;font-weight:500}.step-number{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:#4361ee;color:#fff;border-radius:50%;font-weight:700;margin-right:10px}.method-icon{font-size:20px;background:#4361ee1a;width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:50%;margin-right:15px} .max-width-600 {  max-width: 600px;}
- </style>
-<!-- Icons -->
- <div class="py-5">
-    <div class="card mx-auto p-4 shadow-sm max-width-600">
-      <h1 class="text-center mb-3 text-primary"><i class="fas fa-calculator me-2"></i>HCF Calculator </h1>
-      <p class="text-center text-muted">Enter numbers separated by spaces or commas (e.g., 12, 18 24)</p>
-      <div class="mb-3">
-        <input type="text" id="numbersInput" class="form-control" placeholder="Enter numbers..." />
-      </div>
-      <div class="d-grid mb-3">
-        <button class="btn btn-success" onclick="calculateHCF()"><i class="fas fa-equals me-1"></i>Calculate HCF </button>
-      </div>
-      <div id="result" class="text-center fs-1 fw-semibold text-primary"></div>
-    </div>
+#ec-hcf{max-width:900px;margin:0 auto;color:#1e293b}
+#ec-hcf .ec-shell{border:1px solid #e2e8f0;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 8px 28px rgba(15,23,42,.06)}
+#ec-hcf .ec-header{background:linear-gradient(135deg,#eff6ff,#f8fafc);padding:28px 24px;border-bottom:1px solid #e2e8f0}
+#ec-hcf .ec-body{padding:24px}
+#ec-hcf .form-control{border-radius:10px;font-size:1.05rem;min-height:48px}
+#ec-hcf .btn{border-radius:10px;min-height:44px}
+#ec-hcf .ec-answer{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:14px;padding:22px}
+#ec-hcf .ec-value{color:#166534;font-size:clamp(1.8rem,5vw,2.8rem);line-height:1.2;font-weight:700;overflow-wrap:anywhere}
+#ec-hcf .ec-wrap{overflow-wrap:anywhere}
+#ec-hcf .ec-detail{border:1px solid #e2e8f0;border-radius:12px;padding:16px}
+#ec-hcf summary{cursor:pointer;font-weight:600}
+#ec-hcf li+li{margin-top:12px}
+#ec-hcf [hidden]{display:none!important}
+@media(max-width:575px){#ec-hcf .ec-header,#ec-hcf .ec-body{padding:20px 16px}}
+</style>
+
+<div id="ec-hcf" class="py-3"><div class="ec-shell"><div class="ec-header text-center"><h1 class="h2 fw-bold mb-2">HCF Calculator</h1><p class="text-muted mb-0">Find the highest common factor of 2 to 5 numbers, with calculation steps.</p></div><div class="ec-body"><form id="ec-hcf-form" novalidate=""><p id="ec-hcf-help" class="text-muted small mb-3">Enter positive whole numbers from 1 to 1,000,000,000. The first two numbers are required.</p><div class="row g-3 mb-4"><div class="col-6 col-md-4"><label for="ec-hcf-num1" class="form-label fw-semibold">Number 1</label><input type="text" inputmode="numeric" pattern="[0-9]+" maxlength="10" class="form-control form-control-lg" id="ec-hcf-num1" aria-describedby="ec-hcf-help ec-hcf-error1" required="" autocomplete="off" /><div id="ec-hcf-error1" class="invalid-feedback"></div></div><div class="col-6 col-md-4"><label for="ec-hcf-num2" class="form-label fw-semibold">Number 2</label><input type="text" inputmode="numeric" pattern="[0-9]+" maxlength="10" class="form-control form-control-lg" id="ec-hcf-num2" aria-describedby="ec-hcf-help ec-hcf-error2" required="" autocomplete="off" /><div id="ec-hcf-error2" class="invalid-feedback"></div></div><div class="col-6 col-md-4"><label for="ec-hcf-num3" class="form-label fw-semibold">Number 3 <span class="text-muted small fw-normal">(optional)</span></label><input type="text" inputmode="numeric" pattern="[0-9]+" maxlength="10" class="form-control form-control-lg" id="ec-hcf-num3" aria-describedby="ec-hcf-help ec-hcf-error3" autocomplete="off" /><div id="ec-hcf-error3" class="invalid-feedback"></div></div><div class="col-6 col-md-4"><label for="ec-hcf-num4" class="form-label fw-semibold">Number 4 <span class="text-muted small fw-normal">(optional)</span></label><input type="text" inputmode="numeric" pattern="[0-9]+" maxlength="10" class="form-control form-control-lg" id="ec-hcf-num4" aria-describedby="ec-hcf-help ec-hcf-error4" autocomplete="off" /><div id="ec-hcf-error4" class="invalid-feedback"></div></div><div class="col-6 col-md-4"><label for="ec-hcf-num5" class="form-label fw-semibold">Number 5 <span class="text-muted small fw-normal">(optional)</span></label><input type="text" inputmode="numeric" pattern="[0-9]+" maxlength="10" class="form-control form-control-lg" id="ec-hcf-num5" aria-describedby="ec-hcf-help ec-hcf-error5" autocomplete="off" /><div id="ec-hcf-error5" class="invalid-feedback"></div></div></div><div class="row g-2"><div class="col-12 col-sm-6"><button type="submit" class="btn btn-primary w-100 fw-semibold">Calculate HCF</button></div><div class="col-6 col-sm-3"><button type="button" id="ec-hcf-example" class="btn btn-outline-primary w-100">Try example</button></div><div class="col-6 col-sm-3"><button type="reset" class="btn btn-outline-secondary w-100">Reset</button></div></div></form><p id="ec-hcf-status" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p><section tabindex="-1" id="ec-hcf-result" class="mt-4" aria-labelledby="ec-hcf-title" hidden=""><div class="ec-answer"><h2 id="ec-hcf-title" class="h6 text-success mb-2">Highest Common Factor (HCF)</h2><div id="ec-hcf-value" class="ec-value"></div><p class="small text-muted mt-3 mb-0 ec-wrap">Input numbers: <span id="ec-hcf-inputs"></span></p></div><div class="d-flex flex-wrap justify-content-between align-items-center gap-2 py-3"><p class="mb-0">LCM: <strong id="ec-hcf-lcm"></strong></p><span class="small text-muted">Exact integer result</span></div><details class="ec-detail mb-3" open=""><summary>Calculation steps</summary><p class="small text-muted mt-3">Divide the larger number by the smaller number, then repeat with the divisor and remainder. The final non-zero divisor is the HCF. For more numbers, continue with the previous HCF.</p><ol id="ec-hcf-steps" class="ps-4 mb-0 ec-wrap"></ol></details><details class="ec-detail"><summary>Prime factorization</summary><div class="table-responsive mt-3"><table class="table table-bordered align-middle mb-2"><thead class="table-light"><tr><th scope="col">Number</th><th scope="col">Prime factors</th></tr></thead><tbody id="ec-hcf-factors"></tbody></table></div><p class="small text-muted mb-2">Use only primes shared by every input, taking the lowest power of each. If none are shared, the HCF is 1.</p><p id="ec-hcf-prime-result" class="mb-0 ec-wrap"></p></details></section></div><div class="bg-light text-muted text-center small p-3 border-top">The HCF (also called GCD) is the largest positive integer that divides every input exactly.</div></div></div>
+
 
 <!-- Article Content -->
 <div class="article-container">
@@ -31,7 +34,10 @@ last_modified_at: 2026-02-03
       {% include naren_create.html %}
       {% include reema_verify.html %}
     </div>
-    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>3 min read</span>
+    </div>
   </div>
    <!-- Article-->
   <h2 class="mb-1">What is an HCF Calculator?</h2>
@@ -121,7 +127,7 @@ last_modified_at: 2026-02-03
       </section>
       <!-- Did You Know? -->
  </div>
-</div>
+
  
 <script src="{{ '/assets/js/math/hcf-calc.js' | relative_url }}"></script>
 <script type="application/ld+json">
