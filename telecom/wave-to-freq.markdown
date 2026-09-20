@@ -39,7 +39,7 @@ last_modified_at: 2026-09-20
  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
   <div class="d-flex align-items-center gap-3 flex-wrap">
    {% include naren_create.html %}
-   {% include reema_verify.html %}
+   {% include bahadur.html %}
   </div>
  <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
   <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
