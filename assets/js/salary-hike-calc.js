@@ -1,270 +1,95 @@
-
-    (function() {
-      // ----- DOM elements -----
-      const currentInput = document.getElementById('currentSalary');
-      const optionNewCard = document.getElementById('optionNewSalaryCard');
-      const optionPercentCard = document.getElementById('optionPercentCard');
-      const activeBadge = document.getElementById('activeModeBadge');
-      const newSalaryGroup = document.getElementById('newSalaryFieldGroup');
-      const percentGroup = document.getElementById('percentFieldGroup');
-      const newSalaryInput = document.getElementById('newSalaryInput');
-      const percentSlider = document.getElementById('hikePercentSlider');
-      const percentNumber = document.getElementById('hikePercentNumber');
-
-      // result spans
-      const resultNewAnnual = document.getElementById('resultNewAnnual');
-      const resultHikePercent = document.getElementById('resultHikePercent');
-      const resultHikeAmount = document.getElementById('resultHikeAmount');
-      const displayCurrent = document.getElementById('displayCurrent');
-      const displayHikeAmount = document.getElementById('displayHikeAmount');
-      const displayRevised = document.getElementById('displayRevised');
-      const monthlyCurrent = document.getElementById('monthlyCurrent');
-      const monthlyNew = document.getElementById('monthlyNew');
-      
-      // number in words spans
-      const currentInWords = document.getElementById('currentInWords');
-      const newInWords = document.getElementById('newInWords');
-
-      const resetBtn = document.getElementById('resetBtn');
-
-      // ----- state -----
-      let activeMode = 'newSalary';   // 'newSalary' or 'percent'
-
-      // ----- number to words function (supports up to millions) -----
-      function numberToWords(num) {
-        if (num === undefined || num === null || isNaN(num) || num === '') return '';
-        num = parseFloat(num);
-        if (num < 0) return 'negative ' + numberToWords(-num);
-        if (num === 0) return 'zero';
-        
-        const ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
-                      'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen',
-                      'seventeen', 'eighteen', 'nineteen'];
-        const tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
-        
-        function convertLessThanThousand(n) {
-          if (n === 0) return '';
-          if (n < 20) return ones[n];
-          if (n < 100) return tens[Math.floor(n/10)] + (n%10 ? ' ' + ones[n%10] : '');
-          return ones[Math.floor(n/100)] + ' hundred' + (n%100 ? ' ' + convertLessThanThousand(n%100) : '');
-        }
-        
-        let result = '';
-        if (num >= 1000000) {
-          result += convertLessThanThousand(Math.floor(num / 1000000)) + ' million';
-          num %= 1000000;
-          if (num > 0) result += ' ';
-        }
-        if (num >= 1000) {
-          result += convertLessThanThousand(Math.floor(num / 1000)) + ' thousand';
-          num %= 1000;
-          if (num > 0) result += ' ';
-        }
-        if (num > 0) {
-          result += convertLessThanThousand(num);
-        }
-        return result.trim();
-      }
-
-      // helper: format with commas
-      function formatNumber(amount) {
-        if (isNaN(amount) || amount === null) return '0';
-        return Math.round(amount).toLocaleString('en-US');
-      }
-
-      // --- update displays based on current inputs ---
-      function refreshCalculator() {
-        // get current salary (allow blank/empty)
-        let current = parseFloat(currentInput.value);
-        if (isNaN(current) || current < 0) current = 0;
-        if (current > 1e9) current = 1e9;
-        // don't set input value here - keep as user typed, only sanitize on blur
-        // we'll use current for calculations, but not overwrite field
-
-        let hikeAmount = 0;
-        let newAnnual = 0;
-        let effectivePercent = 0;
-
-        if (activeMode === 'newSalary') {
-          // MODE A: new salary from input
-          let newSal = parseFloat(newSalaryInput.value);
-          if (isNaN(newSal) || newSal < 0) newSal = 0;
-          if (newSal > 1e9) newSal = 1e9;
-
-          newAnnual = newSal;
-          hikeAmount = newAnnual - current;
-          
-          if (current > 0) {
-            effectivePercent = (hikeAmount / current) * 100;
-          } else {
-            effectivePercent = (hikeAmount > 0) ? 999.9 : (hikeAmount < 0 ? -999.9 : 0);
-          }
-
-          // sync percent fields (display only)
-          let displayPerc = effectivePercent;
-          if (displayPerc > 100) displayPerc = 100;
-          if (displayPerc < 0) displayPerc = 0;
-          percentSlider.value = displayPerc;
-          percentNumber.value = effectivePercent.toFixed(1);
-
-        } else { 
-          // MODE B: percent mode
-          let percent = parseFloat(percentSlider.value);
-          if (isNaN(percent) || percent < 0) percent = 0;
-          if (percent > 100) percent = 100;
-          percentSlider.value = percent;
-          percentNumber.value = percent;
-
-          hikeAmount = current * (percent / 100);
-          hikeAmount = Math.round(hikeAmount);
-          newAnnual = current + hikeAmount;
-          effectivePercent = percent;
-
-          // update newSalaryInput field (in percent mode we control it)
-          newSalaryInput.value = newAnnual;
-        }
-
-        hikeAmount = Math.round(hikeAmount);
-        newAnnual = Math.round(newAnnual);
-
-        // --- update displays ---
-        resultNewAnnual.textContent = formatNumber(newAnnual);
-        
-        if (current > 0 || hikeAmount === 0) {
-          resultHikePercent.textContent = (effectivePercent > 0 ? '+' : '') + effectivePercent.toFixed(1) + '%';
-        } else if (current === 0 && hikeAmount > 0) {
-          resultHikePercent.textContent = '∞ (from 0)';
-        } else {
-          resultHikePercent.textContent = '0%';
-        }
-
-        resultHikeAmount.textContent = `(${formatNumber(hikeAmount)} increase)`;
-
-        // bottom row annual
-        displayCurrent.textContent = formatNumber(current);
-        displayHikeAmount.textContent = formatNumber(hikeAmount);
-        displayRevised.textContent = formatNumber(newAnnual);
-
-        // monthly
-        let currentMonthly = current / 12;
-        let newMonthly = newAnnual / 12;
-        monthlyCurrent.textContent = formatNumber(currentMonthly);
-        monthlyNew.textContent = formatNumber(newMonthly);
-
-        // number to words
-        let currentVal = parseFloat(currentInput.value);
-        let newVal = parseFloat(newSalaryInput.value);
-        
-        if (!isNaN(currentVal) && currentVal > 0) {
-          currentInWords.textContent = '▪ ' + numberToWords(currentVal) + (currentVal === 1 ? '' : '');
-        } else {
-          currentInWords.textContent = '';
-        }
-        
-        if (!isNaN(newVal) && newVal > 0) {
-          newInWords.textContent = '▪ ' + numberToWords(newVal);
-        } else {
-          newInWords.textContent = '';
-        }
-
-        // update badge
-        activeBadge.textContent = (activeMode === 'newSalary') ? 'new salary mode' : 'percentage hike mode';
-
-        // card active borders
-        if (activeMode === 'newSalary') {
-          optionNewCard.classList.add('border-primary', 'bg-primary', 'bg-opacity-10');
-          optionNewCard.classList.remove('border-secondary');
-          optionPercentCard.classList.add('border-secondary', 'bg-white');
-          optionPercentCard.classList.remove('border-primary', 'bg-success', 'bg-opacity-10', 'border-success');
-        } else {
-          optionPercentCard.classList.add('border-success', 'bg-success', 'bg-opacity-10');
-          optionPercentCard.classList.remove('border-secondary');
-          optionNewCard.classList.add('border-secondary', 'bg-white');
-          optionNewCard.classList.remove('border-primary', 'bg-primary', 'bg-opacity-10', 'border-success');
-        }
-      }
-
-      // ---- switch mode ----
-      function setMode(mode) {
-        activeMode = mode;
-        if (mode === 'newSalary') {
-          newSalaryGroup.classList.remove('d-none');
-          percentGroup.classList.add('d-none');
-        } else {
-          newSalaryGroup.classList.add('d-none');
-          percentGroup.classList.remove('d-none');
-        }
-        refreshCalculator();
-      }
-
-      // ---- event listeners ----
-      currentInput.addEventListener('input', function() {
-        // Don't sanitize on input, just refresh display
-        refreshCalculator();
-      });
-
-      newSalaryInput.addEventListener('input', function() {
-        if (activeMode !== 'newSalary') return;
-        refreshCalculator();
-      });
-
-      // Sanitize on blur only
-      currentInput.addEventListener('blur', function() {
-        let val = parseFloat(currentInput.value);
-        if (isNaN(val) || val < 0) {
-          currentInput.value = '';
-        } else {
-          if (val > 1e9) val = 1e9;
-          currentInput.value = Math.round(val);
-        }
-        refreshCalculator();
-      });
-
-      newSalaryInput.addEventListener('blur', function() {
-        if (activeMode !== 'newSalary') return;
-        let val = parseFloat(newSalaryInput.value);
-        if (isNaN(val) || val < 0) {
-          newSalaryInput.value = '';
-        } else {
-          if (val > 1e9) val = 1e9;
-          newSalaryInput.value = Math.round(val);
-        }
-        refreshCalculator();
-      });
-
-      percentSlider.addEventListener('input', function() {
-        if (activeMode !== 'percent') setMode('percent');
-        percentNumber.value = percentSlider.value;
-        refreshCalculator();
-      });
-
-      percentNumber.addEventListener('input', function() {
-        if (activeMode !== 'percent') setMode('percent');
-        let p = parseFloat(percentNumber.value);
-        if (isNaN(p) || p < 0) p = 0;
-        if (p > 100) p = 100;
-        percentNumber.value = p;
-        percentSlider.value = p;
-        refreshCalculator();
-      });
-
-      optionNewCard.addEventListener('click', function() {
-        setMode('newSalary');
-      });
-
-      optionPercentCard.addEventListener('click', function() {
-        setMode('percent');
-      });
-
-      resetBtn.addEventListener('click', function() {
-        currentInput.value = '';
-        newSalaryInput.value = '';
-        percentSlider.value = 25;
-        percentNumber.value = 25;
-        setMode('newSalary');
-      });
-
-      // initialise with blank fields
-      setMode('newSalary');
-      refreshCalculator();
-    })();
+(function () {
+  'use strict';
+  const root = document.getElementById('ec-salary-hike');
+  if (!root) return;
+  const $ = id => root.querySelector('#sh-' + id);
+  const periods = [{name:'Annual',factor:1},{name:'Monthly',factor:12},{name:'Half-monthly',factor:24},{name:'Every two weeks',factor:26},{name:'Weekly',factor:52}];
+  let mode = 'compare', result = null;
+  function invalidate() {
+    result = null; $('output').hidden = true; $('breakdown').hidden = true; $('empty').hidden = false;
+    $('download').disabled = true; $('pdf-status').textContent = 'Calculate a result to enable your PDF report.';
+    $('error').hidden = true;
+  }
+  function setMode(next) {
+    mode = next;
+    $('mode-compare').setAttribute('aria-pressed', String(mode === 'compare'));
+    $('mode-percent').setAttribute('aria-pressed', String(mode === 'percent'));
+    $('new-field').hidden = mode !== 'compare'; $('rate-field').hidden = mode !== 'percent';
+    $('new').disabled = mode !== 'compare'; $('new').required = mode === 'compare';
+    $('rate').disabled = mode !== 'percent'; $('rate').required = mode === 'percent'; invalidate();
+  }
+  function format(n) {
+    const currency = $('currency').value;
+    return new Intl.NumberFormat($('format').value, currency ? {style:'currency',currency:currency,currencyDisplay:'code',minimumFractionDigits:2,maximumFractionDigits:2} : {minimumFractionDigits:2,maximumFractionDigits:2}).format(n === 0 ? 0 : n);
+  }
+  function percentage(n) { return new Intl.NumberFormat($('format').value,{maximumFractionDigits:4}).format(Math.abs(n)); }
+  function calculate() {
+    invalidate();
+    const active = [ $('current'), mode === 'compare' ? $('new') : $('rate') ];
+    const bad = active.find(input => !input.checkValidity() || !Number.isFinite(input.valueAsNumber));
+    if (bad) {
+      $('error').textContent = bad === $('current') ? 'Enter a current salary from 0.01 to 1,000,000,000,000.' : mode === 'compare' ? 'Enter a new salary from 0 to 1,000,000,000,000.' : 'Enter a hike from -100% to 100,000%.';
+      $('error').hidden = false; bad.focus(); return;
+    }
+    const current = $('current').valueAsNumber;
+    const next = mode === 'compare' ? $('new').valueAsNumber : current * (1 + $('rate').valueAsNumber / 100);
+    if (!Number.isFinite(next) || next > 1e12) { $('error').textContent = 'The revised salary is too large. Use a value at or below 1,000,000,000,000.'; $('error').hidden = false; return; }
+    const change = next - current, factor = Number($('period').value);
+    result = {current:current,next:next,change:change,rate:mode === 'percent' ? $('rate').valueAsNumber : change/current*100,factor:factor,currency:$('currency').value,mode:mode};
+    $('result-label').textContent = 'New salary — per ' + $('period').selectedOptions[0].text.toLowerCase();
+    $('total').textContent = format(next); $('old').textContent = format(current);
+    $('difference').textContent = format(change); $('annual').textContent = format(change*factor);
+    $('badge').textContent = result.rate === 0 ? 'No change (0%)' : percentage(result.rate) + '% ' + (result.rate < 0 ? 'decrease' : 'increase');
+    $('badge').classList.toggle('sh-negative',result.rate < 0);
+    $('rows').replaceChildren();
+    periods.forEach(p => {
+      const tr = document.createElement('tr'), th = document.createElement('th'); th.scope = 'row'; th.textContent = p.name; tr.appendChild(th);
+      [current,next,change].forEach(n => { const td = document.createElement('td'); td.textContent = format(n*factor/p.factor); tr.appendChild(td); }); $('rows').appendChild(tr);
+    });
+    $('empty').hidden = true; $('output').hidden = false; $('breakdown').hidden = false;
+    $('download').disabled = false; $('pdf-status').textContent = 'Your report is ready. Calculations and PDF generation run in your browser.';
+  }
+  $('mode-compare').addEventListener('click',() => setMode('compare'));
+  $('mode-percent').addEventListener('click',() => setMode('percent'));
+  $('form').addEventListener('submit',event => { event.preventDefault(); calculate(); });
+  $('form').addEventListener('input',invalidate); $('form').addEventListener('change',invalidate);
+  $('form').addEventListener('reset',() => { setMode('compare'); });
+  $('example').addEventListener('click',() => { $('current').value = '80000'; $('new').value = '100000'; $('rate').value = '25'; $('period').value = '1'; calculate(); });
+  // Lightweight ASCII PDF: currency codes avoid missing currency glyphs in standard PDF fonts.
+  // All text is ASCII, so string offsets equal byte offsets in the PDF cross-reference table.
+  function makePDF(lines) {
+    const escapePDF = text => text.replace(/\\/g,'\\\\').replace(/\(/g,'\\(').replace(/\)/g,'\\)');
+    let stream = 'BT\n/F1 18 Tf\n50 790 Td\n(' + escapePDF(lines[0]) + ') Tj\n/F1 10 Tf\n';
+    lines.slice(1).forEach(line => { stream += '0 -20 Td\n(' + escapePDF(line) + ') Tj\n'; }); stream += 'ET';
+    const objects = ['<< /Type /Catalog /Pages 2 0 R >>','<< /Type /Pages /Kids [3 0 R] /Count 1 >>','<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>','<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>','<< /Length ' + stream.length + ' >>\nstream\n' + stream + '\nendstream'];
+    let pdf = '%PDF-1.4\n', offsets = [0];
+    objects.forEach((obj,i) => { offsets.push(pdf.length); pdf += (i+1) + ' 0 obj\n' + obj + '\nendobj\n'; });
+    const xref = pdf.length; pdf += 'xref\n0 6\n0000000000 65535 f \n';
+    offsets.slice(1).forEach(offset => { pdf += String(offset).padStart(10,'0') + ' 00000 n \n'; });
+    pdf += 'trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n' + xref + '\n%%EOF';
+    return new Blob([pdf],{type:'application/pdf'});
+  }
+  $('download').addEventListener('click',() => {
+    if (!result) return;
+    try {
+      const r = result, money = n => (r.currency ? r.currency + ' ' : '') + n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+      const lines = ['Salary Hike Report','EasyCalculator.org | ' + new Date().toISOString().slice(0,10),'',
+        'Mode: ' + (r.mode === 'compare' ? 'Current and new salary' : 'Current salary and hike percentage'),
+        'Input period: ' + $('period').selectedOptions[0].text,
+        'Currency: ' + (r.currency || 'Unspecified (same currency for all amounts)'),
+        'Current salary: ' + money(r.current),'New salary: ' + money(r.next),
+        'Salary change: ' + money(r.change),'Percentage change: ' + Number(r.rate.toFixed(4)) + '%','',
+        'SALARY BREAKDOWN'];
+      periods.forEach(p => { lines.push(p.name + ' | Current: ' + money(r.current*r.factor/p.factor)); lines.push('New: ' + money(r.next*r.factor/p.factor) + ' | Change: ' + money(r.change*r.factor/p.factor)); });
+      lines.push('','FORMULAS','Hike (%) = (New - Current) / Current x 100','New salary = Current x (1 + Hike / 100)','',
+        'Assumes 12 months, 24 half-months, 26 two-week periods or 52 weeks per year.',
+        'Annual change assumes the revised rate applies for a full year.',
+        'No currency conversion, taxes, deductions or variable bonuses are calculated.',
+        'Amounts rounded to 2 decimals. PDF numbers use international formatting.',
+        'https://easycalculator.org/salary-hike-calculator');
+      const url = URL.createObjectURL(makePDF(lines)), link = document.createElement('a');
+      link.href = url; link.download = 'salary-hike-report.pdf'; document.body.appendChild(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url),10000);
+      $('pdf-status').textContent = 'PDF download requested. Check your browser downloads.';
+    } catch (error) { $('pdf-status').textContent = 'The PDF could not be created. Please calculate again and retry.'; }
+  });
+}());
