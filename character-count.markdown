@@ -22,7 +22,6 @@ last_modified_at: 2026-09-20
 
 <div class="ec-counter" id="ec-character-counter">
   <header class="cc-heading">
-    <span class="cc-kicker">Free online text tool</span>
     <h1>Character Counter</h1>
     <p>Count characters with and without spaces as you type. Check your word count, estimate reading time and keep your text within a custom limit.</p>
   </header>
