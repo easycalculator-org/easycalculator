@@ -1,52 +1,32 @@
 ---
 layout: default
-title:  Age Calculator (DOB) – Calculate Your Exact Age Instantly in Years, Months & Days
+title:  Age Calculator – Calculate Age in Years, Months & Days
 permalink: /age-calculator
 description: "Use our free Age Calculator to find your age from your birth date or see the age difference in days. It's quick and easy to find your age today!"
 image: "/assets/images/og/age-calculator-formula-example.jpg"
-last_modified_at: 2026-05-16
+last_modified_at: 2026-09-20
 ---
+<style>
+.ec-age{--age-blue:#2454bc;--age-ink:#172b4d;--age-muted:#53647b;max-width:1000px;margin:24px auto 40px;padding:0 16px;color:var(--age-ink);line-height:1.65}
+.ec-age *{box-sizing:border-box}.ec-age [hidden]{display:none!important}
+.ec-age .age-panel{background:linear-gradient(135deg,#eef5ff,#fff);border:1px solid #d9e5f5;border-radius:20px;padding:clamp(18px,4vw,32px);box-shadow:0 8px 28px #17366b0a}
+.ec-age h1{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:750;margin:0 0 8px}.ec-age h2{font-size:1.45rem;margin:30px 0 12px}.ec-age h3{font-size:1.12rem;margin:20px 0 10px}
+.ec-age .age-muted{color:var(--age-muted)}.ec-age .age-form{max-width:780px;margin:24px auto 0}.ec-age .form-label{font-weight:650}
+.ec-age input[type=date]{min-height:48px;min-width:0;width:100%;font-size:1rem;border:1px solid #aebed4;border-radius:10px;background:#fff;color:var(--age-ink);padding:10px 12px}
+.ec-age .age-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.ec-age button{min-height:44px}.ec-age .age-primary{background:var(--age-blue);color:#fff;border:1px solid var(--age-blue);font-weight:650}.ec-age .age-primary:hover{background:#193f92;color:#fff}
+.ec-age :is(a,button,input,summary):focus-visible{outline:3px solid #bd6500;outline-offset:3px}
+.ec-age .age-error{color:#9f1830;background:#fff0f2;border:1px solid #e6a9b4;border-radius:10px;padding:10px 14px;margin-top:16px}
+.ec-age .age-result{background:#fff;border:1px solid #c9dbf3;border-radius:14px;padding:18px;margin-top:22px}.ec-age .age-result h2{font-size:.95rem;margin:0 0 4px;color:var(--age-muted)}
+.ec-age .age-answer{font-size:clamp(1.35rem,3.5vw,2rem);font-weight:750;line-height:1.35;margin:4px 0}.ec-age .age-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0}
+.ec-age .age-stat{background:#f3f7fc;border-radius:10px;padding:10px 12px}.ec-age .age-stat dt{font-size:.82rem;color:var(--age-muted);font-weight:500}.ec-age .age-stat dd{font-weight:700;font-size:1.15rem;overflow-wrap:anywhere;margin:0}
+.ec-age .age-birthday{border-top:1px solid #dce5f1;padding-top:12px;margin-top:12px}.ec-age summary{cursor:pointer;font-weight:650;padding:10px 0}
+.ec-age .age-article{margin-top:30px}.ec-age .age-meta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #dce5f1;padding-bottom:16px;margin-bottom:22px;font-size:.875rem}
+.ec-age .age-note{background:#f1f6fd;border-left:4px solid var(--age-blue);border-radius:6px;padding:14px 16px;margin:18px 0}.ec-age .age-table{width:100%;border-collapse:collapse;font-size:.95rem}.ec-age .age-table th,.ec-age .age-table td{padding:12px;border:1px solid #dce5f1;text-align:left}.ec-age .age-table th{background:#eef4fc}
+.ec-age .age-faq{border:1px solid #dce5f1;border-radius:12px;padding:2px 16px;margin-bottom:10px}.ec-age .age-faq p{margin:0 0 14px}.ec-age .age-links{display:flex;flex-wrap:wrap;gap:10px}.ec-age .age-links a{display:inline-block;border:1px solid #c9dbf3;border-radius:9px;padding:10px 14px;color:#204eaf;text-decoration:underline}
+@media(max-width:480px){.ec-age .age-grid{grid-template-columns:1fr}.ec-age .age-stat{display:flex;justify-content:space-between;align-items:center;gap:12px}.ec-age .age-stat dd{font-size:1rem}.ec-age .age-actions .age-primary{flex:1 0 100%}}
+</style>
+<div class="ec-age" id="ec-age-calculator"><section class="age-panel" aria-labelledby="age-title"><header class="text-center"><h1 id="age-title">Age Calculator</h1><p class="age-muted mb-0">Calculate your age in years, months and days from your date of birth.</p></header><form id="age-form" class="age-form" novalidate><div class="row g-3"><div class="col-md-6"><label for="age-dob" class="form-label">Date of birth</label><input type="date" id="age-dob" min="0001-01-01" max="9998-12-31" required aria-describedby="age-dob-help age-error"><div id="age-dob-help" class="small age-muted mt-1">Select or type your birth date.</div></div><div class="col-md-6"><label for="age-target" class="form-label">Age on this date</label><input type="date" id="age-target" min="0001-01-01" max="9998-12-31" required aria-describedby="age-target-help age-error"><div id="age-target-help" class="small age-muted mt-1">Today by default. Past and future dates are supported.</div></div></div><div class="age-actions"><button class="btn age-primary px-4" type="submit">Calculate age</button><button class="btn btn-outline-secondary" type="button" id="age-today">Use today</button><button class="btn btn-outline-secondary" type="reset">Reset</button></div><p id="age-error" class="age-error" role="alert" hidden></p></form><noscript><p class="age-note">Enable JavaScript to use the calculator. The calculation method and examples below remain available.</p></noscript><section id="age-result" class="age-result" aria-live="polite" aria-atomic="true" hidden><h2>Your age on <span id="age-on-label"></span></h2><p class="age-answer" id="age-answer"></p><p class="small age-muted mb-0" id="age-born-label"></p><dl class="age-grid"><div class="age-stat"><dt>Total calendar days</dt><dd id="age-days"></dd></div><div class="age-stat"><dt>Completed weeks</dt><dd id="age-weeks"></dd></div><div class="age-stat"><dt>Completed months</dt><dd id="age-months"></dd></div></dl><p class="age-birthday mb-1" id="age-next"></p><details><summary>Hours and minutes</summary><p class="mb-1" id="age-time"></p><p class="small age-muted mb-0">These totals convert calendar days using 24 hours per day and 60 minutes per hour. They do not include birth time, time zones or daylight-saving changes.</p></details><p class="small age-muted mb-0">Calendar method: completed months, with month-end dates clamped to the last valid day. February 29 birthdays use February 28 in non-leap years. <a href="#age-method">See the method.</a></p></section></section></div>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
-<div class="row justify-content-center">
- <div class="col-lg-8 col-xl-7">
- <div class="card shadow-lg border-0 rounded-4 p-4">
-  <div class="text-center mb-4">
-  <h1>Age Calculator</h1>
-  <p class="lead text-center text-muted">Calculate your exact age instantly (Years, Months, Days, Hours, Minutes & Seconds)</p>
-  </div>
-   <div class="row g-3 mb-3">
-    <div class="col-md-6">
-    <label class="form-label fw-semibold">Start Date</label>
-    <div class="input-group">
-    <input type="text" id="startDate" class="form-control flatpickr" placeholder="Select start date" required="" />
-    <span class="input-group-text bg-light"><i class="fa-solid fa-calendar-day text-primary"></i></span>
-   </div>
-  </div>
-        <div class="col-md-6">
-          <label class="form-label fw-semibold">End Date</label>
-            <div class="input-group">
-              <input type="text" id="endDate" class="form-control flatpickr" placeholder="Select end date" required="" />
-              <span class="input-group-text bg-light"><i class="fa-solid fa-calendar-day text-primary"></i></span>
-            </div>
-        </div>
-      </div>
-  <div id="mainResult" class="text-center p-3 rounded-4 mb-3 d-none bg-primary bg-opacity-50 text-white">
-    <h3 class="mb-0" id="result1">—</h3>
-    <small>Total Age</small>
-</div>
- <div id="resultsWrapper" class="row g-3 d-none">
-   <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Total Weeks</small><h5 id="result2">—</h5></div> </div>
-   <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Total Days</small><h5 id="result3">—</h5></div></div>
-   <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Total Months</small><h5 id="result4">—</h5> </div></div>
-   <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"> <small>Total Hours</small> <h5 id="result5">—</h5> </div></div>
-   <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Total Minutes</small><h5 id="result6">—</h5></div></div>
-   <div class="col-6 col-md-4"><div class="card border-0 shadow-sm p-3 text-center"><small>Weekdays</small> <h5 id="result7">—</h5></div> </div>
-  </div>
- </div>
- </div>
-</div>
 
 <!-- Article Content -->
 <div class="article-container">
@@ -55,205 +35,42 @@ last_modified_at: 2026-05-16
       {% include naren_create.html %}
       {% include reema_verify.html %}
     </div>
-    <!-- Last Updated -->
-    <div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0"><i class="fas fa-calendar"></i> Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>8 min read</span>
+    </div>
   </div>
+<!-- Article-->
+<h2>Calculate your age today or on another date</h2><p>This age calculator finds the calendar time between your date of birth and a selected date. The main answer shows completed years, months and remaining days. You can also see total calendar days, completed weeks and completed months.</p><p>Use today’s date to answer “How old am I?” or choose another date to find your age on a past event or a future birthday. The calculator also shows the weekday you were born and the next birthday on or after your selected date.</p><h2>How to use the age calculator</h2><ol><li><strong>Enter your date of birth.</strong>Use the date picker or type a valid date.</li><li><strong>Choose the target date.</strong>Leave today’s date selected, or enter a past or future date that is on or after your birth date.</li><li><strong>Select Calculate age.</strong>Read your calendar age and the compact totals below it.</li></ol><p>Select <strong>Use today</strong>to return the target date to today and calculate again. Select <strong>Reset</strong>to clear your birth date and results.</p><div class="p-4 bg-light rounded-1"><h2 id="age-method">How is age calculated?</h2><p>Calendar age follows calendar months and birthdays. A month can contain 28, 29, 30 or 31 days, so dividing the number of days by 30 does not reliably give an age in months.</p><p>This calculator first finds the largest number of complete months between the two dates. Each month anniversary is measured from the original birth date. If that day does not exist in the destination month, the anniversary falls on that month’s last day. It then converts those completed months into years and months, and counts the remaining days.</p><div class="age-note"><strong>Calendar age=completed years + remaining completed months + remaining days.</strong><br>Twelve completed months make one year. Days are counted from the last completed month anniversary to the selected date. </div><p>For example, from <strong>15 January 2000 to 20 September 2026</strong>, there are 320 complete months. That is 26 years and 8 months, followed by 5 more days. The answer is <strong>26 years, 8 months and 5 days</strong>.</p></div>
+<section class="my-4" aria-labelledby="age-examples-title p-4"><h2 id="age-examples-title" class="h5 mb-3">Age calculation examples </h2><div class="table-responsive border rounded-3"><table class="table table-sm align-middle mb-0 small"><caption class="px-3 py-2 small text-muted">Examples follow this calculator’s month-end and leap-year rules. </caption><thead><tr><th scope="col" class="bg-light text-secondary fw-semibold px-3 py-2 text-nowrap">Date of birth </th><th scope="col" class="bg-light text-secondary fw-semibold px-3 py-2 text-nowrap">Age on date </th><th scope="col" class="bg-light text-secondary fw-semibold px-3 py-2 text-nowrap">Calendar age </th></tr></thead><tbody><tr><td class="px-3 py-2 text-nowrap">1 Jan 2000</td><td class="px-3 py-2 text-nowrap">1 Jan 2025</td><td class="px-3 py-2 text-nowrap">25 years, 0 months, 0 days</td></tr><tr><td class="px-3 py-2 text-nowrap">10 Apr 2000</td><td class="px-3 py-2 text-nowrap">9 Apr 2025</td><td class="px-3 py-2 text-nowrap">24 years, 11 months, 30 days</td></tr><tr><td class="px-3 py-2 text-nowrap">15 Jan 2000</td><td class="px-3 py-2 text-nowrap">20 Sep 2026</td><td class="px-3 py-2 text-nowrap">26 years, 8 months, 5 days</td></tr><tr><td class="px-3 py-2 text-nowrap">29 Feb 2000</td><td class="px-3 py-2 text-nowrap">28 Feb 2025</td><td class="px-3 py-2 text-nowrap">25 years, 0 months, 0 days</td></tr><tr><td class="px-3 py-2 text-nowrap">31 Jan 2025</td><td class="px-3 py-2 text-nowrap">28 Feb 2025</td><td class="px-3 py-2 text-nowrap">0 years, 1 month, 0 days</td></tr></tbody></table></div></section>
+ <img  class="img-fluid d-block mx-auto my-4"  src="{{ '/assets/images/age-calculator-formula-example.svg' | relative_url }}"  alt="Age calculation example showing completed years, months and remaining days"  loading="lazy"  decoding="async">
+<div class="p-4">    
+  <h2>Leap years and February 29 birthdays</h2><p>A leap year adds February 29 to the calendar. In the Gregorian calendar, years divisible by 4 are leap years, except century years that are not divisible by 400. For example, 2000 was a leap year, but 2100 will not be.</p><p>For someone born on February 29, this calculator uses February 28 as the anniversary in a non-leap year and February 29 in a leap year. This convention also applies to the next-birthday result.</p><p>Some calculators use March 1 instead. That can produce a different answer around the birthday. For an official age requirement, check the convention specified by the relevant organization.</p></div><div class="bg-light p-4 rounded"><h2>Why calendar age and total days are different</h2><p><strong>Calendar age</strong>describes time in years, months and days. <strong>Total calendar days</strong>counts date boundaries between the two dates. The birth date itself does not add an extra day: the same start and end date gives zero days.</p><p><strong>Completed weeks</strong>is the total day count divided by 7, rounded down. For example, 10 days equals 1 completed week with 3 days left over. <strong>Completed months</strong>uses month anniversaries, not an average month length.</p><p>Hours and minutes are shown only as conversions of the day count. Without a birth time and time-zone information, they should not be read as your exact elapsed lifetime.</p></div><div class="p-4"><h2><i class="fas fa-lightbulb text-warning me-2"></i>Finding your age on a future date</h2><p>Enter your date of birth and choose the future date in <strong>Age on this date</strong>. This is useful for checking your age at an event, planning a birthday or comparing dates. The next-birthday panel is relative to that selected date, not necessarily today.</p><p>The calculator uses dates from year 1 through year 9998, applies Gregorian calendar rules throughout, and does not model historical regional calendar changes.</p></div><div class="card border-light shadow-sm mb-4"><div class="card-body"><h2 class="card-title text-primary">Why is Age important?</h2><p>Age is important for many reasons because it helps us understand and organize different aspects of life. Here’s why age matters:</p><div class="row mt-4"><div class="col-md-6"><div class="d-flex mb-3"><i class="fa-solid fa-user-check fs-4 text-primary me-3"></i><div><h5>Personal Growth</h5><p class="mb-0">Age helps track life stages like childhood, teenage years, adulthood, and senior years.</p></div></div><div class="d-flex mb-3"><i class="fa-solid fa-heart-pulse fs-4 text-primary me-3"></i><div><h5>Healthcare</h5><p class="mb-0">Doctors use your age to suggest check-ups, vaccines, and treatments at the right time.</p></div></div><div class="d-flex mb-3"><i class="fa-solid fa-book fs-4 text-primary me-3"></i><div><h5>Education & Career</h5><p class="mb-0">Schools admit students and place them in grades based on age. It also affects career planning.</p></div></div></div><div class="col-md-6"><div class="d-flex mb-3"><i class="fa-solid fa-briefcase fs-4 text-primary me-3"></i><div><h5>Work Eligibility</h5><p class="mb-0">Many jobs and roles require a minimum age to apply or participate.</p></div></div><div class="d-flex mb-3"><i class="fa-solid fa-shield-check fs-4 text-primary me-3"></i><div><h5>Legal Rights</h5><p class="mb-0">Important rights—like voting, driving, or drinking—depend on your age.</p></div></div><div class="d-flex mb-3"><i class="fa-solid fa-people-group fs-4 text-primary me-3"></i><div><h5>Family Roles</h5><p class="mb-0">Age helps define roles in a family—whether you’re a child, parent, or grandparent.</p></div></div></div></div><div class="alert alert-success border-0 mt-4"><p class="mb-0"><strong>In short, age helps us make sense of life and the world around us! 😊</strong></p></div></div></div><section class="mb-5"><h2 class="mb-4">FAQ on Age Calculator</h2><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">How do I calculate my age today?</div><p class="mb-0">Enter your date of birth, leave the target date set to today and select Calculate age. The main result shows your completed years, months and remaining days.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Can I calculate my age on a future date?</div><p class="mb-0">Yes. Choose a future date in Age on this date. The target date must be on or after your birth date, and the supported target years run from 1 through 9998</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">How are February 29 birthdays handled?</div><p class="mb-0">This calculator treats February 28 as the anniversary in non-leap years and February 29 in leap years. Other conventions, such as March 1, can give different results near the birthday.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Why can two age calculators give different answers?</div><p class="mb-0">Calculators may use different rules for month-end dates and February 29 birthdays. Some use average month lengths. This calculator counts complete calendar months from the original birth date and clamps an unavailable day to the end of the destination month.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Are the hours and minutes my exact age?</div><p class="mb-0">No. They convert the calendar day count using 24 hours per day and 60 minutes per hour. This tool does not collect birth time or account for time-zone offsets and daylight-saving changes.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Does the calculator send my date of birth to a server?</div><p class="mb-0">The calculator code on this page processes the entered dates in your browser. It does not send or save those values. The website’s separate analytics and advertising services are covered by its privacy policy.</p></div></div></section></div>
 
-
-<!-- Section -->
-<section class="mb-5">
- <h2>Age Calculator – Calculate Your Exact Age Instantly</h2>
-   <p>Looking for an accurate way to calculate your age? Our <strong>Age Calculator by date of birth </strong>is a easy and powerful tool that helps you find your exact age in years, months, weeks, days, hours, minutes, and even seconds. Whether you need an Age Calculator online for personal, medical, or legal purposes, our tool provides instant and precise results.</p>
-  <h2 class="card-title text-primary">What is the Age Calculator</h2>
-      <p class="card-text">An age calculator is a tool that calculates a person’s exact age from their birth date. It shows the age in years, months, days, and even hours and seconds, based on the current or a custom date.</p>
-       <h2 class="card-title text-primary">Chronological age calculator</h2>
-    <p>Chronological age is the number of full years, months, and days a person has lived since their birth. It’s the most common way to measure age and is used in schools,  hospitals, legal documentation, and more.</p>
-   <div class="alert alert-info border-0"><p class="mb-0"><strong>Example:</strong> If someone was born on April 10, 2000, and today is April 10, 2025, their chronological age is exactly 25 years.</p></div>
-<div class="card border-light shadow-sm mb-4">
- <div class="card-body">
-  <h2 class="card-title text-primary">Birth Time Options for Precision</h2>
-   <p>Including the exact time of birth can greatly enhance the accuracy of age calculations. While most standard age calculators only require a birth date, adding the birth time allows for a much more precise result—down to the hour, minute, and even second. This level of detail is especially important in areas like astrology, legal documentation, and medical records.</p>
-   <h3 class="mt-4">Examples of Time Calculations</h3>
-    <p>Our Age Calculator formula can provide various results, including:</p>
-     <ul>
-      <li>Age in years and months (e.g., 21 years and 3 months)</li>
-      <li>Days since birth (e.g., 7,665 days old)</li>
-      <li>Age in weeks (e.g., 1,095 weeks)</li>
-      <li>Upcoming milestone birthdays (like turning 18 or 65)</li>
-     </ul>
-     <p>These time for calculation examples are help people plan events, meet deadlines, or simply understand how much time has passed.</p>
-    </div>
-   </div>
-<div class="card border-light shadow-sm mb-4">
-  <div class="card-body">
-    <h2 class="card-title text-primary"> Why is Age important?</h2>
-    <p>Age is important for many reasons because it helps us understand and organize different aspects of life. Here’s why age matters:</p>
-    <div class="row mt-4">
-      <!-- LEFT -->
-      <div class="col-md-6">
-        <div class="d-flex mb-3"><i class="fa-solid fa-user-check fs-4 text-primary me-3"></i>
-          <div>
-            <h5>Personal Growth</h5>
-            <p class="mb-0">Age helps track life stages like childhood, teenage years, adulthood, and senior years.</p>
-          </div>
-        </div>
-        <div class="d-flex mb-3">
-          <i class="fa-solid fa-heart-pulse fs-4 text-primary me-3"></i>
-          <div>
-            <h5>Healthcare</h5>
-            <p class="mb-0">Doctors use your age to suggest check-ups, vaccines, and treatments at the right time.</p>
-          </div>
-        </div>
-        <div class="d-flex mb-3">
-          <i class="fa-solid fa-book fs-4 text-primary me-3"></i>
-          <div>
-            <h5>Education & Career</h5>
-            <p class="mb-0">Schools admit students and place them in grades based on age. It also affects career planning.</p>
-          </div>
-        </div>
-      </div>
-      <!-- RIGHT -->
-      <div class="col-md-6">
-        <div class="d-flex mb-3">
-          <i class="fa-solid fa-briefcase fs-4 text-primary me-3"></i>
-          <div>
-            <h5>Work Eligibility</h5>
-            <p class="mb-0">Many jobs and roles require a minimum age to apply or participate.</p>
-          </div>
-        </div>
-        <div class="d-flex mb-3">
-          <i class="fa-solid fa-shield-check fs-4 text-primary me-3"></i>
-          <div>
-            <h5>Legal Rights</h5>
-            <p class="mb-0">Important rights—like voting, driving, or drinking—depend on your age.</p>
-          </div>
-        </div>
-        <div class="d-flex mb-3">
-          <i class="fa-solid fa-people-group fs-4 text-primary me-3"></i>
-          <div>
-            <h5>Family Roles</h5>
-            <p class="mb-0">Age helps define roles in a family—whether you’re a child, parent, or grandparent.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="alert alert-success border-0 mt-4">
-      <p class="mb-0"><strong>In short, age helps us make sense of life and the world around us! 😊</strong></p>
-    </div>
-
-  </div>
-</div>
-
-<div class="card border-light shadow-sm mb-4">
-  <div class="card-body">
-   <h2 class="card-title text-primary">🗓️ Date of Birth (DOB) Calculator</h2>
-    <p>A Date of Birth Calculator lets you quickly find out how old someone is by simply entering their birth date. It shows:</p>
-     <ul>
-       <li>Age in years, months, and days</li>
-       <li>Day of the week you were born</li>
-       <li>Countdown to your next birthday</li>
-      </ul>
-<h3 class="mt-4">Age Difference Calculator</h3>
- <p>Need to compare ages between two people? Our Age difference calculator helps you find the exact gap in years, months, and days—perfect for family planning, friendships, or legal purposes.</p> 
- <h3 class="mt-4">Find my age today</h3>
- <p>To find out your age today, just enter your date of birth in the Start date field and click on calculate to find your age today. Our tool will show you your age in total years and days.</p>
-                       
- <!-- highlight-box-->
-<div class="highlight-box">
- <h5><i class="fas fa-lightbulb text-warning me-2"></i>Example:</h5>
- <p class="mb-0">A person born in 2003 will turn 21 years old in 2024. You can refer to the image below to determine your age, the month, and the number of weeks since your birth date.</p>
-</div>
- </div>
- </div>
-<img class="img-fluid d-flex p-4"  alt="Age calculator formula example showing years months and days calculation"  src="/assets/images/age-calculator-formula-example.svg"   fetchpriority="high"   loading="auto"  title="Age Calculator Formula with Example">
- </section>
-<!-- FAQ Section -->
- <section class="mb-5">
-   <h2 class="mb-4">FAQ on Age Calculator</h2>
-    <div class="card mb-3 border-0 bg-light">
-     <div class="card-body ">
-      <div class="fw-bold text-primary">1. Why is age important?</div>
-      <p class="mb-0"> Age is important because it helps in personal growth tracking, healthcare decisions, educational placements, legal rights, cultural traditions, historical understanding, and more.</p>
-       </div>
-      </div>
-     <div class="card mb-3 border-0 bg-light">
-      <div class="card-body ">
-       <div class="fw-bold text-primary"> 2. How do I find my exact age today?</div>
-      <p class="mb-0">Enter your date of birth in the Age Calculator and click "Calculate." The tool will display your exact age in years, months, days, and even hours if needed.</p>
-       </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 3.Is my data secure when using the Age Calculator? </div>
-            <p class="mb-0"> Yes, the Age Calculator does not store or share your data. It simply performs calculations based on the input you provide.</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 4.  Can I calculate age including time of birth?</div>
-            <p class="mb-0">Yes, if you provide the exact time of birth, the Age Calculator can give you a more precise age calculation down to the hour, minute, and second.</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 5. Can I use the Age Calculator for future dates?</div>
-            <p class="mb-0">Yes, you can use the Age Calculator to calculate your age on a future date, which is useful for planning events or milestones.</p>
-          </div>
-        </div>
-      </section>
-      <!-- Did You Know? -->
- </div>
+<script src="{{ '/assets/js/age-calculator.js' | relative_url }}"></script>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Why is age important?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Age is important for healthcare decisions, education eligibility, legal rights, retirement planning, and tracking personal life milestones."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I calculate my exact age today?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Enter your date of birth into the Age Calculator and click Calculate. The tool instantly shows your age in years, months, and days."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is my personal data safe while using this Age Calculator?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The Age Calculator does not store, track, or share any personal data and performs calculations directly in your browser."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I calculate age including time of birth?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. By entering your exact time of birth, you can get a more precise age calculation including hours and minutes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I calculate my age for a future date?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The Age Calculator allows you to calculate your age for any future date, which is useful for planning events and milestones."
-      }
-    }
-  ]
+  "@type": "WebApplication",
+  "@id": "https://easycalculator.org/age-calculator#calculator",
+  "name": "Age Calculator",
+  "url": "https://easycalculator.org/age-calculator",
+  "description": "Calculate calendar age in years, months and days from a date of birth and a selected date, with total days, completed weeks and completed months.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript and a modern web browser.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "dateModified": "{{ page.last_modified_at | date: '%Y-%m-%d' }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "EasyCalculator.org",
+    "url": "https://easycalculator.org/"
+  }
 }
 </script>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="{{ '/assets/js/age-calculator.js' | relative_url }}"></script>
