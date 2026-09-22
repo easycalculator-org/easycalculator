@@ -1,118 +1,35 @@
-
-let currentDateTime = null;
-let clockInterval = null;
-
-// Initialize the map
-var map = L.map('map').setView([20, 0], 2);
-
-// Add OpenStreetMap tile layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
-
-// Function to fetch and display time
-function fetchTime(lat, lng) {
-    const apiKey = "NKF8Y13V8FVT"; // Replace with your TimeZoneDB API key
-    const url = `https://api.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=position&lat=${lat}&lng=${lng}`;
-
-
-fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            if (data.status === "OK") {
-                const timeString = data.formatted; // e.g., "2025-03-23 15:30:45"
-                currentDateTime = new Date(timeString.replace(" ", "T")); // Save base time
-
-                // Stop any existing interval
-                if (clockInterval) clearInterval(clockInterval);
-
-                // Start ticking clock
-                clockInterval = setInterval(() => {
-                    currentDateTime.setSeconds(currentDateTime.getSeconds() + 1);
-                    const h = currentDateTime.getHours();
-                    const m = currentDateTime.getMinutes();
-                    const s = currentDateTime.getSeconds();
-
-                    updateClock(h, m, s);
-                    document.getElementById("digital-clock").innerText = formatTime(h, m, s);
-                    document.getElementById("date-display").innerText = currentDateTime.toDateString();
-                }, 1000);
-
-                // Display once immediately
-                const hours = currentDateTime.getHours();
-                const minutes = currentDateTime.getMinutes();
-                const seconds = currentDateTime.getSeconds();
-                updateClock(hours, minutes, seconds);
-
-                document.getElementById("time-display").innerHTML = `
-<div class="d-flex justify-content-between flex-wrap text-center fs-5 font-monospace">
-   <strong>Timezone: ${data.zoneName} </strong>
-   <strong>Location: ${data.cityName || 'Unknown'}, ${data.countryName} </strong>
-   <strong>Current Time: ${formatTime(hours, minutes, seconds)}</strong>
-   <strong>Date: ${currentDateTime.toDateString()} </strong> 
-</div>`;
-            } else {
-                document.getElementById("time-display").innerText = "Time data unavailable.";
-            }
-        })
-        .catch(error => {
-            console.error("Error fetching time data:", error);
-            document.getElementById("time-display").innerText = "Error fetching time.";
-        });
+(function(){
+'use strict';
+function init(){
+const root=document.getElementById('wc-root'); if(!root || root.dataset.ready)return; root.dataset.ready='true';
+const $=id=>document.getElementById('wc-'+id);
+const cities=[
+['New Delhi','India','Asia/Kolkata',28.6139,77.209],['Mumbai','India','Asia/Kolkata',19.076,72.8777],['Kolkata','India','Asia/Kolkata',22.5726,88.3639],['London','United Kingdom','Europe/London',51.5074,-.1278],['New York','United States','America/New_York',40.7128,-74.006],['Los Angeles','United States','America/Los_Angeles',34.0522,-118.2437],['Chicago','United States','America/Chicago',41.8781,-87.6298],['Denver','United States','America/Denver',39.7392,-104.9903],['Phoenix','United States','America/Phoenix',33.4484,-112.074],['Honolulu','United States','Pacific/Honolulu',21.3099,-157.8581],['Toronto','Canada','America/Toronto',43.6532,-79.3832],['Vancouver','Canada','America/Vancouver',49.2827,-123.1207],['Mexico City','Mexico','America/Mexico_City',19.4326,-99.1332],['Sao Paulo','Brazil','America/Sao_Paulo',-23.5505,-46.6333],['Buenos Aires','Argentina','America/Argentina/Buenos_Aires',-34.6037,-58.3816],['Lima','Peru','America/Lima',-12.0464,-77.0428],['Paris','France','Europe/Paris',48.8566,2.3522],['Berlin','Germany','Europe/Berlin',52.52,13.405],['Rome','Italy','Europe/Rome',41.9028,12.4964],['Madrid','Spain','Europe/Madrid',40.4168,-3.7038],['Istanbul','Türkiye','Europe/Istanbul',41.0082,28.9784],['Moscow','Russia','Europe/Moscow',55.7558,37.6173],['Dubai','United Arab Emirates','Asia/Dubai',25.2048,55.2708],['Riyadh','Saudi Arabia','Asia/Riyadh',24.7136,46.6753],['Cairo','Egypt','Africa/Cairo',30.0444,31.2357],['Johannesburg','South Africa','Africa/Johannesburg',-26.2041,28.0473],['Lagos','Nigeria','Africa/Lagos',6.5244,3.3792],['Nairobi','Kenya','Africa/Nairobi',-1.2921,36.8219],['Karachi','Pakistan','Asia/Karachi',24.8607,67.0011],['Dhaka','Bangladesh','Asia/Dhaka',23.8103,90.4125],['Kathmandu','Nepal','Asia/Kathmandu',27.7172,85.324],['Colombo','Sri Lanka','Asia/Colombo',6.9271,79.8612],['Bangkok','Thailand','Asia/Bangkok',13.7563,100.5018],['Singapore','Singapore','Asia/Singapore',1.3521,103.8198],['Jakarta','Indonesia','Asia/Jakarta',-6.2088,106.8456],['Hong Kong','China','Asia/Hong_Kong',22.3193,114.1694],['Beijing','China','Asia/Shanghai',39.9042,116.4074],['Tokyo','Japan','Asia/Tokyo',35.6762,139.6503],['Seoul','South Korea','Asia/Seoul',37.5665,126.978],['Manila','Philippines','Asia/Manila',14.5995,120.9842],['Sydney','Australia','Australia/Sydney',-33.8688,151.2093],['Melbourne','Australia','Australia/Melbourne',-37.8136,144.9631],['Perth','Australia','Australia/Perth',-31.9505,115.8605],['Adelaide','Australia','Australia/Adelaide',-34.9285,138.6007],['Auckland','New Zealand','Pacific/Auckland',-36.8485,174.7633]
+];
+const localZone=Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
+let selected={name:'Your device time zone',zone:localZone},format='24',map,marker,request=0,geoPromise,expanded=false,oldOverflow='';
+const cache=new Map();
+function fmt(zone,kind){const key=zone+'|'+kind+'|'+format;if(!cache.has(key)){const opt={timeZone:zone};if(kind==='clock')Object.assign(opt,{hour:'2-digit',minute:'2-digit',second:'2-digit',...(format==='12'?{hour12:true}:{hourCycle:'h23'})});if(kind==='date')Object.assign(opt,{weekday:'short',year:'numeric',month:'short',day:'numeric'});if(kind==='parts')Object.assign(opt,{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'});cache.set(key,new Intl.DateTimeFormat('en-GB',opt));}return cache.get(key);}
+function parts(zone,date){return Object.fromEntries(fmt(zone,'parts').formatToParts(date).filter(p=>p.type!=='literal').map(p=>[p.type,Number(p.value)]));}
+function serial(p){return Date.UTC(p.year,p.month-1,p.day,p.hour,p.minute,p.second);}
+function offset(zone,date){return Math.round((serial(parts(zone,date))-Math.floor(date.getTime()/1000)*1000)/60000);}
+function utcLabel(minutes){const n=Math.abs(minutes);return 'UTC'+(minutes<0?'−':'+')+String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0');}
+function status(text,error=false){$('status').textContent=text;$('status').dataset.error=String(error);}
+const shortcuts=['New York','London','New Delhi','Dubai','Tokyo','Sydney'].map(name=>cities.find(c=>c[0]===name));
+cities.slice().sort((a,b)=>a[0].localeCompare(b[0])).forEach(c=>{const o=document.createElement('option');o.value=c[0]+', '+c[1];$('cities').append(o);});
+const cards=shortcuts.map(c=>{const b=document.createElement('button');b.type='button';b.className='wc-city';const title=document.createElement('span');title.textContent=c[0];const time=document.createElement('strong');const date=document.createElement('small');b.append(title,time,date);b.addEventListener('click',()=>selectCity(c));$('shortcuts').append(b);return{c,time,date};});
+function tick(){const now=new Date(),p=parts(selected.zone,now),lp=parts(localZone,now);$('place').textContent=selected.name;$('time').textContent=fmt(selected.zone,'clock').format(now);$('time').dateTime=now.toISOString();$('date').textContent=fmt(selected.zone,'date').format(now);$('zone').textContent=selected.zone+' · '+utcLabel(offset(selected.zone,now));$('local').textContent=fmt(localZone,'clock').format(now);$('utc').textContent=fmt('UTC','clock').format(now);const diff=offset(selected.zone,now)-offset(localZone,now),abs=Math.abs(diff);const duration=[Math.floor(abs/60)?Math.floor(abs/60)+'h':'',abs%60?abs%60+'m':''].filter(Boolean).join(' ');const day=Math.round((Date.UTC(p.year,p.month-1,p.day)-Date.UTC(lp.year,lp.month-1,lp.day))/86400000);$('difference').textContent=(diff===0?'Same time as your device':duration+' '+(diff>0?'ahead of':'behind')+' your device')+' · '+(day===0?'same date':Math.abs(day)+' day'+(Math.abs(day)>1?'s':'')+' '+(day>0?'ahead':'behind'));$('hour').style.transform='translateX(-50%) rotate('+((p.hour%12)*30+p.minute*.5+p.second/120)+'deg)';$('minute').style.transform='translateX(-50%) rotate('+(p.minute*6+p.second*.1)+'deg)';$('second').style.transform='translateX(-50%) rotate('+(p.second*6)+'deg)';$('expanded-place').textContent=selected.name;$('expanded-time').textContent=$('time').textContent;cards.forEach(({c,time,date})=>{time.textContent=fmt(c[2],'clock').format(now);date.textContent=fmt(c[2],'date').format(now);});}
+function commit(name,zone,lat,lon,zoom){new Intl.DateTimeFormat('en',{timeZone:zone});selected={name,zone};if(map && Number.isFinite(lat)){if(marker)marker.remove();marker=L.circleMarker([lat,lon],{radius:8,color:'#fff',weight:3,fillColor:'#2359bc',fillOpacity:1}).addTo(map);const label=document.createElement('span');label.textContent=name+' · '+zone;marker.bindTooltip(label);if(zoom)map.setView([lat,lon],zoom);}tick();}
+function selectCity(c){request++;commit(c[0]+', '+c[1],c[2],c[3],c[4],5);$('city-input').value=c[0]+', '+c[1];status('Showing '+c[0]+'. Clocks update automatically.');}
+$('search-form').addEventListener('submit',e=>{e.preventDefault();const q=$('city-input').value.trim().toLowerCase();const matches=cities.filter(c=>c[0].toLowerCase()===q||(c[0]+', '+c[1]).toLowerCase()===q);if(matches.length===1)selectCity(matches[0]);else status('Choose a city from the suggestions, or click a location on the map.',true);});
+$('format').addEventListener('change',()=>{format=$('format').value;tick();});
+function loadGeo(){if(!geoPromise)geoPromise=new Promise((resolve,reject)=>{if(window.GeoTZ)return resolve(window.GeoTZ.init());const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/browser-geo-tz@0.1.0/dist/geotz.js';s.onload=()=>window.GeoTZ?resolve(window.GeoTZ.init()):reject(new Error('Unavailable'));s.onerror=()=>{s.remove();reject(new Error('Unavailable'));};document.head.append(s);}).catch(e=>{geoPromise=null;throw e;});return geoPromise;}
+async function lookup(lat,lon,name,token){const id=token===undefined?++request:token;lon=((lon+180)%360+360)%360-180;status('Finding the time zone… The current clock remains visible.');let timer;try{const zones=await Promise.race([(async()=>{const geo=await loadGeo();return geo.find(lat,lon);})(),new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('Timeout')),18000);})]);if(id!==request)return;if(!Array.isArray(zones)||!zones.length)throw new Error('No zone');commit(name||lat.toFixed(4)+'°, '+lon.toFixed(4)+'°',zones[0],lat,lon,token===undefined?null:6);status(zones.length>1?'Multiple time zones meet here. Showing '+zones[0]+'. Select a nearby city to confirm.':'Selected '+selected.name+' · '+zones[0]+'.');}catch(e){geoPromise=null;if(id===request)status('Could not load the time zone for that point. Your previous clock is unchanged. Try again or choose a listed city.',true);}finally{clearTimeout(timer);}}
+$('location').addEventListener('click',()=>{if(!navigator.geolocation){status('Location is unavailable in this browser. Select a city instead.',true);return;}const id=++request;$('location').disabled=true;status('Waiting for location permission…');navigator.geolocation.getCurrentPosition(pos=>{$('location').disabled=false;if(id===request)lookup(pos.coords.latitude,pos.coords.longitude,'My location',id);},()=>{$('location').disabled=false;if(id===request)status('Location was not available. Allow location access or choose a city.',true);},{timeout:10000,maximumAge:60000,enableHighAccuracy:false});});
+function expand(value){expanded=value;$('map-shell').classList.toggle('wc-expanded',value);$('expand').textContent=value?'Close map':'Expand map';$('expand').setAttribute('aria-expanded',String(value));if(value){oldOverflow=document.body.style.overflow;document.body.style.overflow='hidden';$('expand').focus();}else{document.body.style.overflow=oldOverflow;$('expand').focus();}if(map)requestAnimationFrame(()=>map.invalidateSize());}
+$('expand').addEventListener('click',()=>expand(!expanded));document.addEventListener('keydown',e=>{if(expanded && e.key==='Escape')expand(false);if(expanded && e.key==='Tab'){const focusable=Array.from($('map-shell').querySelectorAll('button,a[href],[tabindex="0"]')).filter(el=>el.getClientRects().length);const first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey && document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey && document.activeElement===last){e.preventDefault();first.focus();}}});
+tick();setInterval(()=>{if(!document.hidden)tick();},1000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)tick();});
+if(window.L){map=L.map('wc-map',{scrollWheelZoom:false,minZoom:2,maxZoom:18,worldCopyJump:true}).setView([22,10],2);const tiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);let warned=false;tiles.on('tileerror',()=>{if(!warned){warned=true;status('Some map tiles could not load. City clocks still work; check your connection.',true);}});map.on('click',e=>lookup(Math.max(-90,Math.min(90,e.latlng.lat)),e.latlng.lng));cities.forEach(c=>{const point=L.circleMarker([c[3],c[4]],{radius:4,color:'#fff',weight:1,fillColor:'#2359bc',fillOpacity:.8,bubblingMouseEvents:false}).addTo(map);const label=document.createElement('span');label.textContent=c[0];point.bindTooltip(label);point.on('click',()=>selectCity(c));});$('reset').addEventListener('click',()=>map.setView([22,10],2));if(window.ResizeObserver)new ResizeObserver(()=>map.invalidateSize()).observe($('map'));}else{status('The map could not load. You can still use city search and live clocks.',true);$('reset').disabled=true;$('expand').disabled=true;}
 }
-
-//     fetch(url)
-//         .then(response => response.json())
-//         .then(data => {
-//             if (data.status === "OK") {
-//                 const timeString = data.formatted; 
-//                 const dateObj = new Date(timeString.replace(" ", "T")); 
-//                 const hours = dateObj.getHours();
-//                 const minutes = dateObj.getMinutes();
-//                 const seconds = dateObj.getSeconds();
-                
-//                 updateClock(hours, minutes, seconds);
-                
-//                 document.getElementById("time-display").innerHTML = `
-// <div class="d-flex justify-content-between flex-wrap text-center fs-5 font-monospace">
-//    <strong>Timezone: ${data.zoneName} </strong>
-//     <strong>Location: ${data.cityName}, ${data.countryName} </strong>
-//     <strong>Current Time: ${formatTime(hours, minutes, seconds)}</strong>
-//     <strong>Date:${dateObj.toDateString()} </strong> 
-// </div>`;
-                
-//                 document.getElementById("digital-clock").innerText = formatTime(hours, minutes, seconds);
-//                 document.getElementById("date-display").innerText = dateObj.toDateString();
-//             } else {
-//                 document.getElementById("time-display").innerText = "Time data unavailable.";
-//             }
-//         })
-//         .catch(error => {
-//             console.error("Error fetching time data:", error);
-//             document.getElementById("time-display").innerText = "Error fetching time.";
-//         });
-// }
-
-// Format time in 24-hour format
-function formatTime(h, m, s) {
-    return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-}
-
-// Function to update analog clock
-function updateClock(hours, minutes, seconds) {
-    const hourDeg = (hours % 12) * 30 + minutes * 0.5; // 360° / 12 = 30° per hour
-    const minuteDeg = minutes * 6; // 360° / 60 = 6° per minute
-    const secondDeg = seconds * 6; // 360° / 60 = 6° per second
-
-    document.getElementById("hour-hand").style.transform = `translateX(-50%) rotate(${hourDeg}deg)`;
-    document.getElementById("minute-hand").style.transform = `translateX(-50%) rotate(${minuteDeg}deg)`;
-    document.getElementById("second-hand").style.transform = `translateX(-50%) rotate(${secondDeg}deg)`;
-}
-
-// Handle map clicks
-map.on('click', function (e) {
-    var lat = e.latlng.lat;
-    var lng = e.latlng.lng;
-    fetchTime(lat, lng);
-});
-
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
