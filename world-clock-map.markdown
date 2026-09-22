@@ -3,7 +3,7 @@ layout: default
 title: World Clock Map – Live Local Time Around the World"
 permalink: /world-clock-map
 description: "Explore a large interactive world clock map. Check live local time, UTC offsets and dates, compare cities, and switch between 12-hour and 24-hour clocks."
-image: "/assets/images/World_Time_Zones_Map.svg"
+image: "/assets/images/og/world-clock-map.jpg"
 last_modified_at: 2026-09-22
 ---
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
