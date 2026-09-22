@@ -1,279 +1,83 @@
 ---
 layout: default
-title: IST to UTC Converter – India Standard Time to Coordinated Universal Time
+title: IST to UTC Converter – Convert India Time to UTC"
 permalink: /ist-to-utc
-description: "Convert IST to UTC quickly with our free time zone converter. Find the time difference between India Standard Time and Coordinated Universal Time and easily convert dates and times."
-last_modified_at: 2026-09-04
+description: "Convert IST to UTC with date rollover, a time slider and a 24-hour table. India Standard Time is 5 hours 30 minutes ahead of UTC."
+image: "/assets/images/og/ist-to-utc-icon.jpg"
+last_modified_at: 2026-09-22
 ---
-
-
-<style>.tz-widget{ width: 100%; background: #fff; border: 1px solid #e2e7eb; border-radius: 12px; box-shadow: 0 4px 18px rgba(30,50,70,.06); overflow: hidden; color: #263238; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;} .tz-toolbar{ min-height: 54px; padding: 9px 15px; background: #fff; border-bottom: 1px solid #e8edf1;} .tz-toolbar-title{ display: flex; align-items: center; font-size: 14px; font-weight: 600; color: #35424d;} .tz-toolbar-title i{ color: #6a98b9;} .tz-toolbar-right{ display: flex; align-items: center; gap: 5px;} .tz-btn{ min-height: 31px; padding: 5px 10px; border: 1px solid #dce3e8; border-radius: 6px; background: #fff; color: #59656f; font-size: 12px; font-weight: 500; cursor: pointer; transition: .15s ease;} .tz-btn:hover{ background: #f5f8fa; border-color: #cbd7df; color: #315f84;} .tz-nav-btn{ width: 32px; padding: 4px 0;} .tz-today-btn{ min-width: 86px;} .tz-selected-clocks{ display: grid; grid-template-columns: 1fr 1fr; background: #fafcfd; border-bottom: 1px solid #e7ecf0;} .tz-selected-clock{ padding: 16px 20px; text-align: center;} .tz-selected-clock + .tz-selected-clock{ border-left: 1px solid #e7ecf0;} .tz-selected-zone{ font-size: 11px; font-weight: 700; letter-spacing: .7px; color: #71808b; text-transform: uppercase;} .tz-selected-time{ margin-top: 5px; font-size: 31px; line-height: 1.15; font-weight: 650; color: #263238; font-variant-numeric: tabular-nums; white-space: nowrap;} .tz-selected-date{ margin-top: 5px; font-size: 11px; color: #89949d;} .tz-selected-status{ margin-top: 6px; font-size: 9px; color: #9aa4ac; letter-spacing: .4px; text-transform: uppercase;} .tz-dst-info{ display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: #f8fbfd; border-bottom: 1px solid #e6edf1; color: #60717c; font-size: 11px; line-height: 1.4;} .tz-dst-icon{ width: 30px; height: 30px; flex: 0 0 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #edf5f9; color: #638ba5;} .tz-dst-title{ font-size: 11px; font-weight: 700; color: #42535e;} .tz-dst-description{ margin-top: 2px; color: #7d8991;} .tz-dst-current{ display: inline-block; margin-left: 4px; padding: 2px 6px; border-radius: 4px; background: #eaf2f7; color: #587b92; font-size: 9px; font-weight: 700;} .tz-scroll{ width: 100%; overflow-x: auto; overflow-y: hidden; scrollbar-width: thin;} .tz-timeline{ min-width: 1180px; background: #fff;} .tz-row{ display: grid; grid-template-columns: 245px 1fr; min-height: 136px; border-bottom: 1px solid #edf0f3;} .tz-info{ padding: 17px 18px; background: #fff; border-right: 1px solid #edf0f3;} .tz-code{ font-size: 20px; line-height: 1; font-weight: 700; color: #263238;} .tz-name{ margin-top: 6px; font-size: 12px; color: #6f7b85;} .tz-location{ margin-top: 2px; font-size: 11px; color: #9aa3aa;} .tz-clock{ margin-top: 13px; font-size: 24px; line-height: 1; font-weight: 650; color: #34414a; font-variant-numeric: tabular-nums; white-space: nowrap;} .tz-clock-date{ margin-top: 5px; font-size: 10px; color: #929ca4;} .tz-live{ display: flex; align-items: center; gap: 5px; margin-top: 6px; font-size: 9px; color: #89949d;} .tz-live-dot{ width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: #68a77c; box-shadow: 0 0 0 2px #edf7f0;} .tz-hours-area{ position: relative; padding: 12px 14px 15px;} .tz-date-header{ display: flex; align-items: center; height: 19px; margin-bottom: 7px; padding-left: 3px; font-size: 10px; font-weight: 650; color: #87919a; text-transform: uppercase; letter-spacing: .5px;} .tz-hours{ display: grid; grid-template-columns: repeat(24,minmax(42px,1fr)); gap: 6px; height: 70px;} .tz-hour-card{ position: relative; min-width: 42px; height: 70px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #e5eaee; border-radius: 8px; cursor: pointer; user-select: none; transition: .12s ease;} .tz-hour-card.am{ background: #f7fafc; border-color: #e1e9ef;} .tz-hour-card.am:hover{ background: #edf5f9; border-color: #c9dce8; transform: translateY(-2px);} .tz-hour-card.pm{ background: #fdfaf7; border-color: #eee5da;} .tz-hour-card.pm:hover{ background: #f8f0e7; border-color: #ddcdbb; transform: translateY(-2px);} .tz-hour-number{ font-size: 12px; line-height: 1; font-weight: 650; color: #4c5963;} .tz-hour-period{ margin-top: 5px; font-size: 8px; line-height: 1; font-weight: 700;} .tz-hour-card.am .tz-hour-period{ color: #7192a8;} .tz-hour-card.pm .tz-hour-period{ color: #a17b56;} .tz-hour-card.selected{ background: #72a7ce !important; border-color: #4f88b5 !important; box-shadow: 0 3px 9px rgba(70,120,160,.20); transform: translateY(-2px);} .tz-hour-card.selected .tz-hour-number,
-.tz-hour-card.selected .tz-hour-period{ color: #fff !important;} .tz-now-marker{ position: absolute; top: 36px; bottom: 15px; width: 2px; background: #566773; border-radius: 2px; z-index: 20; pointer-events: none;} .tz-now-label{ position: absolute; top: 25px; transform: translateX(-50%); padding: 3px 6px; border-radius: 4px; background: #566773; color: #fff; font-size: 8px; line-height: 1; white-space: nowrap; z-index: 21; pointer-events: none;} .tz-result{ min-height: 58px; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 16px; background: #f8fafc; border-bottom: 1px solid #e6eaee; font-size: 14px; overflow-x: auto;} .tz-result-time{ font-size: 15px; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap;} .eastern-result{ color: #466f8c;} .central-result{ color: #866a4d;} .tz-result-gap{ display: inline-flex; align-items: center; justify-content: center; min-height: 24px; padding: 4px 9px; border-radius: 20px; background: #eaf2f7; border: 1px solid #d5e3eb; color: #58778d; font-size: 9px; font-weight: 700; white-space: nowrap;} .tz-result-arrow{ color: #8b969e; font-size: 16px;} .tz-result-date{ font-size: 10px; color: #89949d; white-space: nowrap;} .pacific-result{ color: #866a4d;} @media (max-width:768px){ .tz-selected-clock{ padding: 13px 8px;} .tz-selected-time{ font-size: 23px;} .tz-timeline{ min-width: 1000px;} .tz-row{ grid-template-columns: 190px 1fr;} .tz-result{ justify-content: flex-start;}} @media (max-width:480px){ .tz-toolbar-title i{ display: none;} .tz-selected-time{ font-size: 19px;} .tz-timeline{ min-width: 950px;} .tz-row{ grid-template-columns: 175px 1fr;}}
+<style>
+.ec-iu{--iu-blue:#2454bc;--iu-ink:#172b4d;--iu-muted:#53647b;max-width:1160px;margin:24px auto 40px;padding:0 16px;color:var(--iu-ink);font:inherit;line-height:1.6}.ec-iu *{box-sizing:border-box}.ec-iu [hidden]{display:none!important}.ec-iu h1{font-size:clamp(1.65rem,4vw,2.2rem);line-height:1.2;margin:8px 0}.ec-iu h2{font-size:1.35rem;margin:0 0 12px}.ec-iu h3{font-size:1.1rem}.ec-iu p{margin:0 0 14px}.ec-iu a{color:var(--iu-blue)}.ec-iu .iu-muted{color:var(--iu-muted);font-size:.9rem}.ec-iu .iu-head{margin-bottom:20px}.ec-iu .iu-eyebrow{color:var(--iu-blue);font-size:.75rem;font-weight:750;letter-spacing:.12em;text-transform:uppercase}.ec-iu .iu-panel{border:1px solid #d9e3f0;border-radius:18px;background:#fff;box-shadow:0 8px 28px #17345608;overflow:hidden}.ec-iu .iu-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 20px;background:#f6f9fd;border-bottom:1px solid #e3eaf3}.ec-iu .iu-toolbar strong{font-size:.85rem}.ec-iu .iu-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.ec-iu button,.ec-iu select,.ec-iu input{font:inherit}.ec-iu button,.ec-iu .iu-link{border:1px solid #ccd8e7;border-radius:8px;background:#fff;color:#25446b;padding:8px 12px;min-height:40px;font-size:.86rem;font-weight:650;cursor:pointer;text-decoration:none}.ec-iu button:hover{background:#edf3ff;border-color:#9cb4df}.ec-iu button:disabled{cursor:not-allowed;opacity:.5}.ec-iu :is(button,input,select,a,summary):focus-visible{outline:3px solid #739dea;outline-offset:3px}.ec-iu .iu-primary{background:var(--iu-blue);color:#fff;border-color:var(--iu-blue)}.ec-iu .iu-primary:hover{background:#194399}.ec-iu select{padding:6px;border:1px solid #ccd8e7;border-radius:7px;background:#fff;color:var(--iu-ink);min-height:38px}.ec-iu .iu-grid{display:grid;grid-template-columns:1fr 1fr}.ec-iu .iu-entry,.ec-iu .iu-result{padding:22px;min-width:0}.ec-iu .iu-result{background:#f0f6ff;border-left:1px solid #dce7f6;display:flex;flex-direction:column;justify-content:center}.ec-iu .iu-zone{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:14px;font-weight:750}.ec-iu .iu-badge{background:#fff;border:1px solid #dbe5f2;border-radius:20px;padding:3px 9px;font-size:.72rem;white-space:nowrap;color:#415b7d}.ec-iu .iu-inputs{display:grid;grid-template-columns:1.25fr 1fr;gap:12px}.ec-iu label{display:block;font-size:.8rem;font-weight:650;margin-bottom:5px}.ec-iu input[type=date],.ec-iu input[type=time]{width:100%;min-width:0;border:1px solid #bccce0;border-radius:8px;padding:9px 8px;color:var(--iu-ink);background:#fff;min-height:44px}.ec-iu .iu-presets{margin-top:12px;gap:6px}.ec-iu .iu-presets button{font-size:.78rem;min-height:34px;padding:5px 9px}.ec-iu .iu-clock{font-size:clamp(2rem,5vw,3.25rem);font-weight:750;color:#183d82;line-height:1.15;letter-spacing:-.04em;font-variant-numeric:tabular-nums}.ec-iu .iu-date{margin:9px 0 6px;font-weight:600}.ec-iu .iu-day{font-size:.78rem;color:#175c4c;font-weight:700}.ec-iu .iu-slider{padding:14px 22px;border-top:1px solid #e3eaf3}.ec-iu .iu-slider input{width:100%;accent-color:var(--iu-blue);display:block;margin:10px 0}.ec-iu .iu-scale{display:flex;justify-content:space-between;font-size:.7rem;color:var(--iu-muted)}.ec-iu .iu-footer{padding:14px 22px;border-top:1px solid #e3eaf3;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}.ec-iu .iu-live{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:8px 0 24px}.ec-iu .iu-live-card{border:1px solid #dce7f6;background:#f8faff;border-radius:12px;padding:14px 16px;min-width:0}.ec-iu .iu-live-heading{display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:.85rem}.ec-iu .iu-live-indicator{color:#175c4c;font-size:.7rem}.ec-iu .iu-live-indicator:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#228467;margin-right:5px}.ec-iu .iu-live-time{font-size:clamp(1.05rem,3.4vw,1.9rem);font-weight:750;color:#183d82;line-height:1.4;font-variant-numeric:tabular-nums;white-space:nowrap;margin:6px 0 2px}.ec-iu .iu-live-date{font-size:.72rem;color:var(--iu-muted)}.ec-iu .iu-error{color:#b42318;font-size:.85rem;margin-top:12px}.ec-iu .iu-status{font-size:.8rem;min-height:1.5em;margin-top:8px;color:#175c4c}.ec-iu details{border-bottom:1px solid #e1e7ef;padding:14px 0}.ec-iu summary{cursor:pointer;font-weight:650}.ec-iu details p{margin:10px 0 0}.ec-iu .iu-article{margin-top:26px}.ec-iu .iu-article section{margin:28px 0}.ec-iu .iu-formula{padding:14px 18px;background:#f3f7fc;border-radius:0 8px 8px 0;font-weight:700}.ec-iu .iu-tablewrap{overflow:auto;margin-top:14px;max-height:340px}.ec-iu table{width:100%;border-collapse:collapse;font-size:.87rem}.ec-iu th,.ec-iu td{text-align:left;padding:9px 14px;border-bottom:1px solid #e1e7ef;white-space:nowrap}.ec-iu th{background:#eef4fd;position:sticky;top:0}.ec-iu tr:nth-child(even){background:#f8fafc}.ec-iu caption{caption-side:top;color:var(--iu-muted);padding:8px 0}.ec-iu .iu-links{display:flex;gap:8px;flex-wrap:wrap}.ec-iu .iu-meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid #e1e7ef;margin-bottom:24px;font-size:.8rem;color:var(--iu-muted)}
+@media(max-width:620px){.ec-iu{margin-top:16px;padding:0 12px}.ec-iu .iu-grid{grid-template-columns:1fr}.ec-iu .iu-result{border-left:0;border-top:1px solid #dce7f6}.ec-iu .iu-entry,.ec-iu .iu-result{padding:18px}.ec-iu .iu-result .iu-zone{margin-bottom:8px}.ec-iu .iu-toolbar,.ec-iu .iu-slider,.ec-iu .iu-footer{padding:12px 18px}.ec-iu .iu-clock{font-size:clamp(1.7rem,8vw,2.45rem)}.ec-iu .iu-live-card{padding:11px 10px}.ec-iu .iu-live-heading{flex-wrap:wrap;gap:2px}.ec-iu .iu-inputs{grid-template-columns:1fr}.ec-iu .iu-inputs input{font-size:1rem}}
 </style>
+<div aria-label="breadcrumb" class="pt-3"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item"><a href="/time-zone-converter">Time Zone </a></li><li class="breadcrumb-item active" aria-current="page">IST to UTC Time Converter </li></ol></div>
 
-<div aria-label="breadcrumb" class="p-3"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item"><a href="/time-zone-converter">Time Zone </a></li><li class="breadcrumb-item active" aria-current="page">IST to UTC Time Converter </li></ol></div>
-
-
-<div class="tz-widget">
-
-    <!-- TOOLBAR -->
-    <div class="tz-toolbar">
-        <div class="d-flex justify-content-between align-items-center">
-
-            <div class="tz-toolbar-title">
-                <i class="fa-solid fa-clock me-1"></i>
-                IST to UTC Time Converter
-            </div>
-
-            <div class="tz-toolbar-right">
-
-                <button type="button"
-                        class="tz-btn tz-nav-btn"
-                        onclick="tzPreviousDay()"
-                        aria-label="Previous day">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
-
-                <button type="button"
-                        class="tz-btn tz-today-btn"
-                        onclick="tzToday()">
-                    Today · Now
-                </button>
-
-                <button type="button"
-                        class="tz-btn tz-nav-btn"
-                        onclick="tzNextDay()"
-                        aria-label="Next day">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-
-            </div>
-        </div>
+<div class="ec-iu" id="iu-app">
+<header class="iu-head"><h1>IST to UTC Converter</h1><p class="iu-muted">Convert India Standard Time to UTC. Subtract 5 hours 30 minutes; the date adjusts automatically.</p></header>
+<div class="iu-panel">
+<div class="iu-toolbar"><strong id="iu-direction">IST → UTC · −5 h 30 min</strong><div class="iu-row"><label for="iu-format" style="margin:0">Display</label><select id="iu-format"><option value="12">12-hour</option><option value="24">24-hour</option></select><button type="button" id="iu-swap" aria-label="Swap conversion direction">⇄ Swap</button></div></div>
+<form id="iu-form" novalidate>
+<div class="iu-grid">
+<div class="iu-entry"><div class="iu-zone"><span id="iu-from">India Standard Time</span><span class="iu-badge" id="iu-offset">UTC +05:30</span></div><div class="iu-inputs"><div><label for="iu-input-date">Date</label><input id="iu-input-date" type="date" min="1900-01-01" max="2100-12-31" required aria-describedby="iu-error"></div><div><label for="iu-input-time" id="iu-time-label">Time in IST</label><input id="iu-input-time" type="time" step="1" required aria-describedby="iu-error"></div></div><div class="iu-row iu-presets"><button type="button" id="iu-now">Use current time</button><button type="button" data-time="09:00">9 AM</button><button type="button" data-time="12:00">Noon</button><button type="button" data-time="18:00">6 PM</button></div><div class="iu-error" id="iu-error" role="alert" hidden>Enter a valid date from 1900 to 2100 and a time.</div></div>
+<div class="iu-result" role="status" aria-live="polite" aria-atomic="true"><div class="iu-zone"><span id="iu-to">Coordinated Universal Time</span><span class="iu-badge" id="iu-result-zone">UTC +00:00</span></div><div class="iu-clock" id="iu-result-time">—</div><div class="iu-date" id="iu-result-date">Choose a date and time</div><div class="iu-day" id="iu-day">—</div></div>
+</div>
+<div class="iu-slider"><div class="iu-row" style="justify-content:space-between"><label for="iu-range" style="margin:0">Explore the day</label><span class="iu-muted" id="iu-slider-time">09:00 IST</span></div><input type="range" id="iu-range" min="0" max="1439" step="1" value="540" aria-label="Selected time, minutes after midnight"><div class="iu-scale"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>23:59</span></div></div>
+<div class="iu-footer"><span class="iu-muted" id="iu-rule">UTC = IST − 05:30</span><div class="iu-row"><button class="iu-primary" type="submit">Convert</button><button type="button" id="iu-copy">Copy result</button></div></div>
+</form></div>
+<div class="iu-status" id="iu-status" role="status"></div><div class="iu-live" aria-label="Current IST and UTC clocks" aria-live="off">
+<div class="iu-live-card"><div class="iu-live-heading"><strong>IST</strong><span class="iu-live-indicator">Live · India</span></div><div class="iu-live-time" id="iu-live-ist">—</div><div class="iu-live-date" id="iu-live-ist-date">India Standard Time · UTC +05:30</div></div>
+<div class="iu-live-card"><div class="iu-live-heading"><strong>UTC</strong><span class="iu-live-indicator">Live · Universal</span></div><div class="iu-live-time" id="iu-live-utc">—</div><div class="iu-live-date" id="iu-live-utc-date">Coordinated Universal Time · UTC +00:00</div></div>
+</div>
+<noscript><p>Enable JavaScript for interactive conversion. To convert manually, subtract 5 hours 30 minutes from IST. Before 05:30 IST, the UTC date is the previous day.</p></noscript>
+<details><summary>24-hour IST to UTC conversion table</summary><div class="iu-tablewrap"><table><caption>Each row uses the same IST date. “Previous day” refers to the UTC date.</caption><thead><tr><th scope="col">IST</th><th scope="col">UTC</th><th scope="col">UTC date</th></tr></thead><tbody>
+<tr><td>00:00</td><td>18:30</td><td>Previous day</td></tr>
+<tr><td>01:00</td><td>19:30</td><td>Previous day</td></tr>
+<tr><td>02:00</td><td>20:30</td><td>Previous day</td></tr>
+<tr><td>03:00</td><td>21:30</td><td>Previous day</td></tr>
+<tr><td>04:00</td><td>22:30</td><td>Previous day</td></tr>
+<tr><td>05:00</td><td>23:30</td><td>Previous day</td></tr>
+<tr><td>06:00</td><td>00:30</td><td>Same day</td></tr>
+<tr><td>07:00</td><td>01:30</td><td>Same day</td></tr>
+<tr><td>08:00</td><td>02:30</td><td>Same day</td></tr>
+<tr><td>09:00</td><td>03:30</td><td>Same day</td></tr>
+<tr><td>10:00</td><td>04:30</td><td>Same day</td></tr>
+<tr><td>11:00</td><td>05:30</td><td>Same day</td></tr>
+<tr><td>12:00</td><td>06:30</td><td>Same day</td></tr>
+<tr><td>13:00</td><td>07:30</td><td>Same day</td></tr>
+<tr><td>14:00</td><td>08:30</td><td>Same day</td></tr>
+<tr><td>15:00</td><td>09:30</td><td>Same day</td></tr>
+<tr><td>16:00</td><td>10:30</td><td>Same day</td></tr>
+<tr><td>17:00</td><td>11:30</td><td>Same day</td></tr>
+<tr><td>18:00</td><td>12:30</td><td>Same day</td></tr>
+<tr><td>19:00</td><td>13:30</td><td>Same day</td></tr>
+<tr><td>20:00</td><td>14:30</td><td>Same day</td></tr>
+<tr><td>21:00</td><td>15:30</td><td>Same day</td></tr>
+<tr><td>22:00</td><td>16:30</td><td>Same day</td></tr>
+<tr><td>23:00</td><td>17:30</td><td>Same day</td></tr>
+</tbody></table></div></details>
+<!-- Article Content -->
+<div class="article-container">
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+    {% include naren_create.html %}
     </div>
-
-
-    <!-- SELECTED CLOCKS -->
-    <div class="tz-selected-clocks">
-
-        <div class="tz-selected-clock">
-
-            <div id="tzSelectedFromZone"
-                 class="tz-selected-zone">
-                IST
-            </div>
-
-            <div id="tzSelectedFromLive"
-                 class="tz-selected-time">
-                --
-            </div>
-
-            <div id="tzSelectedFromDate"
-                 class="tz-selected-date">
-                --
-            </div>
-
-            <div class="tz-selected-status">
-                Selected Time
-            </div>
-
-        </div>
-
-
-        <div class="tz-selected-clock">
-
-            <div id="tzSelectedToZone"
-                 class="tz-selected-zone">
-                UTC
-            </div>
-
-            <div id="tzSelectedToLive"
-                 class="tz-selected-time">
-                --
-            </div>
-
-            <div id="tzSelectedToDate"
-                 class="tz-selected-date">
-                --
-            </div>
-
-            <div class="tz-selected-status">
-                Converted Time
-            </div>
-
-        </div>
-
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>3 min read</span>
     </div>
-
-
-    <!-- UTC INFORMATION -->
-    <div id="tzDstInfo"
-         class="tz-dst-info">
-    </div>
-
-
-    <!-- 24 HOUR TIMELINE -->
-    <div class="tz-scroll">
-
-        <div class="tz-timeline">
-
-
-            <!-- INDIA -->
-
-            <div class="tz-row">
-
-                <div class="tz-info">
-
-                    <div id="tzFromCode"
-                         class="tz-code">
-                        IST
-                    </div>
-
-                    <div id="tzFromName"
-                         class="tz-name">
-                        India Standard Time
-                    </div>
-
-                    <div class="tz-location">
-                        New Delhi, India
-                    </div>
-
-                    <div id="tzFromClock"
-                         class="tz-clock">
-                        --
-                    </div>
-
-                    <div id="tzFromClockDate"
-                         class="tz-clock-date">
-                        --
-                    </div>
-
-                    <div class="tz-live">
-                        <span class="tz-live-dot"></span>
-                        Live time
-                    </div>
-
-                </div>
-
-
-                <div class="tz-hours-area">
-
-                    <div id="tzFromDate"
-                         class="tz-date-header">
-                        --
-                    </div>
-
-                    <div id="tzFromHours"
-                         class="tz-hours">
-                    </div>
-
-                    <div id="tzFromNowMarker"
-                         class="tz-now-marker">
-                    </div>
-
-                    <div id="tzFromNowLabel"
-                         class="tz-now-label">
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- UTC -->
-
-            <div class="tz-row">
-
-                <div class="tz-info">
-
-                    <div id="tzToCode"
-                         class="tz-code">
-                        UTC
-                    </div>
-
-                    <div id="tzToName"
-                         class="tz-name">
-                        Coordinated Universal Time
-                    </div>
-
-                    <div class="tz-location">
-                        UTC
-                    </div>
-
-                    <div id="tzToClock"
-                         class="tz-clock">
-                        --
-                    </div>
-
-                    <div id="tzToClockDate"
-                         class="tz-clock-date">
-                        --
-                    </div>
-
-                    <div class="tz-live">
-                        <span class="tz-live-dot"></span>
-                        Live time
-                    </div>
-
-                </div>
-
-
-                <div class="tz-hours-area">
-
-                    <div id="tzToDate"
-                         class="tz-date-header">
-                        --
-                    </div>
-
-                    <div id="tzToHours"
-                         class="tz-hours">
-                    </div>
-
-                    <div id="tzToNowMarker"
-                         class="tz-now-marker">
-                    </div>
-
-                    <div id="tzToNowLabel"
-                         class="tz-now-label">
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- RESULT -->
-    <div class="tz-result">
-
-        <span id="tzSelectedFrom"
-              class="tz-result-time ist-result">
-            IST --
-        </span>
-
-        <span class="tz-result-gap">
-            −5 HOURS 30 MIN
-        </span>
-
-        <span class="tz-result-arrow">
-            →
-        </span>
-
-        <span id="tzSelectedTo"
-              class="tz-result-time utc-result">
-            UTC --
-        </span>
-
-        <span id="tzSelectedDate"
-              class="tz-result-date">
-            --
-        </span>
-
-    </div>
-
+  </div>
+<!-- Article-->
+<section><h2>How to convert IST to UTC</h2><p>India Standard Time is 5 hours and 30 minutes ahead of Coordinated Universal Time. To convert an Indian time to UTC, subtract 05:30. If the answer falls before midnight, move the UTC date back by one day.</p><p class="iu-formula">UTC = IST − 5 hours 30 minutes</p><p>For example, <strong>9:00 AM IST = 3:30 AM UTC</strong> on the same date. At <strong>2:00 AM IST on 21 September</strong>, UTC is <strong>8:30 PM on 20 September</strong>. Exactly 5:30 AM IST is midnight UTC on the same date.</p></section>
+<div class="p-4"><img  src="/assets/images/ist-to-utc-formula-example.svg"  alt="IST to UTC formula: subtract 5 hours 30 minutes. 9 AM IST equals 3:30 AM UTC."   width="1200"
+  height="720" class="img-fluid rounded" loading="lazy" decoding="async"></div>
+<section><h2>Use the converter</h2><ol><li>Select a date and enter the time in India Standard Time.</li><li>Read the UTC result and its date. Changes update automatically.</li><li>Use the slider to explore other times, or select <strong>Use current time</strong>.</li><li>Switch between 12-hour and 24-hour result formats. The time input follows your browser’s regional settings.</li><li>Copy the result, including seconds. The two live clocks below the converter keep running every second while you explore other times.</li></ol><p>The <strong>Swap</strong> button keeps the same moment and changes the direction to UTC → IST. For a dedicated reverse converter, visit <a href="/utc-to-ist">UTC to IST</a>.</p></section>
+<section><h2>IST, UTC and date changes</h2><p>This tool uses IST to mean <strong>India Standard Time</strong>, the time used in New Delhi, Mumbai, Kolkata, Chennai and throughout India. It does not mean Irish Standard Time or Israel Standard Time.</p><p>The converter applies a fixed +05:30 offset for India and +00:00 for UTC. It is designed for everyday scheduling, meeting times, online events and timestamps. It is not a historical time-zone database; older civil-time rules and leap seconds are outside its scope.</p><p>For IST times from 00:00 through 05:29, UTC falls on the previous date. From 05:30 through 23:59, the UTC date is the same as the IST date.</p></section>
+<section class="p-4"><h2 class="mb-4">FAQ on IST to UTC</h2><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Is IST ahead of or behind UTC?</div><p class="mb-0">India Standard Time is 5 hours 30 minutes ahead of UTC. Subtract 5 hours 30 minutes to convert IST to UTC.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">What is 12 PM IST in UTC?</div><p class="mb-0">12 PM IST (noon) is 6:30 AM UTC on the same date. 12 AM IST (midnight) is 6:30 PM UTC on the previous date.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">What is 9 AM IST in UTC?</div><p class="mb-0">9 AM IST is 3:30 AM UTC on the same date.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Why is my UTC result on the previous day?</div><p class="mb-0">Subtracting 5 hours 30 minutes from an IST time before 5:30 AM crosses midnight. The UTC date is therefore one day earlier.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Does this converter apply daylight saving time?</div><p class="mb-0">No. This converter uses fixed offsets: IST at UTC+05:30 and UTC at UTC+00:00.</p></div></div></section>
 </div>
 
 
+
 <script src="{{ '/assets/js/time/ist-to-utc.js' | relative_url }}"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is IST ahead of or behind UTC?","acceptedAnswer":{"@type":"Answer","text":"India Standard Time is 5 hours 30 minutes ahead of UTC. Subtract 5 hours 30 minutes to convert IST to UTC."}},{"@type":"Question","name":"What is 12 PM IST in UTC?","acceptedAnswer":{"@type":"Answer","text":"12 PM IST (noon) is 6:30 AM UTC on the same date. 12 AM IST (midnight) is 6:30 PM UTC on the previous date."}},{"@type":"Question","name":"What is 9 AM IST in UTC?","acceptedAnswer":{"@type":"Answer","text":"9 AM IST is 3:30 AM UTC on the same date."}},{"@type":"Question","name":"Why is my UTC result on the previous day?","acceptedAnswer":{"@type":"Answer","text":"Subtracting 5 hours 30 minutes from an IST time before 5:30 AM crosses midnight. The UTC date is therefore one day earlier."}},{"@type":"Question","name":"Does this converter apply daylight saving time?","acceptedAnswer":{"@type":"Answer","text":"No. This converter uses fixed offsets: IST at UTC+05:30 and UTC at UTC+00:00."}}]}
+</script>
