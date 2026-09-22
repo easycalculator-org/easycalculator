@@ -1,1 +1,83 @@
-const TZ_CENTRAL="America/Chicago",TZ_EASTERN="America/New_York";let tzSelectedInstant=new Date,tzTimelineStart=null;function tzParts(t,e){const n=new Intl.DateTimeFormat("en-US",{timeZone:e,year:"numeric",month:"numeric",day:"numeric",hour:"numeric",minute:"numeric",second:"numeric",hourCycle:"h23"}).formatToParts(t);return Object.fromEntries(n.map((t=>[t.type,t.value])))}function tzAbbreviation(t,e){const n=new Intl.DateTimeFormat("en-US",{timeZone:e,timeZoneName:"short"}).formatToParts(t).find((t=>"timeZoneName"===t.type));return n?n.value:""}function tzFormatTime(t,e,n=!1){return new Intl.DateTimeFormat("en-US",{timeZone:e,hour:"numeric",minute:"2-digit",...n?{second:"2-digit"}:{},hour12:!0}).format(t)}function tzFormatDate(t,e){return new Intl.DateTimeFormat("en-US",{timeZone:e,weekday:"short",month:"short",day:"numeric",year:"numeric"}).format(t)}function tzFormatLongDate(t,e){return new Intl.DateTimeFormat("en-US",{timeZone:e,weekday:"long",month:"long",day:"numeric",year:"numeric"}).format(t)}function tzGetOffset(t,e){const n=new Intl.DateTimeFormat("en-US",{timeZone:e,timeZoneName:"longOffset"}).formatToParts(t).find((t=>"timeZoneName"===t.type));if(!n)return 0;const a=n.value.match(/^GMT([+-])(\d{2}):(\d{2})$/);if(!a)return 0;return("+"===a[1]?1:-1)*(60*Number(a[2])+Number(a[3]))}function tzGetDifferenceText(t){const e=tzGetOffset(t,TZ_CENTRAL),n=tzGetOffset(t,TZ_EASTERN)-e,a=n>=0?"+":"-",o=Math.abs(n),r=Math.floor(o/60),i=o%60;let s=`${a}${r} ${1===r?"HOUR":"HOURS"}`;return i>0&&(s+=` ${i} MIN`),s}function tzCalculateTimeline(){const t=36e5;tzTimelineStart=new Date(Math.floor((tzSelectedInstant.getTime()-12*t)/t)*t)}function tzIsSameHour(t,e,n){const a=tzParts(t,n),o=tzParts(e,n);return a.year===o.year&&a.month===o.month&&a.day===o.day&&a.hour===o.hour}function tzCreateTimeline(t,e){const n=document.getElementById(t);if(!n)return;n.innerHTML="";for(let t=0;t<24;t++){const a=new Date(tzTimelineStart.getTime()+36e5*t),o=tzParts(a,e),r=Number(o.hour),i=document.createElement("div");i.className="tz-hour-card "+(r<12?"am":"pm"),tzIsSameHour(a,tzSelectedInstant,e)&&i.classList.add("selected");let s=r%12;0===s&&(s=12);const d=r<12?"AM":"PM";i.innerHTML=`\n\n            <div class="tz-hour-number">\n                ${s}\n            </div>\n\n            <div class="tz-hour-period">\n                ${d}\n            </div>\n\n        `,i.addEventListener("click",(function(){tzSelectedInstant=new Date(a.getTime()),tzRender()})),n.appendChild(i)}}function tzUpdateDateHeaders(){const t=document.getElementById("tzCentralDate"),e=document.getElementById("tzEasternDate");t&&(t.textContent=tzFormatDate(tzTimelineStart,TZ_CENTRAL).toUpperCase()),e&&(e.textContent=tzFormatDate(tzTimelineStart,TZ_EASTERN).toUpperCase())}function tzUpdateSelectedClocks(){const t=tzAbbreviation(tzSelectedInstant,TZ_CENTRAL),e=tzAbbreviation(tzSelectedInstant,TZ_EASTERN),n=tzFormatTime(tzSelectedInstant,TZ_CENTRAL,!0),a=tzFormatTime(tzSelectedInstant,TZ_EASTERN,!0),o=tzFormatDate(tzSelectedInstant,TZ_CENTRAL),r=tzFormatDate(tzSelectedInstant,TZ_EASTERN),i=document.getElementById("tzSelectedCentralZone"),s=document.getElementById("tzSelectedEasternZone"),d=document.getElementById("tzSelectedCentralLive"),m=document.getElementById("tzSelectedEasternLive"),c=document.getElementById("tzSelectedCentralDate"),l=document.getElementById("tzSelectedEasternDate");i&&(i.textContent=t),s&&(s.textContent=e),d&&(d.textContent=n),m&&(m.textContent=a),c&&(c.textContent=o),l&&(l.textContent=r)}function tzUpdateCentralName(){const t=tzAbbreviation(tzSelectedInstant,TZ_CENTRAL),e=document.getElementById("tzCentralCode"),n=document.getElementById("tzCentralName");e&&(e.textContent=t),n&&(n.textContent="CDT"===t?"Central Daylight Time":"Central Standard Time")}function tzUpdateEasternName(){const t=tzAbbreviation(tzSelectedInstant,TZ_EASTERN),e=document.getElementById("tzEasternCode"),n=document.getElementById("tzEasternName");e&&(e.textContent=t),n&&(n.textContent="EDT"===t?"Eastern Daylight Time":"Eastern Standard Time")}function tzUpdateResult(){const t=tzAbbreviation(tzSelectedInstant,TZ_CENTRAL),e=tzAbbreviation(tzSelectedInstant,TZ_EASTERN),n=tzFormatTime(tzSelectedInstant,TZ_CENTRAL),a=tzFormatTime(tzSelectedInstant,TZ_EASTERN),o=tzFormatDate(tzSelectedInstant,TZ_CENTRAL),r=tzFormatDate(tzSelectedInstant,TZ_EASTERN),i=tzGetDifferenceText(tzSelectedInstant),s=document.getElementById("tzSelectedCentral"),d=document.getElementById("tzSelectedEastern"),m=document.querySelector(".tz-result-gap"),c=document.getElementById("tzSelectedDate");s&&(s.textContent=`${t} ${n}`),d&&(d.textContent=`${e} ${a}`),m&&(m.textContent=i),c&&(c.textContent=o!==r?`${o} → ${r}`:o)}function tzGetNextDstTransition(t){const e=tzAbbreviation(t,TZ_CENTRAL);for(let n=1;n<=370;n++){const a=new Date(t.getTime()+864e5*n);if(tzAbbreviation(a,TZ_CENTRAL)!==e)return a}return null}function tzFormatDstDate(t){return new Intl.DateTimeFormat("en-US",{timeZone:TZ_CENTRAL,month:"short",day:"numeric",year:"numeric"}).format(t)}function tzUpdateDstInfo(){const t=document.getElementById("tzDstInfo");if(!t)return;const e=new Date,n=tzAbbreviation(e,TZ_CENTRAL),a=tzAbbreviation(e,TZ_EASTERN),o="CDT"===n,r=tzGetNextDstTransition(e);t.innerHTML=o?`\n\n            <div class="tz-dst-icon">\n\n                <i class="fa-solid fa-sun"></i>\n\n            </div>\n\n\n            <div class="tz-dst-content">\n\n                <div class="tz-dst-title">\n\n                    Daylight Saving Time\n\n                    <span class="tz-dst-current">\n\n                        ${n} · UTC−5\n\n                    </span>\n\n                </div>\n\n\n                <div class="tz-dst-description">\n\n                    Central Time is currently\n                    <strong>${n}</strong>.\n\n                    Eastern Time is\n                    <strong>${a}</strong>.\n\n                    ${r?`\n                                <span class="tz-dst-date">\n\n                                    CST returns\n                                    ${tzFormatDstDate(r)}\n\n                                </span>\n                              `:""}\n\n                </div>\n\n            </div>\n\n        `:`\n\n            <div class="tz-dst-icon">\n\n                <i class="fa-regular fa-clock"></i>\n\n            </div>\n\n\n            <div class="tz-dst-content">\n\n                <div class="tz-dst-title">\n\n                    Standard Time\n\n                    <span class="tz-dst-current">\n\n                        ${n} · UTC−6\n\n                    </span>\n\n                </div>\n\n\n                <div class="tz-dst-description">\n\n                    Central Time is currently\n                    <strong>${n}</strong>.\n\n                    Eastern Time is\n                    <strong>${a}</strong>.\n\n                    ${r?`\n                                <span class="tz-dst-date">\n\n                                    CDT starts\n                                    ${tzFormatDstDate(r)}\n\n                                </span>\n                              `:""}\n\n                </div>\n\n            </div>\n\n        `}function tzUpdateLiveClocks(){const t=new Date,e=document.getElementById("tzCentralClock"),n=document.getElementById("tzEasternClock"),a=document.getElementById("tzCentralClockDate"),o=document.getElementById("tzEasternClockDate");e&&(e.textContent=tzFormatTime(t,TZ_CENTRAL,!0)),a&&(a.textContent=tzFormatDate(t,TZ_CENTRAL)),n&&(n.textContent=tzFormatTime(t,TZ_EASTERN,!0)),o&&(o.textContent=tzFormatDate(t,TZ_EASTERN)),tzUpdateNowMarker("tzCentralNowMarker","tzCentralNowLabel",TZ_CENTRAL),tzUpdateNowMarker("tzEasternNowMarker","tzEasternNowLabel",TZ_EASTERN)}function tzUpdateNowMarker(t,e,n){const a=document.getElementById(t),o=document.getElementById(e);if(!a||!o||!tzTimelineStart)return;const r=new Date,i=(r.getTime()-tzTimelineStart.getTime())/864e5*100;if(i<0||i>100)return a.style.display="none",void(o.style.display="none");a.style.display="block",o.style.display="block",a.style.left=i+"%",o.style.left=i+"%",o.textContent=tzFormatTime(r,n)}function tzRender(){tzCalculateTimeline(),tzUpdateDateHeaders(),tzCreateTimeline("tzCentralHours",TZ_CENTRAL),tzCreateTimeline("tzEasternHours",TZ_EASTERN),tzUpdateSelectedClocks(),tzUpdateCentralName(),tzUpdateEasternName(),tzUpdateResult(),tzUpdateDstInfo(),tzUpdateLiveClocks()}function tzToday(){tzSelectedInstant=new Date,tzRender()}function tzPreviousDay(){tzSelectedInstant=new Date(tzSelectedInstant.getTime()-864e5),tzRender()}function tzNextDay(){tzSelectedInstant=new Date(tzSelectedInstant.getTime()+864e5),tzRender()}tzToday(),setInterval((function(){tzUpdateLiveClocks(),tzUpdateDstInfo()}),1e3);
+(() => {
+'use strict';
+const root=document.getElementById('ce-app');
+if(!root) return;
+const $=id=>root.querySelector('#ce-'+id);
+const date=$('input-date'),time=$('input-time'),format=$('format');
+const MINUTE=60000,DAY=86400000;
+function zones(){return $('mode').value==='daylight'?{a:'CDT',b:'EDT',an:'Central Daylight Time',bn:'Eastern Daylight Time',ao:-300,bo:-240}:{a:'CST',b:'EST',an:'Central Standard Time',bn:'Eastern Standard Time',ao:-360,bo:-300};}
+const offset=n=>'UTC −'+String(Math.abs(n)/60).padStart(2,'0')+':00';
+let reverse=false,current=null,resultText='';
+const pad=n=>String(n).padStart(2,'0');
+const iso=d=>d.toISOString().slice(0,10);
+const clockInput=d=>pad(d.getUTCHours())+':'+pad(d.getUTCMinutes())+':'+pad(d.getUTCSeconds());
+function clock(d){const h=d.getUTCHours(),ms=pad(d.getUTCMinutes())+':'+pad(d.getUTCSeconds());return format.value==='24'?pad(h)+':'+ms:(h%12||12)+':'+ms+' '+(h<12?'AM':'PM');}
+const dateLabel=d=>new Intl.DateTimeFormat('en-GB',{weekday:'short',day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(d);
+function parse(){
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(date.value)||!/^\d{2}:\d{2}(?::\d{2})?$/.test(time.value))return null;
+ const [y,mo,da]=date.value.split('-').map(Number),[h,m,sec=0]=time.value.split(':').map(Number);
+ if(y<1900||y>2100||h>23||m>59||sec>59)return null;
+ const d=new Date(Date.UTC(y,mo-1,da,h,m,sec));
+ return iso(d)===date.value?d:null;
+}
+function labels(){
+ const z=zones(),from=reverse?z.b:z.a,to=reverse?z.a:z.b;
+ $('direction').textContent=from+' → '+to+' · '+(reverse?'−1 hour':'+1 hour');
+ $('from').textContent=reverse?z.bn:z.an;$('to').textContent=reverse?z.an:z.bn;
+ $('offset').textContent=offset(reverse?z.bo:z.ao);$('result-zone').textContent=to+' · '+offset(reverse?z.ao:z.bo);
+ $('time-label').textContent='Time in '+from;$('rule').textContent=to+' = '+from+(reverse?' − 01:00':' + 01:00');
+ $('basis-note').textContent=$('mode').value==='daylight'?'Fixed daylight-time clocks: CDT (UTC−05:00) and EDT (UTC−04:00). Choose this pair only when your event uses these abbreviations.':'Fixed standard-time clocks: CST (UTC−06:00) and EST (UTC−05:00). These are not automatic Chicago/New York local clocks during daylight saving time.';
+}
+function update(){
+ labels();$('status').textContent='';
+ const src=parse();current=null;resultText='';
+ $('error').hidden=!!src;
+ [date,time].forEach(el=>el.setAttribute('aria-invalid',String(!src)));
+ $('copy').disabled=!src;
+ $('range').disabled=!src;
+ if(!src){$('result-time').textContent='—';$('result-date').textContent='Enter a valid date and time';$('day').textContent='';$('slider-time').textContent='—';return false;}
+ const dst=new Date(src.getTime()+(reverse?-60:60)*MINUTE);
+ current={src,dst};
+ $('result-time').textContent=clock(dst);
+ $('result-date').textContent=dateLabel(dst);
+ const delta=Math.floor(dst.getTime()/DAY)-Math.floor(src.getTime()/DAY);
+ $('day').textContent=delta<0?'Previous day · −1 day':delta>0?'Next day · +1 day':'Same day';
+ $('range').value=src.getUTCHours()*60+src.getUTCMinutes();
+ $('slider-time').textContent=clock(src)+' '+(reverse?zones().b:zones().a);
+ $('range').setAttribute('aria-valuetext',$('slider-time').textContent);
+ resultText=dateLabel(src)+' at '+clock(src)+' '+(reverse?zones().b:zones().a)+' = '+dateLabel(dst)+' at '+clock(dst)+' '+(reverse?zones().a:zones().b)+' ('+$('day').textContent+').';
+ return true;
+}
+function now(){const d=new Date(Date.now()+(reverse?zones().bo:zones().ao)*MINUTE);date.value=iso(d);time.value=clockInput(d);update();}
+$('form').addEventListener('submit',e=>{e.preventDefault();if(!update())(!date.value?date:time).focus();});
+[date,time,format].forEach(el=>el.addEventListener('input',update));
+$('now').addEventListener('click',now);
+$('range').addEventListener('input',()=>{const n=Number($('range').value);time.value=pad(Math.floor(n/60))+':'+pad(n%60)+':'+pad(current?current.src.getUTCSeconds():0);update();});
+root.querySelectorAll('[data-time]').forEach(b=>b.addEventListener('click',()=>{time.value=b.dataset.time;update();}));
+$('swap').addEventListener('click',()=>{
+ const valid=update();if(!valid)return;
+ const target=current.dst;
+ if(target.getUTCFullYear()<1900||target.getUTCFullYear()>2100){$('status').textContent='The converted date is outside the supported input range (1900–2100).';return;}
+ reverse=!reverse;date.value=iso(target);time.value=clockInput(target);update();
+});
+async function copy(text,success){try{await navigator.clipboard.writeText(text);$('status').textContent=success;}catch(e){$('status').textContent='Automatic copying is unavailable. Copy the text below.';const field=document.createElement('textarea');field.value=text;field.readOnly=true;field.setAttribute('aria-label','Text to copy');field.style.cssText='width:100%;margin-top:8px;min-height:70px';$('status').appendChild(field);field.focus();field.select();}}
+$('copy').addEventListener('click',()=>{if(update())copy(resultText,'Result copied.');});
+function live(){
+ const instant=Date.now(),z=zones();
+ const central=new Date(instant+z.ao*MINUTE),eastern=new Date(instant+z.bo*MINUTE);
+ $('live-central-label').textContent=z.a;$('live-eastern-label').textContent=z.b;
+ $('live-central').textContent=clock(central);$('live-eastern').textContent=clock(eastern);
+ $('live-central-date').textContent=dateLabel(central)+' · '+offset(z.ao);
+ $('live-eastern-date').textContent=dateLabel(eastern)+' · '+offset(z.bo);
+}
+$('mode').addEventListener('change',()=>{update();live();});
+format.addEventListener('input',live);
+const params=new URLSearchParams(window.location.search);
+reverse=params.get('direction')==='est-cst';
+$('mode').value=params.get('mode')==='daylight'?'daylight':'standard';
+format.value=params.get('format')==='24'?'24':'12';
+now();
+if(params.has('date')||params.has('time')){date.value=params.get('date')||date.value;time.value=params.get('time')||time.value;update();}
+live();setInterval(()=>{if(!document.hidden)live();},1000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)live();});
+})();

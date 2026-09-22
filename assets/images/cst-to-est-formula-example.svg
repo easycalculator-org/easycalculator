@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">CST to EST conversion formula and examples</title>
+<desc id="desc">Add one hour to Central Standard Time to get Eastern Standard Time. 09:00:00 CST equals 10:00:00 EST. 23:30:00 CST on 22 September equals 00:30:00 EST on 23 September, the next day.</desc>
+<rect width="1200" height="720" rx="24" fill="#f5f8fd"/>
+<rect x="24" y="24" width="1152" height="672" rx="20" fill="#fff" stroke="#dce5f2"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#172b4d">
+<text x="64" y="77" font-size="15" font-weight="700" letter-spacing="2" fill="#2454bc">TIME ZONE CONVERSION</text>
+<text x="64" y="129" font-size="40" font-weight="700">CST to EST</text>
+<text x="64" y="165" font-size="21" fill="#53647b">Eastern Standard Time is 1 hour ahead of Central Standard Time.</text>
+<rect x="64" y="192" width="1072" height="88" rx="14" fill="#eef4ff"/>
+<text x="600" y="249" text-anchor="middle" font-size="34" font-weight="700" fill="#19458e">EST = CST + 1 hour</text>
+<rect x="64" y="310" width="420" height="204" rx="16" fill="#f8faff" stroke="#dce5f2"/>
+<rect x="716" y="310" width="420" height="204" rx="16" fill="#f0faf6" stroke="#cde9de"/>
+<text x="90" y="350" font-size="22" font-weight="700" fill="#2454bc">CST</text>
+<text x="458" y="350" text-anchor="end" font-size="16" fill="#53647b">UTC −06:00</text>
+<text x="274" y="419" text-anchor="middle" font-size="52" font-weight="700" fill="#183d82">09:00:00</text>
+<text x="274" y="456" text-anchor="middle" font-size="20" fill="#53647b">9:00 AM · Central Standard Time</text>
+<text x="274" y="488" text-anchor="middle" font-size="16" fill="#53647b">22 September</text>
+<text x="742" y="350" font-size="22" font-weight="700" fill="#17614d">EST</text>
+<text x="1110" y="350" text-anchor="end" font-size="16" fill="#53647b">UTC −05:00</text>
+<text x="926" y="419" text-anchor="middle" font-size="52" font-weight="700" fill="#17614d">10:00:00</text>
+<text x="926" y="456" text-anchor="middle" font-size="20" fill="#53647b">10:00 AM · Eastern Standard Time</text>
+<text x="926" y="488" text-anchor="middle" font-size="16" fill="#17614d">22 September · Same day</text>
+<text x="600" y="382" text-anchor="middle" font-size="18" font-weight="700" fill="#2454bc">Add 01:00</text>
+<path d="M520 414 H677 M663 400 L677 414 L663 428" fill="none" stroke="#2454bc" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="600" y="456" text-anchor="middle" font-size="15" fill="#53647b">Seconds stay the same</text>
+<rect x="64" y="538" width="1072" height="97" rx="12" fill="#fff9ed" stroke="#f1e3c6"/>
+<text x="86" y="570" font-size="18" font-weight="700" fill="#845c16">WATCH THE DATE</text>
+<text x="86" y="604" font-size="21" fill="#624b23">22 Sep, 23:30:00 CST → 23 Sep, 00:30:00 EST · Next day</text>
+<text x="64" y="671" font-size="16" fill="#53647b">24-hour examples · Fixed North American standard-time offsets</text>
+<text x="1136" y="671" text-anchor="end" font-size="18" font-weight="700" fill="#2454bc">easycalculator.org</text>
+</g>
+</svg>
