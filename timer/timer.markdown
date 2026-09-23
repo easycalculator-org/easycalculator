@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Timer Calculator
-permalink: /timer-calculator/
+permalink: /timer-calculator
 description: "Free online Timer Calculator to set countdowns, measure elapsed time, and manage timers easily."
 last_modified_at: 2026-08-09
 ---
