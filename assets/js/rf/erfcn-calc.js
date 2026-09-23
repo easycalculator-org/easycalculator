@@ -1,147 +1,36 @@
- (function() {
-        // get band chips
-        const bandChips = document.querySelectorAll('.band-chip');
-        let activeChip = null;
-
-        // DOM elements (frequent)
-        const selectedBandDisplay = document.getElementById('selectedBandDisplay');
-        const dlFreqRangeSpan = document.getElementById('dlFreqRange');
-        const earfcnRangeSpan = document.getElementById('earfcnRangeDisplay');
-        const footBand = document.getElementById('footBand');
-        const footDlLow = document.getElementById('footDlLow');
-        const footUlLow = document.getElementById('footUlLow');
-        const footOffset = document.getElementById('footOffset');
-        const footRange = document.getElementById('footRange');
-
-        // input / result fields
-        const freqInput = document.getElementById('freqInput');
-        const earfcnResultSpan = document.getElementById('earfcnResult');
-        const earfcnInput = document.getElementById('earfcnInput');
-        const freqResultSpan = document.getElementById('freqResult');
-
-        // panels
-        const panelFreq = document.getElementById('panelFreqToEarfcn');
-        const panelEarfcn = document.getElementById('panelEarfcnToFreq');
-        const radioFreq = document.getElementById('radioFreqToEarfcn');
-        const radioEarfcn = document.getElementById('radioEarfcnToFreq');
-
-        // buttons
-        const btnFreqCalc = document.getElementById('calcFreqToEarfcn');
-        const btnEarfcnCalc = document.getElementById('calcEarfcnToFreq');
-
-        // ---- helper get active band dataset ----
-        function getActiveBandData() {
-            if (!activeChip) {
-                activeChip = document.querySelector('.band-chip');
-                if (activeChip) activeChip.classList.add('active');
-            }
-            return {
-                band: activeChip.dataset.band,
-                dlLow: parseFloat(activeChip.dataset.dlLow),
-                nOffset: parseInt(activeChip.dataset.nOffset),
-                earfcnMin: parseInt(activeChip.dataset.earfcnMin),
-                earfcnMax: parseInt(activeChip.dataset.earfcnMax),
-                text: activeChip.textContent.trim()
-            };
-        }
-
-        // update all band info (ranges, footer)
-        function refreshBandInfo() {
-            const d = getActiveBandData();
-            if (!d) return;
-
-            selectedBandDisplay.innerText = d.text;
-            // DL range approx = low + (maxEarfcn-minEarfcn)*0.1
-            const dlHigh = (d.dlLow + (d.earfcnMax - d.earfcnMin) * 0.1).toFixed(1);
-            dlFreqRangeSpan.innerText = d.dlLow + ' – ' + dlHigh;
-            earfcnRangeSpan.innerText = d.earfcnMin + ' – ' + d.earfcnMax;
-
-            footBand.innerText = d.band;
-            footDlLow.innerText = d.dlLow;
-            // ul low guess (approximate)
-            const ulMap = { '5':'824','8':'880','20':'832','28':'703','71':'663','1':'1920','2':'1850','3':'1710','66':'1710','40':'2300','7':'2500','38':'2570','41':'2496','42':'3400','48':'3550' };
-            footUlLow.innerText = ulMap[d.band] || '—';
-            footOffset.innerText = d.nOffset;
-            footRange.innerText = d.earfcnMin + '–' + d.earfcnMax;
-        }
-
-        // set active band chip
-        function setActiveBand(chip) {
-            if (activeChip) activeChip.classList.remove('active');
-            chip.classList.add('active');
-            activeChip = chip;
-            refreshBandInfo();
-
-            // after band change, recalc visible converter (to keep numbers coherent)
-            if (radioFreq.checked) {
-                computeFreqToEarfcn();
-            } else {
-                computeEarfcnToFreq();
-            }
-        }
-
-        // ---- conversion functions ----
-        function computeFreqToEarfcn() {
-            const d = getActiveBandData();
-            if (!d) return;
-            const freq = parseFloat(freqInput.value);
-            if (isNaN(freq)) { earfcnResultSpan.innerText = '?'; return; }
-            // N = 10*(freq - F_low) + Noffs
-            const earfcn = Math.round(10 * (freq - d.dlLow) + d.nOffset);
-            earfcnResultSpan.innerText = earfcn >= 0 ? earfcn : 'err';
-        }
-
-        function computeEarfcnToFreq() {
-            const d = getActiveBandData();
-            if (!d) return;
-            const earfcnVal = parseFloat(earfcnInput.value);
-            if (isNaN(earfcnVal)) { freqResultSpan.innerText = '?'; return; }
-            // F = (earfcn - Noffs)/10 + F_low
-            const freq = (earfcnVal - d.nOffset) * 0.1 + d.dlLow;
-            freqResultSpan.innerText = (freq >= 0) ? freq.toFixed(2) : 'err';
-        }
-
-        // ---- toggle panels based on radio ----
-        function toggleConverter() {
-            if (radioFreq.checked) {
-                panelFreq.style.display = 'block';
-                panelEarfcn.style.display = 'none';
-                // compute once to show default
-                computeFreqToEarfcn();
-            } else {
-                panelFreq.style.display = 'none';
-                panelEarfcn.style.display = 'block';
-                computeEarfcnToFreq();
-            }
-        }
-
-        // ---- attach event listeners ----
-        bandChips.forEach(chip => {
-            chip.addEventListener('click', function() {
-                setActiveBand(this);
-            });
-        });
-
-        radioFreq.addEventListener('change', toggleConverter);
-        radioEarfcn.addEventListener('change', toggleConverter);
-
-        btnFreqCalc.addEventListener('click', computeFreqToEarfcn);
-        btnEarfcnCalc.addEventListener('click', computeEarfcnToFreq);
-
-        // enter key on inputs
-        freqInput.addEventListener('keypress', (e) => { if(e.key === 'Enter') computeFreqToEarfcn(); });
-        earfcnInput.addEventListener('keypress', (e) => { if(e.key === 'Enter') computeEarfcnToFreq(); });
-
-        // bandwidth radios: purely UI, no calculation impact. keep default 5MHz checked
-        document.getElementById('bw5').checked = true;
-
-        // initialise with band 5
-        if (bandChips.length) {
-            setActiveBand(bandChips[0]);  // band5
-            // set example values
-            freqInput.value = '881.5';
-            earfcnInput.value = '2500';
-            // show correct panel & compute
-            toggleConverter();   // freq->earfcn default
-        }
-    })();
+(function(){'use strict';
+const bands=[{"id":1,"mode":"FDD","dl":[2110.0,0.0,599.0],"ul":[1920.0,18000.0,18599.0]},{"id":2,"mode":"FDD","dl":[1930.0,600.0,1199.0],"ul":[1850.0,18600.0,19199.0]},{"id":3,"mode":"FDD","dl":[1805.0,1200.0,1949.0],"ul":[1710.0,19200.0,19949.0]},{"id":4,"mode":"FDD","dl":[2110.0,1950.0,2399.0],"ul":[1710.0,19950.0,20399.0]},{"id":5,"mode":"FDD","dl":[869.0,2400.0,2649.0],"ul":[824.0,20400.0,20649.0]},{"id":6,"mode":"FDD","dl":[875.0,2650.0,2749.0],"ul":[830.0,20650.0,20749.0]},{"id":7,"mode":"FDD","dl":[2620.0,2750.0,3449.0],"ul":[2500.0,20750.0,21449.0]},{"id":8,"mode":"FDD","dl":[925.0,3450.0,3799.0],"ul":[880.0,21450.0,21799.0]},{"id":9,"mode":"FDD","dl":[1844.9,3800.0,4149.0],"ul":[1749.9,21800.0,22149.0]},{"id":10,"mode":"FDD","dl":[2110.0,4150.0,4749.0],"ul":[1710.0,22150.0,22749.0]},{"id":11,"mode":"FDD","dl":[1475.9,4750.0,4949.0],"ul":[1427.9,22750.0,22949.0]},{"id":12,"mode":"FDD","dl":[729.0,5010.0,5179.0],"ul":[699.0,23010.0,23179.0]},{"id":13,"mode":"FDD","dl":[746.0,5180.0,5279.0],"ul":[777.0,23180.0,23279.0]},{"id":14,"mode":"FDD","dl":[758.0,5280.0,5379.0],"ul":[788.0,23280.0,23379.0]},{"id":17,"mode":"FDD","dl":[734.0,5730.0,5849.0],"ul":[704.0,23730.0,23849.0]},{"id":18,"mode":"FDD","dl":[860.0,5850.0,5999.0],"ul":[815.0,23850.0,23999.0]},{"id":19,"mode":"FDD","dl":[875.0,6000.0,6149.0],"ul":[830.0,24000.0,24149.0]},{"id":20,"mode":"FDD","dl":[791.0,6150.0,6449.0],"ul":[832.0,24150.0,24449.0]},{"id":21,"mode":"FDD","dl":[1495.9,6450.0,6599.0],"ul":[1447.9,24450.0,24599.0]},{"id":22,"mode":"FDD","dl":[3510.0,6600.0,7399.0],"ul":[3410.0,24600.0,25399.0]},{"id":23,"mode":"FDD","dl":[2180.0,7500.0,7699.0],"ul":[2000.0,25500.0,25699.0]},{"id":24,"mode":"FDD","dl":[1525.0,7700.0,8039.0],"ul":[1626.5,25700.0,26039.0]},{"id":25,"mode":"FDD","dl":[1930.0,8040.0,8689.0],"ul":[1850.0,26040.0,26689.0]},{"id":26,"mode":"FDD","dl":[859.0,8690.0,9039.0],"ul":[814.0,26690.0,27039.0]},{"id":27,"mode":"FDD","dl":[852.0,9040.0,9209.0],"ul":[807.0,27040.0,27209.0]},{"id":28,"mode":"FDD","dl":[758.0,9210.0,9659.0],"ul":[703.0,27210.0,27659.0]},{"id":29,"mode":"SDL","dl":[717.0,9660.0,9769.0],"ul":null},{"id":30,"mode":"FDD","dl":[2350.0,9770.0,9869.0],"ul":[2305.0,27660.0,27759.0]},{"id":31,"mode":"FDD","dl":[462.5,9870.0,9919.0],"ul":[452.5,27760.0,27809.0]},{"id":32,"mode":"SDL","dl":[1452.0,9920.0,10359.0],"ul":null},{"id":33,"mode":"TDD","dl":[1900.0,36000.0,36199.0],"ul":[1900.0,36000.0,36199.0]},{"id":34,"mode":"TDD","dl":[2010.0,36200.0,36349.0],"ul":[2010.0,36200.0,36349.0]},{"id":35,"mode":"TDD","dl":[1850.0,36350.0,36949.0],"ul":[1850.0,36350.0,36949.0]},{"id":36,"mode":"TDD","dl":[1930.0,36950.0,37549.0],"ul":[1930.0,36950.0,37549.0]},{"id":37,"mode":"TDD","dl":[1910.0,37550.0,37749.0],"ul":[1910.0,37550.0,37749.0]},{"id":38,"mode":"TDD","dl":[2570.0,37750.0,38249.0],"ul":[2570.0,37750.0,38249.0]},{"id":39,"mode":"TDD","dl":[1880.0,38250.0,38649.0],"ul":[1880.0,38250.0,38649.0]},{"id":40,"mode":"TDD","dl":[2300.0,38650.0,39649.0],"ul":[2300.0,38650.0,39649.0]},{"id":41,"mode":"TDD","dl":[2496.0,39650.0,41589.0],"ul":[2496.0,39650.0,41589.0]},{"id":42,"mode":"TDD","dl":[3400.0,41590.0,43589.0],"ul":[3400.0,41590.0,43589.0]},{"id":43,"mode":"TDD","dl":[3600.0,43590.0,45589.0],"ul":[3600.0,43590.0,45589.0]},{"id":44,"mode":"TDD","dl":[703.0,45590.0,46589.0],"ul":[703.0,45590.0,46589.0]},{"id":45,"mode":"TDD","dl":[1447.0,46590.0,46789.0],"ul":[1447.0,46590.0,46789.0]},{"id":46,"mode":"TDD","dl":[5150.0,46790.0,54539.0],"ul":[5150.0,46790.0,54539.0]},{"id":47,"mode":"TDD","dl":[5855.0,54540.0,55239.0],"ul":[5855.0,54540.0,55239.0]},{"id":48,"mode":"TDD","dl":[3550.0,55240.0,56739.0],"ul":[3550.0,55240.0,56739.0]},{"id":49,"mode":"TDD","dl":[3550.0,56740.0,58239.0],"ul":[3550.0,56740.0,58239.0]},{"id":50,"mode":"TDD","dl":[1432.0,58240.0,59089.0],"ul":[1432.0,58240.0,59089.0]},{"id":51,"mode":"TDD","dl":[1427.0,59090.0,59139.0],"ul":[1427.0,59090.0,59139.0]},{"id":52,"mode":"TDD","dl":[3300.0,59140.0,60139.0],"ul":[3300.0,59140.0,60139.0]},{"id":53,"mode":"TDD","dl":[2483.5,60140.0,60254.0],"ul":[2483.5,60140.0,60254.0]},{"id":54,"mode":"TDD","dl":[1670.0,60255.0,60304.0],"ul":[1670.0,60255.0,60304.0]},{"id":65,"mode":"FDD","dl":[2110.0,65536.0,66435.0],"ul":[1920.0,131072.0,131971.0]},{"id":66,"mode":"FDD","dl":[2110.0,66436.0,67335.0],"ul":[1710.0,131972.0,132671.0]},{"id":67,"mode":"SDL","dl":[738.0,67336.0,67535.0],"ul":null},{"id":68,"mode":"FDD","dl":[753.0,67536.0,67835.0],"ul":[698.0,132672.0,132971.0]},{"id":69,"mode":"SDL","dl":[2570.0,67836.0,68335.0],"ul":null},{"id":70,"mode":"FDD","dl":[1995.0,68336.0,68585.0],"ul":[1695.0,132972.0,133121.0]},{"id":71,"mode":"FDD","dl":[617.0,68586.0,68935.0],"ul":[663.0,133122.0,133471.0]},{"id":72,"mode":"FDD","dl":[461.0,68936.0,68985.0],"ul":[451.0,133472.0,133521.0]},{"id":73,"mode":"FDD","dl":[460.0,68986.0,69035.0],"ul":[450.0,133522.0,133571.0]},{"id":74,"mode":"FDD","dl":[1475.0,69036.0,69465.0],"ul":[1427.0,133572.0,134001.0]},{"id":75,"mode":"SDL","dl":[1432.0,69466.0,70315.0],"ul":null},{"id":76,"mode":"SDL","dl":[1427.0,70316.0,70365.0],"ul":null},{"id":85,"mode":"FDD","dl":[728.0,70366.0,70545.0],"ul":[698.0,134002.0,134181.0]},{"id":87,"mode":"FDD","dl":[420.0,70546.0,70595.0],"ul":[410.0,134182.0,134231.0]},{"id":88,"mode":"FDD","dl":[422.0,70596.0,70645.0],"ul":[412.0,134232.0,134281.0]},{"id":103,"mode":"FDD","dl":[757.0,70646.0,70655.0],"ul":[787.0,134282.0,134291.0]},{"id":106,"mode":"FDD","dl":[935.0,70656.0,70705.0],"ul":[896.0,134292.0,134341.0]},{"id":107,"mode":"Broadcast","dl":[612.0,70706.0,71105.0],"ul":null},{"id":108,"mode":"Broadcast","dl":[470.0,71106.0,73385.0],"ul":null}];
+const $=id=>document.getElementById('le-'+id), freq=(c,n)=>Math.round((c[0]+(n-c[1])/10)*10)/10;
+let mode='tof',results=[],active=0;
+const label=b=>`Band ${b.id} · ${b.mode} · ${b.dl[0]}–${(freq(b.dl,b.dl[2])).toFixed(1)} MHz DL`;
+function fillBands(){const old=$('band').value,q=$('search').value.trim().toLowerCase();$('band').replaceChildren(new Option('Auto-detect · all matching bands','auto'));bands.filter(b=>label(b).toLowerCase().includes(q)).forEach(b=>$('band').add(new Option(label(b),b.id)));$('band').value=[...$('band').options].some(o=>o.value===old)?old:'auto';}
+function clear(){results=[];$('main').textContent='—';$('badge').textContent='RESULT';$('stats').replaceChildren();$('equation').textContent='';$('matches').replaceChildren();$('note').hidden=true;$('copy').disabled=$('csv').disabled=true;$('status').textContent='';$('error').textContent='';$('value').removeAttribute('aria-invalid');}
+function update(){clear();$('tof').setAttribute('aria-pressed',mode==='tof');$('ton').setAttribute('aria-pressed',mode==='ton');$('label').textContent=mode==='tof'?'EARFCN channel number':`Carrier frequency (${$('unit').selectedOptions[0].text})`;$('value').step=mode==='tof'?'1':'any';$('value').inputMode=mode==='tof'?'numeric':'decimal';const b=bands.find(b=>b.id===+$('band').value),c=b?.[$('link').value];$('hint').textContent=b?(c?`${$('link').value.toUpperCase()} range: ${c[1]}–${c[2]} EARFCN · ${c[0]}–${freq(c,c[2]).toFixed(1)} MHz (mapping only).`:'This band has no uplink. Select downlink.'):'Auto-detect lists all matching bands for the selected link direction.';}
+function setMode(m){if(mode===m)return;const r=results[active];mode=m;update();$('value').value=r?(m==='tof'?r.n:r.f/+$('unit').value):'';}
+function stat(k,v){const d=document.createElement('div');d.className='le-stat';const s=document.createElement('small');s.textContent=k;const t=document.createElement('strong');t.textContent=v;d.append(s,t);$('stats').append(d);}
+function render(i){active=i;const r=results[i],b=r.b,c=r.c;const factor=+$('unit').value,unit=$('unit').selectedOptions[0].text;const display=Number((r.f/factor).toFixed(6));$('badge').textContent=`BAND ${b.id} · ${b.mode} · ${r.link.toUpperCase()}`;$('main').textContent=mode==='tof'?`${display} ${unit}`:`${r.n} EARFCN`;$('stats').replaceChildren();stat('Frequency',`${r.f.toFixed(1)} MHz`);stat('EARFCN',r.n);stat('Channel range',`${c[1]}–${c[2]}`);stat('Raster / offset',`100 kHz / ${c[1]}`);
+let notes=['Mapping result only: check carrier bandwidth and band-specific operating restrictions before deployment.'];
+const opposite=r.link==='dl'?'ul':'dl',other=b[opposite];
+if(b.id===70){stat('Paired channel','Configuration-dependent');notes.push('Band 70 can use 295 or 300 MHz TX–RX separation. No paired channel is inferred.');}
+else if(other){const nn=other[1]+r.n-c[1];if(nn<=other[2])stat(b.mode==='TDD'?'Shared UL / DL':`Paired ${opposite.toUpperCase()}`,`${nn} · ${freq(other,nn).toFixed(1)} MHz`);else stat('Paired uplink','None at this offset');}else stat('Uplink','Not available');
+if(b.mode==='SDL')notes.push('Supplemental downlink: requires carrier aggregation.');
+if(b.id===46)notes.push('Band 46: only specified channel sets are permitted for 10/20 MHz operation; this result is a raster mapping.');
+if(b.id===47)notes.push('Band 47: V2X special-use spectrum; check sidelink configuration.');
+if(b.id===66 && r.link==='dl' && r.f>=2180)notes.push('Band 66 downlink extension: carrier aggregation is required.');
+if(b.id===106)notes.push('Band 106: only EARFCN 70686 (DL) / 134322 (UL) applies for 3 MHz in the referenced specification.');
+if(b.id===103)notes.push('Band 103 is a narrow-band entry. NB-IoT offsets are not calculated here.');
+if(b.mode==='Broadcast')notes.push('LTE-based terrestrial broadcast only; PMCH bandwidth restrictions apply.');
+$('note').textContent=notes.join(' ');$('note').hidden=false;$('equation').textContent=`${c[0]} + 0.1 × (${r.n} − ${c[1]}) = ${r.f.toFixed(1)} MHz`;
+$('matches').replaceChildren();if(results.length>1){const p=document.createElement('p');p.textContent=`${results.length} matching bands. Select a result:`;$('matches').append(p);results.forEach((v,j)=>{const btn=document.createElement('button');btn.type='button';btn.textContent=`B${v.b.id}`;btn.setAttribute('aria-pressed',j===i);btn.onclick=()=>render(j);$('matches').append(btn,document.createTextNode(' '));});}$('copy').disabled=$('csv').disabled=false;
+}
+function calculate(){clear();const raw=$('value').value.trim(),v=Number(raw),link=$('link').value,sel=$('band').value;let error='';if(!raw||!Number.isFinite(v)||v<0)error='Enter a valid non-negative number.';else if(mode==='tof'&&!Number.isSafeInteger(v))error='EARFCN must be a whole number.';else{const mhz=v*+$('unit').value;for(const b of bands){if(sel!=='auto'&&b.id!==+sel)continue;const c=b[link];if(!c)continue;const n=mode==='tof'?v:c[1]+(mhz-c[0])*10;if(Math.abs(n-Math.round(n))>0.000001)continue;const nn=Math.round(n);if(nn>=c[1]&&nn<=c[2])results.push({b,c,n:nn,f:freq(c,nn),link});}if(!results.length)error=mode==='tof'?'No matching channel. Check the band, uplink/downlink direction and EARFCN range.':'No exact match. Check the band, link direction, units and 100 kHz raster. Frequencies are not rounded.';}
+if(error){$('error').textContent=error;$('value').setAttribute('aria-invalid','true');return;}render(0);}
+function textResult(r){return `LTE Band ${r.b.id} (${r.b.mode}) ${r.link.toUpperCase()}\nEARFCN: ${r.n}\nFrequency: ${r.f.toFixed(1)} MHz\nMapping only; operating restrictions apply.`;}
+$('form').onsubmit=e=>{e.preventDefault();calculate();};$('tof').onclick=()=>setMode('tof');$('ton').onclick=()=>setMode('ton');$('search').oninput=()=>{fillBands();update();};['band','link','unit'].forEach(id=>$(id).onchange=update);$('value').oninput=clear;
+$('reset').onclick=()=>{mode='tof';$('search').value='';fillBands();$('band').value='auto';$('link').value='dl';$('unit').value='1';$('value').value='1650';update();calculate();};
+document.querySelectorAll('#ec-lte [data-example]').forEach(btn=>btn.onclick=()=>{const [b,n]=btn.dataset.example.split(',');mode='tof';$('search').value='';fillBands();$('band').value=b;$('link').value='dl';$('unit').value='1';$('value').value=n;update();calculate();});
+$('copy').onclick=async()=>{try{await navigator.clipboard.writeText(textResult(results[active]));$('status').textContent='Result copied.';}catch(e){$('status').textContent='Copy is unavailable. Select the displayed result to copy it manually.';}};
+$('csv').onclick=()=>{const csv='Band,Mode,Link,EARFCN,Frequency_MHz,Scope\r\n'+results.map(r=>[r.b.id,r.b.mode,r.link.toUpperCase(),r.n,r.f.toFixed(1),'Raster mapping only'].join(',')).join('\r\n');const u=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));const a=document.createElement('a');a.href=u;a.download='lte-earfcn-results.csv';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000);};
+$('table-search').oninput=()=>{const q=$('table-search').value.trim().toLowerCase();let count=0;[...$('table').rows].forEach(r=>{r.hidden=!r.textContent.toLowerCase().includes(q);if(!r.hidden)count++;});$('count').textContent=`${count} bands shown.`;};
+fillBands();update();calculate();
+})();
