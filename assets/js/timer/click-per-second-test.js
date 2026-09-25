@@ -1,19 +1,93 @@
+  
+(function(){
+  'use strict';
+  var root=document.getElementById('cps-tool');
+  if(!root)return;
+  var startBtn=root.querySelector('#cps-start');
+  var target=root.querySelector('#cps-target');
+  var targetMain=root.querySelector('#cps-target-main');
+  var targetHelp=root.querySelector('#cps-target-help');
+  var timeEl=root.querySelector('#cps-time');
+  var clicksEl=root.querySelector('#cps-clicks');
+  var scoreEl=root.querySelector('#cps-score');
+  var custom=root.querySelector('#cps-custom-seconds');
+  var durationBtns=[].slice.call(root.querySelectorAll('.cps-duration'));
+  var historyBody=root.querySelector('#cps-history');
+  var empty=root.querySelector('#cps-empty');
+  var clearBtn=root.querySelector('#cps-clear');
+  var storageKey='easycalculator-cps-results-v1';
+  var selectedDuration=5, running=false, startedAt=0, timerId=null, clickCount=0;
+  var state={history:[],totalClicks:0,totalTests:0};
 
-let dur=5,rem=5,clk=0,run=false,start,raf,data=[];
-let hist=JSON.parse(localStorage.cpsv2||"[]"),best=+(localStorage.bestv2||0);
-bp.textContent=best.toFixed(2);
-function drawHist(){h.innerHTML=hist.length?hist.map((x,i)=>`<tr><td>${i+1}</td><td>${x.t}s</td><td>${x.c}</td><td>${x.p}</td><td>${x.d}</td></tr>`).join(""):'<tr><td colspan=5 class=text-center>No results</td></tr>';
-let tests=hist.length,clicks=hist.reduce((a,b)=>a+b.c,0),avg=tests?hist.reduce((a,b)=>a+ +b.p,0)/tests:0,peak=tests?Math.max(...hist.map(x=>+x.p)):0;
-tt.textContent=tests;tc.textContent=clicks;ac.textContent=avg.toFixed(2);pk.textContent=peak.toFixed(2)}
-drawHist();
-document.querySelectorAll("[name=d]").forEach(x=>x.onchange=()=>{dur=+x.value;reset()});
-function reset(){cancelAnimationFrame(raf);run=false;clk=0;rem=dur;data=[];t.textContent=dur.toFixed(2);c.textContent=0;cp.textContent="0.00";bar.style.width="100%";clickBtn.disabled=false;clickBtn.textContent="CLICK";pb.style.display="none";paint();}
-function finish(){clickBtn.disabled=true;clickBtn.textContent="Finished";let cps=clk/dur;if(cps>best){best=cps;localStorage.bestv2=best;bp.textContent=best.toFixed(2);pb.style.display="inline-block";}
-hist.unshift({t:dur,c:clk,p:cps.toFixed(2),d:new Date().toLocaleTimeString()});hist=hist.slice(0,10);localStorage.cpsv2=JSON.stringify(hist);drawHist();}
-function loop(now){let e=(now-start)/1000;rem=Math.max(0,dur-e);t.textContent=rem.toFixed(2);bar.style.width=(rem/dur*100)+"%";if(rem<=0){finish();return;}raf=requestAnimationFrame(loop)}
-function paint(){let ctx=g.getContext("2d");ctx.clearRect(0,0,g.width,g.height);ctx.beginPath();ctx.moveTo(0,120);data.forEach((v,i)=>ctx.lineTo(i*8,120-v*12));ctx.strokeStyle="#2563eb";ctx.lineWidth=2;ctx.stroke();}
-clickBtn.onclick=e=>{if(!run){run=true;start=performance.now();raf=requestAnimationFrame(loop)}
-let s=document.createElement("span");s.className="ripple";let rct=clickBtn.getBoundingClientRect();s.style.left=(e.offsetX||120)+"px";s.style.top=(e.offsetY||120)+"px";clickBtn.appendChild(s);setTimeout(()=>s.remove(),550);
-clk++;c.textContent=clk;let live=clk/Math.max(.01,dur-rem);cp.textContent=live.toFixed(2);data.push(live);if(data.length>70)data.shift();paint();}
-r.onclick=reset;document.addEventListener("keydown",e=>{if(e.code==="Space"&&!clickBtn.disabled){e.preventDefault();clickBtn.click()}});
-reset();
+  function readState(){
+    try{
+      var saved=JSON.parse(localStorage.getItem(storageKey)||'null');
+      if(saved&&Array.isArray(saved.history)){state.history=saved.history.slice(0,10);state.totalClicks=Number(saved.totalClicks)||0;state.totalTests=Number(saved.totalTests)||0;}
+    }catch(e){state={history:[],totalClicks:0,totalTests:0};}
+  }
+  function saveState(){try{localStorage.setItem(storageKey,JSON.stringify(state));}catch(e){}}
+  function setDuration(value){
+    selectedDuration=value;
+    custom.value=String(value);
+    durationBtns.forEach(function(btn){btn.setAttribute('aria-pressed',Number(btn.dataset.seconds)===value?'true':'false');});
+    if(!running){timeEl.textContent=value.toFixed(1)+' s';clicksEl.textContent='0';scoreEl.textContent='0.00';}
+  }
+  function validCustom(){
+    var value=Number(custom.value);
+    if(!Number.isInteger(value)||value<1||value>120){custom.setCustomValidity('Enter a whole number from 1 to 120 seconds.');custom.reportValidity();return null;}
+    custom.setCustomValidity('');return value;
+  }
+  durationBtns.forEach(function(btn){btn.addEventListener('click',function(){if(running)return;setDuration(Number(btn.dataset.seconds));});});
+  custom.addEventListener('change',function(){if(running)return;var value=validCustom();if(value!==null)setDuration(value);});
+  custom.addEventListener('input',function(){if(!running){durationBtns.forEach(function(btn){btn.setAttribute('aria-pressed','false');});}});
+
+  function startTest(){
+    if(running)return;
+    var duration=validCustom();
+    if(duration===null)return;
+    setDuration(duration);clickCount=0;running=true;startedAt=performance.now();
+    target.classList.add('is-running');target.classList.remove('is-done');
+    targetMain.textContent='Click now!';targetHelp.textContent='Keep clicking until the timer reaches zero.';
+    target.setAttribute('aria-label','Click as fast as you can. Test in progress.');
+    startBtn.disabled=true;startBtn.textContent='Test in progress';
+    tick();
+  }
+  function tick(){
+    if(!running)return;
+    var elapsed=(performance.now()-startedAt)/1000;
+    var remaining=Math.max(0,selectedDuration-elapsed);
+    var cps=elapsed>0?clickCount/elapsed:0;
+    timeEl.textContent=remaining.toFixed(1)+' s';clicksEl.textContent=String(clickCount);scoreEl.textContent=cps.toFixed(2);
+    if(remaining<=0){finishTest();return;}
+    timerId=window.setTimeout(tick,50);
+  }
+  function finishTest(){
+    running=false;if(timerId)window.clearTimeout(timerId);
+    var score=clickCount/selectedDuration;
+    timeEl.textContent='0.0 s';clicksEl.textContent=String(clickCount);scoreEl.textContent=score.toFixed(2);
+    target.classList.remove('is-running');target.classList.add('is-done');
+    targetMain.textContent='Time is up! Your score: '+score.toFixed(2)+' CPS';targetHelp.textContent='Choose a duration and start another test whenever you are ready.';
+    target.setAttribute('aria-label','Test complete. Your score is '+score.toFixed(2)+' clicks per second.');
+    startBtn.disabled=false;startBtn.textContent='Try again';
+    var now=new Date();
+    state.history.unshift({duration:selectedDuration,clicks:clickCount,cps:score,date:now.toISOString()});
+    state.history=state.history.slice(0,10);state.totalClicks+=clickCount;state.totalTests+=1;saveState();renderHistory();
+  }
+  function registerClick(){if(!running)return;clickCount+=1;clicksEl.textContent=String(clickCount);var elapsed=Math.max((performance.now()-startedAt)/1000,.001);scoreEl.textContent=(clickCount/elapsed).toFixed(2);}
+  startBtn.addEventListener('click',startTest);
+  target.addEventListener('click',registerClick);
+  clearBtn.addEventListener('click',function(){
+    if(!state.history.length)return;
+    if(!window.confirm('Clear the saved CPS test results on this device?'))return;
+    state={history:[],totalClicks:0,totalTests:0};saveState();renderHistory();
+  });
+  function renderHistory(){
+    historyBody.textContent='';empty.hidden=state.history.length>0;
+    state.history.forEach(function(item,index){
+      var tr=document.createElement('tr');
+      [String(index+1),item.duration+' s',String(item.clicks),Number(item.cps).toFixed(2),new Date(item.date).toLocaleDateString()].forEach(function(value){var td=document.createElement('td');td.textContent=value;tr.appendChild(td);});
+      historyBody.appendChild(tr);
+    });
+  }
+  readState();renderHistory();setDuration(selectedDuration);
+})();
