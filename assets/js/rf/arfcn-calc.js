@@ -1,194 +1,44 @@
- (function() {
-            // ----- 2G band definitions (return center frequency) -----
-            const BANDS = {
-                '850': {
-                    name: 'GSM 850',
-                    // ARFCN 128–251
-                    valid: function(n) {
-                        return Number.isInteger(n) && n >= 128 && n <= 251;
-                    },
-                    // returns center frequencies (uplink, downlink) in MHz
-                    getCenter: function(n) {
-                        let ulCenter = 824.1 + 0.2 * (n - 128);
-                        let dlCenter = 869.1 + 0.2 * (n - 128);
-                        return { dlCenter, ulCenter };
-                    }
-                },
-                '900P': {
-                    name: '900P (P-GSM)',
-                    valid: function(n) {
-                        return Number.isInteger(n) && n >= 1 && n <= 124;
-                    },
-                    getCenter: function(n) {
-                        let ulCenter = 890.1 + 0.2 * (n - 1);
-                        let dlCenter = 935.1 + 0.2 * (n - 1);
-                        return { dlCenter, ulCenter };
-                    }
-                },
-                '900E': {
-                    name: '900E (E-GSM)',
-                    valid: function(n) {
-                        if (!Number.isInteger(n)) return false;
-                        return (n >= 0 && n <= 124) || (n >= 975 && n <= 1023);
-                    },
-                    getCenter: function(n) {
-                        let ulCenter;
-                        if (n >= 0 && n <= 124) {
-                            ulCenter = 890.0 + 0.2 * n;
-                        } else { // 975..1023
-                            ulCenter = 890.1 + 0.2 * (n - 1024);
-                        }
-                        let dlCenter = ulCenter + 45.0;
-                        return { dlCenter, ulCenter };
-                    }
-                },
-                '1800': {
-                    name: '1800 (DCS)',
-                    valid: function(n) {
-                        return Number.isInteger(n) && n >= 512 && n <= 885;
-                    },
-                    getCenter: function(n) {
-                        let ulCenter = 1710.1 + 0.2 * (n - 512);
-                        let dlCenter = ulCenter + 95.0;
-                        return { dlCenter, ulCenter };
-                    }
-                },
-                '1900': {
-                    name: '1900 (PCS)',
-                    valid: function(n) {
-                        return Number.isInteger(n) && n >= 512 && n <= 810;
-                    },
-                    getCenter: function(n) {
-                        let ulCenter = 1850.1 + 0.2 * (n - 512);
-                        let dlCenter = ulCenter + 80.0;
-                        return { dlCenter, ulCenter };
-                    }
-                }
-            };
-
-            // current selected band (default 900P to show classic example: ARFCN 1)
-            let currentBand = '900P';
-
-            // DOM elements
-            const arfcnInput = document.getElementById('arfcnInput');
-            const dlResultDiv = document.getElementById('dlResult');
-            const ulResultDiv = document.getElementById('ulResult');
-            const bandHintSpan = document.querySelector('#bandHint span:last-child'); // second span
-
-            const bandBtns = document.querySelectorAll('.band-btn');
-
-            // Helper: format number to two decimals (always .XX)
-            function fmt(num) {
-                return num.toFixed(2);
-            }
-
-            // update display with range (lower–upper) and center frequency (200 kHz channel)
-            function updateDisplay() {
-                let rawArfcn = arfcnInput.value.trim();
-                if (rawArfcn === '') {
-                    dlResultDiv.innerHTML = `<span class="text-dark">—</span><br><span class="text-secondary">enter ARFCN</span>`;
-                    ulResultDiv.innerHTML = `<span class="text-dark">—</span><br><span class="text-secondary">enter ARFCN</span>`;
-                    bandHintSpan.innerText = `Band: ${BANDS[currentBand].name} — type a channel`;
-                    return;
-                }
-
-                const arfcn = Number(rawArfcn);
-                if (!Number.isInteger(arfcn)) {
-                    dlResultDiv.innerHTML = `<span class="text-dark">invalid</span><br><span class="text-secondary">must be integer</span>`;
-                    ulResultDiv.innerHTML = `<span class="text-dark">—</span><br><span class="text-secondary">—</span>`;
-                    bandHintSpan.innerText = `Band: ${BANDS[currentBand].name} · ARFCN must be whole number`;
-                    return;
-                }
-
-                const band = BANDS[currentBand];
-                const valid = band.valid(arfcn);
-
-                if (!valid) {
-                    // show out of range with hint
-                    dlResultDiv.innerHTML = `<span class="text-dark">out of range</span><br><span class="text-secondary">invalid ARFCN</span>`;
-                    ulResultDiv.innerHTML = `<span class="text-dark">—</span><br><span class="text-secondary">—</span>`;
-
-                    let rangeMsg = '';
-                    if (currentBand === '850') rangeMsg = 'valid ARFCN 128–251';
-                    else if (currentBand === '900P') rangeMsg = 'valid ARFCN 1–124';
-                    else if (currentBand === '900E') rangeMsg = 'valid ARFCN 0–124, 975–1023';
-                    else if (currentBand === '1800') rangeMsg = 'valid ARFCN 512–885';
-                    else if (currentBand === '1900') rangeMsg = 'valid ARFCN 512–810';
-                    bandHintSpan.innerText = `Band: ${band.name} · ${rangeMsg}`;
-                    return;
-                }
-
-                // valid -> get center frequencies
-                const { dlCenter, ulCenter } = band.getCenter(arfcn);
-
-                // 200 kHz channel = ±100 kHz around center → half = 0.1 MHz
-                const half = 0.1; // 100 kHz = 0.1 MHz
-
-                const dlLow = dlCenter - half;
-                const dlHigh = dlCenter + half;
-                const ulLow = ulCenter - half;
-                const ulHigh = ulCenter + half;
-
-                // format with two decimals always
-                const dlRange = `${fmt(dlLow)} – ${fmt(dlHigh)} MHz`;
-                const dlCenterStr = `center ${fmt(dlCenter)} MHz`;
-                const ulRange = `${fmt(ulLow)} – ${fmt(ulHigh)} MHz`;
-                const ulCenterStr = `center ${fmt(ulCenter)} MHz`;
-
-                // update downlink card
-                dlResultDiv.innerHTML = `<span class="text-dark">${dlRange}</span><br><span class="text-secondary">${dlCenterStr}</span>`;
-                // update uplink card
-                ulResultDiv.innerHTML = `<span class="text-dark">${ulRange}</span><br><span class="text-secondary">${ulCenterStr}</span>`;
-
-                // update hint with band and ARFCN info
-                bandHintSpan.innerText = `Band: ${band.name} · ARFCN ${arfcn} · 200 kHz channel raster`;
-            }
-
-            // event: band button click
-            bandBtns.forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    const band = this.getAttribute('data-band');
-                    if (!band) return;
-
-                    // update active button style
-                    bandBtns.forEach(b => {
-                        b.classList.remove('btn-primary', 'active');
-                        b.classList.add('btn-outline-primary');
-                    });
-                    this.classList.remove('btn-outline-primary');
-                    this.classList.add('btn-primary', 'active');
-
-                    // set current band
-                    currentBand = band;
-
-                    // update hint with band range (temporary until updateDisplay sets final)
-                    let rangeMsg = '';
-                    if (band === '850') rangeMsg = 'ARFCN 128–251';
-                    else if (band === '900P') rangeMsg = 'ARFCN 1–124';
-                    else if (band === '900E') rangeMsg = 'ARFCN 0–124, 975–1023';
-                    else if (band === '1800') rangeMsg = 'ARFCN 512–885';
-                    else if (band === '1900') rangeMsg = 'ARFCN 512–810';
-                    bandHintSpan.innerText = `Band: ${BANDS[band].name} · ${rangeMsg}`;
-
-                    // recalc with current arfcn
-                    updateDisplay();
-                });
-            });
-
-            // input event on ARFCN field
-            arfcnInput.addEventListener('input', updateDisplay);
-
-            // initialise: set default to 900P (button active)
-            const defaultBtn = Array.from(bandBtns).find(btn => btn.getAttribute('data-band') === '900P');
-            if (defaultBtn) {
-                defaultBtn.classList.remove('btn-outline-primary');
-                defaultBtn.classList.add('btn-primary', 'active');
-            } else {
-                document.querySelector('[data-band="850"]')?.classList.add('btn-primary');
-            }
-
-            // set initial hint for 900P and default ARFCN=1 (example: DL 935.00–935.20, center 935.10)
-            bandHintSpan.innerText = 'Band: 900P (P-GSM) · ARFCN 1–124';
-            // force initial display
-            updateDisplay();
-        })();
+(function(){
+  'use strict';
+  var bands={
+    gsm850:{name:'GSM 850',ranges:[[128,251]],duplex:45,ul:function(n){return 824.2+0.2*(n-128);}},
+    pgsm900:{name:'GSM 900 Primary (P-GSM)',ranges:[[1,124]],duplex:45,ul:function(n){return 890+0.2*n;}},
+    egsm900:{name:'GSM 900 Extended (E-GSM)',ranges:[[0,124],[975,1023]],duplex:45,ul:function(n){return n>=975?890+0.2*(n-1024):890+0.2*n;}},
+    dcs1800:{name:'DCS 1800',ranges:[[512,885]],duplex:95,ul:function(n){return 1710.2+0.2*(n-512);}},
+    pcs1900:{name:'PCS 1900',ranges:[[512,810]],duplex:80,ul:function(n){return 1850.2+0.2*(n-512);}}
+  };
+  var bandEl=document.getElementById('af-band'),channelEl=document.getElementById('af-channel'),freqEl=document.getElementById('af-frequency');
+  var channelField=document.getElementById('af-channel-field'),frequencyField=document.getElementById('af-frequency-field');
+  var hintEl=document.getElementById('af-channel-hint'),errorEl=document.getElementById('af-error'),resultsEl=document.getElementById('af-results');
+  var channelMode=document.getElementById('af-mode-channel'),frequencyMode=document.getElementById('af-mode-frequency'),mode='channel';
+  var bandKeys=Object.keys(bands);
+  function validRangeLabel(b){return b.ranges.map(function(r){return r[0]+'–'+r[1];}).join(' and ');}
+  function isValidChannel(b,n){return b.ranges.some(function(r){return n>=r[0]&&n<=r[1];});}
+  function fmt(x){return Number(x).toFixed(1);}
+  function clear(){errorEl.hidden=true;errorEl.textContent='';resultsEl.innerHTML='<div class="af-placeholder">Choose a GSM band and enter an ARFCN to see the frequency pair.</div>';}
+  function setError(message){errorEl.textContent=message;errorEl.hidden=false;resultsEl.innerHTML='';}
+  function updateHint(){var b=bands[bandEl.value];hintEl.textContent='Valid range: '+validRangeLabel(b)+' · Channel spacing: 200 kHz';}
+  function render(b,n,ul){var dl=ul+b.duplex;resultsEl.innerHTML='<div class="af-result-top"><p class="af-result-title">'+(mode==='channel'?'Frequency pair for ARFCN '+n:'Matching ARFCN: '+n)+'</p><span class="af-band-tag">'+b.name+'</span></div><div class="af-result-grid"><div class="af-result-card"><small>Uplink · Mobile → Base station</small><strong>'+fmt(ul)+' <span>MHz</span></strong><span>Carrier center frequency</span></div><div class="af-result-card"><small>Downlink · Base station → Mobile</small><strong>'+fmt(dl)+' <span>MHz</span></strong><span>Carrier center frequency</span></div></div><div class="af-actions"><button type="button" class="af-copy" id="af-copy">Copy result</button></div>';
+    document.getElementById('af-copy').addEventListener('click',function(){var text='GSM ARFCN Calculator — '+b.name+' ARFCN '+n+' | Uplink: '+fmt(ul)+' MHz | Downlink: '+fmt(dl)+' MHz';if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){this.textContent='Copied';}.bind(this)).catch(function(){this.textContent='Copy failed';});}else{this.textContent='Copy not supported';}});
+  }
+  function convert(){clear();var b=bands[bandEl.value];if(mode==='channel'){
+      if(channelEl.value==='')return;var n=Number(channelEl.value);
+      if(!Number.isInteger(n)){setError('Enter a whole-number ARFCN.');return;}
+      if(!isValidChannel(b,n)){setError('ARFCN '+n+' is outside the valid '+b.name+' range. Valid channel numbers: '+validRangeLabel(b)+'.');return;}
+      render(b,n,b.ul(n));
+    }else{
+      if(freqEl.value==='')return;var target=Number(freqEl.value);
+      if(!Number.isFinite(target)||target<=0){setError('Enter a valid frequency greater than 0 MHz.');return;}
+      var best=null;
+      b.ranges.forEach(function(r){for(var n=r[0];n<=r[1];n++){var ul=b.ul(n),dl=ul+b.duplex;[[ul,'uplink'],[dl,'downlink']].forEach(function(pair){var delta=Math.abs(target-pair[0]);if(!best||delta<best.delta)best={n:n,ul:ul,delta:delta,direction:pair[1]};});}});
+      if(!best||best.delta>0.001){setError('No exact GSM channel center was found in '+b.name+'. Check the band and enter a carrier center frequency on the 200 kHz channel raster.');return;}
+      render(b,best.n,best.ul);
+      var intro=resultsEl.querySelector('.af-result-title');intro.textContent='ARFCN '+best.n+' · '+best.direction+' frequency match';
+    }
+  }
+  function setMode(next){mode=next;var channel=next==='channel';channelMode.setAttribute('aria-pressed',String(channel));frequencyMode.setAttribute('aria-pressed',String(!channel));channelField.hidden=!channel;frequencyField.hidden=channel;clear();if(channel)channelEl.focus();else freqEl.focus();}
+  bandEl.addEventListener('change',function(){updateHint();convert();});channelEl.addEventListener('input',convert);freqEl.addEventListener('input',convert);
+  channelMode.addEventListener('click',function(){setMode('channel');});frequencyMode.addEventListener('click',function(){setMode('frequency');});
+  document.querySelectorAll('.ec-arfcn .af-chip').forEach(function(button){button.addEventListener('click',function(){bandEl.value=button.dataset.band;updateHint();setMode('channel');channelEl.value=button.dataset.channel;convert();});});
+  updateHint();
+})();
