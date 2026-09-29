@@ -3,9 +3,29 @@ layout: default
 title: Number Conversion Calculator | Easy Calculator
 permalink: /number-conversion
 description: "Convert numbers between binary, decimal, octal and hexadecimal with our free number conversion calculators. Quickly convert values between different number systems."
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-29
 ---
-
+<style>
+.nwc-content{max-width:1180px;margin:0 auto;color:#263449;line-height:1.72}
+.nwc-content *{box-sizing:border-box}
+.nwc-content h2{margin:2.2rem 0 .8rem;color:#17345c;font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.3}
+.nwc-content h3{margin:0 0 .45rem;color:#17345c;font-size:1.05rem}
+.nwc-content p{margin:0 0 1rem}
+.nwc-content .nwc-intro{padding:1.1rem 1.25rem;background:#f3f7ff;border:1px solid #dce7f8;border-left:4px solid #2864dc;border-radius:12px}
+.nwc-content .nwc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:1rem 0}
+.nwc-content .nwc-card{height:100%;padding:1rem 1.1rem;background:#fff;border:1px solid #e2e8f0;border-radius:14px;box-shadow:0 4px 16px rgba(20,45,85,.045)}
+.nwc-content .nwc-table-wrap{overflow-x:auto;margin:1rem 0 1.4rem;border:1px solid #e2e8f0;border-radius:12px}
+.nwc-content table{width:100%;min-width:520px;margin:0;border-collapse:collapse;background:#fff}
+.nwc-content th,.nwc-content td{padding:.75rem .9rem;text-align:left;vertical-align:top;border-bottom:1px solid #e8edf4}
+.nwc-content th{background:#f3f7ff;color:#17345c;font-weight:700}
+.nwc-content tr:last-child td{border-bottom:0}
+.nwc-content .nwc-number{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600}
+.nwc-content .nwc-note{padding:.9rem 1rem;background:#fff8e8;border:1px solid #f4dfaa;border-radius:12px}
+.nwc-content .nwc-faq{display:grid;gap:12px;margin:1rem 0}
+.nwc-content .nwc-faq-item{padding:1rem 1.1rem;border:1px solid #e2e8f0;border-radius:12px;background:#fff}
+.nwc-content .nwc-faq-item p:last-child{margin-bottom:0}
+@media(max-width:640px){.nwc-content .nwc-grid{grid-template-columns:1fr}.nwc-content th,.nwc-content td{padding:.65rem .7rem}}
+</style>
 <div aria-label="breadcrumb" class="p-3">
  <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="/">Home</a></li>
