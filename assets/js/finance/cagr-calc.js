@@ -1,1 +1,173 @@
-document.addEventListener("DOMContentLoaded",(function(){const t=document.getElementById("initialValue"),e=document.getElementById("initialValueSlider"),n=document.getElementById("initialValueDisplay"),o=document.getElementById("finalValue"),l=document.getElementById("finalValueSlider"),a=document.getElementById("finalValueDisplay"),i=document.getElementById("years"),r=document.getElementById("yearsSlider"),s=document.getElementById("yearsDisplay"),d=document.getElementById("cagrForm"),u=document.getElementById("resultSection"),c=document.getElementById("cagrResult"),m=document.getElementById("investmentSummary"),g=document.getElementById("growthTableBody");let F=null;e.value=1e4,t.value=1e4,n.textContent="$10,000",l.value=2e4,o.value=2e4,a.textContent="$20,000",r.value=5,i.value=5,s.textContent="5 years",t.addEventListener("input",(function(){e.value=this.value,n.textContent="$"+Number(this.value).toLocaleString()})),e.addEventListener("input",(function(){t.value=this.value,n.textContent="$"+Number(this.value).toLocaleString()})),o.addEventListener("input",(function(){l.value=this.value,a.textContent="$"+Number(this.value).toLocaleString()})),l.addEventListener("input",(function(){o.value=this.value,a.textContent="$"+Number(this.value).toLocaleString()})),i.addEventListener("input",(function(){r.value=this.value,s.textContent=this.value+(1==this.value?" year":" years")})),r.addEventListener("input",(function(){i.value=this.value,s.textContent=this.value+(1==this.value?" year":" years")})),d.addEventListener("submit",(function(e){e.preventDefault();const n=parseFloat(t.value),l=parseFloat(o.value),a=parseFloat(i.value);if(n<=0||l<=0||a<=0)return void alert("Please enter valid positive values for all fields.");if(n>=l)return void alert("Final value must be greater than initial value for positive growth.");const r=Math.pow(l/n,1/a)-1,s=(100*r).toFixed(2);c.textContent=s+"%",m.textContent=`Your investment grew from $${n.toLocaleString()} to $${l.toLocaleString()} over ${a} ${1===a?"year":"years"}`,function(t,e,n,o){g.innerHTML="";let l=t;for(let t=1;t<=n;t++){const e=l,n=e*o;l=e+n;const a=n/e*100,i=document.createElement("tr");i.innerHTML=`\n                        <td>${t}</td>\n                        <td>$${e.toLocaleString(void 0,{minimumFractionDigits:2,maximumFractionDigits:2})}</td>\n                        <td>$${l.toLocaleString(void 0,{minimumFractionDigits:2,maximumFractionDigits:2})}</td>\n                        <td>$${n.toLocaleString(void 0,{minimumFractionDigits:2,maximumFractionDigits:2})}</td>\n                        <td>${a.toFixed(2)}%</td>\n                    `,g.appendChild(i)}}(n,0,a,r),function(t,e,n,o){const l=document.getElementById("growthChart").getContext("2d");F&&F.destroy();const a=["Year 0"],i=[t];let r=t;for(let t=1;t<=n;t++)a.push(`Year ${t}`),r*=1+o,i.push(r);F=new Chart(l,{type:"line",data:{labels:a,datasets:[{label:"Investment Value",data:i,backgroundColor:"rgba(106, 17, 203, 0.2)",borderColor:"rgba(106, 17, 203, 1)",borderWidth:2,pointBackgroundColor:"rgba(106, 17, 203, 1)",pointRadius:4,pointHoverRadius:6,fill:!0,tension:.3}]},options:{responsive:!0,maintainAspectRatio:!1,plugins:{title:{display:!0,text:"Investment Growth Over Time",font:{size:16}},tooltip:{callbacks:{label:function(t){return`Value: $${t.raw.toLocaleString(void 0,{minimumFractionDigits:2,maximumFractionDigits:2})}`}}}},scales:{y:{beginAtZero:!1,ticks:{callback:function(t){return"$"+t.toLocaleString()}},title:{display:!0,text:"Investment Value"}},x:{title:{display:!0,text:"Year"}}}}})}(n,0,a,r),u.style.display="block",u.scrollIntoView({behavior:"smooth"})}))})),document.getElementById("resetCagr").addEventListener("click",(function(){document.getElementById("cagrForm").reset(),document.getElementById("initialValueSlider").value=0,document.getElementById("finalValueSlider").value=0,document.getElementById("yearsSlider").value=1,document.getElementById("initialValueDisplay").textContent="₹0",document.getElementById("finalValueDisplay").textContent="₹0",document.getElementById("yearsDisplay").textContent="1 year",document.getElementById("resultSection").style.display="none",document.getElementById("growthTableBody").innerHTML="";const t=document.getElementById("resultInitialValue"),e=document.getElementById("resultFinalValue"),n=document.getElementById("resultGrowth");if(t&&(t.textContent="₹0"),e&&(e.textContent="₹0"),n&&(n.textContent="0%"),document.getElementById("cagrResult").textContent="0.00%",document.getElementById("investmentSummary").textContent="Your investment grew from ₹0 to ₹0 over 0 years.","undefined"!=typeof growthChart&&growthChart)try{growthChart.destroy()}catch(t){}}));const downloadCagrPdf=document.getElementById("downloadCagrPdf");downloadCagrPdf&&downloadCagrPdf.addEventListener("click",(function(){if(void 0===window.jspdf)return void alert("PDF library is not loaded. Please try again.");const{jsPDF:t}=window.jspdf,e=parseFloat(initialValueInput.value),n=parseFloat(finalValueInput.value),o=parseFloat(yearsInput.value);if(!Number.isFinite(e)||!Number.isFinite(n)||!Number.isFinite(o)||e<=0||n<=0||o<=0)return void alert("Please calculate CAGR before downloading the PDF.");const l=100*(Math.pow(n/e,1/o)-1),a=(n-e)/e*100,i=n-e,r=t=>"₹"+t.toLocaleString("en-IN",{minimumFractionDigits:2,maximumFractionDigits:2}),s=t=>t.toFixed(2)+"%",d=(new Date).toLocaleDateString("en-IN",{day:"2-digit",month:"short",year:"numeric"}),u=new t,c=u.internal.pageSize.getWidth();u.setFillColor(15,39,71),u.rect(0,0,c,38,"F"),u.setTextColor(255,255,255),u.setFont("helvetica","bold"),u.setFontSize(20),u.text("CAGR Calculator",20,17),u.setFont("helvetica","normal"),u.setFontSize(10),u.text("Compound Annual Growth Rate",20,27),u.setFont("helvetica","bold"),u.setFontSize(10),u.text("EasyCalculator.org",c-20,17,{align:"right"}),u.setTextColor(40,40,40),u.setFont("helvetica","bold"),u.setFontSize(12),u.text("CAGR Result",20,55),u.setFillColor(240,247,255),u.roundedRect(20,62,c-40,32,4,4,"F"),u.setTextColor(15,39,71),u.setFont("helvetica","bold"),u.setFontSize(26),u.text(s(l),c/2,83,{align:"center"}),u.setFont("helvetica","normal"),u.setFontSize(9),u.text("Compound Annual Growth Rate",c/2,91,{align:"center"}),u.setTextColor(40,40,40),u.setFont("helvetica","bold"),u.setFontSize(12),u.text("Investment Details",20,113);const m=[["Initial Value",r(e)],["Final Value",r(n)],["Investment Period",o+(1===o?" Year":" Years")],["Total Growth",s(a)],["Growth Amount",r(i)]];let g=125;m.forEach(((t,e)=>{e%2==0&&(u.setFillColor(248,250,252),u.rect(20,g-6,c-40,11,"F")),u.setFont("helvetica","normal"),u.setFontSize(10),u.setTextColor(71,85,105),u.text(t[0],24,g),u.setFont("helvetica","bold"),u.setTextColor(15,39,71),u.text(t[1],c-24,g,{align:"right"}),g+=12})),g+=8,u.setFont("helvetica","bold"),u.setFontSize(12),u.setTextColor(40,40,40),u.text("CAGR Formula",20,g),g+=10,u.setFillColor(248,250,252),u.roundedRect(20,g-5,c-40,22,3,3,"F"),u.setFont("courier","normal"),u.setFontSize(10),u.setTextColor(51,65,85),u.text("CAGR = (Final Value / Initial Value)^(1 / Years) - 1",25,g+8),g+=34,u.setFont("helvetica","bold"),u.setFontSize(12),u.setTextColor(40,40,40),u.text("Calculation",20,g),g+=10,u.setFont("courier","normal"),u.setFontSize(9),u.setTextColor(71,85,105),u.text(`(${r(n)} / ${r(e)})`,20,g),g+=7,u.text(`^(1 / ${o}) - 1`,20,g),g+=10,u.setFont("helvetica","bold"),u.setFontSize(11),u.setTextColor(15,39,71),u.text(`CAGR = ${s(l)}`,20,g),g+=20,u.setFont("helvetica","normal"),u.setFontSize(9),u.setTextColor(71,85,105);const F=`The investment grew from ${r(e)} to ${r(n)} over ${o} `+(1===o?"year":"years")+", representing a "+`compound annual growth rate of ${s(l)}.`,v=u.splitTextToSize(F,c-40);u.text(v,20,g);const x=u.internal.pageSize.getHeight();u.setDrawColor(220,226,232),u.line(20,x-22,c-20,x-22),u.setFont("helvetica","normal"),u.setFontSize(8),u.setTextColor(100,116,139),u.text(`Generated on ${d}`,20,x-13),u.text("EasyCalculator.org",c-20,x-13,{align:"right"});const C=`CAGR-Calculator-${l.toFixed(2)}-percent.pdf`;u.save(C)})),document.addEventListener("DOMContentLoaded",(function(){const t=document.getElementById("downloadCagrPdf");t&&t.addEventListener("click",(function(){if(!window.jspdf||!window.jspdf.jsPDF)return void alert("PDF library could not be loaded. Please refresh the page and try again.");const t=parseFloat(document.getElementById("initialValue").value),e=parseFloat(document.getElementById("finalValue").value),n=parseFloat(document.getElementById("years").value);if(!Number.isFinite(t)||!Number.isFinite(e)||!Number.isFinite(n)||t<=0||e<=0||n<=0)return void alert("Please calculate CAGR first.");const o=100*(Math.pow(e/t,1/n)-1),l=(e-t)/t*100,a=e-t;function i(t){return"₹"+t.toLocaleString("en-IN",{minimumFractionDigits:2,maximumFractionDigits:2})}const r=(new Date).toLocaleDateString("en-IN",{day:"2-digit",month:"short",year:"numeric"}),{jsPDF:s}=window.jspdf,d=new s,u=d.internal.pageSize.getWidth(),c=d.internal.pageSize.getHeight();d.setFillColor(15,39,71),d.rect(0,0,u,38,"F"),d.setTextColor(255,255,255),d.setFont("helvetica","bold"),d.setFontSize(20),d.text("CAGR Calculator",20,17),d.setFont("helvetica","normal"),d.setFontSize(10),d.text("Compound Annual Growth Rate",20,27),d.setFont("helvetica","bold"),d.setFontSize(10),d.text("EasyCalculator.org",u-20,17,{align:"right"}),d.setTextColor(40,40,40),d.setFont("helvetica","bold"),d.setFontSize(12),d.text("CAGR Result",20,55),d.setFillColor(240,247,255),d.roundedRect(20,62,u-40,32,4,4,"F"),d.setTextColor(15,39,71),d.setFont("helvetica","bold"),d.setFontSize(26),d.text(o.toFixed(2)+"%",u/2,82,{align:"center"}),d.setFont("helvetica","normal"),d.setFontSize(9),d.text("Compound Annual Growth Rate",u/2,90,{align:"center"}),d.setTextColor(40,40,40),d.setFont("helvetica","bold"),d.setFontSize(12),d.text("Investment Details",20,113);const m=[["Initial Value",i(t)],["Final Value",i(e)],["Investment Period",n+(1===n?" Year":" Years")],["Growth Amount",i(a)],["Total Growth",l.toFixed(2)+"%"]];let g=126;m.forEach((function(t,e){e%2==0&&(d.setFillColor(248,250,252),d.rect(20,g-7,u-40,12,"F")),d.setFont("helvetica","normal"),d.setFontSize(10),d.setTextColor(71,85,105),d.text(t[0],24,g),d.setFont("helvetica","bold"),d.setTextColor(15,39,71),d.text(t[1],u-24,g,{align:"right"}),g+=13})),g+=8,d.setFont("helvetica","bold"),d.setFontSize(12),d.setTextColor(40,40,40),d.text("CAGR Formula",20,g),g+=10,d.setFillColor(248,250,252),d.roundedRect(20,g-6,u-40,22,3,3,"F"),d.setFont("courier","normal"),d.setFontSize(9),d.setTextColor(51,65,85),d.text("CAGR = (Final Value / Initial Value)^(1 / Years) - 1",25,g+8),g+=35,d.setFont("helvetica","bold"),d.setFontSize(12),d.setTextColor(40,40,40),d.text("Calculation",20,g),g+=10,d.setFont("courier","normal"),d.setFontSize(9),d.setTextColor(71,85,105),d.text(`(${i(e)} / ${i(t)})^(1/${n}) - 1`,20,g),g+=10,d.setFont("helvetica","bold"),d.setFontSize(11),d.setTextColor(15,39,71),d.text("CAGR = "+o.toFixed(2)+"%",20,g),g+=20,d.setFont("helvetica","normal"),d.setFontSize(9),d.setTextColor(71,85,105);const F=`The investment grew from ${i(t)} to ${i(e)} over ${n} `+(1===n?"year":"years")+", representing "+`a compound annual growth rate of ${o.toFixed(2)}%.`,v=d.splitTextToSize(F,u-40);d.text(v,20,g),d.setDrawColor(220,226,232),d.line(20,c-22,u-20,c-22),d.setFont("helvetica","normal"),d.setFontSize(8),d.setTextColor(100,116,139),d.text("Generated on "+r,20,c-13),d.text("EasyCalculator.org",u-20,c-13,{align:"right"});const x="CAGR-Calculator-"+o.toFixed(2)+"-percent.pdf";d.save(x)}))}));
+document.addEventListener('DOMContentLoaded', () => {
+(() => {
+  'use strict';
+  const root = document.getElementById('ec-cagr');
+  if (!root) return;
+  const $ = id => document.getElementById(id);
+  const form = $('cg-form');
+  const initialInput = $('cg-initial');
+  const finalInput = $('cg-final');
+  const yearsInput = $('cg-years');
+  const currencyInput = $('cg-currency');
+  const errorBox = $('cg-error');
+  let chart = null;
+  let latest = null;
+  const symbols = {USD:'$',INR:'₹',EUR:'€',GBP:'£',CAD:'CA$',AUD:'A$'};
+  function money(value) {
+    const currency = currencyInput.value;
+    try {
+      return new Intl.NumberFormat(undefined, {style:'currency',currency,maximumFractionDigits:2}).format(value);
+    } catch (_) {
+      return (symbols[currency] || '$') + Number(value).toLocaleString(undefined,{maximumFractionDigits:2});
+    }
+  }
+  function pdfMoney(value) {
+    const amount = Number(value).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+    return `${currencyInput.value} ${amount}`;
+  }
+  function pct(value) {
+    return `${value < 0 ? '−' : ''}${Math.abs(value).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}%`;
+  }
+  function fmtAxis(value) {
+    const n = Number(value);
+    if (Math.abs(n) >= 1e9) return `${(n/1e9).toFixed(1)}B`;
+    if (Math.abs(n) >= 1e6) return `${(n/1e6).toFixed(1)}M`;
+    if (Math.abs(n) >= 1e3) return `${(n/1e3).toFixed(1)}K`;
+    return n.toLocaleString(undefined,{maximumFractionDigits:0});
+  }
+  function buildRows(initial, final, years, cagr) {
+    const fullYears = Math.floor(years);
+    const count = Math.max(1, Math.min(1000, fullYears + (years > fullYears ? 1 : 0)));
+    const rows = [];
+    let previous = initial;
+    for (let year = 1; year <= count; year++) {
+      const t = Math.min(year, years);
+      const ending = year >= years ? final : initial * Math.pow(1 + cagr, t);
+      const growth = ending - previous;
+      const rate = previous === 0 ? 0 : growth / previous * 100;
+      rows.push({year:t, start:previous, end:ending, growth, rate});
+      previous = ending;
+    }
+    return rows;
+  }
+  function drawTable(rows) {
+    const body = $('cg-table-body');
+    body.replaceChildren();
+    rows.forEach(row => {
+      const tr = document.createElement('tr');
+      [Number.isInteger(row.year) ? `Year ${row.year}` : `${row.year.toFixed(2)} years`, money(row.start), money(row.end), money(row.growth), pct(row.rate)].forEach((value, index) => {
+        const td = document.createElement('td');
+        td.textContent = value;
+        if (index === 0) td.setAttribute('scope','row');
+        tr.appendChild(td);
+      });
+      body.appendChild(tr);
+    });
+  }
+  function drawChart(rows, initial, final) {
+    const canvas = $('cg-chart');
+    if (!window.Chart) {
+      canvas.replaceWith(Object.assign(document.createElement('p'), {className:'cg-muted',textContent:'The chart library did not load. Your CAGR and table are still available.'}));
+      return;
+    }
+    const labels = ['Start', ...rows.map((row, i) => Number.isInteger(row.year) ? `Year ${row.year}` : `${row.year.toFixed(2)} years`)];
+    const values = [initial, ...rows.map(row => row.end)];
+    if (chart) chart.destroy();
+    chart = new Chart(canvas, {
+      type:'line',
+      data:{labels,datasets:[{label:'Illustrated value',data:values,borderColor:'#2563eb',backgroundColor:'rgba(37,99,235,.12)',borderWidth:3,pointRadius:3,pointHoverRadius:5,fill:true,tension:.25}]},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{callbacks:{label:context=>`${context.dataset.label}: ${money(context.parsed.y)}`}}},scales:{x:{grid:{display:false},ticks:{maxTicksLimit:8}},y:{beginAtZero:false, ticks:{callback:fmtAxis},title:{display:true,text:`Value (${currencyInput.value})`}}}}
+    });
+  }
+  function setError(message) {
+    errorBox.textContent = message;
+    errorBox.hidden = false;
+  }
+  function calculate(showError = true) {
+    errorBox.hidden = true;
+    errorBox.textContent = '';
+    const initial = Number(initialInput.value);
+    const final = Number(finalInput.value);
+    const years = Number(yearsInput.value);
+    let message = '';
+    if (initialInput.value.trim() === '' || !Number.isFinite(initial) || initial <= 0) message = 'Enter an initial value greater than zero.';
+    else if (finalInput.value.trim() === '' || !Number.isFinite(final) || final < 0) message = 'Enter a final value of zero or more.';
+    else if (yearsInput.value.trim() === '' || !Number.isFinite(years) || years <= 0 || years > 1000) message = 'Enter a period greater than zero and no more than 1,000 years.';
+    if (message) {
+      latest = null;
+      $('cg-rate').textContent = '—';
+      $('cg-summary-line').textContent = 'Correct the highlighted values to calculate CAGR.';
+      $('cg-out-initial').textContent = '—'; $('cg-out-final').textContent = '—'; $('cg-out-growth').textContent = '—'; $('cg-out-return').textContent = '—';
+      $('cg-table-body').replaceChildren();
+      if (chart) {chart.destroy();chart=null;}
+      if (showError) setError(message);
+      return false;
+    }
+    const cagr = (Math.pow(final / initial, 1 / years) - 1) * 100;
+    const growth = final - initial;
+    const totalReturn = growth / initial * 100;
+    const rows = buildRows(initial, final, years, cagr / 100);
+    latest = {initial,final,years,cagr,growth,totalReturn,rows,currency:currencyInput.value,calculatedAt:new Date()};
+    $('cg-rate').textContent = pct(cagr);
+    $('cg-summary-line').textContent = `${money(initial)} grew to ${money(final)} over ${years.toLocaleString(undefined,{maximumFractionDigits:2})} ${years === 1 ? 'year' : 'years'} — an annualized rate of ${pct(cagr)}.`;
+    $('cg-out-initial').textContent = money(initial);
+    $('cg-out-final').textContent = money(final);
+    $('cg-out-growth').textContent = money(growth);
+    $('cg-out-return').textContent = pct(totalReturn);
+    drawTable(rows);
+    drawChart(rows,initial,final);
+    return true;
+  }
+  function waitFor(test, timeout=10000) {
+    return new Promise((resolve,reject)=>{
+      const started=Date.now();
+      const poll=()=>{if(test())return resolve();if(Date.now()-started>timeout)return reject(new Error('A PDF library could not be loaded. Check your internet connection and try again.'));setTimeout(poll,100);};
+      poll();
+    });
+  }
+  async function downloadPdf() {
+    if (!latest) {setError('Calculate a valid result before downloading the PDF report.');return;}
+    const button=$('cg-pdf');
+    const oldLabel=button.textContent;
+    button.disabled=true;button.textContent='Preparing PDF…';
+    try {
+      await waitFor(()=>window.jspdf && window.jspdf.jsPDF && window.Chart);
+      const {jsPDF}=window.jspdf;
+      const doc=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
+      const left=15, width=180;
+      doc.setFillColor(16,42,76);doc.rect(0,0,210,31,'F');
+      doc.setTextColor(255,255,255);doc.setFont('helvetica','bold');doc.setFontSize(18);doc.text('CAGR Calculator Report',left,15);
+      doc.setFont('helvetica','normal');doc.setFontSize(9);doc.text('easycalculator.org',left,23);
+      doc.setTextColor(31,48,70);doc.setFontSize(10);doc.text(`Generated: ${latest.calculatedAt.toLocaleDateString()}`,left,40);
+      doc.setFont('helvetica','bold');doc.setFontSize(24);doc.setTextColor(37,99,235);doc.text(pct(latest.cagr),left,53);
+      doc.setFontSize(10);doc.setTextColor(31,48,70);doc.setFont('helvetica','normal');doc.text('Compound annual growth rate',left,60);
+      const summary=[['Initial value',pdfMoney(latest.initial)],['Final value',pdfMoney(latest.final)],['Investment period',`${latest.years.toLocaleString(undefined,{maximumFractionDigits:2})} years`],['Total growth',pdfMoney(latest.growth)],['Total return',pct(latest.totalReturn)]];
+      doc.autoTable({startY:67,head:[['Result summary','Value']],body:summary,theme:'grid',styles:{fontSize:9,cellPadding:2.5,textColor:[31,48,70]},headStyles:{fillColor:[239,244,250],textColor:[16,42,76]},columnStyles:{0:{cellWidth:90},1:{cellWidth:90}}});
+      let y=doc.lastAutoTable.finalY+9;
+      doc.setFont('helvetica','bold');doc.setFontSize(11);doc.setTextColor(16,42,76);doc.text('Illustrated value by year',left,y);
+      y+=4;
+      const chartImage=$('cg-chart').toDataURL('image/png',1);
+      doc.addImage(chartImage,'PNG',left,y,width,57);
+      y+=63;
+      doc.setFont('helvetica','bold');doc.setFontSize(11);doc.setTextColor(16,42,76);doc.text('CAGR formula',left,y);
+      y+=6;doc.setFont('helvetica','normal');doc.setFontSize(9);doc.setTextColor(31,48,70);
+      doc.text('CAGR = (Final Value / Initial Value) ^ (1 / Number of Years) - 1',left,y);
+      doc.text(`= (${latest.final} / ${latest.initial}) ^ (1 / ${latest.years}) - 1 = ${pct(latest.cagr)}`,left,y+5);
+      if (!doc.autoTable) throw new Error('The PDF table extension did not load.');
+      doc.autoTable({startY:y+10,head:[['Year','Starting value','Ending value','Annual growth','Growth rate']],body:latest.rows.map(r=>[Number.isInteger(r.year)?`Year ${r.year}`:`${r.year.toFixed(2)} years`,pdfMoney(r.start),pdfMoney(r.end),pdfMoney(r.growth),pct(r.rate)]),theme:'striped',styles:{fontSize:8,cellPadding:2.1,textColor:[31,48,70]},headStyles:{fillColor:[16,42,76]},columnStyles:{0:{halign:'left'}}});
+      let pageCount=doc.internal.getNumberOfPages();
+      for(let page=1;page<=pageCount;page++){doc.setPage(page);doc.setFont('helvetica','normal');doc.setFontSize(8);doc.setTextColor(100,116,139);doc.text('Illustrative CAGR path; actual annual returns may differ.',left,287);doc.text(`Page ${page} of ${pageCount}`,195,287,{align:'right'});}
+      const date=new Date().toISOString().slice(0,10);
+      doc.save(`cagr-report-${date}.pdf`);
+    } catch (error) {
+      setError(error && error.message ? error.message : 'The PDF could not be created. Please try again.');
+    } finally {button.disabled=false;button.textContent=oldLabel;}
+  }
+  form.addEventListener('submit',event=>{event.preventDefault();calculate(true);});
+  form.addEventListener('reset',()=>setTimeout(()=>{currencyInput.value='USD';calculate(false);},0));
+  currencyInput.addEventListener('change',()=>{ $('cg-symbol-initial').textContent=symbols[currencyInput.value]||currencyInput.value; $('cg-symbol-final').textContent=symbols[currencyInput.value]||currencyInput.value; calculate(false); });
+  $('cg-pdf').addEventListener('click',downloadPdf);
+  [initialInput,finalInput,yearsInput].forEach(input=>input.addEventListener('input',()=>calculate(false)));
+  calculate(false);
+})();
+});
