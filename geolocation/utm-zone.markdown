@@ -4,7 +4,7 @@ title: UTM Zone Map – View UTM Coordinate & Grid Maps by Region
 permalink: /utm-zone-map
 description: "Explore detailed UTM zone maps with grid overlays and UTM coordinates. Quickly find your location’s UTM zone and understand how Universal Transverse Mercator mapping works."
 image: "/assets/images/og/universal-transverse-mercator.jpg"
-last_modified_at: 2026-06-08
+last_modified_at: 2026-10-02
 ---
  <!-- Leaflet -->
  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -66,16 +66,13 @@ last_modified_at: 2026-06-08
   <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Utm-zones.jpg" alt="UTM Zone Map - Universal Transverse Mercator Zones"   class="img-fluid rounded shadow-sm" >
   <p class="mt-2 text-muted small">A global UTM Zone Map showing division into 60 zones from Zone 1 to Zone 60 (Source: Wikipedia)</p>
 </div>
-
-
 <h3>Important Countries and Their UTM Zones</h3>
-     <div class="table-responsive">
-        <table class="conversion-table ">
-         <thead class="bg-primary"><tr><th>Country</th><th>UTM Zone(s)</th><th>Notes</th></tr></thead>
-            <tbody> <tr> <td>United States</td> <td>10N to 19N</td> <td>From California to Maine</td> </tr> <tr> <td>Canada</td> <td>7N to 22N</td> <td>Western to Eastern provinces</td> </tr> <tr> <td>India</td> <td>42N to 46N</td> <td>Most of India spans these zones</td> </tr> <tr> <td>China</td> <td>45N to 51N</td> <td>Large east-west spread</td> </tr> <tr> <td>Russia</td> <td>32N to 60N</td> <td>Spans 11 time zones</td> </tr> <tr> <td>Brazil</td> <td>18S to 25S</td> <td>In the Southern Hemisphere</td> </tr> <tr> <td>Australia</td> <td>49S to 57S</td> <td>Across Western to Eastern Australia</td> </tr> <tr> <td>Germany</td> <td>32N to 33N</td> <td>Mainly in Zone 32N and 33N</td> </tr> <tr> <td>United Kingdom</td> <td>30N</td> <td>Entire UK fits in Zone 30N</td> </tr> <tr> <td>France</td> <td>31N to 32N</td> <td>Western and Eastern France</td> </tr> <tr> <td>South Africa</td> <td>33S to 36S</td> <td>Southern Hemisphere zones</td> </tr> <tr> <td>Japan</td> <td>51N to 54N</td> <td>Multiple islands across zones</td> </tr> <tr> <td>Mexico</td> <td>11N to 16N</td> <td>North to southeast spread</td> </tr> <tr> <td>Indonesia</td> <td>46S to 54S</td> <td>Large east-west island chain</td> </tr> </tbody>
-         </table>
-         </div>
-
+ <div class="table-responsive">
+   <table class="conversion-table ">
+    <thead class="bg-primary"><tr><th>Country</th><th>UTM Zone(s)</th><th>Notes</th></tr></thead>
+     <tbody> <tr> <td>United States</td> <td>10N to 19N</td> <td>From California to Maine</td> </tr> <tr> <td>Canada</td> <td>7N to 22N</td> <td>Western to Eastern provinces</td> </tr> <tr> <td>India</td> <td>42N to 46N</td> <td>Most of India spans these zones</td> </tr> <tr> <td>China</td> <td>45N to 51N</td> <td>Large east-west spread</td> </tr> <tr> <td>Russia</td> <td>32N to 60N</td> <td>Spans 11 time zones</td> </tr> <tr> <td>Brazil</td> <td>18S to 25S</td> <td>In the Southern Hemisphere</td> </tr> <tr> <td>Australia</td> <td>49S to 57S</td> <td>Across Western to Eastern Australia</td> </tr> <tr> <td>Germany</td> <td>32N to 33N</td> <td>Mainly in Zone 32N and 33N</td> </tr> <tr> <td>United Kingdom</td> <td>30N</td> <td>Entire UK fits in Zone 30N</td> </tr> <tr> <td>France</td> <td>31N to 32N</td> <td>Western and Eastern France</td> </tr> <tr> <td>South Africa</td> <td>33S to 36S</td> <td>Southern Hemisphere zones</td> </tr> <tr> <td>Japan</td> <td>51N to 54N</td> <td>Multiple islands across zones</td> </tr> <tr> <td>Mexico</td> <td>11N to 16N</td> <td>North to southeast spread</td> </tr> <tr> <td>Indonesia</td> <td>46S to 54S</td> <td>Large east-west island chain</td> </tr> </tbody>
+    </table>
+   </div>
 
 <h3 class="p-3">How UTM Zones Work in the USA </h3>
 <p>The United States spans multiple UTM zones, ranging from Zone 10 on the West Coast to Zone 19 in the East. These zones help accurately map geographic locations using the Universal Transverse Mercator (UTM) coordinate system. Below is a quick overview of the major UTM zone in the USA:<br>
@@ -93,11 +90,9 @@ last_modified_at: 2026-06-08
 </ul>
 </p>
 <img src="/assets/images/utm-zone-usa-utm10-to-19.png" alt="USA UTM Zone Map showing UTM Zones 10 to 19" title="USA UTM Zone Map (UTM 10 to 19)" class="img-fluid rounded shadow-sm d-block mx-auto" style="height: 80%; width: auto;">
-
 <div class="highlight mt-4"><p><strong>Source:</strong> Wikipedia, EPSG.io, Leaflet.js, OpenStreetMap, U.S. Geological Survey</p>
 </div>
 </div>
-
 </div>
 
 <!-- FAQ Section -->

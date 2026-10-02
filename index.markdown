@@ -3,7 +3,7 @@ layout: default
 title: Easy Calculator - Free Online Calculators for Everyone
 description: "Free online calculators for math, finance, loans, EMI, SIP, percentages, conversions, time zones, RF engineering, geolocation and everyday calculations."
 image: "/assets/images/apple-touch-icon.png"
-last_modified_at: 2026-09-09
+last_modified_at: 2026-10-02
 ---
 
 {% include calculator.html %}
@@ -13,17 +13,11 @@ last_modified_at: 2026-09-09
 </header>
 <!-- Calculator Categories - OmniCalculator Style -->
 <section id="categories" class="ec-category-section p-4">
-    <div class="ec-category-grid">
+ <div class="ec-category-grid">
       <!-- Finance -->
-      <a href="/finance-calculators" class="ec-category-card">
-        <div class="ec-category-icon"><i class="fa-solid fa-dollar-sign"></i></div>
-        <h3>Finance</h3><p>Loan, SIP, investment &amp; finance calculators</p>
-      </a>
+   <a href="/finance-calculators" class="ec-category-card"><div class="ec-category-icon"><i class="fa-solid fa-dollar-sign"></i></div><h3>Finance</h3><p>Loan, SIP, investment &amp; finance calculators</p></a>
       <!-- Math -->
-      <a href="/math" class="ec-category-card">
-        <div class="ec-category-icon"><i class="fa-solid fa-square-root-variable"></i></div>
-        <h3>Math</h3><p>Percentage, fraction, LCM, HCF &amp; more</p>
-      </a>
+      <a href="/math" class="ec-category-card"><div class="ec-category-icon"><i class="fa-solid fa-square-root-variable"></i></div><h3>Math</h3><p>Percentage, fraction, LCM, HCF &amp; more</p></a>
       <!-- Triangle Calculators -->
 <a href="/triangle-calculators" class="ec-category-card">
   <div class="ec-category-icon"> <i class="fa-solid fa-caret-up"></i></div>
@@ -159,7 +153,7 @@ last_modified_at: 2026-09-09
 <!-- New Calculators -->
 <div class="row g-3 p-4">
  <div class="d-flex align-items-center gap-3 mb-4">
-    <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-3"><i class="fa-solid fa-sparkles fs-5"></i></div>
+   <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-3"><i class="fa-solid fa-sparkles fs-5"></i></div>
     <div>
       <h2 class="h4 fw-bold mb-1">New Calculators</h2>
       <p class="text-secondary small mb-0">Explore our latest calculators and tools </p>
