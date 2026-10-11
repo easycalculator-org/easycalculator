@@ -1,226 +1,74 @@
 ---
 layout: default
-title: SIP Calculator – Calculate Your Mutual Fund Returns Easily
+title: SIP Calculator – Monthly Investment, Step-Up & PDF Report
 permalink: /sip-calculator
-description: "Use our SIP calculator to estimate your mutual fund returns with ease. Plan your monthly investments, visualize wealth growth, and achieve your financial goals smartly."
-#image: "/assets/images/age-calc-open-graph.png"
+description: "Calculate monthly SIP investment growth with step-up contributions, inflation adjustment, global currencies, amount in words, charts and a free PDF report"
+image: "/assets/images/og/sip-calculator.png"
 last_modified_at: 2026-02-03
 ---
- <style>
-  .form-range::-webkit-slider-thumb{background:#0d6efd}.form-range::-moz-range-thumb{background:#0d6efd}.card-header{border-radius:.375rem .375rem 0 0!important}.input-group-text{min-width:40px;justify-content:center}.table-hover tbody tr:hover{background-color:#0d6efd1a}    
-  </style>
-<div class="row justify-content-center">
- <div class="col-lg-9">
-   <div class="card shadow border-0">
-     <div class="card-header bg-primary text-white py-3"><h1 class="text-center mb-0">Systematic Investment Plan (SIP) Calculator</h1></div>
-     <div class="card-body">
- <div class="row g-4">
-    <div class="col-md-6">
-<div class="mb-4">
-  <div class="d-flex justify-content-between align-items-center mb-2">
-    <label for="monthlyInvestment" class="form-label mb-0"><i class="fas fa-wallet text-primary me-2"></i>Monthly Investment</label>
-    <input type="number" class="form-control bg-primary-subtle ms-3" style="max-width: 150px;" id="monthlyInvestment" value="10000">
-  </div>
-  <input type="range" class="form-range" min="500" max="100000" step="500" id="monthlyInvestmentRange" value="10000">
+
+<style>
+#ec-sip{--ink:#172a45;--muted:#536680;--blue:#245fe5;--line:#dce5f0;--green:#087c68;max-width:1120px;margin:26px auto 48px;color:var(--ink);font-family:inherit;line-height:1.6}#ec-sip *{box-sizing:border-box}#ec-sip [hidden]{display:none!important}#ec-sip h1,#ec-sip h2,#ec-sip h3{color:var(--ink);line-height:1.22;font-weight:750}#ec-sip h1{font-size:clamp(28px,4vw,42px);letter-spacing:-1.2px;margin:8px 0 12px}#ec-sip h2{font-size:23px;margin:0 0 15px}#ec-sip h3{font-size:18px;margin:0 0 10px}#ec-sip p{margin:0 0 14px}#ec-sip .sp-eyebrow{color:var(--blue);font-weight:750;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}#ec-sip #ec-sip .sp-badges{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 25px}#ec-sip .sp-badges span{font-size:12px;background:#f0f5fc;border-radius:30px;padding:5px 11px;font-weight:650}#ec-sip .sp-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:22px;align-items:start}#ec-sip .sp-panel{border:1px solid var(--line);border-radius:19px;background:#fff;padding:25px;min-width:0}#ec-sip .sp-form-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:22px}#ec-sip .sp-form-head h2{font-size:20px;margin:0}#ec-sip label{display:block;font-weight:650;font-size:14px;margin-bottom:7px}#ec-sip input,#ec-sip select{font:inherit;color:var(--ink);width:100%;border:1px solid #b8c7dc;border-radius:9px;background:#fff;min-height:46px;padding:10px 12px}#ec-sip input:focus,#ec-sip select:focus,#ec-sip button:focus-visible,#ec-sip a:focus-visible,#ec-sip summary:focus-visible{outline:3px solid #91b4ff;outline-offset:3px}#ec-sip input[aria-invalid=true]{border-color:#be2432}#ec-sip input[type=range]{min-height:24px;border:0;padding:0;margin:10px 0 0;accent-color:var(--blue)}#ec-sip .sp-field{margin-bottom:20px}#ec-sip .sp-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}#ec-sip .sp-help{display:block;color:var(--muted);font-size:12px;line-height:1.5;margin-top:6px}#ec-sip .sp-words{color:var(--blue);font-size:12px;display:block;margin-top:6px;min-height:18px}#ec-sip .sp-advanced{border-top:1px solid var(--line);padding-top:15px}#ec-sip summary{cursor:pointer;font-weight:650;padding:4px 0 12px}#ec-sip .sp-advanced>div{padding-top:8px}#ec-sip .sp-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}#ec-sip button{font:inherit;font-size:14px;font-weight:700;border:1px solid var(--line);border-radius:9px;min-height:44px;padding:10px 18px;background:#fff;color:var(--ink);cursor:pointer}#ec-sip .sp-primary{background:var(--blue);border-color:var(--blue);color:#fff}#ec-sip button:hover{filter:brightness(.95)}#ec-sip button:disabled{opacity:.5;cursor:not-allowed}#ec-sip .sp-result{background:linear-gradient(140deg,#f2f7ff,#fff 75%)}#ec-sip .sp-result-label{font-size:13px;color:var(--muted);font-weight:650}#ec-sip .sp-total{font-size:clamp(25px,3vw,37px);font-weight:800;letter-spacing:-.7px;line-height:1.25;margin:7px 0;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}#ec-sip .sp-result .sp-words{color:var(--muted);margin-bottom:20px}#ec-sip .sp-stats{display:grid;grid-template-columns:1fr 1fr;gap:15px;border-top:1px solid var(--line);padding-top:20px;margin-top:20px}#ec-sip .sp-stat span{font-size:12px;color:var(--muted);display:block}#ec-sip .sp-stat strong{font-size:18px;display:block;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}#ec-sip .sp-gain{color:var(--green)}#ec-sip .sp-chart{margin:22px 0 5px}#ec-sip canvas{display:block;width:100%;height:230px}#ec-sip .sp-legend{display:flex;gap:18px;font-size:12px;color:var(--muted)}#ec-sip .sp-legend span:before{content:'';display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--blue);margin-right:6px}#ec-sip .sp-legend span:last-child:before{background:#8395af}#ec-sip .sp-note{font-size:12px;color:var(--muted);line-height:1.6;margin-top:15px}#ec-sip .sp-error{background:#fff0f0;color:#9b1c27;padding:10px 13px;border-radius:8px;font-size:13px;margin-top:14px}#ec-sip .sp-table-panel{margin-top:22px}#ec-sip .sp-table-wrap{overflow-x:auto}#ec-sip table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}#ec-sip caption{text-align:left;color:var(--muted);font-size:12px;padding:0 0 12px;caption-side:top}#ec-sip th,#ec-sip td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}#ec-sip th{background:#f4f7fc;font-size:12px;color:var(--muted)}#ec-sip th:first-child,#ec-sip td:first-child{text-align:left}#ec-sip tbody tr:hover{background:#f8faff}#ec-sip .sp-article{margin-top:35px;max-width:940px}#ec-sip .sp-article section{margin:30px 0}#ec-sip .sp-article p,#ec-sip .sp-article li{color:#40536d}#ec-sip .sp-meta{font-size:12px;color:var(--muted);margin-bottom:26px}#ec-sip .sp-app{display:flex;justify-content:space-between;align-items:center;gap:22px;border:1px solid #cfddf7;background:#f0f5ff;border-radius:16px;padding:24px;margin:28px 0}#ec-sip .sp-app h2{font-size:21px;margin:0 0 7px}#ec-sip .sp-app p{margin:0;font-size:14px}#ec-sip .sp-app a{flex-shrink:0}#ec-sip .sp-app img{width:190px;height:auto;display:block}#ec-sip .sp-formula{background:#f5f8fc; padding:18px 20px;overflow-wrap:anywhere;border-radius:0 10px 10px 0}#ec-sip .sp-faq details{border-bottom:1px solid var(--line);padding:14px 0}#ec-sip .sp-faq summary{padding:0}#ec-sip .sp-faq p{margin:12px 0 0}#ec-sip .sp-related{display:flex;flex-wrap:wrap;gap:10px}#ec-sip .sp-related a{background:#f1f5fb;border-radius:8px;padding:8px 12px;font-size:14px}#ec-sip a{color:#2259ca}#ec-sip .sp-sr{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:760px){#ec-sip{margin:18px 0 32px}#ec-sip .sp-grid{grid-template-columns:1fr}#ec-sip .sp-panel{padding:19px}#ec-sip .sp-app{align-items:flex-start;flex-direction:column;gap:10px}#ec-sip .sp-app img{margin-left:-10px}#ec-sip .sp-total{font-size:32px}}@media(max-width:380px){#ec-sip .sp-pair{grid-template-columns:1fr}#ec-sip .sp-stat strong{font-size:16px}}
+</style>
+
+
+<div id="ec-sip">
+<header><div class="sp-eyebrow">Plan a little. Build over time.</div>
+<h1>SIP Calculator</h1>
+<p>See how regular monthly investments could grow. Explore annual step-ups, account for inflation, and download your plan as a PDF.</p>
+<div class="sp-badges p-1"><span>Global currencies</span><span>Live amount in words</span><span>Free PDF report</span></div></header>
+<div class="sp-grid">
+<form id="sp-form" class="sp-panel" novalidate>
+<div class="sp-form-head"><h2>Your investment plan</h2><span class="sp-eyebrow">01 / Inputs</span></div>
+<div class="sp-pair"><div class="sp-field"><label for="sp-currency">Currency</label><select id="sp-currency"></select></div><div class="sp-field"><label for="sp-style">Number format</label><select id="sp-style"><option value="international">International</option><option value="indian">Indian (lakh / crore)</option></select></div></div>
+<div class="sp-field"><label for="sp-amount">Monthly investment</label><input id="sp-amount" type="number" min="1" max="1000000000" step="0.01" value="10000" inputmode="decimal" aria-describedby="sp-amount-words sp-amount-hint" required><span id="sp-amount-words" class="sp-words"></span><span id="sp-amount-hint" class="sp-help">Enter 1 to 1 billion. Currency is a display choice, not an exchange conversion.</span></div>
+<div class="sp-pair"><div class="sp-field"><label for="sp-years">Investment period (years)</label><input id="sp-years" type="number" min="1" max="50" step="1" value="10" inputmode="numeric" required><input id="sp-years-range" type="range" min="1" max="50" value="10" aria-label="Investment period in years"></div><div class="sp-field"><label for="sp-rate">Annual return (%)</label><input id="sp-rate" type="number" min="-50" max="50" step="0.1" value="12" inputmode="decimal" aria-describedby="sp-rate-hint" required><span id="sp-rate-hint" class="sp-help">An assumed rate, not a promised return. Negative values model a loss.</span></div></div>
+<details class="sp-advanced"><summary>Step-up, inflation &amp; calculation settings</summary><div>
+<div class="sp-pair"><div class="sp-field"><label for="sp-step">Annual SIP increase (%)</label><input id="sp-step" type="number" min="0" max="50" step="0.1" value="0" inputmode="decimal" required><span class="sp-help">Increases your monthly amount after every 12 payments.</span></div><div class="sp-field"><label for="sp-inflation">Annual inflation (%)</label><input id="sp-inflation" type="number" min="0" max="30" step="0.1" value="3" inputmode="decimal" required></div></div>
+<div class="sp-field"><label for="sp-timing">Monthly investment timing</label><select id="sp-timing"><option value="begin">Beginning of the month</option><option value="end">End of the month</option></select></div>
+<div class="sp-field"><label for="sp-method">Annual return convention</label><select id="sp-method"><option value="nominal">Annual rate ÷ 12 (standard SIP formula)</option><option value="effective">Effective annual return (CAGR equivalent)</option></select><span class="sp-help">These conventions give different results. Match the convention to your return assumption.</span></div>
+</div></details>
+<div id="sp-error" class="sp-error" role="alert" hidden></div>
+<div class="sp-actions"><button class="sp-primary" type="submit">Calculate</button><button type="reset">Reset</button></div>
+<span class="sp-help">Results update as you type. All amounts are in your selected currency.</span>
+</form>
+<section class="sp-panel sp-result" aria-label="Investment projection">
+<div class="sp-result-label">Estimated future value</div><div class="sp-total" id="sp-total">—</div><div class="sp-words" id="sp-total-words"></div><span id="sp-live" class="sp-sr" role="status" aria-live="polite"></span>
+<div class="sp-stats"><div class="sp-stat"><span>Total invested</span><strong id="sp-invested">—</strong></div><div class="sp-stat"><span id="sp-gain-label">Estimated gain</span><strong id="sp-gain" class="sp-gain">—</strong></div><div class="sp-stat"><span>Value in today's money</span><strong id="sp-real">—</strong></div><div class="sp-stat"><span>Monthly SIP in final year</span><strong id="sp-final-payment">—</strong></div></div>
+<figure class="sp-chart"><canvas id="sp-chart" role="img" aria-label="Projected value and total contributions over time. Exact values are in the yearly breakdown."></canvas><figcaption class="sp-legend"><span>Projected value</span><span>Total invested</span></figcaption></figure>
+<div class="sp-actions"><button type="button" id="sp-pdf" class="sp-primary">↓ Download PDF report</button></div><div id="sp-pdf-status" class="sp-help" role="status"></div>
+<p class="sp-note" id="sp-assumptions"></p><p class="sp-note">Illustration only. Actual investment returns vary and may be negative. Taxes, fees and exchange-rate changes are not included.</p>
+</section>
 </div>
-
-<div class="mb-4">
-  <div class="d-flex justify-content-between align-items-center mb-2">
-     <label for="investmentPeriod" class="form-label"><i class="far fa-calendar-alt text-primary me-2"></i>Investment Period (Years) </label>
-     <input type="number" class="form-control bg-primary-subtle" id="investmentPeriod" value="10" style="max-width: 150px;">
-   </div>  
-      <input type="range" class="form-range mb-2" min="1" max="40" id="investmentPeriodRange" value="10">
-   </div> 
-
-                
-<div class="mb-4">
- <div class="d-flex justify-content-between align-items-center mb-2">
-   <label for="expectedReturn" class="form-label"><i class="fas fa-chart-line text-primary me-2"></i>Expected Return Rate (%) </label>
-   <input type="number" class="form-control bg-primary-subtle" id="expectedReturn" value="12" step="0.1" style="max-width: 150px;">
-  </div>
-  <input type="range" class="form-range mb-2" min="1" max="30" step="0.1" id="expectedReturnRange" value="12">
-  </div>
- <div class="mb-4">
-  <div class="d-flex justify-content-between align-items-center mb-2">
-    <label for="inflationRate" class="form-label">  <i class="fas fa-money-bill-trend-up text-primary me-2"></i>Inflation Rate (%)  </label>
- <input type="number" class="form-control bg-primary-subtle" id="inflationRate" value="0" step="0.1" style="max-width: 150px;">
- </div> 
-    <input type="range" class="form-range mb-2" min="0" max="15" step="0.1" id="inflationRateRange" value="0" >
-        </div>     
- <div class="d-flex justify-content-between align-items-center mb-2">         
-         <div class="form-check form-switch mb-3">
-            <input class="form-check-input" type="checkbox" id="stepUpSIP" checked>
-            <label class="form-check-label" for="stepUpSIP"> <i class="fas fa-step-forward text-primary me-2"></i>Annual Step-up SIP Increase by (%)</label>
-           </div>
-  <div class="mb-3" id="stepUpContainer"><input type="number" class="form-control bg-primary-subtle" id="stepUpPercentage" value="0" min="0" max="100"></div>
- </div>
-</div>
-
- <div class="col-md-6">
-   <div class="results-card p-4 bg-white rounded border">
-       <h5 class="text-center mb-4 text-primary">  <i class="fas fa-chart-pie me-2"></i>Projected Returns </h5>
-   <div class="d-flex justify-content-between mb-3"> <span><i class="fas fa-money-bill-wave me-2 text-success"></i>Invested Amount:</span><strong id="investedAmount" class="text-success">0</strong> </div>
-          <div class="d-flex justify-content-between mb-3"><span><i class="fas fa-coins me-2 text-warning"></i>Est. Returns:</span> <strong id="estimatedReturns" class="text-warning">₹0</strong> </div>
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <span><i class="fas fa-piggy-bank me-2 text-primary"></i>Total Value:</span><strong id="totalValue" class="text-primary">₹0</strong>
-                                    </div>
-                                    <div class="d-flex justify-content-between mb-3">
-                                     <span><i class="fas fa-inflation me-2 text-info"></i>Inflation Adjusted:</span><strong id="inflationAdjustedValue" class="text-info">₹0</strong>
-                                    </div>
-                                    <hr>
-                                    <div class="chart-container" style="position: relative; height:200px;"><canvas id="sipChart"></canvas></div>
-                                </div>
-                            </div>
-                        </div>
-  <div class="row mt-4">
-   <div class="col-12">
-     <div class="accordion" id="sipDetails">
-       <div class="accordion-item border-0 shadow-sm">
-          <h2 class="accordion-header"> <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#yearlyBreakdown"><i class="fas fa-table me-2"></i>Yearly Investment Breakdown </button></h2>
-                                        <div id="yearlyBreakdown" class="accordion-collapse collapse" data-bs-parent="#sipDetails">
-                                            <div class="accordion-body p-0">
-                                                <div class="table-responsive">
-                                                    <table class="table table-hover mb-0">
-                                                        <thead class="table-light">
-                                                            <tr>
-                                                                <th><i class="far fa-calendar me-1"></i>Year</th>
-                                                                <th><i class="fas fa-investment me-1"></i>Yearly Investment</th>
-                                                                <th><i class="fas fa-investment me-1"></i>Cumulative Investment</th>
-                                                                <th><i class="fas fa-chart-bar me-1"></i>Year End Value</th>
-                                                                <th><i class="fas fa-adjust me-1"></i>Inflation Adj. Value</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody id="yearlyTableBody">
-                                                            <!-- Yearly data will be inserted here -->
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer text-center bg-light py-3">
-                        <button class="btn btn-primary btn-lg px-4 me-3" onclick="calculateSIP()">  <i class="fas fa-calculator me-2"></i>Calculate</button>
-                        <button class="btn btn-outline-secondary btn-lg px-4" onclick="resetCalculator()"> <i class="fas fa-redo me-2"></i>Reset </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+<section class="sp-panel sp-table-panel"><details open><summary>Yearly investment breakdown</summary><div class="sp-table-wrap" tabindex="0" role="region" aria-label="Scrollable yearly investment breakdown"><table><caption id="sp-table-caption">Annual projections</caption><thead><tr><th scope="col">Year</th><th scope="col">Invested that year</th><th scope="col">Total invested</th><th scope="col">Projected value</th><th scope="col">Today's value</th></tr></thead><tbody id="sp-rows"></tbody></table></div></details></section>
+<noscript><p class="sp-error">Please enable JavaScript to use the calculator and download a PDF. The guide below remains available.</p></noscript>
 <!-- Article Content -->
-  <div class="article-container">
-     <!-- Article Meta -->
-      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-3 border-bottom">
-         <div class="d-flex align-items-center">
-           <div class="bg-light p-2 rounded-circle d-flex align-items-center justify-content-center me-3"><i class="fas fa-user text-primary"></i></div>
-              <div><h5 class="mb-0">Created by :- Narendra</h5></div>
-              </div>
-              <div class="text-muted"> <i class="fas fa-calendar me-1"></i>Last Updated: {{ site.time | date: "%d-%m-%Y" }}</div>
-            </div>
- <!-- What is SIP -->
-   <section class="mb-5">
-    <h2 class="section-title">SIP Calculator – Systematic Investment Plan Return Calculator</h2>
-     <p>A SIP Calculator, or Systematic Investment Plan Calculator, is an online financial tool that helps you estimate the future value of your mutual fund investments made through SIP. It simplifies planning by showing you the expected returns based on your monthly investment amount, investment duration, and anticipated annual return rate. <br> While SIPs are commonly linked with mutual funds, it’s important to understand that SIP is not a type of investment, but a method of investing in mutual funds—the other common method being a lump-sum investment.</p>
-<h2>What Is a SIP?</h2>
-<p>A Systematic Investment Plan (SIP) allows you to invest a fixed amount at regular intervals—typically monthly, but also available weekly or quarterly. SIPs are widely regarded as one of the most efficient ways to build wealth through disciplined and consistent investing, especially for long-term financial goals.</p>
-<div class="card-body">
-  <h2 class="card-title h4 d-flex align-items-center"> <span class="ms-2">What Is a SIP Calculator?</span> </h2>
-    <p class="card-text">A SIP calculator is a mutual fund return calculator designed to help you estimate the maturity amount of your investment. It provides a near-accurate picture of your potential returns, based on the details you enter. However, note that actual returns can vary due to market fluctuations, fund performance, exit loads, and expense ratios.<br>It's especially useful for:</p>
-         <ul class="list-group list-group-flush mb-3">
-            <li class="list-group-item">First-time investors planning their monthly investment.</li>
-            <li class="list-group-item">Long-term planners looking to forecast their SIP returns.</li>
-            <li class="list-group-item">Individuals comparing SIP vs. lump sum investments.</li>
-          </ul>
-         </div>
-
-<div class="bg-light p-4 rounded mt-4">
- <h4 class="text-primary"><i class="fas fa-star me-2"></i>Benefits of Using an Online SIP Calculator</h4>
-  <ul class="list-group list-group-flush">
-   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i> Helps determine how much you need to invest regularly to meet your goal.</li>
-   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i> Shows total amount invested vs. estimated returns.</li>
-   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i> Saves time by eliminating manual calculations.</li>
-   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i> Easy-to-use calendar interface fow making date selection effortless.</li>
-   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i> Encourages disciplined investment habits.</li>
-   <li class="list-group-item bg-light"><i class="fas fa-check-circle text-success me-2"></i> Assists in financial planning for goals like buying a house, children's education, or retirement.</li>
-  </ul>
-     </div>
-<!-- formula -->
-<br>
-<div class="card-body shadow-sm p-4 border rounded-2">
-  <h2 class="card-title h4 d-flex align-items-center"><span class="ms-2">How Does a SIP Calculator Work?</span></h2>
-   <p class="card-text">The SIP calculator uses the following mathematical formula to calculate returns:</p>
-   <div class="formula-box p-3 mb-3">
-      <p class="mb-1 fw-bold">M = P × (&#123;[1 + i]^n – 1&#125; / i) × (1 + i)</p>
-      <p class="mb-1">Where:</p>
-         <ul class="mb-0">
-           <li>M = Maturity amount</li>
-           <li>P = SIP amount (monthly investment)</li>
-           <li>n = Number of investment periods (months)</li>
-           <li>i = Periodic interest rate (annual rate ÷ 12)</li>
-          </ul>
-     </div>
-     <div class="bg-light p-4">
-  <h3 class="h5 mt-4">Example:</h3>
-     <p>If you invest ₹1,000/month for 12 months at a 12% annual return:</p>
-     <p>Monthly interest rate = 12% / 12 = 1% = 0.01</p>
-     <p>M = 1000 × (&#123;[1 + 0.01]^12 – 1&#125; / 0.01) × (1 + 0.01)</p>
-     <p>M = ₹12,809 (approx.)</p>
-     <p class="text-muted"><small>This is an estimate. Actual returns may vary based on the mutual fund's performance and market conditions.</small></p>
-     </div>
-   </div>
+<div class="article-container">
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
+    </div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>4 min read</span>
+    </div>
+  </div>
+<!-- Article-->
+<h2>SIP calculator for monthly investment planning</h2><p>A systematic investment plan, or SIP, means investing money at regular intervals. In India, the term is commonly used for regular mutual fund investments. Elsewhere, you may call this a monthly investment plan or recurring contribution. This calculator estimates how a series of monthly investments could grow under your chosen assumptions.</p><p>Choose your currency, enter a monthly amount, set the number of years and try an annual return. You can also increase your contributions each year and estimate what the final amount could buy after inflation. A currency choice changes the labels and formatting; it does not convert money between currencies.</p> 
+<aside class="sp-app" aria-label="Download the Android app"><div><h2>Take your investment planning with you</h2><p>Use the SIP SWP Calculator app for Android to explore SIP, SWP and lump-sum calculations.</p></div><a href="https://play.google.com/store/apps/details?id=org.easycalculator.sipswp" target="_blank" rel="noopener noreferrer" aria-label="Get SIP SWP Calculator on Google Play"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="190" height="74" loading="lazy" decoding="async"></a></aside>
+<h2>How to use the SIP calculator</h2><ol><li><strong>Choose currency and number format.</strong> Use million/billion notation or Indian lakh/crore notation. The amount also appears in English words as you type.</li><li><strong>Enter your monthly investment.</strong> This is the starting amount you plan to contribute each month.</li><li><strong>Set your investment period and return assumption.</strong> Try more than one rate to understand how sensitive your plan is to future returns.</li><li><strong>Adjust the optional settings.</strong> Add an annual contribution increase, choose an inflation rate, and set payment timing.</li><li><strong>Review and download.</strong> Compare contributions with the projected value, inspect each year, and download a PDF containing your inputs, chart and full yearly table.</li></ol>
+<section><h2>How SIP returns are calculated</h2><p>For a fixed monthly contribution paid at the end of each month, the formula is:</p><div class="sp-formula"><strong>FV = P × [((1 + i)<sup>n</sup> − 1) ÷ i]</strong><br>Beginning-of-month contributions: multiply the result by <strong>(1 + i)</strong>.<br>At a 0% return: <strong>FV = P × n</strong>.</div><p style="margin-top:15px"><strong>P</strong> is your monthly contribution, <strong>i</strong> is the monthly return rate and <strong>n</strong> is the total number of monthly contributions. The default convention uses i = annual rate ÷ 12, with the annual percentage first divided by 100. The effective annual option instead uses i = (1 + annual rate)<sup>1/12</sup> − 1.</p><p>For example, entering 12% under the default convention gives a 1% monthly rate, equivalent to about 12.68% compounded over a full year. Selecting an effective annual return of 12% gives a monthly rate of about 0.9489%. Neither setting predicts a fund's actual monthly performance.</p><p>With an annual step-up, each year's monthly contribution is P × (1 + step-up rate)<sup>year − 1</sup>. The calculator processes each monthly payment separately, so the chart and table reflect the increasing contributions. It uses unrounded values internally and rounds displayed amounts.</p></section>
+<section><h2>A simple monthly investment example</h2><p>Suppose you invest <strong>500 each month for 10 years</strong>, assume a <strong>6% annual rate divided by 12</strong>, pay at the <strong>end of each month</strong>, and make no annual contribution increases.</p><div class="sp-table-wrap"><table><caption>Illustration in any selected currency; rounded to the nearest whole unit.</caption><tbody><tr><th scope="row">Total contributions</th><td>60,000</td></tr><tr><th scope="row">Estimated final value</th><td>81,940</td></tr><tr><th scope="row">Estimated gain</th><td>21,940</td></tr><tr><th scope="row">Today's value at 3% annual inflation</th><td>60,971</td></tr></tbody></table></div><p style="margin-top:12px">These numbers are an illustration, not an expected outcome for a particular investment. With a beginning-of-month payment, each contribution has one additional month to grow under this model.</p></section>
+<section><h2>What do the results mean?</h2><ul><li><strong>Total invested:</strong> all your monthly contributions, including any step-ups.</li><li><strong>Estimated gain or loss:</strong> the projected final value minus your total contributions.</li><li><strong>Estimated future value:</strong> the modeled investment balance at the end of the period.</li><li><strong>Value in today's money:</strong> future value divided by (1 + annual inflation rate)<sup>years</sup>. This estimates purchasing power; it is not another withdrawal amount.</li><li><strong>Monthly SIP in the final year:</strong> the contribution you would need to maintain after all annual increases.</li></ul><p>Inflation-adjusted value and total nominal contributions are different measures. Do not subtract nominal contributions from today's value to calculate a real investment profit.</p></section>
+<section><h2>Plan with realistic assumptions</h2><p>A SIP spreads contributions over time, but does not guarantee a profit or protect against a market fall. A smooth growth line is a mathematical illustration: real investments fluctuate. Taxes, fund expenses, transaction fees and exchange-rate movements can affect the amount you keep.</p><p>Consider a lower-return scenario as well as your main estimate. Check whether an annual step-up would remain affordable. When using a historical CAGR as your assumption, choose the effective annual convention and remember that past performance does not establish a future return.</p><p>For further reading, see the <a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" target="_blank" rel="noopener noreferrer">Investor.gov compound interest calculator</a> and <a href="https://investor.sebi.gov.in/calculators/sip_calculator.html" target="_blank" rel="noopener noreferrer">SEBI's explanation of SIP and step-up contributions</a>. This tool provides educational estimates, not personalized investment advice.</p></section>
+<!-- FAQ Section -->
+ <section class="mb-5"><h2 class="mb-4">FAQ on SIP Calculator</h2><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">1. How much can I invest in a SIP?</div><p class="mb-0">There is no upper limit. The minimum investment usually starts at ₹500/month, depending on the mutual fund.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">2. What is the maximum tenure for a SIP?</div><p class="mb-0">There’s no fixed limit. You can choose any tenure—3 year, 5 years, 10 years, or more—based on your financial goals.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">3. Can I modify or pause my SIP? </div><p class="mb-0">Yes. Most mutual fund platforms allow you to:<br>- Increase or decrease the SIP amount<br>- Pause investments temporarily<br>- Renew the SIP after completion</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">4. Are SIPs only for equity mutual funds?</div><p class="mb-0">No. SIPs are available for:<br>- Equity funds<br>- Debt funds<br>- Hybrid funds<br>- ELSS (tax-saving mutual funds)</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">5. Are SIPs and mutual funds the same?</div><p class="mb-0">No. A SIP is a method of investing in mutual funds. Mutual funds can be invested in either through SIPs or lump-sum investments.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">6. What happens when I select a 0% return?</div><p class="mb-0">Your final value equals the sum of your contributions. If step-up is enabled, that sum includes the higher contributions in later years.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">7. When is the annual step-up applied?</div><p class="mb-0">The first 12 payments use your starting monthly amount. The increase begins with payment 13 and repeats after each following 12 payments.</p></div></div></section><div class="highlight-box"><h5><i class="fas fa-lightbulb text-warning me-2"></i>Start Planning Your SIP Today:</h5><p class="mb-0">Investing through SIPs is one of the most effective ways to build long-term wealth. Use our SIP Calculator to take the guesswork out of planning and stay focused on your financial goals.</p></div></div>
+ 
 
 
- <div class="card-body p-4">
-   <h2 class="card-title h4 d-flex align-items-center"> <span class="feature-icon">💡</span> <span class="ms-2">How to Use Our SIP Calculator</span></h2>
-   <p class="card-text">Using our free SIP calculator is easy and intuitive:</p>
-   <ol class="mb-3"> <li>Enter your Monthly Investment amount.</li><li>Set the Investment Period (in years).</li><li>Enter the Expected Annual Return (in %).</li><li class="text-muted">Enter the Inflation (in %) - optional</li>  </ol>
-   <p>The calculator will instantly show:</p>
-   <ul><li>Total Invested Amount</li><li>Estimated Wealth Gained</li><li>Final Maturity Amount</li></ul>
-   <p class="mt-3">You can adjust any of these values to compare multiple scenarios and better plan your financial future.</p>
- </div>
-  <!-- FAQ Section -->
-      <section class="mb-5">
-        <h2 class="mb-4">FAQ on SIP Calculator</h2>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary">1. How much can I invest in a SIP?</div>
-            <p class="mb-0">There is no upper limit. The minimum investment usually starts at ₹500/month, depending on the mutual fund.</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 2. What is the maximum tenure for a SIP?</div>
-            <p class="mb-0">There’s no fixed limit. You can choose any tenure—3 year, 5 years, 10 years, or more—based on your financial goals.</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 3. Can I modify or pause my SIP? </div>
-            <p class="mb-0">  Yes. Most mutual fund platforms allow you to:<br> - Increase or decrease the SIP amount<br>- Pause investments temporarily<br> - Renew the SIP after completion</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 4.  Are SIPs only for equity mutual funds?</div>
-            <p class="mb-0">No. SIPs are available for:<br> - Equity funds<br>  - Debt funds<br> - Hybrid funds<br> - ELSS (tax-saving mutual funds)</p>
-          </div>
-        </div>
-        <div class="card mb-3 border-0 bg-light">
-          <div class="card-body ">
-            <div class="fw-bold text-primary"> 5. Are SIPs and mutual funds the same?</div>
-            <p class="mb-0">No. A SIP is a method of investing in mutual funds. Mutual funds can be invested in either through SIPs or lump-sum investments.</p></div>
-        </div>
-      </section>          
- <!-- highlight-box-->
- <div class="highlight-box">
-   <h5><i class="fas fa-lightbulb text-warning me-2"></i>Start Planning Your SIP Today:</h5>
-    <p class="mb-0">Investing through SIPs is one of the most effective ways to build long-term wealth. Use our SIP Calculator to take the guesswork out of planning and stay focused on your financial goals.</p>
-    </div>         
-           
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="{{ '/assets/js/finance/sip-calc.js' | relative_url }}"></script>
-
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://easycalculator.org/"},{"@type":"ListItem","position":2,"name":"SIP Calculator","item":"https://easycalculator.org/sip-calculator"}]}
+</script>
 
