@@ -275,6 +275,9 @@
 {"id":"what-is-my-address","title":"What Is My Address","url":"/what-is-my-address","content":"what is my address"},
 {"id":"what-is-my-ip","title":"What Is My Ip","url":"/what-is-my-ip","content":"what is my ip"},
 {"id":"what-is-my-zip-code","title":"What Is My Zip Code","url":"/what-is-my-zip-code","content":"what is my zip code"},
+{"id":"download-time-calculator","title":"Download Time Calculator","url":"/download-time-calculator","content":"download time file size internet speed bandwidth Mbps GB"},
+{"id":"rmd-calculator","title":"RMD Calculator","url":"/rmd-calculator","content":"required minimum distribution retirement withdrawal IRA 401k"},
+{"id":"swp-calculator","title":"SWP Calculator","url":"/swp-calculator","content":"systematic withdrawal plan monthly income investment mutual fund"},
 {"id":"world-clock-map","title":"World Clock Map","url":"/world-clock-map","content":"world clock map"},
 {"id":"world-clock","title":"World Clock","url":"/world-clock","content":"world clock"},
 {"id":"qr-code-generator","title":"QR Code Generator","url":"/tools/qr-code-generator","content":"qr code generator"}]
