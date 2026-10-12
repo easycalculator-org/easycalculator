@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "Love Calculator – Free Love Tester by Name"
-permalink: /love-calculator
+permalink: /love-calculator-by-name
 description: "Try our free love calculator and love tester by name. Enter two names, get a fun love percentage, and share your score. For entertainment only."
 image: "/assets/images/love-calculator-1.jpg"
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-13
 ---
 <style>
 .ec-love{--rose:#b72252;--ink:#392333;--muted:#705b68;max-width:960px;margin:24px auto 40px;padding:0 16px;color:var(--ink)}
