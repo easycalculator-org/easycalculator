@@ -1,190 +1,22 @@
-  // Initialize chart
-        const ctx = document.getElementById('sipChart').getContext('2d');
-        let sipChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ['Invested Amount', 'Estimated Returns'],
-                datasets: [{
-                    data: [0, 0],
-                    backgroundColor: ['#1877F2', '#1af294'],
-                    borderWidth: 0,
-                    hoverOffset: 10
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            boxWidth: 12,
-                            padding: 20,
-                            font: {
-                                size: 12
-                            }
-                        }
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                return context.label + ': ₹' + formatNumber(context.raw.toFixed(0));
-                            }
-                        }
-                    }
-                },
-                cutout: '65%'
-            }
-        });
-
-        // Function to setup event listeners
-        function setupEventListeners() {
-            // Link range sliders with number inputs
-            document.getElementById('monthlyInvestmentRange').addEventListener('input', function() {
-                document.getElementById('monthlyInvestment').value = this.value;
-                calculateSIP();
-            });
-            document.getElementById('monthlyInvestment').addEventListener('input', function() {
-                document.getElementById('monthlyInvestmentRange').value = this.value;
-                calculateSIP();
-            });
-
-            document.getElementById('investmentPeriodRange').addEventListener('input', function() {
-                document.getElementById('investmentPeriod').value = this.value;
-                calculateSIP();
-            });
-            document.getElementById('investmentPeriod').addEventListener('input', function() {
-                document.getElementById('investmentPeriodRange').value = this.value;
-                calculateSIP();
-            });
-
-            document.getElementById('expectedReturnRange').addEventListener('input', function() {
-                document.getElementById('expectedReturn').value = this.value;
-                calculateSIP();
-            });
-            document.getElementById('expectedReturn').addEventListener('input', function() {
-                document.getElementById('expectedReturnRange').value = this.value;
-                calculateSIP();
-            });
-
-            document.getElementById('inflationRateRange').addEventListener('input', function() {
-                document.getElementById('inflationRate').value = this.value;
-                calculateSIP();
-            });
-            document.getElementById('inflationRate').addEventListener('input', function() {
-                document.getElementById('inflationRateRange').value = this.value;
-                calculateSIP();
-            });
-
-            // Toggle step-up percentage input
-            document.getElementById('stepUpSIP').addEventListener('change', function() {
-                document.getElementById('stepUpContainer').style.display = this.checked ? 'block' : 'none';
-                calculateSIP();
-            });
-
-            // Step-up percentage change
-            document.getElementById('stepUpPercentage').addEventListener('input', calculateSIP);
-        }
-
-        // Initialize calculator
-        window.onload = function() {
-            setupEventListeners();
-            calculateSIP();
-        };
-
-        function calculateSIP() {
-            const monthlyInvestment = parseFloat(document.getElementById('monthlyInvestment').value) || 0;
-            const investmentPeriod = parseInt(document.getElementById('investmentPeriod').value) || 0;
-            const expectedReturn = parseFloat(document.getElementById('expectedReturn').value) || 0;
-            const inflationRate = parseFloat(document.getElementById('inflationRate').value) || 0;
-            const stepUpEnabled = document.getElementById('stepUpSIP').checked;
-            const stepUpPercentage = stepUpEnabled ? (parseFloat(document.getElementById('stepUpPercentage').value) || 0) : 0;
-            let totalInvested = 0;
-            let totalValue = 0;
-            let yearlyData = [];
-            let currentMonthlyInvestment = monthlyInvestment;
-            let cumulativeInvestment = 0;
-            let portfolioValue = 0;
-
-            // Convert annual rate to monthly rate
-            const monthlyRate = expectedReturn / 100 / 12;
-            const months = investmentPeriod * 12;
-
-            // Calculate year by year with monthly compounding
-            for (let year = 1; year <= investmentPeriod; year++) {
-                let yearlyInvestment = 0;
-                
-                // Calculate monthly investments for this year
-                for (let month = 1; month <= 12; month++) {
-                    yearlyInvestment += currentMonthlyInvestment;
-                    cumulativeInvestment += currentMonthlyInvestment;
-                    
-                    // Compound the existing portfolio value
-                    portfolioValue *= (1 + monthlyRate);
-                    // Add the new investment
-                    portfolioValue += currentMonthlyInvestment;
-                }
-                
-                // Calculate inflation adjusted value
-                const inflationAdjustedValue = portfolioValue / Math.pow(1 + inflationRate/100, year);
-                
-                // Store yearly data
-                yearlyData.push({
-                    year: year,
-                    yearlyInvestment: yearlyInvestment,
-                    cumulativeInvestment: cumulativeInvestment,
-                    yearEndValue: portfolioValue,
-                    inflationAdjusted: inflationAdjustedValue
-                });
-                
-                // Apply step-up for next year
-                if (stepUpEnabled) {
-                    currentMonthlyInvestment *= (1 + stepUpPercentage/100);
-                }
-            }
-
-            totalInvested = cumulativeInvestment;
-            totalValue = portfolioValue;
-            
-            // Update summary
-            document.getElementById('investedAmount').textContent = '₹' + formatNumber(totalInvested.toFixed(0));
-            document.getElementById('estimatedReturns').textContent = '₹' + formatNumber((totalValue - totalInvested).toFixed(0));
-            document.getElementById('totalValue').textContent = '₹' + formatNumber(totalValue.toFixed(0));
-            document.getElementById('inflationAdjustedValue').textContent = '₹' + formatNumber((totalValue / Math.pow(1 + inflationRate/100, investmentPeriod)).toFixed(0));
-
-            // Update chart
-            sipChart.data.datasets[0].data = [totalInvested, totalValue - totalInvested];
-            sipChart.update();
-
-            // Update yearly breakdown table
-            let tableBody = document.getElementById('yearlyTableBody');
-            tableBody.innerHTML = '';
-            yearlyData.forEach(data => {
-                let row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${data.year}</td>
-                    <td>₹${formatNumber(data.yearlyInvestment.toFixed(0))}</td>
-                    <td>₹${formatNumber(data.cumulativeInvestment.toFixed(0))}</td>
-                    <td>₹${formatNumber(data.yearEndValue.toFixed(0))}</td>
-                    <td>₹${formatNumber(data.inflationAdjusted.toFixed(0))}</td>
-                `;
-                tableBody.appendChild(row);
-            });
-        }
-        function resetCalculator() {
-            document.getElementById('monthlyInvestment').value = 10000;
-            document.getElementById('monthlyInvestmentRange').value = 10000;
-            document.getElementById('investmentPeriod').value = 10;
-            document.getElementById('investmentPeriodRange').value = 10;
-            document.getElementById('expectedReturn').value = 12;
-            document.getElementById('expectedReturnRange').value = 12;
-            document.getElementById('inflationRate').value = 6;
-            document.getElementById('inflationRateRange').value = 6;
-            document.getElementById('stepUpSIP').checked = true;
-            document.getElementById('stepUpPercentage').value = 0;
-            document.getElementById('stepUpContainer').style.display = 'block';
-            calculateSIP();
-        }
-        function formatNumber(num) {
-            return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-        }
+(function(){
+'use strict';
+const $=id=>document.getElementById('sp-'+id);
+const currencies=[['INR','Indian rupee'],['USD','US dollar'],['EUR','Euro'],['GBP','British pound'],['CAD','Canadian dollar'],['AUD','Australian dollar'],['NZD','New Zealand dollar'],['SGD','Singapore dollar'],['AED','UAE dirham'],['SAR','Saudi riyal'],['CHF','Swiss franc'],['JPY','Japanese yen'],['CNY','Chinese yuan'],['HKD','Hong Kong dollar'],['ZAR','South African rand'],['BRL','Brazilian real'],['MXN','Mexican peso'],['SEK','Swedish krona'],['NOK','Norwegian krone'],['DKK','Danish krone'],['PLN','Polish zloty'],['KRW','South Korean won'],['IDR','Indonesian rupiah'],['MYR','Malaysian ringgit'],['PHP','Philippine peso'],['THB','Thai baht'],['BDT','Bangladeshi taka'],['PKR','Pakistani rupee'],['NPR','Nepalese rupee'],['LKR','Sri Lankan rupee']];
+currencies.forEach(([code,name])=>{const o=document.createElement('option');o.value=code;o.textContent=code+' · '+name;$('currency').append(o);});
+$('style').value='indian';
+const small=['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
+const tens=['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
+function intWords(n,style){if(n<20)return small[n];if(n<100)return tens[Math.floor(n/10)]+(n%10?'-'+small[n%10]:'');if(n<1000)return small[Math.floor(n/100)]+' hundred'+(n%100?' '+intWords(n%100,style):'');const scales=style==='indian'?[[1e7,'crore'],[1e5,'lakh'],[1e3,'thousand']]:[[1e12,'trillion'],[1e9,'billion'],[1e6,'million'],[1e3,'thousand']];for(const [s,label] of scales){if(n>=s)return intWords(Math.floor(n/s),style)+' '+label+(n%s?' '+intWords(n%s,style):'');}}
+function words(n){if(!Number.isFinite(n)||Math.abs(n)>=1e14)return '';const str=Math.abs(n).toFixed(2),[whole,fraction]=str.split('.');let w=(n<0?'minus ':'')+intWords(Number(whole),$('style').value);if(Number(fraction))w+=' point '+fraction.split('').map(d=>small[Number(d)]).join(' ');return w.charAt(0).toUpperCase()+w.slice(1)+' '+$('currency').value;}
+function money(n,code=false){return new Intl.NumberFormat($('style').value==='indian'?'en-IN':'en-US',{style:'currency',currency:$('currency').value,currencyDisplay:code?'code':'symbol',minimumFractionDigits:2,maximumFractionDigits:2}).format(n);}
+function plain(n){return new Intl.NumberFormat('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}).format(n);}
+let model=null,timer,pdfLoading;
+function read(){const limits={amount:[1,1e9],years:[1,50],rate:[-50,50],step:[0,50],inflation:[0,30]};let valid=true;Object.entries(limits).forEach(([id,[min,max]])=>{const el=$(id),v=el.valueAsNumber,ok=el.value.trim()!==''&&Number.isFinite(v)&&v>=min&&v<=max&&(id!=='years'||Number.isInteger(v))&&(id!=='amount'||Math.abs(v*100-Math.round(v*100))<0.0001);el.setAttribute('aria-invalid',String(!ok));if(!ok)valid=false;});if(!valid)throw Error('Check the highlighted inputs. Monthly amount: 1–1 billion (up to 2 decimals); period: 1–50 whole years; return: −50% to 50%; step-up: 0–50%; inflation: 0–30%.');return {amount:$('amount').valueAsNumber,years:$('years').valueAsNumber,rate:$('rate').valueAsNumber,step:$('step').valueAsNumber,inflation:$('inflation').valueAsNumber,timing:$('timing').value,method:$('method').value};}
+function project(p){const r=p.method==='effective'?Math.expm1(Math.log1p(p.rate/100)/12):p.rate/1200;let value=0,invested=0,rows=[],monthly=p.amount;for(let year=1;year<=p.years;year++){monthly=p.amount*Math.pow(1+p.step/100,year-1);for(let month=0;month<12;month++){value=p.timing==='begin'?(value+monthly)*(1+r):value*(1+r)+monthly;invested+=monthly;}const real=value/Math.pow(1+p.inflation/100,year);if(!Number.isFinite(value)||Math.max(value,invested)>=1e14)throw Error('This scenario exceeds the report limit of 100 trillion. Reduce the amount, years, return or annual increase.');rows.push({year,annual:monthly*12,invested,value,real});}return {...p,value,invested,gain:value-invested,real:rows.at(-1).real,monthly,rows};}
+function chart(){const c=$('chart'),ctx=c.getContext('2d'),w=c.clientWidth||460,h=230,dpr=window.devicePixelRatio||1;c.width=w*dpr;c.height=h*dpr;ctx.scale(dpr,dpr);ctx.fillStyle='#ffffff';ctx.fillRect(0,0,w,h);if(!model)return;const left=55,right=w-12,top=20,bottom=202,rows=[{year:0,value:0,invested:0},...model.rows],max=Math.max(...rows.flatMap(r=>[r.value,r.invested]))*1.08;const x=y=>left+y/model.years*(right-left),y=v=>bottom-v/max*(bottom-top);ctx.font='11px Arial';for(let i=0;i<=4;i++){const val=max*i/4,yy=y(val);ctx.strokeStyle='#e6edf5';ctx.beginPath();ctx.moveTo(left,yy);ctx.lineTo(right,yy);ctx.stroke();ctx.fillStyle='#536680';ctx.textAlign='right';ctx.fillText(new Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:1}).format(val),left-7,yy+4);}for(const [key,color] of [['invested','#8395af'],['value','#245fe5']]){ctx.beginPath();rows.forEach((r,i)=>i?ctx.lineTo(x(r.year),y(r[key])):ctx.moveTo(x(r.year),y(r[key])));ctx.strokeStyle=color;ctx.lineWidth=2.7;ctx.stroke();}ctx.fillStyle='#536680';ctx.textAlign='left';ctx.fillText('Year 0',left,222);ctx.textAlign='right';ctx.fillText('Year '+model.years,right,222);ctx.textAlign='left';ctx.fillText($('currency').value,left,12);}
+function update(){const n=$('amount').valueAsNumber;$('amount-words').textContent=Number.isFinite(n)&&n>=0&&n<=1e9?words(n):'';try{model=project(read());$('error').hidden=true;$('pdf').disabled=false;const m=model;for(const [id,val] of [['total',m.value],['invested',m.invested],['gain',m.gain],['real',m.real],['final-payment',m.monthly]])$(id).textContent=money(val);$('gain-label').textContent=m.gain<0?'Estimated loss':'Estimated gain';$('gain').style.color=m.gain<0?'#b42332':'#087c68';$('total-words').textContent=words(m.value);$('assumptions').textContent=`${m.years*12} monthly payments · ${m.timing==='begin'?'Beginning':'End'} of month · ${m.method==='nominal'?'Annual rate ÷ 12':'Effective annual rate'} · ${m.inflation}% inflation.`;$('rows').innerHTML=m.rows.map(r=>'<tr><th scope="row">'+r.year+'</th>'+[r.annual,r.invested,r.value,r.real].map(v=>'<td>'+money(v)+'</td>').join('')+'</tr>').join('');$('table-caption').textContent='All amounts in '+$('currency').value+'. Today’s value uses '+m.inflation+'% annual inflation. Rounded to 2 decimals.';clearTimeout(timer);timer=setTimeout(()=>{$('live').textContent='Estimated future value '+money(m.value);},450);}catch(e){model=null;$('error').textContent=e.message;$('error').hidden=false;$('pdf').disabled=true;for(const id of ['total','invested','gain','real','final-payment'])$(id).textContent='—';$('rows').replaceChildren();$('total-words').textContent='';$('assumptions').textContent='Enter valid inputs to see a projection.';clearTimeout(timer);$('live').textContent='Projection unavailable. Check inputs.';}chart();}
+function loadPdf(){if(window.jspdf)return Promise.resolve();if(pdfLoading)return pdfLoading;pdfLoading=new Promise((resolve,reject)=>{const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/jspdf@4.2.1/dist/jspdf.umd.min.js';let done=false;const fail=()=>{if(done)return;done=true;s.remove();pdfLoading=null;reject(Error('The PDF library could not load. Check your connection and try again.'));};const timeout=setTimeout(fail,20000);s.onload=()=>{if(done)return;clearTimeout(timeout);if(!window.jspdf){fail();return;}done=true;resolve();};s.onerror=()=>{clearTimeout(timeout);fail();};document.head.append(s);});return pdfLoading;}
+async function download(){update();if(!model)return;$('pdf').disabled=true;$('pdf-status').textContent='Preparing your PDF…';try{await loadPdf();update();if(!model)throw Error('Please correct your inputs before downloading.');const m=model,code=$('currency').value,doc=new window.jspdf.jsPDF({unit:'mm',format:'a4'});doc.setProperties({title:'SIP Investment Projection',author:'EasyCalculator.org',subject:'Monthly investment projection'});const text=(s,x,y,size=10,color='#172a45')=>{doc.setFontSize(size);doc.setTextColor(color);doc.text(String(s),x,y);};const wrap=(s,y)=>{doc.setFontSize(10);const lines=doc.splitTextToSize(s,174);doc.text(lines,18,y);return y+lines.length*5;};doc.setFillColor('#245fe5');doc.rect(0,0,210,35,'F');text('SIP INVESTMENT REPORT',18,17,19,'#ffffff');text('EasyCalculator.org  |  '+new Date().toISOString().slice(0,10),18,27,10,'#ffffff');text('YOUR ASSUMPTIONS',18,48,12);let yy=57;const inputs=[['Currency',code+' (no currency conversion)'],['Monthly investment',code+' '+plain(m.amount)],['Period',m.years+' years / '+m.years*12+' payments'],['Annual return',m.rate+'% | '+(m.method==='nominal'?'annual rate / 12':'effective annual rate')],['Annual contribution increase',m.step+'%'],['Inflation',m.inflation+'% per year'],['Payment timing',m.timing==='begin'?'Beginning of month':'End of month']];inputs.forEach(([a,b])=>{text(a,18,yy,10,'#536680');text(b,87,yy);yy+=7;});yy+=6;text('PROJECTED RESULTS ('+code+')',18,yy,12);yy+=10;[['Future value',m.value],['Total invested',m.invested],['Estimated gain / loss',m.gain],['Value in today\'s money',m.real],['Final-year monthly contribution',m.monthly]].forEach(([a,b])=>{text(a,18,yy,10,'#536680');text(plain(b),115,yy,12);yy+=8;});yy+=6;text('GROWTH OVER TIME',18,yy,12);yy+=4;doc.addImage($('chart').toDataURL('image/png'),'PNG',18,yy,174,72);yy+=80;text('Blue: projected value    Grey: total invested',18,yy,9,'#536680');yy+=7;wrap('Illustration only, not a guaranteed return. Taxes, fees and currency movements are excluded. Future purchasing power assumes constant inflation.',yy);
+const header=()=>{text('YEARLY BREAKDOWN - '+code,18,20,15);text('All amounts in '+code+'. Today\'s value is inflation-adjusted.',18,29,9,'#536680');doc.setFillColor('#eff4fb');doc.rect(18,36,174,12,'F');['Year','Invested / year','Total invested','Projected value',"Today's value"].forEach((s,i)=>text(s,[20,42,82,121,160][i],43,8));};doc.addPage();header();yy=56;m.rows.forEach((r,i)=>{if(yy>270){doc.addPage();header();yy=56;}if(i%2===0){doc.setFillColor('#f7f9fc');doc.rect(18,yy-5,174,9,'F');}text(r.year,20,yy,9);[r.annual,r.invested,r.value,r.real].forEach((v,j)=>{const s=plain(v);doc.setFontSize(8);const size=Math.min(8,8*34/doc.getTextWidth(s));doc.setFontSize(size);doc.setTextColor('#172a45');doc.text(s,[76,115,154,191][j],yy,{align:'right'});});yy+=9;});for(let p=1;p<=doc.getNumberOfPages();p++){doc.setPage(p);doc.setDrawColor('#dce5f0');doc.line(18,283,192,283);text('easycalculator.org/sip-calculator',18,290,8,'#536680');doc.setFontSize(8);doc.text('Page '+p+' of '+doc.getNumberOfPages(),192,290,{align:'right'});}doc.save('SIP-report-'+code+'-'+new Date().toISOString().slice(0,10)+'.pdf');$('pdf-status').textContent='Your PDF report is ready.';}catch(e){$('pdf-status').textContent=e.message||'Unable to generate the PDF. Please try again.';}finally{$('pdf').disabled=!model;}}
+$('form').addEventListener('submit',e=>{e.preventDefault();update();});$('form').addEventListener('input',e=>{if(e.target===$('years-range'))$('years').value=e.target.value;if(e.target===$('years')&&Number.isFinite(e.target.valueAsNumber))$('years-range').value=e.target.value;update();});$('form').addEventListener('change',update);$('form').addEventListener('reset',()=>setTimeout(()=>{$('currency').value='INR';$('style').value='indian';$('pdf-status').textContent='';update();},0));$('pdf').addEventListener('click',download);if(window.ResizeObserver)new ResizeObserver(chart).observe($('chart'));else window.addEventListener('resize',chart);update();
+})();

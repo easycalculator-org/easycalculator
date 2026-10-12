@@ -4,7 +4,7 @@ title: Systematic Withdrawal Plan (SWP) Calculator with Inflation Adjustment
 description: "Use our free SWP Calculator with inflation to estimate monthly withdrawals, investment sustainability, and corpus longevity. Plan your retirement with accurate, inflation-adjusted projections."
 permalink: /systematic-withdrawal-plan-calculator-with-inflation
 image: "/assets/images/systematic-withdrawal-plan.png"
-last_modified_at: 2026-02-03
+last_modified_at: 2026-10-11
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <style>
@@ -334,24 +334,6 @@ last_modified_at: 2026-02-03
 
 </section>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
  <!-- Scripts -->
