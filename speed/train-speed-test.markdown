@@ -16,30 +16,27 @@ last_modified_at: 2026-02-03
 
 <div class="speed-container">
 <div class="header">
-            <h1><i class="fas fa-train train-icon"></i>Train Speed Test</h1>
-            <p>Real-time speed measurement using GPS</p>
-        </div>
-        <div class="digital-display">
-            <div class="speed-value-container d-flex align-items-start gap-4 position-relative ">
-                <span class="speed-value" id="speed-value">0</span>
-                <span class="speed-unit gap-4" id="speed-unit">km/h</span>
-            </div>
-        </div>
-        <div class="unit-selector">
-            <button class="btn-unit active" data-unit="kmh">km/h</button>
-            <button class="btn-unit" data-unit="mph">mph</button>
-            <button class="btn-unit" data-unit="ms">m/s</button>
-        </div>
-        <div class="gps-status gps-active" id="gps-status">
-            <i class="fas fa-sync-alt fa-spin"></i> Starting GPS...
-        </div>
-        <button class="btn-start" id="start-btn" style="display: none;">
-            <i class="fas fa-stop"></i> Stop GPS Tracking
-        </button>
-        <div class="max-speed">
-            Max speed: <span class="max-speed-value" id="max-speed">0</span> <span id="max-speed-unit">km/h</span>
-        </div>
-    </div>
+<h1><i class="fas fa-train train-icon"></i>Train Speed Test</h1>
+<p>Real-time speed measurement using GPS</p>
+ </div>
+ <div class="digital-display">
+  <div class="speed-value-container d-flex align-items-start gap-4 position-relative ">
+   <span class="speed-value" id="speed-value">0</span>
+   <span class="speed-unit gap-4" id="speed-unit">km/h</span>
+   </div>
+  </div>
+ <div class="unit-selector">
+  <button class="btn-unit active" data-unit="kmh">km/h</button>
+  <button class="btn-unit" data-unit="mph">mph</button>
+  <button class="btn-unit" data-unit="ms">m/s</button>
+ </div>
+ <div class="gps-status gps-active" id="gps-status"><i class="fas fa-sync-alt fa-spin"></i> Starting GPS...</div> 
+  <button class="btn-start" id="start-btn" style="display: none;"><i class="fas fa-stop"></i> Stop GPS Tracking</button>
+  <div class="max-speed">Max speed: <span class="max-speed-value" id="max-speed">0</span> <span id="max-speed-unit">km/h</span></div>
+ </div>
+
+<!-- Android App -->
+<div class="rounded-3 p-4 my-4" style="background:#eef6ff;"><div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3"><div class="text-center text-md-start"><h2 class="h4 mb-2">Train Speed Test</h2><p class="mb-0">Download the Train Speed Test app for Android and calculate the speed numbers instantly.</p></div><div class="flex-shrink-0"><a href="https://play.google.com/store/apps/details?id=org.easycalculator.trainspeed" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Train Speed Test on Google Play" width="190" height="73" /></a></div></div></div>
 
 <!-- Article Content -->
  <div class="article-container">
@@ -85,8 +82,6 @@ last_modified_at: 2026-02-03
 <h3>📱 Train Speed Test on Mobile</h3>
 <p>Most people prefer checking train speed directly on their smartphones. Since all modern phones come with <strong>built-in GPS</strong>, you don&rsquo;t need any extra device. Simply open the <strong>Train Speed Test tool online</strong>, allow location access, and you&rsquo;ll see the train&rsquo;s real-time speed on your screen.</p>
  </section>
-
- <button id="install-btn" style="display:none; padding: 10px 20px; font-size: 1rem; border: none; background: #0d6efd; color: #fff; border-radius: 8px; cursor: pointer;">📲 Install Train Speed Test App</button>
 
  <!-- App Install script -->
  <script>
