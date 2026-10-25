@@ -2,428 +2,67 @@
 layout: default
 title: Free Compound Interest Calculator – Daily, Monthly, Yearly
 permalink: /compound-interest-calculator
-description: "Plan your future. Use our free compound interest calculator to estimate returns on investments, with principal, rate, and time options"
+description: "Calculate compound interest with daily, monthly or yearly compounding, regular deposits, 25 currencies, a growth chart and a downloadable PDF report."
 last_modified_at: 2026-05-28
 ---
-
 <style>
-.ci-calculator{--ci-primary:#2563eb;--ci-primary-dark:#1d4ed8;--ci-bg:#f8fafc;--ci-border:#e2e8f0;--ci-text:#1e293b;--ci-muted:#64748b;--ci-success:#059669}.ci-calculator .ci-card{border:1px solid var(--ci-border);border-radius:16px;background:#fff;box-shadow:0 6px 24px #0f172a0f}.ci-calculator .ci-header{background:linear-gradient(135deg,#1e40af,#2563eb);color:#fff;padding:20px;border-radius:16px 16px 0 0}.ci-calculator .form-label{font-size:.86rem;font-weight:600;color:var(--ci-text);margin-bottom:6px}.ci-calculator .form-control,.ci-calculator .form-select{border:1px solid var(--ci-border);border-radius:9px;min-height:44px}.ci-calculator .form-control:focus,.ci-calculator .form-select:focus{border-color:var(--ci-primary);box-shadow:0 0 0 .2rem #2563eb1a}.ci-calculator .result-box{background:var(--ci-bg);border:1px solid var(--ci-border);border-radius:12px;padding:14px;height:100%}.ci-calculator .result-label{color:var(--ci-muted);font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.3px}.ci-calculator .result-value{font-size:1.35rem;font-weight:700;color:var(--ci-text);margin-top:4px;word-break:break-word}.ci-calculator .result-value.success{color:var(--ci-success)}.ci-calculator .small-text{font-size:.8rem;color:var(--ci-muted)}.ci-calculator .section-title{font-size:1rem;font-weight:700;color:var(--ci-text);margin-bottom:15px}.ci-calculator .btn{border-radius:9px;min-height:44px;font-weight:600}.ci-calculator .table{font-size:.88rem}.ci-calculator .table thead th{background:#f1f5f9;color:#334155;white-space:nowrap}.ci-calculator .table td,.ci-calculator .table th{vertical-align:middle}.ci-calculator .summary-strip{background:#eff6ff;border:1px solid #dbeafe;border-radius:12px;padding:13px 15px}.ci-calculator .chart-container{position:relative;height:280px}.ci-calculator .advanced-options{background:#f8fafc;border:1px solid var(--ci-border);border-radius:12px;padding:15px}@media(max-width:767px){.ci-calculator .result-value{font-size:1.1rem}.ci-calculator .chart-container{height:230px}}@media print{.ci-calculator .no-print{display:none!important}.ci-calculator .ci-card{box-shadow:none;border:1px solid #ddd}}
+#ec-ci{color:#172b45}#ec-ci .form-label{font-size:.84rem;font-weight:600;margin-bottom:.25rem}#ec-ci .form-control,#ec-ci .form-select{min-height:42px}#ec-ci .ci-total{font-size:clamp(1.7rem,4vw,2.35rem);font-weight:750;overflow-wrap:anywhere}#ec-ci .ci-panel{background:#f2f7ff;border:1px solid #d7e5fb;border-radius:12px}#ec-ci .ci-table{max-height:320px;overflow:auto}#ec-ci .ci-table th{position:sticky;top:0;background:#f5f7fa;white-space:nowrap}#ec-ci summary{cursor:pointer;font-weight:600;padding:.8rem 0}#ec-ci article h2{font-size:1.4rem;margin-top:1.8rem}#ec-ci article h3{font-size:1.1rem;margin-top:1.2rem}#ec-ci .ci-stat{overflow-wrap:anywhere}#ec-ci button{min-height:42px}#ec-ci input,#ec-ci select{font-size:16px}
 </style>
 
+<div id="ec-ci">
+<div aria-label="breadcrumb" class="p-3">
+ <ol class="breadcrumb"><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item"><a href="/finance-calculators">Finance Calculators</a></li><li class="breadcrumb-item active" aria-current="page">Compound Interest Calculator</li></ol></div>
+<h1>Compound Interest Calculator</h1>
+<p class="text-muted mb-0">See how your savings could grow. Compare compounding schedules, add regular deposits, and download your report.</p>
+<div class="card border rounded-3"><div class="card-body p-3"><div class="row g-3">
+<div class="col-lg-7"><form id="ci-form"><div class="row g-2">
+<div class="col-6"><label for="ci-currency" class="form-label">Currency</label><select id="ci-currency" class="form-select"><option>USD</option><option>EUR</option><option>GBP</option><option>INR</option><option>CAD</option><option>AUD</option><option>JPY</option><option>CHF</option><option>CNY</option><option>SGD</option><option>AED</option><option>SAR</option><option>ZAR</option><option>NZD</option><option>BRL</option><option>MXN</option><option>KRW</option><option>HKD</option><option>BDT</option><option>PKR</option><option>NPR</option><option>LKR</option><option>NGN</option><option>SEK</option><option>NOK</option></select></div>
+<div class="col-6"><label for="ci-principal" class="form-label">Initial investment</label><input id="ci-principal" class="form-control" type="number" min="0" max="1000000000000" step="any" value="10000" required></div>
+<div class="col-6"><label for="ci-rate" class="form-label">Annual rate (%)</label><input id="ci-rate" class="form-control" type="number" min="0" max="100" step="any" value="5" required></div>
+<div class="col-6"><label for="ci-compound" class="form-label">Compound interest</label><select id="ci-compound" class="form-select"><option value="1">Yearly</option><option value="2">Half-yearly</option><option value="4">Quarterly</option><option value="12" selected>Monthly</option><option value="365">Daily (365/year)</option></select></div>
+<div class="col-6"><label for="ci-years" class="form-label">Years</label><input id="ci-years" class="form-control" type="number" min="0" max="100" step="1" value="10" required></div>
+<div class="col-6"><label for="ci-months" class="form-label">Extra months</label><input id="ci-months" class="form-control" type="number" min="0" max="11" step="1" value="0" required></div>
+<div class="col-6"><label for="ci-deposit" class="form-label">Regular deposit</label><input id="ci-deposit" class="form-control" type="number" min="0" max="1000000000000" step="any" value="100" required></div>
+<div class="col-6"><label for="ci-frequency" class="form-label">Deposit frequency</label><select id="ci-frequency" class="form-select"><option value="1">Monthly</option><option value="3">Quarterly</option><option value="12">Yearly</option></select></div>
+<div class="col-12"><label for="ci-timing" class="form-label">Deposit timing</label><select id="ci-timing" class="form-select"><option value="end">End of each deposit period</option><option value="start">Beginning of each deposit period</option></select></div>
+</div><p class="small text-muted my-2">Currency changes formatting only; no exchange-rate conversion.</p><div class="d-flex gap-2"><button class="btn btn-primary flex-grow-1" type="submit">Calculate</button><button class="btn btn-outline-secondary" type="reset">Reset</button></div></form><div id="ci-error" role="alert" class="text-danger small mt-2" hidden></div></div>
+<div class="col-lg-5"><div id="ci-result" aria-live="polite"><div class="ci-panel p-3"><div class="small text-muted">Estimated future value</div><div id="ci-total" class="ci-total text-primary"></div><div class="row g-2 mt-1"><div class="col-6 ci-stat"><div class="small text-muted">Total contributed</div><strong id="ci-invested"></strong></div><div class="col-6 ci-stat"><div class="small text-muted">Interest earned</div><strong class="text-success" id="ci-interest"></strong></div></div><p class="small mb-0 mt-2" id="ci-effective"></p></div></div><div class="p-4"><button id="ci-pdf" class="btn btn-outline-primary w-100 mt-3" type="button">Download PDF report</button><p class="small text-muted mt-2 mb-0">Estimate only. Constant rate assumed; taxes, fees and inflation excluded.</p></div></div>
+</div></div></div>
+<details class="border rounded-3 px-3 mt-3" open><summary>Year-by-year growth</summary><div class="ci-table mb-3" tabindex="0" role="region" aria-label="Scrollable growth table"><table class="table table-sm align-middle small mb-0"><caption id="ci-caption">Projected savings</caption><thead><tr><th scope="col">Period</th><th scope="col" class="text-end">Contributed</th><th scope="col" class="text-end">Interest to date</th><th scope="col" class="text-end">Balance</th></tr></thead><tbody id="ci-rows"></tbody></table></div></details>
+<!-- Article -->
 
-<div class="ci-calculator">
-<div class="row g-4">
-<!-- ================= INPUT ================= -->
-<div class="col-lg-5">
-
-<div class="ci-card">
-
-<div class="ci-header">
-    <h4 class="mb-1">Compound Interest Calculator</h4>
-    <div class="small opacity-75">
-        Calculate compound interest with regular contributions and detailed yearly growth.
+<!-- Article Content -->
+<div class="article-container">
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      {% include naren_create.html %}
+      {% include reema_verify.html %}
     </div>
+    <div class="text-muted small d-flex flex-wrap align-items-center gap-3 mt-3 mt-md-0">
+      <span><i class="fas fa-calendar me-1" aria-hidden="true"></i>Last Updated: {{ page.last_modified_at | date: "%d-%b-%Y" }}</span>
+      <span><i class="fas fa-clock me-1" aria-hidden="true"></i>8 min read</span>
+    </div>
+  </div>
+<!-- Article-->
+<h2>What is compound interest?</h2><p>Compound interest is growth earned on both your original money and the interest already added to it. As interest stays in the account, the amount that can earn future interest becomes larger. This calculator estimates that growth for an initial deposit and optional regular contributions.</p><p>For example, 1,000 at 5% interest compounded annually becomes 1,050 after one year. In the second year, interest is calculated on 1,050, producing 52.50 in interest and a balance of 1,102.50. The extra 2.50 comes from earning interest on the first year's interest.</p>   
+
+
+<div class="p-4 bg-light">
+<h2 class="text-primary">How to use this compound interest calculator</h2><ol><li>Select your currency and enter your initial investment.</li><li>Enter the nominal annual interest rate and choose how often it compounds.</li><li>Set the duration in whole years and extra months.</li><li>Add a regular deposit, or enter zero to calculate a single lump sum.</li><li>Choose whether deposits arrive at the beginning or end of each deposit period.</li><li>Select Calculate, review the results and table, then download the PDF report.</li></ol><p>The report includes your assumptions, projected balance, contributions, interest and full yearly breakdown. Currency codes distinguish amounts such as US dollars, Canadian dollars and Australian dollars. Changing the currency does not change the underlying numbers.</p>
 </div>
 
 <div class="p-4">
-
-<div class="section-title">Investment Details</div>
-
-<!-- Principal -->
-<div class="mb-3">
-    <label class="form-label">Initial Principal Amount</label>
-    <input type="number"
-           id="principal"
-           class="form-control"
-           value="100000"
-           min="0"
-           step="0.01"
-           oninput="convertPrincipal(); calculateCI();">
-
-    <div id="principalWords" class="small-text mt-1"></div>
-</div>
-
-<!-- Rate -->
-<div class="mb-3">
-    <label class="form-label">Annual Interest Rate (%)</label>
-    <input type="number"
-           id="rate"
-           class="form-control"
-           value="8"
-           min="0"
-           step="0.01"
-           oninput="calculateCI();">
-</div>
-
-<!-- Time -->
-<div class="mb-3">
-    <label class="form-label">Investment Period (Years)</label>
-    <input type="number"
-           id="time"
-           class="form-control"
-           value="10"
-           min="0"
-           step="0.1"
-           oninput="calculateCI();">
-</div>
-
-<!-- Compound -->
-<div class="mb-3">
-    <label class="form-label">Compounding Frequency</label>
-    <select id="compound"
-            class="form-select"
-            onchange="calculateCI();">
-        <option value="1">Yearly</option>
-        <option value="2">Half-Yearly</option>
-        <option value="4">Quarterly</option>
-        <option value="12" selected>Monthly</option>
-        <option value="365">Daily</option>
-        <option value="custom">Custom</option>
-    </select>
-</div>
-
-<!-- Custom -->
-<div class="mb-3 d-none" id="customCompoundBox">
-    <label class="form-label">
-        Custom Compounding Frequency
-    </label>
-    <input type="number"
-           id="customCompound"
-           class="form-control"
-           value="6"
-           min="1"
-           step="1"
-           oninput="calculateCI();">
-    <div class="small-text mt-1">
-        Number of times interest is compounded per year.
-    </div>
-
+<h2>Compound interest formula</h2><p>For a single deposit with no additional contributions:</p><p class="bg-light border rounded p-3"><strong>A = P × (1 + r/n)<sup>nt</sup></strong></p><p><strong>A</strong> is the final balance, <strong>P</strong> is the initial deposit, <strong>r</strong> is the nominal annual rate as a decimal, <strong>n</strong> is the number of compounding periods per year, and <strong>t</strong> is the number of years. Interest earned is A − P. Enter 5 for a 5% rate; the calculation uses 0.05.</p>
 </div>
 
 
-<!-- Advanced -->
-<div class="advanced-options mt-3">
-<div class="section-title mb-3">
-    Regular Contribution
+<h3>How regular deposits are calculated</h3><p>This tool converts the selected compounding schedule to an equivalent monthly growth factor: <strong>g = (1 + r/n)<sup>n/12</sup></strong>. Each month, the balance grows by this factor. Deposits are added at the selected period's beginning or end. Total interest equals the final balance minus the initial investment and all added deposits.</p><p>Monthly deposits occur every month; quarterly deposits every three months; yearly deposits every twelve months. Beginning deposits occur in months 0, 3, 6 and so on for quarterly deposits, while end deposits occur in months 3, 6, 9 and so on. For an incomplete final period, a beginning deposit is included if its period has started; an end deposit is included only when its period is complete.</p>
+<div class="bg-primary-subtle p-4 rounded-3"><h2>Compound interest example</h2><p>Suppose you start with USD 10,000 at a nominal annual rate of 5%, compounded monthly, and add USD 100 at the end of each month for ten years.</p><div class="table-responsive"><table class="table table-bordered"><thead><tr><th>Result</th><th>Amount</th></tr></thead><tbody><tr><td>Initial investment</td><td>USD 10,000.00</td></tr><tr><td>Additional deposits</td><td>USD 12,000.00</td></tr><tr><td>Total contributed</td><td>USD 22,000.00</td></tr><tr><td>Interest earned</td><td>USD 9,998.32</td></tr><tr><td>Final balance</td><td>USD 31,998.32</td></tr></tbody></table></div><p>This example uses a fixed hypothetical rate. Actual investment returns fluctuate and may be negative.</p></div>
+<h2>Daily, monthly or yearly compounding</h2><p>At the same positive nominal annual rate, more frequent compounding produces a higher effective annual rate. The difference can be small over a short period and grow over longer periods. This calculator supports yearly, half-yearly, quarterly, monthly and daily compounding.</p><p>The effective annual rate is <strong>(1 + r/n)<sup>n</sup> − 1</strong>. A nominal rate of 5% compounded monthly is approximately 5.1162% effective annually. If an account quotes an effective annual yield or APY, use that rate with yearly compounding to avoid compounding it twice. Product-specific rounding and payment rules can still change actual results.</p>
+<h2>Simple interest versus compound interest</h2><p>For a single deposit, simple interest is based only on the original principal: <strong>I = P × r × t</strong>. With compounding, previous interest also earns interest. For example, 1,000 at 5% for ten years earns 500 with simple interest and approximately 628.89 with annual compounding, assuming no deposits or withdrawals.</p>
+<h2>Assumptions and limitations</h2><ul><li>The rate stays constant and all interest remains invested.</li><li>Daily compounding uses 365 periods per year, without calendar dates or leap-year adjustments.</li><li>Fractional compounding periods use exponential growth through the equivalent monthly factor. An account that credits interest only on specific dates may differ.</li><li>Results exclude taxes, fees, inflation, withdrawals and exchange-rate changes.</li><li>Calculations retain full precision internally; displayed amounts are rounded to the currency's usual decimal places.</li><li>The supported planning range is 1–1,200 months and 0–100% nominal annual interest. Results above 1 quadrillion currency units are rejected.</li></ul><p>Use the calculator to compare hypothetical scenarios. It does not predict market returns or reproduce every bank's interest-crediting rules.</p>
+<!-- FAQ Section -->
+<section class="p-4"><h2 class="mb-4">FAQ on Calculator</h2><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Can I calculate compound interest without monthly deposits?</div><p class="mb-0">Yes. Set Regular deposit to zero. The calculator will show growth on your initial investment alone.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Does the calculator work for different currencies?</div><p class="mb-0">Yes. Choose from 25 currencies, including USD, EUR, GBP, INR, CAD and AUD. Currency selection controls number formatting and labels, not exchange rates.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">What happens at a 0% interest rate?</div><p class="mb-0">Your balance equals your initial investment plus all scheduled deposits. No interest is earned.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Why do beginning-of-period deposits earn more?</div><p class="mb-0">At a positive rate, money deposited earlier has more time to grow. For a partial final period, beginning and end schedules may also include different numbers of deposits.</p></div></div><div class="card mb-3 border-0 bg-light"><div class="card-body "><div class="fw-bold text-primary">Can I download my results as a PDF?</div><p class="mb-0">Yes. Select Download PDF report to save a report with your inputs, summary and year-by-year table. The calculator generates the report in your browser.</p></div></div></section>
+<p class="small text-muted">Source of information: <a href="https://www.investor.gov/introduction-investing/investing-basics/glossary/compound-interest" target="_blank" rel="noopener noreferrer">Investor.gov: compound interest</a>, <a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" target="_blank" rel="noopener noreferrer">Investor.gov compound interest calculator</a>, <a href="https://en.wikipedia.org/wiki/Compound_interest" target="_blank" rel="noopener noreferrer">Wikipedia: compound interest</a>, and <a href="https://www.investopedia.com/terms/c/compoundinterest.asp" target="_blank" rel="noopener noreferrer">Investopedia: compound interest</a>.</p>
 </div>
-
-<div class="row g-3">
-
-<div class="col-7">
-
-<label class="form-label">
-    Contribution Amount
-</label>
-
-<input type="number"
-       id="contribution"
-       class="form-control"
-       value="0"
-       min="0"
-       step="0.01"
-       oninput="calculateCI();">
-
-</div>
-
-<div class="col-5">
-
-<label class="form-label">
-    Frequency
-</label>
-
-<select id="contributionFrequency"
-        class="form-select"
-        onchange="calculateCI();">
-
-<option value="monthly">Monthly</option>
-<option value="yearly">Yearly</option>
-</select>
-
-</div>
-
-<div class="col-12">
-
-<label class="form-label">
-    Contribution Timing
-</label>
-
-<select id="contributionTiming"
-        class="form-select"
-        onchange="calculateCI();">
-
-<option value="end">End of Period</option>
-<option value="beginning">Beginning of Period</option>
-</select>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- Buttons -->
-<div class="d-grid gap-2 mt-4 no-print">
-<button class="btn btn-primary"
-        onclick="calculateCI()">
-
-<i class="fas fa-calculator me-1"></i>
-Calculate
-</button>
-
-<button class="btn btn-outline-secondary"
-        onclick="resetCI()">
-
-<i class="fas fa-rotate-left me-1"></i>
-Reset
-</button>
-
-<button class="btn btn-outline-success"
-        onclick="downloadPDF()">
-
-<i class="fas fa-file-pdf me-1"></i>
-Download PDF Report
-
-</button>
-
-</div>
-
-</div>
-</div>
-</div>
-
-
-<!-- ================= RESULT ================= -->
-<div class="col-lg-7">
-
-<div class="ci-card p-4">
-
-<div class="d-flex justify-content-between align-items-center mb-3">
-
-<div>
-    <div class="section-title mb-1">
-        Investment Summary
-    </div>
-
-    <div class="small-text">
-        Estimated compound growth
-    </div>
-</div>
-
-<div class="badge bg-success-subtle text-success px-3 py-2">
-    Compound Growth
-</div>
-
-</div>
-
-
-<!-- Summary -->
-<div class="row g-3">
-
-<div class="col-sm-4">
-
-<div class="result-box">
-<div class="result-label">Years</div>
-<div id="resultYears" class="result-value">—</div>
-</div>
-
-</div>
-
-
-<div class="col-sm-4">
-
-<div class="result-box">
-<div class="result-label">Principal</div>
-<div id="resultPrincipal" class="result-value">—</div>
-</div>
-
-</div>
-
-
-<div class="col-sm-4">
-
-<div class="result-box">
-<div class="result-label">Contributions</div>
-<div id="resultContribution" class="result-value">—</div>
-</div>
-
-</div>
-
-
-<div class="col-sm-4">
-
-<div class="result-box">
-
-<div class="result-label">
-    Interest Earned
-</div>
-
-<div id="interestAmount"
-     class="result-value success">
-    —
-</div>
-
-</div>
-
-</div>
-
-
-<div class="col-sm-4">
-
-<div class="result-box">
-
-<div class="result-label">
-    Total Amount
-</div>
-
-<div id="totalAmount"
-     class="result-value">
-    —
-</div>
-
-</div>
-
-</div>
-
-
-<div class="col-sm-4">
-
-<div class="result-box">
-
-<div class="result-label">
-    Return Amount
-</div>
-
-<div id="returnAmount"
-     class="result-value success">
-    —
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="summary-strip mt-3">
-
-<div class="row g-2">
-
-<div class="col-md-6">
-    <span class="small-text">Effective Annual Rate:</span>
-    <strong id="effectiveRate">—</strong>
-</div>
-
-<div class="col-md-6">
-    <span class="small-text">Interest % of Investment:</span>
-    <strong id="returnPercentage">—</strong>
-</div>
-
-</div>
-
-</div>
-
-
-<!-- Chart -->
-<div class="mt-4">
-
-<div class="section-title">
-    Investment Growth
-</div>
-
-<div class="chart-container">
-    <canvas id="chart"></canvas>
-</div>
-
-</div>
-
-
-<!-- Year Table -->
-<div class="mt-4">
-
-<div class="d-flex justify-content-between align-items-center mb-2">
-
-<div class="section-title mb-0">
-    Year-wise Growth
-</div>
-
-<div class="small-text">
-    Amounts are estimates
-</div>
-
-</div>
-
-
-<div class="table-responsive">
-
-<table class="table table-bordered table-sm">
-
-<thead>
-
-<tr>
-<th>Year</th>
-<th>Principal</th>
-<th>Contribution</th>
-<th>Interest</th>
-<th>Total Amount</th>
-<th>Return</th>
-</tr>
-
-</thead>
-
-<tbody id="yearTable"></tbody>
-
-</table>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-
-
-<!-- ================= ARTICLE ================= -->
-
-<div class="article-container mt-5">
-
-<div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">
-
-<div class="d-flex align-items-center gap-3 flex-wrap">
-
-{% include naren_create.html %}
-{% include reema_verify.html %}
-
-</div>
-
-<div class="text-muted small d-flex align-items-center gap-2 mt-4 mt-md-0">
-
-<i class="fas fa-calendar"></i>
-
-Last Updated:
-{{ site.time | date: "%d-%m-%Y" }}
-
-</div>
-
-</div>
-
-<!-- Article Content -->
-
-</div>
-
-</div>
-
-
-<!-- Chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<!-- jsPDF AutoTable -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
 <script src="{{ '/assets/js/finance/compound-interest-calc.js' | relative_url }}"></script>
