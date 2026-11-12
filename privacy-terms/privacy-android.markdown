@@ -6,7 +6,7 @@ description: "At EasyCalculator, your privacy matters. Learn how we protect and 
 last_modified_at: 2026-10-10
 ---
 <h1>Privacy Policy &mdash; RailSpeed - Train GPS Speed</h1>
-<p>Last updated: 10 October 2026</p>
+<p>Last updated: 12 November 2026</p>
 <p><strong>App name:</strong> RailSpeed - Train GPS Speed<br /><strong>Developer:</strong> EasyCalculator.org<br /><strong>Contact:</strong> <a href="mailto:care@easycalculator.org">care@easycalculator.org</a><br /><strong>Website:</strong> <a href="https://easycalculator.org/">https://easycalculator.org</a></p>
 <p>EasyCalculator.org develops and provides RailSpeed - Train GPS Speed (&ldquo;RailSpeed&rdquo;, &ldquo;the app&rdquo;, &ldquo;we&rdquo;, or &ldquo;us&rdquo;). This privacy policy explains how the Android app accesses, uses, stores and shares information.</p>
 <p>This policy applies specifically to RailSpeed. The EasyCalculator.org website has its own privacy policy describing website services.</p>
@@ -53,6 +53,7 @@ last_modified_at: 2026-10-10
 <h2>10. Changes to this policy</h2>
 <p>We may update this policy when the app&rsquo;s features or data practices change. The revised policy will be published on this page and made available through the app, with an updated date.</p>
 <p>If a future version introduces advertising, analytics, accounts or additional data services, we will update the relevant disclosures and obtain permissions or consent where required.</p>
-<h2>11. Privacy contact</h2>
-<p>For privacy questions or requests, contact:</p>
+<h2>11. ADVERTISING</h2>
+<p>RailSpeed shows one banner from Google AdMob on the home screen. Google Mobile Ads may process information such as IP address, device or advertising identifiers, ad interactions and diagnostics to provide, measure and protect advertising. RailSpeed does not attach saved rides or GPS coordinates to ad requests. Where available, use Ad privacy options in the side menu to review or change your choices.
+https://policies.google.com/technologies/partner-sites</p>
 <p><strong>Developer:</strong> EasyCalculator.org<br /><strong>Email:</strong> <a href="mailto:care@easycalculator.org">care@easycalculator.org</a><br /><strong>Website:</strong> <a href="https://easycalculator.org/">https://easycalculator.org</a></p>
