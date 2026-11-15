@@ -44,7 +44,7 @@ last_modified_at: 2026-09-30
 <section class="cg-card d-flex flex-wrap justify-content-between align-items-center gap-3" aria-label="CAGR Calculator Android app">
 <div>
  <h2 class="mb-1">Take the CAGR Calculator with you</h2><p class="cg-muted mb-0">Download the Easy CAGR Calculator app for Android.</p>
- </div><a class="cg-play-badge" href="https://play.google.com/store/apps/details?id=org.easycalculator.cagr" target="_blank" rel="noopener" aria-label="Get the Easy CAGR Calculator app on Google Play"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="200" height="77" loading="lazy" decoding="async"> </a>
+ </div><a class="cg-play-badge" href="https://play.google.com/store/apps/details?id=org.easycalculator.cagr" target="_blank" rel="noopener" aria-label="Get the Easy CAGR Calculator app on Google Play"><img src="/assets/images/google-play.png" alt="Get it on Google Play" width="200" height="77" loading="lazy" decoding="async"> </a>
  </section>
 
 <article class="cg-article article-container">
