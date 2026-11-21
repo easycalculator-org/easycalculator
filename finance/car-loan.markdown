@@ -337,12 +337,12 @@ That’s where the USA Car Loan Calculator on EasyCalculator.org becomes essenti
         </div>
     </div>
 </section>
-      <!-- Did You Know? -->
-       <div class="alert alert-info mt-5">
-                <h3 class="alert-heading">Did You Know?</h3>
-                <p class="mb-2">According to AAA, the average American spends <strong>$9,282</strong> per year on vehicle ownership — about <strong>$773</strong> per month. The car payment is only 50–60% of that total.</p>
-                <p class="mb-0">Also, negotiating just 1% lower interest on a $30,000 loan can save nearly $800 over 5 years. This is why running multiple scenarios using EasyCalculator.org is so powerful.</p>
-            </div>
+ <!-- Did You Know? -->
+ <div class="alert alert-info mt-5">
+ <h3 class="alert-heading">Did You Know?</h3>
+ <p class="mb-2">According to AAA, the average American spends <strong>$9,282</strong> per year on vehicle ownership — about <strong>$773</strong> per month. The car payment is only 50–60% of that total.</p>
+ <p class="mb-0">Also, negotiating just 1% lower interest on a $30,000 loan can save nearly $800 over 5 years. This is why running multiple scenarios using EasyCalculator.org is so powerful.</p>
+ </div>
  </div>
 
 
