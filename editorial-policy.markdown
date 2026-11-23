@@ -3,7 +3,6 @@ layout: default
 title: Editorial Policy | EasyCalculator.org
 permalink: /editorial-policy
 description: "Learn about EasyCalculator.org's Editorial Policy, accuracy standards, content review process, trusted sources, and commitment to transparency and user trust."
-last_modified_at: 2026-06-06
 ---
 <style>
 .hero-section{background:linear-gradient(135deg,#0d6efd,#0a58ca);color:#fff;padding:60px 30px;border-radius:15px}.policy-card{border:none;border-radius:15px;box-shadow:0 3px 15px #00000014}.icon-box{width:55px;height:55px;background:#eaf2ff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;color:#0d6efd}.commitment-box{background:#f8f9fa;border-radius:12px;padding:25px}
