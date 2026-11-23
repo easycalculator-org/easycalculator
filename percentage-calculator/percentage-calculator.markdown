@@ -104,7 +104,7 @@ last_modified_at: 2026-02-03
 
 <!-- FAQ Section -->
  <section class="mb-5">
-        <h2 class="mb-4">FAQ on Age Calculator</h2>
+        <h2 class="mb-4">FAQ on Percentage Calculator</h2>
         <div class="card mb-3 border-0 bg-light">
           <div class="card-body ">
             <div class="fw-bold text-primary">1. What is a percentage?</div>

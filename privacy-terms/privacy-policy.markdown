@@ -71,6 +71,14 @@ last_modified_at: 2026-02-03
 <p>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
 <p>When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
 <p>We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.</p>
+<h4>IP Addresses and Approximate Location</h4>
+<p>We collect your IP address automatically when you use the Service. An IP address may be used to infer your approximate geographic location (such as city or region level). This is used for:</p>
+<ul>
+<li>Providing the results of our IP and address lookup tools when you request them;</li>
+<li>Analytics and security purposes;</li>
+<li>Enabling advertising partners (including Google) to serve ads that may be more relevant to your general location.</li>
+</ul>
+<p>We do not use IP addresses to determine your precise (GPS-level) location. If you submit a specific address or location query through our tools, that information is processed solely to return the requested result and is not stored or shared for advertising purposes.</p>
 <h4>Tracking Technologies and Cookies</h4>
 <p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:</p>
 <ul>
@@ -100,6 +108,12 @@ last_modified_at: 2026-02-03
 </li>
 </ul>
 <p>For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.</p>
+
+<h4>Google AdSense and Third-Party Advertising</h4>
+<p>We use Google AdSense to serve advertisements on our Website. Google, as a third-party vendor, uses cookies (including the DoubleClick cookie) to serve ads based on your prior visits to our Website or other websites on the Internet.</p>
+<p>Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to our site and/or other sites on the Internet. You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a> or <a href="https://www.aboutads.info" target="_blank" rel="noopener">www.aboutads.info</a>.</p>
+<p>Third-party vendors and ad networks may also place cookies on your device to collect data for ad personalization and measurement. You can learn more about opting out of third-party cookies for personalized advertising by visiting the Network Advertising Initiative opt-out page.</p>
+
 <h3>Use of Your Personal Data</h3>
 <p>The Company may use Personal Data for the following purposes:</p>
 <ul>
@@ -168,6 +182,9 @@ last_modified_at: 2026-02-03
 <h2>Children's Privacy</h2>
 <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
 <p>If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.</p>
+<h4>Consent for EEA, UK, and Swiss Users</h4>
+<p>For users located in the European Economic Area (EEA), the United Kingdom, or Switzerland, we rely on your consent to process personal data for personalized advertising. We use a Google-certified Consent Management Platform (CMP) to obtain and manage your consent choices in accordance with the IAB Transparency and Consent Framework (TCF).</p>
+<p>You have the right to withdraw or change your consent at any time. You can do so by clicking the "Privacy Settings" or "Cookie Settings" link available in the footer of our Website, which will reopen the consent banner.</p>
 <h2>Links to Other Websites</h2>
 <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
 <p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
