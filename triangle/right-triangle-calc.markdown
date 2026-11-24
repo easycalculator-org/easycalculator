@@ -33,6 +33,10 @@ last_modified_at: 2026-09-10
 </div>
 <div class="mt-4"><h2 class="h6 fw-bold">Quick Examples</h2><div class="d-flex flex-wrap gap-2"><button type="button" class="btn btn-sm btn-outline-primary quick-example" data-a="3" data-b="4">3-4-5 Triangle</button><button type="button" class="btn btn-sm btn-outline-primary quick-example" data-a="5" data-b="12">5-12-13 Triangle</button><button type="button" class="btn btn-sm btn-outline-primary quick-example" data-a="8" data-b="15">8-15-17 Triangle</button></div></div>
 </div></div></div>
+
+<!-- Android App -->
+<div class="rounded-3 p-4 my-4" style="background:#eef6ff;"><div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3"><div class="text-center text-md-start"><h2 class="h4 mb-2">Take the Triangle Calculator with You</h2><p class="mb-0">Download the Triangle Calculator app for Android and calculate sides, angles, and more instantly</p></div><div class="flex-shrink-0"><a href="https://play.google.com/store/apps/details?id=org.easycalculator.triangle" target="_blank" rel="noopener noreferrer"><img src="/assets/images/google-play.png" alt="Get Triangle Calculator on Google Play" width="190" height="73"></a></div></div></div>
+
 <!-- Article Content -->
 <div class="article-container">
  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">

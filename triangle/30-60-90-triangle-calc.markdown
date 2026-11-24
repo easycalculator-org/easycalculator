@@ -50,6 +50,12 @@ last_modified_at: 2026-09-10
 <div class="small text-muted mb-1">Special Triangle Side Ratio </div>
 <div class="fw-bold fs-5">1 : √3 : 2 </div>
 <div class="small text-muted mt-1">Short leg : Long leg : Hypotenuse </div></div></div></div></div></div></div><section class="bg-light rounded-4 p-4 p-md-5 mb-4"><h2 class="h4 fw-bold mb-3">How to Use the 30-60-90 Triangle Calculator </h2><p>Enter any one known side of the triangle. The calculator uses the <strong>1 : √3 : 2</strong>ratio to find the remaining sides, then calculates the triangle's area and perimeter. </p><ol class="mb-0"><li class="mb-2">Enter the known <strong>short leg</strong>, <strong>long leg</strong>, or <strong>hypotenuse</strong>. </li><li class="mb-2">The calculator automatically finds the other two side lengths. </li><li class="mb-2">Check the diagram to see the <strong>30°, 60°, and 90°</strong>angles and corresponding side values. </li><li>Use the calculated <strong>area</strong>and <strong>perimeter</strong>to solve your geometry problem. </li></ol></section></div>
+
+<!-- Android App -->
+<div class="rounded-3 p-4 my-4" style="background:#eef6ff;"><div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3"><div class="text-center text-md-start"><h2 class="h4 mb-2">Take the Triangle Calculator with You</h2><p class="mb-0">Download the Triangle Calculator app for Android and calculate sides, angles, and more instantly</p></div><div class="flex-shrink-0"><a href="https://play.google.com/store/apps/details?id=org.easycalculator.triangle" target="_blank" rel="noopener noreferrer"><img src="/assets/images/google-play.png" alt="Get Triangle Calculator on Google Play" width="190" height="73"></a></div></div></div>
+
+
+
 <!-- Article Content -->
 <div class="article-container">
  <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 pb-3 border-bottom">

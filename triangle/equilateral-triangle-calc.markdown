@@ -73,18 +73,10 @@ last_modified_at: 2026-03-11
           </div>
         </div>
       </div>
-      <div class="row g-4 mt-1" id="eq-details" hidden>
-        <div class="col-md-6">
-          <figure class="mb-0">
-            <svg class="eq-diagram" viewBox="0 0 420 300" role="img" aria-labelledby="eq-svg-title eq-svg-desc">
-              <title id="eq-svg-title">Equilateral triangle and its height</title>
-              <desc id="eq-svg-desc">Three equal sides and three 60-degree angles. The height divides the triangle into two right triangles.</desc>
-              <path d="M85 251.506 L335 251.506 L210 35 Z" fill="#21a58922" stroke="#168574" stroke-width="2.5"/>
-              <path d="M210 35 V251.506" stroke="#2459c4" stroke-width="2" stroke-dasharray="6 4"/>
-              <path d="M210 237.506 H224 V251.506" fill="none" stroke="#2459c4" stroke-width="1.5"/>
-              <g stroke="#168574" stroke-width="2"><path d="M204 245.506 V257.506"/><path d="M142 139 L153 145"/><path d="M267 145 L278 139"/></g>
-              <g fill="#23324b" font-size="16" text-anchor="middle"><text x="210" y="280">a</text><text x="132" y="139">a</text><text x="288" y="139">a</text><text x="230" y="150" fill="#2459c4">h</text><text x="115" y="239">60°</text><text x="305" y="239">60°</text><text x="210" y="77">60°</text></g>
-            </svg>
+ <div class="row g-4 mt-1" id="eq-details" hidden>
+   <div class="col-md-6">
+   <figure class="mb-0">
+    <svg class="eq-diagram" viewBox="0 0 420 300" role="img" aria-labelledby="eq-svg-title eq-svg-desc"><title id="eq-svg-title">Equilateral triangle and its height</title>        <desc id="eq-svg-desc">Three equal sides and three 60-degree angles. The height divides the triangle into two right triangles.</desc> <path d="M85 251.506 L335 251.506 L210 35 Z" fill="#21a58922" stroke="#168574" stroke-width="2.5"/> <path d="M210 35 V251.506" stroke="#2459c4" stroke-width="2" stroke-dasharray="6 4"/> <path d="M210 237.506 H224 V251.506" fill="none" stroke="#2459c4" stroke-width="1.5"/><g stroke="#168574" stroke-width="2"><path d="M204 245.506 V257.506"/><path d="M142 139 L153 145"/><path d="M267 145 L278 139"/></g><g fill="#23324b" font-size="16" text-anchor="middle"><text x="210" y="280">a</text><text x="132" y="139">a</text><text x="288" y="139">a</text><text x="230" y="150" fill="#2459c4">h</text><text x="115" y="239">60°</text><text x="305" y="239">60°</text><text x="210" y="77">60°</text></g> </svg>
             <figcaption class="small text-muted text-center mt-2" id="eq-caption"></figcaption>
           </figure>
         </div>
@@ -96,6 +88,9 @@ last_modified_at: 2026-03-11
       <noscript><p class="alert alert-warning mt-3">Enable JavaScript to use the calculator. Formulas and worked examples are available below.</p></noscript>
     </div>
   </section>
+
+<!-- Android App -->
+<div class="rounded-3 p-4 my-4" style="background:#eef6ff;"><div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3"><div class="text-center text-md-start"><h2 class="h4 mb-2">Take the Triangle Calculator with You</h2><p class="mb-0">Download the Triangle Calculator app for Android and calculate sides, angles, and more instantly</p></div><div class="flex-shrink-0"><a href="https://play.google.com/store/apps/details?id=org.easycalculator.triangle" target="_blank" rel="noopener noreferrer"><img src="/assets/images/google-play.png" alt="Get Triangle Calculator on Google Play" width="190" height="73"></a></div></div></div>
 
   <article class="eq-card eq-body eq-article mt-4">
     <h2 class="mt-0">What is an equilateral triangle?</h2>

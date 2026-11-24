@@ -23,7 +23,7 @@ last_modified_at: 2026-09-18
 <noscript><p class="alert alert-warning">Enable JavaScript to use the converter and map. The instructions below remain available.</p></noscript>
 
 <!-- Android App -->
-<div class="rounded-3 p-4 my-4" style="background:#eef6ff;"><div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3"><div class="text-center text-md-start"><h2 class="h4 mb-2">Take the MGRS Converter with You</h2><p class="mb-0">Download the MGRS Converter app for Android and convert between MGRS coordinates and latitude/longitude instantly</p></div><div class="flex-shrink-0"><a href="https://play.google.com/store/apps/details?id=org.easycalculator.mgrspoint" target="_blank" rel="noopener noreferrer"><img src="/assets/images/google-play.png" alt="Get LCM Calculator on Google Play" width="190" height="73"></a></div></div></div>
+<div class="rounded-3 p-4 my-4" style="background:#eef6ff;"><div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3"><div class="text-center text-md-start"><h2 class="h4 mb-2">Take the MGRS Converter with You</h2><p class="mb-0">Download the MGRS Converter app for Android and convert between MGRS coordinates and latitude/longitude instantly</p></div><div class="flex-shrink-0"><a href="https://play.google.com/store/apps/details?id=org.easycalculator.mgrspoint" target="_blank" rel="noopener noreferrer"><img src="/assets/images/google-play.png" alt="Get MGRS converter on Google Play" width="190" height="73"></a></div></div></div>
 
 <!-- Article Content -->
 <div class="article-container">
